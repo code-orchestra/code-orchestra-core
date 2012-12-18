@@ -20,11 +20,13 @@
       <zipfileset dir="${deploy.dir}/MPS" />
     </zip>
   </target>
+  <target name="clean.after.deploy">
+    <delete dir="${deploy.dir}" />  </target>  
   <target name="buildnumber">
     <buildnumber />
   </target>
 
-  <target name="main" depends="buildnumber,compile,clean.before,folders.create,do.the.job,clean.after,deploy.artifact" />
+  <target name="main" depends="buildnumber,compile,clean.before,folders.create,do.the.job,clean.after,deploy.artifact,clean.after.deploy" />
   <target name="compile">
     <antcall target="compile.all" />
   </target>
