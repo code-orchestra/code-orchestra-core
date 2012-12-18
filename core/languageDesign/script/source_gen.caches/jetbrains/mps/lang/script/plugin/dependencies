@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.lang.script.plugin.RunMigrationScripts_Action" file="RunMigrationScripts_Action.java">
+    <classNode dependClassName="com.intellij.openapi.actionSystem.AnActionEvent" />
+    <classNode dependClassName="com.intellij.openapi.project.Project" />
+    <classNode dependClassName="java.awt.Frame" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.StringBuilder" />
+    <classNode dependClassName="java.lang.Throwable" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="javax.swing.Icon" />
+    <classNode dependClassName="jetbrains.mps.ide.script.plugin.AbstractMigrationScriptHelper" />
+    <classNode dependClassName="jetbrains.mps.ide.script.plugin.RunMigrationScriptsDialog" />
+    <classNode dependClassName="jetbrains.mps.ide.script.plugin.ScriptsActionGroupHelper" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.MapSequence" />
+    <classNode dependClassName="jetbrains.mps.logging.Logger" />
+    <classNode dependClassName="jetbrains.mps.project.IModule" />
+    <classNode dependClassName="jetbrains.mps.smodel.IOperationContext" />
+    <classNode dependClassName="jetbrains.mps.smodel.IScope" />
+    <classNode dependClassName="jetbrains.mps.smodel.SModelDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.workbench.MPSDataKeys" />
+    <classNode dependClassName="jetbrains.mps.workbench.editors.MPSEditorOpener" />
+    <classNode dependClassName="org.jetbrains.annotations.NotNull" />
+    <classNode extendsClassName="jetbrains.mps.plugins.pluginparts.actions.GeneratedAction" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.script.plugin.Script_ApplicationPlugin" file="Script_ApplicationPlugin.java">
+    <classNode dependClassName="com.intellij.openapi.extensions.PluginId" />
+    <classNode dependClassName="jetbrains.mps.ide.actions.CommonModuleActions_ActionGroup" />
+    <classNode dependClassName="jetbrains.mps.ide.actions.ModelActions_ActionGroup" />
+    <classNode dependClassName="jetbrains.mps.ide.actions.Tools_ActionGroup" />
+    <classNode dependClassName="jetbrains.mps.lang.script.plugin.ScriptsForSelection_ActionGroup" />
+    <classNode dependClassName="jetbrains.mps.lang.script.plugin.ScriptsGlobally_ActionGroup" />
+    <classNode extendsClassName="jetbrains.mps.plugins.applicationplugins.BaseApplicationPlugin" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.script.plugin.Script_ProjectPlugin" file="Script_ProjectPlugin.java">
+    <classNode extendsClassName="jetbrains.mps.plugins.projectplugins.BaseProjectPlugin" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.script.plugin.ScriptsForSelection_ActionGroup" file="ScriptsForSelection_ActionGroup.java">
+    <classNode dependClassName="com.intellij.openapi.actionSystem.AnAction" />
+    <classNode dependClassName="com.intellij.openapi.actionSystem.AnActionEvent" />
+    <classNode dependClassName="com.intellij.openapi.extensions.PluginId" />
+    <classNode dependClassName="com.intellij.openapi.util.Pair" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.Throwable" />
+    <classNode dependClassName="java.util.HashSet" />
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.SetSequence" />
+    <classNode dependClassName="jetbrains.mps.lang.script.plugin.RunMigrationScripts_Action" />
+    <classNode dependClassName="jetbrains.mps.lang.script.plugin.ScriptsMenuBuilder" />
+    <classNode dependClassName="jetbrains.mps.logging.Logger" />
+    <classNode dependClassName="jetbrains.mps.smodel.IOperationContext" />
+    <classNode dependClassName="jetbrains.mps.util.Condition" />
+    <classNode dependClassName="jetbrains.mps.workbench.ActionPlace" />
+    <classNode dependClassName="jetbrains.mps.workbench.MPSDataKeys" />
+    <classNode dependClassName="jetbrains.mps.workbench.action.BaseAction" />
+    <classNode dependClassName="jetbrains.mps.workbench.action.BaseGroup" />
+    <classNode dependClassName="org.jetbrains.annotations.Nullable" />
+    <classNode extendsClassName="jetbrains.mps.plugins.pluginparts.actions.GeneratedActionGroup" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.script.plugin.ScriptsGlobally_ActionGroup" file="ScriptsGlobally_ActionGroup.java">
+    <classNode dependClassName="com.intellij.openapi.actionSystem.AnAction" />
+    <classNode dependClassName="com.intellij.openapi.actionSystem.AnActionEvent" />
+    <classNode dependClassName="com.intellij.openapi.extensions.PluginId" />
+    <classNode dependClassName="com.intellij.openapi.project.Project" />
+    <classNode dependClassName="com.intellij.openapi.util.Pair" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.Throwable" />
+    <classNode dependClassName="java.util.HashSet" />
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.SetSequence" />
+    <classNode dependClassName="jetbrains.mps.lang.script.plugin.RunMigrationScripts_Action" />
+    <classNode dependClassName="jetbrains.mps.lang.script.plugin.ScriptsMenuBuilder" />
+    <classNode dependClassName="jetbrains.mps.logging.Logger" />
+    <classNode dependClassName="jetbrains.mps.util.Condition" />
+    <classNode dependClassName="jetbrains.mps.workbench.ActionPlace" />
+    <classNode dependClassName="jetbrains.mps.workbench.MPSDataKeys" />
+    <classNode dependClassName="jetbrains.mps.workbench.action.BaseAction" />
+    <classNode dependClassName="jetbrains.mps.workbench.action.BaseGroup" />
+    <classNode dependClassName="org.jetbrains.annotations.Nullable" />
+    <classNode extendsClassName="jetbrains.mps.plugins.pluginparts.actions.GeneratedActionGroup" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.script.plugin.ScriptsMenuBuilder" file="ScriptsMenuBuilder.java">
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.Comparator" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.ide.script.plugin.ScriptsActionGroupHelper" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.project.GlobalScope" />
+    <classNode dependClassName="jetbrains.mps.smodel.Language" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.workbench.action.BaseGroup" />
+  </dependency>
+</dependenciesRoot>
+

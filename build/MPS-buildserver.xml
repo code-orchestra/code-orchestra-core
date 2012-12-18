@@ -1,0 +1,15 @@
+<project name="MPS-buildserver.xml" default="build" basedir="..">
+  <!--This is a hack for MPS-8746
+  For my opinion, syncing files by idea is not that bad
+  so I should not be doing this-->
+  <property name="mps.home" value="${mps_home}"/>
+  <property name="real.deploy.dir" value="${mps_home}/artifacts"/>
+  <import file="${ant.file}/../MPS-external-dist.xml"/>
+  <target name="test.and.build" depends="build"/>
+  <target name="build" depends="MPS-external-dist.default">
+    <delete dir="${real.deploy.dir}"/>
+    <mkdir dir="${real.deploy.dir}"/>
+    <copydir src="${deploy.dir}" dest="${real.deploy.dir}"/>
+    <delete dir="${deploy.dir}"/>
+  </target>
+</project>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="test" default="test">
+  <property environment="env"/>    
+  <property file="./test.properties"/>
+  <taskdef resource="jetbrains/mps/build/ant/antlib.xml"
+         classpath="${mps_home}/languages/util/generate.ant.task.jar"/>
+
+  <target name="test">
+    <mps.test.generation fork="true" mpshome="${mps_home}" loglevel="info" invokeTests="true">
+          <jvmargs>            
+            <arg value="-Xmx1200m"/>
+            <arg value="-XX:MaxPermSize=100m"/>
+          </jvmargs>
+          <macro name="mps_home" path="${mps_home}"/>          
+          <project dir="." wholeProject="true">
+             <filename name="Muffin.mpr"/>
+          </project>
+    </mps.test.generation>
+  </target>
+
+</project>
+

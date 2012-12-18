@@ -1,0 +1,168 @@
+CodeOrchestra ActionScript Editor Beta 10 (build __BUILD_NUMBER__) release notes
+=============================================================
+
+List of changes made since the Beta 9 (build 8093):
+
+Bugs Fixed:
+
+RE-2131 Refactoring pop-up not working
+RE-2089	Incorrect scrolling behaviour in the auto-complete list
+RE-2096	Can't see AS roots in the AS-View 
+RE-2114	[Events] >play results in a redundant ActualArguemenInfo
+RE-2113	[Events] Smart event handle/dispatch works for static access
+RE-2115	[Events] >null / <null in auto-complete list
+RF-595	NPE on project close with another project being open
+RE-2069	Smart new expression doesnt work in method arguments
+RE-2091	[MXML] Event handler body remove quick-fix - incorrect focusing
+RF-565	update failed for AnAction with ID=$Undo
+RE-1202	[XML] XML editing issues
+RE-1926 Wrong type on field generation
+RE-1765	Empty metatags generation
+RE-2039	[Traits] Show incorrect implementation error
+RE-2038	[Traits] Ability for a trait to inherit (extend) a class
+RE-146	Ability to insert a comment to the right side of a statement (RemarkOfLine)
+RE-2021	Modifying the code doesn't result in generated code modifications
+RE-2048	[XML] Incorrect line breaks generation
+RE-2047	[XML] XML comments generation error
+RF-617	Exception while navigating with FileWithLogicalPositionNavigationHandler
+RE-890  Main class ref must be updated on class rename/refactoring
+RE-2028	RT Method reference -> method call works only on SPACE press
+RE-2022	[Enums] New constant has a enum-class name
+RE-2023	[Logging] LT Expression -> LoggingExpression creates an invalid code
+RE-1834	Undo has to be invoked a few times to be done
+RE-1613	Pressing ENTER at the opening quote created a new condition block in While-statement
+RE-2019 Encapsulate Fields issue
+RE-2018	Introduce Parameter Object issue
+RF-610	[build:80.8134] java.lang.reflect.InvocationTargetException
+RF-609	[build:80.8134] An exception occured while trying to execute refactoring Introduce Parameter Object. Models could have been corrupted.
+RE-1675	[XML] Addind {} to the node name doesn't work if it's empty
+RE-1754 Metatag stub not created from spark.swc
+RE-2014 Root class public field and methods not visible from inner classes
+RE-1683	Incorrect 'Current Method' field init code in Introduce Refactoring for ExpressionStatement
+RF-605	[build:80.8126] An exception occured while trying to execute refactoring Introduce Field. Models could have been corrupted.
+RF-606	[build:80.8126] An exception occured while trying to execute refactoring Introduce Constant. Models could have been corrupted.
+RE-2012	Event type constants auto-complete at the first argument of addListerner and removeListener
+RF-547	Library add dialog incorrect behaviour
+RF-598	Argument 0 for @NotNull parameter of jetbrains/mps/smodel/MPSModuleRepository.getModule must not be null
+RE-784	Run configuration error (Ubuntu)
+RE-1989	Dynamic FunctionCall adds actual-arguments on ENTER press
+RE-1251 Circular inheritance possibility on dynamic -> real classifier type quick-fix invoke
+RE-1881	Method body code delete on BACKSPACE
+RE-1215	Double menu on introduce variable cltr+alt+v for XmlElementNode
+RE-1839	Incorrect method auto-creation неправильное автосоздание метода
+RE-1974	Error generating '!'
+RE-1986	[Tuple] Add toString to named-tuples
+RE-1750	Hierarchy view not working for stub classes
+RE-1804	VerifyError 1014 - class not found
+RF-593	[build:80.9000] An exception occured while trying to execute refactoring Extract Method. Models could have been corrupted.
+RE-1991 Incorrect dynamic function call not highlighted
+RE-1985	Root nodes copy/paste
+RE-1543	Ability to change an SWC library path in library properties
+RE-231	Offer method references instead of method calls on Function type args auto-complete
+RE-1725 An error while using a run configuration for a module that has been deleted
+RE-1965	Open project/reopen issue
+RE-1962	Opening another project in the same window
+RE-1963	Application launch after critical exception
+RE-1843	No constant value assignment error
+RE-1876	Incorrect cursor behaviour on method auto-complete
+RE-1565	[ObjectBuilder] Property autocomplete usability issue
+RE-1605 Classpath length may exceed its limit in Windows
+RF-562	[build:15.8094] [Beta9] Run: java.lang.NoSuchMethodError
+RF-563	[build:15.8094] [Beta9] Node search: java.lang.NullPointerException
+RF-560	[build:15.8093] User's action execute method failed. Action:DeleteNode
+RF-460	[build:8002] java.lang.RuntimeException : Can't read tags from C:\promoji_player\play_control_promo_dj.swc
+RF-559	[build:15.8093] User's action execute method failed. Action:CutNode
+RE-1308	Can't type a field access via the same class public namespace
+RE-1779	RT/LT ClassExpression -> LocalVariableDeclaration
+RE-1760	Variable reference available in the same variable's initalizer auto-complete
+RE-1751	[MXML] Incorrect local namespace behaviour
+RE-948	initializer -> add annotation
+RE-773  <<initializer>>, <<static fields>> and <<fields>> sections
+RE-1738	[MXML] Generate Method from event handler produces a Sting return type
+RE-1723	[XML] Can't add a xml-template if node/attribute/attr.name is empty
+RE-1722	[XML] Can't add an attribute after the '}'
+RE-1724	[XML] xml-temlates quotes are escaped
+RE-1700	[MXML] Color gutter icon not working in MXML document
+RF-527	Show Parameters (Ctrl+P) doesn't work
+RE-1664	[MXML] Generator issues
+RF-529	Surround, LT, Node Factory expression with new()
+RF-520	An opening parenthesis currupts the expression
+RE-1666	[MXML] Surround with MXML-comment of an empty string - a cursor disappears
+
+New Features:
+
+RE-1862	Extension Point language extension
+RE-1863	Editor Trigger language extension
+RE-1866	Tuples language extension (default interface implementation)
+RE-1690	Traits language extension
+RE-1844	СonceptFunction language extension
+RE-1691	Operators overloading
+RE-2092	[MXML] Create Event Handler intention на обработчике события
+RE-761	Compiling ActionScript conditionally
+RE-2064 Event subscription quick create
+RE-2065 Event broadcast code quick create in IOperation
+RE-2062 Event broadcast code quick create based on Event metatag
+RE-2061	"Create handler" by pressing ALT+ENTER on addEventListener second arguments
+RE-39	"Create Event metadata" intention for undeclared event broadcast
+RE-2055	Event handler methods accepting functions - check the handler function args number and types
+RE-2057	Intention for migrating to a method over anonymous function
+RE-2056	Offer an appropriate function (event type arg) at the anonynous event handler insert point
+RE-377	Offer to replace an event type string with a constant on event creation
+RE-2050 "Use constants" intention for event declaration metatag
+RE-986	Create event handler Quick-fix
+RE-538	Find Usages
+RE-1689	Annotation -> Show parameters
+
+Misc:
+
+RE-2086	User Config Namespace Declaration
+RE-1147	Smart-complete performance optimization
+RE-1807	Config constants
+RE-2079	[XML] XML name validation according to specification
+RE-2054	[XML] 'No line-breaks' XML presentation switch (<node>any text<node/></node>)
+RE-1276 E4X nodes access via namespace support
+RE-2041	[XML] Attributes namespaces
+RE-2042	[XML] Refactoring nodes namespaces
+RE-2035	AsDoc Support
+RE-1979 Root node must be bound to module context
+RE-1795	Migrate to apparat 1.0 RC9
+RE-1748	[XML] Namespace declarations (xml-ns)
+RE-2063	Event root icon
+RE-1988	Trigger root icon
+RE-1913	Default implementation root icon
+RE-1832	Operators icon
+RE-1912	Tuple icon
+RE-1761	Assets icons
+RE-1509	CSS & MXML icons
+RE-1747	XML documents icon
+RE-1692	State Reference Expression for ActionScript
+RE-1757	[MXML] Comment auto-complete in the component name
+RE-1712	[MXML] Check the container children types (IVisualElementContainer)
+RE-1749	DefaultProperty annotation
+RE-1709	[MXML] [DefaultProperty] - check MXML-node children types
+RE-1729	[MXML] Style tag - source parameter
+RE-1740	[MXML] Dynamic->Real transformation for custom attributes
+RE-1730	[MXML] Don't allow tag-attrs and ID to have a state
+RE-1731	[MXML] Check for duplicate state names
+RE-1702	[MXML] Dynamic behavior for references - state, namespace, property-reference, style-reference
+RE-1642	[Logging] trace-expression 
+RE-1710	[MXML] DynamicAccessExpression -> MxmlComponentReference (dynamic to real behavior) 
+RE-1714	[MXML] Check the <Declarations/> position and produce an error
+RE-1719	[MXML] Show an error if <fx:Private/> is not at the end of a document
+RE-1708	[MXML] Check for field name shadowing in child nodes with an ID
+RE-1718	[MXML] Moving from the closing component tag to the opening one
+RE-1717	[MXML] Unwrap commented nodes with BS
+RE-1679	[MXML] Include-in and Exclude-in attributes must have a real <State/> reference
+RE-1657	[MXML] Auto espace for attributes and nodes values
+RE-1659	[MXML] Remove "Make Final" intentions for MXML document
+RE-1646	[MXML] States auto-complete
+RE-1668	[MXML] <fx:Binding> 
+RE-1670	[MXML] <fx:Reparent> 
+RE-1665	[MXML] Move (alt+up/down) issues
+RE-1677	[MXML] E4X auto-complete for <XMLList/>
+RE-1663	[MXML] E4X auto-complete for <XML/>
+RE-1676	[MXML] E4X access (auto-complete) to <Model/>
+RE-1673	[MXML] State support in the parameter names (color.down), attributes and inner-parameters
+RE-1658	[MXML] Model block
+RE-1662	[MXML] Private block
+RE-1660	[MXML] ID property for all nodes

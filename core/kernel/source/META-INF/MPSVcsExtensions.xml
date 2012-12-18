@@ -1,0 +1,34 @@
+<extensions>
+  <!-- copied from LangExtensions.xml -->
+  <projectService serviceInterface="com.intellij.psi.PsiFileFactory"
+                  serviceImplementation="com.intellij.psi.impl.PsiFileFactoryImpl"/>
+
+  <applicationService serviceInterface="com.intellij.openapi.vcs.actions.VcsContextFactory"
+                      serviceImplementation="com.intellij.peer.impl.VcsContextFactoryImpl"/>
+
+  <!--MPS Patch begin-->
+  <projectService serviceInterface="com.intellij.openapi.vcs.AbstractVcsHelper"
+                  serviceImplementation="jetbrains.mps.ide.vcs.MPSVcsHelperImpl"/>
+  <!--MPS Patch end-->
+
+  <projectService serviceInterface="com.intellij.openapi.vcs.IssueNavigationConfiguration"
+                  serviceImplementation="com.intellij.openapi.vcs.IssueNavigationConfiguration"/>
+
+  <selectInTarget implementation="com.intellij.openapi.vcs.changes.SelectInChangesViewTarget"/>
+
+  <projectConfigurable instance="com.intellij.openapi.vcs.configurable.VcsManagerConfigurable" id="vcs"/>
+
+  <changesViewContent tabName="Repository" className="com.intellij.openapi.vcs.changes.committed.CommittedChangesViewManager"
+                      predicateClassName="com.intellij.openapi.vcs.changes.committed.CommittedChangesVisibilityPredicate"/>
+  <changesViewContent tabName="Incoming" className="com.intellij.openapi.vcs.changes.committed.IncomingChangesViewProvider"
+                      predicateClassName="com.intellij.openapi.vcs.changes.committed.IncomingChangesVisibilityPredicate"/>
+
+  <vcs.fileStatusProvider implementation="com.intellij.openapi.vcs.changes.conflicts.ChangelistConflictFileStatusProvider"/>
+  <writingAccessProvider implementation="com.intellij.openapi.vcs.changes.conflicts.ChangelistConflictAccessProvider"/>
+  <editorNotificationProvider implementation="com.intellij.openapi.vcs.changes.conflicts.ChangelistConflictNotificationProvider"/>
+
+  <handleTypeFactory implementation="com.intellij.openapi.vcs.readOnlyHandler.VcsHandleTypeFactory"/>
+
+  <keymapExtension implementation="com.intellij.openapi.vcs.impl.VcsKeymapExtension"/>
+  <fileTypeFactory implementation="com.intellij.openapi.vcs.impl.VcsFileTypeFactory"/>
+</extensions>

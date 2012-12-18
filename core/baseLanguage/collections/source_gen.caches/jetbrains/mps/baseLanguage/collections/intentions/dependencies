@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.baseLanguage.collections.intentions.Add_Comparator_Intention" file="Add_Comparator_Intention.java">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.HashSet" />
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.typesystem.runtime.HUtil" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.EditorContext" />
+    <classNode dependClassName="jetbrains.mps.project.GlobalScope" />
+    <classNode dependClassName="jetbrains.mps.smodel.SModelUtil_new" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.intentions.BaseIntention" />
+    <classNode extendsClassName="jetbrains.mps.intentions.Intention" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.collections.intentions.ConvertForEachStatementToForeachStatement_Intention" file="ConvertForEachStatementToForeachStatement_Intention.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.IWhereFilter" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.EditorContext" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.smodel.action.SNodeFactoryOperations" />
+    <classNode dependClassName="jetbrains.mps.typesystem.inference.TypeChecker" />
+    <classNode extendsClassName="jetbrains.mps.intentions.BaseIntention" />
+    <classNode extendsClassName="jetbrains.mps.intentions.Intention" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.collections.intentions.CreateInitializer_Intention" file="CreateInitializer_Intention.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.EditorContext" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.smodel.action.SNodeFactoryOperations" />
+    <classNode extendsClassName="jetbrains.mps.intentions.BaseIntention" />
+    <classNode extendsClassName="jetbrains.mps.intentions.Intention" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.collections.intentions.IntentionsDescriptor" file="IntentionsDescriptor.java">
+    <classNode dependClassName="jetbrains.mps.baseLanguage.collections.intentions.Add_Comparator_Intention" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.collections.intentions.ConvertForEachStatementToForeachStatement_Intention" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.collections.intentions.CreateInitializer_Intention" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.collections.intentions.IterateOverSequence_Intention" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.collections.intentions.add_copy_from_Intention" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.collections.intentions.add_init_values_Intention" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.collections.intentions.add_sequence_initializer_Intention" />
+    <classNode dependClassName="jetbrains.mps.project.structure.modules.ModuleReference" />
+    <classNode dependClassName="jetbrains.mps.smodel.SModelReference" />
+    <classNode extendsClassName="jetbrains.mps.intentions.BaseIntentionsDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.collections.intentions.IterateOverSequence_Intention" file="IterateOverSequence_Intention.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.HashSet" />
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.EditorContext" />
+    <classNode dependClassName="jetbrains.mps.project.GlobalScope" />
+    <classNode dependClassName="jetbrains.mps.smodel.SModelUtil_new" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.smodel.action.SNodeFactoryOperations" />
+    <classNode dependClassName="jetbrains.mps.typesystem.inference.TypeChecker" />
+    <classNode extendsClassName="jetbrains.mps.intentions.Intention" />
+    <classNode extendsClassName="jetbrains.mps.intentions.SurroundWithIntention" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.collections.intentions.add_copy_from_Intention" file="add_copy_from_Intention.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.collections.behavior.AbstractContainerCreator_Behavior" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.EditorContext" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.smodel.action.SNodeFactoryOperations" />
+    <classNode extendsClassName="jetbrains.mps.intentions.BaseIntention" />
+    <classNode extendsClassName="jetbrains.mps.intentions.Intention" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.collections.intentions.add_init_values_Intention" file="add_init_values_Intention.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.collections.behavior.AbstractContainerCreator_Behavior" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.EditorContext" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.smodel.action.SNodeFactoryOperations" />
+    <classNode extendsClassName="jetbrains.mps.intentions.BaseIntention" />
+    <classNode extendsClassName="jetbrains.mps.intentions.Intention" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.collections.intentions.add_sequence_initializer_Intention" file="add_sequence_initializer_Intention.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.EditorContext" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.smodel.action.SNodeFactoryOperations" />
+    <classNode extendsClassName="jetbrains.mps.intentions.BaseIntention" />
+    <classNode extendsClassName="jetbrains.mps.intentions.Intention" />
+  </dependency>
+</dependenciesRoot>
+

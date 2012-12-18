@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.graphLayout.layeredLayout.AdjacentExhangeNodeSorter" file="AdjacentExhangeNodeSorter.java">
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Edge" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Node" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.layeredLayout.NodeLayeredOrder" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.MapSequence" />
+    <classNode extendsClassName="jetbrains.mps.graphLayout.layeredLayout.IOneLayerSorter" />
+  </dependency>
+  <dependency className="jetbrains.mps.graphLayout.layeredLayout.AsIsCoordinatePlacer" file="AsIsCoordinatePlacer.java">
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Graph" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Node" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.intGeom2D.Point" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.layeredLayout.NodeLayeredOrder" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.util.NodeMap" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.MapSequence" />
+    <classNode extendsClassName="jetbrains.mps.graphLayout.layeredLayout.ICoordinatePlacer" />
+  </dependency>
+  <dependency className="jetbrains.mps.graphLayout.layeredLayout.BKCoordinatePlacer" file="BKCoordinatePlacer.java">
+    <classNode dependClassName="java.lang.Comparable" />
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.Math" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.Comparator" />
+    <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="java.util.HashSet" />
+    <classNode dependClassName="java.util.Iterator" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime.Wrappers" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Edge" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Graph" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Node" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.intGeom2D.Point" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.layeredLayout.BlockGraphProcessor" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.layeredLayout.NodeLayeredOrder" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.util.NodeMap" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ISelector" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.MapSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.SetSequence" />
+    <classNode extendsClassName="jetbrains.mps.graphLayout.layeredLayout.ICoordinatePlacer" />
+  </dependency>
+  <dependency className="jetbrains.mps.graphLayout.layeredLayout.BlockGraphProcessor" file="BlockGraphProcessor.java">
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.Math" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="java.util.Queue" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Edge" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Graph" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Node" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.util.NodeMap" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.MapSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.QueueSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.backports.LinkedList" />
+    <classNode extendsClassName="jetbrains.mps.graphLayout.algorithms.Dfs" />
+  </dependency>
+  <dependency className="jetbrains.mps.graphLayout.layeredLayout.DFSEdgeReverter" file="DFSEdgeReverter.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.util.HashSet" />
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Edge" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Graph" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Node" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.MapSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.SetSequence" />
+    <classNode extendsClassName="jetbrains.mps.graphLayout.algorithms.Dfs" />
+    <classNode extendsClassName="jetbrains.mps.graphLayout.layeredLayout.IEdgeReverter" />
+  </dependency>
+  <dependency className="jetbrains.mps.graphLayout.layeredLayout.DFSNodeSorter" file="DFSNodeSorter.java">
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Edge" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Graph" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Node" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.layeredLayout.NodeLayeredOrder" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.MapSequence" />
+    <classNode extendsClassName="jetbrains.mps.graphLayout.algorithms.Dfs" />
+    <classNode extendsClassName="jetbrains.mps.graphLayout.layeredLayout.INodeSorter" />
+  </dependency>
+  <dependency className="jetbrains.mps.graphLayout.layeredLayout.ICoordinatePlacer" file="ICoordinatePlacer.java">
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Graph" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Node" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.intGeom2D.Point" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.layeredLayout.NodeLayeredOrder" />
+  </dependency>
+  <dependency className="jetbrains.mps.graphLayout.layeredLayout.IEdgeReverter" file="IEdgeReverter.java">
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Edge" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Graph" />
+  </dependency>
+  <dependency className="jetbrains.mps.graphLayout.layeredLayout.ILayerer" file="ILayerer.java">
+    <classNode dependClassName="java.lang.IllegalArgumentException" />
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Graph" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Node" />
+  </dependency>
+  <dependency className="jetbrains.mps.graphLayout.layeredLayout.INodeSorter" file="INodeSorter.java">
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Graph" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Node" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.layeredLayout.NodeLayeredOrder" />
+  </dependency>
+  <dependency className="jetbrains.mps.graphLayout.layeredLayout.IOneLayerSorter" file="IOneLayerSorter.java">
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Edge" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.layeredLayout.NodeLayeredOrder" />
+  </dependency>
+  <dependency className="jetbrains.mps.graphLayout.layeredLayout.LayerByLayerNodeSorter" file="LayerByLayerNodeSorter.java">
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Edge" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Graph" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Node" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.layeredLayout.IOneLayerSorter" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.layeredLayout.NodeLayeredOrder" />
+    <classNode extendsClassName="jetbrains.mps.graphLayout.layeredLayout.INodeSorter" />
+  </dependency>
+  <dependency className="jetbrains.mps.graphLayout.layeredLayout.LayeredLayouter" file="LayeredLayouter.java">
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Edge" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Graph" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Node" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graphLayout.GraphPointLayout" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.intGeom2D.Point" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.layeredLayout.ICoordinatePlacer" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.layeredLayout.IEdgeReverter" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.layeredLayout.ILayerer" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.layeredLayout.INodeSorter" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.layeredLayout.NodeLayeredOrder" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.IWhereFilter" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.MapSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.SetSequence" />
+    <classNode extendsClassName="jetbrains.mps.graphLayout.graphLayout.IPointLayouter" />
+  </dependency>
+  <dependency className="jetbrains.mps.graphLayout.layeredLayout.MedianLayerSorter" file="MedianLayerSorter.java">
+    <classNode dependClassName="java.lang.Comparable" />
+    <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.Comparator" />
+    <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Edge" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Graph" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Node" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.layeredLayout.NodeLayeredOrder" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ISelector" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.MapSequence" />
+    <classNode extendsClassName="jetbrains.mps.graphLayout.layeredLayout.IOneLayerSorter" />
+  </dependency>
+  <dependency className="jetbrains.mps.graphLayout.layeredLayout.NodeLayeredOrder" file="NodeLayeredOrder.java">
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.StringBuilder" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.Iterator" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Graph" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Node" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.util.NodeMap" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.MapSequence" />
+  </dependency>
+  <dependency className="jetbrains.mps.graphLayout.layeredLayout.TopologicalLayerer" file="TopologicalLayerer.java">
+    <classNode dependClassName="java.lang.IllegalArgumentException" />
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.algorithms.TopologicalNumbering" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Graph" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Node" />
+    <classNode extendsClassName="jetbrains.mps.graphLayout.layeredLayout.ILayerer" />
+  </dependency>
+</dependenciesRoot>
+

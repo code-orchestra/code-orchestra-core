@@ -1,0 +1,120 @@
+<!--
+  ~ Copyright 2003-2010 JetBrains s.r.o.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<!DOCTYPE idea-plugin PUBLIC "Plugin/DTD" "http://plugins.intellij.net/plugin.dtd">
+<idea-plugin>
+  <id>jetbrains.mps.vcs</id>
+  <name>VCS Integration for MPS</name>
+  <description>VCS features in MPS</description>
+  <version>2.0</version>
+  <vendor url="http://www.jetbrains.com/mps/">JetBrains</vendor>
+  <idea-version since-build="3000"/>
+
+  <depends optional="true">Subversion</depends>
+  <depends optional="true">Git4Idea</depends>
+
+  <application-components>
+    <component>
+      <implementation-class>jetbrains.mps.vcs.plugin.Vcs_PluginInitializer</implementation-class>
+    </component>
+    <component>
+      <implementation-class>jetbrains.mps.watching.ModelChangesWatcher</implementation-class>
+    </component>
+    <component>
+      <implementation-class>jetbrains.mps.watching.ModelFocusSynchronizer</implementation-class>
+    </component>
+    <component>
+      <implementation-class>jetbrains.mps.watching.WatchedRoots</implementation-class>
+    </component>
+    <component>
+      <implementation-class>jetbrains.mps.watching.ModelCacheReloader</implementation-class>
+    </component>
+    <component>
+      <implementation-class>jetbrains.mps.vcs.SuspiciousModelIndex</implementation-class>
+    </component>
+    <component>
+      <interface-class>jetbrains.mps.vcs.VCSHandler</interface-class>
+      <implementation-class>jetbrains.mps.vcs.RealVcsHandler</implementation-class>
+    </component>
+    <component>
+      <implementation-class>jetbrains.mps.vcs.integration.ToolsApplicationComponent</implementation-class>
+    </component>
+  </application-components>
+
+  <project-components>
+    <component>
+      <implementation-class>com.intellij.platform.PlatformVcsDetector</implementation-class>
+      <skipForDefaultProject/>
+    </component>
+    <component>
+      <interface-class>com.intellij.openapi.vcs.impl.VcsPathPresenter</interface-class>
+      <implementation-class>jetbrains.mps.vcs.integration.ModuleVcsPathPresenter</implementation-class>
+    </component>
+    <component>
+      <implementation-class>jetbrains.mps.vcs.MPSVcsManager</implementation-class>
+    </component>
+    <component>
+      <implementation-class>jetbrains.mps.vcs.changesmanager.ChangesManager</implementation-class>
+      <skipForDefaultProject/>
+    </component>
+    <component>
+      <implementation-class>jetbrains.mps.vcs.changesmanager.ProjectTreeChangesHighlighter</implementation-class>
+      <skipForDefaultProject/>
+    </component>
+    <component>
+      <implementation-class>jetbrains.mps.vcs.changesmanager.EditorChangesHighlighter</implementation-class>
+      <skipForDefaultProject/>
+    </component>
+    <component>
+      <implementation-class>jetbrains.mps.vcs.changesmanager.RootNodeFileStatusManager</implementation-class>
+      <skipForDefaultProject/>
+    </component>
+    <component>
+      <implementation-class>jetbrains.mps.vcs.MPSVcsProjectConfiguration</implementation-class>
+    </component>
+</project-components>
+
+  <actions>
+    <group id="EditorFixAddition">
+      <separator/>
+      <action id="ShowInLogicalView" class="jetbrains.mps.vcs.actions.ShowInLogicalView"
+              text="Show In Logical View"/>
+      <action id="ShowInFileView" class="jetbrains.mps.vcs.actions.ShowInFileView"
+              text="Show In File System View"/>
+      <separator/>
+      <action id="GenerateFilesFromChangeListAction"
+              class="jetbrains.mps.vcs.actions.GenerateFilesFromChangeListAction"
+              text="Generate Files"/>
+      <action id="GenerateTextFromChangeListAction"
+              class="jetbrains.mps.vcs.actions.GenerateTextFromChangeListAction"
+              text="Generate Text"/>
+      <add-to-group group-id="ChangesViewPopupMenu" anchor="last"/>
+      <add-to-group anchor="before" relative-to-action="SearchMenu" group-id="EditorFix"/>
+    </group>
+  </actions>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <vcs.fileStatusProvider implementation="jetbrains.mps.vcs.changesmanager.ChangesManagerFileStatusProvider"/>
+    <checkoutListener implementation="jetbrains.mps.vcs.integration.ProjectCheckoutListener"/>
+    <checkinHandlerFactory implementation="jetbrains.mps.vcs.integration.OptimizeImportsCheckinHandler$OptimizeImportsCheckinHandlerFactory"/>
+    <directoryIndexExcludePolicy implementation="jetbrains.mps.project.GeneratedFilesExcludePolicy"/>
+    <mps.projectPrefsPanel implementation="jetbrains.mps.vcs.VcsGeneratedFilesPanel"/>
+
+    <!--MPS Patch: our own diff request factory-->
+    <applicationService serviceInterface="com.intellij.openapi.diff.DiffRequestFactory"
+                        serviceImplementation="jetbrains.mps.vcs.integration.MPSDiffRequestFactory"/>
+    <errorHandler implementation="jetbrains.mps.workbench.diagnostics.CharismaReporter"/>
+  </extensions>
+</idea-plugin>

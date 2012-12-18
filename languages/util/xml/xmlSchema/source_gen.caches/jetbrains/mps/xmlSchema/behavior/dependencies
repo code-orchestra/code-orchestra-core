@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.AttributeDeclaration_Behavior" file="AttributeDeclaration_Behavior.java">
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.AttributeDeclaration_BehaviorDescriptor" file="AttributeDeclaration_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.AttributeDeclaration_Behavior" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.AttributeExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.AttributeExpression_BehaviorDescriptor" file="AttributeExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.TypeExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.AttributeGroupReference_Behavior" file="AttributeGroupReference_Behavior.java">
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.TypeExpression_Behavior" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.AttributeGroupReference_BehaviorDescriptor" file="AttributeGroupReference_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.AttributeExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.AttributeGroupReference_Behavior" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.AttributeGroup_Behavior" file="AttributeGroup_Behavior.java">
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.AttributeGroup_BehaviorDescriptor" file="AttributeGroup_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.Declaration_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.BehaviorAspectDescriptor" file="BehaviorAspectDescriptor.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.Arrays" />
+    <classNode dependClassName="jetbrains.mps.smodel.runtime.BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.runtime.interpreted.BehaviorAspectInterpreted" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.AttributeDeclaration_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.AttributeGroupReference_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.AttributeGroup_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.BooleanSchemaType_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.BoundExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.Choice_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.ComplexContent_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.ComplexTypeReference_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.ComplexType_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.DeclarationBlock_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.ElementReference_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.ElementWithContent_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.ElementWithType_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.EntityBlock_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.EntityDeclaration_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.EntityLine_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.EntitySet_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.Extension_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.GroupDeclaration_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.GroupReference_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.IntegerSchemaType_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.MixedAttribute_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.NamespaceDeclaration_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.OccursAttribute_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.SchemaComment_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.Schema_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.Sequence_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.SimpleContent_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.StringSchemaType_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.TextLine_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.TypeExpressionList_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.UnboundExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.UseAttribute_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.BehaviorAspectDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.BooleanSchemaType_BehaviorDescriptor" file="BooleanSchemaType_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.SchemaType_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.BoundExpression_BehaviorDescriptor" file="BoundExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.MaxOccursExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.Choice_Behavior" file="Choice_Behavior.java">
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.TypeExpressionList_Behavior" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.Choice_BehaviorDescriptor" file="Choice_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.Choice_Behavior" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.GroupExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.ComplexContent_Behavior" file="ComplexContent_Behavior.java">
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.ContentItem_Behavior" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.ComplexContent_BehaviorDescriptor" file="ComplexContent_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.ComplexContent_Behavior" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.TypeExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.ComplexTypeReference_BehaviorDescriptor" file="ComplexTypeReference_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.ComplexType_Behavior" file="ComplexType_Behavior.java">
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.TypeExpressionList_Behavior" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.ComplexType_BehaviorDescriptor" file="ComplexType_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.ComplexType_Behavior" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.Declaration_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.ContentItem_Behavior" file="ContentItem_Behavior.java">
+    <classNode dependClassName="java.lang.Boolean" />
+    <classNode dependClassName="java.lang.Class" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.smodel.behaviour.BehaviorManager" />
+    <classNode dependClassName="jetbrains.mps.smodel.structure.BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.structure.ConceptRegistry" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.ContentItem_BehaviorDescriptor" file="ContentItem_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.DeclarationBlock_BehaviorDescriptor" file="DeclarationBlock_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.Declaration_Behavior" file="Declaration_Behavior.java">
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.Declaration_BehaviorDescriptor" file="Declaration_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.TypeExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.ElementDeclaration_Behavior" file="ElementDeclaration_Behavior.java">
+    <classNode dependClassName="java.lang.Class" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.SetSequence" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.smodel.behaviour.BehaviorManager" />
+    <classNode dependClassName="jetbrains.mps.smodel.structure.BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.structure.ConceptRegistry" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.ComplexType_Behavior" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.TypeExpression_Behavior" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.ElementDeclaration_BehaviorDescriptor" file="ElementDeclaration_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.Declaration_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.ElementDeclaration_Behavior" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.ElementReference_Behavior" file="ElementReference_Behavior.java">
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.SetSequence" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.ElementReference_BehaviorDescriptor" file="ElementReference_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.ElementReference_Behavior" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.TypeExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.ElementWithContent_Behavior" file="ElementWithContent_Behavior.java">
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.ElementWithContent_BehaviorDescriptor" file="ElementWithContent_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.ElementDeclaration_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.ElementWithContent_Behavior" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.ElementWithType_Behavior" file="ElementWithType_Behavior.java">
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.ElementWithType_BehaviorDescriptor" file="ElementWithType_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.ElementDeclaration_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.ElementWithType_Behavior" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.EntityBlock_BehaviorDescriptor" file="EntityBlock_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.SchemaCommentable_BehaviorDescriptor" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.EntityDeclaration_Behavior" file="EntityDeclaration_Behavior.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.EntityDeclaration_BehaviorDescriptor" file="EntityDeclaration_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.EntityDeclaration_Behavior" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.EntityLine_BehaviorDescriptor" file="EntityLine_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.SchemaCommentable_BehaviorDescriptor" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.EntitySet_Behavior" file="EntitySet_Behavior.java">
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.EntitySet_BehaviorDescriptor" file="EntitySet_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.Extension_Behavior" file="Extension_Behavior.java">
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.TypeExpressionList_Behavior" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.TypeExpression_Behavior" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.Extension_BehaviorDescriptor" file="Extension_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.ContentItem_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.Extension_Behavior" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.GroupDeclaration_Behavior" file="GroupDeclaration_Behavior.java">
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.GroupDeclaration_BehaviorDescriptor" file="GroupDeclaration_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.Declaration_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.GroupExpression_BehaviorDescriptor" file="GroupExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.TypeExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.GroupReference_Behavior" file="GroupReference_Behavior.java">
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.TypeExpression_Behavior" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.GroupReference_BehaviorDescriptor" file="GroupReference_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.GroupReference_Behavior" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.TypeExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.IntegerSchemaType_BehaviorDescriptor" file="IntegerSchemaType_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.SchemaType_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.MaxOccursExpression_BehaviorDescriptor" file="MaxOccursExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.MixedAttribute_BehaviorDescriptor" file="MixedAttribute_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.NamespaceDeclaration_BehaviorDescriptor" file="NamespaceDeclaration_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.OccursAttribute_BehaviorDescriptor" file="OccursAttribute_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.SchemaComment_BehaviorDescriptor" file="SchemaComment_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.SchemaCommentable_BehaviorDescriptor" file="SchemaCommentable_BehaviorDescriptor.java" />
+  <dependency className="jetbrains.mps.xmlSchema.behavior.SchemaType_BehaviorDescriptor" file="SchemaType_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.Schema_Behavior" file="Schema_Behavior.java">
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.Schema_BehaviorDescriptor" file="Schema_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.Sequence_Behavior" file="Sequence_Behavior.java">
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.TypeExpressionList_Behavior" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.Sequence_BehaviorDescriptor" file="Sequence_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.GroupExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.Sequence_Behavior" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.SimpleContent_Behavior" file="SimpleContent_Behavior.java">
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.SimpleContent_BehaviorDescriptor" file="SimpleContent_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.SimpleContent_Behavior" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.TypeExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.StringSchemaType_BehaviorDescriptor" file="StringSchemaType_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.SchemaType_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.TextLine_BehaviorDescriptor" file="TextLine_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.TypeExpressionList_Behavior" file="TypeExpressionList_Behavior.java">
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.TypeExpression_Behavior" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.TypeExpressionList_BehaviorDescriptor" file="TypeExpressionList_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.TypeExpression_Behavior" file="TypeExpression_Behavior.java">
+    <classNode dependClassName="java.lang.Boolean" />
+    <classNode dependClassName="java.lang.Class" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.smodel.behaviour.BehaviorManager" />
+    <classNode dependClassName="jetbrains.mps.smodel.structure.BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.structure.ConceptRegistry" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.TypeExpression_BehaviorDescriptor" file="TypeExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.TypeExpression_Behavior" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.UnboundExpression_BehaviorDescriptor" file="UnboundExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.xmlSchema.behavior.MaxOccursExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlSchema.behavior.UseAttribute_BehaviorDescriptor" file="UseAttribute_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+</dependenciesRoot>
+

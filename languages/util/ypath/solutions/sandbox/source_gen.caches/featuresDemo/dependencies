@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="featuresDemo.DOM_NG" file="DOM_NG.java">
+    <classNode dependClassName="java.lang.IndexOutOfBoundsException" />
+    <classNode dependClassName="java.lang.Iterable" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.Iterator" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime.YieldingIterator" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ISequenceClosure" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.Sequence" />
+    <classNode dependClassName="org.w3c.dom.Element" />
+    <classNode dependClassName="org.w3c.dom.NamedNodeMap" />
+    <classNode dependClassName="org.w3c.dom.Node" />
+    <classNode extendsClassName="java.util.AbstractCollection" />
+    <classNode extendsClassName="java.util.AbstractList" />
+    <classNode extendsClassName="jetbrains.mps.ypath.runtime.IFeatureDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.ypath.runtime.IFilter" />
+    <classNode extendsClassName="jetbrains.mps.ypath.runtime.Stub" />
+    <classNode extendsClassName="jetbrains.mps.ypath.runtime.TreePath" />
+  </dependency>
+  <dependency className="featuresDemo.DomDemo" file="DomDemo.java">
+    <classNode dependClassName="featuresDemo.DOM_NG" />
+    <classNode dependClassName="java.io.ByteArrayInputStream" />
+    <classNode dependClassName="java.io.InputStream" />
+    <classNode dependClassName="java.lang.Exception" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="javax.xml.parsers.DocumentBuilderFactory" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.Sequence" />
+    <classNode dependClassName="jetbrains.mps.ypath.runtime.CompositeFilter" />
+    <classNode dependClassName="jetbrains.mps.ypath.runtime.TreeTraversalFactory" />
+    <classNode dependClassName="org.w3c.dom.Document" />
+    <classNode dependClassName="org.w3c.dom.Node" />
+  </dependency>
+  <dependency className="featuresDemo.FILE_NG" file="FILE_NG.java">
+    <classNode dependClassName="java.io.File" />
+    <classNode dependClassName="java.lang.IndexOutOfBoundsException" />
+    <classNode dependClassName="java.lang.Iterable" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.Iterator" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode extendsClassName="java.util.AbstractCollection" />
+    <classNode extendsClassName="java.util.AbstractList" />
+    <classNode extendsClassName="jetbrains.mps.ypath.runtime.IFeatureDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.ypath.runtime.IFilter" />
+    <classNode extendsClassName="jetbrains.mps.ypath.runtime.Stub" />
+    <classNode extendsClassName="jetbrains.mps.ypath.runtime.TreePath" />
+  </dependency>
+  <dependency className="featuresDemo.FileDemo" file="FileDemo.java">
+    <classNode dependClassName="featuresDemo.FILE_NG" />
+    <classNode dependClassName="java.io.File" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.Sequence" />
+    <classNode dependClassName="jetbrains.mps.ypath.runtime.TreeTraversalFactory" />
+  </dependency>
+</dependenciesRoot>
+

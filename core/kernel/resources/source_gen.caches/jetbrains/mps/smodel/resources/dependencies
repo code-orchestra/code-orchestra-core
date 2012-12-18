@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.smodel.resources.CResource" file="CResource.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.SuppressWarnings" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.runtime.MultiTuple" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.runtime.Tuples" />
+    <classNode dependClassName="jetbrains.mps.compiler.IClassesData" />
+    <classNode extendsClassName="jetbrains.mps.baseLanguage.tuples.runtime._1" />
+    <classNode extendsClassName="jetbrains.mps.make.resources.IResource" />
+    <classNode extendsClassName="jetbrains.mps.smodel.resources.ICResouce" />
+  </dependency>
+  <dependency className="jetbrains.mps.smodel.resources.DResource" file="DResource.java">
+    <classNode dependClassName="java.lang.Iterable" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.SuppressWarnings" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.runtime.MultiTuple" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.runtime.Tuples" />
+    <classNode dependClassName="jetbrains.mps.make.delta.IDelta" />
+    <classNode extendsClassName="jetbrains.mps.baseLanguage.tuples.runtime._1" />
+    <classNode extendsClassName="jetbrains.mps.make.resources.IResource" />
+    <classNode extendsClassName="jetbrains.mps.smodel.resources.IDeltaResource" />
+  </dependency>
+  <dependency className="jetbrains.mps.smodel.resources.FResource" file="FResource.java">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.SuppressWarnings" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.runtime.MultiTuple" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.runtime.Tuples" />
+    <classNode dependClassName="jetbrains.mps.project.IModule" />
+    <classNode dependClassName="jetbrains.mps.smodel.SModelDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.baseLanguage.tuples.runtime._4" />
+    <classNode extendsClassName="jetbrains.mps.smodel.resources.IFResource" />
+  </dependency>
+  <dependency className="jetbrains.mps.smodel.resources.FlatFilePropertiesIO" file="FlatFilePropertiesIO.java">
+    <classNode dependClassName="java.io.IOException" />
+    <classNode dependClassName="java.io.InputStream" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.Runnable" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.UnsupportedOperationException" />
+    <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="java.util.Properties" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime.Wrappers" />
+    <classNode dependClassName="jetbrains.mps.smodel.ModelAccess" />
+    <classNode dependClassName="jetbrains.mps.vfs.IFile" />
+    <classNode extendsClassName="jetbrains.mps.make.resources.IPropertiesIO" />
+  </dependency>
+  <dependency className="jetbrains.mps.smodel.resources.GResource" file="GResource.java">
+    <classNode dependClassName="java.lang.Iterable" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.SuppressWarnings" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.runtime.MultiTuple" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.runtime.Tuples" />
+    <classNode dependClassName="jetbrains.mps.generator.GenerationStatus" />
+    <classNode dependClassName="jetbrains.mps.project.IModule" />
+    <classNode dependClassName="jetbrains.mps.smodel.SModelDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.baseLanguage.tuples.runtime._4" />
+    <classNode extendsClassName="jetbrains.mps.make.resources.IResource" />
+    <classNode extendsClassName="jetbrains.mps.smodel.resources.IGResource" />
+  </dependency>
+  <dependency className="jetbrains.mps.smodel.resources.ICResouce" file="ICResouce.java">
+    <classNode dependClassName="jetbrains.mps.compiler.IClassesData" />
+    <classNode extendsClassName="jetbrains.mps.make.resources.IResource" />
+  </dependency>
+  <dependency className="jetbrains.mps.smodel.resources.IDeltaResource" file="IDeltaResource.java">
+    <classNode dependClassName="java.lang.Iterable" />
+    <classNode dependClassName="jetbrains.mps.make.delta.IDelta" />
+    <classNode extendsClassName="jetbrains.mps.make.resources.IResource" />
+  </dependency>
+  <dependency className="jetbrains.mps.smodel.resources.IFResource" file="IFResource.java">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="jetbrains.mps.project.IModule" />
+    <classNode dependClassName="jetbrains.mps.smodel.SModelDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.make.resources.IResource" />
+  </dependency>
+  <dependency className="jetbrains.mps.smodel.resources.IGResource" file="IGResource.java">
+    <classNode dependClassName="java.lang.Iterable" />
+    <classNode dependClassName="jetbrains.mps.generator.GenerationStatus" />
+    <classNode dependClassName="jetbrains.mps.project.IModule" />
+    <classNode dependClassName="jetbrains.mps.smodel.SModelDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.make.resources.IResource" />
+  </dependency>
+  <dependency className="jetbrains.mps.smodel.resources.IMResource" file="IMResource.java">
+    <classNode dependClassName="java.lang.Iterable" />
+    <classNode dependClassName="jetbrains.mps.project.IModule" />
+    <classNode dependClassName="jetbrains.mps.smodel.SModelDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.make.resources.IResource" />
+  </dependency>
+  <dependency className="jetbrains.mps.smodel.resources.ITResource" file="ITResource.java">
+    <classNode dependClassName="jetbrains.mps.project.IModule" />
+    <classNode extendsClassName="jetbrains.mps.make.resources.IResource" />
+    <classNode extendsClassName="jetbrains.mps.smodel.resources.IDeltaResource" />
+  </dependency>
+  <dependency className="jetbrains.mps.smodel.resources.MResource" file="MResource.java">
+    <classNode dependClassName="java.lang.Iterable" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.SuppressWarnings" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.runtime.MultiTuple" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.runtime.Tuples" />
+    <classNode dependClassName="jetbrains.mps.make.resources.IPropertiesIO" />
+    <classNode dependClassName="jetbrains.mps.project.IModule" />
+    <classNode dependClassName="jetbrains.mps.smodel.SModelDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.resources.FlatFilePropertiesIO" />
+    <classNode dependClassName="jetbrains.mps.util.NameUtil" />
+    <classNode extendsClassName="jetbrains.mps.baseLanguage.tuples.runtime._2" />
+    <classNode extendsClassName="jetbrains.mps.make.resources.IResource" />
+    <classNode extendsClassName="jetbrains.mps.make.resources.IResourceWithProperties" />
+    <classNode extendsClassName="jetbrains.mps.smodel.resources.IMResource" />
+  </dependency>
+  <dependency className="jetbrains.mps.smodel.resources.ModelsToResources" file="ModelsToResources.java">
+    <classNode dependClassName="java.lang.Comparable" />
+    <classNode dependClassName="java.lang.Iterable" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.Iterator" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime.Wrappers" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime.YieldingIterator" />
+    <classNode dependClassName="jetbrains.mps.generator.GenerationFacade" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ISelector" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ITranslator2" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.Sequence" />
+    <classNode dependClassName="jetbrains.mps.make.resources.IResource" />
+    <classNode dependClassName="jetbrains.mps.smodel.IOperationContext" />
+    <classNode dependClassName="jetbrains.mps.smodel.SModelDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.resources.MResource" />
+  </dependency>
+  <dependency className="jetbrains.mps.smodel.resources.TResource" file="TResource.java">
+    <classNode dependClassName="java.lang.Iterable" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.SuppressWarnings" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.runtime.MultiTuple" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.runtime.Tuples" />
+    <classNode dependClassName="jetbrains.mps.make.delta.IDelta" />
+    <classNode dependClassName="jetbrains.mps.make.resources.IPropertiesIO" />
+    <classNode dependClassName="jetbrains.mps.project.IModule" />
+    <classNode dependClassName="jetbrains.mps.smodel.resources.FlatFilePropertiesIO" />
+    <classNode extendsClassName="jetbrains.mps.baseLanguage.tuples.runtime._2" />
+    <classNode extendsClassName="jetbrains.mps.make.resources.IResource" />
+    <classNode extendsClassName="jetbrains.mps.make.resources.IResourceWithProperties" />
+    <classNode extendsClassName="jetbrains.mps.smodel.resources.ITResource" />
+  </dependency>
+</dependenciesRoot>
+

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="sax.AstChild" file="AstChild.java" />
+  <dependency className="sax.AstRoot" file="AstRoot.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="org.apache.commons.lang.StringUtils" />
+    <classNode dependClassName="sax.AstChild" />
+  </dependency>
+  <dependency className="sax.TestParserHandler" file="TestParserHandler.java">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.Stack" />
+    <classNode dependClassName="org.xml.sax.Attributes" />
+    <classNode dependClassName="org.xml.sax.Locator" />
+    <classNode dependClassName="org.xml.sax.SAXException" />
+    <classNode dependClassName="org.xml.sax.SAXParseException" />
+    <classNode dependClassName="sax.AstChild" />
+    <classNode dependClassName="sax.AstRoot" />
+    <classNode extendsClassName="jetbrains.mps.xmlQuery.runtime.XMLSAXHandler" />
+    <classNode extendsClassName="sax.ElementHandler" />
+  </dependency>
+  <dependency className="sax.testParser_Test" file="testParser_Test.java">
+    <classNode dependClassName="java.io.CharArrayReader" />
+    <classNode dependClassName="java.io.IOException" />
+    <classNode dependClassName="java.lang.Exception" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="javax.xml.parsers.ParserConfigurationException" />
+    <classNode dependClassName="javax.xml.parsers.SAXParser" />
+    <classNode dependClassName="javax.xml.parsers.SAXParserFactory" />
+    <classNode dependClassName="junit.framework.Assert" />
+    <classNode dependClassName="org.xml.sax.InputSource" />
+    <classNode dependClassName="org.xml.sax.SAXException" />
+    <classNode dependClassName="sax.AstRoot" />
+    <classNode dependClassName="sax.TestParserHandler" />
+    <classNode extendsClassName="junit.framework.TestCase" />
+  </dependency>
+</dependenciesRoot>
+

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.smodel.persistence.def.v5.LineContentAccumulator" file="LineContentAccumulator.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.DequeSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.backports.Deque" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.backports.LinkedList" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNodeId" />
+    <classNode dependClassName="jetbrains.mps.smodel.persistence.lines.LineContent" />
+    <classNode dependClassName="jetbrains.mps.smodel.persistence.lines.NodeLineContent" />
+    <classNode dependClassName="jetbrains.mps.smodel.persistence.lines.PropertyLineContent" />
+    <classNode dependClassName="jetbrains.mps.smodel.persistence.lines.ReferenceLineContent" />
+    <classNode dependClassName="org.xml.sax.Locator" />
+  </dependency>
+  <dependency className="jetbrains.mps.smodel.persistence.def.v5.LineToContentMapReader5Handler" file="LineToContentMapReader5Handler.java">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Stack" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNodeId" />
+    <classNode dependClassName="jetbrains.mps.smodel.persistence.def.v4.VersionUtil" />
+    <classNode dependClassName="jetbrains.mps.smodel.persistence.def.v5.LineContentAccumulator" />
+    <classNode dependClassName="jetbrains.mps.smodel.persistence.lines.LineContent" />
+    <classNode dependClassName="org.xml.sax.Attributes" />
+    <classNode dependClassName="org.xml.sax.Locator" />
+    <classNode dependClassName="org.xml.sax.SAXException" />
+    <classNode dependClassName="org.xml.sax.SAXParseException" />
+    <classNode extendsClassName="jetbrains.mps.smodel.persistence.def.v5.ElementHandler" />
+    <classNode extendsClassName="jetbrains.mps.xmlQuery.runtime.XMLSAXHandler" />
+  </dependency>
+  <dependency className="jetbrains.mps.smodel.persistence.def.v5.ModelReader5Handler" file="ModelReader5Handler.java">
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.Stack" />
+    <classNode dependClassName="jetbrains.mps.project.structure.modules.ModuleReference" />
+    <classNode dependClassName="jetbrains.mps.smodel.BaseSModelDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.ModelLoadingState" />
+    <classNode dependClassName="jetbrains.mps.smodel.SModel" />
+    <classNode dependClassName="jetbrains.mps.smodel.SModelHeader" />
+    <classNode dependClassName="jetbrains.mps.smodel.SModelReference" />
+    <classNode dependClassName="jetbrains.mps.smodel.SModelVersionsInfo" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNodeId" />
+    <classNode dependClassName="jetbrains.mps.smodel.persistence.def.IReferencePersister" />
+    <classNode dependClassName="jetbrains.mps.smodel.persistence.def.SAXVisibleModelElements" />
+    <classNode dependClassName="jetbrains.mps.smodel.persistence.def.v4.ReferencePersister4" />
+    <classNode dependClassName="jetbrains.mps.smodel.persistence.def.v4.VersionUtil" />
+    <classNode dependClassName="jetbrains.mps.smodel.persistence.def.v5.ModelUtil" />
+    <classNode dependClassName="org.xml.sax.Attributes" />
+    <classNode dependClassName="org.xml.sax.Locator" />
+    <classNode dependClassName="org.xml.sax.SAXException" />
+    <classNode dependClassName="org.xml.sax.SAXParseException" />
+    <classNode extendsClassName="jetbrains.mps.smodel.persistence.def.v5.ElementHandler" />
+    <classNode extendsClassName="jetbrains.mps.xmlQuery.runtime.XMLSAXHandler" />
+  </dependency>
+  <dependency className="jetbrains.mps.smodel.persistence.def.v5.ModelUtil" file="ModelUtil.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.smodel.SModelReference" />
+    <classNode dependClassName="jetbrains.mps.smodel.SModelStereotype" />
+  </dependency>
+</dependenciesRoot>
+

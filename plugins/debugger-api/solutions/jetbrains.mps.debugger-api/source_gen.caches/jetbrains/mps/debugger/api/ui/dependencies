@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.debugger.api.ui.DebugActionsUtil" file="DebugActionsUtil.java">
+    <classNode dependClassName="com.intellij.execution.ExecutionManager" />
+    <classNode dependClassName="com.intellij.execution.executors.DefaultDebugExecutor" />
+    <classNode dependClassName="com.intellij.execution.process.ProcessHandler" />
+    <classNode dependClassName="com.intellij.execution.ui.RunContentDescriptor" />
+    <classNode dependClassName="com.intellij.execution.ui.RunContentManager" />
+    <classNode dependClassName="com.intellij.openapi.actionSystem.AnActionEvent" />
+    <classNode dependClassName="com.intellij.openapi.actionSystem.DataContext" />
+    <classNode dependClassName="com.intellij.openapi.actionSystem.PlatformDataKeys" />
+    <classNode dependClassName="com.intellij.openapi.project.Project" />
+    <classNode dependClassName="jetbrains.mps.debug.api.AbstractDebugSession" />
+    <classNode dependClassName="jetbrains.mps.debug.api.DebugSessionManagerComponent" />
+    <classNode dependClassName="jetbrains.mps.debug.api.evaluation.IEvaluationProvider" />
+    <classNode dependClassName="org.jetbrains.annotations.Nullable" />
+  </dependency>
+</dependenciesRoot>
+

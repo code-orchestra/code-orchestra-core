@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.baseLanguage.dates.runtime.CompareType" file="CompareType.java" />
+  <dependency className="jetbrains.mps.baseLanguage.dates.runtime.ConditionalDateTimePrinter" file="ConditionalDateTimePrinter.java">
+    <classNode dependClassName="java.io.IOException" />
+    <classNode dependClassName="java.io.Writer" />
+    <classNode dependClassName="java.lang.Long" />
+    <classNode dependClassName="java.lang.Math" />
+    <classNode dependClassName="java.lang.StringBuffer" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Locale" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.dates.runtime.DateTimeOperations" />
+    <classNode dependClassName="org.joda.time.Chronology" />
+    <classNode dependClassName="org.joda.time.DateTime" />
+    <classNode dependClassName="org.joda.time.DateTimeZone" />
+    <classNode dependClassName="org.joda.time.ReadablePartial" />
+    <classNode dependClassName="org.joda.time.format.DateTimeFormat" />
+    <classNode extendsClassName="org.joda.time.format.DateTimePrinter" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.dates.runtime.Constants" file="Constants.java">
+    <classNode dependClassName="org.joda.time.DateTime" />
+    <classNode dependClassName="org.joda.time.DateTimeZone" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.dates.runtime.DateTimeArithmetics" file="DateTimeArithmetics.java">
+    <classNode dependClassName="java.lang.Deprecated" />
+    <classNode dependClassName="java.lang.Long" />
+    <classNode dependClassName="java.lang.Math" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.dates.runtime.DateTimeOperations" />
+    <classNode dependClassName="org.joda.time.DateTime" />
+    <classNode dependClassName="org.joda.time.DateTimeComparator" />
+    <classNode dependClassName="org.joda.time.Duration" />
+    <classNode dependClassName="org.joda.time.Interval" />
+    <classNode dependClassName="org.joda.time.Period" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.dates.runtime.DateTimeOperations" file="DateTimeOperations.java">
+    <classNode dependClassName="java.lang.Deprecated" />
+    <classNode dependClassName="java.lang.IllegalArgumentException" />
+    <classNode dependClassName="java.lang.InheritableThreadLocal" />
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.Long" />
+    <classNode dependClassName="java.lang.Math" />
+    <classNode dependClassName="java.lang.NullPointerException" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.UnsupportedOperationException" />
+    <classNode dependClassName="java.util.Calendar" />
+    <classNode dependClassName="java.util.Date" />
+    <classNode dependClassName="java.util.Locale" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.dates.runtime.CompareType" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.dates.runtime.Constants" />
+    <classNode dependClassName="org.joda.time.DateTime" />
+    <classNode dependClassName="org.joda.time.DateTimeComparator" />
+    <classNode dependClassName="org.joda.time.DateTimeFieldType" />
+    <classNode dependClassName="org.joda.time.DateTimeZone" />
+    <classNode dependClassName="org.joda.time.Duration" />
+    <classNode dependClassName="org.joda.time.MutableDateTime" />
+    <classNode dependClassName="org.joda.time.Period" />
+    <classNode dependClassName="org.joda.time.PeriodType" />
+    <classNode dependClassName="org.joda.time.format.DateTimeFormatter" />
+    <classNode dependClassName="org.joda.time.format.PeriodFormatter" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.dates.runtime.DateTimeUtil" file="DateTimeUtil.java">
+    <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime.Result" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime._UnrestrictedFunctionTypes" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.dates.runtime.DateTimeOperations" />
+    <classNode dependClassName="org.joda.time.DateTimeZone" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.dates.runtime.FixedLocaleDateTimeFormatter" file="FixedLocaleDateTimeFormatter.java">
+    <classNode dependClassName="java.io.IOException" />
+    <classNode dependClassName="java.io.Writer" />
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.StringBuffer" />
+    <classNode dependClassName="java.util.Locale" />
+    <classNode dependClassName="org.joda.time.Chronology" />
+    <classNode dependClassName="org.joda.time.DateTimeField" />
+    <classNode dependClassName="org.joda.time.DateTimeFieldType" />
+    <classNode dependClassName="org.joda.time.DateTimeUtils" />
+    <classNode dependClassName="org.joda.time.DateTimeZone" />
+    <classNode dependClassName="org.joda.time.ReadablePartial" />
+    <classNode dependClassName="org.joda.time.format.DateTimeFormatter" />
+    <classNode extendsClassName="org.joda.time.format.DateTimeParser" />
+    <classNode extendsClassName="org.joda.time.format.DateTimeParserBucket" />
+    <classNode extendsClassName="org.joda.time.format.DateTimePrinter" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.dates.runtime.InlineDateFormatter" file="InlineDateFormatter.java">
+    <classNode dependClassName="org.joda.time.format.DateTimeFormatter" />
+    <classNode dependClassName="org.joda.time.format.DateTimeFormatterBuilder" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.dates.runtime.OffsetDateTimePrinter" file="OffsetDateTimePrinter.java">
+    <classNode dependClassName="java.io.IOException" />
+    <classNode dependClassName="java.io.Writer" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.StringBuffer" />
+    <classNode dependClassName="java.util.Locale" />
+    <classNode dependClassName="org.joda.time.Chronology" />
+    <classNode dependClassName="org.joda.time.DateTime" />
+    <classNode dependClassName="org.joda.time.DateTimeZone" />
+    <classNode dependClassName="org.joda.time.DurationFieldType" />
+    <classNode dependClassName="org.joda.time.Period" />
+    <classNode dependClassName="org.joda.time.PeriodType" />
+    <classNode dependClassName="org.joda.time.ReadableInstant" />
+    <classNode dependClassName="org.joda.time.ReadablePartial" />
+    <classNode dependClassName="org.joda.time.format.PeriodFormat" />
+    <classNode dependClassName="org.joda.time.format.PeriodFormatter" />
+    <classNode extendsClassName="org.joda.time.format.DateTimePrinter" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.dates.runtime.PredefinedFormats" file="PredefinedFormats.java">
+    <classNode dependClassName="java.util.Locale" />
+    <classNode dependClassName="org.joda.time.format.DateTimeFormat" />
+    <classNode dependClassName="org.joda.time.format.DateTimeFormatter" />
+  </dependency>
+</dependenciesRoot>
+

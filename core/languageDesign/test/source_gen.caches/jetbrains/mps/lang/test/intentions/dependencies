@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.lang.test.intentions.AddCellAnnotation_Intention" file="AddCellAnnotation_Intention.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.AttributeOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.IAttributeDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.EditorContext" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cells.EditorCell" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cells.EditorCell_Label" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.inspector.InspectorEditorComponent" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.selection.NodeRangeSelection" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.selection.Selection" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.smodel.action.SNodeFactoryOperations" />
+    <classNode extendsClassName="jetbrains.mps.intentions.BaseIntention" />
+    <classNode extendsClassName="jetbrains.mps.intentions.Intention" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.test.intentions.AddMockAnnotation_Intention" file="AddMockAnnotation_Intention.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.AttributeOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.IAttributeDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.EditorContext" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.smodel.action.SNodeFactoryOperations" />
+    <classNode extendsClassName="jetbrains.mps.intentions.BaseIntention" />
+    <classNode extendsClassName="jetbrains.mps.intentions.Intention" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.test.intentions.AddNodeHasErrorMark_Intention" file="AddNodeHasErrorMark_Intention.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.AttributeOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.IAttributeDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.test.behavior.NodesTestCase_Behavior" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.EditorContext" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.smodel.action.SNodeFactoryOperations" />
+    <classNode extendsClassName="jetbrains.mps.intentions.BaseIntention" />
+    <classNode extendsClassName="jetbrains.mps.intentions.Intention" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.test.intentions.AddOperationsMark_Intention" file="AddOperationsMark_Intention.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.AttributeOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.IAttributeDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.test.behavior.NodesTestCase_Behavior" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.EditorContext" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.smodel.action.SNodeFactoryOperations" />
+    <classNode extendsClassName="jetbrains.mps.intentions.BaseIntention" />
+    <classNode extendsClassName="jetbrains.mps.intentions.Intention" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.test.intentions.AddPropertiesMark_Intention" file="AddPropertiesMark_Intention.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.AttributeOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.IAttributeDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.test.behavior.NodesTestCase_Behavior" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.EditorContext" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.smodel.action.SNodeFactoryOperations" />
+    <classNode extendsClassName="jetbrains.mps.intentions.BaseIntention" />
+    <classNode extendsClassName="jetbrains.mps.intentions.Intention" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.test.intentions.AddTestAnnotation_Intention" file="AddTestAnnotation_Intention.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.AttributeOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.IAttributeDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.test.behavior.NodesTestCase_Behavior" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.EditorContext" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.smodel.action.SNodeFactoryOperations" />
+    <classNode extendsClassName="jetbrains.mps.intentions.BaseIntention" />
+    <classNode extendsClassName="jetbrains.mps.intentions.Intention" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.test.intentions.IntentionsDescriptor" file="IntentionsDescriptor.java">
+    <classNode dependClassName="jetbrains.mps.lang.test.intentions.AddCellAnnotation_Intention" />
+    <classNode dependClassName="jetbrains.mps.lang.test.intentions.AddMockAnnotation_Intention" />
+    <classNode dependClassName="jetbrains.mps.lang.test.intentions.AddNodeHasErrorMark_Intention" />
+    <classNode dependClassName="jetbrains.mps.lang.test.intentions.AddOperationsMark_Intention" />
+    <classNode dependClassName="jetbrains.mps.lang.test.intentions.AddPropertiesMark_Intention" />
+    <classNode dependClassName="jetbrains.mps.lang.test.intentions.AddTestAnnotation_Intention" />
+    <classNode dependClassName="jetbrains.mps.project.structure.modules.ModuleReference" />
+    <classNode dependClassName="jetbrains.mps.smodel.SModelReference" />
+    <classNode extendsClassName="jetbrains.mps.intentions.BaseIntentionsDescriptor" />
+  </dependency>
+</dependenciesRoot>
+

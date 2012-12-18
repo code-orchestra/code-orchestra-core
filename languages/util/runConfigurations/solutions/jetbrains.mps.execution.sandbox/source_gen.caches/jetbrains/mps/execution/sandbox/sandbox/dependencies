@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.execution.sandbox.sandbox.Main" file="Main.java">
+    <classNode dependClassName="java.lang.Iterable" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="jetbrains.mps.execution.api.commands.ProcessHandlerBuilder" />
+  </dependency>
+  <dependency className="jetbrains.mps.execution.sandbox.sandbox.PersonEditor_Configuration" file="PersonEditor_Configuration.java">
+    <classNode dependClassName="com.intellij.execution.configurations.RuntimeConfigurationException" />
+    <classNode dependClassName="com.intellij.openapi.util.InvalidDataException" />
+    <classNode dependClassName="com.intellij.openapi.util.WriteExternalException" />
+    <classNode dependClassName="com.intellij.util.xmlb.XmlSerializer" />
+    <classNode dependClassName="java.lang.CloneNotSupportedException" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.execution.api.settings.SettingsEditorEx" />
+    <classNode dependClassName="jetbrains.mps.execution.sandbox.sandbox.PersonEditor_Configuration_Editor" />
+    <classNode dependClassName="jetbrains.mps.logging.Logger" />
+    <classNode dependClassName="org.jdom.Element" />
+    <classNode dependClassName="org.jetbrains.annotations.NotNull" />
+    <classNode extendsClassName="jetbrains.mps.execution.api.settings.IPersistentConfiguration" />
+    <classNode extendsClassName="jetbrains.mps.execution.api.settings.ITemplatePersistentConfiguration" />
+  </dependency>
+  <dependency className="jetbrains.mps.execution.sandbox.sandbox.PersonEditor_Configuration_Editor" file="PersonEditor_Configuration_Editor.java">
+    <classNode dependClassName="com.intellij.openapi.options.ConfigurationException" />
+    <classNode dependClassName="com.intellij.openapi.util.Factory" />
+    <classNode dependClassName="java.awt.GridBagLayout" />
+    <classNode dependClassName="javax.swing.JLabel" />
+    <classNode dependClassName="javax.swing.JPanel" />
+    <classNode dependClassName="javax.swing.JTextField" />
+    <classNode dependClassName="jetbrains.mps.execution.sandbox.sandbox.PersonEditor_Configuration" />
+    <classNode dependClassName="jetbrains.mps.ide.common.LayoutUtil" />
+    <classNode dependClassName="org.jetbrains.annotations.NotNull" />
+    <classNode extendsClassName="jetbrains.mps.execution.api.settings.SettingsEditorEx" />
+  </dependency>
+  <dependency className="jetbrains.mps.execution.sandbox.sandbox.SettingsEditorDialogTest" file="SettingsEditorDialogTest.java">
+    <classNode dependClassName="java.lang.Runnable" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="javax.swing.SwingUtilities" />
+    <classNode dependClassName="jetbrains.mps.execution.api.settings.SettingsEditorDialog" />
+    <classNode dependClassName="jetbrains.mps.execution.sandbox.sandbox.PersonEditor_Configuration" />
+  </dependency>
+  <dependency className="jetbrains.mps.execution.sandbox.sandbox.SettingsEditorPanelTest" file="SettingsEditorPanelTest.java">
+    <classNode dependClassName="java.awt.BorderLayout" />
+    <classNode dependClassName="java.awt.FlowLayout" />
+    <classNode dependClassName="java.awt.event.ActionEvent" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.Runnable" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="javax.swing.JButton" />
+    <classNode dependClassName="javax.swing.JPanel" />
+    <classNode dependClassName="javax.swing.SwingUtilities" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes" />
+    <classNode dependClassName="jetbrains.mps.execution.api.settings.ActionWrapper" />
+    <classNode dependClassName="jetbrains.mps.execution.api.settings.SettingsEditorPanel" />
+    <classNode dependClassName="jetbrains.mps.execution.sandbox.sandbox.PersonEditor_Configuration" />
+    <classNode extendsClassName="javax.swing.JFrame" />
+  </dependency>
+  <dependency className="jetbrains.mps.execution.sandbox.sandbox.SomeInvalid" file="SomeInvalid.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+  </dependency>
+  <dependency className="jetbrains.mps.execution.sandbox.sandbox.SomeValid" file="SomeValid.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+  </dependency>
+  <dependency className="jetbrains.mps.execution.sandbox.sandbox.TemplateConfigurationTest" file="TemplateConfigurationTest.java">
+    <classNode dependClassName="java.awt.BorderLayout" />
+    <classNode dependClassName="java.awt.FlowLayout" />
+    <classNode dependClassName="java.awt.event.ActionEvent" />
+    <classNode dependClassName="java.lang.Runnable" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="javax.swing.AbstractAction" />
+    <classNode dependClassName="javax.swing.JButton" />
+    <classNode dependClassName="javax.swing.JComponent" />
+    <classNode dependClassName="javax.swing.JPanel" />
+    <classNode dependClassName="javax.swing.SwingUtilities" />
+    <classNode dependClassName="jetbrains.mps.execution.api.settings.SettingsEditorEx" />
+    <classNode dependClassName="jetbrains.mps.execution.sandbox.sandbox.PersonEditor_Configuration" />
+    <classNode extendsClassName="javax.swing.JFrame" />
+  </dependency>
+  <dependency className="jetbrains.mps.execution.sandbox.sandbox.test" file="test.xml" />
+</dependenciesRoot>
+

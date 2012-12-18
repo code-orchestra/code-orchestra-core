@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.execution.api.configurations.BaseMpsBeforeTaskProvider" file="BaseMpsBeforeTaskProvider.java">
+    <classNode dependClassName="com.intellij.execution.configurations.RunConfiguration" />
+    <classNode dependClassName="com.intellij.openapi.actionSystem.DataContext" />
+    <classNode dependClassName="com.intellij.openapi.actionSystem.PlatformDataKeys" />
+    <classNode dependClassName="com.intellij.openapi.project.Project" />
+    <classNode dependClassName="java.lang.Boolean" />
+    <classNode dependClassName="java.lang.ClassCastException" />
+    <classNode dependClassName="java.lang.IllegalAccessException" />
+    <classNode dependClassName="java.lang.NoSuchMethodException" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.Throwable" />
+    <classNode dependClassName="java.lang.reflect.InvocationTargetException" />
+    <classNode dependClassName="java.lang.reflect.Method" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.IWhereFilter" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.Sequence" />
+    <classNode dependClassName="org.apache.commons.logging.Log" />
+    <classNode dependClassName="org.apache.commons.logging.LogFactory" />
+    <classNode extendsClassName="com.intellij.execution.BeforeRunTask" />
+    <classNode extendsClassName="com.intellij.execution.BeforeRunTaskProvider" />
+  </dependency>
+  <dependency className="jetbrains.mps.execution.api.configurations.BaseMpsRunConfiguration" file="BaseMpsRunConfiguration.java">
+    <classNode dependClassName="com.intellij.execution.configurations.ConfigurationFactory" />
+    <classNode dependClassName="com.intellij.execution.executors.DefaultRunExecutor" />
+    <classNode dependClassName="com.intellij.openapi.project.Project" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode extendsClassName="com.intellij.execution.configurations.LocatableConfiguration" />
+    <classNode extendsClassName="com.intellij.execution.configurations.RunConfigurationBase" />
+  </dependency>
+  <dependency className="jetbrains.mps.execution.api.configurations.ConsoleCreator" file="ConsoleCreator.java">
+    <classNode dependClassName="com.intellij.execution.impl.ConsoleViewImpl" />
+    <classNode dependClassName="com.intellij.openapi.project.Project" />
+  </dependency>
+  <dependency className="jetbrains.mps.execution.api.configurations.ConsoleProcessListener" file="ConsoleProcessListener.java">
+    <classNode dependClassName="com.intellij.execution.process.ProcessEvent" />
+    <classNode dependClassName="com.intellij.execution.process.ProcessOutputTypes" />
+    <classNode dependClassName="com.intellij.execution.ui.ConsoleView" />
+    <classNode dependClassName="com.intellij.execution.ui.ConsoleViewContentType" />
+    <classNode dependClassName="com.intellij.openapi.util.Key" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode extendsClassName="com.intellij.execution.process.ProcessAdapter" />
+  </dependency>
+  <dependency className="jetbrains.mps.execution.api.configurations.DefaultExecutionConsole" file="DefaultExecutionConsole.java">
+    <classNode dependClassName="javax.swing.JComponent" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes" />
+    <classNode dependClassName="org.jetbrains.annotations.Nullable" />
+    <classNode extendsClassName="com.intellij.execution.ui.ExecutionConsole" />
+  </dependency>
+  <dependency className="jetbrains.mps.execution.api.configurations.DefaultExecutionResult" file="DefaultExecutionResult.java">
+    <classNode dependClassName="com.intellij.execution.process.ProcessHandler" />
+    <classNode dependClassName="com.intellij.execution.ui.ExecutionConsole" />
+    <classNode dependClassName="com.intellij.openapi.actionSystem.AnAction" />
+    <classNode dependClassName="org.jetbrains.annotations.NotNull" />
+    <classNode extendsClassName="com.intellij.execution.ExecutionResult" />
+  </dependency>
+</dependenciesRoot>
+

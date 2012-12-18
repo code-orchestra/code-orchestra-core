@@ -1,0 +1,36 @@
+GeneratorFacade.generateModelsWithProgressWindow
+    ModelAccess.runReadAction
+        collect requirements
+
+    ModelAccess.runWriteActionInCommand
+        SModelRepository.saveAll
+
+    ModelAccess.runWriteActionWithProgressSynchronously
+        GeneratorManager.generateModels                
+            ModelAccess.runWriteAction
+                UndoHelper.runNonUndoableAction
+                    GenerationController.generate
+                        GenerationController.generateModelsInModule
+                            GenerationController.generateModel
+                                TypeChecker.setIsGeneration(true, ?typetrace)
+                                GeneratorUtil.runReadInWrite
+                                    ?ModelAccess.runReadInWrite
+                                        GenerationSession.generateModel -> status
+                                        GenerationHandler.handleOutput
+                                            FileSystem.getFileByPath
+                                            TextGenerator.handleOutput
+
+                                CleanupManager.cleanup
+                                TypeChecker.setIsGeneration(false)
+                        GenerationController.compile
+                            GenerationHandler.compile
+                                ?ModelAccess.writeFilesInEDT
+                                    FileProcessor.saveGeneratedFiles
+                                ?JavaGenerationHandler.compileModuleInMPS
+                                    ModuleMaker.make
+                                ?IdeaAwareJavaGenerationHandler.compileModuleInIDEA
+                                    IProjectHandler.buildModule
+
+
+                TransientModelsModule.publishAll
+                CleanupManager.cleanup

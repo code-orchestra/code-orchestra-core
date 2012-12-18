@@ -1,0 +1,29 @@
+<!--
+  ~ Copyright 2003-2010 JetBrains s.r.o.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<antlib>
+    <taskdef name="mps.generate" classname="jetbrains.mps.build.ant.generation.GenerateTask"/>
+    <taskdef name="mps.make" classname="jetbrains.mps.build.ant.make.MakeTask"/>
+    <taskdef name="mps.test.generation" classname="jetbrains.mps.build.ant.generation.TestGenerationOnTeamcity"/>
+    <taskdef name="mps.test.broken.references" classname="jetbrains.mps.build.ant.brokenRefs.TestBrokenReferencesOnTeamcity"/>
+    <typedef name="model" classname="org.apache.tools.ant.types.FileSet"/>
+    <typedef name="module" classname="org.apache.tools.ant.types.FileSet"/>
+    <typedef name="project" classname="jetbrains.mps.build.ant.ProjectNested"/>
+    <typedef name="library" classname="jetbrains.mps.build.ant.LibraryDataType"/>
+    <typedef name="jvmarg" classname="jetbrains.mps.build.ant.Arg"/>
+    <typedef name="jvmargs" classname="jetbrains.mps.build.ant.JvmArgs"/>
+    <typedef name="macro" classname="jetbrains.mps.build.ant.Macro"/>
+    <typedef name="perfomancereport" classname="jetbrains.mps.build.ant.generation.PerfomanceReport"/>
+</antlib>

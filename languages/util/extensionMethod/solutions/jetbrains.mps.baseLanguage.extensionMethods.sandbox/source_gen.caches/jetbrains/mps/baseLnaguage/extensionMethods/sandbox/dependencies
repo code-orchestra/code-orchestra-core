@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.baseLnaguage.extensionMethods.sandbox.Abc" file="Abc.java">
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.util.LinkedList" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLnaguage.extensionMethods.sandbox.StringExtensionMethods" file="StringExtensionMethods.java">
+    <classNode dependClassName="java.lang.String" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLnaguage.extensionMethods.sandbox.Test" file="Test.java">
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.util.LinkedList" />
+    <classNode dependClassName="jetbrains.mps.baseLnaguage.extensionMethods.sandbox.Abc" />
+  </dependency>
+</dependenciesRoot>
+

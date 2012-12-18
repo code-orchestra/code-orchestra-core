@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.execution.impl.configurations.RunConfigurationsStateManager" file="RunConfigurationsStateManager.java">
+    <classNode dependClassName="com.intellij.execution.ExecutionManager" />
+    <classNode dependClassName="com.intellij.execution.RunManagerEx" />
+    <classNode dependClassName="com.intellij.execution.configurations.ConfigurationType" />
+    <classNode dependClassName="com.intellij.execution.configurations.RunConfiguration" />
+    <classNode dependClassName="com.intellij.execution.impl.ProjectRunConfigurationManager" />
+    <classNode dependClassName="com.intellij.execution.impl.RunManagerImpl" />
+    <classNode dependClassName="com.intellij.execution.ui.RunContentDescriptor" />
+    <classNode dependClassName="com.intellij.execution.ui.RunContentManagerImpl" />
+    <classNode dependClassName="com.intellij.openapi.extensions.Extensions" />
+    <classNode dependClassName="com.intellij.openapi.project.Project" />
+    <classNode dependClassName="com.intellij.openapi.util.InvalidDataException" />
+    <classNode dependClassName="com.intellij.openapi.util.WriteExternalException" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.HashSet" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="javax.xml.transform.Transformer" />
+    <classNode dependClassName="javax.xml.transform.TransformerException" />
+    <classNode dependClassName="javax.xml.transform.TransformerFactory" />
+    <classNode dependClassName="javax.xml.transform.TransformerFactoryConfigurationError" />
+    <classNode dependClassName="javax.xml.transform.stream.StreamSource" />
+    <classNode dependClassName="org.apache.commons.logging.Log" />
+    <classNode dependClassName="org.apache.commons.logging.LogFactory" />
+    <classNode dependClassName="org.jdom.Element" />
+    <classNode dependClassName="org.jdom.transform.JDOMResult" />
+    <classNode dependClassName="org.jdom.transform.JDOMSource" />
+    <classNode dependClassName="org.jetbrains.annotations.NonNls" />
+    <classNode dependClassName="org.jetbrains.annotations.NotNull" />
+    <classNode extendsClassName="com.intellij.openapi.components.ProjectComponent" />
+  </dependency>
+  <dependency className="jetbrains.mps.execution.impl.configurations.java.transform" file="java.transform.xml" />
+  <dependency className="jetbrains.mps.execution.impl.configurations.junit.transform" file="junit.transform.xml" />
+</dependenciesRoot>
+

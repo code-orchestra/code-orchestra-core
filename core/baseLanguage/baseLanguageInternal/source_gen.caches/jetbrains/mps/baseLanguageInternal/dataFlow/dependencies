@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.baseLanguageInternal.dataFlow.DFABuilders" file="DFABuilders.java">
+    <classNode dependClassName="jetbrains.mps.baseLanguageInternal.dataFlow.ExtractStatementListExpression_DataFlow" />
+    <classNode dependClassName="jetbrains.mps.baseLanguageInternal.dataFlow.ExtractStatementListInnerExpression_DataFlow" />
+    <classNode dependClassName="jetbrains.mps.baseLanguageInternal.dataFlow.InternalAnonymousClassCreator_DataFlow" />
+    <classNode dependClassName="jetbrains.mps.lang.dataFlow.DataFlowManager" />
+    <classNode extendsClassName="jetbrains.mps.lang.dataFlow.DataFlowBuilders" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguageInternal.dataFlow.ExtractStatementListExpression_DataFlow" file="ExtractStatementListExpression_DataFlow.java">
+    <classNode dependClassName="jetbrains.mps.lang.dataFlow.DataFlowBuilderContext" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.IOperationContext" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.lang.dataFlow.DataFlowBuilder" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguageInternal.dataFlow.ExtractStatementListInnerExpression_DataFlow" file="ExtractStatementListInnerExpression_DataFlow.java">
+    <classNode dependClassName="jetbrains.mps.lang.dataFlow.DataFlowBuilderContext" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.IOperationContext" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.lang.dataFlow.DataFlowBuilder" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguageInternal.dataFlow.InternalAnonymousClassCreator_DataFlow" file="InternalAnonymousClassCreator_DataFlow.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.HashSet" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.behavior.StatementList_Behavior" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.SetSequence" />
+    <classNode dependClassName="jetbrains.mps.lang.dataFlow.DataFlowBuilderContext" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.IOperationContext" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.lang.dataFlow.DataFlowBuilder" />
+  </dependency>
+</dependenciesRoot>
+

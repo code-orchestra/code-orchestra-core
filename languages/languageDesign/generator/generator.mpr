@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CodeStyleSettings">
+    <option name="fieldPrefix" value="my" />
+    <option name="fieldSuffix" value="" />
+    <option name="localVariablePrefix" value="" />
+    <option name="localVariableSuffix" value="" />
+    <option name="parameterPrefix" value="" />
+    <option name="parameterSuffix" value="" />
+    <option name="staticFieldPrefix" value="our" />
+    <option name="staticFieldSuffix" value="" />
+  </component>
+  <component name="DependencyValidationManager">
+    <option name="SKIP_IMPORT_STATEMENTS" value="false" />
+  </component>
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false" />
+  <component name="IssueNavigationConfiguration">
+    <option name="links">
+      <list>
+        <IssueNavigationLink>
+          <option name="issueRegexp" value="[A-Z]+\-\d+" />
+          <option name="linkRegexp" value="http://youtrack.jetbrains.net/issue/$0" />
+        </IssueNavigationLink>
+      </list>
+    </option>
+  </component>
+  <component name="MPSProject">
+    <projectModules>
+      <modulePath path="${mps_home}/core/generator/solutions/jetbrains.mps.generator.msd" folder="" />
+      <modulePath path="${project}/test/sandbox/sandbox.msd" />
+      <modulePath path="${project}/test/incremental/jetbrains.mps.transformation.test.incremental.msd" folder="" />
+      <modulePath path="${project}/test/inputModels/inputModels.msd" />
+      <modulePath path="${mps_home}/core/baseLanguage/unitTest/unitTest.mpl" />
+      <modulePath path="${project}/languages/errorReporting/errorReporting.mpl" folder="" />
+      <modulePath path="${project}/languages/generationContext/generationContext.mpl" />
+      <modulePath path="${project}/languages/generationParameters/generationParameters.mpl" folder="" />
+      <modulePath path="${project}/languages/templateLanguage/templateLanguage.mpl" />
+      <modulePath path="${project}/test/inputLang/inputLang.mpl" />
+      <modulePath path="${project}/test/outputLang/outputLang.mpl" />
+      <modulePath path="${mps_home}/core/languageDesign/plugin/plugin.mpl" />
+      <modulePath path="${project}/languages/descriptor/descriptor.mpl" folder="" />
+      <modulePath path="${mps_home}/core/kernel/patternRuntime/runtime.msd" folder="" />
+    </projectModules>
+    <genConfs>
+      <genConfModule name="generator engine (solution)" moduleRef="jetbrains.mps.generator" />
+      <genConfModule name="lang.generator" moduleRef="jetbrains.mps.lang.generator" />
+      <genConfModule name="lang.generator.generationContext" moduleRef="jetbrains.mps.lang.generator.generationContext" />
+      <genConfModule name="lang.generator.generationParameters" moduleRef="jetbrains.mps.lang.generator.generationParameters" />
+    </genConfs>
+  </component>
+  <component name="ProjectDetails">
+    <option name="projectName" value="templateLanguage" />
+  </component>
+  <component name="ProjectModuleManager">
+    <modules />
+  </component>
+  <component name="ProjectRootManager" version="2" />
+  <component name="ProjectVersion">
+    <option name="version" value="2.0" />
+  </component>
+  <component name="SvnBranchConfigurationManager">
+    <option name="myConfigurationMap">
+      <map>
+        <entry key="$APPLICATION_HOME_DIR$">
+          <value>
+            <SvnBranchConfiguration>
+              <option name="branchUrls">
+                <list>
+                  <option value="http://svn.jetbrains.org/mps/branches" />
+                  <option value="http://svn.jetbrains.org/mps/tags" />
+                </list>
+              </option>
+              <option name="trunkUrl" value="http://svn.jetbrains.org/mps/trunk" />
+            </SvnBranchConfiguration>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="myVersion" value="124" />
+    <option name="mySupportsUserInfoFilter" value="true" />
+  </component>
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="" />
+    <mapping directory="$APPLICATION_HOME_DIR$" vcs="Git" />
+  </component>
+</project>
+

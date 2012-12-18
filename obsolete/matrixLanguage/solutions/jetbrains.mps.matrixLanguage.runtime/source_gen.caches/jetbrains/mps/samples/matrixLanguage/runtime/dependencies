@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.samples.matrixLanguage.runtime.BadMatrixDimensionException" file="BadMatrixDimensionException.java">
+    <classNode extendsClassName="java.lang.RuntimeException" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.matrixLanguage.runtime.DoubleFieldOperations" file="DoubleFieldOperations.java">
+    <classNode dependClassName="java.lang.Double" />
+    <classNode extendsClassName="jetbrains.mps.samples.matrixLanguage.runtime.FieldOperations" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.matrixLanguage.runtime.FieldOperations" file="FieldOperations.java" />
+  <dependency className="jetbrains.mps.samples.matrixLanguage.runtime.Matrix" file="Matrix.java">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="jetbrains.mps.samples.matrixLanguage.runtime.BadMatrixDimensionException" />
+    <classNode dependClassName="jetbrains.mps.samples.matrixLanguage.runtime.FieldOperations" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.matrixLanguage.runtime.MatrixIterator" file="MatrixIterator.java">
+    <classNode dependClassName="jetbrains.mps.samples.matrixLanguage.runtime.Matrix" />
+  </dependency>
+</dependenciesRoot>
+

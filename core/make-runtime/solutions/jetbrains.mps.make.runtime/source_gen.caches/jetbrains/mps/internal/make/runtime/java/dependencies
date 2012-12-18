@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.internal.make.runtime.java.FileProcessor" file="FileProcessor.java">
+    <classNode dependClassName="java.io.BufferedOutputStream" />
+    <classNode dependClassName="java.io.BufferedReader" />
+    <classNode dependClassName="java.io.IOException" />
+    <classNode dependClassName="java.io.InputStream" />
+    <classNode dependClassName="java.io.InputStreamReader" />
+    <classNode dependClassName="java.io.OutputStream" />
+    <classNode dependClassName="java.io.OutputStreamWriter" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.StringBuilder" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.Arrays" />
+    <classNode dependClassName="java.util.Collection" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.generator.ModelGenerationStatusManager" />
+    <classNode dependClassName="jetbrains.mps.logging.Logger" />
+    <classNode dependClassName="jetbrains.mps.smodel.SModelDescriptor" />
+    <classNode dependClassName="jetbrains.mps.util.JDOMUtil" />
+    <classNode dependClassName="jetbrains.mps.vfs.IFile" />
+    <classNode dependClassName="org.jdom.Document" />
+    <classNode dependClassName="org.jdom.Element" />
+    <classNode extendsClassName="jetbrains.mps.internal.make.runtime.java.FileContent" />
+  </dependency>
+  <dependency className="jetbrains.mps.internal.make.runtime.java.IAuxProjectPeer" file="IAuxProjectPeer.java">
+    <classNode dependClassName="jetbrains.mps.internal.make.runtime.java.IJavaCompiler" />
+  </dependency>
+  <dependency className="jetbrains.mps.internal.make.runtime.java.IJavaCompiler" file="IJavaCompiler.java">
+    <classNode dependClassName="jetbrains.mps.make.MPSCompilationResult" />
+    <classNode dependClassName="jetbrains.mps.project.IModule" />
+  </dependency>
+  <dependency className="jetbrains.mps.internal.make.runtime.java.JavaStreamHandler" file="JavaStreamHandler.java">
+    <classNode dependClassName="java.lang.Iterable" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.HashSet" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="jetbrains.mps.generator.fileGenerator.FileGenerationUtil" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.Sequence" />
+    <classNode dependClassName="jetbrains.mps.internal.make.runtime.java.FileProcessor" />
+    <classNode dependClassName="jetbrains.mps.internal.make.runtime.util.FilesDelta" />
+    <classNode dependClassName="jetbrains.mps.make.delta.IDelta" />
+    <classNode dependClassName="jetbrains.mps.smodel.SModelDescriptor" />
+    <classNode dependClassName="jetbrains.mps.vfs.IFile" />
+    <classNode dependClassName="org.jdom.Element" />
+    <classNode extendsClassName="jetbrains.mps.generator.generationTypes.StreamHandler" />
+  </dependency>
+</dependenciesRoot>
+

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="tests.Escaping_Test" file="Escaping_Test.java">
+    <classNode dependClassName="java.lang.Exception" />
+    <classNode dependClassName="java.util.regex.Pattern" />
+    <classNode dependClassName="junit.framework.Assert" />
+    <classNode extendsClassName="junit.framework.TestCase" />
+  </dependency>
+  <dependency className="tests.Match_Test" file="Match_Test.java">
+    <classNode dependClassName="java.lang.Exception" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.regex.Matcher" />
+    <classNode dependClassName="java.util.regex.Pattern" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.regexp.runtime.RegexpOperations" />
+    <classNode dependClassName="junit.framework.Assert" />
+    <classNode extendsClassName="junit.framework.TestCase" />
+  </dependency>
+  <dependency className="tests.PerlReplace_Test" file="PerlReplace_Test.java">
+    <classNode dependClassName="java.lang.Exception" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.regex.Pattern" />
+    <classNode dependClassName="junit.framework.Assert" />
+    <classNode extendsClassName="junit.framework.TestCase" />
+  </dependency>
+  <dependency className="tests.Replace_Test" file="Replace_Test.java">
+    <classNode dependClassName="java.lang.Exception" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.regex.Pattern" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.regexp.runtime.RegexpOperations" />
+    <classNode dependClassName="junit.framework.Assert" />
+    <classNode dependClassName="tests._Replacer_55w9mm_a0a0a0a" />
+    <classNode extendsClassName="junit.framework.TestCase" />
+  </dependency>
+  <dependency className="tests.Statements_Test" file="Statements_Test.java">
+    <classNode dependClassName="java.lang.Exception" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.regex.Matcher" />
+    <classNode dependClassName="java.util.regex.Pattern" />
+    <classNode dependClassName="junit.framework.Assert" />
+    <classNode extendsClassName="junit.framework.TestCase" />
+  </dependency>
+  <dependency className="tests._Replacer_55w9mm_a0a0a0a" file="_Replacer_55w9mm_a0a0a0a.java">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.regex.Matcher" />
+    <classNode dependClassName="tests.Replace_Test" />
+    <classNode extendsClassName="jetbrains.mps.baseLanguage.regexp.runtime.Replacer" />
+  </dependency>
+</dependenciesRoot>
+

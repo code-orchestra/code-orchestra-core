@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.make.script.IConfig" file="IConfig.java">
+    <classNode dependClassName="java.lang.UnsupportedOperationException" />
+    <classNode dependClassName="jetbrains.mps.make.resources.IPropertiesAccessor" />
+    <classNode dependClassName="jetbrains.mps.make.script.IConfigMonitor" />
+  </dependency>
+  <dependency className="jetbrains.mps.make.script.IConfigMonitor" file="IConfigMonitor.java">
+    <classNode dependClassName="jetbrains.mps.make.script.IOption" />
+    <classNode dependClassName="jetbrains.mps.make.script.IProgress" />
+    <classNode dependClassName="jetbrains.mps.make.script.IQuery" />
+    <classNode extendsClassName="jetbrains.mps.make.script.IJobMonitor" />
+    <classNode extendsClassName="jetbrains.mps.make.script.Stub" />
+  </dependency>
+  <dependency className="jetbrains.mps.make.script.IFeedback" file="IFeedback.java">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.Throwable" />
+    <classNode dependClassName="jetbrains.mps.messages.IMessage" />
+    <classNode extendsClassName="jetbrains.mps.make.script.Default" />
+    <classNode extendsClassName="jetbrains.mps.make.script.Stub" />
+  </dependency>
+  <dependency className="jetbrains.mps.make.script.IJob" file="IJob.java">
+    <classNode dependClassName="java.lang.Iterable" />
+    <classNode dependClassName="java.lang.UnsupportedOperationException" />
+    <classNode dependClassName="jetbrains.mps.make.resources.IPropertiesAccessor" />
+    <classNode dependClassName="jetbrains.mps.make.resources.IResource" />
+    <classNode dependClassName="jetbrains.mps.make.script.IJobMonitor" />
+    <classNode dependClassName="jetbrains.mps.make.script.IResult" />
+  </dependency>
+  <dependency className="jetbrains.mps.make.script.IJobMonitor" file="IJobMonitor.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="jetbrains.mps.make.script.IFeedback" />
+    <classNode dependClassName="jetbrains.mps.make.script.IProgress" />
+  </dependency>
+  <dependency className="jetbrains.mps.make.script.IOption" file="IOption.java">
+    <classNode dependClassName="java.lang.String" />
+  </dependency>
+  <dependency className="jetbrains.mps.make.script.IProgress" file="IProgress.java">
+    <classNode dependClassName="java.lang.String" />
+  </dependency>
+  <dependency className="jetbrains.mps.make.script.IPropertiesPool" file="IPropertiesPool.java">
+    <classNode dependClassName="java.lang.Class" />
+    <classNode dependClassName="jetbrains.mps.make.facet.ITarget" />
+  </dependency>
+  <dependency className="jetbrains.mps.make.script.IQuery" file="IQuery.java">
+    <classNode dependClassName="java.lang.Iterable" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.make.script.IOption" />
+    <classNode extendsClassName="jetbrains.mps.internal.make.runtime.util.SmartWrapper" />
+  </dependency>
+  <dependency className="jetbrains.mps.make.script.IResult" file="IResult.java">
+    <classNode dependClassName="java.lang.Iterable" />
+    <classNode dependClassName="jetbrains.mps.make.resources.IResource" />
+  </dependency>
+  <dependency className="jetbrains.mps.make.script.IScript" file="IScript.java">
+    <classNode dependClassName="java.lang.Iterable" />
+    <classNode dependClassName="jetbrains.mps.make.facet.ITarget" />
+    <classNode dependClassName="jetbrains.mps.make.resources.IResource" />
+    <classNode dependClassName="jetbrains.mps.make.script.IResult" />
+    <classNode dependClassName="jetbrains.mps.make.script.IScriptController" />
+  </dependency>
+  <dependency className="jetbrains.mps.make.script.IScriptController" file="IScriptController.java">
+    <classNode dependClassName="java.lang.Deprecated" />
+    <classNode dependClassName="java.lang.Iterable" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes" />
+    <classNode dependClassName="jetbrains.mps.make.facet.ITarget" />
+    <classNode dependClassName="jetbrains.mps.make.resources.IResource" />
+    <classNode dependClassName="jetbrains.mps.make.script.IConfigMonitor" />
+    <classNode dependClassName="jetbrains.mps.make.script.IJobMonitor" />
+    <classNode dependClassName="jetbrains.mps.make.script.IPropertiesPool" />
+  </dependency>
+  <dependency className="jetbrains.mps.make.script.ScriptBuilder" file="ScriptBuilder.java">
+    <classNode dependClassName="java.lang.Deprecated" />
+    <classNode dependClassName="java.lang.Iterable" />
+    <classNode dependClassName="java.lang.NullPointerException" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="java.util.HashSet" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.IMapping" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ISelector" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ITranslator2" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.MapSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.Sequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.SetSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.make.runtime.script.InvalidScript" />
+    <classNode dependClassName="jetbrains.mps.internal.make.runtime.script.Script" />
+    <classNode dependClassName="jetbrains.mps.internal.make.runtime.script.TargetRange" />
+    <classNode dependClassName="jetbrains.mps.internal.make.runtime.script.ValidationError" />
+    <classNode dependClassName="jetbrains.mps.internal.make.runtime.util.GraphAnalyzer" />
+    <classNode dependClassName="jetbrains.mps.logging.Logger" />
+    <classNode dependClassName="jetbrains.mps.make.facet.FacetRegistry" />
+    <classNode dependClassName="jetbrains.mps.make.facet.IFacet" />
+    <classNode dependClassName="jetbrains.mps.make.facet.ITarget" />
+    <classNode dependClassName="jetbrains.mps.make.script.IScript" />
+  </dependency>
+</dependenciesRoot>
+

@@ -1,0 +1,66 @@
+<!--
+  ~ Copyright 2003-2010 JetBrains s.r.o.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<project name="update_platform" default="default" basedir="..">
+  <property name="main.url" value="http://buildserver/guestAuth/repository/download/bt1069/latest.lastSuccessful"/>
+  <property name="platform.file" value="platform.zip"/>
+  <property name="platform.src.file" value="platform.src.zip"/>
+
+  <dirname property="ant.dir" file="${ant.file}"/>
+  <property name="home.path" value="${ant.dir}/../../"/>
+  <property name="platform.lib.dir" value="${home.path}/lib"/>
+  <property name="platform.plugin.dir" value="${home.path}/plugins"/>
+  <property name="platform.sources.dir" value="${home.path}/platform_src"/>
+
+  <property name="tmp" value="${java.io.tmpdir}/idea.new"/>
+  <property name="tmp.platform" value="${tmp}/platform"/>
+
+  <target name="default">
+    <antcall target="prepare"/>
+    <antcall target="update.platform"/>
+    <antcall target="update.plugins"/>
+    <antcall target="update.sources"/>
+    <antcall target="clean"/>
+  </target>
+
+  <target name="prepare">
+    <mkdir dir="${tmp}"/>
+    <get src="${main.url}/${platform.file}" dest="${tmp}/${platform.file}"/>
+    <get src="${main.url}/${platform.src.file}" dest="${tmp}/${platform.src.file}"/>
+    <unzip src="${tmp}/${platform.file}" dest="${tmp.platform}"/>
+  </target>
+
+  <target name="update.platform">
+    <move overwrite="true" todir="${platform.lib.dir}">
+      <fileset dir="${tmp.platform}/lib"/>
+    </move>
+  </target>
+
+  <target name="update.plugins">
+    <move overwrite="true" todir="${platform.plugin.dir}">
+      <fileset dir="${tmp.platform}/plugins"/>
+    </move>
+  </target>
+
+  <target name="update.sources">
+    <move overwrite="true" todir="${platform.sources.dir}">
+      <fileset file="${tmp}/${platform.src.file}"/>
+    </move>
+  </target>
+
+  <target name="clean">
+    <delete dir="${tmp}"/>
+  </target>
+</project>

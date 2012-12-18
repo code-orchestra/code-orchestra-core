@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.baseLanguage.javastub.asm.ASMAnnotation" file="ASMAnnotation.java">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.Collections" />
+    <classNode dependClassName="java.util.LinkedHashMap" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javastub.asm.ASMEnumValue" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javastub.asm.ASMType" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javastub.asm.TypeUtil" />
+    <classNode dependClassName="org.objectweb.asm.Type" />
+    <classNode dependClassName="org.objectweb.asm.tree.AnnotationNode" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javastub.asm.ASMArrayType" file="ASMArrayType.java">
+    <classNode extendsClassName="jetbrains.mps.baseLanguage.javastub.asm.ASMType" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javastub.asm.ASMClass" file="ASMClass.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.Collections" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javastub.asm.ASMAnnotation" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javastub.asm.ASMClassType" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javastub.asm.ASMField" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javastub.asm.ASMMethod" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javastub.asm.ASMParameterizedType" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javastub.asm.ASMType" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javastub.asm.ASMTypeVariable" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javastub.asm.TypeUtil" />
+    <classNode dependClassName="org.objectweb.asm.ClassReader" />
+    <classNode dependClassName="org.objectweb.asm.Opcodes" />
+    <classNode dependClassName="org.objectweb.asm.signature.SignatureReader" />
+    <classNode dependClassName="org.objectweb.asm.signature.SignatureVisitor" />
+    <classNode dependClassName="org.objectweb.asm.tree.AnnotationNode" />
+    <classNode dependClassName="org.objectweb.asm.tree.ClassNode" />
+    <classNode dependClassName="org.objectweb.asm.tree.FieldNode" />
+    <classNode dependClassName="org.objectweb.asm.tree.InnerClassNode" />
+    <classNode dependClassName="org.objectweb.asm.tree.MethodNode" />
+    <classNode extendsClassName="jetbrains.mps.baseLanguage.javastub.asm.SignatureVisitorAdapter" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javastub.asm.ASMClassType" file="ASMClassType.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode extendsClassName="jetbrains.mps.baseLanguage.javastub.asm.ASMType" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javastub.asm.ASMEnumValue" file="ASMEnumValue.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javastub.asm.ASMType" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javastub.asm.TypeUtil" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javastub.asm.ASMExtendsType" file="ASMExtendsType.java">
+    <classNode extendsClassName="jetbrains.mps.baseLanguage.javastub.asm.ASMType" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javastub.asm.ASMField" file="ASMField.java">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.Collections" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javastub.asm.ASMAnnotation" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javastub.asm.ASMType" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javastub.asm.TypeUtil" />
+    <classNode dependClassName="org.objectweb.asm.Opcodes" />
+    <classNode dependClassName="org.objectweb.asm.tree.AnnotationNode" />
+    <classNode dependClassName="org.objectweb.asm.tree.FieldNode" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javastub.asm.ASMFormalTypeParameter" file="ASMFormalTypeParameter.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.Collections" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javastub.asm.ASMType" />
+    <classNode extendsClassName="jetbrains.mps.baseLanguage.javastub.asm.ASMTypeVariable" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javastub.asm.ASMMethod" file="ASMMethod.java">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.Collections" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javastub.asm.ASMAnnotation" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javastub.asm.ASMArrayType" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javastub.asm.ASMClassType" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javastub.asm.ASMType" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javastub.asm.ASMTypeVariable" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javastub.asm.ASMVarArgType" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javastub.asm.TypeUtil" />
+    <classNode dependClassName="org.objectweb.asm.Opcodes" />
+    <classNode dependClassName="org.objectweb.asm.Type" />
+    <classNode dependClassName="org.objectweb.asm.tree.AnnotationNode" />
+    <classNode dependClassName="org.objectweb.asm.tree.LocalVariableNode" />
+    <classNode dependClassName="org.objectweb.asm.tree.MethodNode" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javastub.asm.ASMParameterizedType" file="ASMParameterizedType.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.Collection" />
+    <classNode dependClassName="java.util.Collections" />
+    <classNode dependClassName="java.util.List" />
+    <classNode extendsClassName="jetbrains.mps.baseLanguage.javastub.asm.ASMType" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javastub.asm.ASMPrimitiveType" file="ASMPrimitiveType.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode extendsClassName="jetbrains.mps.baseLanguage.javastub.asm.ASMType" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javastub.asm.ASMSuperType" file="ASMSuperType.java">
+    <classNode extendsClassName="jetbrains.mps.baseLanguage.javastub.asm.ASMType" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javastub.asm.ASMType" file="ASMType.java" />
+  <dependency className="jetbrains.mps.baseLanguage.javastub.asm.ASMTypeVariable" file="ASMTypeVariable.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode extendsClassName="jetbrains.mps.baseLanguage.javastub.asm.ASMType" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javastub.asm.ASMUnboundedType" file="ASMUnboundedType.java">
+    <classNode extendsClassName="jetbrains.mps.baseLanguage.javastub.asm.ASMType" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javastub.asm.ASMVarArgType" file="ASMVarArgType.java">
+    <classNode extendsClassName="jetbrains.mps.baseLanguage.javastub.asm.ASMType" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javastub.asm.NullSignatureVisitor" file="NullSignatureVisitor.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode extendsClassName="org.objectweb.asm.signature.SignatureVisitor" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javastub.asm.SignatureVisitorAdapter" file="SignatureVisitorAdapter.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javastub.asm.NullSignatureVisitor" />
+    <classNode extendsClassName="org.objectweb.asm.signature.SignatureVisitor" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javastub.asm.TypeUtil" file="TypeUtil.java">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.Collections" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Stack" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javastub.asm.ASMArrayType" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javastub.asm.ASMClassType" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javastub.asm.ASMExtendsType" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javastub.asm.ASMFormalTypeParameter" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javastub.asm.ASMParameterizedType" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javastub.asm.ASMPrimitiveType" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javastub.asm.ASMSuperType" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javastub.asm.ASMType" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javastub.asm.ASMTypeVariable" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javastub.asm.ASMUnboundedType" />
+    <classNode dependClassName="org.objectweb.asm.Type" />
+    <classNode dependClassName="org.objectweb.asm.signature.SignatureReader" />
+    <classNode dependClassName="org.objectweb.asm.signature.SignatureVisitor" />
+    <classNode extendsClassName="jetbrains.mps.baseLanguage.javastub.asm.SignatureVisitorAdapter" />
+  </dependency>
+</dependenciesRoot>
+

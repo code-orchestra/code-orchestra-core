@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.internalCollections.test.closures.A" file="A.java" />
+  <dependency className="jetbrains.mps.internalCollections.test.closures.Advanced_Test" file="Advanced_Test.java">
+    <classNode dependClassName="java.lang.Exception" />
+    <classNode dependClassName="java.lang.Iterable" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.Iterator" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime.YieldingIterator" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ISequenceClosure" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.Sequence" />
+    <classNode extendsClassName="jetbrains.mps.internalCollections.test.closures.Util_Test" />
+  </dependency>
+  <dependency className="jetbrains.mps.internalCollections.test.closures.B" file="B.java">
+    <classNode dependClassName="java.lang.Iterable" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.internalCollections.test.closures.A" />
+  </dependency>
+  <dependency className="jetbrains.mps.internalCollections.test.closures.ChainedOperations_Test" file="ChainedOperations_Test.java">
+    <classNode dependClassName="java.lang.Exception" />
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.Iterable" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.Arrays" />
+    <classNode dependClassName="java.util.Iterator" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime.YieldingIterator" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ISelector" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ISequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ITranslator2" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.IWhereFilter" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.Sequence" />
+    <classNode extendsClassName="jetbrains.mps.internalCollections.test.closures.Util_Test" />
+  </dependency>
+  <dependency className="jetbrains.mps.internalCollections.test.closures.Find_Test" file="Find_Test.java">
+    <classNode dependClassName="java.lang.Boolean" />
+    <classNode dependClassName="java.lang.Exception" />
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.Iterable" />
+    <classNode dependClassName="java.util.Collections" />
+    <classNode dependClassName="java.util.Iterator" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime.YieldingIterator" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ISequenceClosure" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.IWhereFilter" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.Sequence" />
+    <classNode dependClassName="jetbrains.mps.internalCollections.test.closures.IInterface" />
+    <classNode dependClassName="junit.framework.Assert" />
+    <classNode extendsClassName="jetbrains.mps.internalCollections.test.closures.Util_Test" />
+  </dependency>
+  <dependency className="jetbrains.mps.internalCollections.test.closures.ForEach_Test" file="ForEach_Test.java">
+    <classNode dependClassName="java.lang.Exception" />
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.Iterable" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.Sequence" />
+    <classNode dependClassName="jetbrains.mps.internalCollections.test.closures.IBar" />
+    <classNode dependClassName="jetbrains.mps.internalCollections.test.closures.IFoo" />
+    <classNode dependClassName="junit.framework.Assert" />
+    <classNode extendsClassName="jetbrains.mps.internalCollections.test.closures.Util_Test" />
+  </dependency>
+  <dependency className="jetbrains.mps.internalCollections.test.closures.IBar" file="IBar.java" />
+  <dependency className="jetbrains.mps.internalCollections.test.closures.IFoo" file="IFoo.java">
+    <classNode dependClassName="java.lang.Iterable" />
+    <classNode dependClassName="jetbrains.mps.internalCollections.test.closures.IBar" />
+  </dependency>
+  <dependency className="jetbrains.mps.internalCollections.test.closures.IInterface" file="IInterface.java" />
+  <dependency className="jetbrains.mps.internalCollections.test.closures.IntHolder" file="IntHolder.java" />
+  <dependency className="jetbrains.mps.internalCollections.test.closures.MPS10313" file="MPS10313.java">
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.Collections" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.IListSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ISelector" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.Sequence" />
+    <classNode extendsClassName="jetbrains.mps.internalCollections.test.closures.Foo" />
+  </dependency>
+  <dependency className="jetbrains.mps.internalCollections.test.closures.Mapper_Test" file="Mapper_Test.java">
+    <classNode dependClassName="java.lang.Exception" />
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.Iterable" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.Arrays" />
+    <classNode dependClassName="java.util.Collections" />
+    <classNode dependClassName="java.util.Iterator" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime.Wrappers" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime.YieldingIterator" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ISequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ITranslator2" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.IVisitor" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.Sequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.StopIteratingException" />
+    <classNode dependClassName="jetbrains.mps.internalCollections.test.closures.A" />
+    <classNode dependClassName="jetbrains.mps.internalCollections.test.closures.B" />
+    <classNode dependClassName="junit.framework.Assert" />
+    <classNode extendsClassName="jetbrains.mps.internalCollections.test.closures.Util_Test" />
+  </dependency>
+  <dependency className="jetbrains.mps.internalCollections.test.closures.ReduceFold_Test" file="ReduceFold_Test.java">
+    <classNode dependClassName="java.lang.Exception" />
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.Iterable" />
+    <classNode dependClassName="java.lang.RuntimeException" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.Collections" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ILeftCombinator" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.IRightCombinator" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ISelector" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.Sequence" />
+    <classNode dependClassName="jetbrains.mps.internalCollections.test.closures.IntHolder" />
+    <classNode dependClassName="junit.framework.Assert" />
+    <classNode extendsClassName="jetbrains.mps.internalCollections.test.closures.Util_Test" />
+  </dependency>
+  <dependency className="jetbrains.mps.internalCollections.test.closures.RemoveWhereTest_Test" file="RemoveWhereTest_Test.java">
+    <classNode dependClassName="java.lang.Exception" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.PriorityQueue" />
+    <classNode dependClassName="java.util.Queue" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.IWhereFilter" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.QueueSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.Sequence" />
+    <classNode dependClassName="junit.framework.Assert" />
+    <classNode extendsClassName="jetbrains.mps.internalCollections.test.closures.Util_Test" />
+  </dependency>
+  <dependency className="jetbrains.mps.internalCollections.test.closures.Runtime_Test" file="Runtime_Test.java">
+    <classNode dependClassName="java.lang.Exception" />
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ISequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.Sequence" />
+    <classNode extendsClassName="jetbrains.mps.internalCollections.test.closures.Util_Test" />
+  </dependency>
+  <dependency className="jetbrains.mps.internalCollections.test.closures.SelectTest_Test" file="SelectTest_Test.java">
+    <classNode dependClassName="java.lang.Character" />
+    <classNode dependClassName="java.lang.Exception" />
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.Iterable" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.Arrays" />
+    <classNode dependClassName="java.util.Iterator" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime.Wrappers" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime.YieldingIterator" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ISelector" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ISequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ISequenceClosure" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.IVisitor" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.Sequence" />
+    <classNode dependClassName="junit.framework.Assert" />
+    <classNode extendsClassName="jetbrains.mps.internalCollections.test.closures.Util_Test" />
+  </dependency>
+  <dependency className="jetbrains.mps.internalCollections.test.closures.Sort_Test" file="Sort_Test.java">
+    <classNode dependClassName="java.lang.Comparable" />
+    <classNode dependClassName="java.lang.Exception" />
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.Iterable" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.Arrays" />
+    <classNode dependClassName="java.util.Comparator" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ISelector" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ISequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.Sequence" />
+    <classNode extendsClassName="jetbrains.mps.internalCollections.test.closures.Util_Test" />
+  </dependency>
+  <dependency className="jetbrains.mps.internalCollections.test.closures.Util_Test" file="Util_Test.java">
+    <classNode dependClassName="java.lang.Exception" />
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.Iterable" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.Arrays" />
+    <classNode dependClassName="java.util.Collections" />
+    <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="java.util.HashSet" />
+    <classNode dependClassName="java.util.Iterator" />
+    <classNode dependClassName="java.util.NoSuchElementException" />
+    <classNode dependClassName="junit.framework.Assert" />
+    <classNode dependClassName="org.junit.Ignore" />
+    <classNode extendsClassName="junit.framework.TestCase" />
+  </dependency>
+  <dependency className="jetbrains.mps.internalCollections.test.closures.VisitAll_Test" file="VisitAll_Test.java">
+    <classNode dependClassName="java.lang.Exception" />
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.Iterable" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.Arrays" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime.Wrappers" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ISequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.IVisitor" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.Sequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.StopIteratingException" />
+    <classNode dependClassName="junit.framework.Assert" />
+    <classNode extendsClassName="jetbrains.mps.internalCollections.test.closures.Util_Test" />
+  </dependency>
+  <dependency className="jetbrains.mps.internalCollections.test.closures.Where_Test" file="Where_Test.java">
+    <classNode dependClassName="java.lang.Boolean" />
+    <classNode dependClassName="java.lang.Exception" />
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.Iterable" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.Arrays" />
+    <classNode dependClassName="java.util.Iterator" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.NoSuchElementException" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ISequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.IVisitor" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.IWhereFilter" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.Sequence" />
+    <classNode dependClassName="junit.framework.Assert" />
+    <classNode extendsClassName="jetbrains.mps.internalCollections.test.closures.Util_Test" />
+  </dependency>
+</dependenciesRoot>
+

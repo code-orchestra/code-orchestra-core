@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.xmlUnitTest.textGen.Document_TextGen" file="Document_TextGen.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.xmlUnitTest.textGen.ElementCreator" />
+    <classNode extendsClassName="jetbrains.mps.textGen.SNodeTextGen" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlUnitTest.textGen.ElementCreator" file="ElementCreator.java">
+    <classNode dependClassName="java.lang.Exception" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.logging.Logger" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.textGen.SNodeTextGen" />
+    <classNode dependClassName="org.jdom.Document" />
+    <classNode dependClassName="org.jdom.Element" />
+    <classNode dependClassName="org.jdom.output.Format" />
+    <classNode dependClassName="org.jdom.output.XMLOutputter" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlUnitTest.textGen.EscapingElementCreator" file="EscapingElementCreator.java">
+    <classNode dependClassName="java.io.StringWriter" />
+    <classNode dependClassName="java.io.Writer" />
+    <classNode dependClassName="java.lang.Exception" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.logging.Logger" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.textGen.SNodeTextGen" />
+    <classNode dependClassName="jetbrains.mps.xmlUnitTest.textGen.ElementCreator" />
+    <classNode dependClassName="jetbrains.mps.xmlUnitTest.textGen.EscapingWriter" />
+    <classNode dependClassName="org.jdom.Document" />
+    <classNode dependClassName="org.jdom.Element" />
+    <classNode dependClassName="org.jdom.output.Format" />
+    <classNode dependClassName="org.jdom.output.XMLOutputter" />
+    <classNode extendsClassName="java.lang.Object" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlUnitTest.textGen.EscapingWriter" file="EscapingWriter.java">
+    <classNode dependClassName="java.io.IOException" />
+    <classNode dependClassName="java.lang.CharSequence" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode extendsClassName="java.io.Writer" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlUnitTest.textGen.XMLLiteral_TextGen" file="XMLLiteral_TextGen.java">
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.xmlUnitTest.textGen.EscapingElementCreator" />
+    <classNode extendsClassName="jetbrains.mps.textGen.SNodeTextGen" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlUnitTest.textGen.XMLStringLiteral_TextGen" file="XMLStringLiteral_TextGen.java">
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.textGen.TextGenManager" />
+    <classNode extendsClassName="jetbrains.mps.textGen.SNodeTextGen" />
+  </dependency>
+</dependenciesRoot>
+

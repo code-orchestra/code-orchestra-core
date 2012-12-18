@@ -1,0 +1,945 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debugInfo>
+  <root nodeId="6531435794299649861">
+    <nodeInfo nodeId="6531435794299649867" fileName="AccountingException.java" startLine="7" startPosition="32" endLine="8" endPosition="12" conceptFqName="jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
+    <nodeInfo nodeId="6531435794299649874" fileName="AccountingException.java" startLine="11" startPosition="40" endLine="12" endPosition="13" conceptFqName="jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
+    <nodeInfo nodeId="6531435794299649863" fileName="AccountingException.java" startLine="6" startPosition="64" endLine="9" endPosition="3" conceptFqName="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" propertyString="AccountingException#()V" />
+    <nodeInfo nodeId="6531435794299649868" fileName="AccountingException.java" startLine="10" startPosition="0" endLine="13" endPosition="3" conceptFqName="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" propertyString="AccountingException#(Ljava/lang/String;)V" />
+    <scopeInfo nodeId="6531435794299649866" fileName="AccountingException.java" startLine="7" startPosition="32" endLine="8" endPosition="12" />
+    <scopeInfo nodeId="6531435794299649873" fileName="AccountingException.java" startLine="11" startPosition="40" endLine="12" endPosition="13" />
+    <scopeInfo nodeId="6531435794299649863" fileName="AccountingException.java" startLine="6" startPosition="64" endLine="9" endPosition="3" />
+    <scopeInfo nodeId="6531435794299649868" fileName="AccountingException.java" startLine="10" startPosition="0" endLine="13" endPosition="3">
+      <varInfo nodeId="6531435794299649871" varName="s" />
+    </scopeInfo>
+    <unitInfo nodeId="6531435794299649861" fileName="AccountingException.java" startLine="6" startPosition="0" endLine="15" endPosition="0" unitName="postingrules.AccountingException" />
+  </root>
+  <root nodeId="6531435794299649876">
+    <nodeInfo nodeId="6531435794299649890" fileName="AccountingTransaction.java" startLine="9" startPosition="85" endLine="10" endPosition="55" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="6531435794299649899" fileName="AccountingTransaction.java" startLine="10" startPosition="55" endLine="11" endPosition="29" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299649904" fileName="AccountingTransaction.java" startLine="11" startPosition="29" endLine="12" endPosition="44" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="6531435794299649911" fileName="AccountingTransaction.java" startLine="12" startPosition="44" endLine="13" endPosition="25" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299649878" fileName="AccountingTransaction.java" startLine="8" startPosition="36" endLine="14" endPosition="3" conceptFqName="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" propertyString="AccountingTransaction#(Lmf/Money;Lpostingrules/Account;Lpostingrules/Account;Lmf/MfDate;)V" />
+    <scopeInfo nodeId="6531435794299649889" fileName="AccountingTransaction.java" startLine="9" startPosition="85" endLine="13" endPosition="25">
+      <varInfo nodeId="6531435794299649905" varName="toEntry" />
+      <varInfo nodeId="6531435794299649891" varName="fromEntry" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299649878" fileName="AccountingTransaction.java" startLine="8" startPosition="36" endLine="14" endPosition="3">
+      <varInfo nodeId="6531435794299649885" varName="to" />
+      <varInfo nodeId="6531435794299649881" varName="amount" />
+      <varInfo nodeId="6531435794299649883" varName="from" />
+      <varInfo nodeId="6531435794299649887" varName="date" />
+    </scopeInfo>
+    <unitInfo nodeId="6531435794299649876" fileName="AccountingTransaction.java" startLine="8" startPosition="0" endLine="16" endPosition="0" unitName="postingrules.AccountingTransaction" />
+  </root>
+  <root nodeId="6531435794299650125">
+    <nodeInfo nodeId="6531435794299650127" fileName="Subject.java" startLine="6" startPosition="26" endLine="7" endPosition="52" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="addEntry#(Lpostingrules/Entry;Lpostingrules/AccountType;)V" />
+    <nodeInfo nodeId="6531435794299650135" fileName="Subject.java" startLine="7" startPosition="52" endLine="8" endPosition="31" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="getAdjuster#()Lpostingrules/Subject;" />
+    <nodeInfo nodeId="6531435794299650139" fileName="Subject.java" startLine="8" startPosition="31" endLine="9" endPosition="38" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="reverseEntry#(Lpostingrules/Entry;)V" />
+    <nodeInfo nodeId="6531435794299650145" fileName="Subject.java" startLine="9" startPosition="38" endLine="10" endPosition="41" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="process#(Lpostingrules/AccountingEvent;)V" />
+    <scopeInfo nodeId="6531435794299650127" fileName="Subject.java" startLine="6" startPosition="26" endLine="7" endPosition="52">
+      <varInfo nodeId="6531435794299650130" varName="arg" />
+      <varInfo nodeId="6531435794299650132" varName="type" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299650135" fileName="Subject.java" startLine="7" startPosition="52" endLine="8" endPosition="31" />
+    <scopeInfo nodeId="6531435794299650139" fileName="Subject.java" startLine="8" startPosition="31" endLine="9" endPosition="38">
+      <varInfo nodeId="6531435794299650142" varName="arg" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299650145" fileName="Subject.java" startLine="9" startPosition="38" endLine="10" endPosition="41">
+      <varInfo nodeId="6531435794299650148" varName="e" />
+    </scopeInfo>
+    <unitInfo nodeId="6531435794299650125" fileName="Subject.java" startLine="6" startPosition="0" endLine="12" endPosition="0" unitName="postingrules.Subject" />
+  </root>
+  <root nodeId="6531435794299650989">
+    <nodeInfo nodeId="6531435794299650991" fileName="AgreementRegistry.java" startLine="8" startPosition="32" endLine="9" endPosition="47" conceptFqName="jetbrains.mps.baseLanguage.structure.FieldDeclaration" propertyString="myAgreements" />
+    <nodeInfo nodeId="6531435794299651007" fileName="AgreementRegistry.java" startLine="14" startPosition="65" endLine="15" endPosition="38" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299651019" fileName="AgreementRegistry.java" startLine="18" startPosition="53" endLine="19" endPosition="53" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6531435794299650995" fileName="AgreementRegistry.java" startLine="10" startPosition="0" endLine="12" endPosition="3" conceptFqName="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" propertyString="AgreementRegistry#()V" />
+    <nodeInfo nodeId="6531435794299650999" fileName="AgreementRegistry.java" startLine="13" startPosition="0" endLine="17" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="register#(Ljava/lang/String;Lpostingrules/ServiceAgreement;)V" />
+    <nodeInfo nodeId="6531435794299651013" fileName="AgreementRegistry.java" startLine="17" startPosition="0" endLine="21" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="getAgreement#(Ljava/lang/String;)Lpostingrules/ServiceAgreement;" />
+    <scopeInfo nodeId="6531435794299650998" fileName="AgreementRegistry.java" startLine="11" startPosition="30" endLine="11" endPosition="30" />
+    <scopeInfo nodeId="6531435794299651006" fileName="AgreementRegistry.java" startLine="14" startPosition="65" endLine="15" endPosition="38" />
+    <scopeInfo nodeId="6531435794299651018" fileName="AgreementRegistry.java" startLine="18" startPosition="53" endLine="19" endPosition="53" />
+    <scopeInfo nodeId="6531435794299650995" fileName="AgreementRegistry.java" startLine="10" startPosition="0" endLine="12" endPosition="3" />
+    <scopeInfo nodeId="6531435794299650999" fileName="AgreementRegistry.java" startLine="13" startPosition="0" endLine="17" endPosition="0">
+      <varInfo nodeId="6531435794299651002" varName="name" />
+      <varInfo nodeId="6531435794299651004" varName="agreement" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299651013" fileName="AgreementRegistry.java" startLine="17" startPosition="0" endLine="21" endPosition="0">
+      <varInfo nodeId="6531435794299651016" varName="name" />
+    </scopeInfo>
+    <unitInfo nodeId="6531435794299650989" fileName="AgreementRegistry.java" startLine="8" startPosition="0" endLine="22" endPosition="0" unitName="postingrules.AgreementRegistry" />
+  </root>
+  <root nodeId="6531435794299651026">
+    <nodeInfo nodeId="6531435794299651029" fileName="MonetaryEvent.java" startLine="8" startPosition="52" endLine="9" endPosition="25" conceptFqName="jetbrains.mps.baseLanguage.structure.FieldDeclaration" propertyString="myAmount" />
+    <nodeInfo nodeId="6531435794299651046" fileName="MonetaryEvent.java" startLine="11" startPosition="113" endLine="12" endPosition="53" conceptFqName="jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
+    <nodeInfo nodeId="6531435794299651051" fileName="MonetaryEvent.java" startLine="12" startPosition="53" endLine="13" endPosition="27" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299651061" fileName="MonetaryEvent.java" startLine="16" startPosition="28" endLine="17" endPosition="20" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6531435794299651032" fileName="MonetaryEvent.java" startLine="10" startPosition="0" endLine="14" endPosition="3" conceptFqName="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" propertyString="MonetaryEvent#(Lmf/Money;Lpostingrules/EventType;Lmf/MfDate;Lmf/MfDate;Lpostingrules/Subject;)V" />
+    <nodeInfo nodeId="6531435794299651057" fileName="MonetaryEvent.java" startLine="15" startPosition="0" endLine="19" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="getAmount#()Lmf/Money;" />
+    <scopeInfo nodeId="6531435794299651060" fileName="MonetaryEvent.java" startLine="16" startPosition="28" endLine="17" endPosition="20" />
+    <scopeInfo nodeId="6531435794299651045" fileName="MonetaryEvent.java" startLine="11" startPosition="113" endLine="13" endPosition="27" />
+    <scopeInfo nodeId="6531435794299651032" fileName="MonetaryEvent.java" startLine="10" startPosition="0" endLine="14" endPosition="3">
+      <varInfo nodeId="6531435794299651035" varName="amount" />
+      <varInfo nodeId="6531435794299651041" varName="whenNoticed" />
+      <varInfo nodeId="6531435794299651043" varName="customer" />
+      <varInfo nodeId="6531435794299651037" varName="type" />
+      <varInfo nodeId="6531435794299651039" varName="whenOccurred" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299651057" fileName="MonetaryEvent.java" startLine="15" startPosition="0" endLine="19" endPosition="0" />
+    <unitInfo nodeId="6531435794299651026" fileName="MonetaryEvent.java" startLine="8" startPosition="0" endLine="20" endPosition="0" unitName="postingrules.MonetaryEvent" />
+  </root>
+  <root nodeId="6531435794299651139">
+    <nodeInfo nodeId="6531435794299653671" fileName="Entry.java" startLine="9" startPosition="20" endLine="10" endPosition="24" conceptFqName="jetbrains.mps.baseLanguage.structure.FieldDeclaration" propertyString="myDate" />
+    <nodeInfo nodeId="6531435794299653674" fileName="Entry.java" startLine="10" startPosition="24" endLine="11" endPosition="28" conceptFqName="jetbrains.mps.baseLanguage.structure.FieldDeclaration" propertyString="myAccount" />
+    <nodeInfo nodeId="6531435794299653677" fileName="Entry.java" startLine="11" startPosition="28" endLine="12" endPosition="25" conceptFqName="jetbrains.mps.baseLanguage.structure.FieldDeclaration" propertyString="myAmount" />
+    <nodeInfo nodeId="6531435794299653688" fileName="Entry.java" startLine="14" startPosition="43" endLine="15" endPosition="27" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299653694" fileName="Entry.java" startLine="15" startPosition="27" endLine="16" endPosition="23" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299653703" fileName="Entry.java" startLine="19" startPosition="28" endLine="20" endPosition="39" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6531435794299653712" fileName="Entry.java" startLine="23" startPosition="31" endLine="24" endPosition="21" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6531435794299653718" fileName="Entry.java" startLine="27" startPosition="28" endLine="28" endPosition="20" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6531435794299653724" fileName="Entry.java" startLine="31" startPosition="27" endLine="32" endPosition="18" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6531435794299653732" fileName="Entry.java" startLine="35" startPosition="39" endLine="36" endPosition="68" conceptFqName="jetbrains.mps.baseLanguage.structure.AssertStatement" />
+    <nodeInfo nodeId="6531435794299653737" fileName="Entry.java" startLine="36" startPosition="68" endLine="37" endPosition="20" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299653745" fileName="Entry.java" startLine="40" startPosition="28" endLine="41" endPosition="61" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6531435794299653767" fileName="Entry.java" startLine="45" startPosition="28" endLine="46" endPosition="18" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6531435794299653769" fileName="Entry.java" startLine="47" startPosition="5" endLine="48" endPosition="24" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="6531435794299653792" fileName="Entry.java" startLine="50" startPosition="27" endLine="51" endPosition="31" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299653782" fileName="Entry.java" startLine="52" startPosition="12" endLine="53" endPosition="41" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299653798" fileName="Entry.java" startLine="54" startPosition="5" endLine="55" endPosition="18" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6531435794299653762" fileName="Entry.java" startLine="44" startPosition="56" endLine="47" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
+    <nodeInfo nodeId="6531435794299653680" fileName="Entry.java" startLine="13" startPosition="0" endLine="17" endPosition="3" conceptFqName="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" propertyString="Entry#(Lmf/Money;Lmf/MfDate;)V" />
+    <nodeInfo nodeId="6531435794299653700" fileName="Entry.java" startLine="18" startPosition="0" endLine="22" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="copy#()Lpostingrules/Entry;" />
+    <nodeInfo nodeId="6531435794299653708" fileName="Entry.java" startLine="22" startPosition="0" endLine="26" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="getAccount#()Lpostingrules/Account;" />
+    <nodeInfo nodeId="6531435794299653714" fileName="Entry.java" startLine="26" startPosition="0" endLine="30" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="getAmount#()Lmf/Money;" />
+    <nodeInfo nodeId="6531435794299653720" fileName="Entry.java" startLine="30" startPosition="0" endLine="34" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="getDate#()Lmf/MfDate;" />
+    <nodeInfo nodeId="6531435794299653741" fileName="Entry.java" startLine="39" startPosition="0" endLine="43" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="toString#()Ljava/lang/String;" />
+    <nodeInfo nodeId="6531435794299653778" fileName="Entry.java" startLine="49" startPosition="29" endLine="53" endPosition="41" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
+    <nodeInfo nodeId="6531435794299653726" fileName="Entry.java" startLine="34" startPosition="0" endLine="39" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="setAccount#(Lpostingrules/Account;)V" />
+    <nodeInfo nodeId="6531435794299653773" fileName="Entry.java" startLine="48" startPosition="24" endLine="54" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.ForeachStatement" />
+    <nodeInfo nodeId="6531435794299653755" fileName="Entry.java" startLine="43" startPosition="0" endLine="57" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="total#(Ljava/util/Collection;)Lmf/Money;" />
+    <scopeInfo nodeId="6531435794299653702" fileName="Entry.java" startLine="19" startPosition="28" endLine="20" endPosition="39" />
+    <scopeInfo nodeId="6531435794299653711" fileName="Entry.java" startLine="23" startPosition="31" endLine="24" endPosition="21" />
+    <scopeInfo nodeId="6531435794299653717" fileName="Entry.java" startLine="27" startPosition="28" endLine="28" endPosition="20" />
+    <scopeInfo nodeId="6531435794299653723" fileName="Entry.java" startLine="31" startPosition="27" endLine="32" endPosition="18" />
+    <scopeInfo nodeId="6531435794299653744" fileName="Entry.java" startLine="40" startPosition="28" endLine="41" endPosition="61" />
+    <scopeInfo nodeId="6531435794299653766" fileName="Entry.java" startLine="45" startPosition="28" endLine="46" endPosition="18" />
+    <scopeInfo nodeId="6531435794299653791" fileName="Entry.java" startLine="50" startPosition="27" endLine="51" endPosition="31" />
+    <scopeInfo nodeId="6531435794299653687" fileName="Entry.java" startLine="14" startPosition="43" endLine="16" endPosition="23" />
+    <scopeInfo nodeId="6531435794299653731" fileName="Entry.java" startLine="35" startPosition="39" endLine="37" endPosition="20" />
+    <scopeInfo nodeId="6531435794299653680" fileName="Entry.java" startLine="13" startPosition="0" endLine="17" endPosition="3">
+      <varInfo nodeId="6531435794299653683" varName="amount" />
+      <varInfo nodeId="6531435794299653685" varName="date" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299653700" fileName="Entry.java" startLine="18" startPosition="0" endLine="22" endPosition="0" />
+    <scopeInfo nodeId="6531435794299653708" fileName="Entry.java" startLine="22" startPosition="0" endLine="26" endPosition="0" />
+    <scopeInfo nodeId="6531435794299653714" fileName="Entry.java" startLine="26" startPosition="0" endLine="30" endPosition="0" />
+    <scopeInfo nodeId="6531435794299653720" fileName="Entry.java" startLine="30" startPosition="0" endLine="34" endPosition="0" />
+    <scopeInfo nodeId="6531435794299653741" fileName="Entry.java" startLine="39" startPosition="0" endLine="43" endPosition="0" />
+    <scopeInfo nodeId="6531435794299653777" fileName="Entry.java" startLine="49" startPosition="29" endLine="53" endPosition="41" />
+    <scopeInfo nodeId="6531435794299653726" fileName="Entry.java" startLine="34" startPosition="0" endLine="39" endPosition="0">
+      <varInfo nodeId="6531435794299653729" varName="arg" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299653773" fileName="Entry.java" startLine="48" startPosition="24" endLine="54" endPosition="5">
+      <varInfo nodeId="6531435794299653775" varName="e" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299653761" fileName="Entry.java" startLine="44" startPosition="56" endLine="55" endPosition="18">
+      <varInfo nodeId="6531435794299653770" varName="result" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299653755" fileName="Entry.java" startLine="43" startPosition="0" endLine="57" endPosition="0">
+      <varInfo nodeId="6531435794299653758" varName="entries" />
+    </scopeInfo>
+    <unitInfo nodeId="6531435794299651139" fileName="Entry.java" startLine="9" startPosition="0" endLine="58" endPosition="0" unitName="postingrules.Entry" />
+  </root>
+  <root nodeId="6531435794299651140">
+    <nodeInfo nodeId="6531435794299651142" fileName="AccountingEvent.java" startLine="13" startPosition="30" endLine="14" endPosition="27" conceptFqName="jetbrains.mps.baseLanguage.structure.FieldDeclaration" propertyString="myType" />
+    <nodeInfo nodeId="6531435794299651145" fileName="AccountingEvent.java" startLine="14" startPosition="27" endLine="15" endPosition="32" conceptFqName="jetbrains.mps.baseLanguage.structure.FieldDeclaration" propertyString="myWhenOccurred" />
+    <nodeInfo nodeId="6531435794299651148" fileName="AccountingEvent.java" startLine="15" startPosition="32" endLine="16" endPosition="31" conceptFqName="jetbrains.mps.baseLanguage.structure.FieldDeclaration" propertyString="myWhenNoticed" />
+    <nodeInfo nodeId="6531435794299651151" fileName="AccountingEvent.java" startLine="16" startPosition="31" endLine="17" endPosition="28" conceptFqName="jetbrains.mps.baseLanguage.structure.FieldDeclaration" propertyString="mySubject" />
+    <nodeInfo nodeId="6531435794299651154" fileName="AccountingEvent.java" startLine="17" startPosition="28" endLine="18" endPosition="53" conceptFqName="jetbrains.mps.baseLanguage.structure.FieldDeclaration" propertyString="mySecondaryEvents" />
+    <nodeInfo nodeId="6531435794299651159" fileName="AccountingEvent.java" startLine="18" startPosition="53" endLine="19" endPosition="72" conceptFqName="jetbrains.mps.baseLanguage.structure.FieldDeclaration" propertyString="myResultingEntries" />
+    <nodeInfo nodeId="6531435794299651166" fileName="AccountingEvent.java" startLine="19" startPosition="72" endLine="20" endPosition="40" conceptFqName="jetbrains.mps.baseLanguage.structure.FieldDeclaration" propertyString="myProcessed" />
+    <nodeInfo nodeId="6531435794299651170" fileName="AccountingEvent.java" startLine="20" startPosition="40" endLine="21" endPosition="45" conceptFqName="jetbrains.mps.baseLanguage.structure.FieldDeclaration" propertyString="myReplacementEvent" />
+    <nodeInfo nodeId="6531435794299651173" fileName="AccountingEvent.java" startLine="21" startPosition="45" endLine="22" endPosition="42" conceptFqName="jetbrains.mps.baseLanguage.structure.FieldDeclaration" propertyString="myAdjustedEvent" />
+    <nodeInfo nodeId="6531435794299651188" fileName="AccountingEvent.java" startLine="24" startPosition="100" endLine="25" endPosition="23" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299651194" fileName="AccountingEvent.java" startLine="25" startPosition="23" endLine="26" endPosition="39" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299651200" fileName="AccountingEvent.java" startLine="26" startPosition="39" endLine="27" endPosition="37" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299651206" fileName="AccountingEvent.java" startLine="27" startPosition="37" endLine="28" endPosition="29" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299651442" fileName="AccountingEvent.java" startLine="31" startPosition="131" endLine="32" endPosition="51" conceptFqName="jetbrains.mps.baseLanguage.structure.ThisConstructorInvocation" />
+    <nodeInfo nodeId="6531435794299651447" fileName="AccountingEvent.java" startLine="32" startPosition="51" endLine="33" endPosition="41" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299651453" fileName="AccountingEvent.java" startLine="33" startPosition="41" endLine="34" endPosition="44" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299651217" fileName="AccountingEvent.java" startLine="37" startPosition="49" endLine="38" endPosition="32" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299651227" fileName="AccountingEvent.java" startLine="41" startPosition="65" endLine="42" endPosition="31" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299651237" fileName="AccountingEvent.java" startLine="45" startPosition="46" endLine="46" endPosition="45" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="6531435794299651244" fileName="AccountingEvent.java" startLine="46" startPosition="45" endLine="47" endPosition="38" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299651254" fileName="AccountingEvent.java" startLine="48" startPosition="53" endLine="49" endPosition="62" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="6531435794299651260" fileName="AccountingEvent.java" startLine="49" startPosition="62" endLine="50" endPosition="51" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299651267" fileName="AccountingEvent.java" startLine="51" startPosition="5" endLine="52" endPosition="18" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6531435794299651272" fileName="AccountingEvent.java" startLine="55" startPosition="40" endLine="56" endPosition="18" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6531435794299651277" fileName="AccountingEvent.java" startLine="59" startPosition="53" endLine="60" endPosition="30" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6531435794299651284" fileName="AccountingEvent.java" startLine="63" startPosition="50" endLine="64" endPosition="66" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6531435794299651290" fileName="AccountingEvent.java" startLine="67" startPosition="41" endLine="68" endPosition="59" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6531435794299651297" fileName="AccountingEvent.java" startLine="71" startPosition="31" endLine="72" endPosition="21" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6531435794299651303" fileName="AccountingEvent.java" startLine="75" startPosition="34" endLine="76" endPosition="25" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6531435794299651309" fileName="AccountingEvent.java" startLine="79" startPosition="35" endLine="80" endPosition="26" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6531435794299651315" fileName="AccountingEvent.java" startLine="83" startPosition="36" endLine="84" endPosition="40" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6531435794299651324" fileName="AccountingEvent.java" startLine="87" startPosition="32" endLine="88" endPosition="23" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6531435794299651330" fileName="AccountingEvent.java" startLine="91" startPosition="31" endLine="92" endPosition="23" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299651338" fileName="AccountingEvent.java" startLine="95" startPosition="25" endLine="96" endPosition="26" conceptFqName="jetbrains.mps.baseLanguage.structure.AssertStatement" />
+    <nodeInfo nodeId="6531435794299651346" fileName="AccountingEvent.java" startLine="97" startPosition="34" endLine="98" endPosition="32" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299651350" fileName="AccountingEvent.java" startLine="99" startPosition="5" endLine="100" endPosition="28" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299651355" fileName="AccountingEvent.java" startLine="100" startPosition="28" endLine="101" endPosition="20" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299651361" fileName="AccountingEvent.java" startLine="104" startPosition="25" endLine="105" endPosition="25" conceptFqName="jetbrains.mps.baseLanguage.structure.AssertStatement" />
+    <nodeInfo nodeId="6531435794299651363" fileName="AccountingEvent.java" startLine="105" startPosition="25" endLine="106" endPosition="76" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="6531435794299651383" fileName="AccountingEvent.java" startLine="107" startPosition="33" endLine="108" endPosition="36" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299651388" fileName="AccountingEvent.java" startLine="109" startPosition="5" endLine="110" endPosition="29" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299651399" fileName="AccountingEvent.java" startLine="114" startPosition="43" endLine="115" endPosition="49" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="6531435794299651405" fileName="AccountingEvent.java" startLine="115" startPosition="49" endLine="116" endPosition="21" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299651414" fileName="AccountingEvent.java" startLine="120" startPosition="59" endLine="121" endPosition="33" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299651424" fileName="AccountingEvent.java" startLine="124" startPosition="72" endLine="125" endPosition="45" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299651462" fileName="AccountingEvent.java" startLine="128" startPosition="42" endLine="129" endPosition="59" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6531435794299651341" fileName="AccountingEvent.java" startLine="96" startPosition="26" endLine="99" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
+    <nodeInfo nodeId="6531435794299651378" fileName="AccountingEvent.java" startLine="106" startPosition="76" endLine="109" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.ForeachStatement" />
+    <nodeInfo nodeId="6531435794299651212" fileName="AccountingEvent.java" startLine="36" startPosition="0" endLine="40" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="addResultingEntry#(Lpostingrules/Entry;)V" />
+    <nodeInfo nodeId="6531435794299651222" fileName="AccountingEvent.java" startLine="40" startPosition="0" endLine="44" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="friendAddSecondaryEvent#(Lpostingrules/AccountingEvent;)V" />
+    <nodeInfo nodeId="6531435794299651249" fileName="AccountingEvent.java" startLine="47" startPosition="38" endLine="51" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.ForeachStatement" />
+    <nodeInfo nodeId="6531435794299651269" fileName="AccountingEvent.java" startLine="54" startPosition="0" endLine="58" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="getEventType#()Lpostingrules/EventType;" />
+    <nodeInfo nodeId="6531435794299651274" fileName="AccountingEvent.java" startLine="58" startPosition="0" endLine="62" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="getReplacementEvent#()Lpostingrules/AccountingEvent;" />
+    <nodeInfo nodeId="6531435794299651279" fileName="AccountingEvent.java" startLine="62" startPosition="0" endLine="66" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="getResultingEntries#()Ljava/util/Collection;" />
+    <nodeInfo nodeId="6531435794299651287" fileName="AccountingEvent.java" startLine="66" startPosition="0" endLine="70" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="getSecondaryEvents#()Ljava/util/List;" />
+    <nodeInfo nodeId="6531435794299651293" fileName="AccountingEvent.java" startLine="70" startPosition="0" endLine="74" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="getSubject#()Lpostingrules/Subject;" />
+    <nodeInfo nodeId="6531435794299651299" fileName="AccountingEvent.java" startLine="74" startPosition="0" endLine="78" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="getWhenNoticed#()Lmf/MfDate;" />
+    <nodeInfo nodeId="6531435794299651305" fileName="AccountingEvent.java" startLine="78" startPosition="0" endLine="82" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="getWhenOccurred#()Lmf/MfDate;" />
+    <nodeInfo nodeId="6531435794299651311" fileName="AccountingEvent.java" startLine="82" startPosition="0" endLine="86" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="hasBeenAdjusted#()Z" />
+    <nodeInfo nodeId="6531435794299651320" fileName="AccountingEvent.java" startLine="86" startPosition="0" endLine="90" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="isProcessed#()Z" />
+    <nodeInfo nodeId="6531435794299651326" fileName="AccountingEvent.java" startLine="90" startPosition="0" endLine="94" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="markProcessed#()V" />
+    <nodeInfo nodeId="6531435794299651394" fileName="AccountingEvent.java" startLine="113" startPosition="41" endLine="117" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.ForeachStatement" />
+    <nodeInfo nodeId="6531435794299651409" fileName="AccountingEvent.java" startLine="119" startPosition="0" endLine="123" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="setIsProcessed#(Z)V" />
+    <nodeInfo nodeId="6531435794299651418" fileName="AccountingEvent.java" startLine="123" startPosition="0" endLine="127" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="setReplacementEvent#(Lpostingrules/AccountingEvent;)V" />
+    <nodeInfo nodeId="6531435794299651458" fileName="AccountingEvent.java" startLine="127" startPosition="0" endLine="131" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="getAgreement#()Lpostingrules/ServiceAgreement;" />
+    <nodeInfo nodeId="6531435794299651428" fileName="AccountingEvent.java" startLine="30" startPosition="0" endLine="35" endPosition="3" conceptFqName="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" propertyString="AccountingEvent#(Lpostingrules/EventType;Lmf/MfDate;Lmf/MfDate;Lpostingrules/Subject;Lpostingrules/AccountingEvent;)V" />
+    <nodeInfo nodeId="6531435794299651176" fileName="AccountingEvent.java" startLine="23" startPosition="0" endLine="29" endPosition="3" conceptFqName="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" propertyString="AccountingEvent#(Lpostingrules/EventType;Lmf/MfDate;Lmf/MfDate;Lpostingrules/Subject;)V" />
+    <nodeInfo nodeId="6531435794299651390" fileName="AccountingEvent.java" startLine="112" startPosition="0" endLine="119" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="reverseSecondaryEvents#()V" />
+    <nodeInfo nodeId="6531435794299651334" fileName="AccountingEvent.java" startLine="94" startPosition="0" endLine="103" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="process#()V" />
+    <nodeInfo nodeId="6531435794299651357" fileName="AccountingEvent.java" startLine="103" startPosition="0" endLine="112" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="reverse#()V" />
+    <nodeInfo nodeId="6531435794299651232" fileName="AccountingEvent.java" startLine="44" startPosition="0" endLine="54" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="getAllResultingEntries#()Ljava/util/Set;" />
+    <scopeInfo nodeId="6531435794299651216" fileName="AccountingEvent.java" startLine="37" startPosition="49" endLine="38" endPosition="32" />
+    <scopeInfo nodeId="6531435794299651226" fileName="AccountingEvent.java" startLine="41" startPosition="65" endLine="42" endPosition="31" />
+    <scopeInfo nodeId="6531435794299651271" fileName="AccountingEvent.java" startLine="55" startPosition="40" endLine="56" endPosition="18" />
+    <scopeInfo nodeId="6531435794299651276" fileName="AccountingEvent.java" startLine="59" startPosition="53" endLine="60" endPosition="30" />
+    <scopeInfo nodeId="6531435794299651283" fileName="AccountingEvent.java" startLine="63" startPosition="50" endLine="64" endPosition="66" />
+    <scopeInfo nodeId="6531435794299651289" fileName="AccountingEvent.java" startLine="67" startPosition="41" endLine="68" endPosition="59" />
+    <scopeInfo nodeId="6531435794299651296" fileName="AccountingEvent.java" startLine="71" startPosition="31" endLine="72" endPosition="21" />
+    <scopeInfo nodeId="6531435794299651302" fileName="AccountingEvent.java" startLine="75" startPosition="34" endLine="76" endPosition="25" />
+    <scopeInfo nodeId="6531435794299651308" fileName="AccountingEvent.java" startLine="79" startPosition="35" endLine="80" endPosition="26" />
+    <scopeInfo nodeId="6531435794299651314" fileName="AccountingEvent.java" startLine="83" startPosition="36" endLine="84" endPosition="40" />
+    <scopeInfo nodeId="6531435794299651323" fileName="AccountingEvent.java" startLine="87" startPosition="32" endLine="88" endPosition="23" />
+    <scopeInfo nodeId="6531435794299651329" fileName="AccountingEvent.java" startLine="91" startPosition="31" endLine="92" endPosition="23" />
+    <scopeInfo nodeId="6531435794299651345" fileName="AccountingEvent.java" startLine="97" startPosition="34" endLine="98" endPosition="32" />
+    <scopeInfo nodeId="6531435794299651382" fileName="AccountingEvent.java" startLine="107" startPosition="33" endLine="108" endPosition="36" />
+    <scopeInfo nodeId="6531435794299651413" fileName="AccountingEvent.java" startLine="120" startPosition="59" endLine="121" endPosition="33" />
+    <scopeInfo nodeId="6531435794299651423" fileName="AccountingEvent.java" startLine="124" startPosition="72" endLine="125" endPosition="45" />
+    <scopeInfo nodeId="6531435794299651461" fileName="AccountingEvent.java" startLine="128" startPosition="42" endLine="129" endPosition="59" />
+    <scopeInfo nodeId="6531435794299651253" fileName="AccountingEvent.java" startLine="48" startPosition="53" endLine="50" endPosition="51">
+      <varInfo nodeId="6531435794299651255" varName="each" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299651398" fileName="AccountingEvent.java" startLine="114" startPosition="43" endLine="116" endPosition="21">
+      <varInfo nodeId="6531435794299651400" varName="each" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299651441" fileName="AccountingEvent.java" startLine="31" startPosition="131" endLine="34" endPosition="44" />
+    <scopeInfo nodeId="6531435794299651378" fileName="AccountingEvent.java" startLine="106" startPosition="76" endLine="109" endPosition="5">
+      <varInfo nodeId="6531435794299651380" varName="entry" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299651187" fileName="AccountingEvent.java" startLine="24" startPosition="100" endLine="28" endPosition="29" />
+    <scopeInfo nodeId="6531435794299651212" fileName="AccountingEvent.java" startLine="36" startPosition="0" endLine="40" endPosition="0">
+      <varInfo nodeId="6531435794299651214" varName="arg" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299651222" fileName="AccountingEvent.java" startLine="40" startPosition="0" endLine="44" endPosition="0">
+      <varInfo nodeId="6531435794299651224" varName="arg" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299651249" fileName="AccountingEvent.java" startLine="47" startPosition="38" endLine="51" endPosition="5">
+      <varInfo nodeId="6531435794299651251" varName="secondaryEvent" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299651269" fileName="AccountingEvent.java" startLine="54" startPosition="0" endLine="58" endPosition="0" />
+    <scopeInfo nodeId="6531435794299651274" fileName="AccountingEvent.java" startLine="58" startPosition="0" endLine="62" endPosition="0" />
+    <scopeInfo nodeId="6531435794299651279" fileName="AccountingEvent.java" startLine="62" startPosition="0" endLine="66" endPosition="0" />
+    <scopeInfo nodeId="6531435794299651287" fileName="AccountingEvent.java" startLine="66" startPosition="0" endLine="70" endPosition="0" />
+    <scopeInfo nodeId="6531435794299651293" fileName="AccountingEvent.java" startLine="70" startPosition="0" endLine="74" endPosition="0" />
+    <scopeInfo nodeId="6531435794299651299" fileName="AccountingEvent.java" startLine="74" startPosition="0" endLine="78" endPosition="0" />
+    <scopeInfo nodeId="6531435794299651305" fileName="AccountingEvent.java" startLine="78" startPosition="0" endLine="82" endPosition="0" />
+    <scopeInfo nodeId="6531435794299651311" fileName="AccountingEvent.java" startLine="82" startPosition="0" endLine="86" endPosition="0" />
+    <scopeInfo nodeId="6531435794299651320" fileName="AccountingEvent.java" startLine="86" startPosition="0" endLine="90" endPosition="0" />
+    <scopeInfo nodeId="6531435794299651326" fileName="AccountingEvent.java" startLine="90" startPosition="0" endLine="94" endPosition="0" />
+    <scopeInfo nodeId="6531435794299651393" fileName="AccountingEvent.java" startLine="113" startPosition="41" endLine="117" endPosition="5" />
+    <scopeInfo nodeId="6531435794299651394" fileName="AccountingEvent.java" startLine="113" startPosition="41" endLine="117" endPosition="5">
+      <varInfo nodeId="6531435794299651396" varName="o" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299651409" fileName="AccountingEvent.java" startLine="119" startPosition="0" endLine="123" endPosition="0">
+      <varInfo nodeId="6531435794299651411" varName="newIsProcessed" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299651418" fileName="AccountingEvent.java" startLine="123" startPosition="0" endLine="127" endPosition="0">
+      <varInfo nodeId="6531435794299651421" varName="newReplacementEvent" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299651458" fileName="AccountingEvent.java" startLine="127" startPosition="0" endLine="131" endPosition="0" />
+    <scopeInfo nodeId="6531435794299651428" fileName="AccountingEvent.java" startLine="30" startPosition="0" endLine="35" endPosition="3">
+      <varInfo nodeId="6531435794299651439" varName="adjustedEvent" />
+      <varInfo nodeId="6531435794299651437" varName="subject" />
+      <varInfo nodeId="6531435794299651435" varName="whenNoticed" />
+      <varInfo nodeId="6531435794299651431" varName="type" />
+      <varInfo nodeId="6531435794299651433" varName="whenOccurred" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299651176" fileName="AccountingEvent.java" startLine="23" startPosition="0" endLine="29" endPosition="3">
+      <varInfo nodeId="6531435794299651185" varName="subject" />
+      <varInfo nodeId="6531435794299651183" varName="whenNoticed" />
+      <varInfo nodeId="6531435794299651179" varName="type" />
+      <varInfo nodeId="6531435794299651181" varName="whenOccurred" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299651337" fileName="AccountingEvent.java" startLine="95" startPosition="25" endLine="101" endPosition="20" />
+    <scopeInfo nodeId="6531435794299651360" fileName="AccountingEvent.java" startLine="104" startPosition="25" endLine="110" endPosition="29">
+      <varInfo nodeId="6531435794299651364" varName="entries" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299651236" fileName="AccountingEvent.java" startLine="45" startPosition="46" endLine="52" endPosition="18">
+      <varInfo nodeId="6531435794299651238" varName="result" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299651390" fileName="AccountingEvent.java" startLine="112" startPosition="0" endLine="119" endPosition="0" />
+    <scopeInfo nodeId="6531435794299651334" fileName="AccountingEvent.java" startLine="94" startPosition="0" endLine="103" endPosition="0" />
+    <scopeInfo nodeId="6531435794299651357" fileName="AccountingEvent.java" startLine="103" startPosition="0" endLine="112" endPosition="0" />
+    <scopeInfo nodeId="6531435794299651232" fileName="AccountingEvent.java" startLine="44" startPosition="0" endLine="54" endPosition="0" />
+    <unitInfo nodeId="6531435794299651140" fileName="AccountingEvent.java" startLine="13" startPosition="0" endLine="132" endPosition="0" unitName="postingrules.AccountingEvent" />
+  </root>
+  <root nodeId="6531435794299651566">
+    <nodeInfo nodeId="6531435794299651572" fileName="MissingPostingRuleException.java" startLine="7" startPosition="40" endLine="8" endPosition="12" conceptFqName="jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
+    <nodeInfo nodeId="6531435794299651579" fileName="MissingPostingRuleException.java" startLine="11" startPosition="48" endLine="12" endPosition="13" conceptFqName="jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
+    <nodeInfo nodeId="6531435794299651568" fileName="MissingPostingRuleException.java" startLine="6" startPosition="75" endLine="9" endPosition="3" conceptFqName="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" propertyString="MissingPostingRuleException#()V" />
+    <nodeInfo nodeId="6531435794299651573" fileName="MissingPostingRuleException.java" startLine="10" startPosition="0" endLine="13" endPosition="3" conceptFqName="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" propertyString="MissingPostingRuleException#(Ljava/lang/String;)V" />
+    <scopeInfo nodeId="6531435794299651571" fileName="MissingPostingRuleException.java" startLine="7" startPosition="40" endLine="8" endPosition="12" />
+    <scopeInfo nodeId="6531435794299651578" fileName="MissingPostingRuleException.java" startLine="11" startPosition="48" endLine="12" endPosition="13" />
+    <scopeInfo nodeId="6531435794299651568" fileName="MissingPostingRuleException.java" startLine="6" startPosition="75" endLine="9" endPosition="3" />
+    <scopeInfo nodeId="6531435794299651573" fileName="MissingPostingRuleException.java" startLine="10" startPosition="0" endLine="13" endPosition="3">
+      <varInfo nodeId="6531435794299651576" varName="s" />
+    </scopeInfo>
+    <unitInfo nodeId="6531435794299651566" fileName="MissingPostingRuleException.java" startLine="6" startPosition="0" endLine="15" endPosition="0" unitName="postingrules.MissingPostingRuleException" />
+  </root>
+  <root nodeId="6531435794299652198">
+    <nodeInfo nodeId="6531435794299652209" fileName="TaxEvent.java" startLine="8" startPosition="62" endLine="9" endPosition="106" conceptFqName="jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
+    <nodeInfo nodeId="6531435794299652221" fileName="TaxEvent.java" startLine="9" startPosition="106" endLine="10" endPosition="39" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299652226" fileName="TaxEvent.java" startLine="10" startPosition="39" endLine="11" endPosition="80" conceptFqName="jetbrains.mps.baseLanguage.structure.AssertStatement" />
+    <nodeInfo nodeId="6531435794299652201" fileName="TaxEvent.java" startLine="7" startPosition="45" endLine="12" endPosition="3" conceptFqName="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" propertyString="TaxEvent#(Lpostingrules/AccountingEvent;Lmf/Money;)V" />
+    <scopeInfo nodeId="6531435794299652208" fileName="TaxEvent.java" startLine="8" startPosition="62" endLine="11" endPosition="80" />
+    <scopeInfo nodeId="6531435794299652201" fileName="TaxEvent.java" startLine="7" startPosition="45" endLine="12" endPosition="3">
+      <varInfo nodeId="6531435794299652206" varName="taxableAmount" />
+      <varInfo nodeId="6531435794299652204" varName="base" />
+    </scopeInfo>
+    <unitInfo nodeId="6531435794299652198" fileName="TaxEvent.java" startLine="7" startPosition="0" endLine="14" endPosition="0" unitName="postingrules.TaxEvent" />
+  </root>
+  <root nodeId="6531435794299652730">
+    <nodeInfo nodeId="6531435794299652733" fileName="Usage.java" startLine="8" startPosition="44" endLine="9" endPosition="28" conceptFqName="jetbrains.mps.baseLanguage.structure.FieldDeclaration" propertyString="myAmount" />
+    <nodeInfo nodeId="6531435794299652748" fileName="Usage.java" startLine="11" startPosition="93" endLine="12" endPosition="64" conceptFqName="jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
+    <nodeInfo nodeId="6531435794299652753" fileName="Usage.java" startLine="12" startPosition="64" endLine="13" endPosition="27" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299652787" fileName="Usage.java" startLine="16" startPosition="122" endLine="17" endPosition="78" conceptFqName="jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
+    <nodeInfo nodeId="6531435794299652793" fileName="Usage.java" startLine="17" startPosition="78" endLine="18" endPosition="27" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299652763" fileName="Usage.java" startLine="21" startPosition="31" endLine="22" endPosition="20" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6531435794299652769" fileName="Usage.java" startLine="25" startPosition="28" endLine="26" endPosition="31" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6531435794299652736" fileName="Usage.java" startLine="10" startPosition="0" endLine="14" endPosition="3" conceptFqName="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" propertyString="Usage#(Lmf/Quantity;Lmf/MfDate;Lmf/MfDate;Lpostingrules/Customer;)V" />
+    <nodeInfo nodeId="6531435794299652773" fileName="Usage.java" startLine="15" startPosition="0" endLine="19" endPosition="3" conceptFqName="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" propertyString="Usage#(Lmf/Quantity;Lmf/MfDate;Lmf/MfDate;Lpostingrules/Subject;Lpostingrules/AccountingEvent;)V" />
+    <nodeInfo nodeId="6531435794299652759" fileName="Usage.java" startLine="20" startPosition="0" endLine="24" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="getAmount#()Lmf/Quantity;" />
+    <nodeInfo nodeId="6531435794299652765" fileName="Usage.java" startLine="24" startPosition="0" endLine="28" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="toString#()Ljava/lang/String;" />
+    <scopeInfo nodeId="6531435794299652762" fileName="Usage.java" startLine="21" startPosition="31" endLine="22" endPosition="20" />
+    <scopeInfo nodeId="6531435794299652768" fileName="Usage.java" startLine="25" startPosition="28" endLine="26" endPosition="31" />
+    <scopeInfo nodeId="6531435794299652747" fileName="Usage.java" startLine="11" startPosition="93" endLine="13" endPosition="27" />
+    <scopeInfo nodeId="6531435794299652786" fileName="Usage.java" startLine="16" startPosition="122" endLine="18" endPosition="27" />
+    <scopeInfo nodeId="6531435794299652736" fileName="Usage.java" startLine="10" startPosition="0" endLine="14" endPosition="3">
+      <varInfo nodeId="6531435794299652739" varName="amount" />
+      <varInfo nodeId="6531435794299652743" varName="whenNoticed" />
+      <varInfo nodeId="6531435794299652745" varName="customer" />
+      <varInfo nodeId="6531435794299652741" varName="whenOccurred" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299652773" fileName="Usage.java" startLine="15" startPosition="0" endLine="19" endPosition="3">
+      <varInfo nodeId="6531435794299652776" varName="amount" />
+      <varInfo nodeId="6531435794299652784" varName="adjustedEvent" />
+      <varInfo nodeId="6531435794299652782" varName="subject" />
+      <varInfo nodeId="6531435794299652780" varName="whenNoticed" />
+      <varInfo nodeId="6531435794299652778" varName="whenOccurred" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299652759" fileName="Usage.java" startLine="20" startPosition="0" endLine="24" endPosition="0" />
+    <scopeInfo nodeId="6531435794299652765" fileName="Usage.java" startLine="24" startPosition="0" endLine="28" endPosition="0" />
+    <unitInfo nodeId="6531435794299652730" fileName="Usage.java" startLine="8" startPosition="0" endLine="29" endPosition="0" unitName="postingrules.Usage" />
+  </root>
+  <root nodeId="6531435794299653396">
+    <nodeInfo nodeId="6531435794299653398" fileName="ServiceAgreement.java" startLine="11" startPosition="31" endLine="12" endPosition="95" conceptFqName="jetbrains.mps.baseLanguage.structure.FieldDeclaration" propertyString="myValues" />
+    <nodeInfo nodeId="6531435794299653407" fileName="ServiceAgreement.java" startLine="12" startPosition="95" endLine="13" endPosition="45" conceptFqName="jetbrains.mps.baseLanguage.structure.FieldDeclaration" propertyString="myPostingRules" />
+    <nodeInfo nodeId="6531435794299653422" fileName="ServiceAgreement.java" startLine="18" startPosition="41" endLine="19" endPosition="54" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299653447" fileName="ServiceAgreement.java" startLine="23" startPosition="48" endLine="24" endPosition="68" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299653454" fileName="ServiceAgreement.java" startLine="25" startPosition="5" endLine="26" endPosition="61" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299653467" fileName="ServiceAgreement.java" startLine="29" startPosition="81" endLine="30" endPosition="83" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="6531435794299653476" fileName="ServiceAgreement.java" startLine="30" startPosition="83" endLine="31" endPosition="26" conceptFqName="jetbrains.mps.baseLanguage.structure.AssertStatement" />
+    <nodeInfo nodeId="6531435794299653480" fileName="ServiceAgreement.java" startLine="31" startPosition="26" endLine="32" endPosition="18" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6531435794299653488" fileName="ServiceAgreement.java" startLine="35" startPosition="36" endLine="36" endPosition="54" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6531435794299653504" fileName="ServiceAgreement.java" startLine="39" startPosition="42" endLine="40" endPosition="33" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299653516" fileName="ServiceAgreement.java" startLine="43" startPosition="61" endLine="44" endPosition="89" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="6531435794299653528" fileName="ServiceAgreement.java" startLine="45" startPosition="24" endLine="46" endPosition="46" conceptFqName="jetbrains.mps.baseLanguage.structure.ThrowStatement" />
+    <nodeInfo nodeId="6531435794299653540" fileName="ServiceAgreement.java" startLine="48" startPosition="9" endLine="49" endPosition="62" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6531435794299653534" fileName="ServiceAgreement.java" startLine="50" startPosition="42" endLine="51" endPosition="46" conceptFqName="jetbrains.mps.baseLanguage.structure.ThrowStatement" />
+    <nodeInfo nodeId="6531435794299653559" fileName="ServiceAgreement.java" startLine="55" startPosition="72" endLine="56" endPosition="48" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299653576" fileName="ServiceAgreement.java" startLine="59" startPosition="49" endLine="60" endPosition="37" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6531435794299653412" fileName="ServiceAgreement.java" startLine="14" startPosition="0" endLine="16" endPosition="3" conceptFqName="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" propertyString="ServiceAgreement#()V" />
+    <nodeInfo nodeId="6531435794299653439" fileName="ServiceAgreement.java" startLine="22" startPosition="82" endLine="25" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
+    <nodeInfo nodeId="6531435794299653523" fileName="ServiceAgreement.java" startLine="44" startPosition="89" endLine="47" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
+    <nodeInfo nodeId="6531435794299653416" fileName="ServiceAgreement.java" startLine="17" startPosition="0" endLine="21" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="registerValue#(Ljava/lang/String;)V" />
+    <nodeInfo nodeId="6531435794299653482" fileName="ServiceAgreement.java" startLine="34" startPosition="0" endLine="38" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="getRate#(Lmf/MfDate;)D" />
+    <nodeInfo nodeId="6531435794299653498" fileName="ServiceAgreement.java" startLine="38" startPosition="0" endLine="42" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="process#(Lpostingrules/AccountingEvent;)V" />
+    <nodeInfo nodeId="6531435794299653549" fileName="ServiceAgreement.java" startLine="54" startPosition="0" endLine="58" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="setValue#(Ljava/lang/String;Ljava/lang/Object;Lmf/MfDate;)V" />
+    <nodeInfo nodeId="6531435794299653568" fileName="ServiceAgreement.java" startLine="58" startPosition="0" endLine="62" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="getValue#(Ljava/lang/String;Lmf/MfDate;)Ljava/lang/Object;" />
+    <nodeInfo nodeId="6531435794299653531" fileName="ServiceAgreement.java" startLine="47" startPosition="5" endLine="52" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.TryCatchStatement" />
+    <nodeInfo nodeId="6531435794299653461" fileName="ServiceAgreement.java" startLine="28" startPosition="0" endLine="34" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="getRulesTemporalCollectionFor#(Lpostingrules/EventType;)Lmf/TemporalCollection;" />
+    <nodeInfo nodeId="6531435794299653429" fileName="ServiceAgreement.java" startLine="21" startPosition="0" endLine="28" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="addPostingRule#(Lpostingrules/EventType;Lpostingrules/PostingRule;Lmf/MfDate;)V" />
+    <nodeInfo nodeId="6531435794299653510" fileName="ServiceAgreement.java" startLine="42" startPosition="0" endLine="54" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="getPostingRule#(Lpostingrules/AccountingEvent;)Lpostingrules/PostingRule;" />
+    <scopeInfo nodeId="6531435794299653415" fileName="ServiceAgreement.java" startLine="15" startPosition="29" endLine="15" endPosition="29" />
+    <scopeInfo nodeId="6531435794299653421" fileName="ServiceAgreement.java" startLine="18" startPosition="41" endLine="19" endPosition="54" />
+    <scopeInfo nodeId="6531435794299653446" fileName="ServiceAgreement.java" startLine="23" startPosition="48" endLine="24" endPosition="68" />
+    <scopeInfo nodeId="6531435794299653487" fileName="ServiceAgreement.java" startLine="35" startPosition="36" endLine="36" endPosition="54" />
+    <scopeInfo nodeId="6531435794299653503" fileName="ServiceAgreement.java" startLine="39" startPosition="42" endLine="40" endPosition="33" />
+    <scopeInfo nodeId="6531435794299653527" fileName="ServiceAgreement.java" startLine="45" startPosition="24" endLine="46" endPosition="46" />
+    <scopeInfo nodeId="6531435794299653539" fileName="ServiceAgreement.java" startLine="48" startPosition="9" endLine="49" endPosition="62" />
+    <scopeInfo nodeId="6531435794299653532" fileName="ServiceAgreement.java" startLine="50" startPosition="0" endLine="51" endPosition="46">
+      <varInfo nodeId="6531435794299653537" varName="e" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299653533" fileName="ServiceAgreement.java" startLine="50" startPosition="42" endLine="51" endPosition="46" />
+    <scopeInfo nodeId="6531435794299653558" fileName="ServiceAgreement.java" startLine="55" startPosition="72" endLine="56" endPosition="48" />
+    <scopeInfo nodeId="6531435794299653575" fileName="ServiceAgreement.java" startLine="59" startPosition="49" endLine="60" endPosition="37" />
+    <scopeInfo nodeId="6531435794299653412" fileName="ServiceAgreement.java" startLine="14" startPosition="0" endLine="16" endPosition="3" />
+    <scopeInfo nodeId="6531435794299653466" fileName="ServiceAgreement.java" startLine="29" startPosition="81" endLine="32" endPosition="18">
+      <varInfo nodeId="6531435794299653468" varName="result" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299653416" fileName="ServiceAgreement.java" startLine="17" startPosition="0" endLine="21" endPosition="0">
+      <varInfo nodeId="6531435794299653419" varName="key" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299653438" fileName="ServiceAgreement.java" startLine="22" startPosition="82" endLine="26" endPosition="61" />
+    <scopeInfo nodeId="6531435794299653482" fileName="ServiceAgreement.java" startLine="34" startPosition="0" endLine="38" endPosition="0">
+      <varInfo nodeId="6531435794299653485" varName="at" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299653498" fileName="ServiceAgreement.java" startLine="38" startPosition="0" endLine="42" endPosition="0">
+      <varInfo nodeId="6531435794299653501" varName="e" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299653549" fileName="ServiceAgreement.java" startLine="54" startPosition="0" endLine="58" endPosition="0">
+      <varInfo nodeId="6531435794299653554" varName="value" />
+      <varInfo nodeId="6531435794299653556" varName="effectiveDate" />
+      <varInfo nodeId="6531435794299653552" varName="key" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299653568" fileName="ServiceAgreement.java" startLine="58" startPosition="0" endLine="62" endPosition="0">
+      <varInfo nodeId="6531435794299653573" varName="at" />
+      <varInfo nodeId="6531435794299653571" varName="key" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299653461" fileName="ServiceAgreement.java" startLine="28" startPosition="0" endLine="34" endPosition="0">
+      <varInfo nodeId="6531435794299653464" varName="eventType" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299653429" fileName="ServiceAgreement.java" startLine="21" startPosition="0" endLine="28" endPosition="0">
+      <varInfo nodeId="6531435794299653434" varName="rule" />
+      <varInfo nodeId="6531435794299653432" varName="eventType" />
+      <varInfo nodeId="6531435794299653436" varName="date" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299653515" fileName="ServiceAgreement.java" startLine="43" startPosition="61" endLine="52" endPosition="5">
+      <varInfo nodeId="6531435794299653517" varName="rules" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299653510" fileName="ServiceAgreement.java" startLine="42" startPosition="0" endLine="54" endPosition="0">
+      <varInfo nodeId="6531435794299653513" varName="event" />
+    </scopeInfo>
+    <unitInfo nodeId="6531435794299653396" fileName="ServiceAgreement.java" startLine="11" startPosition="0" endLine="63" endPosition="0" unitName="postingrules.ServiceAgreement" />
+  </root>
+  <root nodeId="6531435794299653584">
+    <nodeInfo nodeId="6531435794299653595" fileName="PoorCapPR.java" startLine="9" startPosition="57" endLine="10" endPosition="27" conceptFqName="jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
+    <nodeInfo nodeId="6531435794299653604" fileName="PoorCapPR.java" startLine="13" startPosition="56" endLine="14" endPosition="52" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="6531435794299653613" fileName="PoorCapPR.java" startLine="14" startPosition="52" endLine="15" endPosition="95" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="6531435794299653627" fileName="PoorCapPR.java" startLine="15" startPosition="95" endLine="16" endPosition="107" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="6531435794299653587" fileName="PoorCapPR.java" startLine="8" startPosition="44" endLine="11" endPosition="3" conceptFqName="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" propertyString="PoorCapPR#(Lpostingrules/AccountType;Z)V" />
+    <nodeInfo nodeId="6531435794299653641" fileName="PoorCapPR.java" startLine="16" startPosition="107" endLine="20" endPosition="6" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6531435794299653598" fileName="PoorCapPR.java" startLine="12" startPosition="0" endLine="22" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="calculateAmount#(Lpostingrules/AccountingEvent;)Lmf/Money;" />
+    <scopeInfo nodeId="6531435794299653594" fileName="PoorCapPR.java" startLine="9" startPosition="57" endLine="10" endPosition="27" />
+    <scopeInfo nodeId="6531435794299653587" fileName="PoorCapPR.java" startLine="8" startPosition="44" endLine="11" endPosition="3">
+      <varInfo nodeId="6531435794299653592" varName="isTaxable" />
+      <varInfo nodeId="6531435794299653590" varName="type" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299653603" fileName="PoorCapPR.java" startLine="13" startPosition="56" endLine="20" endPosition="6">
+      <varInfo nodeId="6531435794299653628" varName="reducedRate" />
+      <varInfo nodeId="6531435794299653605" varName="amountUsed" />
+      <varInfo nodeId="6531435794299653614" varName="usageLimit" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299653598" fileName="PoorCapPR.java" startLine="12" startPosition="0" endLine="22" endPosition="0">
+      <varInfo nodeId="6531435794299653601" varName="evt" />
+    </scopeInfo>
+    <unitInfo nodeId="6531435794299653584" fileName="PoorCapPR.java" startLine="8" startPosition="0" endLine="23" endPosition="0" unitName="postingrules.PoorCapPR" />
+  </root>
+  <root nodeId="6531435794299653800">
+    <nodeInfo nodeId="6531435794299653802" fileName="PostingRule.java" startLine="7" startPosition="35" endLine="8" endPosition="29" conceptFqName="jetbrains.mps.baseLanguage.structure.FieldDeclaration" propertyString="myType" />
+    <nodeInfo nodeId="6531435794299653805" fileName="PostingRule.java" startLine="8" startPosition="29" endLine="9" endPosition="28" conceptFqName="jetbrains.mps.baseLanguage.structure.FieldDeclaration" propertyString="myTaxable" />
+    <nodeInfo nodeId="6531435794299653816" fileName="PostingRule.java" startLine="11" startPosition="62" endLine="12" endPosition="23" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299653822" fileName="PostingRule.java" startLine="12" startPosition="23" endLine="13" endPosition="31" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299653834" fileName="PostingRule.java" startLine="16" startPosition="44" endLine="17" endPosition="41" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299653842" fileName="PostingRule.java" startLine="18" startPosition="20" endLine="19" endPosition="23" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299653859" fileName="PostingRule.java" startLine="25" startPosition="61" endLine="26" endPosition="61" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="6531435794299653868" fileName="PostingRule.java" startLine="26" startPosition="61" endLine="27" endPosition="48" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299653876" fileName="PostingRule.java" startLine="27" startPosition="48" endLine="28" endPosition="36" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299653887" fileName="PostingRule.java" startLine="31" startPosition="49" endLine="32" endPosition="54" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299653845" fileName="PostingRule.java" startLine="22" startPosition="0" endLine="24" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="calculateAmount#(Lpostingrules/AccountingEvent;)Lmf/Money;" />
+    <nodeInfo nodeId="6531435794299653839" fileName="PostingRule.java" startLine="17" startPosition="41" endLine="20" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
+    <nodeInfo nodeId="6531435794299653808" fileName="PostingRule.java" startLine="10" startPosition="0" endLine="14" endPosition="3" conceptFqName="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" propertyString="PostingRule#(Lpostingrules/AccountType;Z)V" />
+    <nodeInfo nodeId="6531435794299653881" fileName="PostingRule.java" startLine="30" startPosition="0" endLine="34" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="generateTax#(Lpostingrules/AccountingEvent;)V" />
+    <nodeInfo nodeId="6531435794299653851" fileName="PostingRule.java" startLine="24" startPosition="0" endLine="30" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="makeEntry#(Lpostingrules/AccountingEvent;Lmf/Money;)V" />
+    <nodeInfo nodeId="6531435794299653828" fileName="PostingRule.java" startLine="15" startPosition="0" endLine="22" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="process#(Lpostingrules/AccountingEvent;)V" />
+    <scopeInfo nodeId="6531435794299653841" fileName="PostingRule.java" startLine="18" startPosition="20" endLine="19" endPosition="23" />
+    <scopeInfo nodeId="6531435794299653886" fileName="PostingRule.java" startLine="31" startPosition="49" endLine="32" endPosition="54" />
+    <scopeInfo nodeId="6531435794299653815" fileName="PostingRule.java" startLine="11" startPosition="62" endLine="13" endPosition="31" />
+    <scopeInfo nodeId="6531435794299653845" fileName="PostingRule.java" startLine="22" startPosition="0" endLine="24" endPosition="0">
+      <varInfo nodeId="6531435794299653848" varName="evt" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299653858" fileName="PostingRule.java" startLine="25" startPosition="61" endLine="28" endPosition="36">
+      <varInfo nodeId="6531435794299653860" varName="newEntry" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299653808" fileName="PostingRule.java" startLine="10" startPosition="0" endLine="14" endPosition="3">
+      <varInfo nodeId="6531435794299653813" varName="isTaxable" />
+      <varInfo nodeId="6531435794299653811" varName="type" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299653833" fileName="PostingRule.java" startLine="16" startPosition="44" endLine="20" endPosition="5" />
+    <scopeInfo nodeId="6531435794299653881" fileName="PostingRule.java" startLine="30" startPosition="0" endLine="34" endPosition="0">
+      <varInfo nodeId="6531435794299653884" varName="evt" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299653851" fileName="PostingRule.java" startLine="24" startPosition="0" endLine="30" endPosition="0">
+      <varInfo nodeId="6531435794299653856" varName="amount" />
+      <varInfo nodeId="6531435794299653854" varName="evt" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299653828" fileName="PostingRule.java" startLine="15" startPosition="0" endLine="22" endPosition="0">
+      <varInfo nodeId="6531435794299653831" varName="evt" />
+    </scopeInfo>
+    <unitInfo nodeId="6531435794299653800" fileName="PostingRule.java" startLine="7" startPosition="0" endLine="35" endPosition="0" unitName="postingrules.PostingRule" />
+  </root>
+  <root nodeId="6531435794299654331">
+    <nodeInfo nodeId="6531435794299654336" fileName="AccountType.java" startLine="10" startPosition="0" endLine="12" endPosition="3" conceptFqName="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" propertyString="AccountType#()V" />
+    <scopeInfo nodeId="6531435794299654339" fileName="AccountType.java" startLine="11" startPosition="17" endLine="11" endPosition="17" />
+    <scopeInfo nodeId="6531435794299654336" fileName="AccountType.java" startLine="10" startPosition="0" endLine="12" endPosition="3" />
+    <unitInfo nodeId="6531435794299654331" fileName="AccountType.java" startLine="6" startPosition="0" endLine="14" endPosition="0" unitName="postingrules.AccountType" />
+  </root>
+  <root nodeId="6531435794299654975">
+    <nodeInfo nodeId="6531435794299654979" fileName="Customer.java" startLine="11" startPosition="62" endLine="12" endPosition="46" conceptFqName="jetbrains.mps.baseLanguage.structure.FieldDeclaration" propertyString="myServiceAgreement" />
+    <nodeInfo nodeId="6531435794299654982" fileName="Customer.java" startLine="12" startPosition="46" endLine="13" endPosition="47" conceptFqName="jetbrains.mps.baseLanguage.structure.FieldDeclaration" propertyString="myAccounts" />
+    <nodeInfo nodeId="6531435794299654993" fileName="Customer.java" startLine="15" startPosition="32" endLine="16" endPosition="18" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299654997" fileName="Customer.java" startLine="16" startPosition="18" endLine="17" endPosition="20" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299655002" fileName="Customer.java" startLine="20" startPosition="36" endLine="21" endPosition="53" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299655014" fileName="Customer.java" startLine="22" startPosition="51" endLine="23" endPosition="60" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299655029" fileName="Customer.java" startLine="27" startPosition="47" endLine="28" endPosition="40" conceptFqName="jetbrains.mps.baseLanguage.structure.AssertStatement" />
+    <nodeInfo nodeId="6531435794299655034" fileName="Customer.java" startLine="28" startPosition="40" endLine="29" endPosition="32" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6531435794299655047" fileName="Customer.java" startLine="32" startPosition="53" endLine="33" endPosition="35" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299655059" fileName="Customer.java" startLine="36" startPosition="44" endLine="37" endPosition="37" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6531435794299655067" fileName="Customer.java" startLine="40" startPosition="35" endLine="41" endPosition="20" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299655073" fileName="Customer.java" startLine="44" startPosition="28" endLine="45" endPosition="22" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6531435794299655079" fileName="Customer.java" startLine="48" startPosition="32" endLine="49" endPosition="16" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6531435794299655085" fileName="Customer.java" startLine="52" startPosition="49" endLine="53" endPosition="30" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6531435794299655093" fileName="Customer.java" startLine="56" startPosition="39" endLine="57" endPosition="78" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="6531435794299655106" fileName="Customer.java" startLine="57" startPosition="78" endLine="58" endPosition="65" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299655122" fileName="Customer.java" startLine="61" startPosition="42" endLine="62" endPosition="34" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299655133" fileName="Customer.java" startLine="65" startPosition="36" endLine="66" endPosition="21" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299655143" fileName="Customer.java" startLine="69" startPosition="57" endLine="70" endPosition="29" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299655151" fileName="Customer.java" startLine="73" startPosition="28" endLine="74" endPosition="45" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="6531435794299655156" fileName="Customer.java" startLine="74" startPosition="45" endLine="75" endPosition="41" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="6531435794299655166" fileName="Customer.java" startLine="76" startPosition="36" endLine="77" endPosition="26" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299655171" fileName="Customer.java" startLine="77" startPosition="26" endLine="78" endPosition="26" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299655176" fileName="Customer.java" startLine="78" startPosition="26" endLine="79" endPosition="48" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299655184" fileName="Customer.java" startLine="79" startPosition="48" endLine="80" endPosition="26" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299655189" fileName="Customer.java" startLine="81" startPosition="5" endLine="82" endPosition="29" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6531435794299655197" fileName="Customer.java" startLine="85" startPosition="44" endLine="86" endPosition="75" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6531435794299655009" fileName="Customer.java" startLine="21" startPosition="53" endLine="24" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.ForeachStatement" />
+    <nodeInfo nodeId="6531435794299654987" fileName="Customer.java" startLine="14" startPosition="0" endLine="18" endPosition="3" conceptFqName="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" propertyString="Customer#(Ljava/lang/String;)V" />
+    <nodeInfo nodeId="6531435794299655039" fileName="Customer.java" startLine="31" startPosition="0" endLine="35" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="addEntry#(Lpostingrules/Entry;Lpostingrules/AccountType;)V" />
+    <nodeInfo nodeId="6531435794299655053" fileName="Customer.java" startLine="35" startPosition="0" endLine="39" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="balanceFor#(Lpostingrules/AccountType;)Lmf/Money;" />
+    <nodeInfo nodeId="6531435794299655064" fileName="Customer.java" startLine="39" startPosition="0" endLine="43" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="clearEntries#()V" />
+    <nodeInfo nodeId="6531435794299655069" fileName="Customer.java" startLine="43" startPosition="0" endLine="47" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="getAccounts#()Ljava/util/Map;" />
+    <nodeInfo nodeId="6531435794299655075" fileName="Customer.java" startLine="47" startPosition="0" endLine="51" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="getAdjuster#()Lpostingrules/Subject;" />
+    <nodeInfo nodeId="6531435794299655081" fileName="Customer.java" startLine="51" startPosition="0" endLine="55" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="getServiceAgreement#()Lpostingrules/ServiceAgreement;" />
+    <nodeInfo nodeId="6531435794299655116" fileName="Customer.java" startLine="60" startPosition="0" endLine="64" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="process#(Lpostingrules/AccountingEvent;)V" />
+    <nodeInfo nodeId="6531435794299655127" fileName="Customer.java" startLine="64" startPosition="0" endLine="68" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="setAccounts#(Ljava/util/Map;)V" />
+    <nodeInfo nodeId="6531435794299655137" fileName="Customer.java" startLine="68" startPosition="0" endLine="72" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="setServiceAgreement#(Lpostingrules/ServiceAgreement;)V" />
+    <nodeInfo nodeId="6531435794299655193" fileName="Customer.java" startLine="84" startPosition="0" endLine="88" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="accountTypes#()[Lpostingrules/AccountType;" />
+    <nodeInfo nodeId="6531435794299655023" fileName="Customer.java" startLine="26" startPosition="0" endLine="31" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="accountFor#(Lpostingrules/AccountType;)Lpostingrules/Account;" />
+    <nodeInfo nodeId="6531435794299655087" fileName="Customer.java" startLine="55" startPosition="0" endLine="60" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="reverseEntry#(Lpostingrules/Entry;)V" />
+    <nodeInfo nodeId="6531435794299655161" fileName="Customer.java" startLine="75" startPosition="41" endLine="81" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.ForeachStatement" />
+    <nodeInfo nodeId="6531435794299654999" fileName="Customer.java" startLine="19" startPosition="0" endLine="26" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="setUpAccounts#()V" />
+    <nodeInfo nodeId="6531435794299655147" fileName="Customer.java" startLine="72" startPosition="0" endLine="84" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="toString#()Ljava/lang/String;" />
+    <scopeInfo nodeId="6531435794299655013" fileName="Customer.java" startLine="22" startPosition="51" endLine="23" endPosition="60" />
+    <scopeInfo nodeId="6531435794299655046" fileName="Customer.java" startLine="32" startPosition="53" endLine="33" endPosition="35" />
+    <scopeInfo nodeId="6531435794299655058" fileName="Customer.java" startLine="36" startPosition="44" endLine="37" endPosition="37" />
+    <scopeInfo nodeId="6531435794299655066" fileName="Customer.java" startLine="40" startPosition="35" endLine="41" endPosition="20" />
+    <scopeInfo nodeId="6531435794299655072" fileName="Customer.java" startLine="44" startPosition="28" endLine="45" endPosition="22" />
+    <scopeInfo nodeId="6531435794299655078" fileName="Customer.java" startLine="48" startPosition="32" endLine="49" endPosition="16" />
+    <scopeInfo nodeId="6531435794299655084" fileName="Customer.java" startLine="52" startPosition="49" endLine="53" endPosition="30" />
+    <scopeInfo nodeId="6531435794299655121" fileName="Customer.java" startLine="61" startPosition="42" endLine="62" endPosition="34" />
+    <scopeInfo nodeId="6531435794299655132" fileName="Customer.java" startLine="65" startPosition="36" endLine="66" endPosition="21" />
+    <scopeInfo nodeId="6531435794299655142" fileName="Customer.java" startLine="69" startPosition="57" endLine="70" endPosition="29" />
+    <scopeInfo nodeId="6531435794299655196" fileName="Customer.java" startLine="85" startPosition="44" endLine="86" endPosition="75" />
+    <scopeInfo nodeId="6531435794299654992" fileName="Customer.java" startLine="15" startPosition="32" endLine="17" endPosition="20" />
+    <scopeInfo nodeId="6531435794299655028" fileName="Customer.java" startLine="27" startPosition="47" endLine="29" endPosition="32" />
+    <scopeInfo nodeId="6531435794299655092" fileName="Customer.java" startLine="56" startPosition="39" endLine="58" endPosition="65">
+      <varInfo nodeId="6531435794299655094" varName="reversingEntry" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299655009" fileName="Customer.java" startLine="21" startPosition="53" endLine="24" endPosition="5">
+      <varInfo nodeId="6531435794299655011" varName="type" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299654987" fileName="Customer.java" startLine="14" startPosition="0" endLine="18" endPosition="3">
+      <varInfo nodeId="6531435794299654990" varName="name" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299655001" fileName="Customer.java" startLine="20" startPosition="36" endLine="24" endPosition="5" />
+    <scopeInfo nodeId="6531435794299655039" fileName="Customer.java" startLine="31" startPosition="0" endLine="35" endPosition="0">
+      <varInfo nodeId="6531435794299655042" varName="arg" />
+      <varInfo nodeId="6531435794299655044" varName="type" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299655053" fileName="Customer.java" startLine="35" startPosition="0" endLine="39" endPosition="0">
+      <varInfo nodeId="6531435794299655056" varName="key" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299655064" fileName="Customer.java" startLine="39" startPosition="0" endLine="43" endPosition="0" />
+    <scopeInfo nodeId="6531435794299655069" fileName="Customer.java" startLine="43" startPosition="0" endLine="47" endPosition="0" />
+    <scopeInfo nodeId="6531435794299655075" fileName="Customer.java" startLine="47" startPosition="0" endLine="51" endPosition="0" />
+    <scopeInfo nodeId="6531435794299655081" fileName="Customer.java" startLine="51" startPosition="0" endLine="55" endPosition="0" />
+    <scopeInfo nodeId="6531435794299655116" fileName="Customer.java" startLine="60" startPosition="0" endLine="64" endPosition="0">
+      <varInfo nodeId="6531435794299655119" varName="e" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299655127" fileName="Customer.java" startLine="64" startPosition="0" endLine="68" endPosition="0">
+      <varInfo nodeId="6531435794299655130" varName="arg" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299655137" fileName="Customer.java" startLine="68" startPosition="0" endLine="72" endPosition="0">
+      <varInfo nodeId="6531435794299655140" varName="arg" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299655165" fileName="Customer.java" startLine="76" startPosition="36" endLine="80" endPosition="26" />
+    <scopeInfo nodeId="6531435794299655193" fileName="Customer.java" startLine="84" startPosition="0" endLine="88" endPosition="0" />
+    <scopeInfo nodeId="6531435794299655023" fileName="Customer.java" startLine="26" startPosition="0" endLine="31" endPosition="0">
+      <varInfo nodeId="6531435794299655026" varName="type" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299655087" fileName="Customer.java" startLine="55" startPosition="0" endLine="60" endPosition="0">
+      <varInfo nodeId="6531435794299655090" varName="arg" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299655161" fileName="Customer.java" startLine="75" startPosition="41" endLine="81" endPosition="5">
+      <varInfo nodeId="6531435794299655163" varName="type" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299654999" fileName="Customer.java" startLine="19" startPosition="0" endLine="26" endPosition="0" />
+    <scopeInfo nodeId="6531435794299655150" fileName="Customer.java" startLine="73" startPosition="28" endLine="82" endPosition="29">
+      <varInfo nodeId="6531435794299655152" varName="result" />
+      <varInfo nodeId="6531435794299655157" varName="types" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299655147" fileName="Customer.java" startLine="72" startPosition="0" endLine="84" endPosition="0" />
+    <unitInfo nodeId="6531435794299654975" fileName="Customer.java" startLine="11" startPosition="0" endLine="89" endPosition="0" unitName="postingrules.Customer" />
+  </root>
+  <root nodeId="6531435794299655211">
+    <nodeInfo nodeId="6531435794299655214" fileName="Adjustment.java" startLine="9" startPosition="58" endLine="10" endPosition="81" conceptFqName="jetbrains.mps.baseLanguage.structure.FieldDeclaration" propertyString="myNewEvents" />
+    <nodeInfo nodeId="6531435794299655221" fileName="Adjustment.java" startLine="10" startPosition="81" endLine="11" endPosition="81" conceptFqName="jetbrains.mps.baseLanguage.structure.FieldDeclaration" propertyString="myOldEvents" />
+    <nodeInfo nodeId="6531435794299655236" fileName="Adjustment.java" startLine="13" startPosition="81" endLine="14" endPosition="95" conceptFqName="jetbrains.mps.baseLanguage.structure.ThisConstructorInvocation" />
+    <nodeInfo nodeId="6531435794299655246" fileName="Adjustment.java" startLine="14" startPosition="95" endLine="15" endPosition="26" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299655249" fileName="Adjustment.java" startLine="15" startPosition="26" endLine="16" endPosition="24" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299655262" fileName="Adjustment.java" startLine="19" startPosition="79" endLine="20" endPosition="52" conceptFqName="jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
+    <nodeInfo nodeId="6531435794299655273" fileName="Adjustment.java" startLine="23" startPosition="43" endLine="24" endPosition="25" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299655289" fileName="Adjustment.java" startLine="28" startPosition="32" endLine="29" endPosition="104" conceptFqName="jetbrains.mps.baseLanguage.structure.ThrowStatement" />
+    <nodeInfo nodeId="6531435794299655301" fileName="Adjustment.java" startLine="30" startPosition="5" endLine="31" endPosition="25" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299655306" fileName="Adjustment.java" startLine="31" startPosition="25" endLine="32" endPosition="34" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299655252" fileName="Adjustment.java" startLine="18" startPosition="0" endLine="21" endPosition="3" conceptFqName="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" propertyString="Adjustment#(Lmf/MfDate;Lmf/MfDate;Lpostingrules/Subject;)V" />
+    <nodeInfo nodeId="6531435794299655284" fileName="Adjustment.java" startLine="27" startPosition="43" endLine="30" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
+    <nodeInfo nodeId="6531435794299655267" fileName="Adjustment.java" startLine="22" startPosition="0" endLine="26" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="addNew#(Lpostingrules/AccountingEvent;)V" />
+    <nodeInfo nodeId="6531435794299655228" fileName="Adjustment.java" startLine="12" startPosition="0" endLine="17" endPosition="3" conceptFqName="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" propertyString="Adjustment#(Lpostingrules/AccountingEvent;Lpostingrules/AccountingEvent;)V" />
+    <nodeInfo nodeId="6531435794299655278" fileName="Adjustment.java" startLine="26" startPosition="0" endLine="34" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="addOld#(Lpostingrules/AccountingEvent;)V" />
+    <scopeInfo nodeId="6531435794299655261" fileName="Adjustment.java" startLine="19" startPosition="79" endLine="20" endPosition="52" />
+    <scopeInfo nodeId="6531435794299655272" fileName="Adjustment.java" startLine="23" startPosition="43" endLine="24" endPosition="25" />
+    <scopeInfo nodeId="6531435794299655288" fileName="Adjustment.java" startLine="28" startPosition="32" endLine="29" endPosition="104" />
+    <scopeInfo nodeId="6531435794299655235" fileName="Adjustment.java" startLine="13" startPosition="81" endLine="16" endPosition="24" />
+    <scopeInfo nodeId="6531435794299655252" fileName="Adjustment.java" startLine="18" startPosition="0" endLine="21" endPosition="3">
+      <varInfo nodeId="6531435794299655259" varName="subject" />
+      <varInfo nodeId="6531435794299655257" varName="whenNoticed" />
+      <varInfo nodeId="6531435794299655255" varName="whenOccurred" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299655267" fileName="Adjustment.java" startLine="22" startPosition="0" endLine="26" endPosition="0">
+      <varInfo nodeId="6531435794299655270" varName="arg" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299655228" fileName="Adjustment.java" startLine="12" startPosition="0" endLine="17" endPosition="3">
+      <varInfo nodeId="6531435794299655231" varName="replacement" />
+      <varInfo nodeId="6531435794299655233" varName="adjustedEvent" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299655283" fileName="Adjustment.java" startLine="27" startPosition="43" endLine="32" endPosition="34" />
+    <scopeInfo nodeId="6531435794299655278" fileName="Adjustment.java" startLine="26" startPosition="0" endLine="34" endPosition="0">
+      <varInfo nodeId="6531435794299655281" varName="arg" />
+    </scopeInfo>
+    <unitInfo nodeId="6531435794299655211" fileName="Adjustment.java" startLine="9" startPosition="0" endLine="35" endPosition="0" unitName="postingrules.Adjustment" />
+  </root>
+  <root nodeId="6531435794299655311">
+    <nodeInfo nodeId="6531435794299655313" fileName="EventList.java" startLine="8" startPosition="24" endLine="9" endPosition="76" conceptFqName="jetbrains.mps.baseLanguage.structure.FieldDeclaration" propertyString="myEvents" />
+    <nodeInfo nodeId="6531435794299655320" fileName="EventList.java" startLine="9" startPosition="76" endLine="10" endPosition="86" conceptFqName="jetbrains.mps.baseLanguage.structure.FieldDeclaration" propertyString="myProcessingErrors" />
+    <nodeInfo nodeId="6531435794299655337" fileName="EventList.java" startLine="15" startPosition="40" endLine="16" endPosition="22" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299655347" fileName="EventList.java" startLine="19" startPosition="53" endLine="20" endPosition="68" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="6531435794299655365" fileName="EventList.java" startLine="22" startPosition="31" endLine="23" endPosition="22" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299655370" fileName="EventList.java" startLine="25" startPosition="5" endLine="26" endPosition="18" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6531435794299655380" fileName="EventList.java" startLine="29" startPosition="79" endLine="30" endPosition="34" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299655385" fileName="EventList.java" startLine="30" startPosition="34" endLine="31" endPosition="42" conceptFqName="jetbrains.mps.baseLanguage.structure.ThrowStatement" />
+    <nodeInfo nodeId="6531435794299655392" fileName="EventList.java" startLine="34" startPosition="45" endLine="35" endPosition="43" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6531435794299655416" fileName="EventList.java" startLine="40" startPosition="11" endLine="41" endPosition="24" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299655409" fileName="EventList.java" startLine="42" startPosition="29" endLine="43" endPosition="37" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299655327" fileName="EventList.java" startLine="11" startPosition="0" endLine="13" endPosition="3" conceptFqName="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" propertyString="EventList#()V" />
+    <nodeInfo nodeId="6531435794299655359" fileName="EventList.java" startLine="21" startPosition="40" endLine="24" endPosition="7" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
+    <nodeInfo nodeId="6531435794299655331" fileName="EventList.java" startLine="14" startPosition="0" endLine="18" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="add#(Lpostingrules/AccountingEvent;)V" />
+    <nodeInfo nodeId="6531435794299655389" fileName="EventList.java" startLine="33" startPosition="0" endLine="37" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="hasProcessingErrors#()Z" />
+    <nodeInfo nodeId="6531435794299655354" fileName="EventList.java" startLine="20" startPosition="68" endLine="25" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.ForeachStatement" />
+    <nodeInfo nodeId="6531435794299655372" fileName="EventList.java" startLine="28" startPosition="0" endLine="33" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="logProcessingError#(Lpostingrules/AccountingEvent;Ljava/lang/Exception;)V" />
+    <nodeInfo nodeId="6531435794299655406" fileName="EventList.java" startLine="39" startPosition="55" endLine="44" endPosition="7" conceptFqName="jetbrains.mps.baseLanguage.structure.TryCatchStatement" />
+    <nodeInfo nodeId="6531435794299655401" fileName="EventList.java" startLine="38" startPosition="25" endLine="45" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.ForeachStatement" />
+    <nodeInfo nodeId="6531435794299655342" fileName="EventList.java" startLine="18" startPosition="0" endLine="28" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="unprocessedEvents#()Ljava/util/List;" />
+    <nodeInfo nodeId="6531435794299655397" fileName="EventList.java" startLine="37" startPosition="0" endLine="47" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="process#()V" />
+    <scopeInfo nodeId="6531435794299655330" fileName="EventList.java" startLine="12" startPosition="22" endLine="12" endPosition="22" />
+    <scopeInfo nodeId="6531435794299655336" fileName="EventList.java" startLine="15" startPosition="40" endLine="16" endPosition="22" />
+    <scopeInfo nodeId="6531435794299655364" fileName="EventList.java" startLine="22" startPosition="31" endLine="23" endPosition="22" />
+    <scopeInfo nodeId="6531435794299655391" fileName="EventList.java" startLine="34" startPosition="45" endLine="35" endPosition="43" />
+    <scopeInfo nodeId="6531435794299655415" fileName="EventList.java" startLine="40" startPosition="11" endLine="41" endPosition="24" />
+    <scopeInfo nodeId="6531435794299655407" fileName="EventList.java" startLine="42" startPosition="0" endLine="43" endPosition="37">
+      <varInfo nodeId="6531435794299655413" varName="e" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299655408" fileName="EventList.java" startLine="42" startPosition="29" endLine="43" endPosition="37" />
+    <scopeInfo nodeId="6531435794299655327" fileName="EventList.java" startLine="11" startPosition="0" endLine="13" endPosition="3" />
+    <scopeInfo nodeId="6531435794299655379" fileName="EventList.java" startLine="29" startPosition="79" endLine="31" endPosition="42" />
+    <scopeInfo nodeId="6531435794299655358" fileName="EventList.java" startLine="21" startPosition="40" endLine="24" endPosition="7" />
+    <scopeInfo nodeId="6531435794299655331" fileName="EventList.java" startLine="14" startPosition="0" endLine="18" endPosition="0">
+      <varInfo nodeId="6531435794299655334" varName="arg" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299655389" fileName="EventList.java" startLine="33" startPosition="0" endLine="37" endPosition="0" />
+    <scopeInfo nodeId="6531435794299655354" fileName="EventList.java" startLine="20" startPosition="68" endLine="25" endPosition="5">
+      <varInfo nodeId="6531435794299655356" varName="e" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299655372" fileName="EventList.java" startLine="28" startPosition="0" endLine="33" endPosition="0">
+      <varInfo nodeId="6531435794299655375" varName="event" />
+      <varInfo nodeId="6531435794299655377" varName="exception" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299655405" fileName="EventList.java" startLine="39" startPosition="55" endLine="44" endPosition="7" />
+    <scopeInfo nodeId="6531435794299655346" fileName="EventList.java" startLine="19" startPosition="53" endLine="26" endPosition="18">
+      <varInfo nodeId="6531435794299655348" varName="result" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299655400" fileName="EventList.java" startLine="38" startPosition="25" endLine="45" endPosition="5" />
+    <scopeInfo nodeId="6531435794299655401" fileName="EventList.java" startLine="38" startPosition="25" endLine="45" endPosition="5">
+      <varInfo nodeId="6531435794299655403" varName="event" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299655342" fileName="EventList.java" startLine="18" startPosition="0" endLine="28" endPosition="0" />
+    <scopeInfo nodeId="6531435794299655397" fileName="EventList.java" startLine="37" startPosition="0" endLine="47" endPosition="0" />
+    <unitInfo nodeId="6531435794299655311" fileName="EventList.java" startLine="8" startPosition="0" endLine="48" endPosition="0" unitName="postingrules.EventList" />
+  </root>
+  <root nodeId="6531435794299655543">
+    <nodeInfo nodeId="6531435794299655546" fileName="EventType.java" startLine="8" startPosition="44" endLine="9" endPosition="63" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" propertyString="USAGE" />
+    <nodeInfo nodeId="6531435794299655552" fileName="EventType.java" startLine="9" startPosition="63" endLine="10" endPosition="59" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" propertyString="TAX" />
+    <nodeInfo nodeId="6531435794299655558" fileName="EventType.java" startLine="10" startPosition="59" endLine="11" endPosition="77" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" propertyString="SERVICE_CALL" />
+    <nodeInfo nodeId="6531435794299655570" fileName="EventType.java" startLine="13" startPosition="33" endLine="14" endPosition="16" conceptFqName="jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
+    <nodeInfo nodeId="6531435794299655586" fileName="EventType.java" startLine="17" startPosition="31" endLine="18" endPosition="36" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299655577" fileName="EventType.java" startLine="21" startPosition="49" endLine="22" endPosition="55" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6531435794299655564" fileName="EventType.java" startLine="12" startPosition="0" endLine="15" endPosition="3" conceptFqName="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" propertyString="EventType#(Ljava/lang/String;)V" />
+    <nodeInfo nodeId="6531435794299655583" fileName="EventType.java" startLine="16" startPosition="0" endLine="20" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="register#()V" />
+    <nodeInfo nodeId="6531435794299655572" fileName="EventType.java" startLine="20" startPosition="0" endLine="24" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="get#(Ljava/lang/String;)Lpostingrules/EventType;" />
+    <scopeInfo nodeId="6531435794299655569" fileName="EventType.java" startLine="13" startPosition="33" endLine="14" endPosition="16" />
+    <scopeInfo nodeId="6531435794299655585" fileName="EventType.java" startLine="17" startPosition="31" endLine="18" endPosition="36" />
+    <scopeInfo nodeId="6531435794299655576" fileName="EventType.java" startLine="21" startPosition="49" endLine="22" endPosition="55" />
+    <scopeInfo nodeId="6531435794299655564" fileName="EventType.java" startLine="12" startPosition="0" endLine="15" endPosition="3">
+      <varInfo nodeId="6531435794299655567" varName="name" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299655583" fileName="EventType.java" startLine="16" startPosition="0" endLine="20" endPosition="0" />
+    <scopeInfo nodeId="6531435794299655572" fileName="EventType.java" startLine="20" startPosition="0" endLine="24" endPosition="0">
+      <varInfo nodeId="6531435794299655574" varName="name" />
+    </scopeInfo>
+    <unitInfo nodeId="6531435794299655543" fileName="EventType.java" startLine="8" startPosition="0" endLine="25" endPosition="0" unitName="postingrules.EventType" />
+  </root>
+  <root nodeId="6531435794299656295">
+    <nodeInfo nodeId="6531435794299656306" fileName="MultiplyByRatePR.java" startLine="8" startPosition="64" endLine="9" endPosition="27" conceptFqName="jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
+    <nodeInfo nodeId="6531435794299656315" fileName="MultiplyByRatePR.java" startLine="12" startPosition="56" endLine="13" endPosition="35" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="6531435794299656321" fileName="MultiplyByRatePR.java" startLine="13" startPosition="35" endLine="14" endPosition="150" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6531435794299656298" fileName="MultiplyByRatePR.java" startLine="7" startPosition="51" endLine="10" endPosition="3" conceptFqName="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" propertyString="MultiplyByRatePR#(Lpostingrules/AccountType;Z)V" />
+    <nodeInfo nodeId="6531435794299656309" fileName="MultiplyByRatePR.java" startLine="11" startPosition="0" endLine="16" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="calculateAmount#(Lpostingrules/AccountingEvent;)Lmf/Money;" />
+    <scopeInfo nodeId="6531435794299656305" fileName="MultiplyByRatePR.java" startLine="8" startPosition="64" endLine="9" endPosition="27" />
+    <scopeInfo nodeId="6531435794299656314" fileName="MultiplyByRatePR.java" startLine="12" startPosition="56" endLine="14" endPosition="150">
+      <varInfo nodeId="6531435794299656316" varName="usageEvent" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299656298" fileName="MultiplyByRatePR.java" startLine="7" startPosition="51" endLine="10" endPosition="3">
+      <varInfo nodeId="6531435794299656303" varName="isTaxable" />
+      <varInfo nodeId="6531435794299656301" varName="type" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299656309" fileName="MultiplyByRatePR.java" startLine="11" startPosition="0" endLine="16" endPosition="0">
+      <varInfo nodeId="6531435794299656312" varName="evt" />
+    </scopeInfo>
+    <unitInfo nodeId="6531435794299656295" fileName="MultiplyByRatePR.java" startLine="7" startPosition="0" endLine="17" endPosition="0" unitName="postingrules.MultiplyByRatePR" />
+  </root>
+  <root nodeId="6531435794299656580">
+    <nodeInfo nodeId="6531435794299656583" fileName="AmountFormulaPR.java" startLine="7" startPosition="50" endLine="8" endPosition="30" conceptFqName="jetbrains.mps.baseLanguage.structure.FieldDeclaration" propertyString="myMultiplier" />
+    <nodeInfo nodeId="6531435794299656586" fileName="AmountFormulaPR.java" startLine="8" startPosition="30" endLine="9" endPosition="27" conceptFqName="jetbrains.mps.baseLanguage.structure.FieldDeclaration" propertyString="myFixedFee" />
+    <nodeInfo nodeId="6531435794299656601" fileName="AmountFormulaPR.java" startLine="11" startPosition="98" endLine="12" endPosition="27" conceptFqName="jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
+    <nodeInfo nodeId="6531435794299656604" fileName="AmountFormulaPR.java" startLine="12" startPosition="27" endLine="13" endPosition="35" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299656610" fileName="AmountFormulaPR.java" startLine="13" startPosition="35" endLine="14" endPosition="31" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299656622" fileName="AmountFormulaPR.java" startLine="17" startPosition="56" endLine="18" endPosition="58" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="6531435794299656631" fileName="AmountFormulaPR.java" startLine="18" startPosition="58" endLine="19" endPosition="70" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6531435794299656589" fileName="AmountFormulaPR.java" startLine="10" startPosition="0" endLine="15" endPosition="3" conceptFqName="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" propertyString="AmountFormulaPR#(DLmf/Money;Lpostingrules/AccountType;Z)V" />
+    <nodeInfo nodeId="6531435794299656616" fileName="AmountFormulaPR.java" startLine="16" startPosition="0" endLine="21" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="calculateAmount#(Lpostingrules/AccountingEvent;)Lmf/Money;" />
+    <scopeInfo nodeId="6531435794299656621" fileName="AmountFormulaPR.java" startLine="17" startPosition="56" endLine="19" endPosition="70">
+      <varInfo nodeId="6531435794299656623" varName="eventAmount" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299656600" fileName="AmountFormulaPR.java" startLine="11" startPosition="98" endLine="14" endPosition="31" />
+    <scopeInfo nodeId="6531435794299656589" fileName="AmountFormulaPR.java" startLine="10" startPosition="0" endLine="15" endPosition="3">
+      <varInfo nodeId="6531435794299656594" varName="fixedFee" />
+      <varInfo nodeId="6531435794299656598" varName="isTaxable" />
+      <varInfo nodeId="6531435794299656596" varName="type" />
+      <varInfo nodeId="6531435794299656592" varName="multiplier" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299656616" fileName="AmountFormulaPR.java" startLine="16" startPosition="0" endLine="21" endPosition="0">
+      <varInfo nodeId="6531435794299656619" varName="evt" />
+    </scopeInfo>
+    <unitInfo nodeId="6531435794299656580" fileName="AmountFormulaPR.java" startLine="7" startPosition="0" endLine="22" endPosition="0" unitName="postingrules.AmountFormulaPR" />
+  </root>
+  <root nodeId="6531435794299656641">
+    <nodeInfo nodeId="6531435794299656643" fileName="Account.java" startLine="12" startPosition="22" endLine="13" endPosition="57" conceptFqName="jetbrains.mps.baseLanguage.structure.FieldDeclaration" propertyString="myEntries" />
+    <nodeInfo nodeId="6531435794299656650" fileName="Account.java" startLine="13" startPosition="57" endLine="14" endPosition="30" conceptFqName="jetbrains.mps.baseLanguage.structure.FieldDeclaration" propertyString="myCurrency" />
+    <nodeInfo nodeId="6531435794299656653" fileName="Account.java" startLine="14" startPosition="30" endLine="15" endPosition="29" conceptFqName="jetbrains.mps.baseLanguage.structure.FieldDeclaration" propertyString="myType" />
+    <nodeInfo nodeId="6531435794299656662" fileName="Account.java" startLine="17" startPosition="37" endLine="18" endPosition="25" conceptFqName="jetbrains.mps.baseLanguage.structure.ThisConstructorInvocation" />
+    <nodeInfo nodeId="6531435794299656673" fileName="Account.java" startLine="21" startPosition="55" endLine="22" endPosition="31" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299656679" fileName="Account.java" startLine="22" startPosition="31" endLine="23" endPosition="23" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299656691" fileName="Account.java" startLine="26" startPosition="35" endLine="27" endPosition="40" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299656696" fileName="Account.java" startLine="27" startPosition="40" endLine="28" endPosition="23" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299656701" fileName="Account.java" startLine="28" startPosition="23" endLine="29" endPosition="25" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299656713" fileName="Account.java" startLine="32" startPosition="56" endLine="33" endPosition="44" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="6531435794299656720" fileName="Account.java" startLine="33" startPosition="44" endLine="34" endPosition="16" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299656738" fileName="Account.java" startLine="38" startPosition="47" endLine="39" endPosition="79" conceptFqName="jetbrains.mps.baseLanguage.structure.ThrowStatement" />
+    <nodeInfo nodeId="6531435794299656746" fileName="Account.java" startLine="43" startPosition="26" endLine="44" endPosition="35" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6531435794299656754" fileName="Account.java" startLine="47" startPosition="47" endLine="48" endPosition="44" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="6531435794299656774" fileName="Account.java" startLine="50" startPosition="41" endLine="51" endPosition="43" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299656783" fileName="Account.java" startLine="53" startPosition="5" endLine="54" endPosition="18" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6531435794299656790" fileName="Account.java" startLine="57" startPosition="42" endLine="58" endPosition="41" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6531435794299656798" fileName="Account.java" startLine="61" startPosition="25" endLine="62" endPosition="53" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="6531435794299656810" fileName="Account.java" startLine="63" startPosition="31" endLine="64" endPosition="32" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299656817" fileName="Account.java" startLine="65" startPosition="5" endLine="66" endPosition="18" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6531435794299656824" fileName="Account.java" startLine="69" startPosition="48" endLine="70" endPosition="44" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="6531435794299656850" fileName="Account.java" startLine="72" startPosition="77" endLine="73" endPosition="46" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299656859" fileName="Account.java" startLine="75" startPosition="5" endLine="76" endPosition="18" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6531435794299656866" fileName="Account.java" startLine="79" startPosition="28" endLine="80" endPosition="43" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6531435794299656878" fileName="Account.java" startLine="83" startPosition="33" endLine="84" endPosition="35" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6531435794299656895" fileName="Account.java" startLine="89" startPosition="35" endLine="90" endPosition="21" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6531435794299656897" fileName="Account.java" startLine="92" startPosition="5" endLine="93" endPosition="16" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6531435794299656903" fileName="Account.java" startLine="96" startPosition="28" endLine="97" endPosition="28" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6531435794299656910" fileName="Account.java" startLine="100" startPosition="34" endLine="101" endPosition="18" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6531435794299656921" fileName="Account.java" startLine="104" startPosition="72" endLine="105" endPosition="58" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299656933" fileName="Account.java" startLine="108" startPosition="51" endLine="109" endPosition="44" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="6531435794299656959" fileName="Account.java" startLine="111" startPosition="77" endLine="112" endPosition="46" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6531435794299656968" fileName="Account.java" startLine="114" startPosition="5" endLine="115" endPosition="18" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6531435794299656656" fileName="Account.java" startLine="16" startPosition="0" endLine="19" endPosition="3" conceptFqName="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" propertyString="Account#(Lmf/Currency;)V" />
+    <nodeInfo nodeId="6531435794299656729" fileName="Account.java" startLine="37" startPosition="46" endLine="40" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
+    <nodeInfo nodeId="6531435794299656766" fileName="Account.java" startLine="49" startPosition="31" endLine="52" endPosition="7" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
+    <nodeInfo nodeId="6531435794299656805" fileName="Account.java" startLine="62" startPosition="53" endLine="65" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.ForeachStatement" />
+    <nodeInfo nodeId="6531435794299656836" fileName="Account.java" startLine="71" startPosition="34" endLine="74" endPosition="7" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
+    <nodeInfo nodeId="6531435794299656888" fileName="Account.java" startLine="88" startPosition="31" endLine="91" endPosition="7" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
+    <nodeInfo nodeId="6531435794299656945" fileName="Account.java" startLine="110" startPosition="34" endLine="113" endPosition="7" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
+    <nodeInfo nodeId="6531435794299656665" fileName="Account.java" startLine="20" startPosition="0" endLine="24" endPosition="3" conceptFqName="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" propertyString="Account#(Lmf/Currency;Lpostingrules/AccountType;)V" />
+    <nodeInfo nodeId="6531435794299656742" fileName="Account.java" startLine="42" startPosition="0" endLine="46" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="balance#()Lmf/Money;" />
+    <nodeInfo nodeId="6531435794299656785" fileName="Account.java" startLine="56" startPosition="0" endLine="60" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="balance#(Lmf/MfDate;)Lmf/Money;" />
+    <nodeInfo nodeId="6531435794299656861" fileName="Account.java" startLine="78" startPosition="0" endLine="82" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="entries#()[Lpostingrules/Entry;" />
+    <nodeInfo nodeId="6531435794299656875" fileName="Account.java" startLine="82" startPosition="0" endLine="86" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="isValid#()Z" />
+    <nodeInfo nodeId="6531435794299656899" fileName="Account.java" startLine="95" startPosition="0" endLine="99" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="toString#()Ljava/lang/String;" />
+    <nodeInfo nodeId="6531435794299656907" fileName="Account.java" startLine="99" startPosition="0" endLine="103" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="type#()Lpostingrules/AccountType;" />
+    <nodeInfo nodeId="6531435794299656912" fileName="Account.java" startLine="103" startPosition="0" endLine="107" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="withdraw#(Lmf/Money;Lpostingrules/Account;Lmf/MfDate;)V" />
+    <nodeInfo nodeId="6531435794299656706" fileName="Account.java" startLine="31" startPosition="0" endLine="36" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="addEntry#(Lmf/Money;Lmf/MfDate;)V" />
+    <nodeInfo nodeId="6531435794299656761" fileName="Account.java" startLine="48" startPosition="44" endLine="53" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.ForeachStatement" />
+    <nodeInfo nodeId="6531435794299656831" fileName="Account.java" startLine="70" startPosition="44" endLine="75" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.ForeachStatement" />
+    <nodeInfo nodeId="6531435794299656883" fileName="Account.java" startLine="87" startPosition="47" endLine="92" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.ForeachStatement" />
+    <nodeInfo nodeId="6531435794299656940" fileName="Account.java" startLine="109" startPosition="44" endLine="114" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.ForeachStatement" />
+    <nodeInfo nodeId="6531435794299656685" fileName="Account.java" startLine="25" startPosition="0" endLine="31" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="addEntry#(Lpostingrules/Entry;)V" />
+    <nodeInfo nodeId="6531435794299656723" fileName="Account.java" startLine="36" startPosition="0" endLine="42" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="ensureSameCurrency#(Lmf/Money;)V" />
+    <nodeInfo nodeId="6531435794299656794" fileName="Account.java" startLine="60" startPosition="0" endLine="68" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="copy#()Lpostingrules/Account;" />
+    <nodeInfo nodeId="6531435794299656880" fileName="Account.java" startLine="86" startPosition="0" endLine="95" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="allMyEntriesReferToMe#()Z" />
+    <nodeInfo nodeId="6531435794299656749" fileName="Account.java" startLine="46" startPosition="0" endLine="56" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="balance#(Lmf/DateRange;)Lmf/Money;" />
+    <nodeInfo nodeId="6531435794299656819" fileName="Account.java" startLine="68" startPosition="0" endLine="78" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="deposits#(Lmf/DateRange;)Lmf/Money;" />
+    <nodeInfo nodeId="6531435794299656928" fileName="Account.java" startLine="107" startPosition="0" endLine="117" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="withdrawels#(Lmf/DateRange;)Lmf/Money;" />
+    <scopeInfo nodeId="6531435794299656661" fileName="Account.java" startLine="17" startPosition="37" endLine="18" endPosition="25" />
+    <scopeInfo nodeId="6531435794299656737" fileName="Account.java" startLine="38" startPosition="47" endLine="39" endPosition="79" />
+    <scopeInfo nodeId="6531435794299656745" fileName="Account.java" startLine="43" startPosition="26" endLine="44" endPosition="35" />
+    <scopeInfo nodeId="6531435794299656773" fileName="Account.java" startLine="50" startPosition="41" endLine="51" endPosition="43" />
+    <scopeInfo nodeId="6531435794299656789" fileName="Account.java" startLine="57" startPosition="42" endLine="58" endPosition="41" />
+    <scopeInfo nodeId="6531435794299656809" fileName="Account.java" startLine="63" startPosition="31" endLine="64" endPosition="32" />
+    <scopeInfo nodeId="6531435794299656849" fileName="Account.java" startLine="72" startPosition="77" endLine="73" endPosition="46" />
+    <scopeInfo nodeId="6531435794299656865" fileName="Account.java" startLine="79" startPosition="28" endLine="80" endPosition="43" />
+    <scopeInfo nodeId="6531435794299656877" fileName="Account.java" startLine="83" startPosition="33" endLine="84" endPosition="35" />
+    <scopeInfo nodeId="6531435794299656894" fileName="Account.java" startLine="89" startPosition="35" endLine="90" endPosition="21" />
+    <scopeInfo nodeId="6531435794299656902" fileName="Account.java" startLine="96" startPosition="28" endLine="97" endPosition="28" />
+    <scopeInfo nodeId="6531435794299656909" fileName="Account.java" startLine="100" startPosition="34" endLine="101" endPosition="18" />
+    <scopeInfo nodeId="6531435794299656920" fileName="Account.java" startLine="104" startPosition="72" endLine="105" endPosition="58" />
+    <scopeInfo nodeId="6531435794299656958" fileName="Account.java" startLine="111" startPosition="77" endLine="112" endPosition="46" />
+    <scopeInfo nodeId="6531435794299656672" fileName="Account.java" startLine="21" startPosition="55" endLine="23" endPosition="23" />
+    <scopeInfo nodeId="6531435794299656712" fileName="Account.java" startLine="32" startPosition="56" endLine="34" endPosition="16">
+      <varInfo nodeId="6531435794299656714" varName="e" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299656656" fileName="Account.java" startLine="16" startPosition="0" endLine="19" endPosition="3">
+      <varInfo nodeId="6531435794299656659" varName="currency" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299656690" fileName="Account.java" startLine="26" startPosition="35" endLine="29" endPosition="25" />
+    <scopeInfo nodeId="6531435794299656728" fileName="Account.java" startLine="37" startPosition="46" endLine="40" endPosition="5" />
+    <scopeInfo nodeId="6531435794299656765" fileName="Account.java" startLine="49" startPosition="31" endLine="52" endPosition="7" />
+    <scopeInfo nodeId="6531435794299656805" fileName="Account.java" startLine="62" startPosition="53" endLine="65" endPosition="5">
+      <varInfo nodeId="6531435794299656807" varName="e" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299656835" fileName="Account.java" startLine="71" startPosition="34" endLine="74" endPosition="7" />
+    <scopeInfo nodeId="6531435794299656887" fileName="Account.java" startLine="88" startPosition="31" endLine="91" endPosition="7" />
+    <scopeInfo nodeId="6531435794299656944" fileName="Account.java" startLine="110" startPosition="34" endLine="113" endPosition="7" />
+    <scopeInfo nodeId="6531435794299656665" fileName="Account.java" startLine="20" startPosition="0" endLine="24" endPosition="3">
+      <varInfo nodeId="6531435794299656670" varName="type" />
+      <varInfo nodeId="6531435794299656668" varName="currency" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299656742" fileName="Account.java" startLine="42" startPosition="0" endLine="46" endPosition="0" />
+    <scopeInfo nodeId="6531435794299656785" fileName="Account.java" startLine="56" startPosition="0" endLine="60" endPosition="0">
+      <varInfo nodeId="6531435794299656787" varName="date" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299656861" fileName="Account.java" startLine="78" startPosition="0" endLine="82" endPosition="0" />
+    <scopeInfo nodeId="6531435794299656875" fileName="Account.java" startLine="82" startPosition="0" endLine="86" endPosition="0" />
+    <scopeInfo nodeId="6531435794299656899" fileName="Account.java" startLine="95" startPosition="0" endLine="99" endPosition="0" />
+    <scopeInfo nodeId="6531435794299656907" fileName="Account.java" startLine="99" startPosition="0" endLine="103" endPosition="0" />
+    <scopeInfo nodeId="6531435794299656912" fileName="Account.java" startLine="103" startPosition="0" endLine="107" endPosition="0">
+      <varInfo nodeId="6531435794299656914" varName="amount" />
+      <varInfo nodeId="6531435794299656916" varName="target" />
+      <varInfo nodeId="6531435794299656918" varName="date" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299656706" fileName="Account.java" startLine="31" startPosition="0" endLine="36" endPosition="0">
+      <varInfo nodeId="6531435794299656708" varName="amount" />
+      <varInfo nodeId="6531435794299656710" varName="date" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299656761" fileName="Account.java" startLine="48" startPosition="44" endLine="53" endPosition="5">
+      <varInfo nodeId="6531435794299656763" varName="e" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299656797" fileName="Account.java" startLine="61" startPosition="25" endLine="66" endPosition="18">
+      <varInfo nodeId="6531435794299656799" varName="result" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299656831" fileName="Account.java" startLine="70" startPosition="44" endLine="75" endPosition="5">
+      <varInfo nodeId="6531435794299656833" varName="each" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299656883" fileName="Account.java" startLine="87" startPosition="47" endLine="92" endPosition="5">
+      <varInfo nodeId="6531435794299656885" varName="e" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299656940" fileName="Account.java" startLine="109" startPosition="44" endLine="114" endPosition="5">
+      <varInfo nodeId="6531435794299656942" varName="each" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299656685" fileName="Account.java" startLine="25" startPosition="0" endLine="31" endPosition="0">
+      <varInfo nodeId="6531435794299656688" varName="arg" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299656723" fileName="Account.java" startLine="36" startPosition="0" endLine="42" endPosition="0">
+      <varInfo nodeId="6531435794299656726" varName="arg" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299656882" fileName="Account.java" startLine="87" startPosition="47" endLine="93" endPosition="16" />
+    <scopeInfo nodeId="6531435794299656753" fileName="Account.java" startLine="47" startPosition="47" endLine="54" endPosition="18">
+      <varInfo nodeId="6531435794299656755" varName="result" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299656823" fileName="Account.java" startLine="69" startPosition="48" endLine="76" endPosition="18">
+      <varInfo nodeId="6531435794299656825" varName="result" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299656932" fileName="Account.java" startLine="108" startPosition="51" endLine="115" endPosition="18">
+      <varInfo nodeId="6531435794299656934" varName="result" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299656794" fileName="Account.java" startLine="60" startPosition="0" endLine="68" endPosition="0" />
+    <scopeInfo nodeId="6531435794299656880" fileName="Account.java" startLine="86" startPosition="0" endLine="95" endPosition="0" />
+    <scopeInfo nodeId="6531435794299656749" fileName="Account.java" startLine="46" startPosition="0" endLine="56" endPosition="0">
+      <varInfo nodeId="6531435794299656751" varName="period" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299656819" fileName="Account.java" startLine="68" startPosition="0" endLine="78" endPosition="0">
+      <varInfo nodeId="6531435794299656821" varName="period" />
+    </scopeInfo>
+    <scopeInfo nodeId="6531435794299656928" fileName="Account.java" startLine="107" startPosition="0" endLine="117" endPosition="0">
+      <varInfo nodeId="6531435794299656930" varName="period" />
+    </scopeInfo>
+    <unitInfo nodeId="6531435794299656641" fileName="Account.java" startLine="12" startPosition="0" endLine="118" endPosition="0" unitName="postingrules.Account" />
+  </root>
+</debugInfo>
+

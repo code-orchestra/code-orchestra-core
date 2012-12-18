@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.ide.dataFlow.presentation.AbstractBlock" file="AbstractBlock.java">
+    <classNode dependClassName="java.awt.Component" />
+    <classNode dependClassName="java.awt.Font" />
+    <classNode dependClassName="java.awt.FontMetrics" />
+    <classNode dependClassName="java.awt.Graphics" />
+    <classNode dependClassName="java.awt.event.MouseEvent" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.HashSet" />
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="jetbrains.mps.ide.dataFlow.presentation.IBlockListener" />
+    <classNode dependClassName="jetbrains.mps.ide.dataFlow.presentation.IInstruction" />
+    <classNode extendsClassName="jetbrains.mps.ide.dataFlow.presentation.IBlock" />
+  </dependency>
+  <dependency className="jetbrains.mps.ide.dataFlow.presentation.AltBlock" file="AltBlock.java">
+    <classNode dependClassName="java.awt.Color" />
+    <classNode dependClassName="java.awt.Graphics" />
+    <classNode dependClassName="jetbrains.mps.ide.dataFlow.presentation.IInstruction" />
+    <classNode extendsClassName="jetbrains.mps.ide.dataFlow.presentation.AbstractBlock" />
+  </dependency>
+  <dependency className="jetbrains.mps.ide.dataFlow.presentation.ArrowHead" file="ArrowHead.java">
+    <classNode dependClassName="java.awt.Graphics" />
+    <classNode dependClassName="jetbrains.mps.ide.dataFlow.presentation.ArrowHeadDirection" />
+  </dependency>
+  <dependency className="jetbrains.mps.ide.dataFlow.presentation.ArrowHeadDirection" file="ArrowHeadDirection.java">
+    <classNode dependClassName="java.awt.Color" />
+    <classNode dependClassName="java.awt.Graphics" />
+  </dependency>
+  <dependency className="jetbrains.mps.ide.dataFlow.presentation.ControlFlowGraph" file="ControlFlowGraph.java">
+    <classNode dependClassName="java.awt.Component" />
+    <classNode dependClassName="java.awt.Graphics" />
+    <classNode dependClassName="java.awt.event.MouseEvent" />
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.Math" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.Collections" />
+    <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="java.util.HashSet" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="jetbrains.mps.ide.dataFlow.presentation.ArrowHead" />
+    <classNode dependClassName="jetbrains.mps.ide.dataFlow.presentation.ArrowHeadDirection" />
+    <classNode dependClassName="jetbrains.mps.ide.dataFlow.presentation.FreeZone" />
+    <classNode dependClassName="jetbrains.mps.ide.dataFlow.presentation.IBlock" />
+    <classNode dependClassName="jetbrains.mps.ide.dataFlow.presentation.IBlockListener" />
+    <classNode dependClassName="jetbrains.mps.ide.dataFlow.presentation.IGraphCreator" />
+    <classNode dependClassName="jetbrains.mps.ide.dataFlow.presentation.IInstruction" />
+    <classNode dependClassName="jetbrains.mps.ide.dataFlow.presentation.IProgram" />
+    <classNode dependClassName="jetbrains.mps.ide.dataFlow.presentation.Line" />
+    <classNode dependClassName="jetbrains.mps.ide.dataFlow.presentation.LineDirection" />
+  </dependency>
+  <dependency className="jetbrains.mps.ide.dataFlow.presentation.FreeZone" file="FreeZone.java" />
+  <dependency className="jetbrains.mps.ide.dataFlow.presentation.GraphCreator" file="GraphCreator.java">
+    <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="jetbrains.mps.ide.dataFlow.presentation.AltBlock" />
+    <classNode dependClassName="jetbrains.mps.ide.dataFlow.presentation.IBlock" />
+    <classNode dependClassName="jetbrains.mps.ide.dataFlow.presentation.IInstruction" />
+    <classNode dependClassName="jetbrains.mps.ide.dataFlow.presentation.InstructionWrapper" />
+    <classNode dependClassName="jetbrains.mps.ide.dataFlow.presentation.JumpBlock" />
+    <classNode dependClassName="jetbrains.mps.ide.dataFlow.presentation.ReadBlock" />
+    <classNode dependClassName="jetbrains.mps.ide.dataFlow.presentation.ReturnBlock" />
+    <classNode dependClassName="jetbrains.mps.ide.dataFlow.presentation.SimpleBlock" />
+    <classNode dependClassName="jetbrains.mps.ide.dataFlow.presentation.WriteBlock" />
+    <classNode dependClassName="jetbrains.mps.lang.dataFlow.framework.instructions.IfJumpInstruction" />
+    <classNode dependClassName="jetbrains.mps.lang.dataFlow.framework.instructions.Instruction" />
+    <classNode dependClassName="jetbrains.mps.lang.dataFlow.framework.instructions.JumpInstruction" />
+    <classNode dependClassName="jetbrains.mps.lang.dataFlow.framework.instructions.ReadInstruction" />
+    <classNode dependClassName="jetbrains.mps.lang.dataFlow.framework.instructions.RetInstruction" />
+    <classNode dependClassName="jetbrains.mps.lang.dataFlow.framework.instructions.WriteInstruction" />
+    <classNode extendsClassName="jetbrains.mps.ide.dataFlow.presentation.IGraphCreator" />
+  </dependency>
+  <dependency className="jetbrains.mps.ide.dataFlow.presentation.IBlock" file="IBlock.java">
+    <classNode dependClassName="java.awt.Component" />
+    <classNode dependClassName="java.awt.Graphics" />
+    <classNode dependClassName="java.awt.event.MouseEvent" />
+    <classNode dependClassName="jetbrains.mps.ide.dataFlow.presentation.IBlockListener" />
+    <classNode dependClassName="jetbrains.mps.ide.dataFlow.presentation.IInstruction" />
+  </dependency>
+  <dependency className="jetbrains.mps.ide.dataFlow.presentation.IBlockListener" file="IBlockListener.java">
+    <classNode dependClassName="java.awt.event.MouseEvent" />
+    <classNode dependClassName="jetbrains.mps.ide.dataFlow.presentation.IInstruction" />
+  </dependency>
+  <dependency className="jetbrains.mps.ide.dataFlow.presentation.IGraphCreator" file="IGraphCreator.java">
+    <classNode dependClassName="jetbrains.mps.ide.dataFlow.presentation.IBlock" />
+    <classNode dependClassName="jetbrains.mps.ide.dataFlow.presentation.IInstruction" />
+  </dependency>
+  <dependency className="jetbrains.mps.ide.dataFlow.presentation.IInstruction" file="IInstruction.java">
+    <classNode dependClassName="java.util.Set" />
+  </dependency>
+  <dependency className="jetbrains.mps.ide.dataFlow.presentation.IProgram" file="IProgram.java">
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.ide.dataFlow.presentation.IInstruction" />
+  </dependency>
+  <dependency className="jetbrains.mps.ide.dataFlow.presentation.InstructionWrapper" file="InstructionWrapper.java">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.HashSet" />
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="jetbrains.mps.lang.dataFlow.framework.instructions.Instruction" />
+    <classNode extendsClassName="jetbrains.mps.ide.dataFlow.presentation.IInstruction" />
+  </dependency>
+  <dependency className="jetbrains.mps.ide.dataFlow.presentation.JumpBlock" file="JumpBlock.java">
+    <classNode dependClassName="java.awt.Color" />
+    <classNode dependClassName="java.awt.Graphics" />
+    <classNode dependClassName="jetbrains.mps.ide.dataFlow.presentation.IInstruction" />
+    <classNode extendsClassName="jetbrains.mps.ide.dataFlow.presentation.AbstractBlock" />
+  </dependency>
+  <dependency className="jetbrains.mps.ide.dataFlow.presentation.Line" file="Line.java">
+    <classNode dependClassName="java.awt.Color" />
+    <classNode dependClassName="java.awt.Graphics" />
+    <classNode dependClassName="jetbrains.mps.ide.dataFlow.presentation.LineDirection" />
+    <classNode extendsClassName="java.lang.Comparable" />
+  </dependency>
+  <dependency className="jetbrains.mps.ide.dataFlow.presentation.LineDirection" file="LineDirection.java">
+    <classNode dependClassName="java.awt.Color" />
+    <classNode dependClassName="java.awt.Graphics" />
+    <classNode dependClassName="jetbrains.mps.ide.dataFlow.presentation.Line" />
+  </dependency>
+  <dependency className="jetbrains.mps.ide.dataFlow.presentation.ProgramWrapper" file="ProgramWrapper.java">
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.ide.dataFlow.presentation.IInstruction" />
+    <classNode dependClassName="jetbrains.mps.ide.dataFlow.presentation.InstructionWrapper" />
+    <classNode dependClassName="jetbrains.mps.lang.dataFlow.framework.Program" />
+    <classNode dependClassName="jetbrains.mps.lang.dataFlow.framework.instructions.Instruction" />
+    <classNode extendsClassName="jetbrains.mps.ide.dataFlow.presentation.IProgram" />
+  </dependency>
+  <dependency className="jetbrains.mps.ide.dataFlow.presentation.ReadBlock" file="ReadBlock.java">
+    <classNode dependClassName="java.awt.Color" />
+    <classNode dependClassName="java.awt.Graphics" />
+    <classNode dependClassName="jetbrains.mps.ide.dataFlow.presentation.IInstruction" />
+    <classNode extendsClassName="jetbrains.mps.ide.dataFlow.presentation.AbstractBlock" />
+  </dependency>
+  <dependency className="jetbrains.mps.ide.dataFlow.presentation.ReturnBlock" file="ReturnBlock.java">
+    <classNode dependClassName="java.awt.Color" />
+    <classNode dependClassName="java.awt.Graphics" />
+    <classNode dependClassName="jetbrains.mps.ide.dataFlow.presentation.IInstruction" />
+    <classNode extendsClassName="jetbrains.mps.ide.dataFlow.presentation.AbstractBlock" />
+  </dependency>
+  <dependency className="jetbrains.mps.ide.dataFlow.presentation.ShowCFGDialog" file="ShowCFGDialog.java">
+    <classNode dependClassName="com.intellij.ui.ScrollPaneFactory" />
+    <classNode dependClassName="java.awt.BorderLayout" />
+    <classNode dependClassName="java.awt.Color" />
+    <classNode dependClassName="java.awt.Dimension" />
+    <classNode dependClassName="java.awt.Frame" />
+    <classNode dependClassName="java.awt.Graphics" />
+    <classNode dependClassName="java.awt.Rectangle" />
+    <classNode dependClassName="java.awt.event.MouseAdapter" />
+    <classNode dependClassName="java.awt.event.MouseEvent" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="javax.swing.JScrollPane" />
+    <classNode dependClassName="jetbrains.mps.ide.dataFlow.presentation.ControlFlowGraph" />
+    <classNode dependClassName="jetbrains.mps.ide.dataFlow.presentation.GraphCreator" />
+    <classNode dependClassName="jetbrains.mps.ide.dataFlow.presentation.IBlockListener" />
+    <classNode dependClassName="jetbrains.mps.ide.dataFlow.presentation.IInstruction" />
+    <classNode dependClassName="jetbrains.mps.ide.dataFlow.presentation.InstructionWrapper" />
+    <classNode dependClassName="jetbrains.mps.ide.dataFlow.presentation.ProgramWrapper" />
+    <classNode dependClassName="jetbrains.mps.lang.dataFlow.framework.Program" />
+    <classNode dependClassName="jetbrains.mps.lang.dataFlow.framework.instructions.Instruction" />
+    <classNode dependClassName="jetbrains.mps.smodel.IOperationContext" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.workbench.editors.MPSEditorOpener" />
+    <classNode extendsClassName="javax.swing.JComponent" />
+    <classNode extendsClassName="javax.swing.JDialog" />
+    <classNode extendsClassName="javax.swing.Scrollable" />
+  </dependency>
+  <dependency className="jetbrains.mps.ide.dataFlow.presentation.SimpleBlock" file="SimpleBlock.java">
+    <classNode dependClassName="java.awt.Color" />
+    <classNode dependClassName="java.awt.Graphics" />
+    <classNode dependClassName="jetbrains.mps.ide.dataFlow.presentation.IInstruction" />
+    <classNode extendsClassName="jetbrains.mps.ide.dataFlow.presentation.AbstractBlock" />
+  </dependency>
+  <dependency className="jetbrains.mps.ide.dataFlow.presentation.WriteBlock" file="WriteBlock.java">
+    <classNode dependClassName="java.awt.Color" />
+    <classNode dependClassName="java.awt.Graphics" />
+    <classNode dependClassName="jetbrains.mps.ide.dataFlow.presentation.IInstruction" />
+    <classNode extendsClassName="jetbrains.mps.ide.dataFlow.presentation.AbstractBlock" />
+  </dependency>
+</dependenciesRoot>
+

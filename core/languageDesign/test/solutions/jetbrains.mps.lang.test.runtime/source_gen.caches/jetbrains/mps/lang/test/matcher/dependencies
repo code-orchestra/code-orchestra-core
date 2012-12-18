@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.lang.test.matcher.ChildrenCountDifference" file="ChildrenCountDifference.java">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode extendsClassName="jetbrains.mps.lang.test.matcher.DifferanceItem" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.test.matcher.ConceptDifference" file="ConceptDifference.java">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode extendsClassName="jetbrains.mps.lang.test.matcher.DifferanceItem" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.test.matcher.DifferanceItem" file="DifferanceItem.java" />
+  <dependency className="jetbrains.mps.lang.test.matcher.NodeDifference" file="NodeDifference.java">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.StringBuffer" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode extendsClassName="jetbrains.mps.lang.test.matcher.DifferanceItem" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.test.matcher.NodesMatcher" file="NodesMatcher.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="java.util.HashSet" />
+    <classNode dependClassName="java.util.Iterator" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="jetbrains.mps.lang.test.matcher.ChildrenCountDifference" />
+    <classNode dependClassName="jetbrains.mps.lang.test.matcher.ConceptDifference" />
+    <classNode dependClassName="jetbrains.mps.lang.test.matcher.DifferanceItem" />
+    <classNode dependClassName="jetbrains.mps.lang.test.matcher.NodeDifference" />
+    <classNode dependClassName="jetbrains.mps.lang.test.matcher.PropertyDifferense" />
+    <classNode dependClassName="jetbrains.mps.lang.test.matcher.ReferenceDifferense" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.test.matcher.PropertyDifferense" file="PropertyDifferense.java">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode extendsClassName="jetbrains.mps.lang.test.matcher.DifferanceItem" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.test.matcher.ReferenceDifferense" file="ReferenceDifferense.java">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode extendsClassName="jetbrains.mps.lang.test.matcher.DifferanceItem" />
+  </dependency>
+</dependenciesRoot>
+

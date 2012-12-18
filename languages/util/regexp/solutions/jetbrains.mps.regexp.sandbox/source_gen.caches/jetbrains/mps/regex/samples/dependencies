@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.regex.samples.FindMatch" file="FindMatch.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="java.util.regex.Matcher" />
+    <classNode dependClassName="java.util.regex.Pattern" />
+  </dependency>
+  <dependency className="jetbrains.mps.regex.samples.MatchIteration" file="MatchIteration.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="java.util.regex.Matcher" />
+    <classNode dependClassName="java.util.regex.Pattern" />
+  </dependency>
+  <dependency className="jetbrains.mps.regex.samples.Options" file="Options.java">
+    <classNode dependClassName="java.util.regex.Matcher" />
+    <classNode dependClassName="java.util.regex.Pattern" />
+  </dependency>
+  <dependency className="jetbrains.mps.regex.samples.PredefinedRegexps" file="PredefinedRegexps.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="java.util.regex.Matcher" />
+    <classNode dependClassName="java.util.regex.Pattern" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.regexp.runtime.RegexpOperations" />
+    <classNode dependClassName="jetbrains.mps.regex.samples._Replacer_90k4hu_a0a0b0b" />
+  </dependency>
+  <dependency className="jetbrains.mps.regex.samples.SimpleMatch" file="SimpleMatch.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="java.util.regex.Matcher" />
+    <classNode dependClassName="java.util.regex.Pattern" />
+  </dependency>
+  <dependency className="jetbrains.mps.regex.samples.SimpleReplace" file="SimpleReplace.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.regex.Pattern" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.regexp.runtime.RegexpOperations" />
+    <classNode dependClassName="jetbrains.mps.regex.samples._Replacer_x5qji9_a0a0b0a" />
+    <classNode dependClassName="jetbrains.mps.regex.samples._Replacer_x5qji9_a0a0b0b" />
+  </dependency>
+  <dependency className="jetbrains.mps.regex.samples.Split" file="Split.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="java.util.regex.Pattern" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.regexp.runtime.RegexpOperations" />
+  </dependency>
+  <dependency className="jetbrains.mps.regex.samples._Replacer_90k4hu_a0a0b0b" file="_Replacer_90k4hu_a0a0b0b.java">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.regex.Matcher" />
+    <classNode dependClassName="jetbrains.mps.regex.samples.PredefinedRegexps" />
+    <classNode extendsClassName="jetbrains.mps.baseLanguage.regexp.runtime.Replacer" />
+  </dependency>
+  <dependency className="jetbrains.mps.regex.samples._Replacer_x5qji9_a0a0b0a" file="_Replacer_x5qji9_a0a0b0a.java">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.regex.Matcher" />
+    <classNode dependClassName="jetbrains.mps.regex.samples.SimpleReplace" />
+    <classNode extendsClassName="jetbrains.mps.baseLanguage.regexp.runtime.Replacer" />
+  </dependency>
+  <dependency className="jetbrains.mps.regex.samples._Replacer_x5qji9_a0a0b0b" file="_Replacer_x5qji9_a0a0b0b.java">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.regex.Matcher" />
+    <classNode dependClassName="jetbrains.mps.regex.samples.SimpleReplace" />
+    <classNode extendsClassName="jetbrains.mps.baseLanguage.regexp.runtime.Replacer" />
+  </dependency>
+</dependenciesRoot>
+

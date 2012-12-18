@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.graphLayout.util.DefaultFilter" file="DefaultFilter.java">
+    <classNode extendsClassName="jetbrains.mps.graphLayout.util.Filter" />
+  </dependency>
+  <dependency className="jetbrains.mps.graphLayout.util.Filter" file="Filter.java" />
+  <dependency className="jetbrains.mps.graphLayout.util.NodeMap" file="NodeMap.java">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.RuntimeException" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.StringBuilder" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.Collection" />
+    <classNode dependClassName="java.util.HashSet" />
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Graph" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Node" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.SetSequence" />
+    <classNode extendsClassName="java.util.Map" />
+  </dependency>
+</dependenciesRoot>
+

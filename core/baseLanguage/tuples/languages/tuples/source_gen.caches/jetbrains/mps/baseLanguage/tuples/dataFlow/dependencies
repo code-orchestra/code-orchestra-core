@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.baseLanguage.tuples.dataFlow.DFABuilders" file="DFABuilders.java">
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.dataFlow.IndexedTupleLiteral_DataFlow" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.dataFlow.IndexedTupleMemberAccessExpression_DataFlow" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.dataFlow.NamedTupleLiteral_DataFlow" />
+    <classNode dependClassName="jetbrains.mps.lang.dataFlow.DataFlowManager" />
+    <classNode extendsClassName="jetbrains.mps.lang.dataFlow.DataFlowBuilders" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.tuples.dataFlow.IndexedTupleLiteral_DataFlow" file="IndexedTupleLiteral_DataFlow.java">
+    <classNode dependClassName="jetbrains.mps.lang.dataFlow.DataFlowBuilderContext" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.IOperationContext" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.lang.dataFlow.DataFlowBuilder" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.tuples.dataFlow.IndexedTupleMemberAccessExpression_DataFlow" file="IndexedTupleMemberAccessExpression_DataFlow.java">
+    <classNode dependClassName="jetbrains.mps.lang.dataFlow.DataFlowBuilderContext" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.IOperationContext" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.lang.dataFlow.DataFlowBuilder" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.tuples.dataFlow.NamedTupleLiteral_DataFlow" file="NamedTupleLiteral_DataFlow.java">
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.lang.dataFlow.DataFlowBuilderContext" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.IOperationContext" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.lang.dataFlow.DataFlowBuilder" />
+  </dependency>
+</dependenciesRoot>
+

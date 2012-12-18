@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="mf.BitemporalCollection" file="BitemporalCollection.java">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="mf.MfDate" />
+    <classNode dependClassName="mf.SingleTemporalCollection" />
+    <classNode extendsClassName="mf.TemporalCollection" />
+  </dependency>
+  <dependency className="mf.BitemporalCollectionSuperclassTester" file="BitemporalCollectionSuperclassTester.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="mf.BitemporalCollection" />
+    <classNode extendsClassName="mf.TemporalCollectionTester" />
+  </dependency>
+  <dependency className="mf.BitemporalCollectionTester" file="BitemporalCollectionTester.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="junit.framework.Assert" />
+    <classNode dependClassName="junit.framework.TestSuite" />
+    <classNode dependClassName="junit.textui.TestRunner" />
+    <classNode dependClassName="mf.BitemporalCollection" />
+    <classNode dependClassName="mf.MfDate" />
+    <classNode extendsClassName="junit.framework.TestCase" />
+  </dependency>
+  <dependency className="mf.Currency" file="Currency.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.text.NumberFormat" />
+    <classNode dependClassName="java.util.Locale" />
+    <classNode extendsClassName="mf.Unit" />
+  </dependency>
+  <dependency className="mf.DateRange" file="DateRange.java">
+    <classNode dependClassName="java.lang.IllegalArgumentException" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.Arrays" />
+    <classNode dependClassName="java.util.Date" />
+    <classNode dependClassName="mf.MfDate" />
+    <classNode extendsClassName="java.lang.Comparable" />
+  </dependency>
+  <dependency className="mf.DateRangeTester" file="DateRangeTester.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="junit.framework.Assert" />
+    <classNode dependClassName="junit.framework.TestSuite" />
+    <classNode dependClassName="junit.textui.TestRunner" />
+    <classNode dependClassName="mf.DateRange" />
+    <classNode dependClassName="mf.MfDate" />
+    <classNode extendsClassName="junit.framework.TestCase" />
+  </dependency>
+  <dependency className="mf.DoubleRange" file="DoubleRange.java">
+    <classNode dependClassName="java.lang.Double" />
+  </dependency>
+  <dependency className="mf.DoubleRangeTester" file="DoubleRangeTester.java">
+    <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="junit.framework.Assert" />
+    <classNode dependClassName="mf.DoubleRange" />
+    <classNode extendsClassName="junit.framework.TestCase" />
+  </dependency>
+  <dependency className="mf.MfDate" file="MfDate.java">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.text.DateFormat" />
+    <classNode dependClassName="java.text.SimpleDateFormat" />
+    <classNode dependClassName="java.util.Calendar" />
+    <classNode dependClassName="java.util.Date" />
+    <classNode dependClassName="java.util.GregorianCalendar" />
+    <classNode extendsClassName="java.lang.Comparable" />
+  </dependency>
+  <dependency className="mf.MfDateTester" file="MfDateTester.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.Calendar" />
+    <classNode dependClassName="java.util.GregorianCalendar" />
+    <classNode dependClassName="junit.framework.Assert" />
+    <classNode dependClassName="junit.framework.TestSuite" />
+    <classNode dependClassName="junit.textui.TestRunner" />
+    <classNode dependClassName="mf.DateRange" />
+    <classNode dependClassName="mf.MfDate" />
+    <classNode extendsClassName="junit.framework.TestCase" />
+  </dependency>
+  <dependency className="mf.MfTester" file="MfTester.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="junit.framework.TestSuite" />
+    <classNode dependClassName="junit.textui.TestRunner" />
+    <classNode dependClassName="mf.BitemporalCollectionSuperclassTester" />
+    <classNode dependClassName="mf.BitemporalCollectionTester" />
+    <classNode dependClassName="mf.DateRangeTester" />
+    <classNode dependClassName="mf.DoubleRangeTester" />
+    <classNode dependClassName="mf.MfDateTester" />
+    <classNode dependClassName="mf.MoneyTester" />
+    <classNode dependClassName="mf.SingleTemporalCollectionTester" />
+  </dependency>
+  <dependency className="mf.Money" file="Money.java">
+    <classNode dependClassName="java.lang.IllegalArgumentException" />
+    <classNode dependClassName="java.lang.Math" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.RuntimeException" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.math.BigInteger" />
+    <classNode dependClassName="mf.Currency" />
+    <classNode extendsClassName="java.lang.Comparable" />
+  </dependency>
+  <dependency className="mf.MoneyTester" file="MoneyTester.java">
+    <classNode dependClassName="java.lang.Exception" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="junit.framework.Assert" />
+    <classNode dependClassName="junit.textui.TestRunner" />
+    <classNode dependClassName="mf.Currency" />
+    <classNode dependClassName="mf.Money" />
+    <classNode extendsClassName="junit.framework.TestCase" />
+  </dependency>
+  <dependency className="mf.NamedObject" file="NamedObject.java">
+    <classNode dependClassName="java.lang.NullPointerException" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+  </dependency>
+  <dependency className="mf.Quantity" file="Quantity.java">
+    <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.IllegalArgumentException" />
+    <classNode dependClassName="java.lang.Math" />
+    <classNode dependClassName="java.lang.NullPointerException" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="mf.Unit" />
+  </dependency>
+  <dependency className="mf.QuantityTester" file="QuantityTester.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="junit.framework.Assert" />
+    <classNode dependClassName="junit.framework.TestSuite" />
+    <classNode dependClassName="junit.textui.TestRunner" />
+    <classNode dependClassName="mf.Quantity" />
+    <classNode dependClassName="mf.Unit" />
+    <classNode extendsClassName="junit.framework.TestCase" />
+  </dependency>
+  <dependency className="mf.Registry" file="Registry.java">
+    <classNode dependClassName="java.lang.NullPointerException" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.Dictionary" />
+    <classNode dependClassName="java.util.Hashtable" />
+    <classNode dependClassName="mf.NamedObject" />
+  </dependency>
+  <dependency className="mf.SingleTemporalCollection" file="SingleTemporalCollection.java">
+    <classNode dependClassName="java.lang.IllegalArgumentException" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.Collections" />
+    <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="mf.MfDate" />
+    <classNode extendsClassName="mf.TemporalCollection" />
+  </dependency>
+  <dependency className="mf.SingleTemporalCollectionTester" file="SingleTemporalCollectionTester.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="junit.framework.Assert" />
+    <classNode dependClassName="mf.MfDate" />
+    <classNode dependClassName="mf.SingleTemporalCollection" />
+    <classNode dependClassName="mf.TemporalCollection" />
+    <classNode extendsClassName="mf.TemporalCollectionTester" />
+  </dependency>
+  <dependency className="mf.TemporalCollection" file="TemporalCollection.java">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="mf.MfDate" />
+  </dependency>
+  <dependency className="mf.TemporalCollectionTester" file="TemporalCollectionTester.java">
+    <classNode dependClassName="java.lang.Exception" />
+    <classNode dependClassName="java.lang.IllegalArgumentException" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="junit.framework.Assert" />
+    <classNode dependClassName="junit.textui.TestRunner" />
+    <classNode dependClassName="mf.MfDate" />
+    <classNode dependClassName="mf.SingleTemporalCollection" />
+    <classNode dependClassName="mf.TemporalCollection" />
+    <classNode extendsClassName="junit.framework.TestCase" />
+  </dependency>
+  <dependency className="mf.Unit" file="Unit.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="mf.Quantity" />
+    <classNode dependClassName="mf.Registry" />
+    <classNode extendsClassName="mf.NamedObject" />
+  </dependency>
+</dependenciesRoot>
+

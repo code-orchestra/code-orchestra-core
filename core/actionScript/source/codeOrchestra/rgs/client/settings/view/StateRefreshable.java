@@ -1,0 +1,10 @@
+package codeOrchestra.rgs.client.settings.view;
+
+import codeOrchestra.rgs.state.RGSState;
+
+/**
+ * @author Alexander Eliseyev
+ */
+public interface StateRefreshable {
+  void refresh(RGSState state);
+}

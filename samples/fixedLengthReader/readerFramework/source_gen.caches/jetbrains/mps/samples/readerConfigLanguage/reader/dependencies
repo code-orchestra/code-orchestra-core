@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.samples.readerConfigLanguage.reader.Reader" file="Reader.java">
+    <classNode dependClassName="jetbrains.mps.samples.readerConfigLanguage.reader.ReaderStrategy" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.readerConfigLanguage.reader.ReaderStrategy" file="ReaderStrategy.java">
+    <classNode dependClassName="java.lang.Class" />
+    <classNode dependClassName="java.lang.String" />
+  </dependency>
+</dependenciesRoot>
+

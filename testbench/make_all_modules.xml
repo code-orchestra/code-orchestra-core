@@ -1,0 +1,56 @@
+<project name="make_all_modules" default="make">
+  <property name="mps.home" value="${ant.file.make_all_modules}/../.."/>
+
+  <taskdef resource="jetbrains/mps/build/ant/antlib.xml"
+           classpath="${mps.home}/languages/util/buildlanguage/ant/classes"/>
+
+  <jvmargs id="mps.args">
+    <arg value="-Xss1024k"/>
+    <arg value="-Xmx1000m"/>
+    <arg value="-XX:MaxPermSize=92m"/>
+    <arg value="-XX:+HeapDumpOnOutOfMemoryError"/>
+  </jvmargs>
+
+  <jvmargs id="debug.args">
+    <arg value="-Xdebug"/>
+    <arg value="-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005"/>
+  </jvmargs>
+
+  <jvmargs id="profile.args">
+    <arg value="-agentlib:yjpagent"/>
+  </jvmargs>
+
+  <jvmargs id="mps.debug.args">
+    <jvmargs refid="mps.args"/>
+    <jvmargs refid="debug.args"/>
+  </jvmargs>
+
+  <jvmargs id="mps.profile.args">
+    <jvmargs refid="mps.args"/>
+    <jvmargs refid="profile.args"/>
+  </jvmargs>
+
+  <patternset id="excluded.modules">
+    <exclude name="**/classes/**"/>
+    <exclude name="**/classes_gen/**"/>
+    <exclude name="**/lib/**"/>
+    <exclude name="**/testRefactoring/**"/>
+    <exclude name="**/*transformationTest*/**"/>
+    <exclude name="**/*testLogger*/**"/>
+    <exclude name="**/*sandbox*/**"/>
+    <exclude name="**/*Sandbox*/**"/>
+    <include name="**/*.mpl"/>
+    <include name="**/*.msd"/>
+    <exclude name="**/resolve.msd"/>
+  </patternset>
+
+  <target name="make">
+    <mps.make fork="true" loglevel="info">
+      <jvmargs refid="mps.args"/>
+      <modules dir="${mps.home}">
+        <patternset refid="excluded.modules"/>
+      </modules>
+    </mps.make>
+  </target>
+
+  </project>

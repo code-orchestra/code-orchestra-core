@@ -1,0 +1,210 @@
+package codeOrchestra.actionscript.run.compiler;
+
+import com.intellij.openapi.fileChooser.FileChooserDescriptor;
+import com.intellij.openapi.project.Project;
+import com.intellij.openapi.ui.TextFieldWithBrowseButton;
+import com.intellij.openapi.vfs.VirtualFile;
+import com.intellij.uiDesigner.core.GridConstraints;
+import com.intellij.uiDesigner.core.GridLayoutManager;
+import com.intellij.uiDesigner.core.Spacer;
+import codeOrchestra.actionScript.flexsdk.FlexSDKLibsManager;
+import codeOrchestra.actionscript.view.utils.StubModuleType;
+import jetbrains.mps.ide.dialogs.BaseDialog;
+import jetbrains.mps.ide.properties.SolutionProperties;
+import jetbrains.mps.project.structure.model.ModelRoot;
+import jetbrains.mps.smodel.LanguageID;
+import org.apache.commons.lang.StringUtils;
+
+import javax.swing.*;
+import java.awt.Insets;
+import java.io.File;
+import java.util.List;
+
+public class LibrarySettingsDialog extends JDialog implements ISynchronizable {
+
+  private JPanel contentPane;
+  private TextFieldWithBrowseButton libraryPathField;
+  private JLabel flexSDKlibWarning1;
+  private JLabel flexSDKlibWarning2;
+  private JLabel libraryLabel;
+  private JButton buttonOK;
+  private BaseDialog parent;
+  private SolutionProperties solutionProperties;
+
+  private StubModuleType stubModuleType;
+
+  public LibrarySettingsDialog(final Project project, BaseDialog parent, SolutionProperties solutionProperties) {
+    setContentPane(contentPane);
+    setModal(true);
+    getRootPane().setDefaultButton(buttonOK);
+
+    this.parent = parent;
+    this.solutionProperties = solutionProperties;
+
+    // Figure out the stub module type
+    for (ModelRoot modelRoot : solutionProperties.getStubModels()) {
+      if (modelRoot.isSWC()) {
+        stubModuleType = StubModuleType.SWC;
+        break;
+      } else if (modelRoot.isASStubs()) {
+        stubModuleType = StubModuleType.AS_SOURCES;
+        break;
+      }
+    }
+    if (stubModuleType == null) {
+      throw new IllegalStateException("No appropriate model root for the module " + solutionProperties.getNamespace());
+    }
+
+    // Init the library file chooser
+    switch (stubModuleType) {
+      case SWC:
+        libraryPathField.addBrowseFolderListener("Library path", "Choose an SWC library file", project,
+          new FileChooserDescriptor(true, false, true, false, true, false) {
+            public boolean isFileSelectable(VirtualFile file) {
+              return super.isFileSelectable(file) && "swc".equalsIgnoreCase(file.getExtension());
+            }
+          }
+        );
+        break;
+      case AS_SOURCES:
+        libraryPathField.addBrowseFolderListener("Library path", "Choose the sources folder", project,
+          new FileChooserDescriptor(false, true, false, false, false, false)
+        );
+        break;
+    }
+
+    init();
+  }
+
+  private void init() {
+    ModelRoot firstStubModelsEntry = getFirstStubModelsEntry();
+    assert firstStubModelsEntry != null;
+
+    String libraryPath = firstStubModelsEntry.getPath();
+    libraryPathField.setText(libraryPath);
+    if (libraryPath.toLowerCase().contains(".jar!")) {
+      libraryPathField.setEnabled(false);
+    }
+
+    boolean flexLib = FlexSDKLibsManager.getInstance().isFlexLib(solutionProperties.getNamespace());
+    if (flexLib) {
+      flexSDKlibWarning1.setVisible(true);
+      flexSDKlibWarning2.setVisible(true);
+      libraryPathField.setEnabled(false);
+    } else {
+      flexSDKlibWarning1.setVisible(false);
+      flexSDKlibWarning2.setVisible(false);
+    }
+
+    switch (stubModuleType) {
+      case SWC:
+        libraryLabel.setText("SWC Library Path:");
+        break;
+      case AS_SOURCES:
+        libraryLabel.setText("Sources Path:");
+        break;
+    }
+  }
+
+  private ModelRoot getFirstStubModelsEntry() {
+    List<ModelRoot> stubModels = solutionProperties.getStubModels();
+    for (ModelRoot stubModelsEntry : stubModels) {
+      if (stubModelsEntry.isSWC() || stubModelsEntry.isASStubs()) {
+        return stubModelsEntry;
+      }
+    }
+
+    return null;
+  }
+
+  public JPanel getContentPane() {
+    return contentPane;
+  }
+
+  @Override
+  public boolean sync() {
+    String libraryPath = libraryPathField.getText();
+
+    if (StringUtils.isEmpty(libraryPath)) {
+      parent.setErrorText("Library path not specified");
+      return false;
+    }
+    File libraryFile = new File(libraryPath);
+    if (!libraryFile.exists()) {
+      parent.setErrorText("The path specified does not exist");
+      return false;
+    }
+
+    solutionProperties.getStubModels().clear();
+
+    ModelRoot stubModelsEntry = new ModelRoot();
+    stubModelsEntry.setPath(libraryPath);
+    switch (stubModuleType) {
+      case SWC:
+        stubModelsEntry.setManager(LanguageID.SWC_MANAGER);
+        break;
+      case AS_SOURCES:
+        stubModelsEntry.setManager(LanguageID.AS_MANAGER);
+        break;
+    }
+
+    solutionProperties.getStubModels().add(stubModelsEntry);
+    return true;
+  }
+
+  {
+// GUI initializer generated by IntelliJ IDEA GUI Designer
+// >>> IMPORTANT!! <<<
+// DO NOT EDIT OR ADD ANY CODE HERE!
+    $$$setupUI$$$();
+  }
+
+  /**
+   * Method generated by IntelliJ IDEA GUI Designer
+   * >>> IMPORTANT!! <<<
+   * DO NOT edit this method OR call it in your code!
+   *
+   * @noinspection ALL
+   */
+  private void $$$setupUI$$$() {
+    contentPane = new JPanel();
+    contentPane.setLayout(new GridLayoutManager(2, 1, new Insets(10, 10, 10, 10), -1, -1));
+    final JPanel panel1 = new JPanel();
+    panel1.setLayout(new GridLayoutManager(1, 1, new Insets(0, 0, 0, 0), -1, -1));
+    contentPane.add(panel1, new GridConstraints(1, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, 1, null, null, null, 0, false));
+    final Spacer spacer1 = new Spacer();
+    panel1.add(spacer1, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_WANT_GROW, 1, null, null, null, 0, false));
+    final JPanel panel2 = new JPanel();
+    panel2.setLayout(new GridLayoutManager(4, 1, new Insets(0, 0, 0, 0), -1, -1));
+    contentPane.add(panel2, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
+    final Spacer spacer2 = new Spacer();
+    panel2.add(spacer2, new GridConstraints(3, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_VERTICAL, 1, GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
+    final JPanel panel3 = new JPanel();
+    panel3.setLayout(new GridLayoutManager(1, 2, new Insets(0, 0, 0, 0), -1, -1));
+    panel2.add(panel3, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
+    libraryLabel = new JLabel();
+    libraryLabel.setText("SWC Library Path:");
+    panel3.add(libraryLabel, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+    libraryPathField = new TextFieldWithBrowseButton();
+    panel3.add(libraryPathField, new GridConstraints(0, 1, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_WANT_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
+    final JPanel panel4 = new JPanel();
+    panel4.setLayout(new GridLayoutManager(1, 1, new Insets(0, 0, 0, 0), -1, -1));
+    panel2.add(panel4, new GridConstraints(1, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
+    flexSDKlibWarning1 = new JLabel();
+    flexSDKlibWarning1.setText("This lib is a part of the Flex SDK. ");
+    panel4.add(flexSDKlibWarning1, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+    final JPanel panel5 = new JPanel();
+    panel5.setLayout(new GridLayoutManager(1, 1, new Insets(0, 0, 0, 0), -1, -1));
+    panel2.add(panel5, new GridConstraints(2, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
+    flexSDKlibWarning2 = new JLabel();
+    flexSDKlibWarning2.setText("To change it's path, go to File -> Settings -> Flex SDK");
+    panel5.add(flexSDKlibWarning2, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+  }
+
+  /**
+   * @noinspection ALL
+   */
+  public JComponent $$$getRootComponent$$$() {
+    return contentPane;
+  }
+}

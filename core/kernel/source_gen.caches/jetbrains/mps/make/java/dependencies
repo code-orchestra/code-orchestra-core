@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.make.java.BLDependenciesHandler" file="BLDependenciesHandler.java">
+    <classNode dependClassName="java.lang.Boolean" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.Stack" />
+    <classNode dependClassName="jetbrains.mps.make.java.ModelDependencies" />
+    <classNode dependClassName="jetbrains.mps.make.java.RootDependencies" />
+    <classNode dependClassName="jetbrains.mps.util.InternUtil" />
+    <classNode dependClassName="org.apache.commons.lang.StringUtils" />
+    <classNode dependClassName="org.xml.sax.Attributes" />
+    <classNode dependClassName="org.xml.sax.Locator" />
+    <classNode dependClassName="org.xml.sax.SAXException" />
+    <classNode dependClassName="org.xml.sax.SAXParseException" />
+    <classNode extendsClassName="jetbrains.mps.make.java.ElementHandler" />
+    <classNode extendsClassName="jetbrains.mps.xmlQuery.runtime.XMLSAXHandler" />
+  </dependency>
+  <dependency className="jetbrains.mps.make.java.ModelDependencies" file="ModelDependencies.java">
+    <classNode dependClassName="java.lang.Iterable" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.Arrays" />
+    <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.MapSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.SetSequence" />
+    <classNode dependClassName="jetbrains.mps.make.java.RootDependencies" />
+    <classNode dependClassName="org.jdom.Element" />
+  </dependency>
+  <dependency className="jetbrains.mps.make.java.RootDependencies" file="RootDependencies.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.Collection" />
+    <classNode dependClassName="java.util.HashSet" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.util.InternAwareStringList" />
+    <classNode dependClassName="jetbrains.mps.util.InternUtil" />
+    <classNode dependClassName="org.jdom.Attribute" />
+    <classNode dependClassName="org.jdom.Element" />
+    <classNode extendsClassName="java.lang.Comparable" />
+  </dependency>
+</dependenciesRoot>
+

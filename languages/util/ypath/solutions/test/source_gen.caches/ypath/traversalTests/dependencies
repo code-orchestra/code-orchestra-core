@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="ypath.traversalTests.DOMF" file="DOMF.java">
+    <classNode dependClassName="java.lang.Iterable" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.Iterator" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime.YieldingIterator" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ISequenceClosure" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.Sequence" />
+    <classNode dependClassName="org.w3c.dom.Element" />
+    <classNode dependClassName="org.w3c.dom.Node" />
+    <classNode dependClassName="org.w3c.dom.NodeList" />
+    <classNode extendsClassName="java.util.AbstractCollection" />
+    <classNode extendsClassName="jetbrains.mps.ypath.runtime.IFeatureDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.ypath.runtime.Stub" />
+    <classNode extendsClassName="jetbrains.mps.ypath.runtime.TreePath" />
+  </dependency>
+  <dependency className="ypath.traversalTests.DOMF_Design" file="DOMF_Design.java">
+    <classNode dependClassName="java.lang.Iterable" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.HashSet" />
+    <classNode dependClassName="java.util.Iterator" />
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime.YieldingIterator" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ISequenceClosure" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.Sequence" />
+    <classNode dependClassName="jetbrains.mps.project.GlobalScope" />
+    <classNode dependClassName="jetbrains.mps.smodel.SModelReference" />
+    <classNode dependClassName="jetbrains.mps.smodel.SModelUtil_new" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNodeId" />
+    <classNode dependClassName="jetbrains.mps.smodel.SReference" />
+    <classNode extendsClassName="jetbrains.mps.ypath.design.IParameterizedFeatureDesign" />
+    <classNode extendsClassName="jetbrains.mps.ypath.design.Stub" />
+  </dependency>
+  <dependency className="ypath.traversalTests.GenericFeatures_Test" file="GenericFeatures_Test.java">
+    <classNode dependClassName="java.io.ByteArrayInputStream" />
+    <classNode dependClassName="java.io.InputStream" />
+    <classNode dependClassName="java.lang.Exception" />
+    <classNode dependClassName="java.lang.Iterable" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.StringBuilder" />
+    <classNode dependClassName="javax.xml.parsers.DocumentBuilderFactory" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.Sequence" />
+    <classNode dependClassName="jetbrains.mps.ypath.runtime.ITreeTraversal" />
+    <classNode dependClassName="jetbrains.mps.ypath.runtime.TreeTraversalFactory" />
+    <classNode dependClassName="junit.framework.Assert" />
+    <classNode dependClassName="org.w3c.dom.Document" />
+    <classNode dependClassName="org.w3c.dom.Node" />
+    <classNode dependClassName="ypath.traversalTests.DOMF" />
+    <classNode extendsClassName="junit.framework.TestCase" />
+  </dependency>
+  <dependency className="ypath.traversalTests.TestFeatures_Test" file="TestFeatures_Test.java">
+    <classNode dependClassName="java.io.ByteArrayInputStream" />
+    <classNode dependClassName="java.io.InputStream" />
+    <classNode dependClassName="java.lang.Exception" />
+    <classNode dependClassName="java.lang.Iterable" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.StringBuilder" />
+    <classNode dependClassName="javax.xml.parsers.DocumentBuilderFactory" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.Sequence" />
+    <classNode dependClassName="jetbrains.mps.ypath.runtime.ITreeTraversal" />
+    <classNode dependClassName="jetbrains.mps.ypath.runtime.TreeTraversalFactory" />
+    <classNode dependClassName="junit.framework.Assert" />
+    <classNode dependClassName="org.w3c.dom.Document" />
+    <classNode dependClassName="org.w3c.dom.Node" />
+    <classNode dependClassName="treepath_dom.DOM2" />
+    <classNode extendsClassName="junit.framework.TestCase" />
+  </dependency>
+</dependenciesRoot>
+

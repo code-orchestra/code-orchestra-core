@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.ide.datatransfer.CopyPasteUtil" file="CopyPasteUtil.java">
+    <classNode dependClassName="com.intellij.ide.CopyPasteManagerEx" />
+    <classNode dependClassName="com.intellij.openapi.util.Computable" />
+    <classNode dependClassName="java.awt.datatransfer.DataFlavor" />
+    <classNode dependClassName="java.awt.datatransfer.StringSelection" />
+    <classNode dependClassName="java.awt.datatransfer.Transferable" />
+    <classNode dependClassName="java.awt.datatransfer.UnsupportedFlavorException" />
+    <classNode dependClassName="java.io.IOException" />
+    <classNode dependClassName="java.lang.Runnable" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.StringBuilder" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="java.util.HashSet" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="jetbrains.mps.datatransfer.CopyPasteManager" />
+    <classNode dependClassName="jetbrains.mps.datatransfer.PasteNodeData" />
+    <classNode dependClassName="jetbrains.mps.ide.datatransfer.SModelDataFlavor" />
+    <classNode dependClassName="jetbrains.mps.ide.datatransfer.SNodeTransferable" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.AttributeOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.project.IModule" />
+    <classNode dependClassName="jetbrains.mps.project.structure.modules.ModuleReference" />
+    <classNode dependClassName="jetbrains.mps.smodel.IOperationContext" />
+    <classNode dependClassName="jetbrains.mps.smodel.ModelAccess" />
+    <classNode dependClassName="jetbrains.mps.smodel.SModel" />
+    <classNode dependClassName="jetbrains.mps.smodel.SModelDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.SModelFqName" />
+    <classNode dependClassName="jetbrains.mps.smodel.SModelId" />
+    <classNode dependClassName="jetbrains.mps.smodel.SModelOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SModelReference" />
+    <classNode dependClassName="jetbrains.mps.smodel.SModelStereotype" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNodeId" />
+    <classNode dependClassName="jetbrains.mps.smodel.SReference" />
+    <classNode dependClassName="jetbrains.mps.smodel.StaticReference" />
+    <classNode dependClassName="jetbrains.mps.workbench.dialogs.project.utildialogs.addmodelimport.AddRequiredModelImportsDialog" />
+    <classNode dependClassName="org.apache.commons.logging.Log" />
+    <classNode dependClassName="org.apache.commons.logging.LogFactory" />
+    <classNode dependClassName="org.jetbrains.annotations.Nullable" />
+  </dependency>
+  <dependency className="jetbrains.mps.ide.datatransfer.SModelDataFlavor" file="SModelDataFlavor.java">
+    <classNode dependClassName="jetbrains.mps.ide.datatransfer.SNodeTransferable" />
+    <classNode extendsClassName="java.awt.datatransfer.DataFlavor" />
+  </dependency>
+  <dependency className="jetbrains.mps.ide.datatransfer.SNodeTransferable" file="SNodeTransferable.java">
+    <classNode dependClassName="java.awt.datatransfer.DataFlavor" />
+    <classNode dependClassName="java.awt.datatransfer.UnsupportedFlavorException" />
+    <classNode dependClassName="java.io.IOException" />
+    <classNode dependClassName="java.io.StringReader" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.HashSet" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="jetbrains.mps.datatransfer.PasteNodeData" />
+    <classNode dependClassName="jetbrains.mps.ide.datatransfer.CopyPasteUtil" />
+    <classNode dependClassName="jetbrains.mps.ide.datatransfer.SModelDataFlavor" />
+    <classNode dependClassName="jetbrains.mps.project.IModule" />
+    <classNode dependClassName="jetbrains.mps.project.structure.modules.ModuleReference" />
+    <classNode dependClassName="jetbrains.mps.smodel.MPSModuleRepository" />
+    <classNode dependClassName="jetbrains.mps.smodel.SModel" />
+    <classNode dependClassName="jetbrains.mps.smodel.SModelReference" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="org.jetbrains.annotations.NotNull" />
+    <classNode dependClassName="org.jetbrains.annotations.Nullable" />
+    <classNode extendsClassName="java.awt.datatransfer.Transferable" />
+  </dependency>
+  <dependency className="jetbrains.mps.ide.datatransfer.TextPasteUtil" file="TextPasteUtil.java">
+    <classNode dependClassName="com.intellij.ide.CopyPasteManagerEx" />
+    <classNode dependClassName="java.awt.datatransfer.DataFlavor" />
+    <classNode dependClassName="java.awt.datatransfer.Transferable" />
+    <classNode dependClassName="java.lang.Exception" />
+    <classNode dependClassName="java.lang.String" />
+  </dependency>
+</dependenciesRoot>
+

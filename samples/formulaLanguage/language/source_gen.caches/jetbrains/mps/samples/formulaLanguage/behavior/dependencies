@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.samples.formulaLanguage.behavior.AndOperation_BehaviorDescriptor" file="AndOperation_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.samples.formulaLanguage.behavior.Operation_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.formulaLanguage.behavior.BehaviorAspectDescriptor" file="BehaviorAspectDescriptor.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.Arrays" />
+    <classNode dependClassName="jetbrains.mps.samples.formulaLanguage.behavior.AndOperation_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.samples.formulaLanguage.behavior.EqualsOperation_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.samples.formulaLanguage.behavior.FloatingPointConstant_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.samples.formulaLanguage.behavior.Formula_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.samples.formulaLanguage.behavior.GreaterThanOperation_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.samples.formulaLanguage.behavior.IfFunction_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.samples.formulaLanguage.behavior.IntegerConstant_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.samples.formulaLanguage.behavior.IsNullOperation_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.samples.formulaLanguage.behavior.LessThanOperation_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.samples.formulaLanguage.behavior.MinusOperation_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.samples.formulaLanguage.behavior.MultOperation_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.samples.formulaLanguage.behavior.NotOperation_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.samples.formulaLanguage.behavior.NullConstant_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.samples.formulaLanguage.behavior.OrOperation_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.samples.formulaLanguage.behavior.ParenthisizedExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.samples.formulaLanguage.behavior.PlusOperation_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.samples.formulaLanguage.behavior.StringConstant_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.runtime.BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.runtime.interpreted.BehaviorAspectInterpreted" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.BehaviorAspectDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.formulaLanguage.behavior.Constant_BehaviorDescriptor" file="Constant_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.samples.formulaLanguage.behavior.Expression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.formulaLanguage.behavior.EqualsOperation_BehaviorDescriptor" file="EqualsOperation_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.samples.formulaLanguage.behavior.Operation_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.formulaLanguage.behavior.Expression_BehaviorDescriptor" file="Expression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.formulaLanguage.behavior.FloatingPointConstant_BehaviorDescriptor" file="FloatingPointConstant_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.samples.formulaLanguage.behavior.Constant_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.formulaLanguage.behavior.Formula_BehaviorDescriptor" file="Formula_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.formulaLanguage.behavior.Function_BehaviorDescriptor" file="Function_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.samples.formulaLanguage.behavior.Expression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.formulaLanguage.behavior.GreaterThanOperation_BehaviorDescriptor" file="GreaterThanOperation_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.samples.formulaLanguage.behavior.Operation_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.formulaLanguage.behavior.IfFunction_BehaviorDescriptor" file="IfFunction_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.samples.formulaLanguage.behavior.Function_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.formulaLanguage.behavior.IntegerConstant_BehaviorDescriptor" file="IntegerConstant_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.samples.formulaLanguage.behavior.Constant_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.formulaLanguage.behavior.IsNullOperation_BehaviorDescriptor" file="IsNullOperation_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.samples.formulaLanguage.behavior.Operation_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.formulaLanguage.behavior.LessThanOperation_BehaviorDescriptor" file="LessThanOperation_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.samples.formulaLanguage.behavior.Operation_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.formulaLanguage.behavior.MinusOperation_BehaviorDescriptor" file="MinusOperation_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.samples.formulaLanguage.behavior.Operation_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.formulaLanguage.behavior.MultOperation_BehaviorDescriptor" file="MultOperation_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.samples.formulaLanguage.behavior.Operation_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.formulaLanguage.behavior.NotOperation_BehaviorDescriptor" file="NotOperation_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.samples.formulaLanguage.behavior.Operation_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.formulaLanguage.behavior.NullConstant_BehaviorDescriptor" file="NullConstant_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.samples.formulaLanguage.behavior.Expression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.formulaLanguage.behavior.Operation_BehaviorDescriptor" file="Operation_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.samples.formulaLanguage.behavior.Expression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.formulaLanguage.behavior.OrOperation_BehaviorDescriptor" file="OrOperation_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.samples.formulaLanguage.behavior.Operation_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.formulaLanguage.behavior.ParenthisizedExpression_BehaviorDescriptor" file="ParenthisizedExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.samples.formulaLanguage.behavior.Expression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.formulaLanguage.behavior.PlusOperation_BehaviorDescriptor" file="PlusOperation_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.samples.formulaLanguage.behavior.Operation_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.formulaLanguage.behavior.Reference_BehaviorDescriptor" file="Reference_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.samples.formulaLanguage.behavior.Expression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.formulaLanguage.behavior.StringConstant_BehaviorDescriptor" file="StringConstant_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.samples.formulaLanguage.behavior.Constant_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+</dependenciesRoot>
+

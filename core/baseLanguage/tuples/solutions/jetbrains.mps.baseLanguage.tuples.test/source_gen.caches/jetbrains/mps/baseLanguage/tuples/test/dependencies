@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.baseLanguage.tuples.test.Bool" file="Bool.java">
+    <classNode dependClassName="java.lang.Boolean" />
+    <classNode dependClassName="java.lang.SuppressWarnings" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.runtime.MultiTuple" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.runtime.Tuples" />
+    <classNode extendsClassName="jetbrains.mps.baseLanguage.tuples.runtime._1" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.tuples.test.Data" file="Data.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.SuppressWarnings" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.runtime.MultiTuple" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.runtime.Tuples" />
+    <classNode extendsClassName="jetbrains.mps.baseLanguage.tuples.runtime._2" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.tuples.test.ExtendedNamedTuples" file="ExtendedNamedTuples.java">
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.SuppressWarnings" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.runtime.MultiTuple" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.runtime.Tuples" />
+    <classNode extendsClassName="jetbrains.mps.baseLanguage.tuples.runtime._2" />
+    <classNode extendsClassName="jetbrains.mps.baseLanguage.tuples.runtime._4" />
+    <classNode extendsClassName="jetbrains.mps.baseLanguage.tuples.test.Foo" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.tuples.test.ExtendedNamedTuples_Test" file="ExtendedNamedTuples_Test.java">
+    <classNode dependClassName="java.lang.Exception" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.test.ExtendedNamedTuples" />
+    <classNode dependClassName="junit.framework.Assert" />
+    <classNode extendsClassName="junit.framework.TestCase" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.tuples.test.GenericNamedTuples_Test" file="GenericNamedTuples_Test.java">
+    <classNode dependClassName="java.lang.Exception" />
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.runtime.Tuples" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.test.Pair" />
+    <classNode dependClassName="junit.framework.Assert" />
+    <classNode extendsClassName="junit.framework.TestCase" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.tuples.test.ISample" file="ISample.java">
+    <classNode dependClassName="java.lang.String" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.tuples.test.IndexedTuples_Test" file="IndexedTuples_Test.java">
+    <classNode dependClassName="java.lang.Boolean" />
+    <classNode dependClassName="java.lang.Character" />
+    <classNode dependClassName="java.lang.Exception" />
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.Iterable" />
+    <classNode dependClassName="java.lang.Long" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.runtime.MultiTuple" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.runtime.Tuples" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.test.MPS7408" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.test.Nulls" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.util.A" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.util.MPS11114" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.util.Sum" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ArrayUtils" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.IWhereFilter" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.MapSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.Sequence" />
+    <classNode dependClassName="junit.framework.Assert" />
+    <classNode extendsClassName="junit.framework.TestCase" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.tuples.test.IntPair" file="IntPair.java">
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.SuppressWarnings" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.runtime.MultiTuple" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.runtime.Tuples" />
+    <classNode extendsClassName="jetbrains.mps.baseLanguage.tuples.runtime._2" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.tuples.test.MPS7408" file="MPS7408.java">
+    <classNode dependClassName="java.lang.Boolean" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.runtime.MultiTuple" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.runtime.Tuples" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.tuples.test.NamedTuples_Test" file="NamedTuples_Test.java">
+    <classNode dependClassName="java.lang.Exception" />
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.Iterable" />
+    <classNode dependClassName="java.lang.Long" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.Iterator" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime.YieldingIterator" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.runtime.MultiTuple" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.runtime.Tuples" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.shared.GlobalSharedPair" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.test.Bool" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.test.Data" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.test.ISample" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.test.IntPair" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.test.Pair" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.test.Record" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.test.Sample" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ArrayUtils" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ISelector" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ISequenceClosure" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.IWhereFilter" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.IterableUtils" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.Sequence" />
+    <classNode dependClassName="junit.framework.Assert" />
+    <classNode extendsClassName="junit.framework.TestCase" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.tuples.test.Nulls" file="Nulls.java">
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.runtime.MultiTuple" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.runtime.Tuples" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.tuples.test.Pair" file="Pair.java">
+    <classNode dependClassName="java.lang.SuppressWarnings" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.runtime.MultiTuple" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.runtime.Tuples" />
+    <classNode extendsClassName="jetbrains.mps.baseLanguage.tuples.runtime._2" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.tuples.test.Record" file="Record.java">
+    <classNode dependClassName="java.lang.Float" />
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.SuppressWarnings" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.runtime.MultiTuple" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.runtime.Tuples" />
+    <classNode extendsClassName="jetbrains.mps.baseLanguage.tuples.runtime._3" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.tuples.test.Sample" file="Sample.java">
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.SuppressWarnings" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.runtime.MultiTuple" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.runtime.Tuples" />
+    <classNode extendsClassName="jetbrains.mps.baseLanguage.tuples.runtime._1" />
+    <classNode extendsClassName="jetbrains.mps.baseLanguage.tuples.test.ISample" />
+  </dependency>
+</dependenciesRoot>
+

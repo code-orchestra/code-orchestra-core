@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.execution.impl.configurations.tests.TestConfigurationsMigration_Test" file="TestConfigurationsMigration_Test.java">
+    <classNode dependClassName="com.intellij.execution.configurations.UnknownConfigurationType" />
+    <classNode dependClassName="com.intellij.execution.impl.RunManagerImpl" />
+    <classNode dependClassName="com.intellij.execution.impl.RunnerAndConfigurationSettingsImpl" />
+    <classNode dependClassName="com.intellij.openapi.project.Project" />
+    <classNode dependClassName="com.intellij.openapi.project.ProjectManager" />
+    <classNode dependClassName="com.intellij.openapi.util.InvalidDataException" />
+    <classNode dependClassName="java.lang.Exception" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.Throwable" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.util.plugin.run.MPSLaunch" />
+    <classNode dependClassName="jetbrains.mps.execution.impl.configurations.RunConfigurationsStateManager" />
+    <classNode dependClassName="jetbrains.mps.execution.impl.configurations.tests.XslTest" />
+    <classNode dependClassName="junit.framework.Assert" />
+    <classNode dependClassName="org.jdom.Element" />
+    <classNode dependClassName="org.junit.Test" />
+    <classNode extendsClassName="jetbrains.mps.lang.test.runtime.BaseTestBody" />
+    <classNode extendsClassName="jetbrains.mps.lang.test.runtime.BaseTransformationTest" />
+  </dependency>
+  <dependency className="jetbrains.mps.execution.impl.configurations.tests.XslTest" file="XslTest.java">
+    <classNode dependClassName="java.io.IOException" />
+    <classNode dependClassName="java.io.StringWriter" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="javax.xml.transform.Transformer" />
+    <classNode dependClassName="javax.xml.transform.TransformerException" />
+    <classNode dependClassName="javax.xml.transform.TransformerFactory" />
+    <classNode dependClassName="javax.xml.transform.stream.StreamSource" />
+    <classNode dependClassName="jetbrains.mps.util.JDOMUtil" />
+    <classNode dependClassName="org.apache.commons.logging.Log" />
+    <classNode dependClassName="org.apache.commons.logging.LogFactory" />
+    <classNode dependClassName="org.jdom.Document" />
+    <classNode dependClassName="org.jdom.Element" />
+    <classNode dependClassName="org.jdom.JDOMException" />
+    <classNode dependClassName="org.jdom.transform.JDOMResult" />
+    <classNode dependClassName="org.jdom.transform.JDOMSource" />
+  </dependency>
+  <dependency className="jetbrains.mps.execution.impl.configurations.tests.configurations" file="configurations.xml" />
+  <dependency className="jetbrains.mps.execution.impl.configurations.tests.old.java.configuration" file="old.java.configuration.xml" />
+  <dependency className="jetbrains.mps.execution.impl.configurations.tests.old.junit.configuration" file="old.junit.configuration.xml" />
+</dependenciesRoot>
+

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.samples.matrixLanguage.dataFlow.DFABuilders" file="DFABuilders.java">
+    <classNode dependClassName="jetbrains.mps.lang.dataFlow.DataFlowManager" />
+    <classNode dependClassName="jetbrains.mps.samples.matrixLanguage.dataFlow.DeterminantExpression_DataFlow" />
+    <classNode dependClassName="jetbrains.mps.samples.matrixLanguage.dataFlow.ForEachMatrixElement_DataFlow" />
+    <classNode dependClassName="jetbrains.mps.samples.matrixLanguage.dataFlow.MatrixLiteral_DataFlow" />
+    <classNode dependClassName="jetbrains.mps.samples.matrixLanguage.dataFlow.MatrixRow_DataFlow" />
+    <classNode dependClassName="jetbrains.mps.samples.matrixLanguage.dataFlow.TransposeExpression_DataFlow" />
+    <classNode extendsClassName="jetbrains.mps.lang.dataFlow.DataFlowBuilders" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.matrixLanguage.dataFlow.DeterminantExpression_DataFlow" file="DeterminantExpression_DataFlow.java">
+    <classNode dependClassName="jetbrains.mps.lang.dataFlow.DataFlowBuilderContext" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.IOperationContext" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.lang.dataFlow.DataFlowBuilder" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.matrixLanguage.dataFlow.ForEachMatrixElement_DataFlow" file="ForEachMatrixElement_DataFlow.java">
+    <classNode dependClassName="jetbrains.mps.lang.dataFlow.DataFlowBuilderContext" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.IOperationContext" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.lang.dataFlow.DataFlowBuilder" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.matrixLanguage.dataFlow.MatrixLiteral_DataFlow" file="MatrixLiteral_DataFlow.java">
+    <classNode dependClassName="jetbrains.mps.lang.dataFlow.DataFlowBuilderContext" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.IOperationContext" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.lang.dataFlow.DataFlowBuilder" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.matrixLanguage.dataFlow.MatrixRow_DataFlow" file="MatrixRow_DataFlow.java">
+    <classNode dependClassName="jetbrains.mps.lang.dataFlow.DataFlowBuilderContext" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.IOperationContext" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.lang.dataFlow.DataFlowBuilder" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.matrixLanguage.dataFlow.TransposeExpression_DataFlow" file="TransposeExpression_DataFlow.java">
+    <classNode dependClassName="jetbrains.mps.lang.dataFlow.DataFlowBuilderContext" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.IOperationContext" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.lang.dataFlow.DataFlowBuilder" />
+  </dependency>
+</dependenciesRoot>
+

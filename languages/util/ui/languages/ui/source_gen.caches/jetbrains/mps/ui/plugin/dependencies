@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.ui.plugin.Ui_ApplicationPlugin" file="Ui_ApplicationPlugin.java">
+    <classNode dependClassName="com.intellij.openapi.extensions.PluginId" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.plugins.pluginparts.custom.BaseCustomApplicationPlugin" />
+    <classNode dependClassName="jetbrains.mps.ui.plugin.Variants_CustomApplicationPlugin" />
+    <classNode extendsClassName="jetbrains.mps.plugins.applicationplugins.BaseApplicationPlugin" />
+  </dependency>
+  <dependency className="jetbrains.mps.ui.plugin.Ui_ProjectPlugin" file="Ui_ProjectPlugin.java">
+    <classNode extendsClassName="jetbrains.mps.plugins.projectplugins.BaseProjectPlugin" />
+  </dependency>
+  <dependency className="jetbrains.mps.ui.plugin.Variants" file="Variants.java">
+    <classNode dependClassName="java.lang.IllegalStateException" />
+    <classNode dependClassName="java.lang.Iterable" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.runtime.MultiTuple" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.runtime.Tuples" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ISelector" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.IWhereFilter" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.backports.LinkedList" />
+    <classNode dependClassName="jetbrains.mps.smodel.Language" />
+  </dependency>
+  <dependency className="jetbrains.mps.ui.plugin.Variants_CustomApplicationPlugin" file="Variants_CustomApplicationPlugin.java">
+    <classNode dependClassName="jetbrains.mps.ui.plugin.Variants" />
+    <classNode extendsClassName="jetbrains.mps.plugins.pluginparts.custom.BaseCustomApplicationPlugin" />
+  </dependency>
+</dependenciesRoot>
+

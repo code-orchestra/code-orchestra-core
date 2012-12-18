@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.graphLayout.graphLayout.BasicLayouter" file="BasicLayouter.java">
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.Math" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.algorithms.ConnectivityComponents" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Graph" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.IEdge" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.INode" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Node" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graphLayout.GraphLayout" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graphLayout.GraphLayoutFactory" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graphLayout.ILayoutInfo" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graphLayout.LayoutInfo" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graphLayout.LayoutInfoCopier" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.intGeom2D.Dimension" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.intGeom2D.Point" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.intGeom2D.Rectangle" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.util.Filter" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.MapSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.SetSequence" />
+    <classNode extendsClassName="jetbrains.mps.graphLayout.graphLayout.ILayouter" />
+  </dependency>
+  <dependency className="jetbrains.mps.graphLayout.graphLayout.ClusteredGraphLayout" file="ClusteredGraphLayout.java">
+    <classNode dependClassName="java.lang.Math" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.ClusteredGraph" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Node" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.intGeom2D.GeomUtil" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.intGeom2D.Point" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.intGeom2D.Rectangle" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.MapSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.SetSequence" />
+    <classNode extendsClassName="jetbrains.mps.graphLayout.graphLayout.GraphLayout" />
+  </dependency>
+  <dependency className="jetbrains.mps.graphLayout.graphLayout.GraphLayout" file="GraphLayout.java">
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.Math" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.StringBuilder" />
+    <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.IEdge" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.IGraph" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.INode" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graphLayout.GraphLayoutFactory" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.intGeom2D.GeomUtil" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.intGeom2D.OrthogonalUtil" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.intGeom2D.Point" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.intGeom2D.Rectangle" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.MapSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.Sequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.SetSequence" />
+    <classNode extendsClassName="jetbrains.mps.graphLayout.graphLayout.IGraphLayout" />
+  </dependency>
+  <dependency className="jetbrains.mps.graphLayout.graphLayout.GraphLayoutFactory" file="GraphLayoutFactory.java">
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.ClusteredGraph" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.IGraph" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graphLayout.ClusteredGraphLayout" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graphLayout.GraphLayout" />
+  </dependency>
+  <dependency className="jetbrains.mps.graphLayout.graphLayout.GraphPointLayout" file="GraphPointLayout.java">
+    <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Edge" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Graph" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Node" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.intGeom2D.Point" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.MapSequence" />
+  </dependency>
+  <dependency className="jetbrains.mps.graphLayout.graphLayout.HyperGraphLayouter" file="HyperGraphLayouter.java">
+    <classNode dependClassName="java.lang.RuntimeException" />
+    <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.ClusteredGraph" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Edge" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.HyperGraph" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.IGraph" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Node" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Tree" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graphLayout.ClusteredGraphLayout" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graphLayout.GraphLayout" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graphLayout.IGraphLayout" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graphLayout.ILayoutInfo" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graphLayout.ILayouter" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graphLayout.LayoutInfo" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.intGeom2D.Dimension" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.intGeom2D.GeomUtil" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.intGeom2D.OrthogonalUtil" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.intGeom2D.Point" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.intGeom2D.Rectangle" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.MapSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.SetSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.backports.LinkedList" />
+    <classNode extendsClassName="jetbrains.mps.graphLayout.graphLayout.BasicLayouter" />
+  </dependency>
+  <dependency className="jetbrains.mps.graphLayout.graphLayout.IGraphLayout" file="IGraphLayout.java">
+    <classNode dependClassName="java.lang.Iterable" />
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.IEdge" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.IGraph" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.INode" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.intGeom2D.Point" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.intGeom2D.Rectangle" />
+  </dependency>
+  <dependency className="jetbrains.mps.graphLayout.graphLayout.ILayoutInfo" file="ILayoutInfo.java">
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.IEdge" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.IGraph" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.INode" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.intGeom2D.Dimension" />
+  </dependency>
+  <dependency className="jetbrains.mps.graphLayout.graphLayout.ILayouter" file="ILayouter.java">
+    <classNode dependClassName="jetbrains.mps.graphLayout.graphLayout.IGraphLayout" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graphLayout.ILayoutInfo" />
+  </dependency>
+  <dependency className="jetbrains.mps.graphLayout.graphLayout.IPointLayouter" file="IPointLayouter.java">
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Graph" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graphLayout.GraphPointLayout" />
+  </dependency>
+  <dependency className="jetbrains.mps.graphLayout.graphLayout.LayoutInfo" file="LayoutInfo.java">
+    <classNode dependClassName="java.util.LinkedHashMap" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Edge" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Graph" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.IEdge" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.INode" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Node" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.intGeom2D.Dimension" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.MapSequence" />
+    <classNode extendsClassName="jetbrains.mps.graphLayout.graphLayout.ILayoutInfo" />
+  </dependency>
+  <dependency className="jetbrains.mps.graphLayout.graphLayout.LayoutInfoCopier" file="LayoutInfoCopier.java">
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Edge" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Graph" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.GraphCopier" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.GraphCopierFactory" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.IEdge" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.INode" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Node" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graphLayout.GraphLayout" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graphLayout.ILayoutInfo" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graphLayout.LayoutInfo" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.intGeom2D.Dimension" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.util.DefaultFilter" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.util.Filter" />
+  </dependency>
+</dependenciesRoot>
+

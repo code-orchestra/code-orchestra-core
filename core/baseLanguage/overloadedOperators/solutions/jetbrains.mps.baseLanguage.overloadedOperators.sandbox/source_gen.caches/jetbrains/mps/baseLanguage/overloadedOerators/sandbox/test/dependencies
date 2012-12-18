@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.baseLanguage.overloadedOerators.sandbox.test.Complex" file="Complex.java">
+    <classNode dependClassName="java.lang.System" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.overloadedOerators.sandbox.test.Complex2" file="Complex2.java">
+    <classNode dependClassName="java.lang.System" />
+    <classNode extendsClassName="jetbrains.mps.baseLanguage.overloadedOerators.sandbox.test.Complex" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.overloadedOerators.sandbox.test.ComplexOperators" file="ComplexOperators.java">
+    <classNode dependClassName="jetbrains.mps.baseLanguage.overloadedOerators.sandbox.test.Complex" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.overloadedOerators.sandbox.test.Complex2" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.overloadedOerators.sandbox.test.StringOperators" file="StringOperators.java">
+    <classNode dependClassName="java.lang.String" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.overloadedOerators.sandbox.test.TestComplex" file="TestComplex.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.overloadedOerators.sandbox.test.Complex" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.overloadedOerators.sandbox.test.Complex2" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.overloadedOerators.sandbox.test.ComplexOperators" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.overloadedOerators.sandbox.test.StringOperators" />
+  </dependency>
+</dependenciesRoot>
+

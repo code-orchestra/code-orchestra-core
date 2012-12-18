@@ -1,0 +1,67 @@
+--- old text
++++ generated text
+@@ -1,22 +1,4 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<model modelUID="r:00000000-0000-4000-0000-011c895903ed(jetbrains.mps.internalCollections.test.basicOperations)">
+-  <persistence version="3" />
+-  <refactoringHistory />
+-  <language namespace="f3061a53-9226-4cc5-a443-f952ceaf5816(jetbrains.mps.baseLanguage)" />
+-  <language namespace="f61473f9-130f-42f6-b98d-6c438812c2f6(jetbrains.mps.baseLanguage.unitTest)" />
+-  <language namespace="83888646-71ce-4f1c-9c53-c54016f6ad4f(jetbrains.mps.baseLanguage.collections)" />
+-  <language namespace="fd392034-7849-419d-9071-12563d152375(jetbrains.mps.baseLanguage.closures)" />
+-  <languageAspect modelUID="r:00000000-0000-4000-0000-011c895903e4(jetbrains.mps.internal.collections.constraints)" version="2" />
+-  <languageAspect modelUID="r:00000000-0000-4000-0000-011c895902c1(jetbrains.mps.baseLanguage.constraints)" version="83" />
+-  <languageAspect modelUID="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" version="1" />
+-  <languageAspect modelUID="r:00000000-0000-4000-0000-011c895902d2(jetbrains.mps.baseLanguage.unitTest.constraints)" version="1" />
+-  <languageAspect modelUID="r:00000000-0000-4000-0000-011c89590328(jetbrains.mps.baseLanguage.collections.constraints)" version="6" />
+-  <languageAspect modelUID="r:00000000-0000-4000-0000-011c8959032e(jetbrains.mps.baseLanguage.collections.structure)" version="4" />
+-  <languageAspect modelUID="r:00000000-0000-4000-0000-011c89590334(jetbrains.mps.baseLanguage.closures.constraints)" version="2" />
+-  <languageAspect modelUID="r:00000000-0000-4000-0000-011c89590338(jetbrains.mps.baseLanguage.closures.structure)" version="3" />
+-  <languageAspect modelUID="r:00000000-0000-4000-0000-011c895902e8(jetbrains.mps.lang.generator.structure)" version="1" />
+-  <languageAspect modelUID="r:00000000-0000-4000-0000-011c89590301(jetbrains.mps.lang.smodel.structure)" version="16" />
+-  <languageAspect modelUID="r:00000000-0000-4000-0000-011c8959028c(jetbrains.mps.lang.structure.constraints)" version="11" />
++  -011c8959028c(jetbrains.mps.lang.structure.constraints)" version="11" />
+   <languageAspect modelUID="r:00000000-0000-4000-0000-011c89590283(jetbrains.mps.lang.core.constraints)" version="2" />
+   <languageAspect modelUID="r:00000000-0000-4000-0000-011c895902db(jetbrains.mps.baseLanguage.blTypes.constraints)" version="0" />
+   <languageAspect modelUID="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" version="0" />
+@@ -74,7 +56,9 @@
+                   <link role="classifier" targetNodeId="4.~Integer" resolveInfo="Integer" />
+                 </node>
+               </node>
+-            </node>
++            </node>aseLanguage.unitTest.structure.TestMethodList" id="1204981976499">
++      <node role="testMethod" type="jetbrains.mps.baseLanguage.unitTest.structure.TestMethod" id="1204982101323">
++        <property name="methodName" value="sequenceMethods
+             <node role="actual" type="jetbrains.mps.baseLanguage.structure.DotExpression" id="1204982158267">
+               <node role="operand" type="jetbrains.mps.baseLanguage.structure.LocalVariableReference" id="1204982157767">
+                 <link role="variableDeclaration" targetNodeId="1204982139136" resolveInfo="input" />
+@@ -114,10 +98,7 @@
+               </node>
+               <node role="operation" type="jetbrains.mps.baseLanguage.structure.InstanceMethodCallOperation" id="1204982218488">
+                 <link role="baseMethodDeclaration" targetNodeId="2.~ISequence.count():int" resolveInfo="count" />
+-              </node>
+-            </node>
+-          </node>
+-          <node role="statement" type="jetbrains.mps.baseLanguage.structure.ForeachStatement" id="1204982375635">
++              </node> id="1204982375635">
+             <node role="body" type="jetbrains.mps.baseLanguage.structure.StatementList" id="1204982375636">
+               <node role="statement" type="jetbrains.mps.baseLanguage.unitTest.structure.AssertEquals" id="1204982404669">
+                 <node role="expected" type="jetbrains.mps.baseLanguage.structure.BooleanConstant" id="1204982405340">
+@@ -135,14 +116,14 @@
+                   </node>
+                 </node>
+               </node>
++            <node role="actual" type="jetbrains.mps.baseLanguage.structure.DotExpression" id="1204982168531">
++              <node role="operand" type="jetbrains.mps.baseLanguage.structure.LocalVariableReference" id="1204982167578">
+               <node role="statement" type="jetbrains.mps.baseLanguage.unitTest.structure.AssertEquals" id="1204982423117">
+                 <node role="expected" type="jetbrains.mps.baseLanguage.structure.MinusExpression" id="1204982426296">
+                   <node role="rightExpression" type="jetbrains.mps.baseLanguage.structure.IntegerConstant" id="1204982427100">
+                     <property name="value" value="1" />
+                   </node>
+-                  <node role="leftExpression" type="jetbrains.mps.baseLanguage.structure.LocalVariableReference" id="1204982425260">
+-                    <link role="variableDeclaration" targetNodeId="1204982375639" resolveInfo="i" />
+-                  </node>
++                  <node role="leftExpression" type="jetbrains.mps.b
+                 </node>
+                 <node role="actual" type="jetbrains.mps.baseLanguage.structure.DotExpression" id="1204982429826">
+                   <node role="operand" type="jetbrains.mps.baseLanguage.structure.LocalVariableReference" id="1204982429558">

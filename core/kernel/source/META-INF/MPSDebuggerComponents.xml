@@ -1,0 +1,75 @@
+<components>
+  <application-components>
+    <component>
+      <implementation-class>jetbrains.mps.debug.customViewers.CustomViewersManager</implementation-class>
+    </component>
+
+    <component>
+      <implementation-class>jetbrains.mps.debug.api.breakpoints.BreakpointProvidersManager</implementation-class>
+    </component>
+
+    <component>
+      <implementation-class>jetbrains.mps.debug.api.Debuggers</implementation-class>
+    </component>
+
+    <component>
+      <implementation-class>jetbrains.mps.debug.api.breakpoints.DefaultProvider</implementation-class>
+    </component>
+
+    <component>
+      <implementation-class>jetbrains.mps.debug.api.DebugInfoManager</implementation-class>
+    </component>
+
+    <!-- RE-2837 -->
+    <component>
+      <implementation-class>codeOrchestra.actionScript.debugger.breakpoint.ASBreakpointsProvider</implementation-class>
+    </component>
+    <component>
+      <implementation-class>codeOrchestra.debugger.breakpoint.BreakpointRequestProcessorProvider</implementation-class>
+    </component>
+    <component>
+      <implementation-class>codeOrchestra.javaScript.debugger.JSDebugger</implementation-class>
+    </component>
+
+    <!-- RE-2693 -->
+    <component>
+      <implementation-class>codeOrchestra.actionScript.debugger.ASDebugger</implementation-class>
+    </component>
+  </application-components>
+
+  <project-components>
+    <component>
+      <implementation-class>jetbrains.mps.debug.api.BreakpointManagerComponent</implementation-class>
+      <skipForDummyProject/>
+    </component>
+
+    <component>
+      <implementation-class>jetbrains.mps.debug.api.DebugSessionManagerComponent</implementation-class>
+      <skipForDummyProject/>
+    </component>
+
+    <component>
+      <implementation-class>jetbrains.mps.debug.runtime.VMEventsProcessorManagerComponent</implementation-class>
+      <skipForDummyProject/>
+    </component>
+
+    <!-- RE-2693 -->
+    <component>
+      <implementation-class>codeOrchestra.actionScript.debugger.events.FDBEventsProcessorManager</implementation-class>
+      <skipForDummyProject/>
+    </component>
+
+    <!-- RE-2837 -->
+    <component>
+      <implementation-class>codeOrchestra.javaScript.debugger.events.ChromeEventsProcessorManager</implementation-class>
+      <skipForDummyProject/>
+    </component>
+
+    <!-- RE-2831 -->
+    <component>
+      <implementation-class>codeOrchestra.debugger.breakpoint.BreakpointCacheManager</implementation-class>
+      <skipForDummyProject/>
+    </component>
+
+  </project-components>
+</components>

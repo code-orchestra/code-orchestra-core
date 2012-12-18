@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.samples.xmlLiterals.dataFlow.DFABuilders" file="DFABuilders.java">
+    <classNode dependClassName="jetbrains.mps.lang.dataFlow.DataFlowManager" />
+    <classNode dependClassName="jetbrains.mps.samples.xmlLiterals.dataFlow.XmlLiteral_DataFlow" />
+    <classNode extendsClassName="jetbrains.mps.lang.dataFlow.DataFlowBuilders" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.xmlLiterals.dataFlow.XmlLiteral_DataFlow" file="XmlLiteral_DataFlow.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.lang.dataFlow.DataFlowBuilderContext" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.IOperationContext" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.lang.dataFlow.DataFlowBuilder" />
+  </dependency>
+</dependenciesRoot>
+

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.ide.hierarchy.toggle.GroupedToggleAction" file="GroupedToggleAction.java">
+    <classNode dependClassName="com.intellij.openapi.actionSystem.AnActionEvent" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="javax.swing.Icon" />
+    <classNode dependClassName="jetbrains.mps.ide.hierarchy.toggle.ToggleActionGroup" />
+    <classNode extendsClassName="com.intellij.openapi.actionSystem.ToggleAction" />
+  </dependency>
+  <dependency className="jetbrains.mps.ide.hierarchy.toggle.ToggleActionGroup" file="ToggleActionGroup.java">
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.ide.hierarchy.toggle.GroupedToggleAction" />
+  </dependency>
+</dependenciesRoot>
+

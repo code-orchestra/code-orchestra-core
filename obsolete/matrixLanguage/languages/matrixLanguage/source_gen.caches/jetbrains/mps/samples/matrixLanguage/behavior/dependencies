@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.samples.matrixLanguage.behavior.BehaviorAspectDescriptor" file="BehaviorAspectDescriptor.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.Arrays" />
+    <classNode dependClassName="jetbrains.mps.samples.matrixLanguage.behavior.DeterminantExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.samples.matrixLanguage.behavior.ForEachMatrixElement_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.samples.matrixLanguage.behavior.MatrixAddExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.samples.matrixLanguage.behavior.MatrixDivExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.samples.matrixLanguage.behavior.MatrixElementVariableDeclaration_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.samples.matrixLanguage.behavior.MatrixElementVariableReference_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.samples.matrixLanguage.behavior.MatrixIndexVariableDeclaration_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.samples.matrixLanguage.behavior.MatrixIndexVariableReference_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.samples.matrixLanguage.behavior.MatrixLiteral_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.samples.matrixLanguage.behavior.MatrixMultExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.samples.matrixLanguage.behavior.MatrixRow_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.samples.matrixLanguage.behavior.MatrixSubExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.samples.matrixLanguage.behavior.MatrixType_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.samples.matrixLanguage.behavior.TransposeExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.runtime.BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.runtime.interpreted.BehaviorAspectInterpreted" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.BehaviorAspectDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.matrixLanguage.behavior.DeterminantExpression_BehaviorDescriptor" file="DeterminantExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.behavior.Expression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.matrixLanguage.behavior.ForEachMatrixElement_BehaviorDescriptor" file="ForEachMatrixElement_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.behavior.AbstractLoopStatement_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.matrixLanguage.behavior.MatrixAddExpression_BehaviorDescriptor" file="MatrixAddExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.behavior.BinaryOperation_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.matrixLanguage.behavior.MatrixDivExpression_BehaviorDescriptor" file="MatrixDivExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.behavior.BinaryOperation_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.matrixLanguage.behavior.MatrixElementVariableDeclaration_BehaviorDescriptor" file="MatrixElementVariableDeclaration_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.behavior.LocalVariableDeclaration_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.matrixLanguage.behavior.MatrixElementVariableReference_BehaviorDescriptor" file="MatrixElementVariableReference_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.behavior.LocalVariableReference_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.matrixLanguage.behavior.MatrixIndexVariableDeclaration_BehaviorDescriptor" file="MatrixIndexVariableDeclaration_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.behavior.LocalVariableDeclaration_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.matrixLanguage.behavior.MatrixIndexVariableReference_BehaviorDescriptor" file="MatrixIndexVariableReference_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.behavior.LocalVariableReference_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.matrixLanguage.behavior.MatrixLiteral_BehaviorDescriptor" file="MatrixLiteral_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.behavior.Expression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.matrixLanguage.behavior.MatrixMultExpression_BehaviorDescriptor" file="MatrixMultExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.behavior.BinaryOperation_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.matrixLanguage.behavior.MatrixRow_BehaviorDescriptor" file="MatrixRow_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.matrixLanguage.behavior.MatrixSubExpression_BehaviorDescriptor" file="MatrixSubExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.behavior.BinaryOperation_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.matrixLanguage.behavior.MatrixType_Behavior" file="MatrixType_Behavior.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.matrixLanguage.behavior.MatrixType_BehaviorDescriptor" file="MatrixType_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.behavior.Type_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.samples.matrixLanguage.behavior.MatrixType_Behavior" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.matrixLanguage.behavior.TransposeExpression_BehaviorDescriptor" file="TransposeExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.behavior.Expression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+</dependenciesRoot>
+

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.nanoc.debug.programState.DefaultThread" file="DefaultThread.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="javax.swing.Icon" />
+    <classNode dependClassName="jetbrains.mps.debug.api.programState.IStackFrame" />
+    <classNode dependClassName="jetbrains.mps.nanoc.debug.CppDebugSession" />
+    <classNode dependClassName="jetbrains.mps.nanoc.debug.answer.GDBValue" />
+    <classNode dependClassName="jetbrains.mps.nanoc.debug.answer.ListMapValue" />
+    <classNode dependClassName="jetbrains.mps.nanoc.debug.answer.RecordValue" />
+    <classNode dependClassName="jetbrains.mps.nanoc.debug.answer.ResultAnswer" />
+    <classNode dependClassName="jetbrains.mps.nanoc.debug.answer.StreamAnswer" />
+    <classNode dependClassName="jetbrains.mps.nanoc.debug.programState.GDBStackFrame" />
+    <classNode extendsClassName="jetbrains.mps.debug.api.programState.IThread" />
+    <classNode extendsClassName="jetbrains.mps.nanoc.debug.requests.GDBRequestor" />
+  </dependency>
+  <dependency className="jetbrains.mps.nanoc.debug.programState.GDBLocation" file="GDBLocation.java">
+    <classNode dependClassName="java.io.File" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.logging.Logger" />
+    <classNode dependClassName="jetbrains.mps.util.NameUtil" />
+    <classNode extendsClassName="jetbrains.mps.debug.api.programState.ILocation" />
+  </dependency>
+  <dependency className="jetbrains.mps.nanoc.debug.programState.GDBStackFrame" file="GDBStackFrame.java">
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="jetbrains.mps.debug.api.programState.ILocation" />
+    <classNode dependClassName="jetbrains.mps.debug.api.programState.IThread" />
+    <classNode dependClassName="jetbrains.mps.debug.api.programState.IValue" />
+    <classNode dependClassName="jetbrains.mps.debug.api.programState.IWatchable" />
+    <classNode dependClassName="jetbrains.mps.debug.api.programState.NullLocation" />
+    <classNode dependClassName="jetbrains.mps.nanoc.debug.answer.GDBValue" />
+    <classNode dependClassName="jetbrains.mps.nanoc.debug.answer.ListValue" />
+    <classNode dependClassName="jetbrains.mps.nanoc.debug.answer.RecordValue" />
+    <classNode dependClassName="jetbrains.mps.nanoc.debug.answer.ResultAnswer" />
+    <classNode dependClassName="jetbrains.mps.nanoc.debug.programState.DefaultThread" />
+    <classNode dependClassName="jetbrains.mps.nanoc.debug.programState.GDBLocation" />
+    <classNode dependClassName="jetbrains.mps.nanoc.debug.programState.SimpleVarWatchable" />
+    <classNode extendsClassName="jetbrains.mps.debug.api.programState.IStackFrame" />
+  </dependency>
+  <dependency className="jetbrains.mps.nanoc.debug.programState.SimpleValue" file="SimpleValue.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="javax.swing.Icon" />
+    <classNode dependClassName="jetbrains.mps.debug.api.programState.IWatchable" />
+    <classNode extendsClassName="jetbrains.mps.debug.api.programState.IValue" />
+  </dependency>
+  <dependency className="jetbrains.mps.nanoc.debug.programState.SimpleVarWatchable" file="SimpleVarWatchable.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="javax.swing.Icon" />
+    <classNode dependClassName="jetbrains.mps.debug.api.programState.IValue" />
+    <classNode dependClassName="jetbrains.mps.debug.api.programState.WatchablesCategory" />
+    <classNode dependClassName="jetbrains.mps.nanoc.debug.programState.SimpleValue" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.debug.api.programState.IWatchable" />
+  </dependency>
+</dependenciesRoot>
+

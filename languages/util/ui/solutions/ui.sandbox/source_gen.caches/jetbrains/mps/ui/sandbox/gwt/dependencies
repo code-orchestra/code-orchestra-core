@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.ui.sandbox.gwt.GWTDemo" file="GWTDemo.java">
+    <classNode dependClassName="com.google.gwt.core.client.GWT" />
+    <classNode dependClassName="com.google.gwt.user.client.ui.RootLayoutPanel" />
+    <classNode dependClassName="com.google.gwt.user.client.ui.RootPanel" />
+    <classNode dependClassName="com.google.gwt.user.client.ui.Widget" />
+    <classNode dependClassName="jetbrains.mps.ui.sandbox.UIDemo_GWT" />
+    <classNode dependClassName="jetbrains.mps.ui.sandbox.gwt.MyResources" />
+    <classNode extendsClassName="com.google.gwt.core.client.EntryPoint" />
+  </dependency>
+  <dependency className="jetbrains.mps.ui.sandbox.gwt.MyResources" file="MyResources.java">
+    <classNode dependClassName="com.google.gwt.core.client.GWT" />
+    <classNode dependClassName="com.google.gwt.resources.client.CssResource" />
+    <classNode extendsClassName="com.google.gwt.resources.client.ClientBundle" />
+  </dependency>
+  <dependency className="jetbrains.mps.ui.sandbox.gwt.gwtdemo" file="gwtdemo.css" />
+</dependenciesRoot>
+

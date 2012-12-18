@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.baseLanguage.refactorings.ChangeMethodSignature" file="ChangeMethodSignature.java">
+    <classNode dependClassName="com.intellij.openapi.progress.EmptyProgressIndicator" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.refactorings.ChangeMethodSignature_Target" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.util.plugin.refactorings.ChangeMethodSignatureDialog" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.util.plugin.refactorings.ChangeMethodSignatureRefactoring" />
+    <classNode dependClassName="jetbrains.mps.ide.findusages.model.SearchResult" />
+    <classNode dependClassName="jetbrains.mps.ide.findusages.model.SearchResults" />
+    <classNode dependClassName="jetbrains.mps.ide.findusages.view.FindUtils" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.project.GlobalScope" />
+    <classNode dependClassName="jetbrains.mps.refactoring.framework.IRefactoringTarget" />
+    <classNode dependClassName="jetbrains.mps.refactoring.framework.RefactoringContext" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.refactoring.framework.BaseRefactoring" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.refactorings.ChangeMethodSignature_Target" file="ChangeMethodSignature_Target.java">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.util.plugin.refactorings.ChangeMethodSignatureRefactoring" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.refactoring.framework.IRefactoringTarget" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.refactorings.ConvertAnonymousClass" file="ConvertAnonymousClass.java">
+    <classNode dependClassName="java.lang.Class" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.refactorings.ConvertAnonymousClass_Target" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.refactorings.ConvertAnonymousClass_name_Settings" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.util.plugin.refactorings.ConvertAnonymousRefactoring" />
+    <classNode dependClassName="jetbrains.mps.lang.core.refactorings.MoveNodes" />
+    <classNode dependClassName="jetbrains.mps.refactoring.framework.IRefactoringTarget" />
+    <classNode dependClassName="jetbrains.mps.refactoring.framework.RefactoringContext" />
+    <classNode dependClassName="jetbrains.mps.refactoring.framework.paramchooser.mps.MPSChooserFactory" />
+    <classNode extendsClassName="jetbrains.mps.refactoring.framework.BaseRefactoring" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.refactorings.ConvertAnonymousClass_Target" file="ConvertAnonymousClass_Target.java">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.refactoring.framework.IRefactoringTarget" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.refactorings.ConvertAnonymousClass_name_Settings" file="ConvertAnonymousClass_name_Settings.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.refactoring.framework.RefactoringContext" />
+    <classNode dependClassName="jetbrains.mps.refactoring.framework.paramchooser.mps.IChooserSettings" />
+    <classNode extendsClassName="jetbrains.mps.refactoring.framework.paramchooser.mps.BaseChooserSettings" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.refactorings.MakeFieldFinal" file="MakeFieldFinal.java">
+    <classNode dependClassName="com.intellij.openapi.progress.EmptyProgressIndicator" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.refactorings.MakeFieldFinal_Target" />
+    <classNode dependClassName="jetbrains.mps.ide.findusages.model.SearchResults" />
+    <classNode dependClassName="jetbrains.mps.ide.findusages.view.FindUtils" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.project.GlobalScope" />
+    <classNode dependClassName="jetbrains.mps.refactoring.framework.IRefactoringTarget" />
+    <classNode dependClassName="jetbrains.mps.refactoring.framework.RefactoringContext" />
+    <classNode extendsClassName="jetbrains.mps.refactoring.framework.BaseRefactoring" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.refactorings.MakeFieldFinal_Target" file="MakeFieldFinal_Target.java">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.refactoring.framework.IRefactoringTarget" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.refactorings.MakeFieldStatic" file="MakeFieldStatic.java">
+    <classNode dependClassName="com.intellij.openapi.progress.EmptyProgressIndicator" />
+    <classNode dependClassName="java.lang.Boolean" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.Runnable" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.HashSet" />
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.refactorings.MakeFieldStatic_Target" />
+    <classNode dependClassName="jetbrains.mps.ide.findusages.model.SearchResult" />
+    <classNode dependClassName="jetbrains.mps.ide.findusages.model.SearchResults" />
+    <classNode dependClassName="jetbrains.mps.ide.findusages.view.FindUtils" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.Sequence" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.typesystem.runtime.HUtil" />
+    <classNode dependClassName="jetbrains.mps.project.GlobalScope" />
+    <classNode dependClassName="jetbrains.mps.refactoring.framework.IRefactoringTarget" />
+    <classNode dependClassName="jetbrains.mps.refactoring.framework.RefactoringContext" />
+    <classNode dependClassName="jetbrains.mps.smodel.ModelAccess" />
+    <classNode dependClassName="jetbrains.mps.smodel.SModelUtil_new" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.refactoring.framework.BaseRefactoring" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.refactorings.MakeFieldStatic_Target" file="MakeFieldStatic_Target.java">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.refactoring.framework.IRefactoringTarget" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.refactorings.MoveStaticField" file="MoveStaticField.java">
+    <classNode dependClassName="com.intellij.openapi.progress.EmptyProgressIndicator" />
+    <classNode dependClassName="java.lang.Class" />
+    <classNode dependClassName="java.lang.Runnable" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.refactorings.MoveStaticField_Target" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.refactorings.MoveStaticField_destination_Settings" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.util.plugin.refactorings.MoveStaticFieldRefactoring" />
+    <classNode dependClassName="jetbrains.mps.ide.findusages.model.SearchResults" />
+    <classNode dependClassName="jetbrains.mps.ide.findusages.view.FindUtils" />
+    <classNode dependClassName="jetbrains.mps.lang.core.refactorings.MoveNodes" />
+    <classNode dependClassName="jetbrains.mps.project.GlobalScope" />
+    <classNode dependClassName="jetbrains.mps.refactoring.framework.IRefactoringTarget" />
+    <classNode dependClassName="jetbrains.mps.refactoring.framework.RefactoringContext" />
+    <classNode dependClassName="jetbrains.mps.refactoring.framework.paramchooser.mps.MPSChooserFactory" />
+    <classNode dependClassName="jetbrains.mps.smodel.ModelAccess" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.refactoring.framework.BaseRefactoring" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.refactorings.MoveStaticField_Target" file="MoveStaticField_Target.java">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.refactoring.framework.IRefactoringTarget" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.refactorings.MoveStaticField_destination_Settings" file="MoveStaticField_destination_Settings.java">
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.refactoring.framework.RefactoringContext" />
+    <classNode dependClassName="jetbrains.mps.refactoring.framework.paramchooser.mps.IChooserSettings" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.refactoring.framework.paramchooser.mps.BaseChooserSettings" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.refactorings.MoveStaticMethod" file="MoveStaticMethod.java">
+    <classNode dependClassName="com.intellij.openapi.progress.EmptyProgressIndicator" />
+    <classNode dependClassName="java.lang.Class" />
+    <classNode dependClassName="java.lang.Runnable" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.refactorings.MoveStaticMethod_Target" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.refactorings.MoveStaticMethod_destination_Settings" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.util.plugin.refactorings.MoveStaticMethodRefactoring" />
+    <classNode dependClassName="jetbrains.mps.ide.findusages.model.SearchResults" />
+    <classNode dependClassName="jetbrains.mps.ide.findusages.view.FindUtils" />
+    <classNode dependClassName="jetbrains.mps.lang.core.refactorings.MoveNodes" />
+    <classNode dependClassName="jetbrains.mps.project.GlobalScope" />
+    <classNode dependClassName="jetbrains.mps.refactoring.framework.IRefactoringTarget" />
+    <classNode dependClassName="jetbrains.mps.refactoring.framework.RefactoringContext" />
+    <classNode dependClassName="jetbrains.mps.refactoring.framework.paramchooser.mps.MPSChooserFactory" />
+    <classNode dependClassName="jetbrains.mps.smodel.ModelAccess" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.refactoring.framework.BaseRefactoring" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.refactorings.MoveStaticMethod_Target" file="MoveStaticMethod_Target.java">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.refactoring.framework.IRefactoringTarget" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.refactorings.MoveStaticMethod_destination_Settings" file="MoveStaticMethod_destination_Settings.java">
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.refactoring.framework.RefactoringContext" />
+    <classNode dependClassName="jetbrains.mps.refactoring.framework.paramchooser.mps.IChooserSettings" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.refactoring.framework.paramchooser.mps.BaseChooserSettings" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.refactorings.RenameMethod" file="RenameMethod.java">
+    <classNode dependClassName="com.intellij.openapi.progress.EmptyProgressIndicator" />
+    <classNode dependClassName="java.lang.Boolean" />
+    <classNode dependClassName="java.lang.Class" />
+    <classNode dependClassName="java.lang.Runnable" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime.Wrappers" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.refactorings.RenameMethod_Target" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.refactorings.RenameMethod_newName_Settings" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.refactorings.RenameMethod_refactorOverriding_Settings" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.refactorings.RenameUtil" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.util.plugin.refactorings.MethodRefactoringUtils" />
+    <classNode dependClassName="jetbrains.mps.ide.findusages.model.SearchResults" />
+    <classNode dependClassName="jetbrains.mps.ide.findusages.view.FindUtils" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.lang.core.refactorings.Rename" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.project.GlobalScope" />
+    <classNode dependClassName="jetbrains.mps.refactoring.framework.IRefactoringTarget" />
+    <classNode dependClassName="jetbrains.mps.refactoring.framework.RefactoringContext" />
+    <classNode dependClassName="jetbrains.mps.refactoring.framework.paramchooser.mps.MPSChooserFactory" />
+    <classNode dependClassName="jetbrains.mps.smodel.ModelAccess" />
+    <classNode dependClassName="jetbrains.mps.smodel.SModel" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.refactoring.framework.BaseRefactoring" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.refactorings.RenameMethod_Target" file="RenameMethod_Target.java">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.refactoring.framework.IRefactoringTarget" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.refactorings.RenameMethod_newName_Settings" file="RenameMethod_newName_Settings.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.refactorings.RenameUtil" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.refactoring.framework.RefactoringContext" />
+    <classNode dependClassName="jetbrains.mps.refactoring.framework.paramchooser.mps.IChooserSettings" />
+    <classNode extendsClassName="jetbrains.mps.refactoring.framework.paramchooser.mps.BaseChooserSettings" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.refactorings.RenameMethod_refactorOverriding_Settings" file="RenameMethod_refactorOverriding_Settings.java">
+    <classNode dependClassName="java.lang.Boolean" />
+    <classNode dependClassName="jetbrains.mps.refactoring.framework.RefactoringContext" />
+    <classNode dependClassName="jetbrains.mps.refactoring.framework.paramchooser.mps.IChooserSettings" />
+    <classNode extendsClassName="jetbrains.mps.refactoring.framework.paramchooser.mps.BaseChooserSettings" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.refactorings.RenameUtil" file="RenameUtil.java">
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+  </dependency>
+</dependenciesRoot>
+

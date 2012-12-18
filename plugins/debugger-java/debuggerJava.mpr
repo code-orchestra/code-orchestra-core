@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CodeStyleSettings">
+    <option name="fieldPrefix" value="my" />
+    <option name="fieldSuffix" value="" />
+    <option name="localVariablePrefix" value="" />
+    <option name="localVariableSuffix" value="" />
+    <option name="parameterPrefix" value="" />
+    <option name="parameterSuffix" value="" />
+    <option name="staticFieldPrefix" value="our" />
+    <option name="staticFieldSuffix" value="" />
+  </component>
+  <component name="DependencyValidationManager">
+    <option name="SKIP_IMPORT_STATEMENTS" value="false" />
+  </component>
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false" />
+  <component name="IssueNavigationConfiguration">
+    <option name="links">
+      <list>
+        <IssueNavigationLink>
+          <option name="issueRegexp" value="[A-Z]+\-\d+" />
+          <option name="linkRegexp" value="http://youtrack.jetbrains.net/issue/$0" />
+        </IssueNavigationLink>
+      </list>
+    </option>
+  </component>
+  <component name="MPSProject">
+    <projectModules>
+      <modulePath path="${mps_home}/core/debug-api/languages/api/api.mpl" folder="api" />
+      <modulePath path="${mps_home}/core/debug/languages/customViewers/customViewers.mpl" />
+      <modulePath path="${mps_home}/core/debug/languages/evaluation/evaluation.mpl" folder="evaluation" />
+      <modulePath path="${mps_home}/core/debug/languages/privateMembers/privateMembers.mpl" folder="evaluation" />
+      <modulePath path="${mps_home}/core/debug/solutions/jetbrains.mps.debug.evaluation.ui/jetbrains.mps.debug.evaluation.ui.msd" folder="evaluation" />
+      <modulePath path="${mps_home}/core/debug/solutions/jetbrains.mps.debug.tests/jetbrains.mps.debug.tests.msd" folder="evaluation" />
+      <modulePath path="${mps_home}/core/kernel/traceinfo/solutions/jetbrains.mps.debug.api.info/jetbrains.mps.debug.api.info.msd" folder="trace" />
+      <modulePath path="${mps_home}/core/languageDesign/textGen/textGen.mpl" folder="trace" />
+      <modulePath path="${mps_home}/plugins/debugger-api/solutions/jetbrains.mps.debugger-api/jetbrains.mps.debugger-api.msd" folder="api" />
+      <modulePath path="${project}/solutions/jetbrains.mps.debugger.java.run.sandbox/jetbrains.mps.debugger.java.run.sandbox.msd" />
+      <modulePath path="${project}/solutions/jetbrains.mps.debugger.java/jetbrains.mps.debugger.java.msd" />
+      <modulePath path="${mps_home}/core/languageDesign/traceable/traceable.mpl" folder="trace" />
+    </projectModules>
+    <genConfs>
+      <genConfModule name="customViewers" moduleRef="jetbrains.mps.debug.customViewers" />
+      <genConfModule name="evaluation" moduleRef="jetbrains.mps.debug.evaluation" />
+      <genConfModule name="java" moduleRef="jetbrains.mps.debugger.java" />
+      <genConfModule name="privateMembers" moduleRef="jetbrains.mps.debug.privateMembers" />
+      <genConfModule name="sandbox" moduleRef="jetbrains.mps.debug.tests" />
+      <genConfModule name="ui" moduleRef="jetbrains.mps.debug.evaluation.ui" />
+    </genConfs>
+  </component>
+  <component name="MigrationState">
+    <option name="myState" value="DONE" />
+  </component>
+  <component name="ProjectModuleManager">
+    <modules />
+  </component>
+  <component name="ProjectRootManager" version="2" />
+  <component name="ProjectVersion">
+    <option name="version" value="2.0" />
+  </component>
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$APPLICATION_HOME_DIR$" vcs="Git" />
+  </component>
+</project>
+

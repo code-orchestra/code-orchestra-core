@@ -1,0 +1,112 @@
+import org.jetbrains.jps.Jps
+import static org.jetbrains.jps.idea.IdeaProjectLoader.*
+
+includeTargets << new File("${guessHome(this)}/build/scripts/utils.gant")
+includeTool << Jps
+
+requireProperty("out", "$home/out")
+
+class Paths {
+  final sandbox
+
+  def Paths(String out) {
+    sandbox = out
+  }
+}
+
+setProperty("paths", new Paths(out))
+
+def paths = new Paths(out)
+
+def includeFile(String filepath) {
+  Script s = groovyShell.parse(new File(filepath))
+  s.setBinding(binding)
+  s
+}
+
+target(compile: "Compile project") {
+  loadProject()
+
+  project.stage("Cleaning up sandbox folder")
+  ant.delete(dir: paths.sandbox)
+
+  [paths.sandbox].each {
+    ant.mkdir(dir: it)
+  }
+
+  ant.tstamp() {
+    format(property: "today.year", pattern: "yyyy")
+  }
+
+  project["javac"] = "$jdkHome/bin/javac"
+  project.targetFolder = "$out/classes"
+  project.clean()
+  project.makeProduction()
+}
+
+String appInfoFile() {
+  return "${this["community-resources"].output}/idea/IdeaApplicationInfo.xml"
+}
+
+def wire_build_date(String buildNumber) {
+  ant.replace(token: "__BUILD_NUMBER__", value: buildNumber, file: appInfoFile())
+  ant.replace(token: "__BUILD_DATE__", value: DSTAMP, file: appInfoFile())
+}
+
+target('default': 'The default target') {
+  depends(compile)
+  layoutAll(
+          buildNumber: "IC-96.SNAPSHOT",
+          version: "IdeaX",
+          system_selector: "IntelliJIdeaCE10",
+          jdk_req: "1.6*",
+          vmoptions: "-Xms128m -Xmx512m -XX:MaxPermSize=250m -ea",
+          home, out)
+}
+
+public def layoutAll(Map args, String home, String out) {
+  Paths paths = new Paths(out)
+
+  wire_build_date(args.buildNumber)
+  ant.xmlproperty(file: appInfoFile(), collapseAttributes: "true")
+
+  def layouts = includeFile("$home/build/scripts/mps_platform.gant")
+  layouts.layoutFull(home, paths.sandbox)
+
+  ant.echo(message: args.buildNumber, file: "$paths.sandbox/build.txt")
+  ant.copy(todir: "$paths.sandbox/license", preservelastmodified: "true") {
+    fileset(dir: "$home/license")
+  }
+
+  ant.copy(file: "$home/LICENSE.txt", todir: "$paths.sandbox", preservelastmodified: "true")
+}
+
+boolean isEap() {
+  return "true" == p("component.version.eap")
+}
+
+private def patchPropertiesFile(String where) {
+  ant.echo(file: "$where/bin/idea.properties", append: "true", message:
+           isEap() ?
+"""
+
+#-----------------------------------------------------------------------
+# Change to 'disabled' if you need not to receive instant visual notifications about
+# fatal errors that happen to IDEA or plugins installed.
+#-----------------------------------------------------------------------
+idea.fatal.error.notification=enabled
+"""
+
+ :
+
+"""
+
+#-----------------------------------------------------------------------
+# Change to 'eanbled' if you need to receive instant visual notifications about
+# fatal errors that happen to IDEA or plugins installed.
+#-----------------------------------------------------------------------
+idea.fatal.error.notification=disabled
+"""
+  )
+}
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.vcs.conflictable.Conflictable" file="Conflictable.java">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="jetbrains.mps.vfs.IFile" />
+  </dependency>
+  <dependency className="jetbrains.mps.vcs.conflictable.ConflictableModelAdapter" file="ConflictableModelAdapter.java">
+    <classNode dependClassName="jetbrains.mps.smodel.descriptor.EditableSModelDescriptor" />
+    <classNode dependClassName="jetbrains.mps.vfs.IFile" />
+    <classNode extendsClassName="jetbrains.mps.vcs.conflictable.Conflictable" />
+  </dependency>
+  <dependency className="jetbrains.mps.vcs.conflictable.ConflictableModuleAdapter" file="ConflictableModuleAdapter.java">
+    <classNode dependClassName="jetbrains.mps.project.IModule" />
+    <classNode dependClassName="jetbrains.mps.vfs.IFile" />
+    <classNode extendsClassName="jetbrains.mps.vcs.conflictable.Conflictable" />
+  </dependency>
+</dependenciesRoot>
+

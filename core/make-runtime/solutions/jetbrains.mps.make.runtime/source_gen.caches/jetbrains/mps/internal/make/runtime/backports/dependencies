@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.internal.make.runtime.backports.JobMonitorProgressIndicator" file="JobMonitorProgressIndicator.java">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.LinkedList" />
+    <classNode dependClassName="jetbrains.mps.make.script.IJobMonitor" />
+    <classNode extendsClassName="jetbrains.mps.internal.make.runtime.backports.ProgressIndicatorAdapter" />
+  </dependency>
+  <dependency className="jetbrains.mps.internal.make.runtime.backports.ProgressIndicatorAdapter" file="ProgressIndicatorAdapter.java">
+    <classNode dependClassName="com.intellij.openapi.application.ModalityState" />
+    <classNode dependClassName="com.intellij.openapi.progress.ProcessCanceledException" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.UnsupportedOperationException" />
+    <classNode extendsClassName="com.intellij.openapi.progress.ProgressIndicator" />
+  </dependency>
+  <dependency className="jetbrains.mps.internal.make.runtime.backports.ProgressIndicatorDelegate" file="ProgressIndicatorDelegate.java">
+    <classNode dependClassName="com.intellij.openapi.application.ModalityState" />
+    <classNode dependClassName="com.intellij.openapi.progress.ProcessCanceledException" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="org.jetbrains.annotations.NotNull" />
+    <classNode extendsClassName="com.intellij.openapi.progress.ProgressIndicator" />
+  </dependency>
+  <dependency className="jetbrains.mps.internal.make.runtime.backports.ProgressIndicatorProgressStrategy" file="ProgressIndicatorProgressStrategy.java">
+    <classNode dependClassName="com.intellij.openapi.progress.ProgressIndicator" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode extendsClassName="jetbrains.mps.internal.make.runtime.script.AbstractProgressStrategy" />
+  </dependency>
+</dependenciesRoot>
+

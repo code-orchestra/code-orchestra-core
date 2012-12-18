@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.lang.smodel.plugin.CheckLangForJavaStubModels_Action" file="CheckLangForJavaStubModels_Action.java">
+    <classNode dependClassName="com.intellij.openapi.actionSystem.AnActionEvent" />
+    <classNode dependClassName="java.awt.Frame" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.Throwable" />
+    <classNode dependClassName="java.util.HashSet" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="javax.swing.Icon" />
+    <classNode dependClassName="javax.swing.JOptionPane" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.MapSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.SetSequence" />
+    <classNode dependClassName="jetbrains.mps.logging.Logger" />
+    <classNode dependClassName="jetbrains.mps.project.IModule" />
+    <classNode dependClassName="jetbrains.mps.smodel.Language" />
+    <classNode dependClassName="jetbrains.mps.smodel.LanguageID" />
+    <classNode dependClassName="jetbrains.mps.smodel.SModelDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.SModelOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SModelReference" />
+    <classNode dependClassName="jetbrains.mps.smodel.SModelRepository" />
+    <classNode dependClassName="jetbrains.mps.smodel.SModelStereotype" />
+    <classNode dependClassName="jetbrains.mps.smodel.descriptor.EditableSModelDescriptor" />
+    <classNode dependClassName="jetbrains.mps.workbench.MPSDataKeys" />
+    <classNode dependClassName="org.jetbrains.annotations.NotNull" />
+    <classNode extendsClassName="jetbrains.mps.plugins.pluginparts.actions.GeneratedAction" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.smodel.plugin.CustomViewersInitializer_CustomApplicationPlugin" file="CustomViewersInitializer_CustomApplicationPlugin.java">
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.debug.customViewers.CustomViewersManager" />
+    <classNode dependClassName="jetbrains.mps.debug.runtime.java.programState.proxies.ValueWrapperFactory" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.plugin.SNodeViewer_WrapperFactory" />
+    <classNode dependClassName="jetbrains.mps.logging.Logger" />
+    <classNode extendsClassName="jetbrains.mps.plugins.pluginparts.custom.BaseCustomApplicationPlugin" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.smodel.plugin.LanguageInternalAddition_ActionGroup" file="LanguageInternalAddition_ActionGroup.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.Throwable" />
+    <classNode dependClassName="jetbrains.mps.logging.Logger" />
+    <classNode extendsClassName="jetbrains.mps.plugins.pluginparts.actions.GeneratedActionGroup" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.smodel.plugin.SNodeViewer_WrapperFactory" file="SNodeViewer_WrapperFactory.java">
+    <classNode dependClassName="com.sun.jdi.Value" />
+    <classNode dependClassName="java.lang.Boolean" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.Collections" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.debug.evaluation.EvaluationException" />
+    <classNode dependClassName="jetbrains.mps.debug.evaluation.EvaluationUtils" />
+    <classNode dependClassName="jetbrains.mps.debug.evaluation.proxies.IArrayValueProxy" />
+    <classNode dependClassName="jetbrains.mps.debug.evaluation.proxies.IObjectValueProxy" />
+    <classNode dependClassName="jetbrains.mps.debug.evaluation.proxies.MirrorUtil" />
+    <classNode dependClassName="jetbrains.mps.debug.evaluation.proxies.ProxyEqualsUtil" />
+    <classNode dependClassName="jetbrains.mps.debug.runtime.java.programState.proxies.JavaObjectValue" />
+    <classNode dependClassName="jetbrains.mps.debug.runtime.java.programState.proxies.JavaValue" />
+    <classNode dependClassName="jetbrains.mps.debug.runtime.java.programState.watchables.CustomJavaWatchable" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.plugin.SNodeWatchables" />
+    <classNode dependClassName="org.jetbrains.annotations.NotNull" />
+    <classNode extendsClassName="jetbrains.mps.debug.runtime.java.programState.proxies.ValueWrapper" />
+    <classNode extendsClassName="jetbrains.mps.debug.runtime.java.programState.proxies.ValueWrapperFactory" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.smodel.plugin.SNodeWatchables" file="SNodeWatchables.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.debug.api.programState.WatchablesCategory" />
+    <classNode dependClassName="jetbrains.mps.debug.runtime.java.programState.proxies.JavaValue" />
+    <classNode extendsClassName="jetbrains.mps.debug.runtime.java.programState.watchables.CustomJavaWatchable" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.smodel.plugin.Smodel_ApplicationPlugin" file="Smodel_ApplicationPlugin.java">
+    <classNode dependClassName="com.intellij.openapi.extensions.PluginId" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.ide.actions.LanguageActions_ActionGroup" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.plugin.CheckLangForJavaStubModels_Action" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.plugin.CustomViewersInitializer_CustomApplicationPlugin" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.plugin.LanguageInternalAddition_ActionGroup" />
+    <classNode dependClassName="jetbrains.mps.plugins.pluginparts.custom.BaseCustomApplicationPlugin" />
+    <classNode extendsClassName="jetbrains.mps.plugins.applicationplugins.BaseApplicationPlugin" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.smodel.plugin.Smodel_ProjectPlugin" file="Smodel_ProjectPlugin.java">
+    <classNode extendsClassName="jetbrains.mps.plugins.projectplugins.BaseProjectPlugin" />
+  </dependency>
+</dependenciesRoot>
+

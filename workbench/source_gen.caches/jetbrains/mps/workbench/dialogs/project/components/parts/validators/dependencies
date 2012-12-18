@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.workbench.dialogs.project.components.parts.validators.ModelValidator" file="ModelValidator.java">
+    <classNode dependClassName="com.intellij.openapi.util.Computable" />
+    <classNode dependClassName="java.lang.Boolean" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="jetbrains.mps.smodel.IScope" />
+    <classNode dependClassName="jetbrains.mps.smodel.ModelAccess" />
+    <classNode dependClassName="jetbrains.mps.smodel.SModelReference" />
+    <classNode extendsClassName="jetbrains.mps.workbench.dialogs.project.components.parts.validators.Validator" />
+  </dependency>
+  <dependency className="jetbrains.mps.workbench.dialogs.project.components.parts.validators.ModuleValidator" file="ModuleValidator.java">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="jetbrains.mps.project.structure.modules.ModuleReference" />
+    <classNode dependClassName="jetbrains.mps.smodel.MPSModuleRepository" />
+    <classNode extendsClassName="jetbrains.mps.workbench.dialogs.project.components.parts.validators.Validator" />
+  </dependency>
+  <dependency className="jetbrains.mps.workbench.dialogs.project.components.parts.validators.Validator" file="Validator.java">
+    <classNode dependClassName="java.lang.Object" />
+  </dependency>
+</dependenciesRoot>
+

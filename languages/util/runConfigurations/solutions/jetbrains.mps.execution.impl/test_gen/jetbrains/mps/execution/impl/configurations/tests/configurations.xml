@@ -1,0 +1,43 @@
+<root>
+  <configuration default="false" name="Test old" type="JavaApplication" factoryName="Java Application">
+    <MyState>
+      <option name="myJavaRunParameters">
+        <ConfigRunParameters>
+          <option name="name1" value="value1 old" />
+          <option name="name2" value="value2 old" />
+        </ConfigRunParameters>
+      </option>
+      <option name="modelId" value="modelIdValue old" />
+      <option name="nodeId" value="nodeIdValue old" />
+    </MyState>
+  </configuration>
+  <configuration default="false" name="Test old" type="balh blah blah" factoryName="I said blah blah blah">
+    <MyState>
+      <option name="myJavaRunParameters">
+        <ConfigRunParameters>
+          <option name="name1" value="value1 blah" />
+          <option name="name2" value="value2 blah" />
+        </ConfigRunParameters>
+      </option>
+      <option name="modelId" value="modelIdValue blah" />
+      <option name="nodeId" value="nodeIdValue blah" />
+    </MyState>
+  </configuration>
+  <configuration default="false" name="Test new" type="Java Application" factoryName="Java">
+    <MyState />
+    <myRunParameters>
+      <MyState>
+        <option name="myJavaRunParameters">
+          <option name="name1" value="value1 new" />
+          <option name="name2" value="value2 new" />
+        </option>
+      </MyState>
+    </myRunParameters>
+    <myNode>
+      <MyState>
+        <option name="modelId" value="modelIdValue new" />
+        <option name="nodeId" value="nodeIdValue new" />
+      </MyState>
+    </myNode>
+  </configuration>
+</root>

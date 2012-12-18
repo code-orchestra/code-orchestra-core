@@ -1,0 +1,45 @@
+<project name="help-build">
+  <target name="repack.sources">
+    <fail unless="input.dir" message="Property input.dir unspecified." />
+    <fail unless="output.dir" message="Property output.dir unspecified." />
+    <copy todir="${output.dir}">
+      <mapper type="regexp" from="(.*)(/|\\)(src|sources|source|source_gen|source-api)(/|\\)(.*)" to="\5" />
+      <fileset dir="${input.dir}" />
+    </copy>
+  </target>
+  <target name="append.idea.version">
+    <property name="build.number.file" value="${input.dir}/build.number" />
+    <fail unless="mps_home" message="Property mps_home unspecified." />
+    <fail unless="input.dir" message="Property input.dir unspecified." />
+    <fail unless="output.dir" message="Property output.dir unspecified." />
+    <property file="${mps_home}/build.number" prefix="repo" />
+    <echo file="${build.number.file}" append="true">${line.separator}idea.platform.build.number=${repo.idea.platform.build.number}</echo>
+    <copy file="${build.number.file}" todir="${output.dir}" />
+  </target>
+  <target name="pack.mps.src">
+    <property name="tmpdir" value="${java.io.tmpdir}/MPS.src" />
+    <fail unless="deploy.dir" message="Property deploy.dir unspecified." />
+    <fail unless="build.number" message="Property build.number unspecified." />
+    <fail unless="output.dir" message="Property output.dir unspecified." />
+    <mkdir dir="${tmpdir}" />
+    <zip destfile="${output.dir}/${build.number}-src.zip" filesonly="true">
+      <zipfileset dir="${base_dir}" prefix="MPS">
+        <exclude name="${deploy.dir}/**" />
+        <exclude name="classes/**" />
+        <exclude name="**/*.class" />
+        <exclude name="**/*.bdp" />
+        <exclude name="**/*.pvk" />
+        <exclude name="**/*.spc" />
+        <exclude name="**/*.pw" />
+        <exclude name="**/sign/**" />
+        <exclude name="system/**" />
+        <exclude name="**/*.hprof" />
+        <exclude name="integrationBuild*" />
+        <exclude name=".git/**" />
+        <exclude name=".idea/workspace.xml" />
+        <exclude name="**/.idea/workspace.xml" />
+      </zipfileset>
+    </zip>
+    <delete dir="${tmpdir}" />
+  </target>
+</project>

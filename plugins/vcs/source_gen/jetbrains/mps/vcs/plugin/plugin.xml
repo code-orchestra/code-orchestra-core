@@ -1,0 +1,17 @@
+<!DOCTYPE idea-plugin
+  PUBLIC
+    "Plugin/DTD"
+    "http://plugins.intellij.net/plugin.dtd"
+>
+<idea-plugin xmlns:xi="http://www.w3.org/2001/XInclude"><id>jetbrains.mps.vcs</id>
+<name>VCS Integration for MPS</name>
+<description>VCS features in MPS</description>
+<version>2.0</version>
+<vendor url="http://www.jetbrains.com/mps/">JetBrains</vendor>
+<idea-version since-build="3000"></idea-version>
+
+
+<application-components><component><implementation-class>jetbrains.mps.vcs.plugin.Vcs_PluginInitializer</implementation-class>
+</component>
+</application-components>
+</idea-plugin>

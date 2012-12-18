@@ -1,0 +1,17 @@
+<!DOCTYPE idea-plugin
+  PUBLIC
+    "Plugin/DTD"
+    "http://plugins.intellij.net/plugin.dtd"
+>
+<idea-plugin xmlns:xi="http://www.w3.org/2001/XInclude"><id>jebrains.mps.ide.java</id>
+<name>Java Integration</name>
+<description>Allows importing sources from Java into MPS</description>
+<version>2.0</version>
+<vendor url="http://www.jetbrains.com/mps/">JetBrains</vendor>
+<idea-version since-build="3000"></idea-version>
+
+
+<application-components><component><implementation-class>jetbrains.mps.ide.java.actions.Java_PluginInitializer</implementation-class>
+</component>
+</application-components>
+</idea-plugin>

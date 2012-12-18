@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.baseLanguage.math.runtime.BigComplex" file="BigComplex.java">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.math.BigDecimal" />
+    <classNode dependClassName="java.math.MathContext" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.math.runtime.Complex" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.math.runtime.MathRuntime" />
+    <classNode extendsClassName="java.lang.Number" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.math.runtime.BigComplexScalarOperations" file="BigComplexScalarOperations.java">
+    <classNode dependClassName="java.lang.ClassCastException" />
+    <classNode dependClassName="java.lang.Number" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.math.BigDecimal" />
+    <classNode dependClassName="java.math.BigInteger" />
+    <classNode dependClassName="java.math.MathContext" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.math.runtime.BigComplex" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.math.runtime.Complex" />
+    <classNode extendsClassName="jetbrains.mps.baseLanguage.math.runtime.MatrixScalarOperations" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.math.runtime.BigDecimalScalarOperations" file="BigDecimalScalarOperations.java">
+    <classNode dependClassName="java.lang.ClassCastException" />
+    <classNode dependClassName="java.lang.Number" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.math.BigDecimal" />
+    <classNode dependClassName="java.math.BigInteger" />
+    <classNode dependClassName="java.math.MathContext" />
+    <classNode extendsClassName="jetbrains.mps.baseLanguage.math.runtime.MatrixScalarOperations" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.math.runtime.Complex" file="Complex.java">
+    <classNode dependClassName="java.lang.Math" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode extendsClassName="java.lang.Number" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.math.runtime.Interval" file="Interval.java">
+    <classNode dependClassName="java.lang.Byte" />
+    <classNode dependClassName="java.lang.Character" />
+    <classNode dependClassName="java.lang.Class" />
+    <classNode dependClassName="java.lang.Comparable" />
+    <classNode dependClassName="java.lang.IllegalArgumentException" />
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.Long" />
+    <classNode dependClassName="java.lang.Short" />
+    <classNode dependClassName="java.lang.UnsupportedOperationException" />
+    <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="java.util.Iterator" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode extendsClassName="java.lang.Iterable" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.math.runtime.MathRuntime" file="MathRuntime.java">
+    <classNode dependClassName="java.lang.Math" />
+    <classNode dependClassName="java.math.BigDecimal" />
+    <classNode dependClassName="java.math.BigInteger" />
+    <classNode dependClassName="java.math.MathContext" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.math.runtime.Matrix" file="Matrix.java">
+    <classNode dependClassName="java.lang.ArithmeticException" />
+    <classNode dependClassName="java.lang.Byte" />
+    <classNode dependClassName="java.lang.ClassCastException" />
+    <classNode dependClassName="java.lang.Comparable" />
+    <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Float" />
+    <classNode dependClassName="java.lang.IllegalArgumentException" />
+    <classNode dependClassName="java.lang.IndexOutOfBoundsException" />
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.Long" />
+    <classNode dependClassName="java.lang.Math" />
+    <classNode dependClassName="java.lang.Number" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.Short" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="java.math.BigDecimal" />
+    <classNode dependClassName="java.math.BigInteger" />
+    <classNode dependClassName="java.math.MathContext" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.math.runtime.BigComplex" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.math.runtime.BigDecimalScalarOperations" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.math.runtime.Complex" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.math.runtime.MathRuntime" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.math.runtime.MatrixOperation" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.math.runtime.MatrixScalarOperations" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.math.runtime.NormKind" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.math.runtime.MatrixOperation" file="MatrixOperation.java" />
+  <dependency className="jetbrains.mps.baseLanguage.math.runtime.MatrixScalarOperations" file="MatrixScalarOperations.java">
+    <classNode dependClassName="java.lang.Object" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.math.runtime.NormKind" file="NormKind.java" />
+</dependenciesRoot>
+

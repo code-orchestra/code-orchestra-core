@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.baseLanguage.dates.runtime.table.BaseFormatTable" file="BaseFormatTable.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="org.joda.time.format.DateTimeFormatter" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.dates.runtime.table.BasePeriodFormatTable" file="BasePeriodFormatTable.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="org.joda.time.format.PeriodFormatter" />
+  </dependency>
+</dependenciesRoot>
+

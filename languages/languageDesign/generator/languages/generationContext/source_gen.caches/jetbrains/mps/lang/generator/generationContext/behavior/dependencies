@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.lang.generator.generationContext.behavior.BehaviorAspectDescriptor" file="BehaviorAspectDescriptor.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.Arrays" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_CreateUniqueName_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_DirtyNode_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_GenParameterRef_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_GetCopiedOutputByInput_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_GetInputModel_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_GetInvocationContext_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_GetOriginalCopiedInputByOutput_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_GetOriginalInputModel_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_GetOutputByLabelAndInputAndReferenceScope_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_GetOutputByLabelAndInput_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_GetOutputByLabel_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_GetOutputListByLabelAndInput_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_GetOutputModel_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_GetPrevInputByLabel_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_GetScope_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_GetTemplateNode_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_LinkPatternRef_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_NodePatternRef_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_ParameterRef_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_PropertyPatternRef_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_SessionObjectAccess_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_ShowErrorMessage_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_ShowInfoMessage_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_ShowWarningMessage_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_StepObjectAccess_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_TransientObjectAccess_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextType_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.TemplateFunctionParameter_generationContext_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.runtime.BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.runtime.interpreted.BehaviorAspectInterpreted" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.BehaviorAspectDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_Base_BehaviorDescriptor" file="GenerationContextOp_Base_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.behavior.IOperation_Behavior" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.behavior.IOperation_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_CreateUniqueName_BehaviorDescriptor" file="GenerationContextOp_CreateUniqueName_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_Base_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_DirtyNode_BehaviorDescriptor" file="GenerationContextOp_DirtyNode_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_Base_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_GenParameterRef_BehaviorDescriptor" file="GenerationContextOp_GenParameterRef_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_Base_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_GetCopiedOutputByInput_BehaviorDescriptor" file="GenerationContextOp_GetCopiedOutputByInput_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_Base_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_GetInputModel_BehaviorDescriptor" file="GenerationContextOp_GetInputModel_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_Base_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_GetInvocationContext_BehaviorDescriptor" file="GenerationContextOp_GetInvocationContext_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_Base_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_GetOriginalCopiedInputByOutput_BehaviorDescriptor" file="GenerationContextOp_GetOriginalCopiedInputByOutput_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_Base_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_GetOriginalInputModel_BehaviorDescriptor" file="GenerationContextOp_GetOriginalInputModel_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_Base_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_GetOutputByLabelAndInputAndReferenceScope_BehaviorDescriptor" file="GenerationContextOp_GetOutputByLabelAndInputAndReferenceScope_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_Base_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_GetOutputByLabelAndInput_BehaviorDescriptor" file="GenerationContextOp_GetOutputByLabelAndInput_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_Base_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_GetOutputByLabel_BehaviorDescriptor" file="GenerationContextOp_GetOutputByLabel_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_Base_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_GetOutputListByLabelAndInput_BehaviorDescriptor" file="GenerationContextOp_GetOutputListByLabelAndInput_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_Base_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_GetOutputModel_BehaviorDescriptor" file="GenerationContextOp_GetOutputModel_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_Base_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_GetPrevInputByLabel_BehaviorDescriptor" file="GenerationContextOp_GetPrevInputByLabel_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_Base_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_GetScope_BehaviorDescriptor" file="GenerationContextOp_GetScope_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_Base_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_GetTemplateNode_BehaviorDescriptor" file="GenerationContextOp_GetTemplateNode_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_Base_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_LinkPatternRef_Behavior" file="GenerationContextOp_LinkPatternRef_Behavior.java">
+    <classNode dependClassName="java.lang.Class" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.smodel.behaviour.BehaviorManager" />
+    <classNode dependClassName="jetbrains.mps.smodel.structure.BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.structure.ConceptRegistry" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_LinkPatternRef_BehaviorDescriptor" file="GenerationContextOp_LinkPatternRef_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_LinkPatternRef_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_PatternRef_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_NodePatternRef_Behavior" file="GenerationContextOp_NodePatternRef_Behavior.java">
+    <classNode dependClassName="java.lang.Class" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.smodel.behaviour.BehaviorManager" />
+    <classNode dependClassName="jetbrains.mps.smodel.structure.BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.structure.ConceptRegistry" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_NodePatternRef_BehaviorDescriptor" file="GenerationContextOp_NodePatternRef_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_NodePatternRef_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_PatternRef_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_ParameterRef_BehaviorDescriptor" file="GenerationContextOp_ParameterRef_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_Base_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_PatternRef_Behavior" file="GenerationContextOp_PatternRef_Behavior.java">
+    <classNode dependClassName="java.lang.Class" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.smodel.behaviour.BehaviorManager" />
+    <classNode dependClassName="jetbrains.mps.smodel.structure.BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.structure.ConceptRegistry" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_PatternRef_BehaviorDescriptor" file="GenerationContextOp_PatternRef_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_Base_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_PropertyPatternRef_Behavior" file="GenerationContextOp_PropertyPatternRef_Behavior.java">
+    <classNode dependClassName="java.lang.Class" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.smodel.behaviour.BehaviorManager" />
+    <classNode dependClassName="jetbrains.mps.smodel.structure.BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.structure.ConceptRegistry" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_PropertyPatternRef_BehaviorDescriptor" file="GenerationContextOp_PropertyPatternRef_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_PatternRef_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_PropertyPatternRef_Behavior" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_SessionObjectAccess_BehaviorDescriptor" file="GenerationContextOp_SessionObjectAccess_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_UserObjectAccessBase_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_ShowErrorMessage_BehaviorDescriptor" file="GenerationContextOp_ShowErrorMessage_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_ShowMessageBase_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_ShowInfoMessage_BehaviorDescriptor" file="GenerationContextOp_ShowInfoMessage_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_ShowMessageBase_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_ShowMessageBase_BehaviorDescriptor" file="GenerationContextOp_ShowMessageBase_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_Base_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_ShowWarningMessage_BehaviorDescriptor" file="GenerationContextOp_ShowWarningMessage_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_ShowMessageBase_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_StepObjectAccess_BehaviorDescriptor" file="GenerationContextOp_StepObjectAccess_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_UserObjectAccessBase_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_TransientObjectAccess_BehaviorDescriptor" file="GenerationContextOp_TransientObjectAccess_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_UserObjectAccessBase_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_UserObjectAccessBase_Behavior" file="GenerationContextOp_UserObjectAccessBase_Behavior.java">
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_UserObjectAccessBase_BehaviorDescriptor" file="GenerationContextOp_UserObjectAccessBase_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextOp_Base_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.generationContext.behavior.GenerationContextType_BehaviorDescriptor" file="GenerationContextType_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.behavior.Type_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.generationContext.behavior.TemplateFunctionParameter_generationContext_BehaviorDescriptor" file="TemplateFunctionParameter_generationContext_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.behavior.ConceptFunctionParameter_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+</dependenciesRoot>
+

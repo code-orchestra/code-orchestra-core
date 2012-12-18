@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.baseLanguage.dates.runtime.printer.CompositePrinter" file="CompositePrinter.java">
+    <classNode dependClassName="java.io.IOException" />
+    <classNode dependClassName="java.lang.Appendable" />
+    <classNode dependClassName="java.util.LinkedList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Locale" />
+    <classNode dependClassName="org.joda.time.DateTime" />
+    <classNode extendsClassName="jetbrains.mps.baseLanguage.dates.runtime.printer.Printer" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.dates.runtime.printer.ConditionalPrinter" file="ConditionalPrinter.java">
+    <classNode dependClassName="java.io.IOException" />
+    <classNode dependClassName="java.lang.Appendable" />
+    <classNode dependClassName="java.lang.Math" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Locale" />
+    <classNode dependClassName="org.joda.time.DateTime" />
+    <classNode extendsClassName="jetbrains.mps.baseLanguage.dates.runtime.printer.Printer" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.dates.runtime.printer.LiteralPrinter" file="LiteralPrinter.java">
+    <classNode dependClassName="java.io.IOException" />
+    <classNode dependClassName="java.lang.Appendable" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.Locale" />
+    <classNode dependClassName="org.joda.time.DateTime" />
+    <classNode extendsClassName="jetbrains.mps.baseLanguage.dates.runtime.printer.Printer" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.dates.runtime.printer.Printer" file="Printer.java">
+    <classNode dependClassName="java.io.IOException" />
+    <classNode dependClassName="java.lang.Appendable" />
+    <classNode dependClassName="java.util.Locale" />
+    <classNode dependClassName="org.joda.time.DateTime" />
+  </dependency>
+</dependenciesRoot>
+

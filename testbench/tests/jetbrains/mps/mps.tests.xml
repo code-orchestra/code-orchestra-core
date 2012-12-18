@@ -1,0 +1,220 @@
+<project name="mps.tests" default="all">
+  <property name="mps.home" value="${ant.file.mps.tests}/../../../../.."/>
+  <import file="${mps.home}/languages/util/gwtsupport/solutions/gwtsupport.buildtest/build.xml"/>
+
+  <taskdef resource="jetbrains/mps/build/ant/antlib.xml"
+           classpath="${mps.home}/languages/util/buildlanguage/ant/classes"/>
+
+  <target name="all" depends="generation.tests,broken.references.test,gwtsupport.buildtest.build"/>
+  <target name="all.bymodule" depends="bymodule.generation.tests,broken.references.test,gwtsupport.buildtest.build"/>
+
+  <jvmargs id="mps.args">
+    <arg value="-Xss1024k"/>
+    <arg value="-Xmx1000m"/>
+    <arg value="-XX:MaxPermSize=92m"/>
+    <arg value="-XX:+HeapDumpOnOutOfMemoryError"/>
+  </jvmargs>
+
+  <jvmargs id="mps.args.yjp">
+    <arg value="-Xss1024k"/>
+    <arg value="-Xmx1536m"/>
+    <arg value="-XX:MaxPermSize=128m"/>
+    <arg value="-XX:+HeapDumpOnOutOfMemoryError"/>
+    <arg value="-agentpath:/opt/yjp/yjp-9.0.7/bin/linux-x86-64/libyjpagent.so=sampling,delay=10000,noj2ee,onexit=snapshot"/>
+  </jvmargs>
+
+  <jvmargs id="debug.args">
+    <arg value="-Xdebug"/>
+    <arg value="-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005"/>
+  </jvmargs>
+
+  <jvmargs id="profile.args">
+    <arg value="-agentlib:yjpagent"/>
+  </jvmargs>
+
+  <jvmargs id="mps.debug.args">
+    <jvmargs refid="mps.args"/>
+    <jvmargs refid="debug.args"/>
+  </jvmargs>
+
+  <jvmargs id="mps.profile.args">
+    <jvmargs refid="mps.args"/>
+    <jvmargs refid="profile.args"/>
+  </jvmargs>
+
+  <patternset id="excluded.modules">
+    <exclude name="**/classes/**"/>
+    <exclude name="**/classes_gen/**"/>
+    <exclude name="**/lib/**"/>
+    <exclude name="**/testRefactoring/**"/>
+    <exclude name="**/**transformationTest**/**"/>
+    <exclude name="**/**testLogger**/**"/>
+    <exclude name="**/**sandbox**/**"/>
+    <exclude name="**/**Sandbox**/**"/>
+    <include name="**/**.mpl"/>
+    <include name="**/**.msd"/>
+    <exclude name="**/resolve.msd"/>
+  </patternset>
+
+  <target name="test.test">
+    <mps.test.generation fork="true" compile="true" showdiff="true" invoketests="${invoke.tests}" loglevel="info"
+                         useperrootgeneration="${per.root.generation}" saveondisk="${save.on.disk}">
+      <jvmargs refid="mps.debug.args"/>
+      <modules dir="${mps.home}/core/baseLanguage/">
+        <patternset refid="excluded.modules"/>
+      </modules>
+      <!--<model file="${mps.home}/core/languageDesign/smodelTests/solutions/jetbrains.mps.smodel.test/jetbrains/mps/smodel/test/smodelOperations.mps"/>-->
+      <!--<project file="${mps.home}/core/baseLanguage/baseLanguage/baseLanguage.mpr"/>-->
+    </mps.test.generation>
+  </target>
+
+  <target name="make">
+    <mps.make fork="true" loglevel="info">
+      <jvmargs refid="mps.args"/>
+      <macro name="samples_home" path="${mps.home}/samples"/>
+      <modules dir="${mps.home}">
+        <patternset refid="excluded.modules"/>
+      </modules>
+    </mps.make>
+  </target>
+
+  <target name="bymodule.generation.tests" depends="make">
+    <mps.test.generation fork="true" compile="true" showdiff="true" invoketests="${invoke.tests}" loglevel="info"
+                         useperrootgeneration="${per.root.generation}" saveondisk="${save.on.disk}">
+      <jvmargs refid="mps.args"/>
+      <perfomancereport file="${mps.home}/generation.baseLanguage.perfomance"/>
+
+      <modules dir="${mps.home}/core/baseLanguage/">
+        <patternset refid="excluded.modules"/>
+      </modules>
+    </mps.test.generation>
+    <mps.test.generation fork="true" compile="true" showdiff="true" invoketests="${invoke.tests}" loglevel="info"
+                         useperrootgeneration="${per.root.generation}" saveondisk="${save.on.disk}">
+      <jvmargs refid="mps.args"/>
+      <perfomancereport file="${mps.home}/generation.languageDesign.perfomance"/>
+      <modules dir="${mps.home}/core/languageDesign/">
+        <patternset refid="excluded.modules"/>
+      </modules>
+    </mps.test.generation>
+    <mps.test.generation fork="true" compile="true" showdiff="true" invoketests="${invoke.tests}" loglevel="info"
+                         useperrootgeneration="${per.root.generation}" saveondisk="${save.on.disk}">
+      <jvmargs refid="mps.args"/>
+      <perfomancereport file="${mps.home}/generation.platform.perfomance"/>
+      <modules dir="${mps.home}/languages/util/">
+        <patternset refid="excluded.modules"/>
+        <exclude name="**/**mpsautobuild.msd"/>
+      </modules>
+    </mps.test.generation>
+    <mps.test.generation fork="true" compile="false" showdiff="false" invoketests="false" loglevel="info"
+                         useperrootgeneration="${per.root.generation}" saveondisk="${save.on.disk}">
+      <jvmargs refid="mps.args"/>
+      <model file="${mps.home}/languages/util/buildlanguage/solutions/jetbrains.mps.buildlangauge.mpsautobuild/jetbrains/mps/build/mpsautobuild.mps"/>
+    </mps.test.generation>
+    <mps.test.generation fork="true" compile="true" showdiff="true" invoketests="${invoke.tests}" loglevel="info"
+                         useperrootgeneration="${per.root.generation}" saveondisk="${save.on.disk}">
+      <jvmargs refid="mps.args"/>
+      <perfomancereport file="${mps.home}/generation.kernel.samples.perfomance"/>
+      <modules dir="${mps.home}/core/kernel/">
+        <patternset refid="excluded.modules"/>
+      </modules>
+      <modules dir="${mps.home}/samples/">
+        <patternset refid="excluded.modules"/>
+      </modules>
+    </mps.test.generation>
+  </target>
+
+
+  <target name="generation.tests" depends="make">
+    <mps.test.generation fork="true" compile="true" showdiff="true" invoketests="${invoke.tests}" loglevel="info"
+                         useperrootgeneration="${per.root.generation}" saveondisk="${save.on.disk}">
+      <jvmargs refid="mps.args"/>
+      <macro name="samples_home" path="${mps.home}/samples"/>
+      <perfomancereport file="${mps.home}/generation.perfomance"/>
+
+      <!-- Bootstrap tests -->
+      <project file="${mps.home}/core/baseLanguage/baseLanguage/baseLanguage.mpr"/>
+      <project file="${mps.home}/core/baseLanguage/baseLanguageInternal/baseLanguageInternal.mpr"/>
+      <project file="${mps.home}/core/baseLanguage/closures/closures.mpr"/>
+      <project file="${mps.home}/core/baseLanguage/collections/collections.mpr"/>
+      <project file="${mps.home}/core/baseLanguage/javadoc/javadoc.mpr"/>
+      <project file="${mps.home}/core/baseLanguage/logging/logging.mpr"/>
+      <project file="${mps.home}/core/baseLanguage/tuples/tuples.mpr"/>
+      <project file="${mps.home}/core/languageDesign/actions/actions.mpr"/>
+      <project file="${mps.home}/core/languageDesign/annotations/annotations.mpr"/>
+      <project file="${mps.home}/core/languageDesign/behavior/behavior.mpr"/>
+      <project file="${mps.home}/core/languageDesign/constraints/constraints.mpr"/>
+      <project file="${mps.home}/languages/languageDesign/core/core.mpr"/>
+      <project file="${mps.home}/core/languageDesign/dataFlow/dataFlow.mpr"/>
+      <project file="${mps.home}/core/languageDesign/editor/editor.mpr"/>
+      <project file="${mps.home}/core/languageDesign/findUsages/findUsages.mpr"/>
+      <project file="${mps.home}/languages/languageDesign/generator/generator.mpr"/>
+      <project file="${mps.home}/core/languageDesign/intentions/intentions.mpr"/>
+      <project file="${mps.home}/core/languageDesign/pattern/pattern.mpr"/>
+      <project file="${mps.home}/core/languageDesign/plugin/plugin.mpr"/>
+      <project file="${mps.home}/core/languageDesign/quotation/quotation.mpr"/>
+      <project file="${mps.home}/core/languageDesign/refactoring/refactoring.mpr"/>
+      <project file="${mps.home}/core/languageDesign/script/script.mpr"/>
+      <project file="${mps.home}/core/languageDesign/sharedConcepts/sharedConcepts.mpr"/>
+      <project file="${mps.home}/core/languageDesign/smodel/smodel.mpr"/>
+      <project file="${mps.home}/core/languageDesign/structure/structure.mpr"/>
+      <project file="${mps.home}/core/languageDesign/stubs/stubs.mpr"/>
+      <project file="${mps.home}/core/languageDesign/test/test.mpr"/>
+      <project file="${mps.home}/core/languageDesign/typesystem/typesystem.mpr"/>
+      <project file="${mps.home}/languages/util/builders/builders.mpr"/>
+      <project file="${mps.home}/languages/util/buildlanguage/BuildLanguage.mpr"/>
+      <project file="${mps.home}/languages/util/gtext/gtext.mpr"/>
+      <project file="${mps.home}/languages/util/extensionMethod/MethodExtension.mpr"/>
+      <project file="${mps.home}/languages/util/regexp/regexp.mpr"/>
+      <project file="${mps.home}/languages/util/xml/xml/xml.mpr"/>
+      <project file="${mps.home}/languages/util/xmlDeprecated/xmlDeprecated.mpr"/>
+      <project file="${mps.home}/languages/util/xmlUnitTest/xmlUnitTest.mpr"/>
+
+      <!-- Applications tests -->
+      <project file="${mps.home}/core/kernel/kernelSolution/kernel.mpr"/>
+      <project file="${mps.home}/core/debug/debugProject/debugProject.mpr"/>
+      <project file="${mps.home}/core/kernel/traceinfo/traceInfo.mpr"/>
+      <project file="${mps.home}/core/tests/testMake/testMake.mpr"/>
+      <project file="${mps.home}/core/languageDesign/mps-lite/mps-lite.mpr"/>
+      <project file="${mps.home}/languages/util/quickQueryLanguage/quickQueryLanguage.mpr"/>
+      <project file="${mps.home}/languages/util/uiLanguage/uiLanguage.mpr"/>
+      <project file="${mps.home}/languages/util/ypath/YPath.mpr"/>
+      <project file="${mps.home}/languages/util/dates/dates.mpr"/>
+      <project file="${mps.home}/core/baseLanguage/unitTest/unitTest.mpr"/>
+      <project file="${mps.home}/languages/util/math/mathLanguage.mpr"/>
+      <project file="${mps.home}/languages/util/money/MoneyLang.mpr"/>
+<!--
+      <project file="${mps.home}/languages/util/contracts/contracts.mpr"/>
+-->
+      <project file="${mps.home}/workbench/ideSolution/ide.mpr"/>
+
+      <!-- Samples -->
+      <project file="${mps.home}/samples/complexLanguage/Complex.mpr"/>
+      <project file="${mps.home}/samples/matrixLanguage/jetbrains.mps.matrixLanguage.mpr"/>
+      <project file="${mps.home}/samples/xmlLiterals/jetbrains.mps.samples.xmlLiterals.mpr"/>
+      <project file="${mps.home}/samples/agreement/agreement.mpr"/>
+      <project file="${mps.home}/samples/calculator-tutorial/calculator-tutorial.mpr"/>
+      <project file="${mps.home}/samples/dslbook_example/dslbook_example.mpr"/>
+      <project file="${mps.home}/samples/fixedLengthReader/fixedLengthReader.mpr"/>
+      <project file="${mps.home}/samples/formulaLanguage/formulaLanguage.mpr"/>
+      <project file="${mps.home}/samples/generator_demo/generator_demo.mpr"/>
+      <project file="${mps.home}/samples/sampleXML/sampleXML.mpr"/>
+      <project file="${mps.home}/samples/theSimplestLanguage/theSimplestLanguage.mpr"/>
+    </mps.test.generation>
+    <mps.test.generation fork="true" compile="false" showdiff="false" invoketests="false" loglevel="info"
+                         useperrootgeneration="${per.root.generation}" saveondisk="${save.on.disk}">
+      <jvmargs refid="mps.args"/>
+      <model file="${mps.home}/languages/util/buildlanguage/solutions/jetbrains.mps.buildlangauge.mpsautobuild/jetbrains/mps/build/mpsautobuild.mps"/>
+    </mps.test.generation>
+  </target>
+
+  <target name="broken.references.test">
+    <mps.test.broken.references fork="true" loglevel="info">
+      <jvmargs refid="mps.args"/>
+      <modules dir="${mps.home}">
+        <patternset refid="excluded.modules"/>
+      </modules>
+      <macro name="samples_home" path="${mps.home}/samples"/>
+    </mps.test.broken.references>
+  </target>
+
+</project>

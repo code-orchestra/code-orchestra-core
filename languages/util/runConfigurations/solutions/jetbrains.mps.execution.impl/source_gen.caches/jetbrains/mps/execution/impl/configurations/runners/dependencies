@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.execution.impl.configurations.runners.LegacyBeforeTaskProvider" file="LegacyBeforeTaskProvider.java">
+    <classNode dependClassName="com.intellij.execution.configurations.RunConfiguration" />
+    <classNode dependClassName="com.intellij.openapi.actionSystem.DataContext" />
+    <classNode dependClassName="com.intellij.openapi.actionSystem.PlatformDataKeys" />
+    <classNode dependClassName="com.intellij.openapi.project.Project" />
+    <classNode dependClassName="com.intellij.openapi.util.Key" />
+    <classNode dependClassName="java.lang.Boolean" />
+    <classNode dependClassName="java.lang.ClassCastException" />
+    <classNode dependClassName="java.lang.Deprecated" />
+    <classNode dependClassName="java.lang.IllegalAccessException" />
+    <classNode dependClassName="java.lang.NoSuchMethodException" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.reflect.InvocationTargetException" />
+    <classNode dependClassName="java.lang.reflect.Method" />
+    <classNode dependClassName="jetbrains.mps.util.annotation.ToRemove" />
+    <classNode dependClassName="org.apache.commons.logging.Log" />
+    <classNode dependClassName="org.apache.commons.logging.LogFactory" />
+    <classNode extendsClassName="com.intellij.execution.BeforeRunTask" />
+    <classNode extendsClassName="com.intellij.execution.BeforeRunTaskProvider" />
+  </dependency>
+  <dependency className="jetbrains.mps.execution.impl.configurations.runners.MPSProgramRunner" file="MPSProgramRunner.java">
+    <classNode dependClassName="com.intellij.execution.configurations.RunProfile" />
+    <classNode dependClassName="com.intellij.execution.executors.DefaultRunExecutor" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.execution.api.configurations.BaseMpsRunConfiguration" />
+    <classNode dependClassName="org.jetbrains.annotations.NotNull" />
+    <classNode extendsClassName="com.intellij.execution.runners.DefaultProgramRunner" />
+  </dependency>
+</dependenciesRoot>
+

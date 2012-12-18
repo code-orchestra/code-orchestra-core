@@ -1,0 +1,919 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.lang.generator.behavior.AbandonInput_RuleConsequence_BehaviorDescriptor" file="AbandonInput_RuleConsequence_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.RuleConsequence_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.AbstractMacro_BehaviorDescriptor" file="AbstractMacro_BehaviorDescriptor.java" />
+  <dependency className="jetbrains.mps.lang.generator.behavior.BaseMappingRule_Behavior" file="BaseMappingRule_Behavior.java">
+    <classNode dependClassName="java.lang.Class" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.StringBuilder" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.smodel.behaviour.BehaviorManager" />
+    <classNode dependClassName="jetbrains.mps.smodel.structure.BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.structure.ConceptRegistry" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.BaseMappingRule_BehaviorDescriptor" file="BaseMappingRule_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.BaseMappingRule_Behavior" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.BaseMappingRule_Condition_BehaviorDescriptor" file="BaseMappingRule_Condition_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.TemplateQueryBase_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.BehaviorAspectDescriptor" file="BehaviorAspectDescriptor.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.Arrays" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.AbandonInput_RuleConsequence_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.BaseMappingRule_Condition_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.CopySrcListMacro_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.CopySrcNodeMacro_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.CreateRootRule_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.CreateRootRule_Condition_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.DismissTopMappingRule_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.DropRootRule_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.DropRootRule_Condition_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.GeneratorDescriptor_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.GeneratorMessage_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.GeneratorParameterReference_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.IfMacro_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.IfMacro_Condition_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.IncludeMacro_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.InlineSwitch_Case_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.InlineSwitch_RuleConsequence_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.InlineTemplateWithContext_RuleConsequence_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.InlineTemplate_RuleConsequence_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.InsertMacro_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.InsertMacro_CreateNodeQuery_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.LabelMacro_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.LoopMacro_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.MapSrcListMacro_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.MapSrcMacro_MapperFunction_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.MapSrcMacro_PostMapperFunction_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.MapSrcNodeMacro_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.MappingConfiguration_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.MappingConfiguration_Condition_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.MappingLabelDeclaration_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.MappingScriptReference_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.MappingScript_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.MappingScript_CodeBlock_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.PatternReduction_MappingRule_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.PropertyMacro_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.PropertyMacro_GetPropertyValue_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.Reduction_MappingRule_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.ReferenceMacro_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.ReferenceMacro_GetReferent_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.RootTemplateAnnotation_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.Root_MappingRule_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.SourceSubstituteMacro_SourceNodeQuery_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.SourceSubstituteMacro_SourceNodesQuery_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.SwitchMacro_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.TemplateArgumentLinkPatternRefExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.TemplateArgumentParameterExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.TemplateArgumentPatternVarRefExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.TemplateArgumentPropertyPatternRefExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.TemplateArgumentQueryExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.TemplateArgumentQuery_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.TemplateCallMacro_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.TemplateDeclarationReference_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.TemplateDeclaration_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.TemplateFragment_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.TemplateFragment_ContextNodeQuery_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.TemplateFunctionParameter_mainContextNode_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.TemplateFunctionParameter_outputNode_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.TemplateFunctionParameter_parentOutputNode_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.TemplateFunctionParameter_sourceNode_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.TemplateFunctionParameter_templatePropertyValue_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.TemplateFunctionParameter_templateReferent_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.TemplateParameterDeclaration_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.TemplateSwitchReference_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.TemplateSwitch_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.WeaveEach_RuleConsequence_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.WeaveMacro_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.Weaving_MappingRule_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.Weaving_MappingRule_ContextNodeQuery_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.runtime.BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.runtime.interpreted.BehaviorAspectInterpreted" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.BehaviorAspectDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.CopySrcListMacro_Behavior" file="CopySrcListMacro_Behavior.java">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.typesystem.inference.TypeChecker" />
+    <classNode extendsClassName="jetbrains.mps.lang.pattern.GeneratedMatchingPattern" />
+    <classNode extendsClassName="jetbrains.mps.lang.pattern.IMatchingPattern" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.CopySrcListMacro_BehaviorDescriptor" file="CopySrcListMacro_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.CopySrcListMacro_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.SourceSubstituteMacro_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.CopySrcNodeMacro_Behavior" file="CopySrcNodeMacro_Behavior.java">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.typesystem.inference.TypeChecker" />
+    <classNode extendsClassName="jetbrains.mps.lang.pattern.GeneratedMatchingPattern" />
+    <classNode extendsClassName="jetbrains.mps.lang.pattern.IMatchingPattern" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.CopySrcNodeMacro_BehaviorDescriptor" file="CopySrcNodeMacro_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.CopySrcNodeMacro_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.SourceSubstituteMacro_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.CreateRootRule_Behavior" file="CreateRootRule_Behavior.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.StringBuilder" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.CreateRootRule_BehaviorDescriptor" file="CreateRootRule_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.CreateRootRule_Behavior" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.CreateRootRule_Condition_BehaviorDescriptor" file="CreateRootRule_Condition_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.TemplateQueryBase_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.DismissTopMappingRule_BehaviorDescriptor" file="DismissTopMappingRule_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.RuleConsequence_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.DropRootRule_BehaviorDescriptor" file="DropRootRule_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.DropRootRule_Condition_BehaviorDescriptor" file="DropRootRule_Condition_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.TemplateQueryBase_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.GeneratorDescriptor_Behavior" file="GeneratorDescriptor_Behavior.java">
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.GeneratorDescriptor_BehaviorDescriptor" file="GeneratorDescriptor_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.GeneratorMessage_BehaviorDescriptor" file="GeneratorMessage_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.GeneratorParameterReference_BehaviorDescriptor" file="GeneratorParameterReference_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.IGeneratorParameter_Behavior" file="IGeneratorParameter_Behavior.java">
+    <classNode dependClassName="java.lang.Class" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.smodel.behaviour.BehaviorManager" />
+    <classNode dependClassName="jetbrains.mps.smodel.structure.BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.structure.ConceptRegistry" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.IGeneratorParameter_BehaviorDescriptor" file="IGeneratorParameter_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.ITemplateCall_Behavior" file="ITemplateCall_Behavior.java">
+    <classNode dependClassName="java.lang.Class" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.smodel.behaviour.BehaviorManager" />
+    <classNode dependClassName="jetbrains.mps.smodel.structure.BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.structure.ConceptRegistry" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.ITemplateCall_BehaviorDescriptor" file="ITemplateCall_BehaviorDescriptor.java">
+    <classNode dependClassName="jetbrains.mps.baseLanguage.behavior.TypeDerivable_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.IfMacro_Behavior" file="IfMacro_Behavior.java">
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.IfMacro_BehaviorDescriptor" file="IfMacro_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.NodeMacro_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.IfMacro_Condition_BehaviorDescriptor" file="IfMacro_Condition_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.TemplateQueryBase_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.IncludeMacro_Behavior" file="IncludeMacro_Behavior.java">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.NodeMacro_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.typesystem.inference.TypeChecker" />
+    <classNode extendsClassName="jetbrains.mps.lang.pattern.GeneratedMatchingPattern" />
+    <classNode extendsClassName="jetbrains.mps.lang.pattern.IMatchingPattern" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.IncludeMacro_BehaviorDescriptor" file="IncludeMacro_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.IncludeMacro_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.SourceSubstituteMacro_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.InlineSwitch_Case_BehaviorDescriptor" file="InlineSwitch_Case_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.InlineSwitch_RuleConsequence_BehaviorDescriptor" file="InlineSwitch_RuleConsequence_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.RuleConsequence_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.InlineTemplateWithContext_RuleConsequence_BehaviorDescriptor" file="InlineTemplateWithContext_RuleConsequence_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.RuleConsequence_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.InlineTemplate_RuleConsequence_BehaviorDescriptor" file="InlineTemplate_RuleConsequence_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.RuleConsequence_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.InsertMacro_Behavior" file="InsertMacro_Behavior.java">
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.InsertMacro_BehaviorDescriptor" file="InsertMacro_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.NodeMacro_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.InsertMacro_CreateNodeQuery_BehaviorDescriptor" file="InsertMacro_CreateNodeQuery_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.TemplateQueryBase_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.LabelMacro_Behavior" file="LabelMacro_Behavior.java">
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.LabelMacro_BehaviorDescriptor" file="LabelMacro_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.NodeMacro_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.LoopMacro_Behavior" file="LoopMacro_Behavior.java">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.typesystem.inference.TypeChecker" />
+    <classNode extendsClassName="jetbrains.mps.lang.pattern.GeneratedMatchingPattern" />
+    <classNode extendsClassName="jetbrains.mps.lang.pattern.IMatchingPattern" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.LoopMacro_BehaviorDescriptor" file="LoopMacro_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.LoopMacro_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.SourceSubstituteMacro_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.MapSrcListMacro_Behavior" file="MapSrcListMacro_Behavior.java">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.typesystem.inference.TypeChecker" />
+    <classNode extendsClassName="jetbrains.mps.lang.pattern.GeneratedMatchingPattern" />
+    <classNode extendsClassName="jetbrains.mps.lang.pattern.IMatchingPattern" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.MapSrcListMacro_BehaviorDescriptor" file="MapSrcListMacro_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.MapSrcListMacro_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.SourceSubstituteMacro_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.MapSrcMacro_MapperFunction_BehaviorDescriptor" file="MapSrcMacro_MapperFunction_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.TemplateQueryBase_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.MapSrcMacro_PostMapperFunction_BehaviorDescriptor" file="MapSrcMacro_PostMapperFunction_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.TemplateQueryBase_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.MapSrcNodeMacro_BehaviorDescriptor" file="MapSrcNodeMacro_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.SourceSubstituteMacro_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.MappingConfiguration_Behavior" file="MappingConfiguration_Behavior.java">
+    <classNode dependClassName="java.lang.Boolean" />
+    <classNode dependClassName="java.lang.Class" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.AttributeOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.IAttributeDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.smodel.behaviour.BehaviorManager" />
+    <classNode dependClassName="jetbrains.mps.smodel.structure.BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.structure.ConceptRegistry" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.MappingConfiguration_BehaviorDescriptor" file="MappingConfiguration_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.behavior.IMemberContainer_Behavior" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.behavior.IMemberContainer_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.MappingConfiguration_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.structure.behavior.IConceptAspect_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.structure.behavior.IConceptAspect_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.MappingConfiguration_Condition_BehaviorDescriptor" file="MappingConfiguration_Condition_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.TemplateQueryBase_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.MappingLabelDeclaration_BehaviorDescriptor" file="MappingLabelDeclaration_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.MappingScriptReference_BehaviorDescriptor" file="MappingScriptReference_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.MappingScript_BehaviorDescriptor" file="MappingScript_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.MappingScript_CodeBlock_BehaviorDescriptor" file="MappingScript_CodeBlock_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.TemplateQueryBase_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.NodeMacro_Behavior" file="NodeMacro_Behavior.java">
+    <classNode dependClassName="java.lang.Character" />
+    <classNode dependClassName="java.lang.Class" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.StringBuilder" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.AttributeOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.IAttributeDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.smodel.behaviour.BehaviorManager" />
+    <classNode dependClassName="jetbrains.mps.smodel.structure.BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.structure.ConceptRegistry" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.NodeMacro_BehaviorDescriptor" file="NodeMacro_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.NodeAttribute_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.AbstractMacro_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.NodeMacro_Behavior" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.PatternReduction_MappingRule_Behavior" file="PatternReduction_MappingRule_Behavior.java">
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.PatternReduction_MappingRule_BehaviorDescriptor" file="PatternReduction_MappingRule_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.ReductionRule_BehaviorDescriptor" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.PropertyMacro_BehaviorDescriptor" file="PropertyMacro_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.PropertyAttribute_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.AbstractMacro_BehaviorDescriptor" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.PropertyMacro_GetPropertyValue_Behavior" file="PropertyMacro_GetPropertyValue_Behavior.java">
+    <classNode dependClassName="java.util.HashSet" />
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.AttributeOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.structure.behavior.DataTypeDeclaration_Behavior" />
+    <classNode dependClassName="jetbrains.mps.project.GlobalScope" />
+    <classNode dependClassName="jetbrains.mps.smodel.SModelUtil_new" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.PropertyMacro_GetPropertyValue_BehaviorDescriptor" file="PropertyMacro_GetPropertyValue_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.PropertyMacro_GetPropertyValue_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.TemplateQueryBase_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.ReductionRule_BehaviorDescriptor" file="ReductionRule_BehaviorDescriptor.java" />
+  <dependency className="jetbrains.mps.lang.generator.behavior.Reduction_MappingRule_BehaviorDescriptor" file="Reduction_MappingRule_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.BaseMappingRule_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.ReductionRule_BehaviorDescriptor" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.ReferenceMacro_BehaviorDescriptor" file="ReferenceMacro_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.LinkAttribute_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.AbstractMacro_BehaviorDescriptor" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.ReferenceMacro_GetReferent_Behavior" file="ReferenceMacro_GetReferent_Behavior.java">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.HashSet" />
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.AttributeOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.project.GlobalScope" />
+    <classNode dependClassName="jetbrains.mps.smodel.SModelUtil_new" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.smodel.search.ConceptAndSuperConceptsScope" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.ReferenceMacro_GetReferent_BehaviorDescriptor" file="ReferenceMacro_GetReferent_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.ReferenceMacro_GetReferent_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.TemplateQueryBase_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.RootTemplateAnnotation_BehaviorDescriptor" file="RootTemplateAnnotation_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.NodeAttribute_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.Root_MappingRule_Behavior" file="Root_MappingRule_Behavior.java">
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.Root_MappingRule_BehaviorDescriptor" file="Root_MappingRule_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.BaseMappingRule_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.Root_MappingRule_Behavior" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.RuleConsequence_BehaviorDescriptor" file="RuleConsequence_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.SourceSubstituteMacro_BehaviorDescriptor" file="SourceSubstituteMacro_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.NodeMacro_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.SourceSubstituteMacro_SourceNodeQuery_BehaviorDescriptor" file="SourceSubstituteMacro_SourceNodeQuery_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.TemplateQueryBase_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.SourceSubstituteMacro_SourceNodesQuery_BehaviorDescriptor" file="SourceSubstituteMacro_SourceNodesQuery_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.TemplateQueryBase_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.SwitchMacro_Behavior" file="SwitchMacro_Behavior.java">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.NodeMacro_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.typesystem.inference.TypeChecker" />
+    <classNode extendsClassName="jetbrains.mps.lang.pattern.GeneratedMatchingPattern" />
+    <classNode extendsClassName="jetbrains.mps.lang.pattern.IMatchingPattern" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.SwitchMacro_BehaviorDescriptor" file="SwitchMacro_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.SourceSubstituteMacro_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.SwitchMacro_Behavior" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.TemplateArgumentLinkPatternRefExpression_Behavior" file="TemplateArgumentLinkPatternRefExpression_Behavior.java">
+    <classNode dependClassName="java.lang.Class" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.pattern.behavior.PatternVarsUtil" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.smodel.behaviour.BehaviorManager" />
+    <classNode dependClassName="jetbrains.mps.smodel.structure.BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.structure.ConceptRegistry" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.TemplateArgumentLinkPatternRefExpression_BehaviorDescriptor" file="TemplateArgumentLinkPatternRefExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.TemplateArgumentLinkPatternRefExpression_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.TemplateArgumentPatternRef_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.TemplateArgumentParameterExpression_BehaviorDescriptor" file="TemplateArgumentParameterExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.behavior.Expression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.TemplateArgumentPatternRef_Behavior" file="TemplateArgumentPatternRef_Behavior.java">
+    <classNode dependClassName="java.lang.Class" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.smodel.behaviour.BehaviorManager" />
+    <classNode dependClassName="jetbrains.mps.smodel.structure.BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.structure.ConceptRegistry" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.TemplateArgumentPatternRef_BehaviorDescriptor" file="TemplateArgumentPatternRef_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.behavior.Expression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.TemplateArgumentPatternVarRefExpression_Behavior" file="TemplateArgumentPatternVarRefExpression_Behavior.java">
+    <classNode dependClassName="java.lang.Class" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.pattern.behavior.PatternVarsUtil" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.smodel.behaviour.BehaviorManager" />
+    <classNode dependClassName="jetbrains.mps.smodel.structure.BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.structure.ConceptRegistry" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.TemplateArgumentPatternVarRefExpression_BehaviorDescriptor" file="TemplateArgumentPatternVarRefExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.TemplateArgumentPatternRef_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.TemplateArgumentPatternVarRefExpression_Behavior" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.TemplateArgumentPropertyPatternRefExpression_Behavior" file="TemplateArgumentPropertyPatternRefExpression_Behavior.java">
+    <classNode dependClassName="java.lang.Class" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.pattern.behavior.PatternVarsUtil" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.smodel.behaviour.BehaviorManager" />
+    <classNode dependClassName="jetbrains.mps.smodel.structure.BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.structure.ConceptRegistry" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.TemplateArgumentPropertyPatternRefExpression_BehaviorDescriptor" file="TemplateArgumentPropertyPatternRefExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.TemplateArgumentPatternRef_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.TemplateArgumentPropertyPatternRefExpression_Behavior" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.TemplateArgumentQueryExpression_BehaviorDescriptor" file="TemplateArgumentQueryExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.behavior.Expression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.TemplateArgumentQuery_Behavior" file="TemplateArgumentQuery_Behavior.java">
+    <classNode dependClassName="java.lang.Class" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.HashSet" />
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.project.GlobalScope" />
+    <classNode dependClassName="jetbrains.mps.smodel.SModelUtil_new" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.smodel.behaviour.BehaviorManager" />
+    <classNode dependClassName="jetbrains.mps.smodel.structure.BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.structure.ConceptRegistry" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.TemplateArgumentQuery_BehaviorDescriptor" file="TemplateArgumentQuery_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.TemplateArgumentQuery_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.TemplateQueryBase_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.TemplateCallMacro_Behavior" file="TemplateCallMacro_Behavior.java">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.NodeMacro_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.typesystem.inference.TypeChecker" />
+    <classNode extendsClassName="jetbrains.mps.lang.pattern.GeneratedMatchingPattern" />
+    <classNode extendsClassName="jetbrains.mps.lang.pattern.IMatchingPattern" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.TemplateCallMacro_BehaviorDescriptor" file="TemplateCallMacro_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.behavior.TypeDerivable_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.ITemplateCall_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.ITemplateCall_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.SourceSubstituteMacro_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.TemplateCallMacro_Behavior" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.TemplateDeclarationReference_Behavior" file="TemplateDeclarationReference_Behavior.java">
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.TemplateDeclarationReference_BehaviorDescriptor" file="TemplateDeclarationReference_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.behavior.TypeDerivable_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.ITemplateCall_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.ITemplateCall_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.RuleConsequence_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.TemplateDeclaration_Behavior" file="TemplateDeclaration_Behavior.java">
+    <classNode dependClassName="java.lang.Class" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.smodel.behaviour.BehaviorManager" />
+    <classNode dependClassName="jetbrains.mps.smodel.structure.BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.structure.ConceptRegistry" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.TemplateDeclaration_BehaviorDescriptor" file="TemplateDeclaration_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.TemplateDeclaration_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.structure.behavior.IConceptAspect_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.structure.behavior.IConceptAspect_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.TemplateFragment_BehaviorDescriptor" file="TemplateFragment_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.NodeAttribute_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.TemplateFragment_ContextNodeQuery_BehaviorDescriptor" file="TemplateFragment_ContextNodeQuery_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.TemplateQueryBase_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.TemplateFunctionParameter_mainContextNode_BehaviorDescriptor" file="TemplateFunctionParameter_mainContextNode_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.behavior.ConceptFunctionParameter_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.TemplateFunctionParameter_outputNode_BehaviorDescriptor" file="TemplateFunctionParameter_outputNode_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.behavior.ConceptFunctionParameter_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.TemplateFunctionParameter_parentOutputNode_BehaviorDescriptor" file="TemplateFunctionParameter_parentOutputNode_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.behavior.ConceptFunctionParameter_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.TemplateFunctionParameter_sourceNode_BehaviorDescriptor" file="TemplateFunctionParameter_sourceNode_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.behavior.ConceptFunctionParameter_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.TemplateFunctionParameter_templatePropertyValue_BehaviorDescriptor" file="TemplateFunctionParameter_templatePropertyValue_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.behavior.ConceptFunctionParameter_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.TemplateFunctionParameter_templateReferent_BehaviorDescriptor" file="TemplateFunctionParameter_templateReferent_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.behavior.ConceptFunctionParameter_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.TemplateParameterDeclaration_BehaviorDescriptor" file="TemplateParameterDeclaration_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.behavior.IValidIdentifier_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_Behavior" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.TemplateQueryBase_BehaviorDescriptor" file="TemplateQueryBase_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.behavior.ConceptFunction_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.TemplateSwitchReference_BehaviorDescriptor" file="TemplateSwitchReference_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.TemplateSwitch_Behavior" file="TemplateSwitch_Behavior.java">
+    <classNode dependClassName="java.lang.Class" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.smodel.behaviour.BehaviorManager" />
+    <classNode dependClassName="jetbrains.mps.smodel.structure.BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.structure.ConceptRegistry" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.TemplateSwitch_BehaviorDescriptor" file="TemplateSwitch_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.TemplateSwitch_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.structure.behavior.IConceptAspect_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.structure.behavior.IConceptAspect_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.WeaveEach_RuleConsequence_BehaviorDescriptor" file="WeaveEach_RuleConsequence_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.RuleConsequence_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.WeaveMacro_Behavior" file="WeaveMacro_Behavior.java">
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.WeaveMacro_BehaviorDescriptor" file="WeaveMacro_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.NodeMacro_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.Weaving_MappingRule_BehaviorDescriptor" file="Weaving_MappingRule_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.BaseMappingRule_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.generator.behavior.Weaving_MappingRule_ContextNodeQuery_BehaviorDescriptor" file="Weaving_MappingRule_ContextNodeQuery_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.generator.behavior.TemplateQueryBase_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+</dependenciesRoot>
+

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.debug.evaluation.textGen.EvaluationTextGen" file="EvaluationTextGen.java">
+    <classNode dependClassName="jetbrains.mps.baseLanguage.textGen.BaseLanguageTextGen" />
+    <classNode extendsClassName="java.lang.Object" />
+  </dependency>
+  <dependency className="jetbrains.mps.debug.evaluation.textGen.LowLevelVariable_TextGen" file="LowLevelVariable_TextGen.java">
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.textGen.SNodeTextGen" />
+  </dependency>
+</dependenciesRoot>
+

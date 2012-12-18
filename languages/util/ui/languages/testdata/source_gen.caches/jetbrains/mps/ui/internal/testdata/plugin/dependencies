@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.ui.internal.testdata.plugin.EditorExtension_CustomApplicationPlugin" file="EditorExtension_CustomApplicationPlugin.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.ui.modeling.plugin.EditorExtensionHelper" />
+    <classNode extendsClassName="jetbrains.mps.plugins.pluginparts.custom.BaseCustomApplicationPlugin" />
+  </dependency>
+  <dependency className="jetbrains.mps.ui.internal.testdata.plugin.Testdata_ApplicationPlugin" file="Testdata_ApplicationPlugin.java">
+    <classNode dependClassName="com.intellij.openapi.extensions.PluginId" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.plugins.pluginparts.custom.BaseCustomApplicationPlugin" />
+    <classNode dependClassName="jetbrains.mps.ui.internal.testdata.plugin.EditorExtension_CustomApplicationPlugin" />
+    <classNode extendsClassName="jetbrains.mps.plugins.applicationplugins.BaseApplicationPlugin" />
+  </dependency>
+  <dependency className="jetbrains.mps.ui.internal.testdata.plugin.Testdata_ProjectPlugin" file="Testdata_ProjectPlugin.java">
+    <classNode extendsClassName="jetbrains.mps.plugins.projectplugins.BaseProjectPlugin" />
+  </dependency>
+</dependenciesRoot>
+

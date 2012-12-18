@@ -1,0 +1,17 @@
+<!DOCTYPE idea-plugin
+  PUBLIC
+    "Plugin/DTD"
+    "http://plugins.intellij.net/plugin.dtd"
+>
+<idea-plugin xmlns:xi="http://www.w3.org/2001/XInclude"><id>jebrains.mps.ide.mpsdevkit</id>
+<name>MPS Languages DevKit</name>
+<description>Allows to develop new MPS languages</description>
+<version>2.0</version>
+<vendor url="http://www.jetbrains.com/mps/">JetBrains</vendor>
+<idea-version since-build="3000"></idea-version>
+
+
+<application-components><component><implementation-class>jetbrains.mps.ide.devkit.actions.Mpsdevkit_PluginInitializer</implementation-class>
+</component>
+</application-components>
+</idea-plugin>

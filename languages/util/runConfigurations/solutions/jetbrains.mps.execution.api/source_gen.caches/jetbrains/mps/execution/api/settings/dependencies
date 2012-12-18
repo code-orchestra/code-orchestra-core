@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.execution.api.settings.ActionWrapper" file="ActionWrapper.java">
+    <classNode dependClassName="java.awt.event.ActionEvent" />
+    <classNode dependClassName="java.beans.PropertyChangeEvent" />
+    <classNode dependClassName="java.beans.PropertyChangeListener" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="javax.swing.Action" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes" />
+    <classNode dependClassName="org.jetbrains.annotations.NotNull" />
+    <classNode extendsClassName="javax.swing.AbstractAction" />
+  </dependency>
+  <dependency className="jetbrains.mps.execution.api.settings.IPersistentConfiguration" file="IPersistentConfiguration.java">
+    <classNode dependClassName="com.intellij.execution.configurations.RuntimeConfigurationException" />
+    <classNode dependClassName="jetbrains.mps.execution.api.settings.SettingsEditorEx" />
+    <classNode extendsClassName="com.intellij.openapi.util.JDOMExternalizable" />
+  </dependency>
+  <dependency className="jetbrains.mps.execution.api.settings.ITemplatePersistentConfiguration" file="ITemplatePersistentConfiguration.java">
+    <classNode dependClassName="jetbrains.mps.execution.api.settings.SettingsEditorEx" />
+    <classNode extendsClassName="jetbrains.mps.execution.api.settings.IPersistentConfiguration" />
+  </dependency>
+  <dependency className="jetbrains.mps.execution.api.settings.SettingsEditorDialog" file="SettingsEditorDialog.java">
+    <classNode dependClassName="java.awt.BorderLayout" />
+    <classNode dependClassName="java.awt.Dimension" />
+    <classNode dependClassName="java.awt.FlowLayout" />
+    <classNode dependClassName="java.awt.event.ActionEvent" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="javax.swing.JButton" />
+    <classNode dependClassName="javax.swing.JFrame" />
+    <classNode dependClassName="javax.swing.JPanel" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes" />
+    <classNode dependClassName="jetbrains.mps.execution.api.settings.ActionWrapper" />
+    <classNode dependClassName="jetbrains.mps.execution.api.settings.ITemplatePersistentConfiguration" />
+    <classNode dependClassName="jetbrains.mps.execution.api.settings.SettingsEditorPanel" />
+    <classNode extendsClassName="javax.swing.JDialog" />
+  </dependency>
+  <dependency className="jetbrains.mps.execution.api.settings.SettingsEditorEx" file="SettingsEditorEx.java">
+    <classNode dependClassName="com.intellij.openapi.options.ConfigurationException" />
+    <classNode dependClassName="com.intellij.openapi.ui.Messages" />
+    <classNode dependClassName="com.intellij.openapi.util.Factory" />
+    <classNode extendsClassName="com.intellij.openapi.options.SettingsEditor" />
+  </dependency>
+  <dependency className="jetbrains.mps.execution.api.settings.SettingsEditorPanel" file="SettingsEditorPanel.java">
+    <classNode dependClassName="com.intellij.execution.configurations.RuntimeConfigurationException" />
+    <classNode dependClassName="com.intellij.openapi.options.ConfigurationException" />
+    <classNode dependClassName="com.intellij.openapi.options.SettingsEditor" />
+    <classNode dependClassName="com.intellij.openapi.options.SettingsEditorListener" />
+    <classNode dependClassName="com.intellij.openapi.util.Disposer" />
+    <classNode dependClassName="java.awt.BorderLayout" />
+    <classNode dependClassName="java.awt.Color" />
+    <classNode dependClassName="java.awt.event.ActionEvent" />
+    <classNode dependClassName="javax.swing.AbstractAction" />
+    <classNode dependClassName="javax.swing.Action" />
+    <classNode dependClassName="javax.swing.JComponent" />
+    <classNode dependClassName="javax.swing.JLabel" />
+    <classNode dependClassName="javax.swing.JPanel" />
+    <classNode dependClassName="jetbrains.mps.execution.api.settings.ITemplatePersistentConfiguration" />
+    <classNode dependClassName="jetbrains.mps.execution.api.settings.SettingsEditorEx" />
+  </dependency>
+</dependenciesRoot>
+

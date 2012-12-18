@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="sampleGraphs.AbstractGraphGenerator" file="AbstractGraphGenerator.java">
+    <classNode dependClassName="java.lang.IllegalArgumentException" />
+    <classNode dependClassName="java.util.Random" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Graph" />
+    <classNode dependClassName="sampleGraphs.RandomUtil" />
+  </dependency>
+  <dependency className="sampleGraphs.BasicGraphGenerator" file="BasicGraphGenerator.java">
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Edge" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Graph" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Node" />
+    <classNode extendsClassName="sampleGraphs.AbstractGraphGenerator" />
+  </dependency>
+  <dependency className="sampleGraphs.ClusterGraphGenerator" file="ClusterGraphGenerator.java">
+    <classNode dependClassName="java.lang.IllegalArgumentException" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.util.Iterator" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.ClusteredGraph" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Edge" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Graph" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Node" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode extendsClassName="sampleGraphs.AbstractGraphGenerator" />
+  </dependency>
+  <dependency className="sampleGraphs.GraphsForLayers" file="GraphsForLayers.java">
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Graph" />
+    <classNode dependClassName="sampleGraphs.SimpleDirectedGraphs" />
+  </dependency>
+  <dependency className="sampleGraphs.LayoutInfoGenerator" file="LayoutInfoGenerator.java">
+    <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="java.util.Random" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Edge" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Graph" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Node" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graphLayout.LayoutInfo" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.intGeom2D.Dimension" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.MapSequence" />
+    <classNode dependClassName="sampleGraphs.AbstractGraphGenerator" />
+    <classNode dependClassName="sampleGraphs.RandomUtil" />
+  </dependency>
+  <dependency className="sampleGraphs.RandomGraphGenerator" file="RandomGraphGenerator.java">
+    <classNode dependClassName="java.lang.IllegalArgumentException" />
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.Math" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Random" />
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="java.util.TreeSet" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.algorithms.ConnectivityComponents" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Graph" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.SetSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.SortedSetSequence" />
+    <classNode dependClassName="sampleGraphs.SimpleDirectedGraphs" />
+  </dependency>
+  <dependency className="sampleGraphs.RandomUtil" file="RandomUtil.java">
+    <classNode dependClassName="java.util.Random" />
+  </dependency>
+  <dependency className="sampleGraphs.SimpleConnectedGraphGenerator" file="SimpleConnectedGraphGenerator.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.algorithms.ConnectivityComponents" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Graph" />
+    <classNode extendsClassName="sampleGraphs.SimpleGraphGenerator" />
+  </dependency>
+  <dependency className="sampleGraphs.SimpleDirectedGraphs" file="SimpleDirectedGraphs.java">
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Graph" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Node" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+  </dependency>
+  <dependency className="sampleGraphs.SimpleGraphGenerator" file="SimpleGraphGenerator.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Edge" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Graph" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Node" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ISelector" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode extendsClassName="sampleGraphs.BasicGraphGenerator" />
+  </dependency>
+</dependenciesRoot>
+

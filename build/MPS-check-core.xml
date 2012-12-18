@@ -1,0 +1,85 @@
+<!--
+  ~ Copyright 2003-2010 JetBrains s.r.o.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<project name="MPS-compile" default="compile" basedir="..">
+
+  <path id="core.sources">
+
+    <!-- core -->
+    <path path="core/kernel/source"/>
+    <path path="core/kernel/source_gen"/>
+    <path path="core/kernel/patternRuntime/source"/>
+    <path path="core/kernel/smodelRuntime/source_gen"/>
+    <path path="core/kernel/resources/source_gen"/>
+    <path path="core/generator/source" />
+    <path path="core/generator/source_gen" />
+    <path path="core/typesystemEngine/source"/>
+    <path path="core/typesystemEngine/source_gen"/>
+    <path path="core/runtime/source" />
+    <path path="core/kernel/traceinfo/solutions/jetbrains.mps.debug.api.info/source_gen" />
+
+    <!-- runtime -->
+    <path path="core/baseLanguage/collections/runtime/source_gen/jetbrains/mps/internal/collections/runtime"/>
+    <path path="core/baseLanguage/closures/runtime/source"/>
+    <path path="core/baseLanguage/closures/runtime/source_gen"/>
+    <path path="core/baseLanguage/tuples/runtime/source_gen"/>
+    <path path="core/make-runtime/solutions/jetbrains.mps.make.runtime/source_gen"/>
+  </path>
+
+  <path id="core.behavior.sources">
+
+    <!-- behavior -->
+    <path path="core/languageDesign/behavior/languages/behavior/source_gen/jetbrains/mps/lang/behavior/behavior"/>
+    <path path="languages/languageDesign/generator/source_gen/jetbrains/mps/lang/generator/generationContext/behavior"/>
+    <path path="languages/languageDesign/generator/source_gen/jetbrains/mps/lang/generator/behavior"/>
+    <path path="core/languageDesign/quotation/source_gen/jetbrains/mps/lang/quotation/behavior"/>
+    <path path="core/languageDesign/sharedConcepts/source_gen/jetbrains/mps/lang/sharedConcepts/behavior"/>
+    <path path="languages/languageDesign/core/source_gen/jetbrains/mps/lang/core/behavior"/>
+    <path path="core/languageDesign/pattern/source_gen/jetbrains/mps/lang/pattern/behavior"/>
+    <path path="core/languageDesign/structure/source_gen/jetbrains/mps/lang/structure/behavior"/>
+
+    <!--TODO <path path="core/languageDesign/constraints/source_gen/jetbrains/mps/lang/constraints/behavior"/>-->
+    <!--TODO<path path="core/languageDesign/smodel/source_gen/jetbrains/mps/lang/smodel/behavior"/>-->
+    <!--TODO<path path="core/languageDesign/stubs/source_gen/jetbrains/mps/lang/stubs/behavior"/>-->
+    <!--TODO<path path="core/languageDesign/textGen/source_gen/jetbrains/mps/lang/textGen/behavior"/>-->
+    <!--TODO<path path="core/languageDesign/typesystem/source_gen/jetbrains/mps/lang/typesystem/behavior"/>-->
+
+    <!-- baseLanguage -->
+    <path path="core/baseLanguage/baseLanguage/source/jetbrains/mps/baseLanguage/icons"/>
+    <path path="core/baseLanguage/baseLanguage/source_gen/jetbrains/mps/baseLanguage/behavior"/>
+    <path path="core/baseLanguage/baseLanguage/source_gen/jetbrains/mps/baseLanguage/stubs"/>
+    <path path="core/baseLanguage/baseLanguage/source_gen/jetbrains/mps/stubs"/>
+    <path path="core/baseLanguage/baseLanguage/source_gen/jetbrains/mps/baseLanguage/search"/>
+    <path path="core/baseLanguage/baseLanguage/source_gen/jetbrains/mps/baseLanguage/textGen"/>
+
+  </path>
+
+  <path id="core.classpath">
+    <fileset dir="lib" includes="*.jar"/>
+  </path>
+
+  <target name="clean">
+    <delete dir="tempbuild"/>
+  </target>
+
+  <target name="compile" depends="clean">
+    <mkdir dir="tempbuild"/>
+
+    <javac sourcepath="" classpathref="core.classpath" destdir="tempbuild" fork="true" memorymaximumsize="1024m">
+      <src refid="core.sources"/>
+      <!--<src refid="core.behavior.sources"/>-->
+    </javac>
+  </target>
+</project>

@@ -1,0 +1,16 @@
+<!DOCTYPE module
+  PUBLIC
+    "-//Google Inc.//DTD Google Web Toolkit 2.0//EN"
+    "http://google-web-toolkit.googlecode.com/svn/releases/2.0/distro-source/core/src/gwt-module.dtd"
+>
+<module rename-to="uidemo"><inherits name="com.google.gwt.user.User"></inherits>
+<inherits name="com.google.gwt.user.theme.standard.Standard"></inherits>
+<source path=""><exclude name="swing/**"></exclude>
+<exclude name="swt/**"></exclude>
+<exclude name="*_SWT.java"></exclude>
+<exclude name="*_Swing.java"></exclude>
+<exclude name="J*.java"></exclude>
+</source>
+<entry-point class="jetbrains.mps.ui.sandbox.gwt.GWTDemo"></entry-point>
+<inherits name="jetbrains.mps.baseLanguage.closures.runtime"></inherits>
+</module>

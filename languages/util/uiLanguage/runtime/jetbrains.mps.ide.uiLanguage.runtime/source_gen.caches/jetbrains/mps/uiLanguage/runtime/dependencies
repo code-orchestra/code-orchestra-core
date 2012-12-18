@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.uiLanguage.runtime.BaseBean" file="BaseBean.java">
+    <classNode dependClassName="java.beans.PropertyChangeListener" />
+    <classNode dependClassName="java.beans.PropertyChangeSupport" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+  </dependency>
+  <dependency className="jetbrains.mps.uiLanguage.runtime.FlowPanel" file="FlowPanel.java">
+    <classNode dependClassName="java.awt.FlowLayout" />
+    <classNode extendsClassName="javax.swing.JPanel" />
+  </dependency>
+  <dependency className="jetbrains.mps.uiLanguage.runtime.HBoxPanel" file="HBoxPanel.java">
+    <classNode dependClassName="javax.swing.BoxLayout" />
+    <classNode extendsClassName="javax.swing.JPanel" />
+  </dependency>
+  <dependency className="jetbrains.mps.uiLanguage.runtime.JbRadioButton" file="JbRadioButton.java">
+    <classNode dependClassName="javax.swing.ButtonGroup" />
+    <classNode extendsClassName="javax.swing.JRadioButton" />
+  </dependency>
+  <dependency className="jetbrains.mps.uiLanguage.runtime.SimpleListModel" file="SimpleListModel.java">
+    <classNode dependClassName="java.lang.Iterable" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode extendsClassName="javax.swing.DefaultListModel" />
+  </dependency>
+  <dependency className="jetbrains.mps.uiLanguage.runtime.VBoxPanel" file="VBoxPanel.java">
+    <classNode dependClassName="javax.swing.BoxLayout" />
+    <classNode extendsClassName="javax.swing.JPanel" />
+  </dependency>
+  <dependency className="jetbrains.mps.uiLanguage.runtime.ValueWrapper" file="ValueWrapper.java" />
+</dependenciesRoot>
+

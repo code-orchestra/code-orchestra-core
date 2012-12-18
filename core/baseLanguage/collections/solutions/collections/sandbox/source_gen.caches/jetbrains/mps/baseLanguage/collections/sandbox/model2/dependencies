@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.baseLanguage.collections.sandbox.model2.FindUserUtil" file="FindUserUtil.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.collections.sandbox.model2.PasswordIdentity" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.collections.sandbox.model2.User" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.IWhereFilter" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.collections.sandbox.model2.PasswordIdentity" file="PasswordIdentity.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode extendsClassName="java.lang.Object" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.collections.sandbox.model2.User" file="User.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.collections.sandbox.model2.PasswordIdentity" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+  </dependency>
+</dependenciesRoot>
+

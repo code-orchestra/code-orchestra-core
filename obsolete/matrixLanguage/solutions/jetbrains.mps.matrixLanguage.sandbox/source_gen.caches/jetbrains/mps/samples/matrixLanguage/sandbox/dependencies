@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.samples.matrixLanguage.sandbox.ABC" file="ABC.java">
+    <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="jetbrains.mps.samples.matrixLanguage.runtime.Matrix" />
+    <classNode dependClassName="jetbrains.mps.samples.matrixLanguage.runtime.MatrixIterator" />
+    <classNode dependClassName="jetbrains.mps.samples.matrixLanguage.sandbox._FieldOperations" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.matrixLanguage.sandbox._FieldOperations" file="_FieldOperations.java">
+    <classNode dependClassName="java.lang.Double" />
+    <classNode extendsClassName="jetbrains.mps.samples.matrixLanguage.runtime.FieldOperations" />
+  </dependency>
+</dependenciesRoot>
+

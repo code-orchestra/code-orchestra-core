@@ -1,0 +1,14 @@
+<ReaderConfiguration>
+  <Mapping Code="SVCL" TargetClass="jetbrains.mps.samples.readerConfigLanguage.dsl.ServiceCall">
+    <Field name="CustomerName" start="4" end="18" />
+    <Field name="CustomerID" start="19" end="23" />
+    <Field name="CallTypeCode" start="24" end="27" />
+    <Field name="DateOfCallString" start="28" end="35" />
+  </Mapping>
+  <Mapping Code="USGE" TargetClass="jetbrains.mps.samples.readerConfigLanguage.dsl.Usage">
+    <Field name="CustomerID" start="4" end="8" />
+    <Field name="CustomerName" start="9" end="22" />
+    <Field name="Cycle" start="23" end="30" />
+    <Field name="ReadDate" start="31" end="36" />
+  </Mapping>
+</ReaderConfiguration>

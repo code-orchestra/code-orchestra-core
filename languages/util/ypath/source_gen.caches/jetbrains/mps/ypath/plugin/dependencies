@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.ypath.plugin.DesignPartLoader" file="DesignPartLoader.java">
+    <classNode dependClassName="java.lang.Class" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.SuppressWarnings" />
+    <classNode dependClassName="java.lang.Throwable" />
+    <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="jetbrains.mps.generator.TransientModelsModule" />
+    <classNode dependClassName="jetbrains.mps.logging.Logger" />
+    <classNode dependClassName="jetbrains.mps.project.IModule" />
+    <classNode dependClassName="jetbrains.mps.project.Solution" />
+    <classNode dependClassName="jetbrains.mps.reloading.ClassLoaderManager" />
+    <classNode dependClassName="jetbrains.mps.smodel.Language" />
+    <classNode dependClassName="jetbrains.mps.smodel.ModelOwner" />
+    <classNode dependClassName="jetbrains.mps.smodel.SModel" />
+    <classNode dependClassName="jetbrains.mps.smodel.SModelDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.SModelRepository" />
+    <classNode dependClassName="jetbrains.mps.ypath.design.IFeatureDesign" />
+    <classNode extendsClassName="jetbrains.mps.reloading.ReloadAdapter" />
+  </dependency>
+  <dependency className="jetbrains.mps.ypath.plugin.DesignPartLoader_CustomApplicationPlugin" file="DesignPartLoader_CustomApplicationPlugin.java">
+    <classNode dependClassName="jetbrains.mps.ypath.plugin.DesignPartLoader" />
+    <classNode extendsClassName="jetbrains.mps.plugins.pluginparts.custom.BaseCustomApplicationPlugin" />
+  </dependency>
+  <dependency className="jetbrains.mps.ypath.plugin.Ypath_ApplicationPlugin" file="Ypath_ApplicationPlugin.java">
+    <classNode dependClassName="com.intellij.openapi.extensions.PluginId" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.plugins.pluginparts.custom.BaseCustomApplicationPlugin" />
+    <classNode dependClassName="jetbrains.mps.ypath.plugin.DesignPartLoader_CustomApplicationPlugin" />
+    <classNode extendsClassName="jetbrains.mps.plugins.applicationplugins.BaseApplicationPlugin" />
+  </dependency>
+  <dependency className="jetbrains.mps.ypath.plugin.Ypath_ProjectPlugin" file="Ypath_ProjectPlugin.java">
+    <classNode extendsClassName="jetbrains.mps.plugins.projectplugins.BaseProjectPlugin" />
+  </dependency>
+</dependenciesRoot>
+

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.gtext.runtime.BaseHtmlStringUtil" file="BaseHtmlStringUtil.java">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.StringBuilder" />
+    <classNode dependClassName="java.util.regex.Pattern" />
+  </dependency>
+  <dependency className="jetbrains.mps.gtext.runtime.TBaseBuilderContext" file="TBaseBuilderContext.java">
+    <classNode dependClassName="java.lang.IllegalStateException" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.StringBuilder" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.Collections" />
+    <classNode dependClassName="java.util.Comparator" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="java.util.Stack" />
+    <classNode dependClassName="java.util.TreeMap" />
+    <classNode dependClassName="java.util.logging.Logger" />
+    <classNode dependClassName="jetbrains.mps.gtext.runtime.TBaseBuilderContextListener" />
+    <classNode dependClassName="jetbrains.mps.gtext.runtime.TBuffer" />
+    <classNode dependClassName="jetbrains.mps.gtext.runtime.TContent" />
+  </dependency>
+  <dependency className="jetbrains.mps.gtext.runtime.TBaseBuilderContextListener" file="TBaseBuilderContextListener.java">
+    <classNode dependClassName="jetbrains.mps.gtext.runtime.TBaseBuilderContext" />
+  </dependency>
+  <dependency className="jetbrains.mps.gtext.runtime.TBuffer" file="TBuffer.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.StringBuilder" />
+  </dependency>
+  <dependency className="jetbrains.mps.gtext.runtime.TContent" file="TContent.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.gtext.runtime.TBuffer" />
+  </dependency>
+</dependenciesRoot>
+

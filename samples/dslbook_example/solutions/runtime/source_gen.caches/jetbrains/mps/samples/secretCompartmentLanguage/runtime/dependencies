@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.samples.secretCompartmentLanguage.runtime.AbstractEvent" file="AbstractEvent.java">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.secretCompartmentLanguage.runtime.Command" file="Command.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode extendsClassName="jetbrains.mps.samples.secretCompartmentLanguage.runtime.AbstractEvent" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.secretCompartmentLanguage.runtime.CommandChannel" file="CommandChannel.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.secretCompartmentLanguage.runtime.Controller" file="Controller.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.samples.secretCompartmentLanguage.runtime.CommandChannel" />
+    <classNode dependClassName="jetbrains.mps.samples.secretCompartmentLanguage.runtime.State" />
+    <classNode dependClassName="jetbrains.mps.samples.secretCompartmentLanguage.runtime.StateMachine" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.secretCompartmentLanguage.runtime.Event" file="Event.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode extendsClassName="jetbrains.mps.samples.secretCompartmentLanguage.runtime.AbstractEvent" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.secretCompartmentLanguage.runtime.Notification" file="Notification.java">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.StringBuffer" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.secretCompartmentLanguage.runtime.State" file="State.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.StringBuilder" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.Collection" />
+    <classNode dependClassName="java.util.Collections" />
+    <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="jetbrains.mps.samples.secretCompartmentLanguage.runtime.Command" />
+    <classNode dependClassName="jetbrains.mps.samples.secretCompartmentLanguage.runtime.CommandChannel" />
+    <classNode dependClassName="jetbrains.mps.samples.secretCompartmentLanguage.runtime.Event" />
+    <classNode dependClassName="jetbrains.mps.samples.secretCompartmentLanguage.runtime.Notification" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.secretCompartmentLanguage.runtime.StateMachine" file="StateMachine.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.StringBuilder" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.Collection" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.samples.secretCompartmentLanguage.runtime.Event" />
+    <classNode dependClassName="jetbrains.mps.samples.secretCompartmentLanguage.runtime.Notification" />
+    <classNode dependClassName="jetbrains.mps.samples.secretCompartmentLanguage.runtime.State" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.secretCompartmentLanguage.runtime.StateMachineFactory" file="StateMachineFactory.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="jetbrains.mps.samples.secretCompartmentLanguage.runtime.Event" />
+    <classNode dependClassName="jetbrains.mps.samples.secretCompartmentLanguage.runtime.State" />
+    <classNode dependClassName="jetbrains.mps.samples.secretCompartmentLanguage.runtime.StateMachine" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.secretCompartmentLanguage.runtime.StateMachineTest" file="StateMachineTest.java">
+    <classNode dependClassName="jetbrains.mps.samples.secretCompartmentLanguage.runtime.CommandChannel" />
+    <classNode dependClassName="jetbrains.mps.samples.secretCompartmentLanguage.runtime.Controller" />
+    <classNode dependClassName="jetbrains.mps.samples.secretCompartmentLanguage.runtime.StateMachine" />
+    <classNode dependClassName="jetbrains.mps.samples.secretCompartmentLanguage.runtime.StateMachineFactory" />
+    <classNode extendsClassName="junit.framework.TestCase" />
+  </dependency>
+</dependenciesRoot>
+

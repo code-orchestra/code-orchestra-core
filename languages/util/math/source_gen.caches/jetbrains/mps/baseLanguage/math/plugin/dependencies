@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.baseLanguage.math.plugin.EditorCell_VerticalLine" file="EditorCell_VerticalLine.java">
+    <classNode dependClassName="java.awt.Color" />
+    <classNode dependClassName="java.awt.Graphics" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.EditorContext" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cells.EditorCell_Collection" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cells.ParentSettings" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.nodeEditor.cells.EditorCell_Basic" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.math.plugin.HLineCellProvider" file="HLineCellProvider.java">
+    <classNode dependClassName="java.awt.Color" />
+    <classNode dependClassName="java.awt.Graphics" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.EditorContext" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cells.EditorCell" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cells.EditorCell_Basic" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cells.ParentSettings" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.nodeEditor.AbstractCellProvider" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.math.plugin.VLineCellProvider" file="VLineCellProvider.java">
+    <classNode dependClassName="jetbrains.mps.baseLanguage.math.plugin.EditorCell_VerticalLine" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.EditorContext" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cells.EditorCell" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.nodeEditor.AbstractCellProvider" />
+  </dependency>
+</dependenciesRoot>
+

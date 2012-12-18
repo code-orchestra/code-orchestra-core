@@ -1,0 +1,60 @@
+<!--
+  ~ Copyright 2003-2010 JetBrains s.r.o.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<project name="test" default="default">
+  <property name="mps.zip" value="${build.number}.zip"/>
+  <target name="default">
+    <property name="dest" value="${mps_home}/build/temp.dst" />
+    <fail unless="mps_home" message="Property mps_home unspecified."/>
+    <unzip src="${mps_home}/artifacts/${mps.zip}" dest="${dest}" />
+
+    <mkdir dir="${dest}/buildtests.tmp"/>
+    <path id="tests.classpath">
+      <fileset dir="${dest}/MPS ${version}/lib">
+        <include name="**/*.jar"/>
+      </fileset>
+      <path path="${dest}/MPS ${version}/languages/generate.ant.task.jar"/>
+    </path>
+    <javac classpathref="tests.classpath" destdir="${dest}/buildtests.tmp" fork="true" includeantruntime="false"
+           memorymaximumsize="1024m">
+      <src>
+        <path path="${mps_home}/testbench/tests"/>
+        <path path="${mps_home}/testbench/tests_gen"/>
+      </src>
+    </javac>
+    <jar destfile="${dest}/MPS ${version}/lib/mpstests.jar" duplicate="preserve" filesonly="true">
+      <fileset dir="${dest}/buildtests.tmp"/>
+    </jar>
+    <delete dir="${dest}/buildtests.tmp"/>
+
+    <junit fork="true" dir="${dest}/MPS ${version}" haltonfailure="true">
+      <jvmarg value="-ea"/>
+      <jvmarg value="-Xss1024k"/>
+      <jvmarg value="-Xmx1200m"/>
+      <jvmarg value="-XX:MaxPermSize=128m"/>
+      <jvmarg value="-XX:+HeapDumpOnOutOfMemoryError"/>
+      <!--<jvmarg value="-Xdebug"/>-->
+      <!--<jvmarg value="-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005"/>-->
+      <test name="CheckProjectStructure"/>
+      <formatter type="brief" usefile="false"/>
+      <classpath>
+        <fileset dir="${dest}/MPS ${version}/lib">
+          <include name="*.jar"/>
+        </fileset>
+        <path path="${dest}/MPS ${version}/languages/generate.ant.task.jar"/>
+      </classpath>
+    </junit>
+  </target>
+</project>

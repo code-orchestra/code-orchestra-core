@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<components>
+
+  <application-components>
+    <component>
+      <implementation-class>jetbrains.mps.smodel.SModelRepository</implementation-class>
+    </component>
+
+    <component>
+      <implementation-class>jetbrains.mps.smodel.MPSModuleRepository</implementation-class>
+    </component>
+
+    <component>
+      <implementation-class>jetbrains.mps.smodel.ImmatureReferences</implementation-class>
+    </component>
+
+    <component>
+      <implementation-class>jetbrains.mps.smodel.constraints.ModelConstraintsManager</implementation-class>
+    </component>
+
+    <component>
+      <implementation-class>jetbrains.mps.smodel.language.LanguageRegistry</implementation-class>
+    </component>
+
+    <component>
+      <implementation-class>jetbrains.mps.reloading.ClassLoaderManager</implementation-class>
+    </component>
+
+    <component>
+      <implementation-class>jetbrains.mps.stubs.StubReloadManager</implementation-class>
+    </component>
+
+    <component>
+      <implementation-class>jetbrains.mps.cleanup.CleanupManager</implementation-class>
+    </component>
+
+    <component>
+      <implementation-class>jetbrains.mps.smodel.GarbageCollector</implementation-class>
+    </component>
+
+    <component>
+      <implementation-class>jetbrains.mps.smodel.GlobalSModelEventsManager</implementation-class>
+    </component>
+
+    <component>
+      <implementation-class>jetbrains.mps.smodel.SModelUtil_new</implementation-class>
+    </component>
+
+    <component>
+      <implementation-class>jetbrains.mps.cache.CachesManager</implementation-class>
+    </component>
+
+    <component>
+      <implementation-class>jetbrains.mps.smodel.CommandEventsManager</implementation-class>
+    </component>
+
+    <component>
+      <implementation-class>jetbrains.mps.smodel.language.ConceptRegistry</implementation-class>
+    </component>
+
+    <component>
+      <implementation-class>jetbrains.mps.smodel.runtime.interpreted.StructureAspectInterpreted</implementation-class>
+    </component>
+
+    <component>
+      <implementation-class>jetbrains.mps.smodel.behaviour.BehaviorManager</implementation-class>
+    </component>
+
+    <component>
+      <implementation-class>jetbrains.mps.smodel.behaviour.OldBehaviorManager</implementation-class>
+    </component>
+
+    <component>
+      <implementation-class>jetbrains.mps.project.AuxilaryRuntimeModel</implementation-class>
+    </component>
+
+    <component>
+      <implementation-class>jetbrains.mps.findUsages.ProxyFindUsagesManager</implementation-class>
+    </component>
+
+    <component>
+      <implementation-class>jetbrains.mps.datatransfer.CopyPasteManager</implementation-class>
+    </component>
+
+    <component>
+      <implementation-class>jetbrains.mps.util.QueryMethodGenerated</implementation-class>
+    </component>
+
+    <!-- typesystem -->
+
+    <component>
+      <implementation-class>jetbrains.mps.typesystem.inference.TypeChecker</implementation-class>
+    </component>
+
+    <component>
+      <implementation-class>jetbrains.mps.typesystem.inference.TypeContextManager</implementation-class>
+    </component>
+
+    <!-- generator -->
+
+    <component>
+      <implementation-class>jetbrains.mps.make.java.BLDependenciesCache</implementation-class>
+    </component>
+
+    <component>
+      <implementation-class>jetbrains.mps.traceInfo.TraceInfoManager</implementation-class>
+    </component>
+
+    <component>
+      <implementation-class>jetbrains.mps.generator.traceInfo.TraceInfoCache</implementation-class>
+    </component>
+
+    <component>
+      <implementation-class>jetbrains.mps.generator.impl.dependencies.GenerationDependenciesCache</implementation-class>
+    </component>
+
+    <component>
+      <implementation-class>jetbrains.mps.generator.ModelGenerationStatusManager</implementation-class>
+    </component>
+
+    <component>
+      <implementation-class>jetbrains.mps.generator.impl.RootTemplateAnnotator</implementation-class>
+    </component>
+
+    <component>
+      <implementation-class>jetbrains.mps.project.structure.ProjectStructureModule</implementation-class>
+    </component>
+
+    <component>
+      <implementation-class>jetbrains.mps.project.structure.LanguageDescriptorModelProvider</implementation-class>
+    </component>
+  </application-components>
+
+  <project-components>
+    <component>
+      <implementation-class>jetbrains.mps.project.MPSProject</implementation-class>
+    </component>
+
+    <component>
+      <implementation-class>jetbrains.mps.project.ProjectScope</implementation-class>
+    </component>
+
+    <component>
+      <implementation-class>jetbrains.mps.generator.GeneratorManager</implementation-class>
+    </component>
+
+    <component>
+      <implementation-class>jetbrains.mps.cache.CachesClearer</implementation-class>
+    </component>
+
+    <component>
+      <implementation-class>jetbrains.mps.generator.TransientModelsComponent</implementation-class>
+    </component>
+  </project-components>
+
+</components>

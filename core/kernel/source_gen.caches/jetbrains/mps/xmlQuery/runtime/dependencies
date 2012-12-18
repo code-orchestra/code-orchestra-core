@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.xmlQuery.runtime.AttributeUtils" file="AttributeUtils.java">
+    <classNode dependClassName="java.lang.Boolean" />
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.NumberFormatException" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="org.jdom.Element" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlQuery.runtime.BreakParseSAXException" file="BreakParseSAXException.java">
+    <classNode extendsClassName="org.xml.sax.SAXException" />
+  </dependency>
+  <dependency className="jetbrains.mps.xmlQuery.runtime.XMLSAXHandler" file="XMLSAXHandler.java">
+    <classNode extendsClassName="org.xml.sax.helpers.DefaultHandler" />
+  </dependency>
+</dependenciesRoot>
+

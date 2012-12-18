@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.workbench.dialogs.project.components.parts.actions.BaseAddAction" file="BaseAddAction.java">
+    <classNode dependClassName="com.intellij.openapi.actionSystem.AnActionEvent" />
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="javax.swing.ListSelectionModel" />
+    <classNode dependClassName="jetbrains.mps.workbench.dialogs.project.components.parts.actions.icons.Icons" />
+    <classNode extendsClassName="jetbrains.mps.workbench.dialogs.project.components.parts.actions.BaseValidatedAction" />
+  </dependency>
+  <dependency className="jetbrains.mps.workbench.dialogs.project.components.parts.actions.BaseValidatedAction" file="BaseValidatedAction.java">
+    <classNode dependClassName="com.intellij.openapi.actionSystem.AnActionEvent" />
+    <classNode dependClassName="java.lang.Runnable" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="javax.swing.Icon" />
+    <classNode extendsClassName="com.intellij.openapi.actionSystem.AnAction" />
+  </dependency>
+  <dependency className="jetbrains.mps.workbench.dialogs.project.components.parts.actions.ListAddAction" file="ListAddAction.java">
+    <classNode dependClassName="javax.swing.JList" />
+    <classNode extendsClassName="jetbrains.mps.workbench.dialogs.project.components.parts.actions.BaseAddAction" />
+  </dependency>
+  <dependency className="jetbrains.mps.workbench.dialogs.project.components.parts.actions.ListEditAction" file="ListEditAction.java">
+    <classNode dependClassName="com.intellij.openapi.actionSystem.AnActionEvent" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="javax.swing.JList" />
+    <classNode dependClassName="jetbrains.mps.workbench.dialogs.project.components.parts.actions.icons.Icons" />
+    <classNode extendsClassName="jetbrains.mps.workbench.dialogs.project.components.parts.actions.BaseValidatedAction" />
+  </dependency>
+  <dependency className="jetbrains.mps.workbench.dialogs.project.components.parts.actions.ListRemoveAction" file="ListRemoveAction.java">
+    <classNode dependClassName="com.intellij.openapi.actionSystem.AnActionEvent" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="javax.swing.JList" />
+    <classNode dependClassName="jetbrains.mps.workbench.dialogs.project.components.parts.actions.icons.Icons" />
+    <classNode extendsClassName="jetbrains.mps.workbench.dialogs.project.components.parts.actions.BaseValidatedAction" />
+  </dependency>
+  <dependency className="jetbrains.mps.workbench.dialogs.project.components.parts.actions.TableAddAction" file="TableAddAction.java">
+    <classNode dependClassName="javax.swing.JTable" />
+    <classNode extendsClassName="jetbrains.mps.workbench.dialogs.project.components.parts.actions.BaseAddAction" />
+  </dependency>
+  <dependency className="jetbrains.mps.workbench.dialogs.project.components.parts.actions.TableRemoveAction" file="TableRemoveAction.java">
+    <classNode dependClassName="com.intellij.openapi.actionSystem.AnActionEvent" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="javax.swing.JTable" />
+    <classNode dependClassName="jetbrains.mps.workbench.dialogs.project.components.parts.actions.icons.Icons" />
+    <classNode extendsClassName="jetbrains.mps.workbench.dialogs.project.components.parts.actions.BaseValidatedAction" />
+  </dependency>
+</dependenciesRoot>
+

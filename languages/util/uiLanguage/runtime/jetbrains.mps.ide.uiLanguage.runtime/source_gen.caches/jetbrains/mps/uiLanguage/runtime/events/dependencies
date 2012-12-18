@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.uiLanguage.runtime.events.Event" file="Event.java">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="jetbrains.mps.uiLanguage.runtime.events.IListener" />
+    <classNode dependClassName="jetbrains.mps.uiLanguage.runtime.events.ListenerId" />
+  </dependency>
+  <dependency className="jetbrains.mps.uiLanguage.runtime.events.Events" file="Events.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="jetbrains.mps.uiLanguage.runtime.events.Event" />
+  </dependency>
+  <dependency className="jetbrains.mps.uiLanguage.runtime.events.IListener" file="IListener.java">
+    <classNode dependClassName="java.lang.Object" />
+  </dependency>
+  <dependency className="jetbrains.mps.uiLanguage.runtime.events.ListenerId" file="ListenerId.java">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+  </dependency>
+</dependenciesRoot>
+

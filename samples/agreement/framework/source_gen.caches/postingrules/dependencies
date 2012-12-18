@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="postingrules.Account" file="Account.java">
+    <classNode dependClassName="java.lang.IllegalArgumentException" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="mf.Currency" />
+    <classNode dependClassName="mf.DateRange" />
+    <classNode dependClassName="mf.MfDate" />
+    <classNode dependClassName="mf.Money" />
+    <classNode dependClassName="postingrules.AccountType" />
+    <classNode dependClassName="postingrules.AccountingTransaction" />
+    <classNode dependClassName="postingrules.Entry" />
+  </dependency>
+  <dependency className="postingrules.AccountType" file="AccountType.java" />
+  <dependency className="postingrules.AccountingEvent" file="AccountingEvent.java">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.Collection" />
+    <classNode dependClassName="java.util.Collections" />
+    <classNode dependClassName="java.util.HashSet" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="mf.MfDate" />
+    <classNode dependClassName="postingrules.Customer" />
+    <classNode dependClassName="postingrules.Entry" />
+    <classNode dependClassName="postingrules.EventType" />
+    <classNode dependClassName="postingrules.ServiceAgreement" />
+    <classNode dependClassName="postingrules.Subject" />
+  </dependency>
+  <dependency className="postingrules.AccountingException" file="AccountingException.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode extendsClassName="java.lang.RuntimeException" />
+  </dependency>
+  <dependency className="postingrules.AccountingTransaction" file="AccountingTransaction.java">
+    <classNode dependClassName="mf.MfDate" />
+    <classNode dependClassName="mf.Money" />
+    <classNode dependClassName="postingrules.Account" />
+    <classNode dependClassName="postingrules.Entry" />
+  </dependency>
+  <dependency className="postingrules.Adjustment" file="Adjustment.java">
+    <classNode dependClassName="java.lang.IllegalArgumentException" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="mf.MfDate" />
+    <classNode dependClassName="postingrules.Subject" />
+    <classNode extendsClassName="postingrules.AccountingEvent" />
+  </dependency>
+  <dependency className="postingrules.AgreementRegistry" file="AgreementRegistry.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="postingrules.ServiceAgreement" />
+  </dependency>
+  <dependency className="postingrules.AmountFormulaPR" file="AmountFormulaPR.java">
+    <classNode dependClassName="mf.Money" />
+    <classNode dependClassName="postingrules.AccountType" />
+    <classNode dependClassName="postingrules.AccountingEvent" />
+    <classNode dependClassName="postingrules.MonetaryEvent" />
+    <classNode extendsClassName="postingrules.PostingRule" />
+  </dependency>
+  <dependency className="postingrules.Customer" file="Customer.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.StringBuffer" />
+    <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="mf.Currency" />
+    <classNode dependClassName="mf.Money" />
+    <classNode dependClassName="postingrules.Account" />
+    <classNode dependClassName="postingrules.AccountType" />
+    <classNode dependClassName="postingrules.AccountingEvent" />
+    <classNode dependClassName="postingrules.Entry" />
+    <classNode dependClassName="postingrules.ServiceAgreement" />
+    <classNode extendsClassName="mf.NamedObject" />
+    <classNode extendsClassName="postingrules.Subject" />
+  </dependency>
+  <dependency className="postingrules.Entry" file="Entry.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.Collection" />
+    <classNode dependClassName="mf.MfDate" />
+    <classNode dependClassName="mf.Money" />
+    <classNode dependClassName="postingrules.Account" />
+  </dependency>
+  <dependency className="postingrules.EventList" file="EventList.java">
+    <classNode dependClassName="java.lang.Exception" />
+    <classNode dependClassName="java.lang.RuntimeException" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="postingrules.AccountingEvent" />
+  </dependency>
+  <dependency className="postingrules.EventType" file="EventType.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="mf.Registry" />
+    <classNode extendsClassName="mf.NamedObject" />
+  </dependency>
+  <dependency className="postingrules.MissingPostingRuleException" file="MissingPostingRuleException.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode extendsClassName="postingrules.AccountingException" />
+  </dependency>
+  <dependency className="postingrules.MonetaryEvent" file="MonetaryEvent.java">
+    <classNode dependClassName="mf.MfDate" />
+    <classNode dependClassName="mf.Money" />
+    <classNode dependClassName="postingrules.EventType" />
+    <classNode dependClassName="postingrules.Subject" />
+    <classNode extendsClassName="postingrules.AccountingEvent" />
+  </dependency>
+  <dependency className="postingrules.MultiplyByRatePR" file="MultiplyByRatePR.java">
+    <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="mf.Money" />
+    <classNode dependClassName="postingrules.AccountType" />
+    <classNode dependClassName="postingrules.AccountingEvent" />
+    <classNode dependClassName="postingrules.Usage" />
+    <classNode extendsClassName="postingrules.PostingRule" />
+  </dependency>
+  <dependency className="postingrules.PoorCapPR" file="PoorCapPR.java">
+    <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="mf.Money" />
+    <classNode dependClassName="mf.Quantity" />
+    <classNode dependClassName="postingrules.AccountType" />
+    <classNode dependClassName="postingrules.AccountingEvent" />
+    <classNode dependClassName="postingrules.Usage" />
+    <classNode extendsClassName="postingrules.PostingRule" />
+  </dependency>
+  <dependency className="postingrules.PostingRule" file="PostingRule.java">
+    <classNode dependClassName="mf.Money" />
+    <classNode dependClassName="postingrules.AccountType" />
+    <classNode dependClassName="postingrules.AccountingEvent" />
+    <classNode dependClassName="postingrules.Entry" />
+    <classNode dependClassName="postingrules.TaxEvent" />
+  </dependency>
+  <dependency className="postingrules.ServiceAgreement" file="ServiceAgreement.java">
+    <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.IllegalArgumentException" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="mf.MfDate" />
+    <classNode dependClassName="mf.SingleTemporalCollection" />
+    <classNode dependClassName="mf.TemporalCollection" />
+    <classNode dependClassName="postingrules.AccountingEvent" />
+    <classNode dependClassName="postingrules.EventType" />
+    <classNode dependClassName="postingrules.MissingPostingRuleException" />
+    <classNode dependClassName="postingrules.PostingRule" />
+  </dependency>
+  <dependency className="postingrules.Subject" file="Subject.java">
+    <classNode dependClassName="postingrules.AccountType" />
+    <classNode dependClassName="postingrules.AccountingEvent" />
+    <classNode dependClassName="postingrules.Entry" />
+  </dependency>
+  <dependency className="postingrules.TaxEvent" file="TaxEvent.java">
+    <classNode dependClassName="mf.Money" />
+    <classNode dependClassName="postingrules.AccountingEvent" />
+    <classNode dependClassName="postingrules.EventType" />
+    <classNode extendsClassName="postingrules.MonetaryEvent" />
+  </dependency>
+  <dependency className="postingrules.Usage" file="Usage.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="mf.MfDate" />
+    <classNode dependClassName="mf.Quantity" />
+    <classNode dependClassName="postingrules.Customer" />
+    <classNode dependClassName="postingrules.EventType" />
+    <classNode dependClassName="postingrules.Subject" />
+    <classNode extendsClassName="postingrules.AccountingEvent" />
+  </dependency>
+</dependenciesRoot>
+

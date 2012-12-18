@@ -1,0 +1,49 @@
+<project name="run_all_tests" default="test.generation">
+  <property name="mps.home" value="${ant.file.run_all_tests}/../.."/>
+  <property name="basedir.run_all_tests" value="${ant.file.run_all_tests}/.."/>
+
+  <import file="${basedir.run_all_tests}/make_all_modules.xml"/>
+
+  <import file="${mps.home}/tests/jetbrains/mps/mps.tests.xml"/>
+
+  <jvmargs id="mps.args">
+    <arg value="-Xss1024k"/>
+    <arg value="-Xmx1000m"/>
+    <arg value="-XX:MaxPermSize=92m"/>
+    <arg value="-XX:+HeapDumpOnOutOfMemoryError"/>
+  </jvmargs>
+
+  <jvmargs id="debug.args">
+    <arg value="-Xdebug"/>
+    <arg value="-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005"/>
+  </jvmargs>
+
+  <jvmargs id="profile.args">
+    <arg value="-agentlib:yjpagent"/>
+  </jvmargs>
+
+  <jvmargs id="mps.debug.args">
+    <jvmargs refid="mps.args"/>
+    <jvmargs refid="debug.args"/>
+  </jvmargs>
+
+  <jvmargs id="mps.profile.args">
+    <jvmargs refid="mps.args"/>
+    <jvmargs refid="profile.args"/>
+  </jvmargs>
+
+  <target name="test" depends="make_all_modules.make">
+    <junit fork="true" forkmode="once" haltonerror="false" haltonfailure="false">
+      <jvmarg value="-ea"/>
+      <jvmarg value="-Xmx1024m"/>
+      <jvmarg value="-XX:MaxPermSize=192m"/>
+      <jvmarg value="-XX:+HeapDumpOnOutOfMemoryError"/>
+      <jvmarg value="-client"/>
+      <classpath refid="module.AllTests.classpath"/>
+    </junit>
+  </target>
+
+  <target name="test.generation" depends="mps.tests.all">
+  </target>
+
+</project>

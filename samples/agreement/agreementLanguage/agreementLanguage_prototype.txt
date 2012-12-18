@@ -1,0 +1,81 @@
+plan Regular {
+	// java example doesn't have this as temporal yet - but should be
+	value Quantity BASE_RATE {
+		1999-10-01: 10 USD/KwH
+		1999-12-01: 12 USD/KwH
+	}
+	event USAGE {
+		taxable
+		1999-10-01 {
+			amount: BASE_RATE * usage
+			account: base-usage
+		}
+	event SERVICE_CALL {
+		taxable 
+		1999-10-01 {
+			amount: fee * 0.5 + $10
+			account: service-call
+		}
+		1999-12-01 {
+			amount: fee * 0.5 + $15 
+			account: service
+		}
+	}
+	event TAX {
+		1999-10-01 {
+			amount: fee * 0.055 
+			account: tax
+		}
+	}
+}
+
+plan Low-Pay {
+	// java example doesn't have this as temporal yet - but should be
+	value Quantity BASE_RATE {
+		1999-10-01: 10 USD/KwH
+	}
+	value Quantity REDUCED_RATE {
+		1999-10-01: 5 USD/KwH
+	}
+	value Quantity CAP {
+		1999-10-01: 50 KwH
+	}
+	event USAGE {
+		taxable
+		1999-10-01 {
+			amount: if (usage > CAP, BASE_RATE * usage, REDUCED_RATE * usage)
+			account: base-usage
+		}
+	event SERVICE_CALL {
+		taxable
+		1999-10-01 {
+			amount: $10
+			account: service
+		}
+		1999-12-01 {
+			amount: fee * 0.5 + $15 
+			account: service
+		}
+	}
+	event TAX {
+		1999-10-01 {
+			amount: fee * 0.055 
+			account: tax
+		}
+	}
+}
+
+Event Type USAGE {
+	usage: Quantity
+}
+
+Event Type SERVICE_CALL {
+	fee: Money
+}
+
+Event Type TAX {
+	fee: Money
+}
+
+Account Types {base-usage, tax, service}
+		

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.ide.newLibDialog.NewLibDialog" file="NewLibDialog.java">
+    <classNode dependClassName="java.awt.Frame" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="javax.swing.JComponent" />
+    <classNode dependClassName="jetbrains.mps.ide.dialogs.DialogDimensionsSettings" />
+    <classNode dependClassName="jetbrains.mps.ide.newLibDialog.NewLibDialogContentPane" />
+    <classNode dependClassName="jetbrains.mps.project.Library" />
+    <classNode dependClassName="jetbrains.mps.project.MPSProject" />
+    <classNode extendsClassName="jetbrains.mps.ide.dialogs.BaseDialog" />
+  </dependency>
+  <dependency className="jetbrains.mps.ide.newLibDialog.NewLibDialogContentPane" file="NewLibDialogContentPane.java">
+    <classNode dependClassName="com.intellij.openapi.progress.ProgressIndicator" />
+    <classNode dependClassName="com.intellij.openapi.progress.Progressive" />
+    <classNode dependClassName="java.awt.GridLayout" />
+    <classNode dependClassName="java.io.File" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="javax.swing.JLabel" />
+    <classNode dependClassName="javax.swing.JPanel" />
+    <classNode dependClassName="javax.swing.JTextField" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes" />
+    <classNode dependClassName="jetbrains.mps.ide.common.PathField" />
+    <classNode dependClassName="jetbrains.mps.ide.newLibDialog.NewLibDialog" />
+    <classNode dependClassName="jetbrains.mps.ide.newSolutionDialog.NewModuleUtil" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.project.Library" />
+    <classNode dependClassName="jetbrains.mps.project.MPSExtentions" />
+    <classNode dependClassName="jetbrains.mps.project.MPSProject" />
+    <classNode dependClassName="jetbrains.mps.project.structure.modules.ModuleDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.ModelAccess" />
+    <classNode dependClassName="jetbrains.mps.uiLanguage.runtime.events.Events" />
+    <classNode dependClassName="jetbrains.mps.vfs.IFile" />
+    <classNode dependClassName="org.jdesktop.beansbinding.AutoBinding" />
+    <classNode dependClassName="org.jdesktop.beansbinding.BeanProperty" />
+    <classNode dependClassName="org.jdesktop.beansbinding.Bindings" />
+    <classNode dependClassName="org.jdesktop.beansbinding.Property" />
+    <classNode extendsClassName="javax.swing.JComponent" />
+  </dependency>
+</dependenciesRoot>
+

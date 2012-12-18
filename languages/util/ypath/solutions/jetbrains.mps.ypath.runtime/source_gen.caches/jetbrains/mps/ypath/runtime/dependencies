@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.ypath.runtime.CompositeFilter" file="CompositeFilter.java">
+    <classNode dependClassName="java.util.Arrays" />
+    <classNode dependClassName="java.util.List" />
+    <classNode extendsClassName="jetbrains.mps.ypath.runtime.IFilter" />
+  </dependency>
+  <dependency className="jetbrains.mps.ypath.runtime.IFeatureDescriptor" file="IFeatureDescriptor.java">
+    <classNode dependClassName="java.lang.Deprecated" />
+    <classNode dependClassName="java.lang.IllegalArgumentException" />
+    <classNode dependClassName="java.lang.Iterable" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.Collection" />
+  </dependency>
+  <dependency className="jetbrains.mps.ypath.runtime.IFilter" file="IFilter.java" />
+  <dependency className="jetbrains.mps.ypath.runtime.ISiblingsFilter" file="ISiblingsFilter.java">
+    <classNode extendsClassName="jetbrains.mps.ypath.runtime.IFilter" />
+  </dependency>
+  <dependency className="jetbrains.mps.ypath.runtime.ITreePath" file="ITreePath.java">
+    <classNode dependClassName="java.lang.Iterable" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.ypath.runtime.IFeatureDescriptor" />
+    <classNode dependClassName="jetbrains.mps.ypath.runtime.ITreeTraversal" />
+  </dependency>
+  <dependency className="jetbrains.mps.ypath.runtime.ITreeTraversal" file="ITreeTraversal.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.ypath.runtime.IFeatureDescriptor" />
+    <classNode dependClassName="jetbrains.mps.ypath.runtime.IFilter" />
+    <classNode dependClassName="jetbrains.mps.ypath.runtime.ITreePath" />
+    <classNode dependClassName="jetbrains.mps.ypath.runtime.TraversalAxis" />
+    <classNode extendsClassName="java.lang.Iterable" />
+  </dependency>
+  <dependency className="jetbrains.mps.ypath.runtime.TraversalAxis" file="TraversalAxis.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.LinkedList" />
+    <classNode dependClassName="java.util.List" />
+  </dependency>
+  <dependency className="jetbrains.mps.ypath.runtime.TreePath" file="TreePath.java">
+    <classNode dependClassName="java.lang.Deprecated" />
+    <classNode dependClassName="java.lang.IllegalStateException" />
+    <classNode dependClassName="java.lang.Iterable" />
+    <classNode dependClassName="java.lang.NullPointerException" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.SuppressWarnings" />
+    <classNode dependClassName="java.lang.UnsupportedOperationException" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.Arrays" />
+    <classNode dependClassName="java.util.Collections" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.NoSuchElementException" />
+    <classNode dependClassName="jetbrains.mps.ypath.runtime.IFeatureDescriptor" />
+    <classNode dependClassName="jetbrains.mps.ypath.runtime.ITreeTraversal" />
+    <classNode dependClassName="jetbrains.mps.ypath.runtime.internal.StartTreeTraversal" />
+    <classNode extendsClassName="java.util.Iterator" />
+    <classNode extendsClassName="jetbrains.mps.ypath.runtime.ITreePath" />
+  </dependency>
+  <dependency className="jetbrains.mps.ypath.runtime.TreeTraversalFactory" file="TreeTraversalFactory.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.ypath.runtime.IFeatureDescriptor" />
+    <classNode dependClassName="jetbrains.mps.ypath.runtime.IFilter" />
+    <classNode dependClassName="jetbrains.mps.ypath.runtime.ITreeTraversal" />
+    <classNode dependClassName="jetbrains.mps.ypath.runtime.TraversalAxis" />
+    <classNode dependClassName="jetbrains.mps.ypath.runtime.TreePath" />
+  </dependency>
+</dependenciesRoot>
+

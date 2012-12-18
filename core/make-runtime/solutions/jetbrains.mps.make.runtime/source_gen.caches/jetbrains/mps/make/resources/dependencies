@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.make.resources.IPropertiesAccessor" file="IPropertiesAccessor.java">
+    <classNode dependClassName="jetbrains.mps.make.resources.IResource" />
+    <classNode dependClassName="jetbrains.mps.make.script.IPropertiesPool" />
+  </dependency>
+  <dependency className="jetbrains.mps.make.resources.IPropertiesIO" file="IPropertiesIO.java">
+    <classNode dependClassName="java.io.IOException" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.Map" />
+  </dependency>
+  <dependency className="jetbrains.mps.make.resources.IPropertiesPersistence" file="IPropertiesPersistence.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="jetbrains.mps.make.script.IPropertiesPool" />
+  </dependency>
+  <dependency className="jetbrains.mps.make.resources.IResource" file="IResource.java">
+    <classNode dependClassName="java.lang.String" />
+  </dependency>
+  <dependency className="jetbrains.mps.make.resources.IResourceWithProperties" file="IResourceWithProperties.java">
+    <classNode dependClassName="jetbrains.mps.make.resources.IPropertiesIO" />
+  </dependency>
+</dependenciesRoot>
+

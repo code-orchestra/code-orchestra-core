@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.textGen.AuthorBlockDocTag_TextGen" file="AuthorBlockDocTag_TextGen.java">
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.textGen.DocCommentTextGen" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.textGen.SNodeTextGen" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.textGen.BaseParameterReference_TextGen" file="BaseParameterReference_TextGen.java">
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.textGen.SNodeTextGen" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.textGen.ClassifierDocComment_TextGen" file="ClassifierDocComment_TextGen.java">
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.textGen.DocCommentTextGen" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.textGen.TextGenManager" />
+    <classNode extendsClassName="jetbrains.mps.textGen.SNodeTextGen" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.textGen.ClassifierDocReference_TextGen" file="ClassifierDocReference_TextGen.java">
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.textGen.SNodeTextGen" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.textGen.CodeInlineDocTag_TextGen" file="CodeInlineDocTag_TextGen.java">
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.textGen.TextGenManager" />
+    <classNode extendsClassName="jetbrains.mps.textGen.SNodeTextGen" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.textGen.CodeSnippet_TextGen" file="CodeSnippet_TextGen.java">
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.textGen.DocCommentTextGen" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.textGen.TextGenManager" />
+    <classNode extendsClassName="jetbrains.mps.textGen.SNodeTextGen" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.textGen.CommentLine_TextGen" file="CommentLine_TextGen.java">
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.textGen.DocCommentTextGen" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.textGen.TextGenManager" />
+    <classNode extendsClassName="jetbrains.mps.textGen.SNodeTextGen" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.textGen.DocCommentTextGen" file="DocCommentTextGen.java">
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.BaseDocComment_Behavior" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.textGen.SNodeTextGen" />
+    <classNode dependClassName="jetbrains.mps.textGen.TextGenManager" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.textGen.FieldDocComment_TextGen" file="FieldDocComment_TextGen.java">
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.textGen.DocCommentTextGen" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.textGen.SNodeTextGen" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.textGen.FieldDocReference_TextGen" file="FieldDocReference_TextGen.java">
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.textGen.SNodeTextGen" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.textGen.HTMLElement_TextGen" file="HTMLElement_TextGen.java">
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.textGen.TextGenManager" />
+    <classNode extendsClassName="jetbrains.mps.textGen.SNodeTextGen" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.textGen.InheritDocInlineDocTag_TextGen" file="InheritDocInlineDocTag_TextGen.java">
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.textGen.SNodeTextGen" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.textGen.InlineTagCommentLinePart_TextGen" file="InlineTagCommentLinePart_TextGen.java">
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.textGen.TextGenManager" />
+    <classNode extendsClassName="jetbrains.mps.textGen.SNodeTextGen" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.textGen.LinkInlineDocTag_TextGen" file="LinkInlineDocTag_TextGen.java">
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.textGen.TextGenManager" />
+    <classNode extendsClassName="jetbrains.mps.textGen.SNodeTextGen" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.textGen.MethodDocComment_TextGen" file="MethodDocComment_TextGen.java">
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.textGen.DocCommentTextGen" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.textGen.TextGenManager" />
+    <classNode extendsClassName="jetbrains.mps.textGen.SNodeTextGen" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.textGen.MethodDocReference_TextGen" file="MethodDocReference_TextGen.java">
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.textGen.TextGenManager" />
+    <classNode extendsClassName="jetbrains.mps.textGen.SNodeTextGen" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.textGen.ParameterBlockDocTag_TextGen" file="ParameterBlockDocTag_TextGen.java">
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.textGen.DocCommentTextGen" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.textGen.TextGenManager" />
+    <classNode extendsClassName="jetbrains.mps.textGen.SNodeTextGen" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.textGen.ReturnBlockDocTag_TextGen" file="ReturnBlockDocTag_TextGen.java">
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.textGen.DocCommentTextGen" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.textGen.SNodeTextGen" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.textGen.SeeBlockDocTag_TextGen" file="SeeBlockDocTag_TextGen.java">
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.textGen.DocCommentTextGen" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.textGen.TextGenManager" />
+    <classNode extendsClassName="jetbrains.mps.textGen.SNodeTextGen" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.textGen.SinceBlockDocTag_TextGen" file="SinceBlockDocTag_TextGen.java">
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.textGen.DocCommentTextGen" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.textGen.SNodeTextGen" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.textGen.StaticFieldDocReference_TextGen" file="StaticFieldDocReference_TextGen.java">
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.textGen.SNodeTextGen" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.textGen.TextCommentLinePart_TextGen" file="TextCommentLinePart_TextGen.java">
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.textGen.SNodeTextGen" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.textGen.ThrowsBlockDocTag_TextGen" file="ThrowsBlockDocTag_TextGen.java">
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.textGen.DocCommentTextGen" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.textGen.TextGenManager" />
+    <classNode extendsClassName="jetbrains.mps.textGen.SNodeTextGen" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.textGen.ValueInlineDocTag_TextGen" file="ValueInlineDocTag_TextGen.java">
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.textGen.TextGenManager" />
+    <classNode extendsClassName="jetbrains.mps.textGen.SNodeTextGen" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.textGen.VersionBlockDocTag_TextGen" file="VersionBlockDocTag_TextGen.java">
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.textGen.DocCommentTextGen" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.textGen.SNodeTextGen" />
+  </dependency>
+</dependenciesRoot>
+

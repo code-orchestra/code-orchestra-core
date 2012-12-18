@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.debug.privateMembers.behavior.BehaviorAspectDescriptor" file="BehaviorAspectDescriptor.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.Arrays" />
+    <classNode dependClassName="jetbrains.mps.debug.privateMembers.behavior.PrivateFieldReferenceOperation_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.debug.privateMembers.behavior.PrivateInstanceMethodCallOperation_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.debug.privateMembers.behavior.PrivateStaticFieldReference_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.debug.privateMembers.behavior.PrivateStaticMethodCall_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.runtime.BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.runtime.interpreted.BehaviorAspectInterpreted" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.BehaviorAspectDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.debug.privateMembers.behavior.PrivateFieldReferenceOperation_Behavior" file="PrivateFieldReferenceOperation_Behavior.java">
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+  </dependency>
+  <dependency className="jetbrains.mps.debug.privateMembers.behavior.PrivateFieldReferenceOperation_BehaviorDescriptor" file="PrivateFieldReferenceOperation_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.behavior.FieldReferenceOperation_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.debug.privateMembers.behavior.PrivateInstanceMethodCallOperation_BehaviorDescriptor" file="PrivateInstanceMethodCallOperation_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.behavior.InstanceMethodCallOperation_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.debug.privateMembers.behavior.PrivateStaticFieldReference_BehaviorDescriptor" file="PrivateStaticFieldReference_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.behavior.StaticFieldReference_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.debug.privateMembers.behavior.PrivateStaticMethodCall_BehaviorDescriptor" file="PrivateStaticMethodCall_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.behavior.StaticMethodCall_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+</dependenciesRoot>
+

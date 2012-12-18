@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.testbench.junit.suites.DefaultTestSuite" file="DefaultTestSuite.java">
+    <classNode dependClassName="jetbrains.mps.testbench.junit.runners.MPSOpenProjectSuite" />
+    <classNode dependClassName="jetbrains.mps.testbench.junit.suites.ExecuteProjectTests" />
+    <classNode dependClassName="org.junit.runner.RunWith" />
+    <classNode dependClassName="org.junit.runners.Suite" />
+  </dependency>
+  <dependency className="jetbrains.mps.testbench.junit.suites.ExecuteProjectTests" file="ExecuteProjectTests.java">
+    <classNode dependClassName="jetbrains.mps.testbench.junit.runners.MPSProjectITestsSuite" />
+    <classNode dependClassName="org.junit.runner.RunWith" />
+  </dependency>
+</dependenciesRoot>
+

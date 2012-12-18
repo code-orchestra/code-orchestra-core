@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.debugger.java.evaluation.EvaluationProvider" file="EvaluationProvider.java">
+    <classNode dependClassName="com.intellij.openapi.application.ApplicationManager" />
+    <classNode dependClassName="java.awt.event.WindowAdapter" />
+    <classNode dependClassName="java.awt.event.WindowEvent" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.Runnable" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="javax.swing.JComponent" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes" />
+    <classNode dependClassName="jetbrains.mps.debug.api.AbstractDebugSession" />
+    <classNode dependClassName="jetbrains.mps.debug.api.DebugSessionManagerComponent" />
+    <classNode dependClassName="jetbrains.mps.debug.evaluation.ui.EvaluationAuxModule" />
+    <classNode dependClassName="jetbrains.mps.debug.runtime.DebugSession" />
+    <classNode dependClassName="jetbrains.mps.debug.runtime.JavaUiState" />
+    <classNode dependClassName="jetbrains.mps.debugger.java.evaluation.model.AbstractEvaluationModel" />
+    <classNode dependClassName="jetbrains.mps.debugger.java.evaluation.model.LowLevelEvaluationModel" />
+    <classNode dependClassName="jetbrains.mps.debugger.java.ui.evaluation.EditWatchDialog" />
+    <classNode dependClassName="jetbrains.mps.debugger.java.ui.evaluation.EvaluationDialog" />
+    <classNode dependClassName="jetbrains.mps.debugger.java.ui.evaluation.WatchesPanel" />
+    <classNode dependClassName="jetbrains.mps.project.ProjectOperationContext" />
+    <classNode dependClassName="jetbrains.mps.smodel.IOperationContext" />
+    <classNode dependClassName="jetbrains.mps.smodel.ModelAccess" />
+    <classNode dependClassName="org.jetbrains.annotations.NotNull" />
+    <classNode extendsClassName="jetbrains.mps.debug.api.evaluation.IEvaluationProvider" />
+    <classNode extendsClassName="jetbrains.mps.debugger.java.evaluation.IWatchListener" />
+  </dependency>
+</dependenciesRoot>
+

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.ypath.runtime.dom.ChainedIterable" file="ChainedIterable.java">
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.Arrays" />
+    <classNode dependClassName="java.util.Iterator" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.ypath.runtime.dom.ChainedIterator" />
+    <classNode extendsClassName="java.lang.Iterable" />
+  </dependency>
+  <dependency className="jetbrains.mps.ypath.runtime.dom.ChainedIterator" file="ChainedIterator.java">
+    <classNode dependClassName="java.lang.UnsupportedOperationException" />
+    <classNode dependClassName="java.util.Arrays" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.NoSuchElementException" />
+    <classNode extendsClassName="java.util.Iterator" />
+  </dependency>
+  <dependency className="jetbrains.mps.ypath.runtime.dom.NamedNodeMapIterableAdapter" file="NamedNodeMapIterableAdapter.java">
+    <classNode dependClassName="java.lang.UnsupportedOperationException" />
+    <classNode dependClassName="java.util.NoSuchElementException" />
+    <classNode dependClassName="org.w3c.dom.NamedNodeMap" />
+    <classNode dependClassName="org.w3c.dom.Node" />
+    <classNode extendsClassName="java.lang.Iterable" />
+    <classNode extendsClassName="java.util.Iterator" />
+  </dependency>
+  <dependency className="jetbrains.mps.ypath.runtime.dom.NodeListIterableAdapter" file="NodeListIterableAdapter.java">
+    <classNode dependClassName="java.lang.UnsupportedOperationException" />
+    <classNode dependClassName="java.util.NoSuchElementException" />
+    <classNode dependClassName="org.w3c.dom.Node" />
+    <classNode dependClassName="org.w3c.dom.NodeList" />
+    <classNode extendsClassName="java.lang.Iterable" />
+    <classNode extendsClassName="java.util.Iterator" />
+  </dependency>
+</dependenciesRoot>
+

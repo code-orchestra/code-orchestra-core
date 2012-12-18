@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="sample2.FileDemo" file="FileDemo.java">
+    <classNode dependClassName="java.io.File" />
+    <classNode dependClassName="java.lang.Iterable" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.Iterator" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime.YieldingIterator" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ISequenceClosure" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.Sequence" />
+    <classNode dependClassName="jetbrains.mps.ypath.runtime.ITreeTraversal" />
+    <classNode dependClassName="jetbrains.mps.ypath.runtime.TreeTraversalFactory" />
+    <classNode dependClassName="sample2.File_TreePath" />
+  </dependency>
+  <dependency className="sample2.File_TreePath" file="File_TreePath.java">
+    <classNode dependClassName="java.io.File" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode extendsClassName="jetbrains.mps.ypath.runtime.IFilter" />
+    <classNode extendsClassName="jetbrains.mps.ypath.runtime.TreePath" />
+  </dependency>
+</dependenciesRoot>
+

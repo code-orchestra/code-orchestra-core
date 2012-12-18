@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.ui.modeling.plugin.Code_TabDescriptor" file="Code_TabDescriptor.java">
+    <classNode dependClassName="com.intellij.ide.DataManager" />
+    <classNode dependClassName="java.awt.Frame" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="javax.swing.JOptionPane" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.IWhereFilter" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.Sequence" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.ui.modeling.plugin.EditorExtensions" />
+    <classNode dependClassName="jetbrains.mps.ui.modeling.plugin.Event_editor_Helper" />
+    <classNode dependClassName="jetbrains.mps.workbench.MPSDataKeys" />
+    <classNode extendsClassName="jetbrains.mps.ide.editorTabs.EditorTabDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.ui.modeling.plugin.EditorExtensionHelper" file="EditorExtensionHelper.java">
+    <classNode dependClassName="com.intellij.openapi.util.Computable" />
+    <classNode dependClassName="java.lang.Iterable" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.Runnable" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.Collections" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime.Wrappers" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.Sequence" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SModelOperations" />
+    <classNode dependClassName="jetbrains.mps.project.GlobalScope" />
+    <classNode dependClassName="jetbrains.mps.smodel.ModelAccess" />
+    <classNode dependClassName="jetbrains.mps.smodel.SModel" />
+    <classNode dependClassName="jetbrains.mps.smodel.SModelDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.SModelFqName" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.ui.modeling.plugin.EditorExtensions" />
+    <classNode dependClassName="jetbrains.mps.ui.modeling.plugin.IObjectsProvider" />
+  </dependency>
+  <dependency className="jetbrains.mps.ui.modeling.plugin.EditorExtensions" file="EditorExtensions.java">
+    <classNode dependClassName="java.lang.IllegalArgumentException" />
+    <classNode dependClassName="java.lang.IllegalStateException" />
+    <classNode dependClassName="java.lang.Iterable" />
+    <classNode dependClassName="java.lang.NullPointerException" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ISelector" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ITranslator2" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.IWhereFilter" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.backports.LinkedList" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.ui.modeling.plugin.IObjectsProvider" />
+    <classNode dependClassName="org.apache.log4j.Logger" />
+  </dependency>
+  <dependency className="jetbrains.mps.ui.modeling.plugin.EditorExtensions_CustomApplicationPlugin" file="EditorExtensions_CustomApplicationPlugin.java">
+    <classNode dependClassName="jetbrains.mps.ui.modeling.plugin.EditorExtensions" />
+    <classNode extendsClassName="jetbrains.mps.plugins.pluginparts.custom.BaseCustomApplicationPlugin" />
+  </dependency>
+  <dependency className="jetbrains.mps.ui.modeling.plugin.Event_editor_Helper" file="Event_editor_Helper.java">
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+  </dependency>
+  <dependency className="jetbrains.mps.ui.modeling.plugin.IObjectsProvider" file="IObjectsProvider.java">
+    <classNode dependClassName="java.lang.Iterable" />
+    <classNode dependClassName="java.lang.Object" />
+  </dependency>
+  <dependency className="jetbrains.mps.ui.modeling.plugin.Modeling_ApplicationPlugin" file="Modeling_ApplicationPlugin.java">
+    <classNode dependClassName="com.intellij.openapi.extensions.PluginId" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.plugins.pluginparts.custom.BaseCustomApplicationPlugin" />
+    <classNode dependClassName="jetbrains.mps.ui.modeling.plugin.EditorExtensions_CustomApplicationPlugin" />
+    <classNode extendsClassName="jetbrains.mps.plugins.applicationplugins.BaseApplicationPlugin" />
+  </dependency>
+  <dependency className="jetbrains.mps.ui.modeling.plugin.Modeling_ProjectPlugin" file="Modeling_ProjectPlugin.java">
+    <classNode dependClassName="com.intellij.openapi.project.Project" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.ide.editorTabs.EditorTabDescriptor" />
+    <classNode dependClassName="jetbrains.mps.ui.modeling.plugin.Code_TabDescriptor" />
+    <classNode dependClassName="jetbrains.mps.ui.modeling.plugin.Structure_TabDescriptor" />
+    <classNode dependClassName="jetbrains.mps.ui.modeling.plugin.UICode_TabDescriptor" />
+    <classNode dependClassName="jetbrains.mps.ui.modeling.plugin.UIStructure_TabDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.plugins.projectplugins.BaseProjectPlugin" />
+  </dependency>
+  <dependency className="jetbrains.mps.ui.modeling.plugin.Structure_TabDescriptor" file="Structure_TabDescriptor.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.ui.modeling.plugin.Event_editor_Helper" />
+    <classNode extendsClassName="jetbrains.mps.ide.editorTabs.EditorTabDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.ui.modeling.plugin.UICode_TabDescriptor" file="UICode_TabDescriptor.java">
+    <classNode dependClassName="com.intellij.ide.DataManager" />
+    <classNode dependClassName="java.awt.Frame" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="javax.swing.JOptionPane" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.IWhereFilter" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.Sequence" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.ui.modeling.plugin.EditorExtensions" />
+    <classNode dependClassName="jetbrains.mps.ui.modeling.plugin.UIObject_editor_Helper" />
+    <classNode dependClassName="jetbrains.mps.workbench.MPSDataKeys" />
+    <classNode extendsClassName="jetbrains.mps.ide.editorTabs.EditorTabDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.ui.modeling.plugin.UIObject_editor_Helper" file="UIObject_editor_Helper.java">
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+  </dependency>
+  <dependency className="jetbrains.mps.ui.modeling.plugin.UIStructure_TabDescriptor" file="UIStructure_TabDescriptor.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.ui.modeling.plugin.UIObject_editor_Helper" />
+    <classNode extendsClassName="jetbrains.mps.ide.editorTabs.EditorTabDescriptor" />
+  </dependency>
+</dependenciesRoot>
+

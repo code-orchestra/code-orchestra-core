@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.nanoc.debug.answer.AsyncAnswer" file="AsyncAnswer.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.nanoc.debug.answer.RecordValue" />
+    <classNode extendsClassName="jetbrains.mps.nanoc.debug.answer.StructuralAnswer" />
+  </dependency>
+  <dependency className="jetbrains.mps.nanoc.debug.answer.GDBAnswer" file="GDBAnswer.java" />
+  <dependency className="jetbrains.mps.nanoc.debug.answer.GDBAnswerProducer" file="GDBAnswerProducer.java">
+    <classNode dependClassName="java.lang.Character" />
+    <classNode dependClassName="java.lang.Long" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.StringBuilder" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="java.lang.Throwable" />
+    <classNode dependClassName="jetbrains.mps.nanoc.debug.answer.AsyncAnswer" />
+    <classNode dependClassName="jetbrains.mps.nanoc.debug.answer.GDBAnswer" />
+    <classNode dependClassName="jetbrains.mps.nanoc.debug.answer.GDBValue" />
+    <classNode dependClassName="jetbrains.mps.nanoc.debug.answer.ListMapValue" />
+    <classNode dependClassName="jetbrains.mps.nanoc.debug.answer.ListValue" />
+    <classNode dependClassName="jetbrains.mps.nanoc.debug.answer.RecordValue" />
+    <classNode dependClassName="jetbrains.mps.nanoc.debug.answer.ResultAnswer" />
+    <classNode dependClassName="jetbrains.mps.nanoc.debug.answer.StreamAnswer" />
+    <classNode dependClassName="jetbrains.mps.nanoc.debug.answer.StringValue" />
+    <classNode dependClassName="jetbrains.mps.util.Pair" />
+  </dependency>
+  <dependency className="jetbrains.mps.nanoc.debug.answer.GDBValue" file="GDBValue.java" />
+  <dependency className="jetbrains.mps.nanoc.debug.answer.ListMapValue" file="ListMapValue.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.util.Pair" />
+    <classNode extendsClassName="jetbrains.mps.nanoc.debug.answer.GDBValue" />
+  </dependency>
+  <dependency className="jetbrains.mps.nanoc.debug.answer.ListValue" file="ListValue.java">
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode extendsClassName="jetbrains.mps.nanoc.debug.answer.GDBValue" />
+  </dependency>
+  <dependency className="jetbrains.mps.nanoc.debug.answer.RecordValue" file="RecordValue.java">
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.NumberFormatException" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="jetbrains.mps.nanoc.debug.answer.StringValue" />
+    <classNode extendsClassName="jetbrains.mps.nanoc.debug.answer.GDBValue" />
+  </dependency>
+  <dependency className="jetbrains.mps.nanoc.debug.answer.ResultAnswer" file="ResultAnswer.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.nanoc.debug.answer.RecordValue" />
+    <classNode extendsClassName="jetbrains.mps.nanoc.debug.answer.StructuralAnswer" />
+  </dependency>
+  <dependency className="jetbrains.mps.nanoc.debug.answer.StreamAnswer" file="StreamAnswer.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode extendsClassName="jetbrains.mps.nanoc.debug.answer.GDBAnswer" />
+  </dependency>
+  <dependency className="jetbrains.mps.nanoc.debug.answer.StringValue" file="StringValue.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode extendsClassName="jetbrains.mps.nanoc.debug.answer.GDBValue" />
+  </dependency>
+  <dependency className="jetbrains.mps.nanoc.debug.answer.StructuralAnswer" file="StructuralAnswer.java">
+    <classNode dependClassName="java.lang.Long" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.nanoc.debug.answer.RecordValue" />
+    <classNode extendsClassName="jetbrains.mps.nanoc.debug.answer.GDBAnswer" />
+  </dependency>
+</dependenciesRoot>
+

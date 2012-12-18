@@ -1,0 +1,46 @@
+<!--
+  ~ Copyright 2003-2010 JetBrains s.r.o.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<!DOCTYPE idea-plugin PUBLIC "Plugin/DTD" "http://plugins.intellij.net/plugin.dtd">
+<idea-plugin xmlns:xi="http://www.w3.org/2001/XInclude">
+  <id>jetbrains.mps.samples</id>
+  <name>MPS samples</name>
+  <description>Samples handling in MPS</description>
+  <version>2.0</version>
+  <vendor url="http://www.jetbrains.com/mps/">JetBrains</vendor>
+  <idea-version since-build="3000"/>
+
+  <application-components>
+    <component>
+      <interface-class>jetbrains.mps.samples.SamplesInfo</interface-class>
+      <implementation-class>jetbrains.mps.build.SamplesExtractor</implementation-class>
+    </component>
+  </application-components>
+
+
+  <actions>
+    <group id="MPSWelcomeSamplesMenu">
+      <action id="OpenTheComplexNumberLanguageProject"
+              class="jetbrains.mps.workbench.actions.welcomeScreen.OpenComplexLanguageProjectAction"
+              text="Open Complex Numbers Project"
+              description="You can take a look at how baseLanguage can be extended with support for complex numbers. Click the icon or link to open the sample project."/>
+      <action id="OpenTheSimplestLanguageProject"
+              class="jetbrains.mps.workbench.actions.welcomeScreen.OpenTheSimplestLanguageProjectAction"
+              text="Open The Simplest Language Project"
+              description="You can take a look at the simplest possible language with typical aspects of most languages. Click the icon or link to open the sample project."/>
+      <add-to-group group-id="MPSWelcomeDocumentationMenu" anchor="last"/>
+    </group>
+  </actions>
+</idea-plugin>

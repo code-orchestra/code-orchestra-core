@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.workbench.dialogs.project.components.parts.descriptors.BooleanDescriptor" file="BooleanDescriptor.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="javax.swing.table.TableCellEditor" />
+    <classNode dependClassName="javax.swing.table.TableCellRenderer" />
+    <classNode dependClassName="jetbrains.mps.workbench.dialogs.project.components.parts.editors.BooleanEditor" />
+    <classNode dependClassName="jetbrains.mps.workbench.dialogs.project.components.parts.renderers.BooleanRenderer" />
+    <classNode dependClassName="jetbrains.mps.workbench.dialogs.project.components.parts.renderers.ListRendererAdapter" />
+    <classNode extendsClassName="jetbrains.mps.workbench.dialogs.project.components.parts.descriptors.ColumnDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.workbench.dialogs.project.components.parts.descriptors.ColumnDescriptor" file="ColumnDescriptor.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="javax.swing.table.TableCellEditor" />
+    <classNode dependClassName="javax.swing.table.TableCellRenderer" />
+  </dependency>
+  <dependency className="jetbrains.mps.workbench.dialogs.project.components.parts.descriptors.DepDescriptor" file="DepDescriptor.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="javax.swing.table.TableCellRenderer" />
+    <classNode dependClassName="jetbrains.mps.workbench.dialogs.project.IBindedDialog" />
+    <classNode dependClassName="jetbrains.mps.workbench.dialogs.project.components.parts.renderers.ListRendererAdapter" />
+    <classNode dependClassName="jetbrains.mps.workbench.dialogs.project.components.parts.renderers.ModuleRenderer" />
+    <classNode extendsClassName="jetbrains.mps.workbench.dialogs.project.components.parts.descriptors.VoidColumnDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.workbench.dialogs.project.components.parts.descriptors.EditableStringDescriptor" file="EditableStringDescriptor.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="javax.swing.DefaultCellEditor" />
+    <classNode dependClassName="javax.swing.JTextField" />
+    <classNode dependClassName="javax.swing.table.TableCellEditor" />
+    <classNode extendsClassName="jetbrains.mps.workbench.dialogs.project.components.parts.descriptors.VoidColumnDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.workbench.dialogs.project.components.parts.descriptors.ManagerDescriptor" file="ManagerDescriptor.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="javax.swing.table.TableCellEditor" />
+    <classNode dependClassName="javax.swing.table.TableCellRenderer" />
+    <classNode dependClassName="jetbrains.mps.workbench.dialogs.project.IBindedDialog" />
+    <classNode dependClassName="jetbrains.mps.workbench.dialogs.project.components.parts.editors.ManagerTableCellEditor" />
+    <classNode dependClassName="jetbrains.mps.workbench.dialogs.project.components.parts.renderers.ListRendererAdapter" />
+    <classNode dependClassName="jetbrains.mps.workbench.dialogs.project.components.parts.renderers.ManagerRenderer" />
+    <classNode extendsClassName="jetbrains.mps.workbench.dialogs.project.components.parts.descriptors.VoidColumnDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.workbench.dialogs.project.components.parts.descriptors.ModelDescriptor" file="ModelDescriptor.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="javax.swing.table.TableCellRenderer" />
+    <classNode dependClassName="jetbrains.mps.workbench.dialogs.project.components.parts.renderers.ListRendererAdapter" />
+    <classNode dependClassName="jetbrains.mps.workbench.dialogs.project.components.parts.renderers.ModelRenderer" />
+    <classNode extendsClassName="jetbrains.mps.workbench.dialogs.project.components.parts.descriptors.VoidColumnDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.workbench.dialogs.project.components.parts.descriptors.ModuleDescriptor" file="ModuleDescriptor.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="javax.swing.table.TableCellRenderer" />
+    <classNode dependClassName="jetbrains.mps.workbench.dialogs.project.components.parts.renderers.ListRendererAdapter" />
+    <classNode dependClassName="jetbrains.mps.workbench.dialogs.project.components.parts.renderers.ModuleRenderer" />
+    <classNode extendsClassName="jetbrains.mps.workbench.dialogs.project.components.parts.descriptors.VoidColumnDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.workbench.dialogs.project.components.parts.descriptors.ModuleImportDescriptor" file="ModuleImportDescriptor.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="javax.swing.table.TableCellEditor" />
+    <classNode dependClassName="javax.swing.table.TableCellRenderer" />
+    <classNode dependClassName="jetbrains.mps.workbench.dialogs.project.components.parts.editors.ModuleImportEditor" />
+    <classNode dependClassName="jetbrains.mps.workbench.dialogs.project.components.parts.renderers.ListRendererAdapter" />
+    <classNode dependClassName="jetbrains.mps.workbench.dialogs.project.components.parts.renderers.ModuleImportRenderer" />
+    <classNode dependClassName="jetbrains.mps.workbench.dialogs.project.utildialogs.addmodelimport.ImportProperties" />
+    <classNode extendsClassName="jetbrains.mps.workbench.dialogs.project.components.parts.descriptors.VoidColumnDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.workbench.dialogs.project.components.parts.descriptors.PriorityRuleDescriptor" file="PriorityRuleDescriptor.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="javax.swing.table.TableCellEditor" />
+    <classNode dependClassName="javax.swing.table.TableCellRenderer" />
+    <classNode dependClassName="jetbrains.mps.project.structure.modules.ModuleReference" />
+    <classNode dependClassName="jetbrains.mps.smodel.Generator" />
+    <classNode dependClassName="jetbrains.mps.workbench.dialogs.project.components.parts.editors.RuleOperandEditor" />
+    <classNode dependClassName="jetbrains.mps.workbench.dialogs.project.components.parts.renderers.RuleOperandRenderer" />
+    <classNode extendsClassName="jetbrains.mps.workbench.dialogs.project.components.parts.descriptors.VoidColumnDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.workbench.dialogs.project.components.parts.descriptors.RuleTypeDescriptor" file="RuleTypeDescriptor.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="javax.swing.table.TableCellEditor" />
+    <classNode dependClassName="javax.swing.table.TableCellRenderer" />
+    <classNode dependClassName="jetbrains.mps.workbench.dialogs.project.components.parts.editors.RuleTypeEditor" />
+    <classNode dependClassName="jetbrains.mps.workbench.dialogs.project.components.parts.renderers.RuleTypeRenderer" />
+    <classNode extendsClassName="jetbrains.mps.workbench.dialogs.project.components.parts.descriptors.VoidColumnDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.workbench.dialogs.project.components.parts.descriptors.StringPathDescriptor" file="StringPathDescriptor.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="javax.swing.table.TableCellRenderer" />
+    <classNode dependClassName="jetbrains.mps.workbench.dialogs.project.components.parts.renderers.ListRendererAdapter" />
+    <classNode dependClassName="jetbrains.mps.workbench.dialogs.project.components.parts.renderers.StringPathRenderer" />
+    <classNode extendsClassName="jetbrains.mps.workbench.dialogs.project.components.parts.descriptors.VoidColumnDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.workbench.dialogs.project.components.parts.descriptors.VoidColumnDescriptor" file="VoidColumnDescriptor.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="javax.swing.table.TableCellEditor" />
+    <classNode dependClassName="javax.swing.table.TableCellRenderer" />
+    <classNode extendsClassName="jetbrains.mps.workbench.dialogs.project.components.parts.descriptors.ColumnDescriptor" />
+  </dependency>
+</dependenciesRoot>
+

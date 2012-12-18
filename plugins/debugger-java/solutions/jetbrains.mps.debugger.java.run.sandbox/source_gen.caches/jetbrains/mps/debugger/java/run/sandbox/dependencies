@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.debugger.java.run.sandbox.BaseClass" file="BaseClass.java" />
+  <dependency className="jetbrains.mps.debugger.java.run.sandbox.Data" file="Data.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.SuppressWarnings" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.runtime.MultiTuple" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.runtime.Tuples" />
+    <classNode extendsClassName="jetbrains.mps.baseLanguage.tuples.runtime._2" />
+  </dependency>
+  <dependency className="jetbrains.mps.debugger.java.run.sandbox.DebugCollections" file="DebugCollections.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="java.util.HashSet" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="java.util.TreeMap" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.LinkedListSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.MapSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.SetSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.SortedMapSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.backports.Deque" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.backports.LinkedList" />
+  </dependency>
+  <dependency className="jetbrains.mps.debugger.java.run.sandbox.DebugObjects" file="DebugObjects.java">
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.runtime.MultiTuple" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.runtime.Tuples" />
+    <classNode dependClassName="jetbrains.mps.debugger.java.run.sandbox.Data" />
+  </dependency>
+  <dependency className="jetbrains.mps.debugger.java.run.sandbox.DerivedClass" file="DerivedClass.java">
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode extendsClassName="jetbrains.mps.debugger.java.run.sandbox.BaseClass" />
+  </dependency>
+  <dependency className="jetbrains.mps.debugger.java.run.sandbox.InnerClassTest" file="InnerClassTest.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+  </dependency>
+  <dependency className="jetbrains.mps.debugger.java.run.sandbox.SeveralThreads" file="SeveralThreads.java">
+    <classNode dependClassName="java.lang.InterruptedException" />
+    <classNode dependClassName="java.lang.Math" />
+    <classNode dependClassName="java.lang.Runnable" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="java.lang.Thread" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes" />
+  </dependency>
+  <dependency className="jetbrains.mps.debugger.java.run.sandbox.UncaughtException" file="UncaughtException.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.reflect.UndeclaredThrowableException" />
+    <classNode dependClassName="java.security.PrivilegedActionException" />
+    <classNode dependClassName="javax.script.ScriptException" />
+  </dependency>
+</dependenciesRoot>
+

@@ -1,0 +1,45 @@
+<!DOCTYPE idea-plugin PUBLIC "Plugin/DTD" "http://plugins.intellij.net/plugin.dtd">
+<idea-plugin>
+  <id>jetbrains.mps.debugger-api</id>
+  <name>Debugger API for MPS</name>
+  <description>Provides Generic Debugger Support For MPS</description>
+  <version>2.0</version>
+  <vendor url="http://www.jetbrains.com/mps/">JetBrains</vendor>
+  <idea-version since-build="3000"/>
+
+  <application-components>
+    <component>
+      <implementation-class>jetbrains.mps.debugger.api.ui.actions.Api_PluginInitializer</implementation-class>
+    </component>
+  </application-components>
+
+  <project-components>
+    <component>
+      <implementation-class>jetbrains.mps.debugger.api.ui.breakpoints.BreakpointsUiComponent</implementation-class>
+    </component>
+    <component>
+      <implementation-class>jetbrains.mps.debugger.api.ui.breakpoints.BreakpointViewSettingsComponent</implementation-class>
+    </component>
+    <component>
+      <implementation-class>jetbrains.mps.debugger.api.ui.breakpoints.CurrentLinePositionComponent</implementation-class>
+    </component>
+  </project-components>
+
+  <actions>
+    <!--for being able to use StopAction in j.m.debug.api-->
+    <group id="DebugStopAction" popup="false">
+      <reference ref="Stop"/>
+    </group>
+
+    <!--for being able to use MuteAction in j.m.ide.actions-->
+    <group id="DebugMuteAction" popup="false">
+      <action id="Mute" text="Mute" class="jetbrains.mps.debugger.api.ui.actions.MuteBreakpoints"/>
+    </group>
+  </actions>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <programRunner id="defaultDebugRunner" implementation="jetbrains.mps.debugger.api.runner.MPSDebugRunner" order="last"/>
+    <executor implementation="com.intellij.execution.executors.DefaultDebugExecutor" order="after run" id="debug"/>
+    <errorHandler implementation="jetbrains.mps.workbench.diagnostics.CharismaReporter"/>
+  </extensions>
+</idea-plugin>

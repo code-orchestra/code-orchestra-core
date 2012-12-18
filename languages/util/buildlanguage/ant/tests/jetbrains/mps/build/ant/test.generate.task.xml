@@ -1,0 +1,103 @@
+<!--
+  ~ Copyright 2003-2009 JetBrains s.r.o.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<project name="TestGenerateTask">
+    <property name="module.home" value="${ant.file}/../../../../../.."/>
+    <property name="test.projects.home" value="${module.home}/testProjects"/>
+
+    <taskdef resource="jetbrains/mps/build/ant/antlib.xml"
+             classpath="${module.home}/classes"/>
+
+    <target name="testBuildException">
+        <mps.generate/>
+    </target>
+
+    <target name="testComplexLanguageProject">
+        <mps.test.generation mpshome="${module.home}/../../.." loglevel="info" fork="true" showdiff="true" invoketests="true">
+            <jvmarg value="-Xss1024k"/>
+            <jvmarg value="-Xmx512m"/>
+            <jvmarg value="-XX:MaxPermSize=92m"/>
+            <jvmarg value="-Xdebug"/>
+            <jvmarg value="-Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005"/>
+            <project file="${module.home}/../../../samples/complexLanguage/Complex.mpr"/>
+        </mps.test.generation>
+    </target>
+
+    <target name="testBuildLanguage">
+        <mps.generate mpshome="${module.home}/../../.." loglevel="info" fork="true">
+            <modules dir="${module.home}/../../../languages/util/buildlanguage"/>
+        </mps.generate>
+    </target>
+
+    <target name="testComplexLanguageModels">
+        <mps.generate mpshome="${module.home}/../../..">
+            <model dir="${module.home}/../../../samples/complexLanguage"/>
+        </mps.generate>
+    </target>
+
+    <target name="testComplexLanguageModel">
+        <mps.generate mpshome="${module.home}/../../..">
+            <model file="${module.home}/../../../samples/complexLanguage/solutions/jetbrains.mps.complex.runtime/jetbrains/mps/samples/complex/runtime.mps"/>
+        </mps.generate>
+    </target>
+
+    <target name="testComplexLanguageModules">
+        <mps.generate mpshome="${module.home}/../../..">
+            <module dir="${module.home}/../../../samples/complexLanguage"/>
+        </mps.generate>
+    </target>
+
+    <target name="testFailOnGenerationError">
+        <unzip src="${test.projects.home}/failedProject.zip" dest="${test.projects.home}"/>
+        <mps.generate mpshome="${module.home}/../../.." failonerror="true" loglevel="info">
+            <project file="${test.projects.home}/failedProject/FailedProject.mpr"/>
+        </mps.generate>
+        <delete dir="${test.projects.home}/failedProject"/>
+    </target>
+
+    <target name="testSuccess">
+        <unzip src="${test.projects.home}/successfulProject.zip" dest="${test.projects.home}"/>
+        <mps.test.generation mpshome="${module.home}/../../.." failonerror="true" loglevel="debug" showdiff="true">
+            <project file="${test.projects.home}/SuccessfulProject/SuccessfulProject.mpr"/>
+        </mps.test.generation>
+        <delete dir="${test.projects.home}/SuccessfulProject"/>
+    </target>
+
+    <target name="testSamplesProjects">
+        <mps.generate mpshome="${module.home}/../../.." loglevel="info">
+            <project file="${module.home}/../../../samples/agreement/agreement.mpr"/>
+            <project file="${module.home}/../../../samples/calculator/calculator.mpr"/>
+            <project file="${module.home}/../../../samples/calculator-tutorial/calculator-tutorial.mpr"/>
+            <project file="${module.home}/../../../samples/dslbook_example/dslbook_example.mpr"/>
+            <project file="${module.home}/../../../samples/fixedLengthReader/fixedLengthReader.mpr"/>
+            <project file="${module.home}/../../../samples/formulaLanguage/formulaLanguage.mpr"/>
+            <project file="${module.home}/../../../samples/generator_demo/generator_demo.mpr"/>
+            <module dir="${module.home}/../../../samples/genericLanguage/"/>
+            <project file="${module.home}/../../../samples/matrixLanguage/jetbrains.mps.matrixLanguage.mpr"/>
+            <project file="${module.home}/../../../samples/sampleXML/sampleXML.mpr"/>
+            <project file="${module.home}/../../../samples/theSimplestLanguage/theSimplestLanguage.mpr"/>
+        </mps.generate>
+    </target>
+
+    <target name="testLibraries">
+        <property name="mps.webr-dnq" value="${module.home}/../../../../webr-dnq"/>
+        <property name="charisma" value="${module.home}/../../../../charisma"/>
+        <mps.generate mpshome="${module.home}/../../.." usepropertiesasmacro="true" failonerror="true">
+            <library name="webr-dnq" dir="${mps.webr-dnq}"/>
+            <module dir="${module.home}/../../../../charisma"/>
+        </mps.generate>
+    </target>
+
+</project>

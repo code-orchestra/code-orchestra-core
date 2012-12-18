@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.lang.editor.plugin.EditorLangPlugin_CustomProjectPlugin" file="EditorLangPlugin_CustomProjectPlugin.java">
+    <classNode dependClassName="jetbrains.mps.ide.resolve.AutoResolver" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.Highlighter" />
+    <classNode dependClassName="jetbrains.mps.project.MPSProject" />
+    <classNode extendsClassName="jetbrains.mps.plugins.pluginparts.custom.BaseCustomProjectPlugin" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.editor.plugin.Editor_ApplicationPlugin" file="Editor_ApplicationPlugin.java">
+    <classNode dependClassName="com.intellij.openapi.extensions.PluginId" />
+    <classNode extendsClassName="jetbrains.mps.plugins.applicationplugins.BaseApplicationPlugin" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.editor.plugin.Editor_Order" file="Editor_Order.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.Arrays" />
+    <classNode extendsClassName="jetbrains.mps.ide.editorTabs.TabsComparator" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.editor.plugin.Editor_ProjectPlugin" file="Editor_ProjectPlugin.java">
+    <classNode dependClassName="com.intellij.openapi.project.Project" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.ide.editorTabs.EditorTabDescriptor" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.lang.editor.plugin.EditorLangPlugin_CustomProjectPlugin" />
+    <classNode dependClassName="jetbrains.mps.lang.editor.plugin.Editor_TabDescriptor" />
+    <classNode dependClassName="jetbrains.mps.plugins.pluginparts.custom.BaseCustomProjectPlugin" />
+    <classNode dependClassName="jetbrains.mps.project.MPSProject" />
+    <classNode extendsClassName="jetbrains.mps.plugins.projectplugins.BaseProjectPlugin" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.editor.plugin.Editor_TabDescriptor" file="Editor_TabDescriptor.java">
+    <classNode dependClassName="java.lang.Character" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="javax.swing.Icon" />
+    <classNode dependClassName="javax.swing.ImageIcon" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.lang.editor.plugin.Editor_Order" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.structure.behavior.AbstractConceptDeclaration_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.structure.plugin.ConceptEditorHelper" />
+    <classNode dependClassName="jetbrains.mps.lang.structure.plugin.ConceptEditorOpenHelper" />
+    <classNode dependClassName="jetbrains.mps.smodel.LanguageAspect" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="org.jetbrains.annotations.Nullable" />
+    <classNode extendsClassName="jetbrains.mps.ide.editorTabs.EditorTabDescriptor" />
+  </dependency>
+</dependenciesRoot>
+

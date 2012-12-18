@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="layeredLayoutTest.BlockGraphProcessor_Test" file="BlockGraphProcessor_Test.java">
+    <classNode dependClassName="java.lang.Exception" />
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="java.util.Scanner" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Graph" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Node" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.layeredLayout.BlockGraphProcessor" />
+    <classNode dependClassName="visualization.GraphIO" />
+    <classNode extendsClassName="junit.framework.TestCase" />
+  </dependency>
+  <dependency className="layeredLayoutTest.CheckCycles" file="CheckCycles.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Edge" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Graph" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Node" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.MapSequence" />
+    <classNode extendsClassName="jetbrains.mps.graphLayout.algorithms.Dfs" />
+  </dependency>
+  <dependency className="layeredLayoutTest.CheckDummyEdgesCrossing" file="CheckDummyEdgesCrossing.java">
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Node" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.layeredLayout.NodeLayeredOrder" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.IWhereFilter" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+  </dependency>
+  <dependency className="layeredLayoutTest.CheckLayers" file="CheckLayers.java">
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Edge" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Graph" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Node" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+  </dependency>
+  <dependency className="layeredLayoutTest.DFSEdgeReverter_Test" file="DFSEdgeReverter_Test.java">
+    <classNode dependClassName="java.lang.Exception" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Graph" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.layeredLayout.DFSEdgeReverter" />
+    <classNode dependClassName="layeredLayoutTest.EdgeReverterProxy" />
+    <classNode dependClassName="sampleGraphs.SimpleDirectedGraphs" />
+    <classNode extendsClassName="junit.framework.TestCase" />
+  </dependency>
+  <dependency className="layeredLayoutTest.DFSNodeSorter_Test" file="DFSNodeSorter_Test.java">
+    <classNode dependClassName="java.lang.Exception" />
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Graph" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Node" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.layeredLayout.DFSNodeSorter" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.layeredLayout.NodeLayeredOrder" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.util.NodeMap" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.MapSequence" />
+    <classNode dependClassName="junit.framework.Assert" />
+    <classNode dependClassName="sampleGraphs.GraphsForLayers" />
+    <classNode dependClassName="sampleGraphs.SimpleDirectedGraphs" />
+    <classNode extendsClassName="junit.framework.TestCase" />
+  </dependency>
+  <dependency className="layeredLayoutTest.EdgeReverterProxy" file="EdgeReverterProxy.java">
+    <classNode dependClassName="java.util.Set" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Edge" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Graph" />
+    <classNode dependClassName="junit.framework.Assert" />
+    <classNode dependClassName="layeredLayoutTest.CheckCycles" />
+    <classNode extendsClassName="jetbrains.mps.graphLayout.layeredLayout.IEdgeReverter" />
+  </dependency>
+  <dependency className="layeredLayoutTest.LayererProxy" file="LayererProxy.java">
+    <classNode dependClassName="java.lang.IllegalArgumentException" />
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Graph" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Node" />
+    <classNode dependClassName="junit.framework.Assert" />
+    <classNode dependClassName="layeredLayoutTest.CheckLayers" />
+    <classNode extendsClassName="jetbrains.mps.graphLayout.layeredLayout.ILayerer" />
+  </dependency>
+  <dependency className="layeredLayoutTest.MedianLayerByLayerSorterProxy" file="MedianLayerByLayerSorterProxy.java">
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Graph" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Node" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.layeredLayout.DFSNodeSorter" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.layeredLayout.LayerByLayerNodeSorter" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.layeredLayout.MedianLayerSorter" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.layeredLayout.NodeLayeredOrder" />
+    <classNode dependClassName="junit.framework.Assert" />
+    <classNode dependClassName="layeredLayoutTest.CheckDummyEdgesCrossing" />
+    <classNode extendsClassName="jetbrains.mps.graphLayout.layeredLayout.INodeSorter" />
+  </dependency>
+  <dependency className="layeredLayoutTest.RefineAdjacentNodeSorterProxy" file="RefineAdjacentNodeSorterProxy.java">
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Graph" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Node" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.layeredLayout.AdjacentExhangeNodeSorter" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.layeredLayout.LayerByLayerNodeSorter" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.layeredLayout.NodeLayeredOrder" />
+    <classNode dependClassName="junit.framework.Assert" />
+    <classNode dependClassName="layeredLayoutTest.CheckDummyEdgesCrossing" />
+    <classNode dependClassName="layeredLayoutTest.MedianLayerByLayerSorterProxy" />
+    <classNode extendsClassName="jetbrains.mps.graphLayout.layeredLayout.INodeSorter" />
+  </dependency>
+  <dependency className="layeredLayoutTest.TopologicalLayerer_Test" file="TopologicalLayerer_Test.java">
+    <classNode dependClassName="java.lang.Exception" />
+    <classNode dependClassName="java.lang.IllegalArgumentException" />
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Graph" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.graph.Node" />
+    <classNode dependClassName="jetbrains.mps.graphLayout.layeredLayout.TopologicalLayerer" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.MapSequence" />
+    <classNode dependClassName="junit.framework.Assert" />
+    <classNode dependClassName="layeredLayoutTest.LayererProxy" />
+    <classNode dependClassName="sampleGraphs.GraphsForLayers" />
+    <classNode dependClassName="sampleGraphs.SimpleDirectedGraphs" />
+    <classNode extendsClassName="junit.framework.TestCase" />
+  </dependency>
+</dependenciesRoot>
+

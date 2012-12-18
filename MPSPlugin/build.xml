@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<project name="mpsplugin.build" default="build" basedir=".">
+
+    <dirname property="mpsplugin.basedir" file="${ant.file.mpsplugin.build}"/>
+    <dirname property="mps.home" file="${ant.file.mpsplugin.build}/.."/>
+
+    <property name="idea_home" value="${mps.home}/../idea15"/>
+
+    <target name="clean">
+        <delete dir="build"/>
+    </target>
+
+    <target name="compile">
+        <mkdir dir="build/classes"/>
+        <javac destdir="build/classes" source="1.5" target="1.5">
+            <src path="source"/>
+            <src path="source-api"/>
+            <classpath>
+                <fileset dir="${idea_home}/lib">
+                    <include name="**/*.jar"/>
+                    <exclude name="boot.jar"/>
+                </fileset>
+            </classpath>
+        </javac>
+    </target>
+
+    <target name="build" depends="compile">
+        <jar destfile="build/MPSPlugin.jar" basedir="${mpsplugin.basedir}" filesonly="true">
+            <include name="META-INF/*"/>
+            <manifest>
+                <attribute name="Implementation-Vendor" value="JetBrains"/>
+            </manifest>
+            <fileset dir="build/classes" includes="**/*"/>
+        </jar>
+
+        <copy file="build/MPSPlugin.jar" tofile="${mps.home}/plugin/MPSPlugin.jar"/>
+    </target>
+
+</project>

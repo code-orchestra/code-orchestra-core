@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.nanoc.debug.events.GDBEventsAdapter" file="GDBEventsAdapter.java">
+    <classNode dependClassName="com.intellij.execution.process.ProcessHandler" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.nanoc.debug.answer.AsyncAnswer" />
+    <classNode dependClassName="jetbrains.mps.nanoc.debug.answer.ResultAnswer" />
+    <classNode dependClassName="jetbrains.mps.nanoc.debug.answer.StreamAnswer" />
+    <classNode extendsClassName="jetbrains.mps.nanoc.debug.events.GDBEventsListener" />
+  </dependency>
+  <dependency className="jetbrains.mps.nanoc.debug.events.GDBEventsHandler" file="GDBEventsHandler.java">
+    <classNode dependClassName="com.intellij.execution.process.ProcessAdapter" />
+    <classNode dependClassName="com.intellij.execution.process.ProcessEvent" />
+    <classNode dependClassName="com.intellij.execution.process.ProcessHandler" />
+    <classNode dependClassName="com.intellij.openapi.util.Key" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.nanoc.debug.answer.AsyncAnswer" />
+    <classNode dependClassName="jetbrains.mps.nanoc.debug.answer.GDBAnswer" />
+    <classNode dependClassName="jetbrains.mps.nanoc.debug.answer.GDBAnswerProducer" />
+    <classNode dependClassName="jetbrains.mps.nanoc.debug.answer.GDBValue" />
+    <classNode dependClassName="jetbrains.mps.nanoc.debug.answer.ResultAnswer" />
+    <classNode dependClassName="jetbrains.mps.nanoc.debug.answer.StreamAnswer" />
+    <classNode dependClassName="jetbrains.mps.nanoc.debug.answer.StringValue" />
+    <classNode dependClassName="jetbrains.mps.nanoc.debug.events.GDBEventsListener" />
+  </dependency>
+  <dependency className="jetbrains.mps.nanoc.debug.events.GDBEventsListener" file="GDBEventsListener.java">
+    <classNode dependClassName="com.intellij.execution.process.ProcessHandler" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.nanoc.debug.answer.AsyncAnswer" />
+    <classNode dependClassName="jetbrains.mps.nanoc.debug.answer.ResultAnswer" />
+    <classNode dependClassName="jetbrains.mps.nanoc.debug.answer.StreamAnswer" />
+  </dependency>
+</dependenciesRoot>
+

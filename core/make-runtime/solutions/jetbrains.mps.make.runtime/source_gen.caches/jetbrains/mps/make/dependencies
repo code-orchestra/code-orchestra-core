@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.make.IHName" file="IHName.java">
+    <classNode dependClassName="java.lang.String" />
+  </dependency>
+  <dependency className="jetbrains.mps.make.IMakeNotificationListener" file="IMakeNotificationListener.java">
+    <classNode dependClassName="jetbrains.mps.make.MakeNotification" />
+  </dependency>
+  <dependency className="jetbrains.mps.make.IMakeService" file="IMakeService.java">
+    <classNode dependClassName="com.intellij.openapi.application.ApplicationManager" />
+    <classNode dependClassName="java.lang.Deprecated" />
+    <classNode dependClassName="java.lang.IllegalStateException" />
+    <classNode dependClassName="java.lang.Iterable" />
+    <classNode dependClassName="java.util.concurrent.Future" />
+    <classNode dependClassName="jetbrains.mps.make.IMakeNotificationListener" />
+    <classNode dependClassName="jetbrains.mps.make.MakeSession" />
+    <classNode dependClassName="jetbrains.mps.make.resources.IResource" />
+    <classNode dependClassName="jetbrains.mps.make.script.IResult" />
+    <classNode dependClassName="jetbrains.mps.make.script.IScript" />
+    <classNode dependClassName="jetbrains.mps.make.script.IScriptController" />
+    <classNode extendsClassName="com.intellij.openapi.components.ApplicationComponent" />
+  </dependency>
+  <dependency className="jetbrains.mps.make.MakeNotification" file="MakeNotification.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="jetbrains.mps.make.IMakeService" />
+    <classNode extendsClassName="java.util.EventObject" />
+  </dependency>
+  <dependency className="jetbrains.mps.make.MakeSession" file="MakeSession.java">
+    <classNode dependClassName="java.lang.Runnable" />
+    <classNode dependClassName="jetbrains.mps.messages.IMessageHandler" />
+    <classNode dependClassName="jetbrains.mps.smodel.IOperationContext" />
+  </dependency>
+</dependenciesRoot>
+

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.samples.secretCompartmentLanguage.sandbox.MrsH_StateMachineFactory" file="MrsH_StateMachineFactory.java">
+    <classNode dependClassName="jetbrains.mps.samples.secretCompartmentLanguage.runtime.Event" />
+    <classNode dependClassName="jetbrains.mps.samples.secretCompartmentLanguage.runtime.State" />
+    <classNode dependClassName="jetbrains.mps.samples.secretCompartmentLanguage.runtime.StateMachine" />
+    <classNode extendsClassName="jetbrains.mps.samples.secretCompartmentLanguage.runtime.StateMachineFactory" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.secretCompartmentLanguage.sandbox.MrsH_StateMachine_Test" file="MrsH_StateMachine_Test.java">
+    <classNode dependClassName="java.lang.Exception" />
+    <classNode dependClassName="jetbrains.mps.samples.secretCompartmentLanguage.runtime.StateMachineFactory" />
+    <classNode dependClassName="jetbrains.mps.samples.secretCompartmentLanguage.sandbox.MrsH_StateMachineFactory" />
+    <classNode dependClassName="junit.framework.Assert" />
+    <classNode extendsClassName="jetbrains.mps.samples.secretCompartmentLanguage.runtime.StateMachineTest" />
+  </dependency>
+</dependenciesRoot>
+

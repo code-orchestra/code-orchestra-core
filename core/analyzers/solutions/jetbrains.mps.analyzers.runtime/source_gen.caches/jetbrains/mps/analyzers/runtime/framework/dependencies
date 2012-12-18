@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.analyzers.runtime.framework.CustomAnalyzerRunner" file="CustomAnalyzerRunner.java">
+    <classNode dependClassName="jetbrains.mps.lang.dataFlow.framework.DataFlowAnalyzer" />
+    <classNode dependClassName="jetbrains.mps.lang.dataFlow.framework.Program" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.lang.dataFlow.framework.AnalyzerRunner" />
+  </dependency>
+  <dependency className="jetbrains.mps.analyzers.runtime.framework.DataFlowConstructor" file="DataFlowConstructor.java">
+    <classNode dependClassName="jetbrains.mps.lang.dataFlow.framework.Program" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+  </dependency>
+  <dependency className="jetbrains.mps.analyzers.runtime.framework.GeneratedInstruction" file="GeneratedInstruction.java">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.util.LinkedList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode extendsClassName="jetbrains.mps.lang.dataFlow.framework.instructions.Instruction" />
+  </dependency>
+</dependenciesRoot>
+

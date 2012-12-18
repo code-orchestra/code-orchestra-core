@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.nanoc.behavior.BehaviorAspectDescriptor" file="BehaviorAspectDescriptor.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.Arrays" />
+    <classNode dependClassName="jetbrains.mps.nanoc.behavior.CAssignmentExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.nanoc.behavior.CBody_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.nanoc.behavior.CChar_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.nanoc.behavior.CDouble_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.nanoc.behavior.CExpressionStatement_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.nanoc.behavior.CFloat_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.nanoc.behavior.CFor_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.nanoc.behavior.CInt_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.nanoc.behavior.CLong_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.nanoc.behavior.CParenthesis_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.nanoc.behavior.CShort_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.nanoc.behavior.CWhile_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.nanoc.behavior.DivOp_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.nanoc.behavior.EqualOp_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.nanoc.behavior.File_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.nanoc.behavior.GreaterEqOp_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.nanoc.behavior.GreaterOp_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.nanoc.behavior.IntConst_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.nanoc.behavior.LessEqOp_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.nanoc.behavior.LessOp_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.nanoc.behavior.MinusOp_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.nanoc.behavior.MultOp_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.nanoc.behavior.PlusOp_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.nanoc.behavior.VarDeclStatement_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.nanoc.behavior.VarDecl_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.nanoc.behavior.VarRef_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.runtime.BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.runtime.interpreted.BehaviorAspectInterpreted" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.BehaviorAspectDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.nanoc.behavior.CAssignmentExpression_BehaviorDescriptor" file="CAssignmentExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.nanoc.behavior.CExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.nanoc.behavior.CBinaryOp_BehaviorDescriptor" file="CBinaryOp_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.nanoc.behavior.CExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.nanoc.behavior.CBody_BehaviorDescriptor" file="CBody_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.nanoc.behavior.CChar_BehaviorDescriptor" file="CChar_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.nanoc.behavior.CType_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.nanoc.behavior.CDouble_BehaviorDescriptor" file="CDouble_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.nanoc.behavior.CType_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.nanoc.behavior.CExpressionStatement_BehaviorDescriptor" file="CExpressionStatement_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.nanoc.behavior.CStatement_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.nanoc.behavior.CExpression_BehaviorDescriptor" file="CExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.nanoc.behavior.CFloat_BehaviorDescriptor" file="CFloat_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.nanoc.behavior.CType_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.nanoc.behavior.CFor_BehaviorDescriptor" file="CFor_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.nanoc.behavior.CStatement_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.nanoc.behavior.CInt_BehaviorDescriptor" file="CInt_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.nanoc.behavior.CType_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.nanoc.behavior.CLong_BehaviorDescriptor" file="CLong_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.nanoc.behavior.CType_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.nanoc.behavior.CParenthesis_BehaviorDescriptor" file="CParenthesis_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.nanoc.behavior.CExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.nanoc.behavior.CShort_BehaviorDescriptor" file="CShort_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.nanoc.behavior.CType_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.nanoc.behavior.CStatement_BehaviorDescriptor" file="CStatement_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.traceable.behavior.TraceableConcept_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.traceable.behavior.TraceableConcept_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="org.jetbrains.annotations.Nullable" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.nanoc.behavior.CType_BehaviorDescriptor" file="CType_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.nanoc.behavior.CWhile_BehaviorDescriptor" file="CWhile_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.nanoc.behavior.CStatement_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.nanoc.behavior.DivOp_BehaviorDescriptor" file="DivOp_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.nanoc.behavior.CBinaryOp_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.nanoc.behavior.EqualOp_BehaviorDescriptor" file="EqualOp_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.nanoc.behavior.CBinaryOp_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.nanoc.behavior.File_Behavior" file="File_Behavior.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+  </dependency>
+  <dependency className="jetbrains.mps.nanoc.behavior.File_BehaviorDescriptor" file="File_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.traceable.behavior.UnitConcept_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.nanoc.behavior.File_Behavior" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.nanoc.behavior.GreaterEqOp_BehaviorDescriptor" file="GreaterEqOp_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.nanoc.behavior.CBinaryOp_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.nanoc.behavior.GreaterOp_BehaviorDescriptor" file="GreaterOp_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.nanoc.behavior.CBinaryOp_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.nanoc.behavior.IntConst_BehaviorDescriptor" file="IntConst_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.nanoc.behavior.CExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.nanoc.behavior.LessEqOp_BehaviorDescriptor" file="LessEqOp_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.nanoc.behavior.CBinaryOp_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.nanoc.behavior.LessOp_BehaviorDescriptor" file="LessOp_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.nanoc.behavior.CBinaryOp_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.nanoc.behavior.MinusOp_BehaviorDescriptor" file="MinusOp_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.nanoc.behavior.CBinaryOp_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.nanoc.behavior.MultOp_BehaviorDescriptor" file="MultOp_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.nanoc.behavior.CBinaryOp_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.nanoc.behavior.PlusOp_BehaviorDescriptor" file="PlusOp_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.nanoc.behavior.CBinaryOp_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.nanoc.behavior.VarDeclStatement_BehaviorDescriptor" file="VarDeclStatement_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.nanoc.behavior.CStatement_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.nanoc.behavior.VarDecl_BehaviorDescriptor" file="VarDecl_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.nanoc.behavior.VarRef_BehaviorDescriptor" file="VarRef_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.nanoc.behavior.CExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+</dependenciesRoot>
+

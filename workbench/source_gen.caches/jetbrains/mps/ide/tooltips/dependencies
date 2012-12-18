@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.ide.tooltips.MPSToolTipManager" file="MPSToolTipManager.java">
+    <classNode dependClassName="com.intellij.ide.IdeTooltip" />
+    <classNode dependClassName="com.intellij.ide.IdeTooltipManager" />
+    <classNode dependClassName="com.intellij.ide.TooltipEvent" />
+    <classNode dependClassName="com.intellij.openapi.application.ApplicationManager" />
+    <classNode dependClassName="java.awt.Component" />
+    <classNode dependClassName="java.awt.Frame" />
+    <classNode dependClassName="java.awt.Point" />
+    <classNode dependClassName="java.awt.event.MouseAdapter" />
+    <classNode dependClassName="java.awt.event.MouseEvent" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="javax.swing.JComponent" />
+    <classNode dependClassName="javax.swing.JLabel" />
+    <classNode dependClassName="javax.swing.SwingUtilities" />
+    <classNode dependClassName="jetbrains.mps.ide.tooltips.ToolTip" />
+    <classNode dependClassName="jetbrains.mps.ide.tooltips.ToolTipData" />
+    <classNode dependClassName="jetbrains.mps.ide.tooltips.TooltipComponent" />
+    <classNode dependClassName="jetbrains.mps.util.HtmlCharsUtil" />
+    <classNode dependClassName="org.jetbrains.annotations.NonNls" />
+    <classNode dependClassName="org.jetbrains.annotations.NotNull" />
+    <classNode extendsClassName="com.intellij.openapi.components.ApplicationComponent" />
+  </dependency>
+  <dependency className="jetbrains.mps.ide.tooltips.ToolTip" file="ToolTip.java">
+    <classNode dependClassName="com.intellij.ui.ScrollPaneFactory" />
+    <classNode dependClassName="java.awt.Color" />
+    <classNode dependClassName="java.awt.Component" />
+    <classNode dependClassName="java.awt.Frame" />
+    <classNode dependClassName="java.awt.Point" />
+    <classNode dependClassName="java.awt.Rectangle" />
+    <classNode dependClassName="java.awt.event.FocusAdapter" />
+    <classNode dependClassName="java.awt.event.FocusEvent" />
+    <classNode dependClassName="java.awt.event.FocusListener" />
+    <classNode dependClassName="java.awt.event.KeyAdapter" />
+    <classNode dependClassName="java.awt.event.KeyEvent" />
+    <classNode dependClassName="java.awt.event.KeyListener" />
+    <classNode dependClassName="java.awt.event.MouseAdapter" />
+    <classNode dependClassName="java.awt.event.MouseEvent" />
+    <classNode dependClassName="java.awt.event.MouseListener" />
+    <classNode dependClassName="java.lang.Math" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="javax.swing.JScrollPane" />
+    <classNode dependClassName="javax.swing.border.LineBorder" />
+    <classNode dependClassName="jetbrains.mps.ide.tooltips.ToolTipData" />
+    <classNode dependClassName="jetbrains.mps.util.WindowsUtil" />
+    <classNode extendsClassName="java.awt.Window" />
+  </dependency>
+  <dependency className="jetbrains.mps.ide.tooltips.ToolTipData" file="ToolTipData.java">
+    <classNode dependClassName="com.intellij.util.ui.UIUtil" />
+    <classNode dependClassName="java.awt.Component" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="javax.swing.JTextArea" />
+    <classNode dependClassName="javax.swing.border.EmptyBorder" />
+    <classNode dependClassName="jetbrains.mps.ide.tooltips.ToolTip" />
+  </dependency>
+  <dependency className="jetbrains.mps.ide.tooltips.TooltipComponent" file="TooltipComponent.java">
+    <classNode dependClassName="java.awt.event.MouseEvent" />
+    <classNode dependClassName="java.lang.String" />
+  </dependency>
+</dependenciesRoot>
+

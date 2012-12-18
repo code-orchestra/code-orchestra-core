@@ -1,0 +1,29 @@
+<!DOCTYPE idea-plugin PUBLIC "Plugin/DTD" "http://plugins.intellij.net/plugin.dtd">
+<idea-plugin>
+  <id>jetbrains.mps.debugger-java</id>
+  <name>Java Debugger for MPS</name>
+  <description>Provides Java Debugger Implementation For MPS</description>
+  <version>2.0</version>
+  <vendor url="http://www.jetbrains.com/mps/">JetBrains</vendor>
+  <idea-version since-build="3000"/>
+
+  <depends>jetbrains.mps.debugger-api</depends>
+
+  <application-components>
+    <component>
+      <implementation-class>jetbrains.mps.debugger.java.JavaDebugger</implementation-class>
+    </component>
+  </application-components>
+
+  <project-components>
+  </project-components>
+
+  <actions>
+  </actions>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <configurationType implementation="jetbrains.mps.debugger.java.remote.Remote_Kind"/>
+    <configurationType implementation="jetbrains.mps.debugger.java.mps.MPS_Kind"/>
+    <errorHandler implementation="jetbrains.mps.workbench.diagnostics.CharismaReporter"/>
+  </extensions>
+</idea-plugin>

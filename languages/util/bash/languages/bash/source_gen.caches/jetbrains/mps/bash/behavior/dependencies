@@ -1,0 +1,1506 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.bash.behavior.AbstractCommand_Behavior" file="AbstractCommand_Behavior.java">
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.AbstractCommand_BehaviorDescriptor" file="AbstractCommand_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.Command_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.AbstractFollowingCommandList_BehaviorDescriptor" file="AbstractFollowingCommandList_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.AbstractLoopCommand_BehaviorDescriptor" file="AbstractLoopCommand_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.AbstractCommand_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.ICompoundCommand_BehaviorDescriptor" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.AddExpression_BehaviorDescriptor" file="AddExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BinaryArithmeticExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.AndAssingmentExpression_BehaviorDescriptor" file="AndAssingmentExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BaseAssingmentExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.AndCombiningComditionalExpression_BehaviorDescriptor" file="AndCombiningComditionalExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.CombiningConditionalExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.AndOperator_BehaviorDescriptor" file="AndOperator_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.FollowingCommandList_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.AppendingOutputErrorRedirection_BehaviorDescriptor" file="AppendingOutputErrorRedirection_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.IToWordRedirection_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.Redirection_BehaviorDescriptor" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.AppendingOutputRedirection_BehaviorDescriptor" file="AppendingOutputRedirection_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.IORedirection_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.ArgumentListReference_BehaviorDescriptor" file="ArgumentListReference_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.ExternalOptionReference_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.ArgumentList_Behavior" file="ArgumentList_Behavior.java">
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.ArgumentList_BehaviorDescriptor" file="ArgumentList_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.ExternalOptionDeclaration_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.ArgumentReference_BehaviorDescriptor" file="ArgumentReference_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.ExternalOptionReference_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.Argument_BehaviorDescriptor" file="Argument_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.ExternalOptionDeclaration_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.IDescribedConcept_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.ArithmeticCommand_BehaviorDescriptor" file="ArithmeticCommand_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.AbstractCommand_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.IArithmeticHolder_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.ICompoundCommand_BehaviorDescriptor" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.ArithmeticExpansion_BehaviorDescriptor" file="ArithmeticExpansion_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.IArithmeticHolder_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.IConcreteWordUnit_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.IGeneralizedWordUnit_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.ArithmeticExpression_BehaviorDescriptor" file="ArithmeticExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.AssingmentExpression_BehaviorDescriptor" file="AssingmentExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BaseAssingmentExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.AsyncOperator_BehaviorDescriptor" file="AsyncOperator_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.FollowingCommandList_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.AsyncTerminator_BehaviorDescriptor" file="AsyncTerminator_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.CommandTerminator_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.BaseAssingmentExpression_BehaviorDescriptor" file="BaseAssingmentExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.ArithmeticExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.BaseCommandSubstitution_BehaviorDescriptor" file="BaseCommandSubstitution_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.IGeneralizedWordUnit_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.BaseVariableAssingment_BehaviorDescriptor" file="BaseVariableAssingment_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.AbstractCommand_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.BasedIntegerLiteral_BehaviorDescriptor" file="BasedIntegerLiteral_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.IntegerLiteral_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.BasicParameterExpansion_BehaviorDescriptor" file="BasicParameterExpansion_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.ArithmeticExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.IConcreteWordUnit_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.IGeneralizedWordUnit_BehaviorDescriptor" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.BehaviorAspectDescriptor" file="BehaviorAspectDescriptor.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.Arrays" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.AddExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.AndAssingmentExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.AndCombiningComditionalExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.AndOperator_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.AppendingOutputErrorRedirection_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.AppendingOutputRedirection_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.ArgumentListReference_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.ArgumentList_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.ArgumentReference_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.Argument_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.ArithmeticCommand_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.ArithmeticExpansion_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.AssingmentExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.AsyncOperator_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.AsyncTerminator_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BasedIntegerLiteral_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BasicParameterExpansion_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BitwiseAndExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BitwiseNegationExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BitwiseOrExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BitwiseXorExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BlockFileConditionalExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BraceGrouping_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BracketConditionalExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BracketExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BracketGrouping_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BuckCommandSubstitution_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.CaseClause_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.CaseCommand_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.CharFileConditionalExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.CommaExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.CommandList_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.Command_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.CommentedCommandList_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.CommentedFollowingCommandList_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.CommentedText_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.ConditionalCommand_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.ConditionalOperation_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.DecimalConstant_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.DirectoryConditionalExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.DivAssingmentExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.DivExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.DoubleQuote_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.DoubleSemicolonEt_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.DoubleSemicolon_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.DuplicateInputFileDiscriptor_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.DuplicateOutputFileDiscriptor_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.EffectiveGroupIdConditionalExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.EffectiveUserIdConditionalExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.ElifCommand_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.EqualityExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.EqualityNumber_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.EqualityStrings2_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.EqualityStrings_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.ExecTestConditionalExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.ExistConditionalExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.ExpExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.ExternalCommandCall_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.ExternalCommandDeclaration_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.ForCommand_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.ForeachCommand_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.FreeCommand_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.FunctionCallCommand_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.FunctionDeclaration_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.GeneralizedWord_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.GreaterThanExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.GreaterThanNumber_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.GreaterThanOrEqualExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.GreaterThanOrEqual_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.GreaterThanString_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.GroupIdConditionalExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.HeadCommandList_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.HeadPipeline_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.HereDocumentRedirection_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.HereStringRedirection_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.HexIntegerLiteral_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.IfCommand_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.InequalityExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.InequalityNumber_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.InequalityStrings_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.InputLines_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.InputRedirection_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.LastReadConditionalExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.LeftBitwiseShiftExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.LeftShiftAssingmentExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.LessThanExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.LessThanNumber_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.LessThanOrEqualExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.LessThanOrEqualNumber_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.LessThanString_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.LogicalAndExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.LogicalNegationExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.LogicalOrExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.MinusAssingmentExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.ModAssingmentExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.ModExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.MulExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.MusAssingmentExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.NewerThan_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.NonZeroStringConditionalExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.NotCommand_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.OlderThan_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.OptionReference_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.OptionSetReference_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.OptionSet_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.OptionWithParamReference_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.OptionWithParam_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.Option_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.OptnameStringConditionalExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.OrAssingmentExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.OrCombiningConditionalExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.OrOperator_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.OtherExistConditionalExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.OtherSymlinkConditionalExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.OutputErrorRedirection_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.OutputRedirection_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.PipeConditionalExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.PipelineOperatorConnection_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.PipelineOperatorErrorConnection_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.PlusAssingmentExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.PostDecExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.PostIncExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.PreDecExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.PreIncExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.QuotesCommandSubstitution_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.ReadTestConditionalExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.ReadingWritingRedirection_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.RedirectedCommand_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.RegularFileConditionalExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.RightBitwiseShiftExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.RightShiftAssingmentExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.SameReference_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.SelectCommand_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.SemicolonEt_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.SemicolonOperator_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.SemicolonTerminator_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.ShellScript_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.SimpleCommand_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.SimpleWord_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.SingleQuote_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.SizeConditionalExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.SocketConditionalExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.StickyBitConditionalExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.StringConditionalExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.SubExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.SymlinkConditionalExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.TerminalConditionalExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.TildeExpansion_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.UnaryMinusExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.UnaryPlusExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.UntilLoopCommand_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.UserIdConditionalExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.VariableAddAssingment_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.VariableAssingment_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.VariableNameDeclaration_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.VariableReference_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.WhileLoopCommand_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.WordExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.WordList_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.WriteTestConditionalExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.XorAssingmentExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.ZeroStringConditionalExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.runtime.BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.runtime.interpreted.BehaviorAspectInterpreted" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.BehaviorAspectDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.BinaryArithmeticExpression_BehaviorDescriptor" file="BinaryArithmeticExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.ArithmeticExpression_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.IPriorityExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.BinaryConditionalExpression_BehaviorDescriptor" file="BinaryConditionalExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.ConditionalExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.BitwiseAndExpression_BehaviorDescriptor" file="BitwiseAndExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BinaryArithmeticExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.BitwiseNegationExpression_BehaviorDescriptor" file="BitwiseNegationExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.UnaryArithmeticExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.BitwiseOrExpression_BehaviorDescriptor" file="BitwiseOrExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BinaryArithmeticExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.BitwiseXorExpression_BehaviorDescriptor" file="BitwiseXorExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BinaryArithmeticExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.BlockFileConditionalExpression_BehaviorDescriptor" file="BlockFileConditionalExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.UnaryConditionalExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.BraceGrouping_BehaviorDescriptor" file="BraceGrouping_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.GroupingCommand_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.BracketConditionalExpression_BehaviorDescriptor" file="BracketConditionalExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.ConditionalExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.BracketExpression_BehaviorDescriptor" file="BracketExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.ArithmeticExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.BracketGrouping_BehaviorDescriptor" file="BracketGrouping_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.GroupingCommand_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.BuckCommandSubstitution_BehaviorDescriptor" file="BuckCommandSubstitution_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BaseCommandSubstitution_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.CaseClause_BehaviorDescriptor" file="CaseClause_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.CaseCommand_BehaviorDescriptor" file="CaseCommand_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.AbstractCommand_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.ICompoundCommand_BehaviorDescriptor" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.CaseTerminator_BehaviorDescriptor" file="CaseTerminator_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.CharFileConditionalExpression_BehaviorDescriptor" file="CharFileConditionalExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.UnaryConditionalExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.CombiningConditionalExpression_BehaviorDescriptor" file="CombiningConditionalExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.ConditionalExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.CommaExpression_BehaviorDescriptor" file="CommaExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BinaryArithmeticExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.CommandList_Behavior" file="CommandList_Behavior.java">
+    <classNode dependClassName="jetbrains.mps.bash.behavior.Command_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.CommandList_BehaviorDescriptor" file="CommandList_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.InputLine_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.CommandTerminator_BehaviorDescriptor" file="CommandTerminator_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.Command_Behavior" file="Command_Behavior.java">
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.Command_BehaviorDescriptor" file="Command_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.CommentedCommandList_BehaviorDescriptor" file="CommentedCommandList_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.IComment_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.InputLine_BehaviorDescriptor" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.CommentedFollowingCommandList_BehaviorDescriptor" file="CommentedFollowingCommandList_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.AbstractFollowingCommandList_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.IComment_BehaviorDescriptor" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.CommentedText_BehaviorDescriptor" file="CommentedText_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.IComment_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.ConditionalCommand_BehaviorDescriptor" file="ConditionalCommand_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.AbstractCommand_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.ICompoundCommand_BehaviorDescriptor" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.ConditionalExpression_BehaviorDescriptor" file="ConditionalExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.ConditionalOperation_BehaviorDescriptor" file="ConditionalOperation_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.ArithmeticExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.DecimalConstant_BehaviorDescriptor" file="DecimalConstant_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.IntegerLiteral_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.DirectoryConditionalExpression_BehaviorDescriptor" file="DirectoryConditionalExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.UnaryConditionalExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.DivAssingmentExpression_BehaviorDescriptor" file="DivAssingmentExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BaseAssingmentExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.DivExpression_BehaviorDescriptor" file="DivExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BinaryArithmeticExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.DoubleQuote_BehaviorDescriptor" file="DoubleQuote_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.QuotedWord_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.DoubleSemicolonEt_BehaviorDescriptor" file="DoubleSemicolonEt_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.CaseTerminator_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.DoubleSemicolon_BehaviorDescriptor" file="DoubleSemicolon_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.CaseTerminator_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.DuplicateInputFileDiscriptor_BehaviorDescriptor" file="DuplicateInputFileDiscriptor_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.IORedirection_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.DuplicateOutputFileDiscriptor_BehaviorDescriptor" file="DuplicateOutputFileDiscriptor_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.IORedirection_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.EffectiveGroupIdConditionalExpression_BehaviorDescriptor" file="EffectiveGroupIdConditionalExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.UnaryConditionalExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.EffectiveUserIdConditionalExpression_BehaviorDescriptor" file="EffectiveUserIdConditionalExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.UnaryConditionalExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.ElifCommand_BehaviorDescriptor" file="ElifCommand_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.EqualityExpression_BehaviorDescriptor" file="EqualityExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BinaryArithmeticExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.EqualityNumber_BehaviorDescriptor" file="EqualityNumber_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BinaryConditionalExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.EqualityStrings2_BehaviorDescriptor" file="EqualityStrings2_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BinaryConditionalExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.EqualityStrings_BehaviorDescriptor" file="EqualityStrings_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BinaryConditionalExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.ExecTestConditionalExpression_BehaviorDescriptor" file="ExecTestConditionalExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.UnaryConditionalExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.ExistConditionalExpression_BehaviorDescriptor" file="ExistConditionalExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.UnaryConditionalExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.ExpExpression_BehaviorDescriptor" file="ExpExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BinaryArithmeticExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.ExternalCommandCall_Behavior" file="ExternalCommandCall_Behavior.java">
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.ExternalCommandDeclaration_Behavior" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.OptionSetReference_Behavior" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.ExternalCommandCall_BehaviorDescriptor" file="ExternalCommandCall_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.AbstractCommand_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.ExternalCommandDeclaration_Behavior" file="ExternalCommandDeclaration_Behavior.java">
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.ExternalCommandDeclaration_BehaviorDescriptor" file="ExternalCommandDeclaration_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.ExternalOptionDeclaration_Behavior" file="ExternalOptionDeclaration_Behavior.java">
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.ExternalOptionDeclaration_BehaviorDescriptor" file="ExternalOptionDeclaration_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.ExternalOptionReference_BehaviorDescriptor" file="ExternalOptionReference_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.FollowingCommandList_BehaviorDescriptor" file="FollowingCommandList_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.AbstractFollowingCommandList_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.FollowingPipeline_BehaviorDescriptor" file="FollowingPipeline_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.ForCommand_BehaviorDescriptor" file="ForCommand_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.AbstractLoopCommand_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.ForeachCommand_BehaviorDescriptor" file="ForeachCommand_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.AbstractLoopCommand_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.FreeCommand_BehaviorDescriptor" file="FreeCommand_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.AbstractCommand_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.FunctionCallCommand_BehaviorDescriptor" file="FunctionCallCommand_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.AbstractCommand_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.FunctionDeclaration_BehaviorDescriptor" file="FunctionDeclaration_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.AbstractCommand_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.GeneralizedWord_BehaviorDescriptor" file="GeneralizedWord_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.GreaterThanExpression_BehaviorDescriptor" file="GreaterThanExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BinaryArithmeticExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.GreaterThanNumber_BehaviorDescriptor" file="GreaterThanNumber_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BinaryConditionalExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.GreaterThanOrEqualExpression_BehaviorDescriptor" file="GreaterThanOrEqualExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BinaryArithmeticExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.GreaterThanOrEqual_BehaviorDescriptor" file="GreaterThanOrEqual_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BinaryConditionalExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.GreaterThanString_BehaviorDescriptor" file="GreaterThanString_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BinaryConditionalExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.GroupIdConditionalExpression_BehaviorDescriptor" file="GroupIdConditionalExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.UnaryConditionalExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.GroupingCommand_BehaviorDescriptor" file="GroupingCommand_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.AbstractCommand_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.ICompoundCommand_BehaviorDescriptor" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.HeadCommandList_BehaviorDescriptor" file="HeadCommandList_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.HeadPipeline_BehaviorDescriptor" file="HeadPipeline_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.HereDocumentRedirection_BehaviorDescriptor" file="HereDocumentRedirection_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.Redirection_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.HereStringRedirection_BehaviorDescriptor" file="HereStringRedirection_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.IToWordRedirection_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.Redirection_BehaviorDescriptor" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.HexIntegerLiteral_Behavior" file="HexIntegerLiteral_Behavior.java">
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.HexIntegerLiteral_BehaviorDescriptor" file="HexIntegerLiteral_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.IntegerLiteral_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.IArithmeticHolder_BehaviorDescriptor" file="IArithmeticHolder_BehaviorDescriptor.java" />
+  <dependency className="jetbrains.mps.bash.behavior.ICommandParameter_Behavior" file="ICommandParameter_Behavior.java">
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.ICommandParameter_BehaviorDescriptor" file="ICommandParameter_BehaviorDescriptor.java" />
+  <dependency className="jetbrains.mps.bash.behavior.IComment_BehaviorDescriptor" file="IComment_BehaviorDescriptor.java" />
+  <dependency className="jetbrains.mps.bash.behavior.ICompoundCommand_BehaviorDescriptor" file="ICompoundCommand_BehaviorDescriptor.java" />
+  <dependency className="jetbrains.mps.bash.behavior.IConcreteWordUnit_Behavior" file="IConcreteWordUnit_Behavior.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.IConcreteWordUnit_BehaviorDescriptor" file="IConcreteWordUnit_BehaviorDescriptor.java" />
+  <dependency className="jetbrains.mps.bash.behavior.IDescribedConcept_BehaviorDescriptor" file="IDescribedConcept_BehaviorDescriptor.java" />
+  <dependency className="jetbrains.mps.bash.behavior.IGeneralizedWordUnit_BehaviorDescriptor" file="IGeneralizedWordUnit_BehaviorDescriptor.java" />
+  <dependency className="jetbrains.mps.bash.behavior.IORedirection_BehaviorDescriptor" file="IORedirection_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.IToWordRedirection_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.Redirection_BehaviorDescriptor" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.IPriorityExpression_BehaviorDescriptor" file="IPriorityExpression_BehaviorDescriptor.java" />
+  <dependency className="jetbrains.mps.bash.behavior.ISymbolConcept_BehaviorDescriptor" file="ISymbolConcept_BehaviorDescriptor.java" />
+  <dependency className="jetbrains.mps.bash.behavior.IToWordRedirection_BehaviorDescriptor" file="IToWordRedirection_BehaviorDescriptor.java" />
+  <dependency className="jetbrains.mps.bash.behavior.IfCommand_BehaviorDescriptor" file="IfCommand_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.AbstractCommand_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.ICompoundCommand_BehaviorDescriptor" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.InequalityExpression_BehaviorDescriptor" file="InequalityExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BinaryArithmeticExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.InequalityNumber_BehaviorDescriptor" file="InequalityNumber_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BinaryConditionalExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.InequalityStrings_BehaviorDescriptor" file="InequalityStrings_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BinaryConditionalExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.InputLine_BehaviorDescriptor" file="InputLine_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.InputLines_BehaviorDescriptor" file="InputLines_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.InputRedirection_BehaviorDescriptor" file="InputRedirection_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.IORedirection_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.IntegerLiteral_BehaviorDescriptor" file="IntegerLiteral_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.ArithmeticExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.LValue_BehaviorDescriptor" file="LValue_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.LastReadConditionalExpression_BehaviorDescriptor" file="LastReadConditionalExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.UnaryConditionalExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.LeftBitwiseShiftExpression_BehaviorDescriptor" file="LeftBitwiseShiftExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BinaryArithmeticExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.LeftShiftAssingmentExpression_BehaviorDescriptor" file="LeftShiftAssingmentExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BaseAssingmentExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.LessThanExpression_BehaviorDescriptor" file="LessThanExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BinaryArithmeticExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.LessThanNumber_BehaviorDescriptor" file="LessThanNumber_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BinaryConditionalExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.LessThanOrEqualExpression_BehaviorDescriptor" file="LessThanOrEqualExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BinaryArithmeticExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.LessThanOrEqualNumber_BehaviorDescriptor" file="LessThanOrEqualNumber_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BinaryConditionalExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.LessThanString_BehaviorDescriptor" file="LessThanString_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BinaryConditionalExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.LogicalAndExpression_BehaviorDescriptor" file="LogicalAndExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BinaryArithmeticExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.LogicalNegationExpression_BehaviorDescriptor" file="LogicalNegationExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.UnaryArithmeticExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.LogicalOrExpression_BehaviorDescriptor" file="LogicalOrExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BinaryArithmeticExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.MinusAssingmentExpression_BehaviorDescriptor" file="MinusAssingmentExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BaseAssingmentExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.ModAssingmentExpression_BehaviorDescriptor" file="ModAssingmentExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BaseAssingmentExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.ModExpression_BehaviorDescriptor" file="ModExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BinaryArithmeticExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.MulExpression_BehaviorDescriptor" file="MulExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BinaryArithmeticExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.MusAssingmentExpression_BehaviorDescriptor" file="MusAssingmentExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BaseAssingmentExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.NewerThan_BehaviorDescriptor" file="NewerThan_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BinaryConditionalExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.NonZeroStringConditionalExpression_BehaviorDescriptor" file="NonZeroStringConditionalExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.UnaryConditionalExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.NotCommand_BehaviorDescriptor" file="NotCommand_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.AbstractCommand_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.OlderThan_BehaviorDescriptor" file="OlderThan_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BinaryConditionalExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.OptionReference_BehaviorDescriptor" file="OptionReference_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.OptionSetReference_Behavior" file="OptionSetReference_Behavior.java">
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.OptionSetReference_BehaviorDescriptor" file="OptionSetReference_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.ExternalOptionReference_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.OptionSet_Behavior" file="OptionSet_Behavior.java">
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.OptionSet_BehaviorDescriptor" file="OptionSet_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.ExternalOptionDeclaration_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.OptionWithParamReference_BehaviorDescriptor" file="OptionWithParamReference_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.ExternalOptionReference_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.OptionWithParam_BehaviorDescriptor" file="OptionWithParam_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.ExternalOptionDeclaration_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.IDescribedConcept_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.ISymbolConcept_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.Option_Behavior" file="Option_Behavior.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.Option_BehaviorDescriptor" file="Option_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.IDescribedConcept_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.ISymbolConcept_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.Option_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.OptnameStringConditionalExpression_BehaviorDescriptor" file="OptnameStringConditionalExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.UnaryConditionalExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.OrAssingmentExpression_BehaviorDescriptor" file="OrAssingmentExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BaseAssingmentExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.OrCombiningConditionalExpression_BehaviorDescriptor" file="OrCombiningConditionalExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.CombiningConditionalExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.OrOperator_BehaviorDescriptor" file="OrOperator_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.FollowingCommandList_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.OtherExistConditionalExpression_BehaviorDescriptor" file="OtherExistConditionalExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.UnaryConditionalExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.OtherSymlinkConditionalExpression_BehaviorDescriptor" file="OtherSymlinkConditionalExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.UnaryConditionalExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.OutputErrorRedirection_BehaviorDescriptor" file="OutputErrorRedirection_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.IToWordRedirection_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.Redirection_BehaviorDescriptor" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.OutputRedirection_BehaviorDescriptor" file="OutputRedirection_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.IORedirection_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.PipeConditionalExpression_BehaviorDescriptor" file="PipeConditionalExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.UnaryConditionalExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.PipelineOperatorConnection_BehaviorDescriptor" file="PipelineOperatorConnection_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.FollowingPipeline_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.PipelineOperatorErrorConnection_BehaviorDescriptor" file="PipelineOperatorErrorConnection_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.FollowingPipeline_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.PlusAssingmentExpression_BehaviorDescriptor" file="PlusAssingmentExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BaseAssingmentExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.PostDecExpression_BehaviorDescriptor" file="PostDecExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.PostVariableExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.PostIncExpression_BehaviorDescriptor" file="PostIncExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.PostVariableExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.PostVariableExpression_BehaviorDescriptor" file="PostVariableExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.WordExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.PreDecExpression_BehaviorDescriptor" file="PreDecExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.PreVariableExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.PreIncExpression_BehaviorDescriptor" file="PreIncExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.PreVariableExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.PreVariableExpression_BehaviorDescriptor" file="PreVariableExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.WordExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.QuotedWord_BehaviorDescriptor" file="QuotedWord_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.IConcreteWordUnit_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.IGeneralizedWordUnit_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.QuotesCommandSubstitution_BehaviorDescriptor" file="QuotesCommandSubstitution_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BaseCommandSubstitution_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.IConcreteWordUnit_BehaviorDescriptor" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.ReadTestConditionalExpression_BehaviorDescriptor" file="ReadTestConditionalExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.UnaryConditionalExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.ReadingWritingRedirection_BehaviorDescriptor" file="ReadingWritingRedirection_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.IORedirection_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.RedirectedCommand_BehaviorDescriptor" file="RedirectedCommand_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.AbstractCommand_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.Redirection_BehaviorDescriptor" file="Redirection_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.RegularFileConditionalExpression_BehaviorDescriptor" file="RegularFileConditionalExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.UnaryConditionalExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.RightBitwiseShiftExpression_BehaviorDescriptor" file="RightBitwiseShiftExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BinaryArithmeticExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.RightShiftAssingmentExpression_BehaviorDescriptor" file="RightShiftAssingmentExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BaseAssingmentExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.SameReference_BehaviorDescriptor" file="SameReference_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BinaryConditionalExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.SelectCommand_BehaviorDescriptor" file="SelectCommand_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.AbstractCommand_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.ICompoundCommand_BehaviorDescriptor" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.SemicolonEt_BehaviorDescriptor" file="SemicolonEt_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.CaseTerminator_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.SemicolonOperator_BehaviorDescriptor" file="SemicolonOperator_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.FollowingCommandList_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.SemicolonTerminator_BehaviorDescriptor" file="SemicolonTerminator_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.CommandTerminator_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.ShellScript_BehaviorDescriptor" file="ShellScript_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.SimpleCommand_BehaviorDescriptor" file="SimpleCommand_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.AbstractCommand_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.SimpleWord_Behavior" file="SimpleWord_Behavior.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.IConcreteWordUnit_Behavior" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.IScope" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.util.NameUtil" />
+    <classNode dependClassName="org.apache.commons.lang.StringUtils" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.SimpleWord_BehaviorDescriptor" file="SimpleWord_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.IGeneralizedWordUnit_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.SingleQuote_BehaviorDescriptor" file="SingleQuote_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.QuotedWord_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.SizeConditionalExpression_BehaviorDescriptor" file="SizeConditionalExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.UnaryConditionalExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.SocketConditionalExpression_BehaviorDescriptor" file="SocketConditionalExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.UnaryConditionalExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.StickyBitConditionalExpression_BehaviorDescriptor" file="StickyBitConditionalExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.UnaryConditionalExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.StringConditionalExpression_BehaviorDescriptor" file="StringConditionalExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.ConditionalExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.SubExpression_BehaviorDescriptor" file="SubExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BinaryArithmeticExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.SymlinkConditionalExpression_BehaviorDescriptor" file="SymlinkConditionalExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.UnaryConditionalExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.TerminalConditionalExpression_BehaviorDescriptor" file="TerminalConditionalExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.UnaryConditionalExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.TildeExpansion_BehaviorDescriptor" file="TildeExpansion_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.IConcreteWordUnit_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.IGeneralizedWordUnit_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.UnaryArithmeticExpression_BehaviorDescriptor" file="UnaryArithmeticExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.ArithmeticExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.UnaryConditionalExpression_BehaviorDescriptor" file="UnaryConditionalExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.ConditionalExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.UnaryMinusExpression_BehaviorDescriptor" file="UnaryMinusExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.UnaryArithmeticExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.UnaryPlusExpression_BehaviorDescriptor" file="UnaryPlusExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.UnaryArithmeticExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.UntilLoopCommand_BehaviorDescriptor" file="UntilLoopCommand_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.AbstractLoopCommand_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.UserIdConditionalExpression_BehaviorDescriptor" file="UserIdConditionalExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.UnaryConditionalExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.VariableAddAssingment_BehaviorDescriptor" file="VariableAddAssingment_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BaseVariableAssingment_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.VariableAssingment_BehaviorDescriptor" file="VariableAssingment_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BaseVariableAssingment_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.VariableNameDeclaration_Behavior" file="VariableNameDeclaration_Behavior.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.IScope" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="org.apache.commons.lang.StringUtils" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.VariableNameDeclaration_BehaviorDescriptor" file="VariableNameDeclaration_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.LValue_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.VariableReference_Behavior" file="VariableReference_Behavior.java">
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.VariableReference_BehaviorDescriptor" file="VariableReference_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.IGeneralizedWordUnit_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.LValue_BehaviorDescriptor" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.WhileLoopCommand_BehaviorDescriptor" file="WhileLoopCommand_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.AbstractLoopCommand_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.WordExpression_BehaviorDescriptor" file="WordExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.ArithmeticExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.WordList_BehaviorDescriptor" file="WordList_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.WriteTestConditionalExpression_BehaviorDescriptor" file="WriteTestConditionalExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.UnaryConditionalExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.XorAssingmentExpression_BehaviorDescriptor" file="XorAssingmentExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.BaseAssingmentExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.bash.behavior.ZeroStringConditionalExpression_BehaviorDescriptor" file="ZeroStringConditionalExpression_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.bash.behavior.UnaryConditionalExpression_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+</dependenciesRoot>
+

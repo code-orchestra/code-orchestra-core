@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.behavior.AuthorBlockDocTag_Behavior" file="AuthorBlockDocTag_Behavior.java">
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.behavior.AuthorBlockDocTag_BehaviorDescriptor" file="AuthorBlockDocTag_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.BaseBlockDocTag_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.behavior.BaseBlockDocTag_BehaviorDescriptor" file="BaseBlockDocTag_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.behavior.BaseDocComment_Behavior" file="BaseDocComment_Behavior.java">
+    <classNode dependClassName="java.lang.Boolean" />
+    <classNode dependClassName="java.lang.Class" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.smodel.behaviour.BehaviorManager" />
+    <classNode dependClassName="jetbrains.mps.smodel.structure.BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.structure.ConceptRegistry" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.behavior.BaseDocComment_BehaviorDescriptor" file="BaseDocComment_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.BaseDocComment_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.NodeAttribute_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.behavior.BaseDocReference_BehaviorDescriptor" file="BaseDocReference_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.behavior.BaseInlineDocTag_BehaviorDescriptor" file="BaseInlineDocTag_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.behavior.BaseParameterReference_BehaviorDescriptor" file="BaseParameterReference_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.behavior.BaseVariableDocReference_BehaviorDescriptor" file="BaseVariableDocReference_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.BaseDocReference_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.behavior.BehaviorAspectDescriptor" file="BehaviorAspectDescriptor.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.Arrays" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.AuthorBlockDocTag_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.ClassifierDocComment_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.ClassifierDocReference_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.CodeInlineDocTag_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.CodeSnippet_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.CommentLine_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.DeprecatedBlockDocTag_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.DocMethodParameterReference_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.DocTypeParameterReference_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.FieldDocComment_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.FieldDocReference_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.HTMLElement_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.InheritDocInlineDocTag_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.InlineTagCommentLinePart_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.LinkInlineDocTag_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.MethodDocComment_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.MethodDocReference_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.ParameterBlockDocTag_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.ReturnBlockDocTag_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.SeeBlockDocTag_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.SinceBlockDocTag_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.StaticFieldDocReference_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.TextCommentLinePart_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.ThrowsBlockDocTag_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.ValueInlineDocTag_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.VersionBlockDocTag_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.runtime.BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.runtime.interpreted.BehaviorAspectInterpreted" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.BehaviorAspectDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.behavior.ClassifierDocComment_Behavior" file="ClassifierDocComment_Behavior.java">
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.BaseDocComment_Behavior" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.behavior.ClassifierDocComment_BehaviorDescriptor" file="ClassifierDocComment_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.BaseDocComment_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.ClassifierDocComment_Behavior" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.behavior.ClassifierDocReference_BehaviorDescriptor" file="ClassifierDocReference_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.BaseDocReference_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.behavior.CodeInlineDocTag_BehaviorDescriptor" file="CodeInlineDocTag_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.BaseInlineDocTag_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.behavior.CodeSnippet_BehaviorDescriptor" file="CodeSnippet_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.CommentLine_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.behavior.CommentLinePart_Behavior" file="CommentLinePart_Behavior.java">
+    <classNode dependClassName="java.lang.Boolean" />
+    <classNode dependClassName="java.lang.Class" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.editor.NodeCaretPair" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.smodel.behaviour.BehaviorManager" />
+    <classNode dependClassName="jetbrains.mps.smodel.structure.BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.structure.ConceptRegistry" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.behavior.CommentLinePart_BehaviorDescriptor" file="CommentLinePart_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.CommentLinePart_Behavior" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.editor.NodeCaretPair" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.behavior.CommentLine_Behavior" file="CommentLine_Behavior.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.editor.NodeCaretPair" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="org.apache.commons.lang.StringUtils" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.behavior.CommentLine_BehaviorDescriptor" file="CommentLine_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.behavior.DeprecatedBlockDocTag_BehaviorDescriptor" file="DeprecatedBlockDocTag_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.BaseBlockDocTag_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.behavior.DocMethodParameterReference_BehaviorDescriptor" file="DocMethodParameterReference_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.BaseParameterReference_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.behavior.DocTypeParameterReference_BehaviorDescriptor" file="DocTypeParameterReference_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.BaseParameterReference_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.behavior.FieldDocComment_BehaviorDescriptor" file="FieldDocComment_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.BaseDocComment_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.behavior.FieldDocReference_BehaviorDescriptor" file="FieldDocReference_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.BaseVariableDocReference_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.behavior.HTMLElement_Behavior" file="HTMLElement_Behavior.java">
+    <classNode dependClassName="java.lang.Iterable" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.CommentLine_Behavior" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.editor.NodeCaretPair" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.Sequence" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="org.apache.commons.lang.StringUtils" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.behavior.HTMLElement_BehaviorDescriptor" file="HTMLElement_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.CommentLinePart_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.HTMLElement_Behavior" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.editor.NodeCaretPair" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.behavior.InheritDocInlineDocTag_BehaviorDescriptor" file="InheritDocInlineDocTag_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.BaseInlineDocTag_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.behavior.InlineTagCommentLinePart_Behavior" file="InlineTagCommentLinePart_Behavior.java">
+    <classNode dependClassName="java.lang.Boolean" />
+    <classNode dependClassName="java.lang.Class" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.CommentLine_Behavior" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.editor.NodeCaretPair" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="jetbrains.mps.smodel.behaviour.BehaviorManager" />
+    <classNode dependClassName="jetbrains.mps.smodel.structure.BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.structure.ConceptRegistry" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.behavior.InlineTagCommentLinePart_BehaviorDescriptor" file="InlineTagCommentLinePart_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.CommentLinePart_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.InlineTagCommentLinePart_Behavior" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.editor.NodeCaretPair" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.behavior.LinkInlineDocTag_BehaviorDescriptor" file="LinkInlineDocTag_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.BaseInlineDocTag_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.behavior.MethodDocComment_Behavior" file="MethodDocComment_Behavior.java">
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.BaseDocComment_Behavior" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.behavior.MethodDocComment_BehaviorDescriptor" file="MethodDocComment_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.BaseDocComment_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.MethodDocComment_Behavior" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.behavior.MethodDocReference_BehaviorDescriptor" file="MethodDocReference_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.BaseDocReference_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.behavior.ParameterBlockDocTag_BehaviorDescriptor" file="ParameterBlockDocTag_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.BaseBlockDocTag_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.behavior.ReturnBlockDocTag_BehaviorDescriptor" file="ReturnBlockDocTag_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.BaseBlockDocTag_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.behavior.SeeBlockDocTag_BehaviorDescriptor" file="SeeBlockDocTag_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.BaseBlockDocTag_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.behavior.SinceBlockDocTag_BehaviorDescriptor" file="SinceBlockDocTag_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.BaseBlockDocTag_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.behavior.StaticFieldDocReference_BehaviorDescriptor" file="StaticFieldDocReference_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.BaseVariableDocReference_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.behavior.TextCommentLinePart_BehaviorDescriptor" file="TextCommentLinePart_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.CommentLinePart_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.behavior.ThrowsBlockDocTag_BehaviorDescriptor" file="ThrowsBlockDocTag_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.BaseBlockDocTag_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.behavior.ValueInlineDocTag_BehaviorDescriptor" file="ValueInlineDocTag_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.BaseInlineDocTag_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="jetbrains.mps.baseLanguage.javadoc.behavior.VersionBlockDocTag_BehaviorDescriptor" file="VersionBlockDocTag_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.javadoc.behavior.BaseBlockDocTag_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+</dependenciesRoot>
+

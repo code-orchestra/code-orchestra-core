@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.vcs.queue.BaseTaskQueue" file="BaseTaskQueue.java">
+    <classNode dependClassName="com.intellij.util.ui.Timer" />
+    <classNode dependClassName="java.lang.InterruptedException" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.util.LinkedList" />
+    <classNode dependClassName="java.util.List" />
+  </dependency>
+  <dependency className="jetbrains.mps.vcs.queue.TaskQueue" file="TaskQueue.java">
+    <classNode dependClassName="com.intellij.openapi.project.Project" />
+    <classNode dependClassName="com.intellij.openapi.project.ProjectManager" />
+    <classNode dependClassName="com.intellij.openapi.vcs.ProjectLevelVcsManager" />
+    <classNode dependClassName="com.intellij.openapi.vfs.VirtualFileManager" />
+    <classNode dependClassName="jetbrains.mps.watching.ModelChangesWatcher" />
+    <classNode extendsClassName="com.intellij.openapi.vfs.VirtualFileManagerListener" />
+    <classNode extendsClassName="jetbrains.mps.vcs.queue.BaseTaskQueue" />
+    <classNode extendsClassName="jetbrains.mps.watching.IReloadListener" />
+  </dependency>
+</dependenciesRoot>
+

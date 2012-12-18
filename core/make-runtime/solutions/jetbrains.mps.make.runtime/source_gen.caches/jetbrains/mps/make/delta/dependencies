@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.make.delta.IDelta" file="IDelta.java">
+    <classNode dependClassName="jetbrains.mps.make.delta.IDeltaVisitor" />
+  </dependency>
+  <dependency className="jetbrains.mps.make.delta.IDeltaVisitor" file="IDeltaVisitor.java" />
+  <dependency className="jetbrains.mps.make.delta.IInternalDelta" file="IInternalDelta.java">
+    <classNode extendsClassName="jetbrains.mps.make.delta.IDelta" />
+  </dependency>
+</dependenciesRoot>
+

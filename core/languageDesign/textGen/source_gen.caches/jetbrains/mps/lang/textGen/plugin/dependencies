@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.lang.textGen.plugin.TextGen_ApplicationPlugin" file="TextGen_ApplicationPlugin.java">
+    <classNode dependClassName="com.intellij.openapi.extensions.PluginId" />
+    <classNode extendsClassName="jetbrains.mps.plugins.applicationplugins.BaseApplicationPlugin" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.textGen.plugin.TextGen_ProjectPlugin" file="TextGen_ProjectPlugin.java">
+    <classNode dependClassName="com.intellij.openapi.project.Project" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.ide.editorTabs.EditorTabDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.textGen.plugin.Textgen_TabDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.plugins.projectplugins.BaseProjectPlugin" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.textGen.plugin.Textgen_Order" file="Textgen_Order.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.Arrays" />
+    <classNode extendsClassName="jetbrains.mps.ide.editorTabs.TabsComparator" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.textGen.plugin.Textgen_TabDescriptor" file="Textgen_TabDescriptor.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="javax.swing.Icon" />
+    <classNode dependClassName="javax.swing.ImageIcon" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.structure.behavior.AbstractConceptDeclaration_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.structure.plugin.ConceptEditorHelper" />
+    <classNode dependClassName="jetbrains.mps.lang.structure.plugin.ConceptEditorOpenHelper" />
+    <classNode dependClassName="jetbrains.mps.lang.textGen.plugin.Textgen_Order" />
+    <classNode dependClassName="jetbrains.mps.smodel.LanguageAspect" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNode" />
+    <classNode dependClassName="org.jetbrains.annotations.Nullable" />
+    <classNode extendsClassName="jetbrains.mps.ide.editorTabs.EditorTabDescriptor" />
+  </dependency>
+</dependenciesRoot>
+

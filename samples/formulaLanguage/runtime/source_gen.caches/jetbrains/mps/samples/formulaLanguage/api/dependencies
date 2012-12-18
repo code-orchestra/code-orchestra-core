@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.samples.formulaLanguage.api.DoubleConstant" file="DoubleConstant.java">
+    <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode extendsClassName="jetbrains.mps.samples.formulaLanguage.api.Function" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.formulaLanguage.api.Function" file="Function.java">
+    <classNode dependClassName="java.lang.Object" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.formulaLanguage.api.IfFunction" file="IfFunction.java">
+    <classNode dependClassName="java.lang.Boolean" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode extendsClassName="jetbrains.mps.samples.formulaLanguage.api.Function" />
+  </dependency>
+  <dependency className="jetbrains.mps.samples.formulaLanguage.api.MultiplyOperation" file="MultiplyOperation.java">
+    <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode extendsClassName="jetbrains.mps.samples.formulaLanguage.api.Function" />
+  </dependency>
+</dependenciesRoot>
+

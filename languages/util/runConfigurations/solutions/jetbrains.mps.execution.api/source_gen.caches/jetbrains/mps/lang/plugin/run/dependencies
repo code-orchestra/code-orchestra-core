@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="jetbrains.mps.lang.plugin.run.DefaultOsProcessHandler" file="DefaultOsProcessHandler.java">
+    <classNode dependClassName="com.intellij.execution.ui.ConsoleView" />
+    <classNode dependClassName="java.lang.Deprecated" />
+    <classNode dependClassName="java.lang.Process" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.execution.api.configurations.ConsoleProcessListener" />
+    <classNode dependClassName="jetbrains.mps.util.annotation.ToRemove" />
+    <classNode extendsClassName="jetbrains.mps.execution.api.commands.DefaultProcessHandler" />
+  </dependency>
+  <dependency className="jetbrains.mps.lang.plugin.run.DefaultProcessHandler" file="DefaultProcessHandler.java">
+    <classNode dependClassName="com.intellij.execution.process.ProcessTerminatedListener" />
+    <classNode dependClassName="com.intellij.execution.ui.ConsoleView" />
+    <classNode dependClassName="java.lang.Deprecated" />
+    <classNode dependClassName="java.lang.Process" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.nio.charset.Charset" />
+    <classNode dependClassName="jetbrains.mps.execution.api.configurations.ConsoleProcessListener" />
+    <classNode dependClassName="jetbrains.mps.util.annotation.ToRemove" />
+    <classNode extendsClassName="com.intellij.execution.process.DefaultJavaProcessHandler" />
+  </dependency>
+</dependenciesRoot>
+
