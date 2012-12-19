@@ -5,14 +5,14 @@ import jetbrains.mps.workbench.actions.help.ShowSiteAction;
 /**
  * @author Alexander Eliseyev
  */
-public class ShowRASEBlogAction extends ShowSiteAction {
+public class ShowCodeOrchestraBlogAction extends ShowSiteAction {
 
-  public ShowRASEBlogAction() {
+  public ShowCodeOrchestraBlogAction() {
     super("Code Orchestra Blog");
   }
 
   protected String getSiteURL() {
-    return "http://blog.codeOrchestra.com";
+    return "http://blog.codeorchestra.com";
   }
 
 }

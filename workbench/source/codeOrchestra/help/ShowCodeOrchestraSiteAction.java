@@ -5,14 +5,14 @@ import jetbrains.mps.workbench.actions.help.ShowSiteAction;
 /**
  * @author Alexander Eliseyev
  */
-public class ShowRASESiteAction extends ShowSiteAction {
+public class ShowCodeOrchestraSiteAction extends ShowSiteAction {
 
-  public ShowRASESiteAction() {
+  public ShowCodeOrchestraSiteAction() {
     super("Code Orchestra Home");
   }
 
   protected String getSiteURL() {
-    return "http://codeOrchestra.com";
+    return "http://codeorchestra.com";
   }
 
 }

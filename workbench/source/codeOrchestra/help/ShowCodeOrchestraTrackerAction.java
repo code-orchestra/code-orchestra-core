@@ -5,14 +5,14 @@ import jetbrains.mps.workbench.actions.help.ShowSiteAction;
 /**
  * @author Alexander Eliseyev
  */
-public class ShowRASETrackerAction extends ShowSiteAction {
+public class ShowCodeOrchestraTrackerAction extends ShowSiteAction {
 
-  public ShowRASETrackerAction() {
+  public ShowCodeOrchestraTrackerAction() {
     super("Code Orchestra Issue Tracker");
   }
 
   protected String getSiteURL() {
-    return "http://codeOrchestra.myjetbrains.com/youtrack/issues/RF";
+    return "http://realaxy.myjetbrains.com/youtrack/issues/RF";
   }
 
 }
