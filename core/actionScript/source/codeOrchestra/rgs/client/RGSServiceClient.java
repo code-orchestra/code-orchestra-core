@@ -9,10 +9,7 @@ import codeOrchestra.rgs.IRemoteGenerationCallback;
 import codeOrchestra.rgs.RGSException;
 import codeOrchestra.rgs.progress.IRemoteProgressIndicator;
 import codeOrchestra.rgs.state.RGSState;
-import codeOrchestra.rgs.state.model.AbstractRemoteModuleReference;
-import codeOrchestra.rgs.state.model.GenerateInput;
-import codeOrchestra.rgs.state.model.RemoteModelReference;
-import codeOrchestra.rgs.state.model.RemoteNodeId;
+import codeOrchestra.rgs.state.model.*;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -24,6 +21,8 @@ public interface RGSServiceClient {
   void initAndTryToRestart() throws RGSException;
 
   void init() throws RGSException;
+
+  void syncGenerationSettings() throws RGSException;
 
   void disconnect() throws RGSException;
 

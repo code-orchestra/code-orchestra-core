@@ -1,5 +1,7 @@
 package codeOrchestra.rgs.server;
 
+import codeOrchestra.actionscript.modulemaker.view.FlexSDKSettings;
+import codeOrchestra.rgs.state.model.*;
 import com.intellij.ide.impl.ProjectUtil;
 import com.intellij.openapi.command.impl.DummyProject;
 import com.intellij.openapi.project.Project;
@@ -18,10 +20,6 @@ import codeOrchestra.rgs.server.live.RGSLiveCodingSession;
 import codeOrchestra.rgs.server.sshd.RGSSSHDServer;
 import codeOrchestra.rgs.server.util.ProjectReloadUtil;
 import codeOrchestra.rgs.state.*;
-import codeOrchestra.rgs.state.model.AbstractRemoteModuleReference;
-import codeOrchestra.rgs.state.model.RemoteModelReference;
-import codeOrchestra.rgs.state.model.RemoteNodeId;
-import codeOrchestra.rgs.state.model.RemoteProject;
 import codeOrchestra.utils.ApplicationRestarter;
 import codeOrchestra.utils.ProjectHolder;
 import jetbrains.mps.ide.ThreadUtils;
@@ -288,6 +286,11 @@ public class RGSServerImpl implements IRemoteGenerationService, Serializable {
   @Override
   public void ping() throws RemoteException {
     this.lastPing = System.currentTimeMillis();
+  }
+
+  @Override
+  public void setGenerationSettings(RemoteGenerationSettings generationSettings) throws RemoteException {
+    FlexSDKSettings.getInstance().setCompilerKind(generationSettings.getCompilerKind());
   }
 
   @Override

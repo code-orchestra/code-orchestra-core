@@ -5,10 +5,7 @@ import codeOrchestra.actionscript.make.ASModuleMakeType;
 import codeOrchestra.generator.listener.BuildProvider;
 import codeOrchestra.rgs.progress.IRemoteProgressIndicator;
 import codeOrchestra.rgs.state.RGSState;
-import codeOrchestra.rgs.state.model.AbstractRemoteModuleReference;
-import codeOrchestra.rgs.state.model.RemoteModelReference;
-import codeOrchestra.rgs.state.model.RemoteNodeId;
-import codeOrchestra.rgs.state.model.RemoteProject;
+import codeOrchestra.rgs.state.model.*;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
@@ -50,4 +47,5 @@ public interface IRemoteGenerationService extends Remote {
 
   void ping() throws RemoteException;
 
+  void setGenerationSettings(RemoteGenerationSettings generationSettings) throws RemoteException;
 }

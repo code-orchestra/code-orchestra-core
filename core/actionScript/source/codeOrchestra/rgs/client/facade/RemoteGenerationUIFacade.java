@@ -142,7 +142,7 @@ public final class RemoteGenerationUIFacade extends AbstractRGSFacade {
       RemoteProject remoteProject = ((RGSProjectLoadedState) state).getProject();
       if (remoteProject.isTheSameAs(getProject())) {
         // Sync, generate, fetch artifacts
-        RGSTaskStack.create(syncProject(), reloadAfterSync(), pushMakeType(), toggleLive(), generate(), fetch(), finishGeneration()).process();
+        RGSTaskStack.create(syncProject(), reloadAfterSync(), pushMakeType(), toggleLive(), syncGenerationSettings(), generate(), fetch(), finishGeneration()).process();
       } else {
         // Unload previous project
         RGSTaskStack.create(unloadProject(), nextPhase()).process();
@@ -227,6 +227,15 @@ public final class RemoteGenerationUIFacade extends AbstractRGSFacade {
 
       private boolean needClassedReload() {
         return RemoteGenerationUIFacade.this.rootModule instanceof Language;
+      }
+    };
+  }
+
+  private RGSTask syncGenerationSettings() {
+    return new RGSTask(getGenerateInput(), "Syncing generation settings", false) {
+      @Override
+      protected void doTask(ProgressIndicator indicator) throws RGSException {
+        ApplicationRGSClient.getInstance().syncGenerationSettings();
       }
     };
   }

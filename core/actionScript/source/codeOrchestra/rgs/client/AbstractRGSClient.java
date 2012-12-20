@@ -1,5 +1,7 @@
 package codeOrchestra.rgs.client;
 
+import codeOrchestra.actionscript.modulemaker.view.FlexSDKSettings;
+import codeOrchestra.rgs.state.model.*;
 import com.intellij.openapi.project.Project;
 import codeOrchestra.actionscript.liveCoding.run.config.ILiveCodingRunConfiguration;
 import codeOrchestra.actionscript.make.ASModuleMakeType;
@@ -17,10 +19,6 @@ import codeOrchestra.rgs.state.RGSConnectedState;
 import codeOrchestra.rgs.state.RGSNotConnectedState;
 import codeOrchestra.rgs.state.RGSState;
 import codeOrchestra.rgs.state.RGSUnknownState;
-import codeOrchestra.rgs.state.model.AbstractRemoteModuleReference;
-import codeOrchestra.rgs.state.model.RemoteModelReference;
-import codeOrchestra.rgs.state.model.RemoteNodeId;
-import codeOrchestra.rgs.state.model.RemoteProject;
 import codeOrchestra.utils.BuildUtil;
 import jetbrains.mps.InternalFlag;
 import org.jetbrains.annotations.NotNull;
@@ -231,6 +229,18 @@ public abstract class AbstractRGSClient implements RGSServiceClient, ProjectInfo
       remoteGenerationService = (IRemoteGenerationService) registry.lookup(IRemoteGenerationService.REFERENCE_NAME);
     } catch (Throwable t) {
       throw new RGSException("Can't connect to Remote Generation Server", t);
+    }
+  }
+
+  @Override
+  public void syncGenerationSettings() throws RGSException {
+    try {
+      RemoteGenerationSettings remoteGenerationSettings = new RemoteGenerationSettings();
+      remoteGenerationSettings.setCompilerKind(FlexSDKSettings.getInstance().getCompilerKind());
+
+      remoteGenerationService.setGenerationSettings(remoteGenerationSettings);
+    } catch (RemoteException e) {
+      throw new RGSException(e);
     }
   }
 
