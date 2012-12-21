@@ -22,7 +22,7 @@ package org.apache.flex.compiler.internal.as.codegen;
 import java.util.Collection;
 
 
-
+import jetbrains.mps.util.annotation.CodeOrchestraPatch;
 import org.apache.flex.compiler.internal.tree.as.ClassNode;
 import org.apache.flex.compiler.internal.tree.as.FunctionNode;
 import org.apache.flex.compiler.internal.tree.as.ImportNode;
@@ -181,7 +181,8 @@ class DirectiveProcessor
      * Traverse the children of a root node and process them.
      * @param root - the root node.  The root is not processed.
      */
-    void traverse(IASNode root)
+    @CodeOrchestraPatch
+    public void traverse(IASNode root) // CO-4812 made public
     {
         for ( int i = 0; root != null && i < root.getChildCount(); i++ )
         {

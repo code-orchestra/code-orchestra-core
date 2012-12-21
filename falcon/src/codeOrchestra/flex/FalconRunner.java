@@ -12,6 +12,7 @@ import codeOrchestra.generator.CodeOrchestraGenerateManager;
 import codeOrchestra.generator.CodeOrchestraGenerationContext;
 import jetbrains.mps.ide.smodel.WorkbenchModelAccess;
 import jetbrains.mps.project.IModule;
+import jetbrains.mps.project.Solution;
 import jetbrains.mps.smodel.MPSModuleRepository;
 import jetbrains.mps.smodel.SNode;
 import jetbrains.mps.smodel.SNodePointer;
@@ -28,9 +29,11 @@ public class FalconRunner extends AbstractFlexSDKRunner {
   private static final String COMPILE_ERRORS_LOG_FILE_NAME = "compile_errors.log";
 
   private boolean compileAsSWC;
+  private Solution solution;
 
-  public FalconRunner(@NotNull File configFile, @NotNull CompilerSettings compilerSettings, @NotNull ASModuleMakeType moduleMakeType, boolean compileAsSWC) {
+  public FalconRunner(@NotNull File configFile, @NotNull CompilerSettings compilerSettings, @NotNull ASModuleMakeType moduleMakeType, Solution solution, boolean compileAsSWC) {
     super(configFile, compilerSettings, moduleMakeType);
+    this.solution = solution;
     this.compileAsSWC = compileAsSWC;
   }
 
@@ -52,6 +55,7 @@ public class FalconRunner extends AbstractFlexSDKRunner {
         falconProjectBuilder.setMainClass(mainClassNode);
       }
 
+      falconProjectBuilder.setSolution(solution);
       falconProjectBuilder.setCommandLineArguments(getCommandArguments());
       falconProjectBuilder.build(compileAsSWC);
       return new CompilationResult(0, 0, false);

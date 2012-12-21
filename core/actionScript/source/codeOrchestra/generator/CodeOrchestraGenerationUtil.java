@@ -10,9 +10,7 @@ import codeOrchestra.actionScript.assets.AssetsManager;
 import codeOrchestra.actionScript.assets.AssetsSolution;
 import codeOrchestra.actionScript.compiler.report.CompilerMessagesComponent;
 import codeOrchestra.actionscript.liveCoding.LiveCodingManager;
-import codeOrchestra.actionscript.modulemaker.CompilerKind;
 import codeOrchestra.actionscript.modulemaker.messages.CompilerMessage;
-import codeOrchestra.actionscript.modulemaker.view.FlexSDKSettings;
 import codeOrchestra.actionscript.run.compiler.properties.OutputType;
 import codeOrchestra.actionscript.util.FileUtils;
 import codeOrchestra.actionscript.view.ASMessageMarker;
@@ -171,13 +169,6 @@ public final class CodeOrchestraGenerationUtil {
 
   public static boolean generateModuleWithDependencies(@Nullable IOperationContext operationContext, final Project project, boolean rebuildAll, final IModule rootModule, @Nullable IRemoteGenerationCallback remoteGenerationCallback, BuildProvider buildProvider) {
     OutputType rootModuleOutputType = CodeOrchestraGenerateManager.getOwnOutputType(rootModule.getModuleReference());
-
-    // CO-4812
-    if (EnumSet.of(OutputType.FLEX_APPLICATION, OutputType.FLEX_LIBRARY).contains(rootModuleOutputType)
-      && FlexSDKSettings.getInstance().getCompilerKind() == CompilerKind.FALCON) {
-      // TODO: Falcon generation (first step) - simply rebuild everything
-      rebuildAll = true;
-    }
 
     // Clean the root module first
     if (rootModule instanceof Solution && rebuildAll) {

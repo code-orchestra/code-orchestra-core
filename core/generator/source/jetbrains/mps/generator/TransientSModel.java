@@ -33,6 +33,9 @@ public class TransientSModel extends SModel {
   @CodeOrchestraPatch
   private boolean isObsolete;
 
+  @CodeOrchestraPatch
+  private SModel originalModel;
+
   public TransientSModel(@NotNull SModelReference modelReference) {
     super(modelReference, new RegularNodeIdMap());
   }
@@ -51,6 +54,16 @@ public class TransientSModel extends SModel {
     if (!wasObsolete && obsolete) {
       GlobalSModelEventsManager.getInstance().fireTransientSModelDisposed((TransientSModelDescriptor) getModelDescriptor());
     }
+  }
+
+  @CodeOrchestraPatch
+  public void setOriginalModel(SModel model) {
+    originalModel = model;
+  }
+
+  @CodeOrchestraPatch
+  public SModel getOriginalModel() {
+    return originalModel;
   }
 
   @Override

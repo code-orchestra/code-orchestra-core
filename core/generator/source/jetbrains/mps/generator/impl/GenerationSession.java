@@ -558,12 +558,20 @@ public class GenerationSession {
     return currentModel;
   }
 
+  @CodeOrchestraPatch
   private SModel createTransientModel() {
     String longName = myOriginalInputModel.getLongName();
     String stereotype = Integer.toString(myMajorStep + 1) + "_" + ++myMinorStep;
     SModelDescriptor transientModel = mySessionContext.getModule().createTransientModel(longName, stereotype);
-    transientModel.getSModel().setLoading(true); // we dont need any events to be cast
-    return transientModel.getSModel();
+    SModel sModel = transientModel.getSModel();
+    sModel.setLoading(true); // we dont need any events to be cast
+
+    // CO-4812
+    if (sModel instanceof TransientSModel) { // Seems to be always true
+      ((TransientSModel) sModel).setOriginalModel(myOriginalInputModel.getSModel());
+    }
+
+    return sModel;
   }
 
   @CodeOrchestraPatch

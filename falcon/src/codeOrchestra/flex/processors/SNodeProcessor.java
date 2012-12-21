@@ -42,7 +42,7 @@ public abstract class SNodeProcessor {
     }
     for (SNode child : myNode.getChildren()) {
       if (!handleChild(child)) {
-        throw new SNodeProcessorException("Unhandled child " + child.getRole_() + ", processor: " + getClass().getName());
+        throw new SNodeProcessorException("Unhandled child " + child.getRole_() + " of concept " + child.getConceptFqName() + ", processor: " + getClass().getName());
       }
     }
     return createNode();

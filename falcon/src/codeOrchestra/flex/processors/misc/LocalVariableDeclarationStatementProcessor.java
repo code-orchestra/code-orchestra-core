@@ -39,6 +39,8 @@ public class LocalVariableDeclarationStatementProcessor extends SNodeProcessor {
     String childRole = child.getRole_();
     if (childRole.equals("localVariableDeclaration")) {
       declarations.add(processChild(child, VariableNode.class));
+    } else if (childRole.equals("remark")) {
+      // Ignore
     } else {
       return false;
     }

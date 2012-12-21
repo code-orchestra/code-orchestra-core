@@ -4,11 +4,9 @@ import codeOrchestra.flex.processors.SNodeProcessor;
 import codeOrchestra.flex.processors.SNodeProcessorException;
 import codeOrchestra.flex.processors.SNodeProcessorProvider;
 import codeOrchestra.flex.tree.OutOfPackageScriptNode;
+import jetbrains.mps.generator.TransientSModel;
+import jetbrains.mps.smodel.*;
 import jetbrains.mps.smodel.SModel.ImportElement;
-import jetbrains.mps.smodel.SModelDescriptor;
-import jetbrains.mps.smodel.SModelReference;
-import jetbrains.mps.smodel.SModelRepository;
-import jetbrains.mps.smodel.SNode;
 import org.apache.flex.compiler.internal.projects.CompilerProject;
 import org.apache.flex.compiler.internal.projects.DefinitionPriority;
 import org.apache.flex.compiler.internal.scopes.ASFileScope;
@@ -51,8 +49,11 @@ public class FalconCompilationUnitBuilder {
       }
     }
 
+    SModel myModel = root.getModel();
+    myModel = myModel instanceof TransientSModel ? ((TransientSModel) myModel).getOriginalModel() : myModel ;
+
     if (rootNodeName == null) {
-      throw new FalconCompilationUnitBuilderException("Cannot get root name for node " + root.getModel().getLongName() + "#" + root.getId());
+      throw new FalconCompilationUnitBuilderException("Cannot get root name for node " + myModel.getLongName() + "#" + root.getId());
     }
 
     // Process root
@@ -123,21 +124,26 @@ public class FalconCompilationUnitBuilder {
     }
 
     // Imports
-    for (ImportElement importElement : root.getModel().importedModels()) {
+    for (ImportElement importElement : myModel.importedModels()) {
       SModelReference modelReference = importElement.getModelReference();
       SModelDescriptor modelDescriptor = SModelRepository.getInstance().getModelDescriptor(modelReference);
       if (modelDescriptor == null) {
         throw new RuntimeException("Can't get model from repository: " + modelReference.toString());
       }
-      if (modelDescriptor.getLongName().isEmpty()) {
+
+      String importedModelName = modelDescriptor.getLongName();
+      if (importedModelName.isEmpty()) {
         // Do not add default package import
         continue;
       }
-      if ("flash.metadata".equals(modelDescriptor.getLongName())) {
+      if ("flash.metadata".equals(importedModelName)) {
         // Do not add flash.metadata.* import
         continue;
       }
-      String importedModelName = modelDescriptor.getLongName();
+      if ("#assets#-Project_assets".equals(importedModelName)) {
+        // Do not add assets import
+        continue;
+      }
       ExpressionNodeBase importedPackageName = buildImportName(importedModelName);
 
       if (importedPackageName != null) { // TODO: What are we checking here?

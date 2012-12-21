@@ -33,6 +33,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.Vector;
 
+import jetbrains.mps.util.annotation.CodeOrchestraPatch;
 import org.apache.flex.abc.ABCConstants;
 import org.apache.flex.abc.instructionlist.InstructionList;
 import org.apache.flex.abc.semantics.Instruction;
@@ -355,14 +356,16 @@ public class LexicalScope
      * Variables with visibility to nested scopes
      * are defined here.
      */
-    ITraitsVisitor traitsVisitor = null;
+    @CodeOrchestraPatch
+    public ITraitsVisitor traitsVisitor = null; // CO-4812 made public
 
     /**
      *  If this LexicalScope is the outer scope of a method
      *  compilation, this is its method body visitor.
      *  @see #getMethodBodyVisitor()
      */
-    IMethodBodyVisitor methodBodyVisitor = null;
+    @CodeOrchestraPatch
+    public IMethodBodyVisitor methodBodyVisitor = null; // CO-4812 made public
 
     /**
      *  If this LexicalScope is the outer scope of a method
@@ -1866,7 +1869,8 @@ public class LexicalScope
      * @param node the syntax tree node which establishes the initial scope for labels
      * visible to goto statements.
      */
-    void setInitialControlFlowRegionNode(IASNode node)
+    @CodeOrchestraPatch
+    public void setInitialControlFlowRegionNode(IASNode node) // CO-4812 made public
     {
         assert this.initialControlFlowRegionNode == null : "The syntax tree node should only be set once.";
         assert node != null : "The syntax tree node should never be set to null.";

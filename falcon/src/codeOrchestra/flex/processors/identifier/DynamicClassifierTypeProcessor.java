@@ -17,10 +17,12 @@ public class DynamicClassifierTypeProcessor extends DynamicAccessOperationProces
 
   @Override
   protected boolean handleProperty(String name, String value) throws SNodeProcessorException {
-    if (name.equals("isAllowEmpty")) {
-      // Ignore
-    } else {
-      return false;
+    if (!super.handleProperty(name, value)) {
+      if (name.equals("isAllowEmpty")) {
+        // Ignore
+      } else {
+        return false;
+      }
     }
     return true;
   }

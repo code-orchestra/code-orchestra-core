@@ -40,6 +40,11 @@ public abstract class BinaryExpressionProcessor extends SNodeProcessor {
         throw new SNodeProcessorException();
       }
       rightOperand = processChild(child, ExpressionNodeBase.class);
+    } else if (childRole.equals("enter")) {
+      if (!"codeOrchestra.smallLanguage.structure.ExpressionEnter".equals(child.getConceptFqName())) {
+        return false;
+      }
+      // Else - it is ok, ignore this child
     } else {
       return false;
     }

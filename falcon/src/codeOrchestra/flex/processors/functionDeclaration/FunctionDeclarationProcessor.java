@@ -26,6 +26,7 @@ public abstract class FunctionDeclarationProcessor extends SNodeProcessor {
   protected ExpressionNodeBase returnType;
   protected boolean isFinal;
   protected boolean isNative;
+  protected boolean isOverriden;
   protected List<MetaTagNode> annotations = new ArrayList<MetaTagNode>();
 
   public FunctionDeclarationProcessor(SNode node) {
@@ -40,6 +41,8 @@ public abstract class FunctionDeclarationProcessor extends SNodeProcessor {
       isFinal = value.equals("true");
     } else if (name.equals("isNative")) {
       isNative = value.equals("true");
+    } else if (name.equals("isOverriden")) {
+      isOverriden = value.equals("true");
     } else {
       return false;
     }
@@ -113,6 +116,9 @@ public abstract class FunctionDeclarationProcessor extends SNodeProcessor {
       }
       if (isNative) {
         functionNode.addModifier(new ModifierNode("native"));
+      }
+      if (isOverriden) {
+        functionNode.addModifier(new ModifierNode("override"));
       }
       if (statements != null) {
         fillStatementList(functionNode.getScopedNode(), statements);

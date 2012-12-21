@@ -26,6 +26,7 @@ import java.util.LinkedList;
 import java.util.Map;
 import java.util.Set;
 
+import jetbrains.mps.util.annotation.CodeOrchestraPatch;
 import org.apache.flex.abc.ABCEmitter;
 import org.apache.flex.abc.diagnostics.AbstractDiagnosticVisitor;
 import org.apache.flex.abc.graph.IBasicBlock;
@@ -299,7 +300,8 @@ public class GlobalLexicalScope extends LexicalScope
     }
 
     @Override
-    IABCVisitor getEmitter()
+    @CodeOrchestraPatch
+    public IABCVisitor getEmitter() // CO-4812 made public
     {
         return emitter;
     }

@@ -19,6 +19,7 @@
 
 package org.apache.flex.compiler.internal.as.codegen;
 
+import jetbrains.mps.util.annotation.CodeOrchestraPatch;
 import org.apache.flex.abc.ABCConstants;
 import org.apache.flex.abc.instructionlist.InstructionList;
 import org.apache.flex.abc.semantics.MethodInfo;
@@ -66,7 +67,8 @@ import java.util.concurrent.ExecutorService;
  * A GlobalDirectiveProcessor translates directives at
  * global scope into ABC.
  */
-class GlobalDirectiveProcessor extends DirectiveProcessor
+@CodeOrchestraPatch
+public class GlobalDirectiveProcessor extends DirectiveProcessor // CO-4812 made public
 {
     /** Instructions to implement directives as they're encountered. */
     InstructionList directiveInsns = new InstructionList();
@@ -117,7 +119,8 @@ class GlobalDirectiveProcessor extends DirectiveProcessor
      * caller, so it's not created by nesting an enclosing scope.
      * @param emitter the ABC emitter.
      */
-    GlobalDirectiveProcessor(ExecutorService executorService, boolean useParallelCodeGen, LexicalScope current_scope, IABCVisitor emitter)
+    @CodeOrchestraPatch
+    public GlobalDirectiveProcessor(ExecutorService executorService, boolean useParallelCodeGen, LexicalScope current_scope, IABCVisitor emitter) // CO-4812 made public
     {
         super(current_scope.getProblems());
         assert (!useParallelCodeGen) || (executorService != null) : "Parallel code generation requires access to an ExecutorService";
@@ -539,7 +542,8 @@ class GlobalDirectiveProcessor extends DirectiveProcessor
      * 
      * @throws InterruptedException
      */
-    void finish() throws InterruptedException
+    @CodeOrchestraPatch
+    public void finish() throws InterruptedException // CO-4812 made public
     {
         try
         {

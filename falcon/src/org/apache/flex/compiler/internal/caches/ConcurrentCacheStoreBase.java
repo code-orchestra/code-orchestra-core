@@ -20,10 +20,13 @@
 package org.apache.flex.compiler.internal.caches;
 
 import java.lang.ref.SoftReference;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
 import com.google.common.base.Joiner;
+import jetbrains.mps.util.annotation.CodeOrchestraPatch;
 
 /**
  * A key-value pair cache store that supports concurrent access.
@@ -91,6 +94,24 @@ public abstract class ConcurrentCacheStoreBase<T>
             return null;
         return entryRef.get();
     }
+
+  @CodeOrchestraPatch
+  public final Map<CacheStoreKeyBase, T> getAllEntries() {
+    HashMap<CacheStoreKeyBase, T> entries = new HashMap<CacheStoreKeyBase, T>();
+    for (CacheStoreKeyBase key : cache.keySet()) {
+      T value = cache.get(key).get();
+      entries.put(key, value);
+    }
+    return entries;
+  }
+
+  @CodeOrchestraPatch
+  public final T putEntry(CacheStoreKeyBase key, T value) {
+    SoftReference<T> entryRef = cache.put(key, new SoftReference<T>(value));
+    if (entryRef == null)
+      return null;
+    return entryRef.get();
+  }
 
     /**
      * Get size of the cache table.

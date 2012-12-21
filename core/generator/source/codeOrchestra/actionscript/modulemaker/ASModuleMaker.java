@@ -155,7 +155,7 @@ public class ASModuleMaker {
     CompilerKind compilerKind = FlexSDKSettings.getInstance().getCompilerKind();
 
     // Get the flex SDK runner (compc, mxmlc, fcsh, etc)
-    AbstractFlexSDKRunner flexSDKProcessRunner = getFlexSDKRunner(project, compilerSettings, moduleMakeType, configFile, outputType, compilerKind);
+    AbstractFlexSDKRunner flexSDKProcessRunner = getFlexSDKRunner(project, compilerSettings, moduleMakeType, configFile, outputType, compilerKind, solution);
 
     // Check the compilation result
     CompilationResult compilationResult = flexSDKProcessRunner.run();
@@ -180,7 +180,8 @@ public class ASModuleMaker {
                                                  ASModuleMakeType moduleMakeType,
                                                  File configFile,
                                                  OutputType outputType,
-                                                 CompilerKind compilerKind) {
+                                                 CompilerKind compilerKind,
+                                                 Solution solution) {
     if (outputType == OutputType.FLEX_LIBRARY) {
       switch (compilerKind) {
         case MXMCL_COMPC:
@@ -188,7 +189,7 @@ public class ASModuleMaker {
         case FCSH:
           return new FCSHFlexSDKRunner(configFile, compilerSettings, moduleMakeType, FSCHCompilerKind.COMPC, project);
         case FALCON:
-          return new FalconRunner(configFile, compilerSettings, moduleMakeType, true);
+          return new FalconRunner(configFile, compilerSettings, moduleMakeType, solution, true);
       }
     } else if (outputType == OutputType.FLEX_APPLICATION) {
       switch (compilerKind) {
@@ -197,7 +198,7 @@ public class ASModuleMaker {
         case FCSH:
           return new FCSHFlexSDKRunner(configFile, compilerSettings, moduleMakeType, FSCHCompilerKind.MXMLC, project);
         case FALCON:
-          return new FalconRunner(configFile, compilerSettings, moduleMakeType, false);
+          return new FalconRunner(configFile, compilerSettings, moduleMakeType, solution, false);
       }
     }
     throw new IllegalStateException("Unsupported output type: " + outputType);
