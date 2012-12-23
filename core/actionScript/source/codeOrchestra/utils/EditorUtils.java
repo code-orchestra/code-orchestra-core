@@ -37,12 +37,16 @@ public final class EditorUtils {
       if (nodeEditor != null) {
         final SNodePointer currentlyEditedNode = nodeEditor.getCurrentlyEditedNode();
         if (currentlyEditedNode != null) {
-          editedNodes.add(ModelAccess.instance().runReadAction(new Computable<SNode>() {
+          SNode sNode = ModelAccess.instance().runReadAction(new Computable<SNode>() {
             @Override
             public SNode compute() {
               return currentlyEditedNode.getNode();
             }
-          }));
+          });
+
+          if (sNode != null) {
+            editedNodes.add(sNode);
+          }
         }
       }
     }
