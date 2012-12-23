@@ -28,10 +28,8 @@ import jetbrains.mps.nodeEditor.EditorContext;
 import jetbrains.mps.nodeEditor.cells.*;
 import jetbrains.mps.ide.resolve.Resolver;
 import jetbrains.mps.nodeEditor.selection.SelectionManager;
-import jetbrains.mps.smodel.ModelAccess;
-import jetbrains.mps.smodel.SModel;
-import jetbrains.mps.smodel.SNode;
-import jetbrains.mps.smodel.SReference;
+import jetbrains.mps.project.IModule;
+import jetbrains.mps.smodel.*;
 import jetbrains.mps.util.annotation.CodeOrchestraPatch;
 
 import javax.swing.SwingUtilities;
@@ -46,6 +44,7 @@ import java.util.Set;
 public class CellAction_PasteNode extends EditorCellAction {
   private static final Logger LOG = Logger.getLogger(CellAction_PasteNode.class);
 
+  @CodeOrchestraPatch
   public boolean canExecute(EditorContext context) {
     EditorCell selectedCell = context.getNodeEditorComponent().getSelectedCell();
     if (selectedCell == null) {
@@ -55,9 +54,24 @@ public class CellAction_PasteNode extends EditorCellAction {
     if (selectedNode == null || selectedNode.isDisposed()) {
       return false;
     }
-    List<SNode> pasteNodes = CopyPasteUtil.getNodesFromClipboard(selectedNode.getModel());
+
+    // RF-1227
+    SModel model = selectedNode.getModel();
+    if (model == null) {
+      return false;
+    }
+    SModelDescriptor modelDescriptor = model.getModelDescriptor();
+    if (modelDescriptor == null) {
+      return false;
+    }
+    IModule module = modelDescriptor.getModule();
+    if (module == null) {
+      return false;
+    }
+
+    List<SNode> pasteNodes = CopyPasteUtil.getNodesFromClipboard(model);
     if (pasteNodes == null || pasteNodes.isEmpty()) {
-      return CopyPasteUtil.isConversionAvailable(selectedNode.getModel(), selectedNode);
+      return CopyPasteUtil.isConversionAvailable(model, selectedNode);
     }
 
     if (!new NodePaster(pasteNodes).canPaste(getCellToPasteTo(selectedCell))) {
