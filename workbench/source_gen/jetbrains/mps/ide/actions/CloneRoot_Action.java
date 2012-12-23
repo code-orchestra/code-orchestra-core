@@ -107,6 +107,12 @@ public class CloneRoot_Action extends GeneratedAction {
       for (SNode node : ListSequence.fromList(((List<SNode>) MapSequence.fromMap(_params).get("nodes")))) {
         SNode root = SNodeOperations.getContainingRoot(node);
         final SNode copy = SNodeOperations.copyNode(root);
+
+        // RF-1216
+        if (copy == null) {
+          return;
+        }
+
         SModelOperations.addRootNode(SNodeOperations.getModel(root), copy);
         ((Project) MapSequence.fromMap(_params).get("project")).getComponent(MPSEditorOpener.class).editNode(copy, ((IOperationContext) MapSequence.fromMap(_params).get("context")));
         SwingUtilities.invokeLater(new Runnable() {
