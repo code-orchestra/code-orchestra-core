@@ -2,6 +2,7 @@ package codeOrchestra.javaScript.generator;
 
 import com.intellij.openapi.util.io.FileUtil;
 import jetbrains.mps.logging.Logger;
+import jetbrains.mps.project.IModule;
 import jetbrains.mps.smodel.Language;
 
 import java.io.*;
@@ -19,21 +20,25 @@ public class JSLibHelper {
   private static final String JS_LIB_DIR = "lib";
   private static final String JAVASCRIPT_LIB_DIR = "module/" + JS_LIB_DIR;
 
-  public static void copyLanguageJSLib(Language language, String libFilename, String targetSourcePath) {
-    copyLanguageJSLib(language.getBundleHome().getPath(), libFilename, targetSourcePath);
+  public static void copyJSLib(IModule module, String libFilename, String targetSourcePath) {
+    copyJSLib(module.getBundleHome().getPath(), libFilename, targetSourcePath);
   }
 
-  private static void copyLanguageJSLib(String languageBundleHome, String libFilename, String targetSourcePath) {
+  public static void copyLanguageJSLib(Language language, String libFilename, String targetSourcePath) {
+    copyJSLib(language, libFilename, targetSourcePath);
+  }
+
+  private static void copyJSLib(String bundleHome, String libFilename, String targetSourcePath) {
     File sourcesDir = new File(targetSourcePath);
     if (!sourcesDir.exists() || !sourcesDir.isDirectory()) {
       LOG.error("Invalid source gen dir: " + targetSourcePath);
       return;
     }
 
-    if (languageBundleHome.toLowerCase().contains(".jar")) {
-      copyLanguageJSLibFromZIP(languageBundleHome, libFilename, sourcesDir);
+    if (bundleHome.toLowerCase().contains(".jar")) {
+      copyLanguageJSLibFromZIP(bundleHome, libFilename, sourcesDir);
     } else {
-      copyLanguageJSLibFromDir(languageBundleHome, libFilename, sourcesDir);
+      copyLanguageJSLibFromDir(bundleHome, libFilename, sourcesDir);
     }
   }
 
@@ -73,7 +78,17 @@ public class JSLibHelper {
       try {
         File jsLibSource = new File(jsLibDir, libFilename);
         File jsLibTarget = new File(targetSources, libFilename);
-        FileUtil.copy(jsLibSource, jsLibTarget);
+
+        if (!jsLibSource.exists()) {
+          LOG.error(jsLibSource + " js lib doesn't exist");
+          return;
+        }
+
+        if (jsLibSource.isDirectory()) {
+          FileUtil.copyDir(jsLibSource, jsLibTarget);
+        } else {
+          FileUtil.copy(jsLibSource, jsLibTarget);
+        }
       } catch (IOException e) {
         LOG.error("Can't copy JS generated sources from " + jsLibDir + " to " + targetSources);
         return;
