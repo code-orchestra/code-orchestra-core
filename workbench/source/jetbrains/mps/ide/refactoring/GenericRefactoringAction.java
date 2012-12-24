@@ -160,6 +160,7 @@ public class GenericRefactoringAction extends BaseAction {
     List entities;
     switch (refTarget.getTarget()) {
       case NODE:
+      case ANY: // TODO: ANY type is now used only in RefactoringPopup so this code is ok for now.
         entities = getNodes(e, oneEntity);
         break;
       case MODEL:
