@@ -53,7 +53,7 @@ public class FalconProjectBuilder {
 
   private static boolean sessionStarted;
 
-  private Map<Solution, Map<SModel, Map<String, SNode>>> solutionToRootsMap = new HashMap<Solution, Map<SModel, Map<String, SNode>>>();
+  private Map<Solution, Map<String, Map<String, SNode>>> solutionToRootsMap = new HashMap<Solution, Map<String, Map<String, SNode>>>();
 
   private ABCCache abcCache = new ABCCache();
   Map<CacheStoreKeyBase, ISWC> cachedSWCEntries = new HashMap<CacheStoreKeyBase, ISWC>();
@@ -183,21 +183,21 @@ public class FalconProjectBuilder {
   }
 
   private void prepareRoots() {
-    Map<SModel, Map<String, SNode>> modelMap = solutionToRootsMap.get(mySolution);
+    Map<String, Map<String, SNode>> modelMap = solutionToRootsMap.get(mySolution);
     if (modelMap == null) {
-      modelMap = new HashMap<SModel, Map<String, SNode>>();
+      modelMap = new HashMap<String, Map<String, SNode>>();
       solutionToRootsMap.put(mySolution, modelMap);
     }
 
     List<SNode> newRoots = new ArrayList<SNode>();
 
     for (SModel newModel : newModels) {
-      SModel originalModel = newModel instanceof TransientSModel ? ((TransientSModel) newModel).getOriginalModel() : newModel;
-      Map<String, SNode> rootMap = modelMap.get(originalModel);
+      String modelLongName = newModel.getLongName();
+      Map<String, SNode> rootMap = modelMap.get(modelLongName);
 
       if (rootMap == null) {
         rootMap = new HashMap<String, SNode>();
-        modelMap.put(originalModel, rootMap);
+        modelMap.put(modelLongName, rootMap);
       }
 
       for (SNode root : newModel.roots()) {
@@ -213,7 +213,7 @@ public class FalconProjectBuilder {
           if (!(root.getConceptFqName().equals(Concept.AnnotationDeclaration.getName()))) {
             ASCompilationUnit asCompilationUnit = FalconCompilationUnitBuilder.getInstance().buildCompilationUnit(root, project);
             myCompilationUnits.add(asCompilationUnit);
-            if (newRoots.contains(root)/* || getRootFQName(mainClass).equals(getRootFQName(root))*/) {
+            if (newRoots.contains(root)) {
               abcCache.remove(asCompilationUnit.getFileNode());
             }
           }
