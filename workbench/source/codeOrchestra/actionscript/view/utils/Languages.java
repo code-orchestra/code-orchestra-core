@@ -83,7 +83,7 @@ public final class Languages {
 
   public static boolean isCodeOrchestraLanguage(Language language) {
     String languageNamespace = language.getModuleDescriptor().getNamespace();
-    return languageNamespace != null && (languageNamespace.toLowerCase().contains(CODE_ORCHESTRA) || languageNamespace.toLowerCase().contains(HTML5));
+    return languageNamespace != null && (languageNamespace.toLowerCase().contains(CODE_ORCHESTRA.toLowerCase()) || languageNamespace.toLowerCase().contains(HTML5.toLowerCase()));
   }
 
   public static Language get(String fqName) {
