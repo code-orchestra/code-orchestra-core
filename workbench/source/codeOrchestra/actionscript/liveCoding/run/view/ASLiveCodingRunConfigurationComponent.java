@@ -331,7 +331,7 @@ public class ASLiveCodingRunConfigurationComponent extends JPanel {
     myAllTheMethodsRadioButton.setText("All the methods");
     panel9.add(myAllTheMethodsRadioButton, new GridConstraints(1, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
     myAnnotatedWithLiveCodingInRadioButton = new JRadioButton();
-    myAnnotatedWithLiveCodingInRadioButton.setText("Annotated with [LiveCoding]");
+    myAnnotatedWithLiveCodingInRadioButton.setText("Annotated with [Live]");
     panel9.add(myAnnotatedWithLiveCodingInRadioButton, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
     final JLabel label3 = new JLabel();
     label3.setText("Make Getters/Setters Live:");
@@ -368,5 +368,4 @@ public class ASLiveCodingRunConfigurationComponent extends JPanel {
   public JComponent $$$getRootComponent$$$() {
     return contentPane;
   }
-
 }
