@@ -23,8 +23,11 @@ import jetbrains.mps.internal.collections.runtime.ListSequence;
 import jetbrains.mps.project.structure.model.ModelRoot;
 import jetbrains.mps.smodel.LanguageID;
 import java.io.OutputStream;
+import java.util.List;
 
 public class SolutionDescriptorPersistence {
+  public static final String EXCLUDE_PACKAGES_ELEMENT = "excludePackages";
+  public static final String PACKAGE_ELEMENT = "package";
   protected static Log log = LogFactory.getLog(SolutionDescriptorPersistence.class);
 
   private static final String ASSETS_DIR_ATTR = "assetsDir";
@@ -182,6 +185,15 @@ public class SolutionDescriptorPersistence {
                 }
               }
             }
+
+            // CO-4300
+            Element excludedPackagesElement = solutionElement.getChild(EXCLUDE_PACKAGES_ELEMENT);
+            if (excludedPackagesElement != null) {
+              for (Object elementObj : excludedPackagesElement.getChildren(PACKAGE_ELEMENT)) {
+                Element element = (Element) elementObj;
+                result.getCompilerSettings().getExcludedPackages().add(element.getText());
+              }
+            }
           }
 
           for (Element entryElement : ListSequence.fromList(AttributeUtils.elementChildren(ListSequence.fromList(AttributeUtils.elementChildren(solutionElement, "sourcePath")).first(), "source"))) {
@@ -319,6 +331,17 @@ public class SolutionDescriptorPersistence {
               jsOptimizationElement.setAttribute(jsOptimizationKind.name(), Boolean.valueOf(jsOptimizationOn).toString());
             }
             solutionElement.addContent(jsOptimizationElement);
+          }
+
+          // CO-4300
+          if (!descriptor.getCompilerSettings().getExcludedPackages().isEmpty()) {
+            Element excludedPackagesElement = new Element(EXCLUDE_PACKAGES_ELEMENT);
+            for (String excludedPackage : descriptor.getCompilerSettings().getExcludedPackages()) {
+              Element packageElement = new Element(PACKAGE_ELEMENT);
+              packageElement.setText(excludedPackage);
+              excludedPackagesElement.addContent(packageElement);
+            }
+            solutionElement.addContent(excludedPackagesElement);
           }
         }
 

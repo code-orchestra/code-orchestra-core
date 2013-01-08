@@ -7,9 +7,7 @@ import jetbrains.mps.project.structure.model.ModelRoot;
 import jetbrains.mps.project.structure.modules.SolutionDescriptor;
 
 import java.io.File;
-import java.util.EnumSet;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @author Alexander Eliseyev
@@ -49,11 +47,21 @@ public class CompilerSettings {
     }
   }
 
+  private List<String> excludedPackages = new ArrayList<String>();
+
   public CompilerSettings() {
   }
 
   public CompilerSettings(SolutionDescriptor parent) {
     update(parent);
+  }
+
+  public List<String> getExcludedPackages() {
+    return excludedPackages;
+  }
+
+  public void setExcludedPackages(List<String> excludedPackages) {
+    this.excludedPackages = excludedPackages;
   }
 
   public boolean includeAllRoots() {
@@ -192,6 +200,7 @@ public class CompilerSettings {
     if (outputPath != null ? !outputPath.equals(that.outputPath) : that.outputPath != null) return false;
     if (playerVersion != null ? !playerVersion.equals(that.playerVersion) : that.playerVersion != null) return false;
     if (jsParameters != null ? !jsParameters.equals(that.jsParameters) : that.jsParameters != null) return false;
+    if (excludedPackages != null ? !excludedPackages.equals(that.excludedPackages) : that.excludedPackages != null) return false;
 
     return true;
   }

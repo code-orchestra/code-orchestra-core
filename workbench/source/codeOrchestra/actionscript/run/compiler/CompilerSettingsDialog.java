@@ -64,9 +64,12 @@ public class CompilerSettingsDialog extends JDialog implements ISynchronizable {
   private JPanel regularJSCheckBoxes;
   private JCheckBox myIncludeAllClassesCheckBox;
   private JPanel additionalFlexPropertiesPanel;
+  private JButton myExcludedPackagesButton;
 
   private Map<JSOptimizationKind, JCheckBox> jsAdvancedOptimizationCheckboxes = new HashMap<JSOptimizationKind, JCheckBox>();
   private Map<JSOptimizationKind, JCheckBox> jsRegularOptimizationCheckboxes = new HashMap<JSOptimizationKind, JCheckBox>();
+
+  private List<String> excludedPackages;
 
   private String mainClassNodeId;
   private String mainClassModelUID;
@@ -85,7 +88,7 @@ public class CompilerSettingsDialog extends JDialog implements ISynchronizable {
     return contentPane;
   }
 
-  public CompilerSettingsDialog(CompilerSettings compilerSettings, final Project project, final String solutionName, BaseDialog parent) {
+  public CompilerSettingsDialog(CompilerSettings compilerSettings, final Project project, final String solutionName, final BaseDialog parent) {
     this.compilerSettings = compilerSettings;
     $$$setupUI$$$();
     setContentPane(contentPane);
@@ -163,6 +166,15 @@ public class CompilerSettingsDialog extends JDialog implements ISynchronizable {
       }
     });
     mainClass.getTextField().setEditable(false);
+
+    myExcludedPackagesButton.addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent actionEvent) {
+        ExcludePackagesDialog excludePackagesDialog = new ExcludePackagesDialog(parent, MPSModuleRepository.getInstance().getSolution(solutionName), excludedPackages);
+        excludePackagesDialog.setModal(true);
+        excludePackagesDialog.showDialog();
+      }
+    });
   }
 
   private void initJSCheckboxes() {
@@ -237,7 +249,8 @@ public class CompilerSettingsDialog extends JDialog implements ISynchronizable {
     outputType.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent e) {
         boolean isLibrary = outputType.getSelectedIndex() == 1;
-        myIncludeResourceFilesInCheckBox.setEnabled(isLibrary);
+        myIncludeResourceFilesInCheckBox.setVisible(isLibrary);
+        myExcludedPackagesButton.setVisible(isLibrary);
 
         String fileName = outputFileName.getText();
         if (fileName != null) {
@@ -333,6 +346,8 @@ public class CompilerSettingsDialog extends JDialog implements ISynchronizable {
     this.mainClassNodeId = compilerSettings.mainClassNodeId;
     this.mainClassModelUID = compilerSettings.mainClassModelUID;
 
+    this.excludedPackages = compilerSettings.getExcludedPackages();
+
     updateSWCEnabled();
   }
 
@@ -392,6 +407,7 @@ public class CompilerSettingsDialog extends JDialog implements ISynchronizable {
     compilerSettings.mainClassNodeId = mainClassNodeId;
     compilerSettings.mainClassModelUID = mainClassModelUID;
 
+    compilerSettings.setExcludedPackages(excludedPackages);
 
     boolean outputTypeChanged = compilerSettings.outputTypeIndex != outputType.getSelectedIndex();
 
@@ -672,13 +688,16 @@ public class CompilerSettingsDialog extends JDialog implements ISynchronizable {
     regularJSCheckBoxes.setLayout(new GridLayoutManager(1, 1, new Insets(0, 0, 0, 0), -1, -1));
     panel1.add(regularJSCheckBoxes, new GridConstraints(4, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
     additionalFlexPropertiesPanel = new JPanel();
-    additionalFlexPropertiesPanel.setLayout(new GridLayoutManager(1, 2, new Insets(0, 0, 0, 0), -1, -1));
+    additionalFlexPropertiesPanel.setLayout(new GridLayoutManager(2, 2, new Insets(0, 0, 0, 0), -1, -1));
     panel1.add(additionalFlexPropertiesPanel, new GridConstraints(7, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
     myIncludeAllClassesCheckBox = new JCheckBox();
     myIncludeAllClassesCheckBox.setText("Include all classes");
     additionalFlexPropertiesPanel.add(myIncludeAllClassesCheckBox, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
     final Spacer spacer1 = new Spacer();
     additionalFlexPropertiesPanel.add(spacer1, new GridConstraints(0, 1, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_WANT_GROW, 1, null, null, null, 0, false));
+    myExcludedPackagesButton = new JButton();
+    myExcludedPackagesButton.setText("Exclude packages...");
+    additionalFlexPropertiesPanel.add(myExcludedPackagesButton, new GridConstraints(1, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
     final Spacer spacer2 = new Spacer();
     contentPane.add(spacer2, new GridConstraints(1, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_VERTICAL, 1, GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
     ButtonGroup buttonGroup;
@@ -693,5 +712,4 @@ public class CompilerSettingsDialog extends JDialog implements ISynchronizable {
   public JComponent $$$getRootComponent$$$() {
     return contentPane;
   }
-
 }
