@@ -34,26 +34,36 @@ public class ExcludePackagesTableModel extends AbstractTableModel {
   private void initPackages() {
     this.allPackages = new ArrayList<String>();
 
+    // 1 - packages from the solution itself
+    addPackagesFromSolution(solution);
+
+    // 2 - packages from the dependencies
     HashMap<Solution, Boolean> dependenciesMap = new HashMap<Solution, Boolean>();
     SolutionUtils.fetchDependencies(solution, dependenciesMap);
-
     for (Solution dependencySolution : dependenciesMap.keySet()) {
+      if (SolutionUtils.isStubSolution(dependencySolution)) {
+        continue;
+      }
       Boolean isExcludedDependency = dependenciesMap.get(dependencySolution);
       if (!isExcludedDependency) {
-        for (SModelDescriptor sModelDescriptor : dependencySolution.getOwnModelDescriptors()) {
-          String packageName = sModelDescriptor.getLongName();
-          if ("".equals(packageName)) {
-            continue;
-          }
-
-          if (!allPackages.contains(packageName)) {
-            allPackages.add(packageName);
-          }
-        }
+        addPackagesFromSolution(dependencySolution);
       }
     }
 
     Collections.sort(allPackages);
+  }
+
+  private void addPackagesFromSolution(Solution solution) {
+    for (SModelDescriptor sModelDescriptor : solution.getOwnModelDescriptors()) {
+      String packageName = sModelDescriptor.getLongName();
+      if ("".equals(packageName)) {
+        continue;
+      }
+
+      if (!allPackages.contains(packageName)) {
+        allPackages.add(packageName);
+      }
+    }
   }
 
   public Class<?> getColumnClass(int columnIndex) {
