@@ -60,7 +60,6 @@ public class FlexSDKConfigurationPage {
       new FileChooserDescriptor(false, true, false, false, false, false),
       TextComponentAccessor.TEXT_FIELD_WHOLE_TEXT,
       false);
-    fileChooser.getTextField().setEditable(false);
     panel2.add(fileChooser, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_NORTHWEST, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_WANT_GROW, 1, null, null, null, 0, false));
     flexSettingPanel.add(panel2, new GridConstraints(1, 0, 1, 1, GridConstraints.ANCHOR_NORTHWEST, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, 1, null, null, null, 0, false));
 
