@@ -16,6 +16,7 @@
 package jetbrains.mps.ide.refactoring;
 
 import com.intellij.openapi.actionSystem.AnActionEvent;
+import com.intellij.openapi.actionSystem.CustomShortcutSet;
 import com.intellij.openapi.actionSystem.DataKey;
 import com.intellij.openapi.actionSystem.KeyboardShortcut;
 import com.intellij.openapi.keymap.KeymapManager;
@@ -146,9 +147,14 @@ public class GenericRefactoringAction extends BaseAction {
   @CodeOrchestraPatch
   protected void doUpdate(AnActionEvent e, Map<String, Object> _params) {
     // RE-2531
-    if (ViewUtils.isInActionScriptView(e.getData(MPSDataKeys.PROJECT))) {
+      if (ViewUtils.isInActionScriptView(e.getData(MPSDataKeys.PROJECT))) {
       Class<? extends IRefactoring> myRefactoringClass = myRefactoring.getClass();
       if (!myRefactoringClass.getName().contains("codeOrchestra")) {
+        e.getPresentation().setVisible(false);
+        e.getPresentation().setEnabled(false);
+        return;
+      }
+      if (myRefactoringClass.getName().equals("codeOrchestra.actionScript.refactoring.refactorings.InternalInline")) {
         e.getPresentation().setVisible(false);
         e.getPresentation().setEnabled(false);
         return;

@@ -49,6 +49,11 @@ public class GenericRefactoringAction_Action extends GeneratedAction {
             event.getPresentation().setEnabled(false);
             return;
           }
+          if (myRefactoringClass.getName().equals("codeOrchestra.actionScript.refactoring.refactorings.InternalInline")) {
+            event.getPresentation().setVisible(false);
+            event.getPresentation().setEnabled(false);
+            return;
+          }
         }
 
         String text = ("".equals(GenericRefactoringAction_Action.this.refactoring.getUserFriendlyName()) ?
