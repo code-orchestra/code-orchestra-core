@@ -1,7 +1,5 @@
 package codeOrchestra.rgs.server;
 
-import com.intellij.openapi.application.ApplicationManager;
-import com.intellij.openapi.components.ApplicationComponent;
 import codeOrchestra.generator.listener.BuildBroadcaster;
 import codeOrchestra.generator.listener.BuildEvent;
 import codeOrchestra.generator.listener.BuildListener;
@@ -11,18 +9,15 @@ import codeOrchestra.rgs.RGSException;
 import codeOrchestra.rgs.progress.IRemoteProgressIndicator;
 import codeOrchestra.rgs.server.artifact.ArtifactPreparerRegistry;
 import codeOrchestra.rgs.server.sshd.RGSSSHDServer;
-import codeOrchestra.rgs.server.view.Console;
 import codeOrchestra.rgs.state.RGSGenerationInProgressState;
 import codeOrchestra.rgs.state.RGSState;
-import codeOrchestra.utils.ProjectHolder;
+import com.intellij.openapi.application.ApplicationManager;
+import com.intellij.openapi.components.ApplicationComponent;
 import jetbrains.mps.ide.generator.GenerationSettings;
 import org.apache.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import javax.swing.JFrame;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
 import java.io.IOException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
