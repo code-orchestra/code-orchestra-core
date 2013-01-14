@@ -1,5 +1,6 @@
 package codeOrchestra.utils;
 
+import codeOrchestra.rgs.logging.Severity;
 import com.intellij.openapi.ui.popup.JBPopupAdapter;
 import com.intellij.openapi.ui.popup.LightweightWindowEvent;
 import com.intellij.openapi.wm.IdeFrame;
@@ -8,7 +9,6 @@ import com.intellij.openapi.wm.ex.StatusBarEx;
 import com.intellij.ui.LightColors;
 import com.intellij.ui.popup.NotificationPopup;
 import com.intellij.util.ui.UIUtil;
-import codeOrchestra.rgs.logging.Severity;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -34,9 +34,14 @@ public final class NotificationUtils {
   }
 
   public static void notifyWithABalloon(@NotNull String title, @NotNull String message, @NotNull Severity severity, final @Nullable Runnable onClose, int messageLengthLimit) {
-    final String caption = String.format("<html><b>%s</b><br/>%s</html>", title, TextUtils.trim(message, messageLengthLimit));
+    IdeFrame[] allFrames = WindowManager.getInstance().getAllFrames();
+    if (allFrames == null || allFrames.length == 0) {
+      return;
+    }
 
-    IdeFrame ideFrame = WindowManager.getInstance().getAllFrames()[0];
+    IdeFrame ideFrame = allFrames[0];
+
+    final String caption = String.format("<html><b>%s</b><br/>%s</html>", title, TextUtils.trim(message, messageLengthLimit));
 
     final StatusBarEx statusBar = (StatusBarEx) ideFrame.getStatusBar();
     final JLabel content = new JLabel(caption);

@@ -1,5 +1,6 @@
 package codeOrchestra.actionScript.flexsdk;
 
+import codeOrchestra.rgs.server.RGSParametersCLI;
 import com.intellij.openapi.components.AbstractProjectComponent;
 import com.intellij.openapi.components.ProjectComponent;
 import com.intellij.openapi.project.Project;
@@ -7,11 +8,14 @@ import com.intellij.openapi.startup.StartupManager;
 import codeOrchestra.actionscript.modulemaker.view.FlexSDKSettings;
 import codeOrchestra.rgs.logging.Severity;
 import codeOrchestra.utils.NotificationUtils;
+import jetbrains.mps.logging.Logger;
 
 /**
  * @author Alexander Eliseyev
  */
 public class FlexSDKValidatorComponent extends AbstractProjectComponent implements ProjectComponent {
+
+  private static final Logger LOG = Logger.getLogger(FlexSDKValidatorComponent.class);
 
   public FlexSDKValidatorComponent(Project project) {
     super(project);
@@ -25,7 +29,11 @@ public class FlexSDKValidatorComponent extends AbstractProjectComponent implemen
         try {
           FlexSDKLibsManager.getInstance().checkIsValidFlexSDKPath(FlexSDKSettings.getInstance().getFlexSDKPath());
         } catch (FlexSDKNotPresentException e) {
-          NotificationUtils.notifyWithABalloon("Invalid Flex SDK path", e.getMessage(), Severity.ERROR, null, -1);
+          if (RGSParametersCLI.isInServerMode()) {
+            LOG.error("Invalid Flex SDK path", e);
+          } else {
+            NotificationUtils.notifyWithABalloon("Invalid Flex SDK path", e.getMessage(), Severity.ERROR, null, -1);
+          }
         }
       }
     });

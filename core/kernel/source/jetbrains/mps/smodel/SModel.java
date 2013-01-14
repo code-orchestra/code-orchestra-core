@@ -538,13 +538,17 @@ public class SModel {
     fireLanguageRemovedEvent(ref);
   }
 
+  @CodeOrchestraPatch
   public void addLanguage(@NotNull ModuleReference ref) {
     ModelChange.assertLegalChange(this);
     if (SModelOperations.hasLanguage(this, ref)) return;
 
+    // CO-5033
+    /*
     if (ref.getModuleId() == null) {
       LOG.warning("Attempt to add language reference to a language without id in model " + getSModelFqName() + ". Language = " + ref);
     }
+    */
 
     if (!myLanguages.contains(ref)) {
       myLanguages.add(ref);
