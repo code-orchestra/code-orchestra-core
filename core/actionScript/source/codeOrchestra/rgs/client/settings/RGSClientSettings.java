@@ -28,7 +28,7 @@ import java.io.File;
   storages = {
     @Storage(
       id = "other",
-      file = "$PROJECT_FILE$"
+      file = "$WORKSPACE_FILE$"
     )
   }
 )
