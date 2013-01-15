@@ -148,8 +148,9 @@ public final class RemoteGenerationUIFacade extends AbstractRGSFacade {
         RGSTaskStack.create(unloadProject(), nextPhase()).process();
       }
     } else {
-      // Unknown state
-      ApplicationRGSClient.getInstance().reportGenerationError(generateInput, "Invalid RGS State: " + state.getPresentation(), null);
+      // Busy/illegal state
+      //ApplicationRGSClient.getInstance().reportGenerationError(generateInput, "Invalid RGS State: " + state.getPresentation(), null);
+      NotificationUtils.showRGSBalloon("The project is currently syncing and can't be generated yet...");
       this.failed = true;
     }
   }

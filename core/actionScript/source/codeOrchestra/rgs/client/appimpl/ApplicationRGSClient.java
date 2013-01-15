@@ -177,6 +177,9 @@ public class ApplicationRGSClient extends AbstractRGSClient implements ProjectCo
     });
   }
 
+  public RGSStatusWidget getStatusWidget() {
+    return statusWidget;
+  }
 
   @Override
   public void disposeComponent() {

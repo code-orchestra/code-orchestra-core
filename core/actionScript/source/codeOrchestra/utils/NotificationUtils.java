@@ -1,12 +1,18 @@
 package codeOrchestra.utils;
 
+import codeOrchestra.rgs.client.appimpl.ApplicationRGSClient;
+import codeOrchestra.rgs.client.appimpl.RGSStatusWidget;
 import codeOrchestra.rgs.logging.Severity;
+import com.intellij.openapi.ui.popup.Balloon;
+import com.intellij.openapi.ui.popup.Balloon.Position;
 import com.intellij.openapi.ui.popup.JBPopupAdapter;
+import com.intellij.openapi.ui.popup.JBPopupFactory;
 import com.intellij.openapi.ui.popup.LightweightWindowEvent;
 import com.intellij.openapi.wm.IdeFrame;
 import com.intellij.openapi.wm.WindowManager;
 import com.intellij.openapi.wm.ex.StatusBarEx;
 import com.intellij.ui.LightColors;
+import com.intellij.ui.awt.RelativePoint;
 import com.intellij.ui.popup.NotificationPopup;
 import com.intellij.util.ui.UIUtil;
 import org.jetbrains.annotations.NotNull;
@@ -17,6 +23,7 @@ import javax.swing.JComponent;
 import javax.swing.JLabel;
 import javax.swing.SwingUtilities;
 import java.awt.Color;
+import java.awt.Point;
 
 /**
  * @author Alexander Eliseyev
@@ -81,6 +88,16 @@ public final class NotificationUtils {
         }
       }
     });
+  }
+
+  public static void showRGSBalloon(String text) {
+    Balloon balloon = JBPopupFactory.getInstance().createBalloonBuilder(new JLabel(text)).setFillColor(LightColors.YELLOW).createBalloon();
+    RGSStatusWidget statusWidget = ApplicationRGSClient.getInstance().getStatusWidget();
+    if (statusWidget == null) {
+      return;
+    }
+
+    balloon.show(new RelativePoint(statusWidget, new Point(statusWidget.getWidth() / 2, 0)), Position.above);
   }
 
 }
