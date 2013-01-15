@@ -15,18 +15,26 @@
  */
 package jetbrains.mps.workbench.action;
 
+import com.intellij.openapi.actionSystem.KeyboardShortcut;
 import com.intellij.openapi.actionSystem.Shortcut;
 import com.intellij.openapi.keymap.Keymap;
 import com.intellij.openapi.keymap.KeymapManager;
+import com.intellij.openapi.util.SystemInfo;
 import gnu.trove.THashMap;
 import gnu.trove.THashSet;
 import jetbrains.mps.logging.Logger;
+import jetbrains.mps.util.annotation.CodeOrchestraPatch;
 
+import javax.swing.KeyStroke;
 import java.util.*;
 import java.util.Map.Entry;
 
 public abstract class BaseKeymapChanges {
+
   private static final Logger LOG = Logger.getLogger(BaseKeymapChanges.class);
+
+  @CodeOrchestraPatch
+  private static Shortcut MAC_QUIT_SHORTCUT = new KeyboardShortcut(KeyStroke.getKeyStroke("ctrl Q"), null);
 
   private static Map<Keymap, Set<String>> ourClearedActions = new THashMap<Keymap, Set<String>>();
   private Map<String, Set<Shortcut>> myRemovedShortcuts = new THashMap<String, Set<Shortcut>>();
@@ -108,7 +116,13 @@ public abstract class BaseKeymapChanges {
     ourClearedActions.clear();
   }
 
+  @CodeOrchestraPatch
   protected void addSimpleShortcut(String id, Shortcut... s) {
+    // CO-4957
+    if (s != null && s.length == 1 && "$default".equals(getScheme()) && SystemInfo.isMac && MAC_QUIT_SHORTCUT.equals(s[0])) {
+      return;
+    }
+
     Set<Shortcut> shortcuts = mySimpleShortcuts.get(id);
     if (shortcuts == null) {
       shortcuts = new THashSet<Shortcut>();
