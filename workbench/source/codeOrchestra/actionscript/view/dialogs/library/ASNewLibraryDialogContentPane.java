@@ -1,18 +1,13 @@
 package codeOrchestra.actionscript.view.dialogs.library;
 
+import codeOrchestra.actionscript.view.utils.SolutionUtils;
 import com.intellij.openapi.progress.ProgressIndicator;
 import com.intellij.openapi.progress.Progressive;
-import com.intellij.openapi.vfs.VfsUtil;
-import com.intellij.openapi.vfs.VirtualFileManager;
-import com.intellij.openapi.vfs.VirtualFileSystem;
-import com.intellij.util.indexing.FileBasedIndex;
 import codeOrchestra.actionscript.stubs.SWCStubsRegistry;
 import codeOrchestra.actionscript.view.utils.Languages;
 import codeOrchestra.utils.StubSolutionUtils;
 import jetbrains.mps.ide.common.PathField;
 import jetbrains.mps.ide.ui.filechoosers.treefilechooser.TreeFileChooser;
-import jetbrains.mps.ide.vfs.IdeaFile;
-import jetbrains.mps.ide.vfs.VirtualFileUtils;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
 import jetbrains.mps.project.MPSExtentions;
 import jetbrains.mps.project.MPSProject;
@@ -31,7 +26,6 @@ import jetbrains.mps.uiLanguage.runtime.events.Events;
 import jetbrains.mps.util.FileUtil;
 import jetbrains.mps.vfs.FileSystem;
 import jetbrains.mps.vfs.IFile;
-import jetbrains.mps.vfs.ex.IFileEx;
 import org.jdesktop.beansbinding.AutoBinding;
 import org.jdesktop.beansbinding.BeanProperty;
 import org.jdesktop.beansbinding.Bindings;
@@ -40,15 +34,15 @@ import org.jdesktop.beansbinding.Property;
 import javax.swing.JCheckBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 import java.awt.GridLayout;
 import java.io.File;
-import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ASNewLibraryDialogContentPane extends JPanel {
   public ASNewLibraryDialogContentPane myThis;
-  private JLabel myComponent0;
+  private JTextField nameFieldComponent;
   private PathField myPath0;
   private String mySwcFilePath;
   private boolean myCompileInMPS = true;
@@ -71,7 +65,9 @@ public class ASNewLibraryDialogContentPane extends JPanel {
   public ASNewLibraryDialogContentPane() {
     this.myThis = this;
     ASNewLibraryDialogContentPane component = this;
-    component.setLayout(new GridLayout(2, 1));
+    component.setLayout(new GridLayout(0, 2));
+    component.add(this.createNameLabelComponent());
+    component.add(this.createNameFieldComponent());
     component.add(this.createComponent0());
     component.add(this.createComponent1());
     component.add(this.createComponent2());
@@ -115,9 +111,20 @@ public class ASNewLibraryDialogContentPane extends JPanel {
     }
   }
 
+  private JLabel createNameLabelComponent() {
+    JLabel component = new JLabel();
+    component.setText("Library Name:");
+    return component;
+  }
+
+  private JTextField createNameFieldComponent() {
+    JTextField component = new JTextField();
+    this.nameFieldComponent = component;
+    return component;
+  }
+
   private JLabel createComponent0() {
     JLabel component = new JLabel();
-    this.myComponent0 = component;
     component.setText("SWC File Path:");
     return component;
   }
@@ -186,6 +193,23 @@ public class ASNewLibraryDialogContentPane extends JPanel {
   }
 
   /*package*/ void onOk() {
+    String libName = nameFieldComponent.getText();
+
+    if (libName.isEmpty()) {
+      myThis.getDialog().setErrorText("Enter the library name");
+      return;
+    }
+
+    if (!SolutionUtils.isValidModuleName(libName)) {
+      myThis.getDialog().setErrorText("Invalid library name");
+      return;
+    }
+
+    if (MPSModuleRepository.getInstance().getModuleByUID(libName) != null) {
+      myThis.getDialog().setErrorText("Duplicate library name: " + libName);
+      return;
+    }
+
     if (myThis.getSwcFilePath().length() == 0) {
       myThis.getDialog().setErrorText("Enter .swc library path");
       return;
@@ -205,17 +229,10 @@ public class ASNewLibraryDialogContentPane extends JPanel {
       return;
     }
 
-    final String swcSolutionName = swcFileName.replace(".", "_");
-
-    if (MPSModuleRepository.getInstance().getModuleByUID(swcSolutionName) != null) {
-      myThis.getDialog().setErrorText("Duplicate library name" + swcSolutionName);
-      return;
-    }
-
     String projectPath = FileUtil.getCanonicalPath(myThis.getProject().getProjectFile().getParentFile());
-    String solutionDirPath = projectPath + File.separator + "modules" + File.separator + swcSolutionName;
+    String solutionDirPath = projectPath + File.separator + "modules" + File.separator + libName;
 
-    final String descriptorPath = solutionDirPath + File.separator + swcSolutionName + MPSExtentions.DOT_SOLUTION;
+    final String descriptorPath = solutionDirPath + File.separator + libName + MPSExtentions.DOT_SOLUTION;
 
     myThis.getDialog().dispose();
 

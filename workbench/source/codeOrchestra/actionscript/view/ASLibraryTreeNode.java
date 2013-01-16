@@ -45,7 +45,7 @@ public class ASLibraryTreeNode extends ASProjectModuleTreeNode {
   public void updatePresentation() {
     super.updatePresentation();
 
-    if (getText().endsWith(".swc")) {
+    if (getText().endsWith(".swc)")) {
       setIcon(SWC_ICON);
     }
   }
@@ -60,7 +60,7 @@ public class ASLibraryTreeNode extends ASProjectModuleTreeNode {
           String libPath = modelRoot.getPath();
 
           if (libPath != null) {
-            return new File(libPath).getName();
+            return super.getModulePresentation() + " (" + new File(libPath).getName() + ")";
           }
         }
       }
