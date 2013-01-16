@@ -8,6 +8,7 @@ import jetbrains.mps.project.IModule;
 import jetbrains.mps.smodel.IScope;
 import jetbrains.mps.smodel.SNode;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * @author Alexander Eliseyev
@@ -36,10 +37,23 @@ public final class ActionScriptScopes {
   }
 
   public static IScope getActionScriptSolutionScope(final IScope wrappedScope, boolean includeStubs, @NotNull SNode context) {
+    return getActionScriptSolutionScope(wrappedScope, includeStubs, context, null);
+  }
+
+  public static IScope getActionScriptSolutionScope(final IScope wrappedScope, boolean includeStubs, @NotNull IModule sourceModule) {
+    return getActionScriptSolutionScope(wrappedScope, includeStubs, null, sourceModule);
+  }
+
+  private static IScope getActionScriptSolutionScope(final IScope wrappedScope, boolean includeStubs, @Nullable SNode context, @Nullable IModule sourceModule) {
     Project project = ProjectHolder.getProject();
     boolean filterOutEnvironmentLibs = false;
 
-    IModule sourceModule = context.getSourceModule();
+    if (context == null && sourceModule == null) {
+      throw new RuntimeException("context and sourceModule cannot be both null");
+    }
+    if (sourceModule == null) {
+      sourceModule = context.getSourceModule();
+    }
     if (project != null && sourceModule != null) {
       filterOutEnvironmentLibs = !project.getComponent(EnvironmentLibraryManager.class).isLibraryImplementation(sourceModule);
     }
