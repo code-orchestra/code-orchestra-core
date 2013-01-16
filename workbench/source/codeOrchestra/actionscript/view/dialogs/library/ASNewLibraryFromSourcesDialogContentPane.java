@@ -322,7 +322,7 @@ public class ASNewLibraryFromSourcesDialogContentPane extends JPanel {
     ModelRoot modelRoot = new ModelRoot();
     modelRoot.setPrefix("");
     modelRoot.setPath(solutionDescriptorFile.getParent().getAbsolutePath());
-    final Solution solution = Solution.createSolution(solutionName, solutionDescriptorFile, mpsProject, modelRoot);
+    final Solution solution = Solution.createStubSolution(solutionName, solutionDescriptorFile, mpsProject, modelRoot);
 
     SolutionDescriptor solutionDescriptor = solution.getModuleDescriptor();
     solutionDescriptor.setCompileInMPS(myThis.getCompileInMPS());

@@ -19,6 +19,7 @@ import com.intellij.openapi.progress.EmptyProgressIndicator;
 import jetbrains.mps.library.ModulesMiner;
 import jetbrains.mps.library.ModulesMiner.ModuleHandle;
 import jetbrains.mps.logging.Logger;
+import jetbrains.mps.project.ModuleId.Foreign;
 import jetbrains.mps.project.persistence.SolutionDescriptorPersistence;
 import jetbrains.mps.project.structure.model.ModelRoot;
 import jetbrains.mps.project.structure.modules.ModuleDescriptor;
@@ -78,17 +79,27 @@ public class Solution extends AbstractModule {
   }
 
   @CodeOrchestraPatch
+  // CO-4616
   public static Solution createSolution(String namespace, IFile descriptorFile, MPSModuleOwner moduleOwner, ModelRoot defaultModelRoot) {
+    return createSolution(namespace, descriptorFile, moduleOwner, defaultModelRoot, false);
+  }
+
+  @CodeOrchestraPatch
+  private static Solution createSolution(String namespace, IFile descriptorFile, MPSModuleOwner moduleOwner, ModelRoot defaultModelRoot, boolean stubSolution) {
     Solution solution = new Solution();
     SolutionDescriptor descriptor;
     if (descriptorFile.exists()) {
       descriptor = (SolutionDescriptor) ModulesMiner.getInstance().loadModuleDescriptor(descriptorFile);
       if (descriptor.getUUID() == null) {
-        descriptor.setUUID(UUID.randomUUID().toString());
+        if (stubSolution) { // CO-4616
+          descriptor.setUUID(Foreign.PREFIX + namespace);
+        } else {
+          descriptor.setUUID(UUID.randomUUID().toString());
+        }
         SolutionDescriptorPersistence.saveSolutionDescriptor(descriptorFile, descriptor);
       }
     } else {
-      descriptor = createNewDescriptor(namespace, descriptorFile, defaultModelRoot); // RE-2448
+      descriptor = createNewDescriptor(namespace, descriptorFile, defaultModelRoot, stubSolution); // RE-2448
     }
     solution.myDescriptorFile = descriptorFile;
 
@@ -102,6 +113,12 @@ public class Solution extends AbstractModule {
     repository.addModule(solution, moduleOwner);
 
     return solution;
+  }
+
+  @CodeOrchestraPatch
+  // CO-4616
+  public static Solution createStubSolution(String namespace, IFile descriptorFile, MPSModuleOwner moduleOwner, ModelRoot defaultModelRoot) {
+    return createSolution(namespace, descriptorFile, moduleOwner, defaultModelRoot, true);
   }
 
   @CodeOrchestraPatch
@@ -274,10 +291,14 @@ public class Solution extends AbstractModule {
   }
 
   @CodeOrchestraPatch
-  private static SolutionDescriptor createNewDescriptor(String namespace, IFile descriptorFile, ModelRoot defaultModelRoot) {
+  private static SolutionDescriptor createNewDescriptor(String namespace, IFile descriptorFile, ModelRoot defaultModelRoot, boolean stubDescriptor) {
     SolutionDescriptor descriptor = new SolutionDescriptor();
     descriptor.setNamespace(namespace);
-    descriptor.setUUID(UUID.randomUUID().toString());
+    if (stubDescriptor) { // CO-4616
+      descriptor.setUUID(Foreign.PREFIX + namespace);
+    } else {
+      descriptor.setUUID(UUID.randomUUID().toString());
+    }
 
     // default descriptorModel roots
     ModelRoot modelRoot = null;

@@ -15,39 +15,83 @@
  */
 package jetbrains.mps.project;
 
+import jetbrains.mps.util.annotation.CodeOrchestraPatch;
 import jetbrains.mps.util.annotation.ImmutableObject;
 
 import java.util.UUID;
 
 @ImmutableObject
-public class ModuleId {
+@CodeOrchestraPatch
+// CO-4616
+public abstract class ModuleId {
+
   public static ModuleId generate() {
-    return new ModuleId(UUID.randomUUID());
+    return new Regular(UUID.randomUUID());
   }
 
   public static ModuleId fromString(String text) {
     if (text == null) return null;
-    return new ModuleId(UUID.fromString(text));
+    if (text.startsWith(Foreign.PREFIX)) {
+      return new Foreign(text);
+    }
+    return new Regular(UUID.fromString(text));
   }
 
-  private final UUID myUid;
+  @ImmutableObject
+  @CodeOrchestraPatch
+  // CO-4616
+  public static class Regular extends ModuleId {
 
-  private ModuleId(UUID uid) {
-    myUid = uid;
+    private final UUID myUid;
+
+    public Regular(UUID uid) {
+      myUid = uid;
+    }
+
+    public boolean equals(Object obj) {
+      if (!(obj instanceof Regular)) return false;
+
+      Regular id = (Regular) obj;
+      return id.myUid.equals(myUid);
+    }
+
+    public int hashCode() {
+      return myUid.hashCode();
+    }
+
+    public String toString() {
+      return myUid.toString();
+    }
+
   }
 
-  public boolean equals(Object obj) {
-    if (!(obj instanceof ModuleId)) return false;
+  @ImmutableObject
+  @CodeOrchestraPatch
+  // CO-4616
+  public static class Foreign extends ModuleId {
 
-    ModuleId id = (ModuleId) obj;
-    return id.myUid.equals(myUid);
-  }
+    public static final String PREFIX = "f:";
 
-  public int hashCode() {
-    return myUid.hashCode();
-  }
+    private final String myUid;
 
-  public String toString() {
-    return myUid.toString();
+    public Foreign(String uid) {
+      myUid = uid;
+    }
+
+    public boolean equals(Object obj) {
+      if (!(obj instanceof Foreign)) return false;
+
+      Foreign id = (Foreign) obj;
+      return id.myUid.equals(myUid);
+    }
+
+    public int hashCode() {
+      return myUid.hashCode();
+    }
+
+    public String toString() {
+      return myUid;
+    }
+
   }
 }

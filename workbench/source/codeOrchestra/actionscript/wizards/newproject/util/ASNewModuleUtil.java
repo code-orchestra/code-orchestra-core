@@ -69,7 +69,12 @@ public class ASNewModuleUtil {
     modelRoot.setPrefix("");
     modelRoot.setPath(solutionFile.getParent().getAbsolutePath());
 
-    Solution solution = Solution.createSolution(solutionName, solutionFile, mpsProject, modelRoot);
+    Solution solution;
+    if (isLib) {
+      solution = Solution.createStubSolution(solutionName, solutionFile, mpsProject, modelRoot);
+    } else {
+      solution = Solution.createSolution(solutionName, solutionFile, mpsProject, modelRoot);
+    }
 
     // 2 - Adjust
 
