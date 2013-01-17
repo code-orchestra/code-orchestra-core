@@ -9,6 +9,7 @@ import codeOrchestra.actionscript.view.dialogs.library.util.GitHubUtil;
 import codeOrchestra.actionscript.view.utils.Languages;
 import codeOrchestra.actionscript.view.utils.SolutionUtils;
 import codeOrchestra.utils.StubSolutionUtils;
+import jetbrains.mps.ide.NewModuleCheckUtil;
 import jetbrains.mps.ide.common.PathField;
 import jetbrains.mps.ide.ui.filechoosers.treefilechooser.TreeFileChooser;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
@@ -376,6 +377,12 @@ public class ASNewLibraryFromGitHubDialogContentPane extends JPanel {
 
     String projectPath = FileUtil.getCanonicalPath(myThis.getProject().getProjectFile().getParentFile());
     String solutionDirPath = projectPath + File.separator + "modules" + File.separator + libraryName;
+
+    String message = NewModuleCheckUtil.checkModuleDirectory(new File(solutionDirPath), MPSExtentions.DOT_SOLUTION, "Module");
+    if (message != null) {
+      myThis.getDialog().setErrorText(message);
+      return;
+    }
 
     final String descriptorPath = solutionDirPath + File.separator + libraryName + MPSExtentions.DOT_SOLUTION;
 

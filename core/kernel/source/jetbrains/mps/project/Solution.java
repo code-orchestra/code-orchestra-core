@@ -15,7 +15,11 @@
  */
 package jetbrains.mps.project;
 
+import com.intellij.openapi.application.Application;
+import com.intellij.openapi.application.ApplicationManager;
+import com.intellij.openapi.application.impl.ApplicationImpl;
 import com.intellij.openapi.progress.EmptyProgressIndicator;
+import jetbrains.mps.ide.vfs.IdeaFile;
 import jetbrains.mps.library.ModulesMiner;
 import jetbrains.mps.library.ModulesMiner.ModuleHandle;
 import jetbrains.mps.logging.Logger;
@@ -32,6 +36,7 @@ import jetbrains.mps.smodel.descriptor.EditableSModelDescriptor;
 import jetbrains.mps.util.annotation.CodeOrchestraPatch;
 import jetbrains.mps.vfs.IFile;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -88,7 +93,7 @@ public class Solution extends AbstractModule {
   private static Solution createSolution(String namespace, IFile descriptorFile, MPSModuleOwner moduleOwner, ModelRoot defaultModelRoot, boolean stubSolution) {
     Solution solution = new Solution();
     SolutionDescriptor descriptor;
-    if (descriptorFile.exists()) {
+    if (new File(descriptorFile.getPath()).exists()) {
       descriptor = (SolutionDescriptor) ModulesMiner.getInstance().loadModuleDescriptor(descriptorFile);
       if (descriptor.getUUID() == null) {
         if (stubSolution) { // CO-4616

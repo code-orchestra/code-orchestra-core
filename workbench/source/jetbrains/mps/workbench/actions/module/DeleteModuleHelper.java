@@ -15,7 +15,7 @@
  */
 package jetbrains.mps.workbench.actions.module;
 
-import codeOrchestra.actionScript.scope.ActionScriptScopes;
+import codeOrchestra.actionscript.util.ReferenceTypeSwitcher;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.wm.WindowManager;
 import codeOrchestra.actionscript.view.ActionScriptViewPane;
@@ -23,18 +23,12 @@ import com.sun.jna.platform.FileUtils;
 import jetbrains.mps.ide.vfs.IdeaFile;
 import jetbrains.mps.logging.Logger;
 import jetbrains.mps.project.*;
-import jetbrains.mps.project.ModuleId.Foreign;
-import jetbrains.mps.project.structure.modules.Dependency;
-import jetbrains.mps.project.structure.modules.ModuleReference;
-import jetbrains.mps.smodel.MPSModuleRepository;
-import jetbrains.mps.smodel.SModelDescriptor;
-import jetbrains.mps.smodel.SModelRepository;
+import jetbrains.mps.smodel.*;
 import jetbrains.mps.util.annotation.CodeOrchestraPatch;
 
 import javax.swing.JOptionPane;
 import java.io.File;
 import java.io.IOException;
-import java.util.List;
 
 public class DeleteModuleHelper {
   private static final Logger LOG = Logger.getLogger(DeleteModuleHelper.class);
@@ -54,6 +48,9 @@ public class DeleteModuleHelper {
       JOptionPane.showMessageDialog(WindowManager.getInstance().getFrame(project), "Non-project modules can only be deleted with files deletion enabled", "Can't delete module", JOptionPane.WARNING_MESSAGE);
     }
 
+    // CO-4616
+    new ReferenceTypeSwitcher(project, module).makeAllReferencesForeign();
+
     if (deleteFiles) {
       ActionScriptViewPane actionScriptViewPane = ActionScriptViewPane.getInstance(project);
       boolean updateTreeOnModelDelete = actionScriptViewPane.isUpdateTreeOnModelDelete();
@@ -71,10 +68,6 @@ public class DeleteModuleHelper {
 
     //remove from project
     if (mpsProject.isProjectModule(module)) {
-
-      // CO-4616
-      convertRegularRefsToForeign(project, module);
-
       mpsProject.removeProjectModule(module, true);
       project.save();
     }
@@ -95,35 +88,6 @@ public class DeleteModuleHelper {
 
       ((IdeaFile) module.getDescriptorFile().getParent().getParent()).refresh();
     }
-  }
-
-  @CodeOrchestraPatch
-  private static void convertRegularRefsToForeign(Project project, IModule module) {
-    ModuleReference oldReference = module.getModuleReference();
-
-    if (oldReference.getModuleId() instanceof Foreign) {
-      return;
-    }
-
-    String moduleFqName = module.getModuleFqName();
-    ModuleReference newReference = new ModuleReference(moduleFqName, ModuleId.fromString(Foreign.PREFIX + moduleFqName));
-
-    Iterable<IModule> visibleModules = ActionScriptScopes.getActionScriptSolutionScope(project.getComponent(ProjectScope.class), false, module).getVisibleModules();
-
-    for (IModule visibleModule : visibleModules) {
-      List<Dependency> dependencies = visibleModule.getDependencies();
-      boolean changed = false;
-      for (Dependency dependency : dependencies) {
-        if (dependency.getModuleRef().equals(oldReference)) {
-          dependency.setModuleRef(newReference);
-          changed = true;
-        }
-      }
-      if (changed) {
-        visibleModule.save();
-      }
-    }
-
   }
 
   @CodeOrchestraPatch

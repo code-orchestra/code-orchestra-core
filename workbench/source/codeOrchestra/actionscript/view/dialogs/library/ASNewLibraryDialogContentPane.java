@@ -6,6 +6,7 @@ import com.intellij.openapi.progress.Progressive;
 import codeOrchestra.actionscript.stubs.SWCStubsRegistry;
 import codeOrchestra.actionscript.view.utils.Languages;
 import codeOrchestra.utils.StubSolutionUtils;
+import jetbrains.mps.ide.NewModuleCheckUtil;
 import jetbrains.mps.ide.common.PathField;
 import jetbrains.mps.ide.ui.filechoosers.treefilechooser.TreeFileChooser;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
@@ -231,6 +232,12 @@ public class ASNewLibraryDialogContentPane extends JPanel {
 
     String projectPath = FileUtil.getCanonicalPath(myThis.getProject().getProjectFile().getParentFile());
     String solutionDirPath = projectPath + File.separator + "modules" + File.separator + libName;
+
+    String message = NewModuleCheckUtil.checkModuleDirectory(new File(solutionDirPath), MPSExtentions.DOT_SOLUTION, "Module");
+    if (message != null) {
+      myThis.getDialog().setErrorText(message);
+      return;
+    }
 
     final String descriptorPath = solutionDirPath + File.separator + libName + MPSExtentions.DOT_SOLUTION;
 
