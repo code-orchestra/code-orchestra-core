@@ -8,17 +8,19 @@ import jetbrains.mps.util.NameUtil;
 /**
  * @author Anton.I.Neverov
  */
-public class ASForeignNodeIds {
+public final class ASForeignNodeIds {
+
+  private static final String AS_STRUCTURE = "codeOrchestra.actionScript.structure.";
 
   public static Foreign getMemberNodeId(SNode classifierMember, SNode parent, String memberName) {
     String memberFqName = parent.getName() + "_" + memberName;
-    if (SNodeOperations.isInstanceOf(classifierMember, "codeOrchestra.actionScript.structure.IStaticClassifierMember")) {
+    if (SNodeOperations.isInstanceOf(classifierMember, concept("IStaticClassifierMember"))) {
       memberFqName += "_s";
     }
 
-    if (SNodeOperations.isInstanceOf(classifierMember, "codeOrchestra.actionScript.structure.InstanceGetterDeclaration") || SNodeOperations.isInstanceOf(classifierMember, "codeOrchestra.actionScript.structure.StaticGetterDeclaration")) {
+    if (SNodeOperations.isInstanceOf(classifierMember, concept("InstanceGetterDeclaration")) || SNodeOperations.isInstanceOf(classifierMember, concept("StaticGetterDeclaration"))) {
       memberFqName += "_get";
-    } else if (SNodeOperations.isInstanceOf(classifierMember, "codeOrchestra.actionScript.structure.InstanceSetterDeclaration") || SNodeOperations.isInstanceOf(classifierMember, "codeOrchestra.actionScript.structure.StaticSetterDeclaration")) {
+    } else if (SNodeOperations.isInstanceOf(classifierMember, concept("InstanceSetterDeclaration")) || SNodeOperations.isInstanceOf(classifierMember, concept("StaticSetterDeclaration"))) {
       memberFqName += "_set";
     }
 
@@ -62,5 +64,29 @@ public class ASForeignNodeIds {
       "_s" :
       ""
     )));
+  }
+
+  public static Foreign getId(SNode node) {
+    if (node.isInstanceOfConcept(concept("NamespaceDeclaration"))) {
+      if (node.getParent().isInstanceOfConcept("TopLevelNamespace")) {
+        return getGlobalNSNodeId(node.getName());
+      }
+      return getNSNodeId(node.getName());
+    } else if (node.isInstanceOfConcept(concept("AnnotationInstance"))) {
+      return getAnnotationInstanceNodeId(node.getName());
+    } else if (node.isInstanceOfConcept(concept("AnnotationPropertyDeclaration"))) {
+      return getAnnotationPropertyNodeId(node.getName(), node.getParent().getName());
+    } else if (node.isInstanceOfConcept(concept("IRoot"))) {
+      return getId(node.getName());
+    } else if (node.isInstanceOfConcept(concept("IClassifierMember"))) {
+      // IClassifierMember's parent is always Classifier
+      return getMemberNodeId(node, node.getParent(), node.getName());
+    } else {
+      return getId(node.getName());
+    }
+  }
+
+  private static String concept(String name) {
+    return AS_STRUCTURE + name;
   }
 }

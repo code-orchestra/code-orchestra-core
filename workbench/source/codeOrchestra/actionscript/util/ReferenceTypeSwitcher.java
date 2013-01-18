@@ -16,6 +16,7 @@
 package codeOrchestra.actionscript.util;
 
 import codeOrchestra.actionScript.scope.ActionScriptScopes;
+import codeOrchestra.actionScript.stubs.ASForeignNodeIds;
 import com.intellij.openapi.project.Project;
 import jetbrains.mps.logging.Logger;
 import jetbrains.mps.project.IModule;
@@ -149,7 +150,7 @@ public class ReferenceTypeSwitcher {
                 LOG.warning("Skipped broken reference" + reference.getResolveInfo());
                 continue;
               }
-              SNodeId newId = SNodeId.fromString(SNodeId.Foreign.ID_PREFIX + targetNode.getName());
+              SNodeId newId = ASForeignNodeIds.getId(targetNode);
               reference.setTargetSModelReference(modelReferenceMap.get(targetSModelReference));
               ((StaticReference) reference).setTargetNodeId(newId);
             } else {
