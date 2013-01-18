@@ -243,6 +243,8 @@ public class ASNewLibraryDialogContentPane extends JPanel {
 
     myThis.getDialog().dispose();
 
+    SolutionUtils.refreshModuleFiles(descriptorPath);
+
     final List<SModelDescriptor> modelDescriptors = new ArrayList<SModelDescriptor>();
     ModelAccess.instance().runWriteActionWithProgressSynchronously(new Progressive() {
       public void run(ProgressIndicator indicator) {

@@ -388,6 +388,8 @@ public class ASNewLibraryFromGitHubDialogContentPane extends JPanel {
 
     myThis.getDialog().dispose();
 
+    SolutionUtils.refreshModuleFiles(descriptorPath);
+
     final List<SModelDescriptor> modelDescriptors = new ArrayList<SModelDescriptor>();
 
     execute(descriptorPath, modelDescriptors);

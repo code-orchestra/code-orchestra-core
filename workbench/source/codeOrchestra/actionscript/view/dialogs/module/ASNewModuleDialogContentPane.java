@@ -240,6 +240,8 @@ public class ASNewModuleDialogContentPane extends JPanel {
 
     myThis.getDialog().dispose();
 
+    SolutionUtils.refreshModuleFiles(descriptorPath);
+
     ModelAccess.instance().runWriteActionWithProgressSynchronously(new Progressive() {
       public void run(ProgressIndicator indicator) {
         indicator.setIndeterminate(true);

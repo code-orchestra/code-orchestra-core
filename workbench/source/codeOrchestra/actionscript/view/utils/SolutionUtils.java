@@ -1,10 +1,12 @@
 package codeOrchestra.actionscript.view.utils;
 
+import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.project.Project;
 import codeOrchestra.actionscript.liveCoding.LiveCodingManager;
 import codeOrchestra.actionscript.run.compiler.properties.CompilerSettings;
 import codeOrchestra.actionscript.run.compiler.properties.OutputType;
 import codeOrchestra.generator.CodeOrchestraGenerateManager;
+import jetbrains.mps.ide.vfs.IdeaFile;
 import jetbrains.mps.project.IModule;
 import jetbrains.mps.project.MPSProject;
 import jetbrains.mps.project.Solution;
@@ -16,6 +18,7 @@ import jetbrains.mps.project.structure.modules.ModuleReference;
 import jetbrains.mps.project.structure.modules.SolutionDescriptor;
 import jetbrains.mps.smodel.*;
 import jetbrains.mps.stubs.StubLocation;
+import jetbrains.mps.vfs.FileSystem;
 import jetbrains.mps.vfs.IFile;
 import org.apache.commons.lang.StringUtils;
 
@@ -382,6 +385,18 @@ public final class SolutionUtils {
     }
 
     return result;
+  }
+
+  public static void refreshModuleFiles(String path) {
+    final IFile iFile = FileSystem.getInstance().getFileByPath(path).getParent().getParent();
+    if (iFile instanceof IdeaFile) {
+      ApplicationManager.getApplication().runWriteAction(new Runnable() {
+        @Override
+        public void run() {
+          ((IdeaFile) iFile).refresh();
+        }
+      });
+    }
   }
 
 }

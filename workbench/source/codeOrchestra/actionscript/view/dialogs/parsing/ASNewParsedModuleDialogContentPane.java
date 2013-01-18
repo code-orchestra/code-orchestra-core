@@ -324,6 +324,8 @@ public class ASNewParsedModuleDialogContentPane extends JPanel {
 
     myThis.getDialog().dispose();
 
+    SolutionUtils.refreshModuleFiles(descriptorPath);
+
     // Create a solution
     final Object[] parsingResult = new Object[1];
     ModelAccess.instance().runWriteActionWithProgressSynchronously(new Progressive() {
