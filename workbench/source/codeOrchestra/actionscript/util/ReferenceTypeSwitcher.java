@@ -22,6 +22,7 @@ import jetbrains.mps.logging.Logger;
 import jetbrains.mps.project.IModule;
 import jetbrains.mps.project.ModuleId;
 import jetbrains.mps.project.ModuleId.Foreign;
+import jetbrains.mps.project.ModuleId.Regular;
 import jetbrains.mps.project.ProjectScope;
 import jetbrains.mps.project.structure.modules.Dependency;
 import jetbrains.mps.project.structure.modules.ModuleReference;
@@ -38,55 +39,84 @@ import java.util.Map;
 /**
  * @author Anton.I.Neverov
  */
-public class ReferenceTypeSwitcher {
+public abstract class ReferenceTypeSwitcher {
 
   private static final Logger LOG = Logger.getLogger(ReferenceTypeSwitcher.class);
+  private static final String ERROR_MESSAGE = "Methods of ReferenceTypeSwitcher should be called only once";
 
   private Project project;
   private IModule referencedModule;
   private List<IModule> affectedModules = new ArrayList<IModule>();
   private List<EditableSModelDescriptor> affectedModels = new ArrayList<EditableSModelDescriptor>();
-  private Map<SModelReference, SModelReference> modelReferenceMap = new HashMap<SModelReference, SModelReference>();
+
+  /*
+    In RegularToForeign this map contains regular -> foreign pairs
+    In ForeignToRegular it contains foreign -> regular
+   */
+  protected Map<SModelReference, SModelReference> modelReferenceMap = new HashMap<SModelReference, SModelReference>();
+
+  private boolean invoked = false;
 
   public ReferenceTypeSwitcher(Project project, IModule referencedModule) {
     this.project = project;
     this.referencedModule = referencedModule;
   }
 
-  public void makeAllReferencesForeign() {
-    makeModuleDependenciesForeign();
-    if (affectedModules.isEmpty()) {
-      return;
+  public void switchReferences() {
+    if (invoked) {
+      throw new RuntimeException(ERROR_MESSAGE);
     }
-    makeModelImportsForeign();
-    if (affectedModels.isEmpty()) {
-      save();
-      return;
+    invoked = true;
+
+    final boolean[] needToSave = new boolean[1];
+    needToSave[0] = false;
+
+    ModelAccess.instance().runReadAction(new Runnable() {
+      @Override
+      public void run() {
+        switchModuleDependencies();
+        if (affectedModules.isEmpty()) {
+          return;
+        }
+        switchModelImports();
+        if (affectedModels.isEmpty()) {
+          needToSave[0] = true;
+          return;
+        }
+        switchNodeReferences();
+        needToSave[0] = true;
+      }
+    });
+
+    if (needToSave[0]) {
+      ModelAccess.instance().runWriteAction(new Runnable() {
+        @Override
+        public void run() {
+          save();
+        }
+      });
     }
-    makeNodeReferencesForeign();
-    save();
   }
 
-  private void makeModuleDependenciesForeign() {
-    ModuleReference oldReference = referencedModule.getModuleReference();
+  private void switchModuleDependencies() {
+    ModuleReference regularReference = referencedModule.getModuleReference();
 
-    if (oldReference.getModuleId() instanceof Foreign) {
-      return;
-    }
+    if (!(regularReference.getModuleId() instanceof Regular)) return;
 
     String moduleFqName = referencedModule.getModuleFqName();
-    ModuleReference newReference = new ModuleReference(moduleFqName, ModuleId.fromString(Foreign.PREFIX + moduleFqName));
+    ModuleReference foreignReference = new ModuleReference(moduleFqName, ModuleId.fromString(Foreign.PREFIX + moduleFqName));
 
     Iterable<IModule> visibleModules = ActionScriptScopes.getActionScriptSolutionScope(project.getComponent(ProjectScope.class), false, referencedModule).getVisibleModules();
 
     for (IModule module : visibleModules) {
+      if (module == referencedModule) {
+        continue;
+      }
+
       List<Dependency> dependencies = module.getDependencies();
       boolean changed = false;
       for (Dependency dependency : dependencies) {
-        if (dependency.getModuleRef().equals(oldReference)) {
-          dependency.setModuleRef(newReference);
-          changed = true;
-        }
+        changed = processModuleDependency(regularReference, foreignReference, changed, dependency);
       }
       if (changed) {
         affectedModules.add(module);
@@ -94,14 +124,17 @@ public class ReferenceTypeSwitcher {
     }
   }
 
-  private void makeModelImportsForeign() {
-    for (SModelDescriptor importedDescriptor : SModelRepository.getInstance().getModelDescriptors(referencedModule)) {
-      SModelReference reference = importedDescriptor.getSModelReference();
-      if (reference.getSModelId() instanceof RegularSModelId) {
-        String longName = reference.getLongName();
+  protected abstract boolean processModuleDependency(ModuleReference regularReference, ModuleReference foreignReference, boolean changed, Dependency dependency);
+
+  private void switchModelImports() {
+    for (SModelDescriptor ownModelDescriptor : SModelRepository.getInstance().getModelDescriptors(referencedModule)) {
+      SModelReference regularModelRef = ownModelDescriptor.getSModelReference();
+      if (regularModelRef.getSModelId() instanceof RegularSModelId) {
+        String longName = regularModelRef.getLongName();
         SModelId foreignId = SModelId.foreign(SModelStereotype.SWC_STUB, longName);
         SModelFqName fqName = new SModelFqName(longName, SModelStereotype.SWC_STUB);
-        modelReferenceMap.put(reference, new SModelReference(fqName, foreignId));
+        SModelReference foreignModelRef = new SModelReference(fqName, foreignId);
+        putReferencesToMap(regularModelRef, foreignModelRef);
       }
     }
 
@@ -114,9 +147,9 @@ public class ReferenceTypeSwitcher {
 
         boolean changed = false;
         for (ImportElement importElement : descriptor.getSModel().importedModels()) {
-          for (SModelReference regularRef : modelReferenceMap.keySet()) {
-            if (importElement.getModelReference().equals(regularRef)) {
-              importElement.setModelReference(modelReferenceMap.get(regularRef));
+          for (SModelReference ref : modelReferenceMap.keySet()) {
+            if (importElement.getModelReference().equals(ref)) {
+              importElement.setModelReference(modelReferenceMap.get(ref));
               changed = true;
             }
           }
@@ -129,7 +162,9 @@ public class ReferenceTypeSwitcher {
     }
   }
 
-  private void makeNodeReferencesForeign() {
+  protected abstract void putReferencesToMap(SModelReference regularModelRef, SModelReference foreignModelRef);
+
+  private void switchNodeReferences() {
     for (EditableSModelDescriptor modelDescriptor : affectedModels) {
       SModel model = modelDescriptor.getSModel();
       for (SNode root : model.roots()) {
@@ -141,26 +176,20 @@ public class ReferenceTypeSwitcher {
           }
           for (SReference reference : references) {
             if (reference instanceof StaticReference) {
-              SModelReference targetSModelReference = reference.getTargetSModelReference();
-              if (!modelReferenceMap.containsKey(targetSModelReference)) {
+              if (!modelReferenceMap.containsKey(reference.getTargetSModelReference())) {
                 continue;
               }
-              SNode targetNode = reference.getTargetNodeSilently();
-              if (targetNode == null) {
-                LOG.warning("Skipped broken reference" + reference.getResolveInfo());
-                continue;
-              }
-              SNodeId newId = ASForeignNodeIds.getId(targetNode);
-              reference.setTargetSModelReference(modelReferenceMap.get(targetSModelReference));
-              ((StaticReference) reference).setTargetNodeId(newId);
+              processNodeReference(reference);
             } else {
-              LOG.warning("Skipped non-static reference" + reference.getResolveInfo());
+              LOG.warning("Skipped non-static reference " + reference.getResolveInfo());
             }
           }
         }
       }
     }
   }
+
+  protected abstract void processNodeReference(SReference reference);
 
   private void save() {
     for (IModule affectedModule : affectedModules) {
@@ -169,6 +198,75 @@ public class ReferenceTypeSwitcher {
     for (EditableSModelDescriptor affectedModel : affectedModels) {
       affectedModel.save();
       affectedModel.reloadFromDisk();
+    }
+  }
+
+  public static class RegularToForeign extends ReferenceTypeSwitcher {
+
+    public RegularToForeign(Project project, IModule referencedModule) {
+      super(project, referencedModule);
+    }
+
+    protected boolean processModuleDependency(ModuleReference regularReference, ModuleReference foreignReference, boolean changed, Dependency dependency) {
+      if (dependency.getModuleRef().equals(regularReference)) {
+        dependency.setModuleRef(foreignReference);
+        changed = true;
+      }
+      return changed;
+    }
+
+    protected void putReferencesToMap(SModelReference regularModelRef, SModelReference foreignModelRef) {
+      modelReferenceMap.put(regularModelRef, foreignModelRef);
+    }
+
+    protected void processNodeReference(SReference reference) {
+      SNode targetNode = reference.getTargetNodeSilently();
+      if (targetNode == null) {
+        LOG.warning("Skipped broken reference " + reference.getResolveInfo());
+        return;
+      }
+      SNodeId newId = ASForeignNodeIds.getId(targetNode);
+      reference.setTargetSModelReference(modelReferenceMap.get(reference.getTargetSModelReference()));
+      ((StaticReference) reference).setTargetNodeId(newId);
+    }
+  }
+
+  public static class ForeignToRegular extends ReferenceTypeSwitcher {
+
+    public ForeignToRegular(Project project, IModule referencedModule) {
+      super(project, referencedModule);
+    }
+
+    protected boolean processModuleDependency(ModuleReference regularReference, ModuleReference foreignReference, boolean changed, Dependency dependency) {
+      if (dependency.getModuleRef().equals(foreignReference)) {
+        IModule alreadyResolvedModule = MPSModuleRepository.getInstance().getModule(foreignReference);
+        if (alreadyResolvedModule == null) {
+          dependency.setModuleRef(regularReference);
+          changed = true;
+        }
+      }
+      return changed;
+    }
+
+    protected void putReferencesToMap(SModelReference regularModelRef, SModelReference foreignModelRef) {
+      modelReferenceMap.put(foreignModelRef, regularModelRef);
+    }
+
+    protected void processNodeReference(SReference reference) {
+      SNodeId targetNodeId = reference.getTargetNodeId();
+      if (!(targetNodeId instanceof SNodeId.Foreign)) {
+        LOG.warning("Non-foreign reference " + reference.getResolveInfo());
+        return;
+      }
+      SModelReference targetSModelReference = reference.getTargetSModelReference();
+      SNode targetNode = ASForeignNodeIds.findNode((SNodeId.Foreign) targetNodeId, modelReferenceMap.get(targetSModelReference));
+      if (targetNode == null) {
+        LOG.warning("Cannot resolve reference " + reference.getResolveInfo());
+        return;
+      }
+      SNodeId newId = targetNode.getSNodeId();
+      reference.setTargetSModelReference(modelReferenceMap.get(targetSModelReference));
+      ((StaticReference) reference).setTargetNodeId(newId);
     }
   }
 

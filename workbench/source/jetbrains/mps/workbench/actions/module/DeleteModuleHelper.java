@@ -16,6 +16,7 @@
 package jetbrains.mps.workbench.actions.module;
 
 import codeOrchestra.actionscript.util.ReferenceTypeSwitcher;
+import codeOrchestra.actionscript.util.ReferenceTypeSwitcher.RegularToForeign;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.wm.WindowManager;
 import codeOrchestra.actionscript.view.ActionScriptViewPane;
@@ -49,7 +50,7 @@ public class DeleteModuleHelper {
     }
 
     // CO-4616
-    new ReferenceTypeSwitcher(project, module).makeAllReferencesForeign();
+    new RegularToForeign(project, module).switchReferences();
 
     if (deleteFiles) {
       ActionScriptViewPane actionScriptViewPane = ActionScriptViewPane.getInstance(project);
