@@ -452,13 +452,22 @@ public class MessagesViewTool extends BaseProjectTool implements PersistentState
     if (myList.getSelectedIndices().length >= 1) {
       final Object[] messages = myList.getSelectedValues();
       boolean containsError = false;
+      // CO-5089
+      boolean hasMarkerMessages = false;
+      for (Object message : messages) {
+        if (((Message) message).getViewMarker() != null) {
+          hasMarkerMessages = true;
+          break;
+        }
+      }
       for (Object message : messages) {
         if (((Message) message).getKind() == MessageKind.ERROR) {
           containsError = true;
           break;
         }
       }
-      if (containsError) {
+      // CO-5089
+      if (containsError && !hasMarkerMessages) {
         group.addSeparator();
         group.add(new BaseAction(messages.length > 1 ? "Submit as One Issue" : "Submit to Issue Tracker") {
           protected boolean isEnabledInASView() {
