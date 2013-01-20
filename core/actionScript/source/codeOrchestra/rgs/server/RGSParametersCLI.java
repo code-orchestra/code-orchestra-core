@@ -18,6 +18,8 @@ public final class RGSParametersCLI {
   public static final String RGS_GENERATOR_STRICT_MODE = "rgs.generator.strict.mode";
   public static final String RGS_GENERATOR_PARALLEL_MODE = "rgs.generator.parallel";
 
+  public static final String RGS_FLEX_SDK_PATH = "rgs.flexsdk.path";
+
   private static final String SSHD_SERVER_KEY = "rgs.server.sshd.port";
 
   public static final String RGS_HEADLESS = "rgs.headless";
@@ -34,6 +36,10 @@ public final class RGSParametersCLI {
   public static final boolean DEFAULT_GENERATE_PARALLEL = false;
 
   private RGSParametersCLI() {
+  }
+
+  public static String getOverridingFlexSDKPath() {
+    return System.getProperty(RGS_FLEX_SDK_PATH);
   }
 
   public static boolean isHeadless() {

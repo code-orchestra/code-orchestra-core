@@ -1,5 +1,6 @@
 package codeOrchestra.actionscript.modulemaker.view;
 
+import codeOrchestra.rgs.server.RGSParametersCLI;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.project.ProjectManager;
 import codeOrchestra.actionScript.compiler.fcsh.FCSHManager;
@@ -149,6 +150,13 @@ public class FlexSDKSettings implements PersistentStateComponent<FlexSDKSettings
 
   public String getFlexSDKPath() {
     String flexSDKPath = getState().getFlexSDKPath();
+
+    if (RGSParametersCLI.isInServerMode()) {
+      String overridingFlexSDKPath = RGSParametersCLI.getOverridingFlexSDKPath();
+      if (!StringUtils.isEmpty(overridingFlexSDKPath)) {
+        flexSDKPath = overridingFlexSDKPath;
+      }
+    }
 
     if (StringUtils.isEmpty(flexSDKPath)) {
       return PathManager.getHomePath() + File.separator + DEFAULT_FLEX_SDK_DIR;
