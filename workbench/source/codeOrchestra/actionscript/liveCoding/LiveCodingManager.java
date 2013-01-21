@@ -318,7 +318,7 @@ public class LiveCodingManager extends AbstractProjectComponent implements Proje
     startSession(new LiveCodingSessionImpl(sessionId, lastLiveModuleReference, System.currentTimeMillis(), socketWriter, getLastLiveCodingConfiguration()));
   }
 
-  public synchronized LiveCodingSession getCurrentSession() {
+  public LiveCodingSession getCurrentSession() {
     return this.currentSession;
   }
 
