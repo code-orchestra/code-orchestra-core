@@ -1,22 +1,22 @@
 package codeOrchestra.flex.processors.excludedNode;
 
 import codeOrchestra.flex.processors.SNodeProcessorException;
-import codeOrchestra.flex.tree.EmptyStatementNode;
+import codeOrchestra.flex.tree.EmptyFieldNode;
 import jetbrains.mps.smodel.SNode;
 import org.apache.flex.compiler.tree.as.IASNode;
 
 /**
  * @author Anton.I.Neverov
  */
-public class StatementProcessor extends ExcludedNodeProcessor {
+public class StaticFieldEmptyLineProcessor extends ExcludedNodeProcessor {
 
-  public StatementProcessor(SNode node) {
+  public StaticFieldEmptyLineProcessor(SNode node) {
     super(node);
   }
 
   @Override
   protected IASNode createNode() throws SNodeProcessorException {
-    return new EmptyStatementNode();
+    return new EmptyFieldNode(null);
   }
 
 }

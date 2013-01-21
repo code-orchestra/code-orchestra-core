@@ -85,7 +85,7 @@ public abstract class SNodeProcessor {
     }
   }
 
-  protected String getNameByReference(SNode node, String referenceName) throws SNodeProcessorException {
+  protected SNode getNodeByReference(SNode node, String referenceName) throws SNodeProcessorException {
     SReference reference = node.getReference(referenceName);
     if (reference == null) {
       throw new SNodeProcessorException();
@@ -94,11 +94,20 @@ public abstract class SNodeProcessor {
     if (targetNode == null) {
       throw new SNodeProcessorException();
     }
-    String targetNodeName = targetNode.getName();
-    if (targetNodeName == null) {
-      throw new SNodeProcessorException();
+    return targetNode;
+  }
+
+  protected String getNameByReference(SNode node, String referenceName) throws SNodeProcessorException {
+    try {
+      SNode targetNode = getNodeByReference(node, referenceName);
+      String targetNodeName = targetNode.getName();
+      if (targetNodeName == null) {
+        throw new SNodeProcessorException();
+      }
+      return targetNodeName;
+    } catch (SNodeProcessorException e) {
+      return node.getResolveInfo();
     }
-    return targetNodeName;
   }
 
   protected List<NodeBase> processStatementList(SNode node) throws SNodeProcessorException {
@@ -112,6 +121,8 @@ public abstract class SNodeProcessor {
             throw new SNodeProcessorException();
           }
           result.addAll(processStatementList(statementList));
+        } else if (nodeIsInstanceOfConcept(statement, Concept.StatementList)) {
+          result.addAll(processStatementList(statement));
         } else {
           result.add(processChild(statement, NodeBase.class));
         }

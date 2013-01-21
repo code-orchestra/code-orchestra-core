@@ -12,7 +12,6 @@ public class ActualArgumentInfoProcessor extends ExcludedNodeProcessor {
 
   public ActualArgumentInfoProcessor(SNode node) {
     super(node);
-    childOrPropertyName = "expression";
   }
 
   @Override

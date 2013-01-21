@@ -95,8 +95,12 @@ public enum Concept {
   ActualArgumentInfo("ActualArgumentInfo", ActualArgumentInfoProcessor.class),
   CommentedStatement("CommentedStatement", CommentedStatementProcessor.class),
   CommentedStatementsBlock("CommentedStatementsBlock", CommentedStatementsBlockProcessor.class),
+  FieldEmptyLine("FieldEmptyLine", FieldEmptyLineProcessor.class),
+  MethodEmptyLine("MethodEmptyLine", MethodEmptyLineProcessor.class),
   RemarkStatement("RemarkStatement", RemarkStatementProcessor.class),
   Statement("Statement", StatementProcessor.class),
+  StaticFieldEmptyLine("StaticFieldEmptyLine", StaticFieldEmptyLineProcessor.class),
+  StaticMethodEmptyLine("StaticMethodEmptyLine", StaticMethodEmptyLineProcessor.class),
 
   // For Statements
   ForStatement("ForStatement", ForStatementProcessor.class),
@@ -168,6 +172,7 @@ public enum Concept {
   AnnotationInstance("AnnotationInstance", AnnotationInstanceProcessor.class),
   BlockStatement("BlockStatement", BlockStatementProcessor.class),
   CatchClause("CatchClause", CatchClauseProcessor.class),
+  ClassExpressionInternal("ClassExpressionInternal", ClassExpressionInternalProcessor.class),
   ConfigStatement("ConfigStatement", ConfigStatementProcessor.class),
   ConfigVariableExpression("ConfigVariableExpression", ConfigVariableExpressionProcessor.class),
   ExpressionList("ExpressionList", ExpressionListProcessor.class),

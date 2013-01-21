@@ -4,6 +4,7 @@ import codeOrchestra.flex.processors.Concept;
 import codeOrchestra.flex.processors.SNodeProcessor;
 import codeOrchestra.flex.processors.SNodeProcessorException;
 import jetbrains.mps.smodel.SNode;
+import jetbrains.mps.smodel.SReference;
 import org.apache.flex.compiler.internal.tree.as.metadata.*;
 import org.apache.flex.compiler.tree.as.IASNode;
 
@@ -35,15 +36,52 @@ public class AnnotationInstanceProcessor extends SNodeProcessor {
       }
       String key = getNameByReference(child, "key");
       SNode expression = child.getChild("value");
-      if (!nodeIsInstanceOfConcept(expression, Concept.StringLiteral)) { // TODO: something better?
-        throw new SNodeProcessorException();
-      }
-      String value = expression.getProperty("value");
+      String value = processAnnotationPropertyValue(expression);
       values.put(key, value);
     } else {
       return false;
     }
     return true;
+  }
+
+  private String processAnnotationPropertyValue(SNode expression) throws SNodeProcessorException {
+    String value;
+    if (isLiteral(expression)) {
+        value = expression.getProperty("value");
+    } else if (nodeIsInstanceOfConcept(expression, Concept.ClassExpression)) {
+      SNode targetNode = getNodeByReference(expression, "reference");
+      String className = targetNode.getName();
+      if (className == null) {
+        throw new SNodeProcessorException();
+      }
+      String modelName = targetNode.getModel().getLongName();
+      if (modelName.isEmpty()) {
+        value = className;
+      } else {
+        value = modelName + "." + className;
+      }
+    } else if (nodeIsInstanceOfConcept(expression, Concept.DotExpression)) {
+      SNode operation = expression.getChild("operation");
+      if (operation == null) {
+        throw new SNodeProcessorException();
+      }
+      if (!nodeIsInstanceOfConcept(operation, Concept.StaticFieldReferenceOperation)) {
+        throw new SNodeProcessorException();
+      }
+      SNode initializer = getNodeByReference(operation, "reference").getChild("initializer");
+      if (!isLiteral(initializer)) {
+        throw new SNodeProcessorException();
+      }
+      value = initializer.getProperty("value");
+    } else {
+      throw new SNodeProcessorException();
+    }
+    return value;
+  }
+
+  private boolean isLiteral(SNode expression) {
+    return nodeIsInstanceOfConcept(expression, Concept.StringLiteral) ||
+      nodeIsInstanceOfConcept(expression, Concept.BooleanConstant);
   }
 
   @Override

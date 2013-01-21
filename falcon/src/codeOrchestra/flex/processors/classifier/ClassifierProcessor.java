@@ -2,6 +2,7 @@ package codeOrchestra.flex.processors.classifier;
 
 import codeOrchestra.flex.processors.SNodeProcessor;
 import codeOrchestra.flex.processors.SNodeProcessorException;
+import codeOrchestra.flex.tree.EmptyMethodNode;
 import jetbrains.mps.smodel.SNode;
 import org.apache.flex.compiler.internal.tree.as.ExpressionNodeBase;
 import org.apache.flex.compiler.internal.tree.as.FunctionNode;
@@ -64,7 +65,11 @@ public abstract class ClassifierProcessor extends SNodeProcessor {
     } else if (childRole.equals(interfaceChildName)) {
       interfaceNodes.add(processChild(child, ExpressionNodeBase.class));
     } else if (childRole.equals("method")) {
-      methods.add(processChild(child, FunctionNode.class));
+      FunctionNode functionNode = processChild(child, FunctionNode.class);
+      if (!(functionNode instanceof EmptyMethodNode))
+      {
+        methods.add(functionNode);
+      }
     } else if (childRole.equals("annotation")) {
       annotations.add(processChild(child, MetaTagNode.class));
     } else if (childRole.equals("outOfPackageNode") || childRole.equals("outOfPackageButton")) {

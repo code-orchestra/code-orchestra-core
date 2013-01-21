@@ -2,7 +2,9 @@ package codeOrchestra.flex.processors.classifier;
 
 import codeOrchestra.flex.processors.Concept;
 import codeOrchestra.flex.processors.SNodeProcessorException;
+import codeOrchestra.flex.tree.EmptyFieldNode;
 import codeOrchestra.flex.tree.EmptyIdentifierNode;
+import codeOrchestra.flex.tree.EmptyMethodNode;
 import jetbrains.mps.smodel.SNode;
 import org.apache.flex.compiler.internal.tree.as.*;
 import org.apache.flex.compiler.tree.as.IContainerNode.ContainerType;
@@ -20,6 +22,7 @@ public class ClassConceptProcessor extends ClassifierProcessor {
   private List<VariableNode> fields = new ArrayList<VariableNode>();
   private List<NodeBase> initializerStatements;
   private boolean isDynamic = false;
+  private boolean isFinal = false;
 
   public ClassConceptProcessor(SNode node) {
     super(node);
@@ -31,6 +34,8 @@ public class ClassConceptProcessor extends ClassifierProcessor {
     if (!super.handleProperty(name, value)) {
       if (name.equals("isDynamic")) {
         isDynamic = value.equals("true");
+      } else if (name.equals("isFinal")) {
+        isFinal = value.equals("true");
       } else {
         return false;
       }
@@ -53,9 +58,17 @@ public class ClassConceptProcessor extends ClassifierProcessor {
         }
         constructorNode = processChild(child, FunctionNode.class);
       } else if (childRole.equals("staticMethod")) {
-        methods.add(processChild(child, FunctionNode.class));
+        FunctionNode functionNode = processChild(child, FunctionNode.class);
+        if (!(functionNode instanceof EmptyMethodNode))
+        {
+          methods.add(functionNode);
+        }
       } else if (childRole.equals("field") || childRole.equals("staticField")) {
-        fields.add(processChild(child, VariableNode.class));
+        VariableNode variableNode = processChild(child, VariableNode.class);
+        if (!(variableNode instanceof EmptyFieldNode))
+        {
+          fields.add(variableNode);
+        }
       } else if (childRole.equals("initializer")) {
         if (initializerStatements != null) {
           throw new SNodeProcessorException();
@@ -83,6 +96,9 @@ public class ClassConceptProcessor extends ClassifierProcessor {
     clazz.setNamespace(namespaceNode);
     if (isDynamic) {
       clazz.addModifier(new ModifierNode("dynamic"));
+    }
+    if (isFinal) {
+      clazz.addModifier(new ModifierNode("final"));
     }
     if (baseClassNode != null && !(baseClassNode instanceof EmptyIdentifierNode)) {
       clazz.setBaseClass(baseClassNode);
