@@ -37,8 +37,9 @@ public class DeleteModules_Action extends GeneratedAction {
   }
 
   @Override
+  @CodeOrchestraPatch
   protected boolean isEnabledInASView() {
-    return true;
+    return false; // CO-5051
   }
 
   public boolean isApplicable(AnActionEvent event, final Map<String, Object> _params) {
