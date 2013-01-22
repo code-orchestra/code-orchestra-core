@@ -1,5 +1,6 @@
 package codeOrchestra.rgs.server;
 
+import codeOrchestra.actionscript.liveCoding.settings.LiveCodingSettings;
 import codeOrchestra.actionscript.modulemaker.view.FlexSDKSettings;
 import codeOrchestra.rgs.state.model.*;
 import com.intellij.ide.impl.ProjectUtil;
@@ -291,6 +292,7 @@ public class RGSServerImpl implements IRemoteGenerationService, Serializable {
   @Override
   public void setGenerationSettings(RemoteGenerationSettings generationSettings) throws RemoteException {
     FlexSDKSettings.getInstance().setCompilerKind(generationSettings.getCompilerKind());
+    LiveCodingSettings.getInstance().setCompilerKind(generationSettings.getLiveCodingCompilerKind());
   }
 
   @Override

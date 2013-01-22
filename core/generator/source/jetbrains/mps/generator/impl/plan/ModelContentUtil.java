@@ -16,6 +16,7 @@
 package jetbrains.mps.generator.impl.plan;
 
 import codeOrchestra.actionscript.liveCoding.LiveCodingManager;
+import codeOrchestra.actionscript.liveCoding.settings.LiveCodingSettings;
 import codeOrchestra.actionscript.modulemaker.CompilerKind;
 import codeOrchestra.actionscript.modulemaker.view.FlexSDKSettings;
 import codeOrchestra.actionscript.run.compiler.properties.OutputType;
@@ -78,7 +79,15 @@ public class ModelContentUtil {
 
     // CO-4812
     try {
-      if (FlexSDKSettings.getInstance().getCompilerKind() == CompilerKind.FALCON) {
+      // CO-5098
+      CompilerKind compilerKind;
+      if (LiveCodingManager.instance().getCurrentSession() == null) {
+        compilerKind = FlexSDKSettings.getInstance().getCompilerKind();
+      } else {
+        compilerKind = LiveCodingSettings.getInstance().getCompilerKind();
+      }
+
+      if (compilerKind == CompilerKind.FALCON) {
         namespaces.add(Languages.FALCON);
       }
     } catch (Throwable t) {
