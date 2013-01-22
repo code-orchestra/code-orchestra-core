@@ -1,5 +1,6 @@
 package codeOrchestra.rgs.client;
 
+import codeOrchestra.actionscript.liveCoding.settings.LiveCodingSettings;
 import codeOrchestra.actionscript.modulemaker.view.FlexSDKSettings;
 import codeOrchestra.rgs.state.model.*;
 import com.intellij.openapi.project.Project;
@@ -237,6 +238,7 @@ public abstract class AbstractRGSClient implements RGSServiceClient, ProjectInfo
     try {
       RemoteGenerationSettings remoteGenerationSettings = new RemoteGenerationSettings();
       remoteGenerationSettings.setCompilerKind(FlexSDKSettings.getInstance().getCompilerKind());
+      remoteGenerationSettings.setLiveCodingCompilerKind(LiveCodingSettings.getInstance().getCompilerKind());
 
       remoteGenerationService.setGenerationSettings(remoteGenerationSettings);
     } catch (RemoteException e) {

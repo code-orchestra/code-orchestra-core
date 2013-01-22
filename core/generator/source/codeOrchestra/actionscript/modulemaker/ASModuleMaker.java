@@ -1,5 +1,6 @@
 package codeOrchestra.actionscript.modulemaker;
 
+import codeOrchestra.actionscript.liveCoding.settings.LiveCodingSettings;
 import com.intellij.openapi.progress.ProgressIndicator;
 import com.intellij.openapi.project.Project;
 import codeOrchestra.actionScript.compiler.fcsh.FCSHException;
@@ -152,7 +153,12 @@ public class ASModuleMaker {
     OutputType outputType = codeOrchestraGenerateManager.getContextAwareOutputType(module);
 
     // Choose the right compiler & compile
-    CompilerKind compilerKind = FlexSDKSettings.getInstance().getCompilerKind();
+    CompilerKind compilerKind;
+    if (liveCodingSession == null) {
+      compilerKind = FlexSDKSettings.getInstance().getCompilerKind();
+    } else {
+      compilerKind = LiveCodingSettings.getInstance().getCompilerKind();
+    }
 
     // Get the flex SDK runner (compc, mxmlc, fcsh, etc)
     AbstractFlexSDKRunner flexSDKProcessRunner = getFlexSDKRunner(project, compilerSettings, moduleMakeType, configFile, outputType, compilerKind, solution);

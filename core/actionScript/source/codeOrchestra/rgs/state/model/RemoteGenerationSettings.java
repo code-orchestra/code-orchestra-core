@@ -10,6 +10,15 @@ import java.io.Serializable;
 public class RemoteGenerationSettings implements Serializable {
 
   private CompilerKind compilerKind;
+  private CompilerKind liveCodingCompilerKind;
+
+  public CompilerKind getLiveCodingCompilerKind() {
+    return liveCodingCompilerKind;
+  }
+
+  public void setLiveCodingCompilerKind(CompilerKind liveCodingCompilerKind) {
+    this.liveCodingCompilerKind = liveCodingCompilerKind;
+  }
 
   public CompilerKind getCompilerKind() {
     return compilerKind;
