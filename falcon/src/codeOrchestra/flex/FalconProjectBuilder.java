@@ -83,10 +83,6 @@ public class FalconProjectBuilder {
   }
 
   public void finishBuildSession() {
-    if (!sessionStarted) {
-      throw new RuntimeException("Trying to finish build session before starting it");
-    }
-
     newModels.clear();
     myCompilationUnits.clear();
     workspace = null;
