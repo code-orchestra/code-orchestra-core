@@ -1,5 +1,8 @@
 package codeOrchestra.generator;
 
+import codeOrchestra.actionscript.modulemaker.CompilerKind;
+import codeOrchestra.actionscript.modulemaker.view.FlexSDKSettings;
+import codeOrchestra.actionscript.run.compiler.properties.CompilerSettings;
 import com.intellij.openapi.progress.ProgressIndicator;
 import com.intellij.openapi.progress.ProgressManager;
 import com.intellij.openapi.progress.Task;
@@ -169,6 +172,18 @@ public final class CodeOrchestraGenerationUtil {
 
   public static boolean generateModuleWithDependencies(@Nullable IOperationContext operationContext, final Project project, boolean rebuildAll, final IModule rootModule, @Nullable IRemoteGenerationCallback remoteGenerationCallback, BuildProvider buildProvider) {
     OutputType rootModuleOutputType = CodeOrchestraGenerateManager.getOwnOutputType(rootModule.getModuleReference());
+
+    if (rootModule instanceof Solution) { // Definitely so
+      CompilerKind currentCompiler = FlexSDKSettings.getInstance().getCompilerKind();
+      CompilerSettings compilerSettings = ((Solution) rootModule).getModuleDescriptor().getCompilerSettings();
+
+      if ((compilerSettings.previousCompiler == null && currentCompiler == CompilerKind.FALCON) ||
+        (compilerSettings.previousCompiler != null && compilerSettings.previousCompiler != currentCompiler)) {
+        rebuildAll = true;
+      }
+
+      compilerSettings.previousCompiler = currentCompiler;
+    }
 
     // Clean the root module first
     if (rootModule instanceof Solution && rebuildAll) {

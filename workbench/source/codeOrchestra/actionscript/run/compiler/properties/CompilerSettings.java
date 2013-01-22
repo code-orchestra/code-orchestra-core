@@ -1,6 +1,7 @@
 package codeOrchestra.actionscript.run.compiler.properties;
 
 import codeOrchestra.actionScript.flexsdk.FlexSDKLibsManager;
+import codeOrchestra.actionscript.modulemaker.CompilerKind;
 import codeOrchestra.actionscript.view.utils.SolutionUtils;
 import codeOrchestra.javaScript.generator.JSOptimizationKind;
 import jetbrains.mps.project.structure.model.ModelRoot;
@@ -38,6 +39,7 @@ public class CompilerSettings {
   public static final String MAIN_CLASS_MODEL_UID = "mainClassModelUID";
 
   public transient boolean isSWC;
+  public transient CompilerKind previousCompiler = null;
 
   private Map<JSOptimizationKind, Boolean> jsParameters = new HashMap<JSOptimizationKind, Boolean>();
   {
