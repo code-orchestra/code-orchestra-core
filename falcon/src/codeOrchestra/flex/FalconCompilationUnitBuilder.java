@@ -29,6 +29,17 @@ public class FalconCompilationUnitBuilder {
 
   private static FalconCompilationUnitBuilder instance = new FalconCompilationUnitBuilder();
 
+  private static String[] skippedImports = new String[] {
+    "flash.metadata",
+    "#assets#-Project_assets",
+    "codeOrchestra.actionScript.util",
+    "codeOrchestra.actionscript.liveCoding",
+    "codeOrchestra.actionScript.collections.structure",
+    "java.lang",
+    "jetbrains.mps.baseLanguage.blTypes.primitiveDescriptors",
+    "codeOrchestra.actionScript.mixins.util"
+  };
+
   private FalconCompilationUnitBuilder() {
 
   }
@@ -124,7 +135,7 @@ public class FalconCompilationUnitBuilder {
     }
 
     // Imports
-    for (ImportElement importElement : myModel.importedModels()) {
+    importLoop: for (ImportElement importElement : myModel.importedModels()) {
       SModelReference modelReference = importElement.getModelReference();
       SModelDescriptor modelDescriptor = SModelRepository.getInstance().getModelDescriptor(modelReference);
       if (modelDescriptor == null) {
@@ -136,13 +147,10 @@ public class FalconCompilationUnitBuilder {
         // Do not add default package import
         continue;
       }
-      if ("flash.metadata".equals(importedModelName)) {
-        // Do not add flash.metadata.* import
-        continue;
-      }
-      if ("#assets#-Project_assets".equals(importedModelName)) {
-        // Do not add assets import
-        continue;
+      for (String skippedImport : skippedImports) {
+        if (skippedImport.equals(importedModelName)) {
+          continue importLoop;
+        }
       }
       ExpressionNodeBase importedPackageName = buildImportName(importedModelName);
 
@@ -150,6 +158,13 @@ public class FalconCompilationUnitBuilder {
         packageScopedBlockNode.addItem(new ImportNode(importedPackageName));
       }
     }
+
+    // LiveCoding imports
+    packageScopedBlockNode.addItem(new ImportNode(buildImportName("codeOrchestra.actionScript.liveCoding.util")));
+    packageScopedBlockNode.addItem(new ImportNode(buildImportName("codeOrchestra.actionScript.collections.util")));
+
+    fileNode.addItem(new ImportNode(buildImportName("codeOrchestra.actionScript.liveCoding.util")));
+    fileNode.addItem(new ImportNode(buildImportName("codeOrchestra.actionScript.collections.util")));
 
     // Add root
     packageScopedBlockNode.addChild(rootNode);

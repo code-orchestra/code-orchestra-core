@@ -217,6 +217,7 @@ public enum Concept {
   ForInBinding_VariableReference("ForInBinding_VariableReference", ForInBinding_VariableReferenceProcessor.class),
   ForInitialiser_Expression("ForInitialiser_Expression", ForInitialiser_ExpressionProcessor.class),
   OperationExpression("OperationExpression", OperationExpressionProcessor.class),
+  OperationExpressionSurroundWrapper("OperationExpressionSurroundWrapper", OperationExpressionSurroundWrapperProcessor.class),
   ParenthesizedExpression("ParenthesizedExpression", ParenthesizedExpressionProcessor.class),
   TopLevelConstant("TopLevelConstant", TopLevelConstantProcessor.class),
   TopLevelNamespace("TopLevelNamespace", TopLevelNamespaceProcessor.class),

@@ -90,7 +90,7 @@ public abstract class SNodeProcessor {
     if (reference == null) {
       throw new SNodeProcessorException();
     }
-    SNode targetNode = reference.getTargetNode();
+    SNode targetNode = reference.getTargetNodeSilently();
     if (targetNode == null) {
       throw new SNodeProcessorException();
     }
@@ -106,7 +106,7 @@ public abstract class SNodeProcessor {
       }
       return targetNodeName;
     } catch (SNodeProcessorException e) {
-      return node.getResolveInfo();
+      return node.getReference(referenceName).getResolveInfo();
     }
   }
 
