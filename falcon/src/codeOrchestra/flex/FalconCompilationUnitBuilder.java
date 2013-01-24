@@ -162,9 +162,13 @@ public class FalconCompilationUnitBuilder {
     // LiveCoding imports
     packageScopedBlockNode.addItem(new ImportNode(buildImportName("codeOrchestra.actionScript.liveCoding.util")));
     packageScopedBlockNode.addItem(new ImportNode(buildImportName("codeOrchestra.actionScript.collections.util")));
+    packageScopedBlockNode.addItem(new ImportNode(buildImportName("codeOrchestra.actionScript.enums.util")));
+    packageScopedBlockNode.addItem(new ImportNode(buildImportName("codeOrchestra.actionScript.logging.logUtil")));
 
     fileNode.addItem(new ImportNode(buildImportName("codeOrchestra.actionScript.liveCoding.util")));
     fileNode.addItem(new ImportNode(buildImportName("codeOrchestra.actionScript.collections.util")));
+    fileNode.addItem(new ImportNode(buildImportName("codeOrchestra.actionScript.enums.util")));
+    fileNode.addItem(new ImportNode(buildImportName("codeOrchestra.actionScript.logging.logUtil")));
 
     // Add root
     packageScopedBlockNode.addChild(rootNode);
