@@ -23,6 +23,7 @@ import org.apache.commons.vfs2.provider.sftp.SftpFileSystemConfigBuilder;
 import org.jetbrains.annotations.Nullable;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -78,7 +79,7 @@ public class SSHDClientImpl implements ISSHDClient {
 
   private boolean isConnectionError(FileSystemException e) {
     String message = e.getMessage();
-    if (message != null && message.contains("Could not connect")) {
+    if (message != null && (message.contains("Could not connect") || message.contains("Could not write"))) {
       return true;
     }
 
@@ -89,6 +90,10 @@ public class SSHDClientImpl implements ISSHDClient {
 
     if (cause instanceof FileSystemException) {
       return isConnectionError((FileSystemException) cause);
+    }
+
+    if (cause instanceof IOException) {
+
     }
 
     return false;
