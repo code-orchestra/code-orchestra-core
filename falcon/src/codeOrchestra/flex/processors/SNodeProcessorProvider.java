@@ -17,6 +17,9 @@ public class SNodeProcessorProvider {
     for (Concept c : Concept.values()) {
       myConcepts.put(c.getName(), c);
     }
+
+    // CO-5080 - Hack
+    myConcepts.put("codeOrchestra.actionScript.closures.structure.ClosureParameterDeclaration", Concept.ParameterDeclaration);
   }
 
   public static SNodeProcessorProvider getInstance() {
