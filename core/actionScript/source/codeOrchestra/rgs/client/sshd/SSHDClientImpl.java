@@ -92,10 +92,6 @@ public class SSHDClientImpl implements ISSHDClient {
       return isConnectionError((FileSystemException) cause);
     }
 
-    if (cause instanceof IOException) {
-
-    }
-
     return false;
   }
 
