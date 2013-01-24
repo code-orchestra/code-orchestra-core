@@ -59,9 +59,9 @@ public abstract class AbstractRGSClient implements RGSServiceClient, ProjectInfo
     return rgsClientSettings.isLocal() && !BuildUtil.isDeveloperBuild() && !InternalFlag.isInternalMode();
   }
 
-  protected void tryStartLocalRGS() {
+  protected void tryStartLocalRGS(boolean async) {
     if (startLocalRGS()) {
-      new Thread() {
+      Runnable runnable = new Runnable() {
         @Override
         public void run() {
           try { Thread.sleep(1500); } catch (InterruptedException e1) {}
@@ -79,8 +79,18 @@ public abstract class AbstractRGSClient implements RGSServiceClient, ProjectInfo
 
           new RemoteProjectLoadFacade(project).loadTheProject();
         }
-      }.start();
+      };
+
+      if (async) {
+        new Thread(runnable, "Local RGS restart thread").start();
+      } else {
+        runnable.run();
+      }
     }
+  }
+
+  protected void tryStartLocalRGS() {
+    tryStartLocalRGS(true);
   }
 
   private boolean startLocalRGS() {
@@ -138,6 +148,11 @@ public abstract class AbstractRGSClient implements RGSServiceClient, ProjectInfo
         if (rgsFileSyncException.isConnectionError()) {
           if (isRetry) {
             throw e;
+          }
+
+          // RF-1236 - Check if the RGS is alive
+          if (!isConnected()) {
+            tryStartLocalRGS(false);
           }
 
           try {
