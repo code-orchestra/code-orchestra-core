@@ -1,5 +1,6 @@
 package codeOrchestra.actionscript.run.compiler;
 
+import codeOrchestra.actionScript.assets.AssetsManager;
 import codeOrchestra.actionscript.view.ASPackageTreeNode;
 import codeOrchestra.actionscript.view.utils.SolutionUtils;
 import jetbrains.mps.project.Solution;
@@ -42,6 +43,9 @@ public class ExcludePackagesTableModel extends AbstractTableModel {
     SolutionUtils.fetchDependencies(solution, dependenciesMap);
     for (Solution dependencySolution : dependenciesMap.keySet()) {
       if (SolutionUtils.isStubSolution(dependencySolution)) {
+        continue;
+      }
+      if (AssetsManager.getInstance().isAssetsModule(dependencySolution)) {
         continue;
       }
       Boolean isExcludedDependency = dependenciesMap.get(dependencySolution);

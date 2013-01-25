@@ -1,11 +1,12 @@
 package codeOrchestra.actionScript.assets;
 
+import codeOrchestra.actionscript.view.utils.ViewUtils;
+import codeOrchestra.utils.ProjectHolder;
 import com.intellij.openapi.components.AbstractProjectComponent;
 import com.intellij.openapi.components.ProjectComponent;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.util.Computable;
 import com.intellij.openapi.vfs.VirtualFile;
-import codeOrchestra.actionscript.view.utils.ViewUtils;
 import jetbrains.mps.ide.projectPane.IProjectPane;
 import jetbrains.mps.project.IModule;
 import jetbrains.mps.project.MPSProject;
@@ -28,6 +29,10 @@ import java.util.*;
  * @author Alexander Eliseyev
  */
 public final class AssetsManager extends AbstractProjectComponent implements ProjectComponent {
+
+  public static AssetsManager getInstance() {
+    return ProjectHolder.getProject().getComponent(AssetsManager.class);
+  }
 
   private static final String FILE_ASSET_CONCEPT = "codeOrchestra.projectAssets.structure.FileAsset";
   private static final String PATH_PROPERTY_NAME = "path";
@@ -53,7 +58,7 @@ public final class AssetsManager extends AbstractProjectComponent implements Pro
   }
 
   public  void reloadProjectAssetsStubs() {
-    // 1 � Mark the asset model as requiring a reload
+    // 1 - Mark the asset model as requiring a reload
     SModelReference sModelReference = createProjectAssetModelReference(myProject);
     if (sModelReference != null) {
       SModelDescriptor descriptor = SModelRepository.getInstance().getModelDescriptor(sModelReference);
@@ -62,10 +67,10 @@ public final class AssetsManager extends AbstractProjectComponent implements Pro
       }
     }
 
-    // 2 � Reload the stubs
+    // 2 - Reload the stubs
     StubReloadManager.getInstance().reload();
 
-    // 3 � Refresh the view
+    // 3 - Refresh the view
     IProjectPane currentPane = ViewUtils.getCurrentPane(myProject);
     if (currentPane != null) {
       currentPane.rebuild();
@@ -199,6 +204,10 @@ public final class AssetsManager extends AbstractProjectComponent implements Pro
   public static ModuleReference createProjectAssetsModuleReference(String projectName) {
     ModuleId moduleId = ModuleId.fromString(getProjectAssetsUUID(projectName).toString());
     return new ModuleReference(projectName, moduleId);
+  }
+
+  public boolean isAssetsModule(Solution solution) {
+    return solution.equals(assetsSolution);
   }
 
   // --- Internal static stuff
