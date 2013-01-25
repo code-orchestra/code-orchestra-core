@@ -231,10 +231,16 @@ public class FlexConfigBuilder {
 
     // Include classes (SWC)
     if (outputType == OutputType.FLEX_LIBRARY) {
+      List<String> excludedPackages = compilerSettings.getExcludedPackages();
       for (SModelDescriptor sModelDescriptor : compiledModule.getOwnModelDescriptors()) {
         for (SNode root : sModelDescriptor.getSModel().roots()) {
           String fqName = null;
           String namespace = sModelDescriptor.getLongName();
+
+          if (excludedPackages.contains(namespace)) {
+            continue;
+          }
+
           if (StringUtils.isEmpty(namespace)) {
             fqName = root.getName();
           } else {

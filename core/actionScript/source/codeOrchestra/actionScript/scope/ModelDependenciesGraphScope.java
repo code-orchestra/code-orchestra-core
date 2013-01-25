@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * @author: Alexander Eliseyev
+ * @author Alexander Eliseyev
  */
 public class ModelDependenciesGraphScope implements IScope {
 
