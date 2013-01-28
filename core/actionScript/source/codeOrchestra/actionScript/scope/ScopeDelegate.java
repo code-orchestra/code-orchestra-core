@@ -1,12 +1,9 @@
 package codeOrchestra.actionScript.scope;
 
 import jetbrains.mps.project.DevKit;
-import jetbrains.mps.project.GlobalScope;
 import jetbrains.mps.project.IModule;
 import jetbrains.mps.project.structure.modules.ModuleReference;
 import jetbrains.mps.smodel.*;
-
-import java.util.List;
 
 /**
  * @author Alexander Eliseyev
@@ -16,47 +13,47 @@ abstract class ScopeDelegate implements IScope {
   protected abstract IScope getDelegatedScope();
 
   public SModelDescriptor getModelDescriptor(SModelFqName fqName) {
-    return GlobalScope.getInstance().getModelDescriptor(fqName);
+    return getDelegatedScope().getModelDescriptor(fqName);
   }
 
   public Language getLanguage(String fqName) {
-    return GlobalScope.getInstance().getLanguage(fqName);
+    return getDelegatedScope().getLanguage(fqName);
   }
 
   public Iterable<SModelDescriptor> getOwnModelDescriptors() {
-    return GlobalScope.getInstance().getOwnModelDescriptors();
+    return getDelegatedScope().getOwnModelDescriptors();
   }
 
   public Language getLanguage(ModuleReference moduleReference) {
-    return GlobalScope.getInstance().getLanguage(moduleReference);
+    return getDelegatedScope().getLanguage(moduleReference);
+  }
+
+  public Iterable<SModelDescriptor> getModelDescriptors() {
+    return getDelegatedScope().getModelDescriptors();
   }
 
   public DevKit getDevKit(ModuleReference ref) {
-    return GlobalScope.getInstance().getDevKit(ref);
+    return getDelegatedScope().getDevKit(ref);
   }
 
-  public List<Language> getVisibleLanguages() {
-    return GlobalScope.getInstance().getVisibleLanguages();
+  public Iterable<Language> getVisibleLanguages() {
+    return getDelegatedScope().getVisibleLanguages();
   }
 
-  public List<DevKit> getVisibleDevkits() {
-    return GlobalScope.getInstance().getVisibleDevkits();
+  public Iterable<DevKit> getVisibleDevkits() {
+    return getDelegatedScope().getVisibleDevkits();
   }
 
   public Iterable<IModule> getVisibleModules() {
-    return GlobalScope.getInstance().getVisibleModules();
+    return getDelegatedScope().getVisibleModules();
   }
 
   public SModelDescriptor getModelDescriptor(SModelReference modelReference) {
-    return GlobalScope.getInstance().getModelDescriptor(modelReference);
-  }
-
-  public List<SModelDescriptor> getModelDescriptors() {
-    return GlobalScope.getInstance().getModelDescriptors();
+    return getDelegatedScope().getModelDescriptor(modelReference);
   }
 
   @Override
   public String toString() {
-    return getClass().getSimpleName();
+    return getClass().getSimpleName() + " wrapping " + getDelegatedScope();
   }
 }
