@@ -54,7 +54,10 @@ abstract class ActionScriptLanguageScope extends ActionScriptScope {
 
   @Override
   public List<Language> getVisibleLanguages() {
-    List<Language> visibleLanguages = new ArrayList<Language>(super.getVisibleLanguages());
+    List<Language> visibleLanguages = new ArrayList<Language>();
+    for (Language language : super.getVisibleLanguages()) {
+      visibleLanguages.add(language);
+    }
 
     // Filter out non-AS languages
     Iterator<Language> visibleLanguageIterator = visibleLanguages.iterator();
@@ -69,7 +72,10 @@ abstract class ActionScriptLanguageScope extends ActionScriptScope {
 
   @Override
   public List<DevKit> getVisibleDevkits() {
-    List<DevKit> visibleDevkits = new ArrayList<DevKit>(super.getVisibleDevkits());
+    List<DevKit> visibleDevkits = new ArrayList<DevKit>();
+    for (DevKit devKit : super.getVisibleDevkits()) {
+      visibleDevkits.add(devKit);
+    }
 
     // Filter out non-AS devkits
     Iterator<DevKit> visibleDevKitIterator = visibleDevkits.iterator();
