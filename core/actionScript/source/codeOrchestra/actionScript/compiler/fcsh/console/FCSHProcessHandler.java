@@ -1,5 +1,6 @@
 package codeOrchestra.actionScript.compiler.fcsh.console;
 
+import codeOrchestra.utils.ExceptionUtils;
 import com.intellij.execution.process.*;
 import com.intellij.execution.ui.ConsoleView;
 import com.intellij.execution.ui.ConsoleViewContentType;
@@ -59,14 +60,20 @@ public class FCSHProcessHandler extends OSProcessHandler {
     }
   }
 
-  public void inputWithFlush(String s) {
+  public boolean inputWithFlush(String s) {
     try {
       getProcessInputWriter().append(s);
       getProcessInputWriter().flush();
 
       this.myConsoleView.print("> " + s, ConsoleViewContentType.NORMAL_OUTPUT);
+      return true;
     } catch (IOException ex) {
-      LOG.error(ex);
+      if (ExceptionUtils.isBrokenPipe(ex)) {
+        return false;
+      } else {
+        LOG.error(ex);
+        return true;
+      }
     }
   }
 

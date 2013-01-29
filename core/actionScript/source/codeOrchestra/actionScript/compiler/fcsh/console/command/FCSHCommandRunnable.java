@@ -39,7 +39,14 @@ public class FCSHCommandRunnable implements Runnable  {
         };
 
         fcshProcessHandler.addProcessListener(processListener);
-        fcshProcessHandler.inputWithFlush(commandCallback.getCommand() + '\n');
+
+        // RF-1246
+        if (!fcshProcessHandler.inputWithFlush(commandCallback.getCommand() + '\n')) {
+          // FCSH was down, got to restart
+          fcshManager.restart();
+          fcshManager.submitCommand(commandCallback);
+          return;
+        }
 
         int timeout = COMMAND_EXECUTE_TIMEOUT;
         while (true) {
