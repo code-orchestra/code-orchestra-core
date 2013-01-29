@@ -26,6 +26,7 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 
+import codeOrchestra.flex.MethodBodySemanticCheckerFactory;
 import org.apache.flex.abc.ABCConstants;
 import org.apache.flex.abc.instructionlist.InstructionList;
 import org.apache.flex.abc.semantics.ClassInfo;
@@ -274,11 +275,11 @@ class ClassDirectiveProcessor extends DirectiveProcessor
         // Set the superclass Name.
         this.superclassName = superclassDefinition.getMName(project);
         iinfo.superName = superclassName;
-        
+
         // Resolve the interfaces.
         IInterfaceDefinition[] interfaces = classDefinition.resolveImplementedInterfaces(
             project, classScope.getProblems());
-        
+
         // Set the interface Names.
         int n_interfaces = interfaces.length;
         ArrayList<Name> interface_names = new ArrayList<Name>(n_interfaces);
@@ -894,9 +895,9 @@ class ClassDirectiveProcessor extends DirectiveProcessor
         Collection<ICompilerProblem> problems = constantValue != null ? constantValue.getProblems() : null;
         if (problems != null)
             classScope.addProblems(problems);
-        
-        final MethodBodySemanticChecker checker = new MethodBodySemanticChecker(this.classScope);
-        
+
+        final MethodBodySemanticChecker checker = MethodBodySemanticCheckerFactory.getChecker(this.classScope); // CO-5148
+
         DefinitionBase varType = (DefinitionBase)varDef.resolveType(project);
         
         Object transformed_initializer = null;

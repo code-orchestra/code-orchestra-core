@@ -211,7 +211,7 @@ public class FalconProjectBuilder {
     }
 
     LiveCodingSession currentSession = LiveCodingManager.instance().getCurrentSession();
-    if (currentSession != null) {
+    if (currentSession != null && !skipSemanticCheck()) {
       IModule rootModule = MPSModuleRepository.getInstance().getModule(currentSession.getRootModuleReference());
       Solution solution = (Solution) rootModule;
       for (Map<String, SNode> rootMap : solutionToRootsMap.get(solution).values()) {
@@ -385,6 +385,10 @@ public class FalconProjectBuilder {
 
   public boolean isSessionStarted() {
     return sessionStarted;
+  }
+
+  public boolean skipSemanticCheck() {
+    return LiveCodingManager.instance().getCurrentSession() != null; // && state of a checkbox in settings?
   }
 
 }

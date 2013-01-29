@@ -26,6 +26,7 @@ import java.util.LinkedList;
 import java.util.Map;
 import java.util.Set;
 
+import codeOrchestra.flex.MethodBodySemanticCheckerFactory;
 import jetbrains.mps.util.annotation.CodeOrchestraPatch;
 import org.apache.flex.abc.ABCEmitter;
 import org.apache.flex.abc.diagnostics.AbstractDiagnosticVisitor;
@@ -259,7 +260,7 @@ public class GlobalLexicalScope extends LexicalScope
         this.encodedDebugFiles = encodedDebugFiles;
         this.initInstructions = new InstructionList();
 
-        super.methodBodySemanticChecker = new MethodBodySemanticChecker(this);
+        super.methodBodySemanticChecker = MethodBodySemanticCheckerFactory.getChecker(this); // CO-5148
 
         if ( emitter != USE_DEFAULT_EMITTER )
             this.emitter = emitter;

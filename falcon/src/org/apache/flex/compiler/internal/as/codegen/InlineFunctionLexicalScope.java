@@ -28,6 +28,7 @@ import static org.apache.flex.abc.ABCConstants.OP_finddef;
 import static org.apache.flex.abc.ABCConstants.OP_getproperty;
 import static org.apache.flex.abc.ABCConstants.OP_getlocal0;
 
+import codeOrchestra.flex.MethodBodySemanticCheckerFactory;
 import org.apache.flex.abc.instructionlist.InstructionList;
 import org.apache.flex.abc.semantics.Instruction;
 import org.apache.flex.abc.semantics.InstructionFactory;
@@ -91,7 +92,7 @@ public class InlineFunctionLexicalScope extends LexicalScope
         // set the problems and methodBodySemanticChecker, so we don't create
         // any problems when trying to inline a function
         this.problems = new ArrayList<ICompilerProblem>();
-        this.methodBodySemanticChecker = new MethodBodySemanticChecker(this);
+        this.methodBodySemanticChecker = MethodBodySemanticCheckerFactory.getChecker(this); // CO-5148
 
         // these members should be initialized from the containing scope, as they'll be merged back
         // if the inline is successful

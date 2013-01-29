@@ -33,6 +33,9 @@ import java.util.Map;
 import java.util.Set;
 import java.util.Vector;
 
+import codeOrchestra.flex.FakeMethodBodySemanticChecker;
+import codeOrchestra.flex.FalconProjectBuilder;
+import codeOrchestra.flex.MethodBodySemanticCheckerFactory;
 import jetbrains.mps.util.annotation.CodeOrchestraPatch;
 import org.apache.flex.abc.ABCConstants;
 import org.apache.flex.abc.instructionlist.InstructionList;
@@ -807,7 +810,7 @@ public class LexicalScope
 
         //  Setting a MethodInfo means we're generating a method body,
         //  so we need a fresh MethodBodySemanticChecker.
-        this.methodBodySemanticChecker = new MethodBodySemanticChecker(this);
+        this.methodBodySemanticChecker = MethodBodySemanticCheckerFactory.getChecker(this); // CO-5148
     }
 
     /**
