@@ -512,6 +512,9 @@ public final class CodeOrchestraGenerationUtil {
         }
       }
 
+      // CO-5044 - Check if the rebuild is required based on the last generation settings
+      rebuildAll |= LastBuild.isSufficientlyDifferentFrom(codeOrchestraGenerationContext);
+
       // The actual generation
       long generationStart = System.currentTimeMillis();
       try {
@@ -562,7 +565,11 @@ public final class CodeOrchestraGenerationUtil {
 
     if (codeOrchestraModuleGeneration && codeOrchestraGenerationContext != null) {
       BuildBroadcaster.getInstance().fireBuildEvent(codeOrchestraGenerationContext, generationOK, buildProvider);
+
+      // CO-5044
+      LastBuild.memorize(codeOrchestraGenerationContext);
     }
+
     // Report the remote generation result
     if (RGSParametersCLI.isInServerMode() && remoteGenerationCallback != null) {
       try {
