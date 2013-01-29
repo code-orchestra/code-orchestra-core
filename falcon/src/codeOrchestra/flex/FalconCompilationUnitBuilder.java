@@ -18,9 +18,7 @@ import org.apache.flex.compiler.tree.as.IASNode;
 import org.apache.flex.compiler.tree.as.IContainerNode.ContainerType;
 import org.apache.flex.utils.FilenameNormalization;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 /**
  * @author Anton.I.Neverov
@@ -30,6 +28,7 @@ public class FalconCompilationUnitBuilder {
   private static FalconCompilationUnitBuilder instance = new FalconCompilationUnitBuilder();
 
   private static String[] skippedImports = new String[] {
+    "",
     "flash.metadata",
     "#assets#-Project_assets",
     "codeOrchestra.actionScript.util",
@@ -135,40 +134,24 @@ public class FalconCompilationUnitBuilder {
     }
 
     // Imports
-    importLoop: for (ImportElement importElement : myModel.importedModels()) {
+    Set<String> importNames = new HashSet<String>();
+    for (ImportElement importElement : myModel.importedModels()) {
       SModelReference modelReference = importElement.getModelReference();
-      SModelDescriptor modelDescriptor = SModelRepository.getInstance().getModelDescriptor(modelReference);
-      if (modelDescriptor == null) {
-        throw new RuntimeException("Can't get model from repository: " + modelReference.toString());
-      }
-
-      String importedModelName = modelDescriptor.getLongName();
-      if (importedModelName.isEmpty()) {
-        // Do not add default package import
-        continue;
-      }
-      for (String skippedImport : skippedImports) {
-        if (skippedImport.equals(importedModelName)) {
-          continue importLoop;
-        }
-      }
-      ExpressionNodeBase importedPackageName = buildImportName(importedModelName);
-
-      if (importedPackageName != null) { // TODO: What are we checking here?
-        packageScopedBlockNode.addItem(new ImportNode(importedPackageName));
+      importNames.add(modelReference.getLongName());
+    }
+    for (ImportElement importElement : root.getModel().importedModels()) {
+      SModelReference modelReference = importElement.getModelReference();
+      importNames.add(modelReference.getLongName());
+    }
+    for (String skippedImport : skippedImports) {
+      if (importNames.contains(skippedImport)) {
+        importNames.remove(skippedImport);
       }
     }
-
-    // LiveCoding imports
-    packageScopedBlockNode.addItem(new ImportNode(buildImportName("codeOrchestra.actionScript.liveCoding.util")));
-    packageScopedBlockNode.addItem(new ImportNode(buildImportName("codeOrchestra.actionScript.collections.util")));
-    packageScopedBlockNode.addItem(new ImportNode(buildImportName("codeOrchestra.actionScript.enums.util")));
-    packageScopedBlockNode.addItem(new ImportNode(buildImportName("codeOrchestra.actionScript.logging.logUtil")));
-
-    fileNode.addItem(new ImportNode(buildImportName("codeOrchestra.actionScript.liveCoding.util")));
-    fileNode.addItem(new ImportNode(buildImportName("codeOrchestra.actionScript.collections.util")));
-    fileNode.addItem(new ImportNode(buildImportName("codeOrchestra.actionScript.enums.util")));
-    fileNode.addItem(new ImportNode(buildImportName("codeOrchestra.actionScript.logging.logUtil")));
+    for (String importName : importNames) {
+      packageScopedBlockNode.addItem(new ImportNode(buildImportName(importName)));
+      fileNode.addItem(new ImportNode(buildImportName(importName)));
+    }
 
     // Add root
     packageScopedBlockNode.addChild(rootNode);

@@ -1,13 +1,15 @@
 package codeOrchestra.flex;
 
-import com.google.common.collect.Lists;
+import codeOrchestra.actionscript.liveCoding.LiveCodingManager;
+import codeOrchestra.actionscript.liveCoding.LiveCodingSession;
 import com.intellij.openapi.util.Computable;
 import codeOrchestra.actionscript.modulemaker.messages.CompilerMessage;
 import codeOrchestra.actionscript.modulemaker.messages.MessageType;
 import codeOrchestra.flex.processors.Concept;
-import jetbrains.mps.generator.TransientSModel;
 import jetbrains.mps.ide.smodel.WorkbenchModelAccess;
+import jetbrains.mps.project.IModule;
 import jetbrains.mps.project.Solution;
+import jetbrains.mps.smodel.MPSModuleRepository;
 import jetbrains.mps.smodel.SModel;
 import jetbrains.mps.smodel.SNode;
 import org.apache.flex.compiler.config.ConfigurationPathResolver;
@@ -203,19 +205,31 @@ public class FalconProjectBuilder {
       }
     }
 
+    ArrayList<SNode> rootsToProcess = new ArrayList<SNode>();
     for (Map<String, SNode> rootMap : modelMap.values()) {
-      for (SNode root : rootMap.values()) {
-        try {
-          if (!(root.getConceptFqName().equals(Concept.AnnotationDeclaration.getName()))) {
-            ASCompilationUnit asCompilationUnit = FalconCompilationUnitBuilder.getInstance().buildCompilationUnit(root, project);
-            myCompilationUnits.add(asCompilationUnit);
-            if (newRoots.contains(root)) {
-              abcCache.remove(asCompilationUnit.getFileNode());
-            }
+      rootsToProcess.addAll(rootMap.values());
+    }
+
+    LiveCodingSession currentSession = LiveCodingManager.instance().getCurrentSession();
+    if (currentSession != null) {
+      IModule rootModule = MPSModuleRepository.getInstance().getModule(currentSession.getRootModuleReference());
+      Solution solution = (Solution) rootModule;
+      for (Map<String, SNode> rootMap : solutionToRootsMap.get(solution).values()) {
+        rootsToProcess.addAll(rootMap.values());
+      }
+    }
+
+    for (SNode root : rootsToProcess) {
+      try {
+        if (!(root.getConceptFqName().equals(Concept.AnnotationDeclaration.getName()))) {
+          ASCompilationUnit asCompilationUnit = FalconCompilationUnitBuilder.getInstance().buildCompilationUnit(root, project);
+          myCompilationUnits.add(asCompilationUnit);
+          if (newRoots.contains(root)) {
+            abcCache.remove(asCompilationUnit.getFileNode());
           }
-        } catch (FalconCompilationUnitBuilderException e) {
-          throw new RuntimeException("Error while adding roots to falcon project", e);
         }
+      } catch (FalconCompilationUnitBuilderException e) {
+        throw new RuntimeException("Error while adding roots to falcon project", e);
       }
     }
   }
