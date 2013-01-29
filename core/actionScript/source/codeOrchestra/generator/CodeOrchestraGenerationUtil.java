@@ -513,7 +513,7 @@ public final class CodeOrchestraGenerationUtil {
       }
 
       // CO-5044 - Check if the rebuild is required based on the last generation settings
-      rebuildAll |= LastBuild.isSufficientlyDifferentFrom(codeOrchestraGenerationContext);
+      rebuildAll |= BuildReport.isSufficientlyDifferentFrom(codeOrchestraGenerationContext);
 
       // The actual generation
       long generationStart = System.currentTimeMillis();
@@ -567,7 +567,7 @@ public final class CodeOrchestraGenerationUtil {
       BuildBroadcaster.getInstance().fireBuildEvent(codeOrchestraGenerationContext, generationOK, buildProvider);
 
       // CO-5044
-      LastBuild.memorize(codeOrchestraGenerationContext);
+      BuildReport.memorize(codeOrchestraGenerationContext);
     }
 
     // Report the remote generation result

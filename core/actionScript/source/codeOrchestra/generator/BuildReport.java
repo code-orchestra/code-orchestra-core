@@ -17,7 +17,7 @@ import java.io.File;
 /**
  * @author Alexander Eliseyev
  */
-public class LastBuild {
+public class BuildReport {
 
   public static final String LAST_BUILD_XML = "lastBuild.xml";
 
@@ -25,14 +25,14 @@ public class LastBuild {
   public static final String LAST_BUILD_ELEMENT = "lastBuild";
 
   public static boolean isSufficientlyDifferentFrom(CodeOrchestraGenerationContext generationContext) {
-    LastBuild lastBuild = load(MPSModuleRepository.getInstance().getSolution(generationContext.getRootModule()));
-    LastBuild newBuild = fromContext(generationContext);
+    BuildReport lastBuild = load(MPSModuleRepository.getInstance().getSolution(generationContext.getRootModule()));
+    BuildReport newBuild = fromContext(generationContext);
 
     return !lastBuild.equals(newBuild);
   }
 
   public static void memorize(CodeOrchestraGenerationContext generationContext) {
-    LastBuild buildReport = fromContext(generationContext);
+    BuildReport buildReport = fromContext(generationContext);
     buildReport.persist();
   }
 
@@ -41,7 +41,7 @@ public class LastBuild {
   private String mainClassNodeId;
   private String mainClassModelUID;
 
-  public LastBuild(Solution module) {
+  public BuildReport(Solution module) {
     this.module = module;
   }
 
@@ -73,7 +73,7 @@ public class LastBuild {
     if (this == o) return true;
     if (o == null || getClass() != o.getClass()) return false;
 
-    LastBuild lastBuild = (LastBuild) o;
+    BuildReport lastBuild = (BuildReport) o;
 
     if (mainClassModelUID != null ? !mainClassModelUID.equals(lastBuild.mainClassModelUID) : lastBuild.mainClassModelUID != null)
       return false;
@@ -90,19 +90,19 @@ public class LastBuild {
     return result;
   }
 
-  private static LastBuild fromContext(CodeOrchestraGenerationContext generationContext) {
+  private static BuildReport fromContext(CodeOrchestraGenerationContext generationContext) {
     Solution solution = MPSModuleRepository.getInstance().getSolution(generationContext.getRootModule());
     CompilerSettings compilerSettings = solution.getModuleDescriptor().getCompilerSettings();
 
-    LastBuild buildReport = new LastBuild(solution);
+    BuildReport buildReport = new BuildReport(solution);
 
     buildReport.mainClassNodeId = compilerSettings.mainClassNodeId;
     buildReport.mainClassModelUID = compilerSettings.mainClassModelUID;
     return buildReport;
   }
 
-  private static LastBuild load(Solution solution) {
-    LastBuild lastBuild = new LastBuild(solution);
+  private static BuildReport load(Solution solution) {
+    BuildReport lastBuild = new BuildReport(solution);
 
     IFile cachesDir = FileGenerationUtil.getCachesDir(FileSystem.getInstance().getFileByPath(solution.getGeneratorOutputPath()));
     File reportFile = new File(cachesDir.getPath(), LAST_BUILD_XML);
