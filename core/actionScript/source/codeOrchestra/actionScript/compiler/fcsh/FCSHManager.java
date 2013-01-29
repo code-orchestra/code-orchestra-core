@@ -39,6 +39,11 @@ public class FCSHManager implements ProjectComponent {
     this.project = project;
   }
 
+  public void restart() throws FCSHException {
+    destroyProcess();
+    assureFCSHIsActive();
+  }
+
   public void destroyProcess() {
     try {
       if (fcshProcessHandler != null && !fcshProcessHandler.isProcessTerminated()) {
@@ -91,7 +96,7 @@ public class FCSHManager implements ProjectComponent {
     this.compilerTargets.clear();
   }
 
-  private void submitCommand(CommandCallback commandCallback) throws FCSHException {
+  public void submitCommand(CommandCallback commandCallback) throws FCSHException {
     FCSHCommandRunnable fcshCommandRunnable = new FCSHCommandRunnable(this, commandCallback);
     if (commandCallback.isSynchronous()) {
       fcshCommandRunnable.run();
