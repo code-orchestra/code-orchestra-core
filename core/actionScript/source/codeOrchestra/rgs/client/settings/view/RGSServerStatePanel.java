@@ -75,7 +75,7 @@ public class RGSServerStatePanel extends JDialog implements StateRefreshable {
       @Override
       public void actionPerformed(ActionEvent actionEvent) {
         try {
-          ApplicationRGSClient.getInstance().init();
+          ApplicationRGSClient.getInstance().initAndTryToRestart();
         } catch (RGSException e) {
           ApplicationRGSClient.getInstance().reportRGSError("Unable to init the RGS connection", e, "RGS Connection");
         }
