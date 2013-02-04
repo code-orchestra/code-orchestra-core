@@ -25,6 +25,10 @@ public class BuildReport {
   public static final String LAST_BUILD_ELEMENT = "lastBuild";
 
   public static boolean isSufficientlyDifferentFrom(CodeOrchestraGenerationContext generationContext) {
+    if (generationContext == null) {
+      return false;
+    }
+
     BuildReport lastBuild = load(MPSModuleRepository.getInstance().getSolution(generationContext.getRootModule()));
     BuildReport newBuild = fromContext(generationContext);
 
