@@ -6,6 +6,8 @@ import jetbrains.mps.plugins.pluginparts.actions.GeneratedAction;
 import javax.swing.Icon;
 import jetbrains.mps.logging.Logger;
 import com.intellij.openapi.actionSystem.AnActionEvent;
+
+import java.lang.Object;
 import java.util.Map;
 import com.intellij.openapi.actionSystem.ActionGroup;
 import jetbrains.mps.workbench.action.BaseGroup;
@@ -68,6 +70,14 @@ public class ShowGenerationIntentions_Action extends GeneratedAction {
     if (MapSequence.fromMap(_params).get("editorContext") == null) {
       return false;
     }
+
+    // RF-1258
+    EditorContext editorContext = (EditorContext) MapSequence.fromMap(_params).get("editorContext");
+    EditorCell selectedCell = editorContext.getSelectedCell();
+    if (selectedCell == null) {
+      return false;
+    }
+
     return true;
   }
 
