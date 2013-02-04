@@ -21,10 +21,12 @@ import jetbrains.mps.generator.runtime.TemplateMappingPriorityRule;
 import jetbrains.mps.generator.runtime.TemplateModel;
 import jetbrains.mps.generator.runtime.TemplateModule;
 import jetbrains.mps.logging.Logger;
+import jetbrains.mps.project.IModule;
 import jetbrains.mps.project.structure.modules.mappingpriorities.MappingPriorityRule;
 import jetbrains.mps.smodel.IScope;
 import jetbrains.mps.smodel.Language;
 import jetbrains.mps.smodel.SModel;
+import jetbrains.mps.smodel.SModelDescriptor;
 import jetbrains.mps.util.Pair;
 import org.jetbrains.annotations.NotNull;
 
@@ -57,6 +59,19 @@ public class GenerationPlan {
 //      }
 
       GenerationPartitioner partitioner = new GenerationPartitioner(myGenerators);
+
+      // CO-4941
+      SModelDescriptor modelDescriptor = inputModel.getModelDescriptor();
+      if (modelDescriptor != null) {
+        IModule module = modelDescriptor.getModule();
+        if (module != null && module instanceof Language) {
+          Language generatedLanguage = (Language) module;
+          if (!generatedLanguage.getAccessoryModels().contains(modelDescriptor)) {
+            partitioner.setLanguageAspectGenerated(true);
+          }
+        }
+      }
+
       myPlan = partitioner.createMappingSets();
       if (myPlan.isEmpty()) {
         myPlan.add(new ArrayList<TemplateMappingConfiguration>());

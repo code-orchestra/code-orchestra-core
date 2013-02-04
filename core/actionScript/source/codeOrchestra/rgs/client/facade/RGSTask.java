@@ -102,6 +102,14 @@ public abstract class RGSTask extends Backgroundable {
         System.out.println(internalTitle + " took " + timeTook + "ms");
       }
     } catch (RGSException e) {
+      // TODO: check whether the RGS must be restarted (locally)
+      if (e.getCause() != null) {
+        Throwable cause = e.getCause();
+
+        // if (cause instanceof RemoteException)
+      }
+
+
       onFail(e);
     }
   }

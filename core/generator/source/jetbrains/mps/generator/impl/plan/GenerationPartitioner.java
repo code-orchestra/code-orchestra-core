@@ -52,6 +52,9 @@ public class GenerationPartitioner {
   private Set<TemplateMappingPriorityRule> myConflictingRules;
 
   @CodeOrchestraPatch
+  private boolean myLanguageAspectGenerated;
+
+  @CodeOrchestraPatch
   public GenerationPartitioner(Collection<TemplateModule> generators) {
     myGenerators = generators;
     myPriorityMap = new HashMap<TemplateMappingConfiguration, Map<TemplateMappingConfiguration, PriorityData>>();
@@ -121,7 +124,9 @@ public class GenerationPartitioner {
 
     // CO-4941
     if (rule.getType() == RuleType.ABSOLUTE_FIRST) {
-      myAbsoluteFirstMappings.add(new AbsoluteFirstSetData(new HashSet<TemplateMappingConfiguration>(hiPrio)));
+      if (!myLanguageAspectGenerated) {
+        myAbsoluteFirstMappings.add(new AbsoluteFirstSetData(new HashSet<TemplateMappingConfiguration>(hiPrio)));
+      }
     } else if (rule.getType() == RuleType.STRICTLY_TOGETHER) {
       Set<TemplateMappingConfiguration> coherentMappings = new HashSet<TemplateMappingConfiguration>(loPrio);
       coherentMappings.addAll(hiPrio);
@@ -227,6 +232,10 @@ public class GenerationPartitioner {
     return myConflictingRules;
   }
 
+  @CodeOrchestraPatch
+  public void setLanguageAspectGenerated(boolean languageAspectGenerated) {
+    myLanguageAspectGenerated = languageAspectGenerated;
+  }
 
   static class PriorityData {
     boolean myStrict;
