@@ -65,6 +65,7 @@ public class ModuleDescriptorPersistence {
     }).toListSequence();
   }
 
+  @CodeOrchestraPatch
   public static void saveDependencies(Element result, ModuleDescriptor descriptor) {
     Element result_dxyzb6_a0a2 = result;
     if (!(descriptor.getDependencies().isEmpty())) {
@@ -77,7 +78,7 @@ public class ModuleDescriptorPersistence {
       final Element result_dxyzb6_a0a2a0a2 = new Element("usedLanguages");
       for (ModuleReference langRef : ListSequence.fromList(descriptor.getUsedLanguages())) {
         final Element result_dxyzb6_a0a0a0a2a0a2 = new Element("usedLanguage");
-        final String result_dxyzb6_a0a0a0a0a2a0a2 = langRef.toString();
+        final String result_dxyzb6_a0a0a0a0a2a0a2 = langRef.getModuleFqName(); // CO-5178
         result_dxyzb6_a0a0a0a2a0a2.setText(result_dxyzb6_a0a0a0a0a2a0a2);
         result_dxyzb6_a0a2a0a2.addContent(result_dxyzb6_a0a0a0a2a0a2);
       }
@@ -88,7 +89,7 @@ public class ModuleDescriptorPersistence {
       final Element result_dxyzb6_a0a4a0a2 = new Element("usedDevKits");
       for (ModuleReference dkRef : ListSequence.fromList(descriptor.getUsedDevkits())) {
         final Element result_dxyzb6_a0a0a0a4a0a2 = new Element("usedDevKit");
-        final String result_dxyzb6_a0a0a0a0a4a0a2 = dkRef.toString();
+        final String result_dxyzb6_a0a0a0a0a4a0a2 = dkRef.getModuleFqName(); // CO-5178
         result_dxyzb6_a0a0a0a4a0a2.setText(result_dxyzb6_a0a0a0a0a4a0a2);
         result_dxyzb6_a0a4a0a2.addContent(result_dxyzb6_a0a0a0a4a0a2);
       }
@@ -139,7 +140,7 @@ public class ModuleDescriptorPersistence {
     Element result_dxyzb6_a0a4 = depElement;
     for (Dependency md : ListSequence.fromList(dependencies)) {
       final Element dependencyElement = new Element("dependency");
-      final String moduleRefStr = md.getModuleRef().toString();
+      final String moduleRefStr = md.getModuleRef().getModuleFqName();
       dependencyElement.setText(moduleRefStr);
       final boolean reexport = md.isReexport();
       dependencyElement.setAttribute("reexport", "" + reexport);
