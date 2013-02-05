@@ -1,7 +1,7 @@
 package codeOrchestra.rgs;
 
 /**
- * @author: Alexander Eliseyev
+ * @author Alexander Eliseyev
  */
 public class RGSConnectionException extends RGSException {
 
@@ -18,5 +18,10 @@ public class RGSConnectionException extends RGSException {
 
   public RGSConnectionException(Throwable throwable) {
     super(throwable);
+  }
+
+  @Override
+  public boolean isConnectionProblem() {
+    return true;
   }
 }

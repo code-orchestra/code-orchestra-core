@@ -75,14 +75,11 @@ public abstract class RGSTask extends Backgroundable {
 
   protected void onFail(RGSException exception) {
     // RF-1252 - Check whether the RGS must be restarted (locally)
-    if (exception.getCause() instanceof RemoteException) {
-      RemoteException remoteException = (RemoteException) exception.getCause();
-      if (remoteException instanceof ConnectException || remoteException.getCause() instanceof EOFException) {
-        if (ApplicationRGSClient.getInstance().mustStartLocalRGS()) {
-          caller.call(); // restart the queue
-        } else {
-          onFail(null, "Lost connection to the RGS server");
-        }
+    if (exception.isConnectionProblem()) {
+      if (ApplicationRGSClient.getInstance().mustStartLocalRGS()) {
+        caller.call(); // restart the queue
+      } else {
+        onFail(null, "Lost connection to the RGS server");
       }
     }
 
