@@ -101,6 +101,11 @@ public final class RemoteGenerationUIFacade extends AbstractRGSFacade {
     this(project, rebuildAll, rootModule, BuildProvider.RGS);
   }
 
+  @Override
+  public void call() {
+    generateRemotely();
+  }
+
   public boolean generateRemotelyAndWait() {
     generateRemotely();
 
@@ -131,21 +136,21 @@ public final class RemoteGenerationUIFacade extends AbstractRGSFacade {
 
     if (state instanceof RGSNotConnectedState) {
       // Init client, next phase
-      RGSTaskStack.create(initClient(), nextPhase()).process();
+      RGSTaskStack.create(this, initClient(), nextPhase()).process();
     } else if (state instanceof RGSUnknownState) {
       // Re-Init client, next phase
-      RGSTaskStack.create(reInitClient(), nextPhase()).process();
+      RGSTaskStack.create(this, reInitClient(), nextPhase()).process();
     } else if (state instanceof RGSNoProjectState) {
       // Sync project, load project, next phase
-      RGSTaskStack.create(syncProject(), loadProject(), nextPhase()).process();
+      RGSTaskStack.create(this, syncProject(), loadProject(), nextPhase()).process();
     } else if (state instanceof RGSProjectLoadedState) {
       RemoteProject remoteProject = ((RGSProjectLoadedState) state).getProject();
       if (remoteProject.isTheSameAs(getProject())) {
         // Sync, generate, fetch artifacts
-        RGSTaskStack.create(syncProject(), reloadAfterSync(), pushMakeType(), toggleLive(), syncGenerationSettings(), generate(), fetch(), finishGeneration()).process();
+        RGSTaskStack.create(this, syncProject(), reloadAfterSync(), pushMakeType(), toggleLive(), syncGenerationSettings(), generate(), fetch(), finishGeneration()).process();
       } else {
         // Unload previous project
-        RGSTaskStack.create(unloadProject(), nextPhase()).process();
+        RGSTaskStack.create(this, unloadProject(), nextPhase()).process();
       }
     } else {
       // Busy/illegal state

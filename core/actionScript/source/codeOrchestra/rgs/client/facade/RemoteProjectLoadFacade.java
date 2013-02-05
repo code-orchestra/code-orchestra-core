@@ -20,18 +20,23 @@ public class RemoteProjectLoadFacade extends AbstractRGSFacade {
     super(project);
   }
 
+  @Override
+  public void call() {
+    loadTheProject();
+  }
+
   public void loadTheProject() {
     RGSState state = ApplicationRGSClient.getInstance().getState();
 
     if (state instanceof RGSNotConnectedState) {
       // Init client, next phase
-      RGSTaskStack.create(initClient(), nextPhase()).process();
+      RGSTaskStack.create(this, initClient(), nextPhase()).process();
     } else if (state instanceof RGSUnknownState) {
       // Re-Init client, next phase
-      RGSTaskStack.create(reInitClient(), nextPhase()).process();
+      RGSTaskStack.create(this, reInitClient(), nextPhase()).process();
     } else if (state instanceof RGSNoProjectState) {
       // Sync project, load project, next phase
-      RGSTaskStack.create(syncProject(), loadProject()).process();
+      RGSTaskStack.create(this, syncProject(), loadProject()).process();
     } else if (state instanceof RGSProjectLoadedState) {
       RemoteProject remoteProject = ((RGSProjectLoadedState) state).getProject();
       if (remoteProject.isTheSameAs(getProject())) {
@@ -39,7 +44,7 @@ public class RemoteProjectLoadFacade extends AbstractRGSFacade {
         return;
       } else {
         // Unload previous project
-        RGSTaskStack.create(unloadProject(), nextPhase()).process();
+        RGSTaskStack.create(this, unloadProject(), nextPhase()).process();
       }
     }
   }

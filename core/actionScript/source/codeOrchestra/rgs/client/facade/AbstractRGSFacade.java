@@ -27,9 +27,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author: Alexander Eliseyev
+ * @author Alexander Eliseyev
  */
-public abstract class AbstractRGSFacade {
+public abstract class AbstractRGSFacade implements IRGSTaskCaller {
 
   private static final Runnable SAVE_ALL_RUNNABLE = new Runnable() {
     @Override

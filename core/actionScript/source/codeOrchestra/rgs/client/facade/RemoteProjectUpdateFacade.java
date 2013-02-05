@@ -10,7 +10,7 @@ import codeOrchestra.rgs.state.model.GenerateInput;
 import codeOrchestra.rgs.state.model.RemoteProject;
 
 /**
- * @author: Alexander Eliseyev
+ * @author Alexander Eliseyev
  */
 public class RemoteProjectUpdateFacade extends AbstractRGSFacade {
 
@@ -20,26 +20,31 @@ public class RemoteProjectUpdateFacade extends AbstractRGSFacade {
     super(project);
   }
 
+  @Override
+  public void call() {
+    syncTheProject();
+  }
+
   public void syncTheProject() {
     RGSState state = ApplicationRGSClient.getInstance().getState();
 
     if (state instanceof RGSNotConnectedState) {
       // Init client, next phase
-      RGSTaskStack.create(initClient(), nextPhase()).process();
+      RGSTaskStack.create(this, initClient(), nextPhase()).process();
     } else if (state instanceof RGSUnknownState) {
       // Re-Init client, next phase
-      RGSTaskStack.create(reInitClient(), nextPhase()).process();
+      RGSTaskStack.create(this, reInitClient(), nextPhase()).process();
     } else if (state instanceof RGSNoProjectState) {
       // Sync project, load project, next phase
-      RGSTaskStack.create(syncProject(), loadProject(), nextPhase()).process();
+      RGSTaskStack.create(this, syncProject(), loadProject(), nextPhase()).process();
     } else if (state instanceof RGSProjectLoadedState) {
       RemoteProject remoteProject = ((RGSProjectLoadedState) state).getProject();
       if (remoteProject.isTheSameAs(getProject())) {
         // Sync, generate, fetch artifacts
-        RGSTaskStack.create(syncProject(), reloadAfterSync()).process();
+        RGSTaskStack.create(this, syncProject(), reloadAfterSync()).process();
       } else {
         // Unload previous project
-        RGSTaskStack.create(unloadProject(), nextPhase()).process();
+        RGSTaskStack.create(this, unloadProject(), nextPhase()).process();
       }
     }
   }

@@ -11,7 +11,7 @@ import codeOrchestra.utils.ProjectHolder;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.EOFException;
-import java.io.IOException;
+import java.rmi.ConnectException;
 import java.rmi.RemoteException;
 
 /**
@@ -35,6 +35,7 @@ public abstract class RGSTask extends Backgroundable {
   private GenerateInput generateInput;
 
   private String internalTitle;
+  private IRGSTaskCaller caller;
 
   protected RGSTask(@NotNull String title, boolean canBeCancelled) {
     this(new GenerateInput(null, BuildProvider.RGS), title, canBeCancelled);
@@ -73,12 +74,18 @@ public abstract class RGSTask extends Backgroundable {
   }
 
   protected void onFail(RGSException exception) {
+    // RF-1252 - Check whether the RGS must be restarted (locally)
     if (exception.getCause() instanceof RemoteException) {
       RemoteException remoteException = (RemoteException) exception.getCause();
-      if (remoteException.getCause() instanceof EOFException) {
-        onFail(null, "Lost connection to the RGS server");
+      if (remoteException instanceof ConnectException || remoteException.getCause() instanceof EOFException) {
+        if (ApplicationRGSClient.getInstance().mustStartLocalRGS()) {
+          caller.call(); // restart the queue
+        } else {
+          onFail(null, "Lost connection to the RGS server");
+        }
       }
     }
+
     onFail(exception, "Error while performing RGS task: " + getTitle());
   }
 
@@ -102,14 +109,6 @@ public abstract class RGSTask extends Backgroundable {
         System.out.println(internalTitle + " took " + timeTook + "ms");
       }
     } catch (RGSException e) {
-      // TODO: check whether the RGS must be restarted (locally)
-      if (e.getCause() != null) {
-        Throwable cause = e.getCause();
-
-        // if (cause instanceof RemoteException)
-      }
-
-
       onFail(e);
     }
   }
@@ -128,4 +127,9 @@ public abstract class RGSTask extends Backgroundable {
       nextTask.queue();
     }
   }
+
+  public void setCaller(IRGSTaskCaller caller) {
+    this.caller = caller;
+  }
+
 }

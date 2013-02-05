@@ -55,7 +55,7 @@ public abstract class AbstractRGSClient implements RGSServiceClient, ProjectInfo
     this.rgsPingThread.start();
   }
 
-  protected boolean mustStartLocalRGS() {
+  public boolean mustStartLocalRGS() {
     return rgsClientSettings.isLocal() && !BuildUtil.isDeveloperBuild() && !InternalFlag.isInternalMode();
   }
 
