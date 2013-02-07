@@ -81,9 +81,9 @@ public abstract class RGSTask extends Backgroundable {
       } else {
         onFail(null, "Lost connection to the RGS server");
       }
+    } else {
+      onFail(exception, "Error while performing RGS task: " + getTitle());
     }
-
-    onFail(exception, "Error while performing RGS task: " + getTitle());
   }
 
   protected void onFail(String message) {
