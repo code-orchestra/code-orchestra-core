@@ -166,23 +166,6 @@ public class PartitioningSolver {
     }
     Collections.reverse(mappingSets);
 
-    // CO-4941 - Absolute first rule
-    Collections.sort(mappingSets, new Comparator<List<TemplateMappingConfiguration>>() {
-      @Override
-      public int compare(List<TemplateMappingConfiguration> templateMappingConfigurationsLeft, List<TemplateMappingConfiguration> templateMappingConfigurationsRight) {
-        for (AbsoluteFirstSetData absoluteFirstMapping : myAbsoluteFirstMappings) {
-          if (CollectionUtil.intersects(templateMappingConfigurationsLeft, absoluteFirstMapping.myMappings)) {
-            return -1;
-          }
-          if (CollectionUtil.intersects(templateMappingConfigurationsRight, absoluteFirstMapping.myMappings)) {
-            return 1;
-          }
-        }
-
-        return 0;
-      }
-    });
-
     // sort mappings within each set: generation must be deterministic
     for (List<TemplateMappingConfiguration> mappingSet : mappingSets) {
       Collections.sort(mappingSet, new Comparator<TemplateMappingConfiguration>() {
@@ -191,7 +174,33 @@ public class PartitioningSolver {
         }
       });
     }
+
+    // CO-5193 - the ones with absolute priority go first
+    for (List<TemplateMappingConfiguration> mappingSet : mappingSets) {
+      Collections.sort(mappingSet, new Comparator<TemplateMappingConfiguration>() {
+        public int compare(TemplateMappingConfiguration o1, TemplateMappingConfiguration o2) {
+          if (isAbsoluteFirst(o1) && !isAbsoluteFirst(o2)) {
+            return -1;
+          }
+          if (!isAbsoluteFirst(o1) && isAbsoluteFirst(o2)) {
+            return 1;
+          }
+          return 0;
+        }
+      });
+    }
+
     return mappingSets;
+  }
+
+  private boolean isAbsoluteFirst(TemplateMappingConfiguration templateMappingConfiguration) {
+    for (AbsoluteFirstSetData absoluteFirstMapping : myAbsoluteFirstMappings) {
+      if (absoluteFirstMapping.myMappings.contains(templateMappingConfiguration)) {
+        return true;
+      }
+    }
+
+    return false;
   }
 
   private List<TemplateMappingConfiguration> createMappingSet(boolean topPriorityGroup) {
