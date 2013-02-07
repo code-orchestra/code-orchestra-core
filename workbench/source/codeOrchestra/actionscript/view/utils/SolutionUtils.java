@@ -317,7 +317,8 @@ public final class SolutionUtils {
 
   public static String getSWCClassPathItemPath(Solution solution) {
     for (ModelRoot stubModelsEntry : solution.getModuleDescriptor().getStubModelEntries()) {
-      if (stubModelsEntry.getPath().toLowerCase().endsWith(".swc")) {
+      String stubModelPathLoweCase = stubModelsEntry.getPath().toLowerCase();
+      if (stubModelPathLoweCase.endsWith(".swc") || stubModelPathLoweCase.endsWith(".ane")) {
         return stubModelsEntry.getPath();
       }
     }

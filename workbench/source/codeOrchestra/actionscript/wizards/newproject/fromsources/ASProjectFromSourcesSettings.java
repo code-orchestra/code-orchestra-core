@@ -56,7 +56,8 @@ public class ASProjectFromSourcesSettings extends ASNewProjectSettings {
 
     List<File> swcFiles = FileUtils.listFileRecursively(new File(sourcesPath), new FileFilter() {
       public boolean accept(File pathname) {
-        return pathname.getName().toLowerCase().trim().endsWith(".swc");
+        String filenameLowerCase = pathname.getName().toLowerCase().trim();
+        return filenameLowerCase.endsWith(".swc") || filenameLowerCase.endsWith(".ane");
       }
     });
 

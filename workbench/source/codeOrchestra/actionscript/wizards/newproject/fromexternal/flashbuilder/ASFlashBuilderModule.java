@@ -133,7 +133,7 @@ public class ASFlashBuilderModule extends ASExternalModule {
                         String[] libFiles = libDir.list(new FilenameFilter() {
                           @Override
                           public boolean accept(File dir, String name) {
-                            return name.endsWith(".swc");
+                            return name.endsWith(".swc") || name.endsWith(".ane");
                           }
                         });
                         for (String lib : libFiles) {

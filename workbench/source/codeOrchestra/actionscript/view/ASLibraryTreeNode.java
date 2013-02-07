@@ -45,7 +45,7 @@ public class ASLibraryTreeNode extends ASProjectModuleTreeNode {
   public void updatePresentation() {
     super.updatePresentation();
 
-    if (getText().endsWith(".swc)")) {
+    if (getText().endsWith(".swc)") || getText().endsWith(".ane)")) {
       setIcon(SWC_ICON);
     }
   }

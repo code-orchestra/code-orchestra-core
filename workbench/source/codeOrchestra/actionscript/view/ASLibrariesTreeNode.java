@@ -88,11 +88,11 @@ public class ASLibrariesTreeNode extends MPSTreeNode {
 
     // Sort by type
     Collections.sort(libraryNodes, new Comparator<ASLibraryTreeNode>() {
-      public int compare(ASLibraryTreeNode mpsTreeNodes, ASLibraryTreeNode mpsTreeNodes1) {
-        if (mpsTreeNodes.getText().contains(".swc")) {
+      public int compare(ASLibraryTreeNode mpsTreeNode1, ASLibraryTreeNode mpsTreeNode2) {
+        if (isSWCNode(mpsTreeNode1)) {
           return -1;
         }
-        if (mpsTreeNodes1.getText().contains(".swc")) {
+        if (isSWCNode(mpsTreeNode2)) {
           return 1;
         }
         return 0;
@@ -103,6 +103,11 @@ public class ASLibrariesTreeNode extends MPSTreeNode {
     for (ASLibraryTreeNode libraryTreeNode : libraryNodes) {
       add(libraryTreeNode);
     }
+  }
+
+  private boolean isSWCNode(ASLibraryTreeNode treeNode) {
+    String treeNodeText = treeNode.getText();
+    return treeNodeText.contains(".swc") || treeNodeText.contains(".ane");
   }
 
 }

@@ -212,21 +212,21 @@ public class ASNewLibraryDialogContentPane extends JPanel {
     }
 
     if (myThis.getSwcFilePath().length() == 0) {
-      myThis.getDialog().setErrorText("Enter .swc library path");
+      myThis.getDialog().setErrorText("Enter .swc (.ane) library path");
       return;
     }
 
     File swcFile = new File(myThis.getSwcFilePath());
 
     if (!(swcFile.exists())) {
-      myThis.getDialog().setErrorText("SWC file under the path specified doesn't exist");
+      myThis.getDialog().setErrorText("SWC (ANE) file under the path specified doesn't exist");
       return;
     }
 
     String swcFileName = swcFile.getName();
-
-    if (!(swcFileName.toLowerCase().endsWith(".swc"))) {
-      myThis.getDialog().setErrorText("SWC file expected");
+    String swcFileNameLowerCase = swcFileName.toLowerCase();
+    if (!(swcFileNameLowerCase.endsWith(".swc") || swcFileNameLowerCase.endsWith(".ane"))) {
+      myThis.getDialog().setErrorText("SWC or ANE file expected");
       return;
     }
 
