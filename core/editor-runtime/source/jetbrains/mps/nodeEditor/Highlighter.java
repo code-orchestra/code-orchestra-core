@@ -514,6 +514,20 @@ public class Highlighter implements EditorMessageOwner, ProjectComponent {
     });
   }
 
+  @CodeOrchestraPatch
+  private static EditorMessage getMessageForNode(SNode node, Class messageClass, Set<EditorMessage> messages) {
+    if (node == null) {
+      return null;
+    }
+    for (EditorMessage message : messages) {
+      if (messageClass.equals(message.getClass()) && node.getId_().equals(message.getNode().getId_())) {
+        return message;
+      }
+    }
+    return null;
+  }
+
+  @CodeOrchestraPatch
   private boolean updateEditor(final EditorComponent editor, final List<SModelEvent> events, final boolean wasCheckedOnce, List<BaseEditorChecker> checkersToRecheck, Set<BaseEditorChecker> checkersToRemove, boolean recreateInspectorMessages) {
     if (editor == null || editor.getRootCell() == null) return false;
 
@@ -538,7 +552,19 @@ public class Highlighter implements EditorMessageOwner, ProjectComponent {
             IOperationContext operationContext = editor.getOperationContext();
             if (operationContext.isValid()) {
               try {
-                messages.addAll(checker.createMessagesProtected(node, events, wasCheckedOnce, editorContext));
+                // RF-1248
+                Set<EditorMessage> newMessages = checker.createMessagesProtected(node, events, wasCheckedOnce, editorContext);
+                for (EditorMessage newMessage : newMessages) {
+                  SNode newMessageNode = newMessage.getNode();
+
+                  EditorMessage existingMessageForNode = getMessageForNode(newMessageNode,newMessage.getClass(), messages);
+                  if (existingMessageForNode != null) {
+                    messages.remove(existingMessageForNode);
+                  }
+
+                  messages.add(newMessage);
+                }
+
                 return checker.areMessagesChangedProtected();
               } catch (IndexNotReadyException ex) {
                 highlightManager.clearForOwner(checker, true);
