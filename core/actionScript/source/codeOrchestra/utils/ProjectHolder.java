@@ -9,15 +9,25 @@ import jetbrains.mps.ide.smodel.CurrentProjectAccessUtil;
  */
 public final class ProjectHolder {
 
+  private static Project backupProject;
+
   private ProjectHolder() {
+  }
+
+  public static void setBackupProject(Project backupProject) {
+    ProjectHolder.backupProject = backupProject;
   }
 
   public static Project getProject() {
     Project[] openProjects = ProjectManager.getInstance().getOpenProjects();
-    if (openProjects != null && openProjects.length > 0) {
+    if (openProjects.length > 0) {
       return openProjects[0];
     }
-    return CurrentProjectAccessUtil.getProjectFromUI();
+    Project projectFromUI = CurrentProjectAccessUtil.getProjectFromUI();
+    if (projectFromUI != null) {
+      return projectFromUI;
+    }
+    return backupProject;
   }
 
 }

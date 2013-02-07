@@ -4,6 +4,7 @@ import com.intellij.openapi.application.impl.LaterInvocator;
 import com.intellij.openapi.components.AbstractProjectComponent;
 import com.intellij.openapi.components.ProjectComponent;
 import com.intellij.openapi.project.Project;
+import com.intellij.openapi.startup.StartupManager;
 import com.intellij.openapi.wm.IdeFrame;
 import com.intellij.openapi.wm.WindowManager;
 import com.intellij.openapi.wm.ex.StatusBarEx;
@@ -172,10 +173,10 @@ public class LiveCodingManager extends AbstractProjectComponent implements Proje
     if (!RGSParametersCLI.isInServerMode()) {
       BuildBroadcaster.getInstance().addBuildListener(myBuildListener);
 
-      LaterInvocator.invokeLater(new Runnable() {
+      StartupManager.getInstance(myProject).runWhenProjectIsInitialized(new Runnable() {
         @Override
         public void run() {
-          IdeFrame ideFrame = WindowManager.getInstance().getIdeFrame(ProjectHolder.getProject());
+          IdeFrame ideFrame = WindowManager.getInstance().getIdeFrame(myProject);
           StatusBarEx statusBar = (StatusBarEx) ideFrame.getStatusBar();
 
           widget = new LiveCodingWidget(LiveCodingManager.this);

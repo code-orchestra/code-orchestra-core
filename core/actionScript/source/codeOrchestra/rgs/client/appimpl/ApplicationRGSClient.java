@@ -160,7 +160,7 @@ public class ApplicationRGSClient extends AbstractRGSClient implements ProjectCo
 
     this.addRemoteGenerationListener(defaultListener);
 
-    LaterInvocator.invokeLater(new Runnable() {
+    StartupManager.getInstance(project).runWhenProjectIsInitialized(new Runnable() {
       @Override
       public void run() {
         serverStatePanel = new RGSServerStatePanel();

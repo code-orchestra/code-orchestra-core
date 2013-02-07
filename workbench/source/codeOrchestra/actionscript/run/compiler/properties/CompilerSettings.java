@@ -112,7 +112,7 @@ public class CompilerSettings {
   public void update(SolutionDescriptor parent) {
     if (SolutionUtils.isSWCSolution(parent)) {
       outputTypeIndex = OutputType.FLEX_LIBRARY.getIndex();
-      for (ModelRoot stubModelsEntry : parent.getStubModelEntries()) {
+      for (ModelRoot stubModelsEntry : parent.getStubModelEntries_()) {
         String path = stubModelsEntry.getPath();
         if (path.endsWith(".swc")) {
           try {

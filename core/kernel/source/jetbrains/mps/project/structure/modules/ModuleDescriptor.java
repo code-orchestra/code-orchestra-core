@@ -115,6 +115,11 @@ public class ModuleDescriptor {
   }
 
   @CodeOrchestraPatch
+  public List<ModelRoot> getStubModelEntries_() {
+    return myStubModels;
+  }
+
+  @CodeOrchestraPatch
   public List<ModelRoot> getStubModelEntries() {
     if (myNamespace != null) {
       if (this instanceof SolutionDescriptor && FlexSDKLibsManager.getInstance().isFlexLib(myNamespace)) {

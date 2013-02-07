@@ -1,5 +1,6 @@
 package codeOrchestra.rgs.client.appimpl;
 
+import codeOrchestra.rgs.client.RGSServiceClient;
 import com.intellij.openapi.util.SystemInfo;
 import com.intellij.openapi.wm.CustomStatusBarWidget;
 import com.intellij.openapi.wm.StatusBar;
@@ -49,7 +50,7 @@ public class RGSStatusWidget extends JButton implements CustomStatusBarWidget, S
   }
 
   @Override
-  public void refresh(RGSState state) {
+  public void refresh(RGSState state, RGSServiceClient client) {
     if (state instanceof RGSNotConnectedState) {
       setIcon(Icons.DISCONNECTED);
     } else if (state instanceof RGSErrorState) {

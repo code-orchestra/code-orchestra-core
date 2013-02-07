@@ -44,7 +44,7 @@ public abstract class AbstractRGSClient implements RGSServiceClient, ProjectInfo
   private IRemoteGenerationService remoteGenerationService;
   private Registry registry;
 
-  private Project project;
+  protected Project project;
   private RGSClientSettings rgsClientSettings;
 
   protected AbstractRGSClient(Project project, RGSClientSettings rgsClientSettings) {

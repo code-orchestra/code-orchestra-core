@@ -1,6 +1,8 @@
 package codeOrchestra.actionscript.modulemaker.view;
 
 import codeOrchestra.rgs.server.RGSParametersCLI;
+import codeOrchestra.utils.ProjectHolder;
+import com.intellij.openapi.components.*;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.project.ProjectManager;
 import codeOrchestra.actionScript.compiler.fcsh.FCSHManager;
@@ -8,10 +10,6 @@ import codeOrchestra.actionScript.flexsdk.FlexSDKLibsManager;
 import codeOrchestra.actionscript.modulemaker.CompilerKind;
 import codeOrchestra.actionscript.modulemaker.view.FlexSDKSettings.FlexSDKSettingsState;
 import com.intellij.openapi.application.ApplicationManager;
-import com.intellij.openapi.components.ApplicationComponent;
-import com.intellij.openapi.components.PersistentStateComponent;
-import com.intellij.openapi.components.State;
-import com.intellij.openapi.components.Storage;
 import com.intellij.openapi.options.ConfigurationException;
 import com.intellij.openapi.options.SearchableConfigurable;
 import jetbrains.mps.logging.Logger;
@@ -33,12 +31,12 @@ import java.util.List;
   name = "FlexSDKSettings",
   storages = {
     @Storage(
-      id ="other",
-      file = "$APP_CONFIG$/flexSDKSettings.xml"
+      id = "other",
+      file = "$WORKSPACE_FILE$"
     )
   }
 )
-public class FlexSDKSettings implements PersistentStateComponent<FlexSDKSettingsState>, ApplicationComponent, SearchableConfigurable {
+public class FlexSDKSettings implements PersistentStateComponent<FlexSDKSettingsState>, ProjectComponent, SearchableConfigurable {
 
   private static final Logger LOG = Logger.getLogger(FlexSDKSettings.class);
 
@@ -47,7 +45,16 @@ public class FlexSDKSettings implements PersistentStateComponent<FlexSDKSettings
   private static final String DEFAULT_FLEX_SDK_DIR = "flex_sdk";
 
   public static FlexSDKSettings getInstance() {
-    return ApplicationManager.getApplication().getComponent(FlexSDKSettings.class);
+    Project project = ProjectHolder.getProject();
+
+    if (project != null) {
+      FlexSDKSettings flexSDKSettings = project.getComponent(FlexSDKSettings.class);
+      if (flexSDKSettings != null) {
+        return flexSDKSettings;
+      }
+    }
+
+    return new FlexSDKSettings();
   }
 
   private FlexSDKSettingsState state = new FlexSDKSettingsState();
@@ -218,6 +225,14 @@ public class FlexSDKSettings implements PersistentStateComponent<FlexSDKSettings
 
   public FlexSDKSettingsState getState() {
     return state;
+  }
+
+  @Override
+  public void projectOpened() {
+  }
+
+  @Override
+  public void projectClosed() {
   }
 
   public void loadState(FlexSDKSettingsState flexSDKSettingsState) {

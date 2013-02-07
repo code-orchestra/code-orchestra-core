@@ -15,6 +15,7 @@
  */
 package jetbrains.mps.project;
 
+import codeOrchestra.utils.ProjectHolder;
 import com.intellij.ide.impl.ProjectUtil;
 import com.intellij.openapi.components.PersistentStateComponent;
 import com.intellij.openapi.components.ProjectComponent;
@@ -168,7 +169,10 @@ public class MPSProject implements MPSModuleOwner, ProjectComponent, PersistentS
 
   private String myErrors = null;
 
+  @CodeOrchestraPatch
   public void init(final File projectFile, final ProjectDescriptor projectDescriptor) {
+    ProjectHolder.setBackupProject(myProject); // CO-4601
+
     if (myProject.isDefault()) return;
 
     ModelAccess.instance().runWriteAction(new Runnable() {

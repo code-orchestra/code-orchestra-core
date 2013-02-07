@@ -1,5 +1,6 @@
 package codeOrchestra.rgs.client.settings.view;
 
+import codeOrchestra.rgs.client.RGSServiceClient;
 import com.intellij.openapi.wm.WindowManager;
 import com.intellij.ui.LightColors;
 import codeOrchestra.rgs.RGSException;
@@ -121,19 +122,18 @@ public class RGSServerStatePanel extends JDialog implements StateRefreshable {
   }
 
   @Override
-  public void refresh(RGSState state) {
+  public void refresh(RGSState state, RGSServiceClient client) {
     String newPresentation = state.getPresentation();
     if (!ObjectUtils.equals(newPresentation, stateField.getText())) {
       stateField.setText(newPresentation);
     }
 
     updateMemory(state);
-    updateButtons(state);
+    updateButtons(state, client);
   }
 
-  private void updateButtons(RGSState state) {
+  private void updateButtons(RGSState state, RGSServiceClient rgsClient) {
     // RF-1143
-    ApplicationRGSClient rgsClient = ApplicationRGSClient.getInstance();
     if (rgsClient == null) {
       return;
     }

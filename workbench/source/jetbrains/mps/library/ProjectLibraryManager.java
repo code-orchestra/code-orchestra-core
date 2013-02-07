@@ -15,6 +15,7 @@
  */
 package jetbrains.mps.library;
 
+import codeOrchestra.actionscript.modulemaker.view.FlexSDKSettings;
 import com.intellij.openapi.application.Application;
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.application.ModalityState;
@@ -61,6 +62,8 @@ public class ProjectLibraryManager extends BaseLibraryManager implements Project
       return;
     }
     myProject.getComponent(ProjectScope.class);
+    myProject.getComponent(FlexSDKSettings.class);
+
     if (!ThreadUtils.isEventDispatchThread()) {
       ApplicationManager.getApplication().invokeAndWait(new Runnable() {
         @Override

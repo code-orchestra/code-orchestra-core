@@ -136,12 +136,6 @@
       <implementation-class>jetbrains.mps.library.LibraryManager</implementation-class>
     </component>
 
-    <!-- RE-1539 -->
-    <!-- Flex URI manager -->
-    <component>
-      <implementation-class>codeOrchestra.actionscript.flex.settings.FlexURIs</implementation-class>
-    </component>
-
     <component>
       <implementation-class>jetbrains.mps.editor.runtime.impl.LanguagesKeymapManager</implementation-class>
     </component>
@@ -186,10 +180,6 @@
     <!-- CO-3875 -->
     <component>
         <implementation-class>codeOrchestra.actionScript.parser.ASParserSettings</implementation-class>
-    </component>
-
-    <component>
-        <implementation-class>codeOrchestra.actionscript.modulemaker.view.FlexSDKSettings</implementation-class>
     </component>
 
     <!-- CO-5098 -->
@@ -405,6 +395,18 @@
 
     <component>
       <implementation-class>jetbrains.mps.ide.refactoring.RefactoringView</implementation-class>
+      <skipForDummyProject/>
+    </component>
+
+    <component>
+      <implementation-class>codeOrchestra.actionscript.modulemaker.view.FlexSDKSettings</implementation-class>
+      <skipForDummyProject/>
+    </component>
+
+    <!-- RE-1539 -->
+    <!-- Flex URI manager -->
+    <component>
+      <implementation-class>codeOrchestra.actionscript.flex.settings.FlexURIs</implementation-class>
       <skipForDummyProject/>
     </component>
 

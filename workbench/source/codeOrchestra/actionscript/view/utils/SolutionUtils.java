@@ -230,7 +230,7 @@ public final class SolutionUtils {
   }
 
   public static ModelRootManager getStubModelRootManager(Solution solution) {
-    for (ModelRoot stubModelsEntry : solution.getModuleDescriptor().getStubModelEntries()) {
+    for (ModelRoot stubModelsEntry : solution.getModuleDescriptor().getStubModelEntries_()) {
       if (LanguageID.SWC_MANAGER.equals(stubModelsEntry.getManager())
         ||
         LanguageID.AS_MANAGER.equals(stubModelsEntry.getManager())) {
@@ -241,7 +241,7 @@ public final class SolutionUtils {
   }
 
   public static boolean isSWCSolution(Solution solution) {
-    for (ModelRoot stubModelsEntry : solution.getModuleDescriptor().getStubModelEntries()) {
+    for (ModelRoot stubModelsEntry : solution.getModuleDescriptor().getStubModelEntries_()) {
       if (LanguageID.SWC_MANAGER.equals(stubModelsEntry.getManager())) {
         return true;
       }
@@ -250,7 +250,7 @@ public final class SolutionUtils {
   }
 
   public static boolean isSWCSolution(SolutionDescriptor solution) {
-    for (ModelRoot stubModelsEntry : solution.getStubModelEntries()) {
+    for (ModelRoot stubModelsEntry : solution.getStubModelEntries_()) {
       if (LanguageID.SWC_MANAGER.equals(stubModelsEntry.getManager())) {
         return true;
       }
@@ -259,7 +259,7 @@ public final class SolutionUtils {
   }
 
   public static boolean isASStubSolution(Solution solution) {
-    for (ModelRoot stubModelsEntry : solution.getModuleDescriptor().getStubModelEntries()) {
+    for (ModelRoot stubModelsEntry : solution.getModuleDescriptor().getStubModelEntries_()) {
       if (LanguageID.AS_MANAGER.equals(stubModelsEntry.getManager())) {
         return true;
       }
@@ -277,7 +277,7 @@ public final class SolutionUtils {
   }
 
   public static boolean isASStubSolution(SolutionDescriptor solution) {
-    for (ModelRoot stubModelsEntry : solution.getStubModelEntries()) {
+    for (ModelRoot stubModelsEntry : solution.getStubModelEntries_()) {
       if (LanguageID.AS_MANAGER.equals(stubModelsEntry.getManager())) {
         return true;
       }

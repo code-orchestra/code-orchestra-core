@@ -34,7 +34,7 @@ public class RGSStateViewRefreshThread extends Thread {
           SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-              refreshable.refresh(rgsState);
+              refreshable.refresh(rgsState, rgsClient);
             }
           });
         }
