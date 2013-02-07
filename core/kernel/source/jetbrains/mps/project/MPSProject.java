@@ -238,6 +238,8 @@ public class MPSProject implements MPSModuleOwner, ProjectComponent, PersistentS
         ProjectUtil.closeAndDispose(myProject);
       }
     }
+
+    ProjectHolder.setBackupProject(null); // CO-4601
   }
 
   //--modules

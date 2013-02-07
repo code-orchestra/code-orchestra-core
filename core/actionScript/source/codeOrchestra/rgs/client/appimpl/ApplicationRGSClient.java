@@ -190,7 +190,7 @@ public class ApplicationRGSClient extends AbstractRGSClient implements ProjectCo
 
     generateListeners.clear();
 
-    IdeFrame ideFrame = WindowManager.getInstance().getIdeFrame(ProjectHolder.getProject());
+    IdeFrame ideFrame = WindowManager.getInstance().getIdeFrame(project);
     StatusBarEx statusBar = (StatusBarEx) ideFrame.getStatusBar();
     statusBar.removeWidget(RGSStatusWidget.ID);
 
