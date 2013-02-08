@@ -22,7 +22,7 @@ public class ASNewLibraryFromGitHubDialog extends BaseDialog {
   }
 
   public DialogDimensionsSettings.DialogDimensions getDefaultDimensionSettings() {
-    return new DialogDimensionsSettings.DialogDimensions(100, 100, 600, 260);
+    return new DialogDimensionsSettings.DialogDimensions(100, 100, 600, 320);
   }
 
   public JComponent getMainComponent() {

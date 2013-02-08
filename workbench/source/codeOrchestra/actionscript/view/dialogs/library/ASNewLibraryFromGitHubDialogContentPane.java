@@ -213,7 +213,7 @@ public class ASNewLibraryFromGitHubDialogContentPane extends JPanel {
   private JLabel createComponent5() {
     JLabel component = new JLabel();
     this.myComponent0 = component;
-    component.setText("Library GitHub Url:");
+    component.setText("Library GitHub URL:");
     return component;
   }
 
