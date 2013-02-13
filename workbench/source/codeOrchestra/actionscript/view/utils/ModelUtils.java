@@ -18,6 +18,7 @@ import java.util.Set;
  */
 public final class ModelUtils {
 
+  private static final String ACTION_SCRIPT_UTIL_MODEL = "r:944a31f8-bb9e-4168-b4ad-9638a126a51d(codeOrchestra.actionScript.util)";
   private static String[] DEFAULT_IMPORTS = new String[] {
     "",
     "flash.display",
@@ -110,6 +111,9 @@ public final class ModelUtils {
 
     // Add assets model(s)
     sModel.addModelImport(AssetsManager.createProjectAssetModelReference(project), false);
+
+    // Add actionScript accessoryModel
+    sModel.addModelImport(SModelReference.fromString(ACTION_SCRIPT_UTIL_MODEL), false);
   }
 
   private static SModelReference getSWCModelReference(String pack) {
