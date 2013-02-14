@@ -34,6 +34,7 @@ public class FCSHManager implements ProjectComponent {
   private Project project;
   private FCSHProcessHandler fcshProcessHandler;
   private Map<List<String>, CompilerTarget> compilerTargets = Collections.synchronizedMap(new HashMap<List<String>, CompilerTarget>());
+  private boolean livecodingMode;
 
   public FCSHManager(Project project) {
     this.project = project;
@@ -62,7 +63,7 @@ public class FCSHManager implements ProjectComponent {
 
     clearTargets();
 
-    FCSHLauncher fcshLauncher = new FCSHLauncher();
+    FCSHLauncher fcshLauncher = new FCSHLauncher(livecodingMode);
     ProcessBuilder processBuilder = fcshLauncher.createProcessBuilder();
     Process fcshProcess;
     try {
@@ -97,6 +98,8 @@ public class FCSHManager implements ProjectComponent {
   }
 
   public void submitCommand(CommandCallback commandCallback) throws FCSHException {
+    assureFCSHIsActive();
+
     FCSHCommandRunnable fcshCommandRunnable = new FCSHCommandRunnable(this, commandCallback);
     if (commandCallback.isSynchronous()) {
       fcshCommandRunnable.run();
@@ -170,6 +173,12 @@ public class FCSHManager implements ProjectComponent {
   }
 
   public void clear() throws FCSHException {
+    if (livecodingMode) {
+      // FCSH in livecoding mode clears itself after every compilation
+      clearTargets();
+      return;
+    }
+
     assureFCSHIsActive();
 
     ClearCommand clearCommand = new ClearCommand();
@@ -221,4 +230,7 @@ public class FCSHManager implements ProjectComponent {
   public void initComponent() {
   }
 
+  public void setLivecodingMode(boolean livecodingMode) {
+    this.livecodingMode = livecodingMode;
+  }
 }

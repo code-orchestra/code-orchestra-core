@@ -1,5 +1,7 @@
 package codeOrchestra.generator;
 
+import codeOrchestra.actionScript.compiler.fcsh.FCSHException;
+import codeOrchestra.actionScript.compiler.fcsh.FCSHManager;
 import codeOrchestra.actionscript.modulemaker.CompilerKind;
 import codeOrchestra.actionscript.modulemaker.view.FlexSDKSettings;
 import codeOrchestra.actionscript.run.compiler.properties.CompilerSettings;
@@ -69,6 +71,8 @@ import java.util.*;
 public final class CodeOrchestraGenerationUtil {
 
   private static final Logger LOG = Logger.getLogger("CodeGenerator");
+
+  public static boolean livecodingFCSH;
 
   private CodeOrchestraGenerationUtil() {
   }
@@ -172,8 +176,9 @@ public final class CodeOrchestraGenerationUtil {
 
   public static boolean generateModuleWithDependencies(@Nullable IOperationContext operationContext, final Project project, boolean rebuildAll, final IModule rootModule, @Nullable IRemoteGenerationCallback remoteGenerationCallback, BuildProvider buildProvider) {
     OutputType rootModuleOutputType = CodeOrchestraGenerateManager.getOwnOutputType(rootModule.getModuleReference());
+    boolean codeOrchestraModuleGeneration = rootModule instanceof Solution && rootModuleOutputType != null && SolutionUtils.isActionScriptDependent((Solution) rootModule);
 
-    if (rootModule instanceof Solution) { // Definitely so
+    if (codeOrchestraModuleGeneration) {
       CompilerKind currentCompiler = FlexSDKSettings.getInstance().getCompilerKind();
       CompilerSettings compilerSettings = ((Solution) rootModule).getModuleDescriptor().getCompilerSettings();
 
@@ -192,7 +197,6 @@ public final class CodeOrchestraGenerationUtil {
 
     CodeOrchestraGenerateManager codeOrchestraGenerateManager = project.getComponent(CodeOrchestraGenerateManager.class);
     boolean codeOrchestraGenerateContextInitialized = false;
-    boolean codeOrchestraModuleGeneration = rootModule instanceof Solution && rootModuleOutputType != null && SolutionUtils.isActionScriptDependent((Solution) rootModule);
     CodeOrchestraGenerationContext codeOrchestraGenerationContext = null;
     Map<Solution, Boolean> dependencies = null;
 
@@ -201,6 +205,25 @@ public final class CodeOrchestraGenerationUtil {
       RemoteGenerationUIFacade remoteFacade = new RemoteGenerationUIFacade(project, rebuildAll, rootModule, buildProvider);
       remoteFacade.generateRemotely();
       return true;
+    }
+
+    if (buildProvider == BuildProvider.LIVE_CODING_INCREMENTAL && !livecodingFCSH) {
+      try {
+        FCSHManager fcshManager = project.getComponent(FCSHManager.class);
+        fcshManager.setLivecodingMode(true);
+        fcshManager.restart();
+      } catch (FCSHException e) {
+        LOG.error("Unable to start livecoding mode in FCSH", e);
+      }
+    } else if (buildProvider != BuildProvider.LIVE_CODING_INCREMENTAL && livecodingFCSH) {
+      try {
+        FCSHManager fcshManager = project.getComponent(FCSHManager.class);
+        fcshManager.setLivecodingMode(false);
+        fcshManager.restart();
+      } catch (FCSHException e) {
+        LOG.error("Unable to stop livecoding mode in FCSH", e);
+      }
+      livecodingFCSH = false;
     }
 
     boolean generationOK = false;

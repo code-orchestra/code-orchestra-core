@@ -1,6 +1,8 @@
 package codeOrchestra.actionscript.modulemaker;
 
+import codeOrchestra.actionScript.compiler.fcsh.console.command.impl.LivecodingStartCommand;
 import codeOrchestra.actionscript.liveCoding.settings.LiveCodingSettings;
+import codeOrchestra.generator.CodeOrchestraGenerationUtil;
 import com.intellij.openapi.progress.ProgressIndicator;
 import com.intellij.openapi.project.Project;
 import codeOrchestra.actionScript.compiler.fcsh.FCSHException;
@@ -74,10 +76,10 @@ public class ASModuleMaker {
 
     // Live root module dependencies
     LiveCodingSession liveCodingSession = LiveCodingManager.instance().getCurrentSession();
+    CodeOrchestraGenerationContext currentContext = codeOrchestraGenerateManager.getCurrentContext();
     if (liveCodingSession != null) {
       ModuleReference rootModuleReference = liveCodingSession.getRootModuleReference();
       IModule rootModule = MPSModuleRepository.getInstance().getModule(rootModuleReference);
-      CodeOrchestraGenerationContext currentContext = codeOrchestraGenerateManager.getCurrentContext();
 
       if (rootModule != null && rootModule instanceof Solution && currentContext != null && currentContext.getBuildProvider() == BuildProvider.LIVE_CODING_INCREMENTAL) {
         SolutionUtils.fetchDependenciesWithExcludes((Solution) rootModule, dependenciesMap);
@@ -125,6 +127,16 @@ public class ASModuleMaker {
       }
     } else {
       configFile = flexConfig.saveToFile(configFilePath);
+    }
+
+    if (currentContext != null && currentContext.getBuildProvider() == BuildProvider.LIVE_CODING_INCREMENTAL && !CodeOrchestraGenerationUtil.livecodingFCSH) {
+      try {
+        FCSHManager fcshManager = project.getComponent(FCSHManager.class);
+        fcshManager.submitCommand(new LivecodingStartCommand());
+      } catch (FCSHException e) {
+        LOG.error("Unable to start livecoding mode in FCSH", e);
+      }
+      CodeOrchestraGenerationUtil.livecodingFCSH = true;
     }
 
     // Copy source file dir contents to the source_gen dir

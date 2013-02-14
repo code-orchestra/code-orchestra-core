@@ -9,7 +9,7 @@ import codeOrchestra.utils.process.JavaLauncher;
  */
 public class FCSHLauncher extends JavaLauncher {
 
-  public FCSHLauncher() {
+  public FCSHLauncher(boolean livecodingMode) {
     super(null);
 
     StringBuilder programParameters = new StringBuilder();
@@ -18,7 +18,8 @@ public class FCSHLauncher extends JavaLauncher {
     programParameters.append(" -Duser.language=en");
     programParameters.append(" -Duser.country=US");
     programParameters.append(" -jar ");
-    programParameters.append(protect(flexHome + "/lib/fcsh.jar"));
+    String fcshJarPath = livecodingMode ? FlexSDKSettings.getInstance().getDefaultFlexSDKPath() + "/liblc/fcsh.jar" : flexHome + "/lib/fcsh.jar";
+    programParameters.append(protect(fcshJarPath));
     setProgramParameter(programParameters.toString());
 
     StringBuilder jvmParameters = new StringBuilder();

@@ -171,6 +171,10 @@ public class FlexSDKSettings implements PersistentStateComponent<FlexSDKSettings
     return flexSDKPath;
   }
 
+  public String getDefaultFlexSDKPath() {
+    return PathManager.getHomePath() + File.separator + DEFAULT_FLEX_SDK_DIR;
+  }
+
   public void setFlexSDKPath(String path) {
     getState().setFlexSDKPath(path);
     majorVersion = null;
