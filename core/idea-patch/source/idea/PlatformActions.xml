@@ -151,7 +151,8 @@
         </group>
         <separator/>
         <action id="SaveAll" class="com.intellij.ide.actions.SaveAllAction" icon="/actions/menu-saveall.png"/>
-        <group id="ExportImportGroup">
+        <!-- CO-4674 -->
+        <group id="ExportImportGroup" popup="true" text="Import/Export">
           <action id="ExportSettings" class="com.intellij.ide.actions.ExportSettingsAction"/>
           <action id="ImportSettings" class="com.intellij.ide.actions.ImportSettingsAction"/>
         </group>
