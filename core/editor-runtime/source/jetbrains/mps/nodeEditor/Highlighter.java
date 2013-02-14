@@ -47,6 +47,7 @@ import jetbrains.mps.util.WeakSet;
 import jetbrains.mps.util.annotation.CodeOrchestraPatch;
 import jetbrains.mps.workbench.highlighter.EditorComponentCreateListener;
 import jetbrains.mps.workbench.highlighter.EditorsHelper;
+import org.apache.commons.lang.ObjectUtils;
 import org.jetbrains.annotations.NonNls;
 import org.jetbrains.annotations.NotNull;
 
@@ -520,7 +521,9 @@ public class Highlighter implements EditorMessageOwner, ProjectComponent {
       return null;
     }
     for (EditorMessage message : messages) {
-      if (messageClass.equals(message.getClass()) && node.getId_().equals(message.getNode().getId_())) {
+      if (ObjectUtils.equals(messageClass, message.getClass())
+        && message.getNode() != null
+        && ObjectUtils.equals(node.getId_(), message.getNode().getId_())) {
         return message;
       }
     }
