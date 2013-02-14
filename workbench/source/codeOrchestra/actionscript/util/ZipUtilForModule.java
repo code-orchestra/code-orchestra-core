@@ -15,7 +15,7 @@ import java.util.zip.ZipOutputStream;
 public class ZipUtilForModule {
   public static boolean isValidName(String name) {
     if (name.equals(".svn") || name.equals(".git") || name.equals("source_gen")
-      || name.equals("source_gen.caches") || name.equals("classes_gen") || name.equals(".gitignore") || name.contains(".zip")) {
+      || name.equals("source_gen.caches") || name.equals("classes_gen") || name.equals(".gitignore") || name.contains(".zip") || name.equals("output_swf")) {
       return false;
     } else {
       return true;
