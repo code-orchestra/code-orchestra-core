@@ -21,6 +21,7 @@ import jetbrains.mps.smodel.SModel.ImportElement;
 import jetbrains.mps.smodel.persistence.def.DocUtil;
 import jetbrains.mps.smodel.persistence.def.IModelWriter;
 import jetbrains.mps.smodel.persistence.def.ModelPersistence;
+import jetbrains.mps.util.annotation.CodeOrchestraPatch;
 import org.jdom.Document;
 import org.jdom.Element;
 
@@ -32,6 +33,7 @@ public class ModelWriter7 implements IModelWriter {
     return 7;
   }
 
+  @CodeOrchestraPatch
   public Document saveModel(SModel sourceModel) {
     myModel = sourceModel;
     myHelper = new WriteHelper(sourceModel.getSModelReference());
@@ -54,21 +56,21 @@ public class ModelWriter7 implements IModelWriter {
     // languages
     for (ModuleReference languageNamespace : sourceModel.importedLanguages()) {
       Element languageElem = new Element(ModelPersistence.LANGUAGE);
-      languageElem.setAttribute(ModelPersistence.NAMESPACE, languageNamespace.toString());
+      languageElem.setAttribute(ModelPersistence.NAMESPACE, languageNamespace.getModuleFqName()); // CO-5053
       rootElement.addContent(languageElem);
     }
 
     // languages engaged on generation
     for (ModuleReference languageNamespace : sourceModel.engagedOnGenerationLanguages()) {
       Element languageElem = new Element(ModelPersistence.LANGUAGE_ENGAGED_ON_GENERATION);
-      languageElem.setAttribute(ModelPersistence.NAMESPACE, languageNamespace.toString());
+      languageElem.setAttribute(ModelPersistence.NAMESPACE, languageNamespace.getModuleFqName()); // CO-5053
       rootElement.addContent(languageElem);
     }
 
     //devkits
     for (ModuleReference devkitNamespace : sourceModel.importedDevkits()) {
       Element devkitElem = new Element(ModelPersistence.DEVKIT);
-      devkitElem.setAttribute(ModelPersistence.NAMESPACE, devkitNamespace.toString());
+      devkitElem.setAttribute(ModelPersistence.NAMESPACE, devkitNamespace.getModuleFqName()); // CO-5053
       rootElement.addContent(devkitElem);
     }
 
