@@ -209,14 +209,14 @@ public abstract class AbstractRGSClient implements RGSServiceClient, ProjectInfo
       if (mustStartLocalRGS()) {
         startLocalRGS();
 
-        try { Thread.sleep(1500); } catch (InterruptedException e1) {}
+        try { Thread.sleep(2000); } catch (InterruptedException e1) {}
 
         try {
           init();
         } catch (RGSException e1) {
           try {
             try {
-              Thread.sleep(1500);
+              Thread.sleep(3000);
             } catch (InterruptedException e2) {
               // ignore
             }
