@@ -13,6 +13,7 @@ import org.apache.commons.lang.StringUtils;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.File;
+import java.io.FilenameFilter;
 import java.util.*;
 
 /**
@@ -129,14 +130,32 @@ public final class FlexSDKLibsManager {
       throw new FlexSDKNotPresentException("Can't locate player libs in the Flex SDK path configured");
     }
 
+    File playerDir;
+    File playerglobalFile;
     if (playerDirs.length == 1) {
-      playerDirName = playerDirs[0].getName();
-      return new File(playerDirs[0], FlexSDKLib.PLAYERGLOBAL_SWC.getLibPath()).getPath();
+      playerDir = playerDirs[0];
+    } else {
+      playerDir = pickPlayerPath(playerDirs);
     }
 
-    File playerDir = pickPlayerPath(playerDirs);
+    playerglobalFile = getPlayerglobalSWCFile(playerDir);
     playerDirName = playerDir.getName();
-    return new File(playerDir, FlexSDKLib.PLAYERGLOBAL_SWC.getLibPath()).getPath();
+
+    return playerglobalFile.getPath();
+  }
+
+  private static File getPlayerglobalSWCFile(File playerDir) {
+    File[] swcs = playerDir.listFiles(new FilenameFilter() {
+      @Override
+      public boolean accept(File file, String s) {
+        String fileNameLowerCase = s.toLowerCase();
+        return fileNameLowerCase.startsWith("playerglobal") && fileNameLowerCase.endsWith(".swc");
+      }
+    });
+    if (swcs.length > 0) {
+      return swcs[0];
+    }
+    throw new RuntimeException("Can't locate a playerglobal SWC file in the " + playerDir.getPath() + " dir");
   }
 
   private static File pickPlayerPath(File[] playerDirs) {
