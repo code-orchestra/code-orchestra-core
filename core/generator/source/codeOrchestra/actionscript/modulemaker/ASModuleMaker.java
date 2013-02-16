@@ -1,16 +1,13 @@
 package codeOrchestra.actionscript.modulemaker;
 
-import codeOrchestra.actionScript.compiler.fcsh.console.command.impl.LivecodingStartCommand;
-import codeOrchestra.actionscript.liveCoding.settings.LiveCodingSettings;
-import codeOrchestra.generator.CodeOrchestraGenerationUtil;
-import com.intellij.openapi.progress.ProgressIndicator;
-import com.intellij.openapi.project.Project;
 import codeOrchestra.actionScript.compiler.fcsh.FCSHException;
 import codeOrchestra.actionScript.compiler.fcsh.FCSHFlexSDKRunner;
 import codeOrchestra.actionScript.compiler.fcsh.FCSHManager;
 import codeOrchestra.actionScript.compiler.fcsh.FSCHCompilerKind;
+import codeOrchestra.actionScript.compiler.fcsh.console.command.impl.LivecodingStartCommand;
 import codeOrchestra.actionscript.liveCoding.LiveCodingManager;
 import codeOrchestra.actionscript.liveCoding.LiveCodingSession;
+import codeOrchestra.actionscript.liveCoding.settings.LiveCodingSettings;
 import codeOrchestra.actionscript.make.ASModuleMakeType;
 import codeOrchestra.actionscript.make.ASModuleMakeTypeManager;
 import codeOrchestra.actionscript.modulemaker.config.FlexConfig;
@@ -26,7 +23,10 @@ import codeOrchestra.actionscript.view.utils.SolutionUtils;
 import codeOrchestra.flex.FalconRunner;
 import codeOrchestra.generator.CodeOrchestraGenerateManager;
 import codeOrchestra.generator.CodeOrchestraGenerationContext;
+import codeOrchestra.generator.CodeOrchestraGenerationUtil;
 import codeOrchestra.generator.listener.BuildProvider;
+import com.intellij.openapi.progress.ProgressIndicator;
+import com.intellij.openapi.project.Project;
 import jetbrains.mps.ide.messages.FileWithLogicalPosition;
 import jetbrains.mps.ide.progress.ITaskProgressHelper;
 import jetbrains.mps.logging.Logger;
@@ -38,7 +38,9 @@ import jetbrains.mps.util.FileUtil;
 import jetbrains.mps.vfs.FileSystem;
 
 import java.io.File;
-import java.util.*;
+import java.util.EnumSet;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * ActionScript module maker utilizing Flex SDK compiler.
@@ -142,10 +144,10 @@ public class ASModuleMaker {
     // Copy source file dir contents to the source_gen dir
     for (Solution dependency : configBuilder.getDependencies()) {
       if (!SolutionUtils.isStubSolution(dependency)) {
-        prepareSources(project, dependency);
+        prepareSources(dependency);
       }
     }
-    prepareSources(project, solution);
+    prepareSources(solution);
 
     // Custom SDK config file
     if (compilerSettings.useCustomSDKConfiguration) {
@@ -222,8 +224,14 @@ public class ASModuleMaker {
     throw new IllegalStateException("Unsupported output type: " + outputType);
   }
 
-  private void prepareSources(Project project, Solution module) {
-    File sourceGenDir = new File(module.getGeneratorOutputPath());
+  private void prepareSources(Solution module) {
+    // RF-1280
+    String generatorOutputPath = module.getGeneratorOutputPath();
+    if (generatorOutputPath == null) {
+      return;
+    }
+
+    File sourceGenDir = new File(generatorOutputPath);
 
     // RF-688
     if (!sourceGenDir.exists()) {
