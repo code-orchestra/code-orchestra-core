@@ -159,7 +159,10 @@ public class FlexConfigBuilder {
       // Live incremental generation
       if (liveIncrementalGeneration) {
         // Add root module generated sources
-        flexConfig.addSourcePath(rootModule.getGeneratorOutputPath());
+//        flexConfig.addSourcePath(rootModule.getGeneratorOutputPath());
+        String outputFileName = ((Solution) rootModule).getModuleDescriptor().getCompilerSettings().outputFileName.replaceFirst("\\.swf$", ".swc");
+        String outputPath = rootModule.getGeneratorOutputPath().replaceFirst("source_gen$", "output_swf");
+        flexConfig.addLibraryPath(outputPath + "/" + outputFileName);  // TODO: hack!
 
         // Load root module link report file for externs for Live-Coding incremental module
         flexConfig.setLoadExternsFilePath(getLinkReportFilePath(MPSModuleRepository.getInstance().getModule(liveCodingSession.getRootModuleReference())));
@@ -231,24 +234,7 @@ public class FlexConfigBuilder {
 
     // Include classes (SWC)
     if (outputType == OutputType.FLEX_LIBRARY) {
-      List<String> excludedPackages = compilerSettings.getExcludedPackages();
-      for (SModelDescriptor sModelDescriptor : compiledModule.getOwnModelDescriptors()) {
-        for (SNode root : sModelDescriptor.getSModel().roots()) {
-          String fqName = null;
-          String namespace = sModelDescriptor.getLongName();
-
-          if (excludedPackages.contains(namespace)) {
-            continue;
-          }
-
-          if (StringUtils.isEmpty(namespace)) {
-            fqName = root.getName();
-          } else {
-            fqName = namespace + "." + root.getName();
-          }
-          flexConfig.addClass(fqName);
-        }
-      }
+      addClassesToLibrary(compilerSettings, flexConfig);
     }
 
     // RSL
@@ -338,6 +324,27 @@ public class FlexConfigBuilder {
     }
 
     return flexConfig;
+  }
+
+  public void addClassesToLibrary(CompilerSettings compilerSettings, FlexConfig flexConfig) {
+    List<String> excludedPackages = compilerSettings.getExcludedPackages();
+    for (SModelDescriptor sModelDescriptor : compiledModule.getOwnModelDescriptors()) {
+      for (SNode root : sModelDescriptor.getSModel().roots()) {
+        String fqName = null;
+        String namespace = sModelDescriptor.getLongName();
+
+        if (excludedPackages.contains(namespace)) {
+          continue;
+        }
+
+        if (StringUtils.isEmpty(namespace)) {
+          fqName = root.getName();
+        } else {
+          fqName = namespace + "." + root.getName();
+        }
+        flexConfig.addClass(fqName);
+      }
+    }
   }
 
   private String getPlayerSWCPath() {

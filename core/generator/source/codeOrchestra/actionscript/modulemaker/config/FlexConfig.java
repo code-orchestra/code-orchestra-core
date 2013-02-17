@@ -57,6 +57,11 @@ public class FlexConfig {
   private List<String> externalLibraryPaths = new ArrayList<String>();
 
   List<String> locales;
+
+  public String getOutputPath() {
+    return outputPath;
+  }
+
   private String outputPath;
   private String targetPlayerVersion;
   private boolean debug;
@@ -72,6 +77,10 @@ public class FlexConfig {
   private boolean incremental = true;
 
   private boolean includeInheritanceDependenciesOnly;
+
+  public void setLibrary(boolean library) {
+    isLibrary = library;
+  }
 
   private boolean isLibrary;
   private static final String INCLUDE_FILE_ELEMENT = "include-file";

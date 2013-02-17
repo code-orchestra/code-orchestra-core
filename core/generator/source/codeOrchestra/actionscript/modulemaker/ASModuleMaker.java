@@ -190,6 +190,32 @@ public class ASModuleMaker {
       LOG.infoWithMarker("Compilation is completed successfully", ASMessageMarker.MARKER);
     }
 
+    if (LiveCodingManager.instance().nextGenerationMustBeLive() && currentContext != null && currentContext.getBuildProvider() != BuildProvider.LIVE_CODING_INCREMENTAL) {
+      flexConfig.setOutputPath(flexConfig.getOutputPath().replaceFirst("\\.swf$", ".swc")); // TODO: hack!
+      flexConfig.setLinkReportFilePath(null);
+      flexConfig.setLibrary(true);
+      configBuilder.addClassesToLibrary(compilerSettings, flexConfig);
+      configFile.delete();
+      configFile = flexConfig.saveToFile(configFilePath);
+      if (compilerKind == CompilerKind.FCSH) {
+        project.getComponent(FCSHManager.class).clearTargets();
+      }
+      flexSDKProcessRunner = getFlexSDKRunner(project, compilerSettings, moduleMakeType, configFile, OutputType.FLEX_LIBRARY, compilerKind, solution);
+      compilationResult = flexSDKProcessRunner.run();
+      if (compilationResult.getErrors() > 0) {
+        final String outputFile = flexSDKProcessRunner.getErrorLogFilePath();
+        String errorMessage = String.format(
+          "Compilation failed with (%d) error(s): %s",
+          compilationResult.getErrors(),
+          FileUtil.getRelativePath(new File(outputFile).getPath(), new File(project.getBaseDir().getPath()).getPath(), File.separator));
+        FileWithLogicalPosition fileWithLogicalPosition = new FileWithLogicalPosition(FileSystem.getInstance().getFileByPath(outputFile), 0, 0);
+
+        LOG.errorWithMarker(errorMessage, fileWithLogicalPosition, ASMessageMarker.MARKER);
+      } else {
+        LOG.infoWithMarker("Compilation to library is completed successfully", ASMessageMarker.MARKER);
+      }
+    }
+
     return compilationResult;
   }
 
