@@ -48,4 +48,8 @@ public interface IRemoteGenerationService extends Remote {
   void ping() throws RemoteException;
 
   void setGenerationSettings(RemoteGenerationSettings generationSettings) throws RemoteException;
+
+  boolean isProfilingInProgress() throws RemoteException;
+
+  void toggleCPUProfiling(boolean on) throws RemoteException;
 }

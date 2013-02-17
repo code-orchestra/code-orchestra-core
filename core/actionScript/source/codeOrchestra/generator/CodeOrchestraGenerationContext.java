@@ -39,6 +39,9 @@ public class CodeOrchestraGenerationContext {
   private CompilationResult compilationResult;
   private Set<ModuleReference> excludedModules = new HashSet<ModuleReference>();
 
+  private long generationAndCompilationTime;
+  private long compilationTime;
+
   CodeOrchestraGenerationContext(@NotNull ModuleReference rootModule) {
     this.rootModule = rootModule;
   }
@@ -181,5 +184,20 @@ public class CodeOrchestraGenerationContext {
   public boolean isExcluded(ModuleReference moduleReference) {
     return excludedModules.contains(moduleReference);
   }
-  
+
+  public long getGenerationTime() {
+    return generationAndCompilationTime - compilationTime;
+  }
+
+  public void setGenerationAndCompilationTime(long generationAndCompilationTime) {
+    this.generationAndCompilationTime = generationAndCompilationTime;
+  }
+
+  public long getCompilationTime() {
+    return compilationTime;
+  }
+
+  public void setCompilationTime(long compilationTime) {
+    this.compilationTime = compilationTime;
+  }
 }

@@ -380,6 +380,27 @@ public abstract class AbstractRGSClient implements RGSServiceClient, ProjectInfo
   }
 
   @Override
+  public boolean isProfilingInProgress() throws RGSException {
+    if (remoteGenerationService == null) {
+      return false;
+    }
+    try {
+      return remoteGenerationService.isProfilingInProgress();
+    } catch (RemoteException e) {
+      throw new RGSException(e);
+    }
+  }
+
+  @Override
+  public void toggleCPUProfiling(boolean on) throws RGSException {
+    try {
+      remoteGenerationService.toggleCPUProfiling(on);
+    } catch (RemoteException e) {
+      throw new RGSException(e);
+    }
+  }
+
+  @Override
   public void generate(AbstractRemoteModuleReference remoteModuleReference, boolean rebuildAll, BuildProvider buildProvider, IRemoteGenerationCallback generationCallback, IRemoteProgressIndicator progressIndicator) throws RGSException {
     try {
       UnicastRemoteObject.exportObject(generationCallback, 0);

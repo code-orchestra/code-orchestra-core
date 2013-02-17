@@ -207,6 +207,8 @@ public final class CodeOrchestraGenerationUtil {
       return true;
     }
 
+    long generationStart = System.currentTimeMillis();
+
     if (buildProvider == BuildProvider.LIVE_CODING_INCREMENTAL && !livecodingFCSH) {
       try {
         FCSHManager fcshManager = project.getComponent(FCSHManager.class);
@@ -539,7 +541,6 @@ public final class CodeOrchestraGenerationUtil {
       rebuildAll |= BuildReport.isSufficientlyDifferentFrom(codeOrchestraGenerationContext);
 
       // The actual generation
-      long generationStart = System.currentTimeMillis();
       try {
         generationOK = GeneratorUIFacade.getInstance().generateModels(
           invocationContext,
@@ -552,6 +553,7 @@ public final class CodeOrchestraGenerationUtil {
         }
       }
       long generationTook = System.currentTimeMillis() - generationStart;
+      codeOrchestraGenerationContext.setGenerationAndCompilationTime(generationTook);
 
       // Report the generated solution size
       if (generationOK && codeOrchestraGenerationContext != null) {
@@ -561,6 +563,11 @@ public final class CodeOrchestraGenerationUtil {
         if (report != null) {
           String message = "Generation completed successfully in " + generationTook + " ms (file size: " + report.getUncompressedSizeKB() + "kb, gziped: " + report.getCompressedSizeKB() + "kb)";
           Logger.getLogger("astojs").infoWithMarker(message, ASMessageMarker.MARKER);
+        } else {
+          String message = "Compilation is completed successfully (generation: "
+            + codeOrchestraGenerationContext.getGenerationTime() + "ms / compilation: "
+            + codeOrchestraGenerationContext.getCompilationTime() + "ms)";
+          Logger.getLogger("ASModuleMaker").infoWithMarker(message, ASMessageMarker.MARKER);
         }
       }
 
