@@ -1,6 +1,7 @@
 package codeOrchestra.actionscript.socket;
 
 import codeOrchestra.actionscript.logging.settings.LoggingSettings;
+import jetbrains.mps.logging.Logger;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -10,6 +11,8 @@ import java.net.Socket;
  * @author Alexander Eliseyev
  */
 public abstract class ServerSocketThread extends Thread {
+
+  private final static Logger LOG = Logger.getLogger(ServerSocketThread.class);
 
   private int port;
   private ClientSocketHandlerFactory handlerFactory;
@@ -44,7 +47,7 @@ public abstract class ServerSocketThread extends Thread {
         new Thread(lastHandler = handlerFactory.createHandler(clientSocket)).start();
       }
     } catch (IOException e) {
-      // Just ignore it, you'll be fine
+      LOG.error("Can't open logging server socket", e);
     }
   }
 
