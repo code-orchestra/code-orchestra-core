@@ -1,16 +1,13 @@
 package codeOrchestra.rgs.server;
 
-import codeOrchestra.actionscript.liveCoding.settings.LiveCodingSettings;
-import codeOrchestra.actionscript.modulemaker.view.FlexSDKSettings;
-import codeOrchestra.rgs.state.model.*;
-import com.intellij.ide.impl.ProjectUtil;
-import com.intellij.openapi.command.impl.DummyProject;
-import com.intellij.openapi.project.Project;
 import codeOrchestra.actionscript.liveCoding.LiveCodingManager;
 import codeOrchestra.actionscript.liveCoding.LiveCodingSession;
 import codeOrchestra.actionscript.liveCoding.run.config.ILiveCodingRunConfiguration;
+import codeOrchestra.actionscript.liveCoding.settings.LiveCodingSettings;
 import codeOrchestra.actionscript.make.ASModuleMakeType;
 import codeOrchestra.actionscript.make.ASModuleMakeTypeManager;
+import codeOrchestra.actionscript.modulemaker.view.FlexSDKSettings;
+import codeOrchestra.actionscript.yourkit.YourKitControllerManager;
 import codeOrchestra.generator.CodeOrchestraGenerationUtil;
 import codeOrchestra.generator.listener.BuildProvider;
 import codeOrchestra.rgs.IRemoteGenerationCallback;
@@ -21,8 +18,12 @@ import codeOrchestra.rgs.server.live.RGSLiveCodingSession;
 import codeOrchestra.rgs.server.sshd.RGSSSHDServer;
 import codeOrchestra.rgs.server.util.ProjectReloadUtil;
 import codeOrchestra.rgs.state.*;
+import codeOrchestra.rgs.state.model.*;
 import codeOrchestra.utils.ApplicationRestarter;
 import codeOrchestra.utils.ProjectHolder;
+import com.intellij.ide.impl.ProjectUtil;
+import com.intellij.openapi.command.impl.DummyProject;
+import com.intellij.openapi.project.Project;
 import jetbrains.mps.ide.ThreadUtils;
 import jetbrains.mps.logging.ILoggingHandler;
 import jetbrains.mps.logging.Logger;
@@ -293,6 +294,37 @@ public class RGSServerImpl implements IRemoteGenerationService, Serializable {
   public void setGenerationSettings(RemoteGenerationSettings generationSettings) throws RemoteException {
     FlexSDKSettings.getInstance().setCompilerKind(generationSettings.getCompilerKind());
     LiveCodingSettings.getInstance().setCompilerKind(generationSettings.getLiveCodingCompilerKind());
+  }
+
+  @Override
+  public boolean isProfilingInProgress() throws RemoteException {
+    YourKitControllerManager myControllerManager = null;
+    try {
+      myControllerManager = YourKitControllerManager.getInstance();
+    } catch (Exception e) {
+      throw new RuntimeException("Can't get instance of YourKitControllerManager");
+    }
+    return myControllerManager.isInProgress();
+  }
+
+  @Override
+  public void toggleCPUProfiling(boolean on) throws RemoteException {
+    YourKitControllerManager myControllerManager = null;
+    try {
+      myControllerManager = YourKitControllerManager.getInstance();
+    } catch (Exception e) {
+      throw new RuntimeException("Can't get instance of YourKitControllerManager", e);
+    }
+    try {
+      if (on) {
+        myControllerManager.startCPUProfiling();
+      } else {
+        String path = myControllerManager.stopCPUProfilingAndSaveSnapshot();
+        System.out.println("Saved CPU snapshot to: " + path);
+      }
+    } catch (Exception e) {
+      throw new RuntimeException("Can't turn CPU profiling " + (on ? "on" : "off"), e);
+    }
   }
 
   @Override

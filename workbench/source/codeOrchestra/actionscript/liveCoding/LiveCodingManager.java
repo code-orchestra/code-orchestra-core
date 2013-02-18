@@ -1,5 +1,7 @@
 package codeOrchestra.actionscript.liveCoding;
 
+import codeOrchestra.actionscript.view.ASMessageMarker;
+import codeOrchestra.utils.NotificationUtils;
 import com.intellij.openapi.application.impl.LaterInvocator;
 import com.intellij.openapi.components.AbstractProjectComponent;
 import com.intellij.openapi.components.ProjectComponent;
@@ -31,10 +33,14 @@ import codeOrchestra.rgs.server.RGSParametersCLI;
 import codeOrchestra.rgs.state.model.AbstractRemoteModuleReference;
 import codeOrchestra.rgs.state.model.RemoteNodeId;
 import codeOrchestra.utils.ProjectHolder;
+import jetbrains.mps.logging.Logger;
 import jetbrains.mps.project.IModule;
 import jetbrains.mps.project.ModuleContext;
 import jetbrains.mps.project.Solution;
 import jetbrains.mps.project.structure.modules.ModuleReference;
+import jetbrains.mps.reloading.ClassLoaderManager;
+import jetbrains.mps.reloading.ReloadAdapter;
+import jetbrains.mps.reloading.ReloadListener;
 import jetbrains.mps.smodel.MPSModuleRepository;
 import jetbrains.mps.smodel.SModel;
 import jetbrains.mps.smodel.SModelDescriptor;
@@ -54,6 +60,8 @@ import java.util.Set;
  */
 public class LiveCodingManager extends AbstractProjectComponent implements ProjectComponent {
 
+  private static Logger LOG = Logger.getLogger(LiveCodingManager.class);
+
   public static final String LIVE_CODING_MODEL_NAME = "codeOrchestra.liveCoding.load";
 
   public static LiveCodingManager instance() {
@@ -63,6 +71,16 @@ public class LiveCodingManager extends AbstractProjectComponent implements Proje
     }
     return project.getComponent(LiveCodingManager.class);
   }
+
+  private ReloadListener myReloadListener = new ReloadAdapter() {
+    @Override
+    public void unload() {
+      stopSession();
+
+      NotificationUtils.showRGSBalloon("Live Coding Session Terminated");
+      LOG.infoWithMarker("Live Coding Session Terminated", ASMessageMarker.MARKER);
+    }
+  };
 
   private BuildListener myBuildListener = new MyBuildListener();
 
@@ -171,6 +189,8 @@ public class LiveCodingManager extends AbstractProjectComponent implements Proje
     addListener(finisherThreadLiveCodingListener);
 
     if (!RGSParametersCLI.isInServerMode()) {
+      ClassLoaderManager.getInstance().addReloadHandler(myReloadListener);
+
       BuildBroadcaster.getInstance().addBuildListener(myBuildListener);
 
       StartupManager.getInstance(myProject).runWhenProjectIsInitialized(new Runnable() {
@@ -194,6 +214,10 @@ public class LiveCodingManager extends AbstractProjectComponent implements Proje
   @Override
   public void disposeComponent() {
     BuildBroadcaster.getInstance().removeBuildListener(myBuildListener);
+
+    if (!RGSParametersCLI.isInServerMode()) {
+      ClassLoaderManager.getInstance().removeReloadHandler(myReloadListener);
+    }
 
     if (widget != null) {
       widget.dispose();

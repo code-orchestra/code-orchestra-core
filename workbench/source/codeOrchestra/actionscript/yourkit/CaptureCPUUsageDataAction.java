@@ -15,12 +15,12 @@ import java.util.Map;
  * @author Anton.I.Neverov
  */
 public class CaptureCPUUsageDataAction extends BaseAction implements Toggleable {
-  private static final Icon ICON = new ImageIcon(CaptureCPUUsageDataAction.class.getResource("cpu.png"));
+
   private static final String selectedText = "Stop capturing CPU Usage Data and save snapshot";
   private static final String unSelectedText = "Start capturing CPU Usage Data";
 
   public CaptureCPUUsageDataAction() {
-    super(unSelectedText, "", ICON);
+    super(unSelectedText, "", Icons.CPU_ICON);
     this.setIsAlwaysVisible(true);
     this.setExecuteOutsideCommand(false);
     super.setDisableOnNoProject(false);

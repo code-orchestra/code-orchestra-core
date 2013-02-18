@@ -61,6 +61,8 @@ public class ASModuleMaker {
     assert module instanceof Solution;
     Solution solution = (Solution) module;
 
+    long compilationStart = System.currentTimeMillis();
+
     // Report the progress
     String progressText = "Compiling " + module.toString() + " with Flex SDK";
     if (progressObject instanceof ITaskProgressHelper) {
@@ -177,8 +179,12 @@ public class ASModuleMaker {
     // Get the flex SDK runner (compc, mxmlc, fcsh, etc)
     AbstractFlexSDKRunner flexSDKProcessRunner = getFlexSDKRunner(project, compilerSettings, moduleMakeType, configFile, outputType, compilerKind, solution);
 
+
     // Check the compilation result
     CompilationResult compilationResult = flexSDKProcessRunner.run();
+    long compilationTook = System.currentTimeMillis() - compilationStart;
+    currentContext.setCompilationTime(compilationTook);
+
     if (compilationResult.getErrors() > 0) {
       final String outputFile = flexSDKProcessRunner.getErrorLogFilePath();
       String errorMessage = String.format(
@@ -189,7 +195,8 @@ public class ASModuleMaker {
 
       LOG.errorWithMarker(errorMessage, fileWithLogicalPosition, ASMessageMarker.MARKER);
     } else {
-      LOG.infoWithMarker("Compilation is completed successfully", ASMessageMarker.MARKER);
+      // LOG.infoWithMarker("Compilation is completed successfully", ASMessageMarker.MARKER);
+      // Now we report in the /codeOrchestra/generator/CodeOrchestraGenerationUtil.java
     }
 
     if (LiveCodingManager.instance().nextGenerationMustBeLive() && currentContext != null && currentContext.getBuildProvider() != BuildProvider.LIVE_CODING_INCREMENTAL) {

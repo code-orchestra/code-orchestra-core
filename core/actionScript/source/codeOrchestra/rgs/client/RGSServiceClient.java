@@ -64,4 +64,8 @@ public interface RGSServiceClient {
 
   boolean pushNewMakeType(@NotNull String moduleName, @NotNull ASModuleMakeType makeType) throws RGSException;
 
+  boolean isProfilingInProgress() throws RGSException;
+
+  void toggleCPUProfiling(boolean on) throws RGSException;
+
 }

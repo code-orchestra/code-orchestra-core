@@ -15,6 +15,7 @@
  */
 package jetbrains.mps.reloading;
 
+import codeOrchestra.rgs.server.RGSParametersCLI;
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.components.ApplicationComponent;
 import com.intellij.openapi.progress.ProgressIndicator;
@@ -106,6 +107,10 @@ public class ClassLoaderManager implements ApplicationComponent {
 
   public void reloadAll(@NotNull ProgressIndicator indicator) {
     LOG.assertCanWrite();
+
+    if (RGSParametersCLI.isInServerMode()) {
+      LOG.info("Reloading classes...");
+    }
 
     indicator.pushState();
     try {

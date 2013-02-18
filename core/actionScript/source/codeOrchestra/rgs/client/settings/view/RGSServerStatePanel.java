@@ -1,5 +1,6 @@
 package codeOrchestra.rgs.client.settings.view;
 
+import codeOrchestra.actionscript.yourkit.Icons;
 import codeOrchestra.rgs.client.RGSServiceClient;
 import com.intellij.openapi.wm.WindowManager;
 import com.intellij.ui.LightColors;
@@ -47,6 +48,7 @@ public class RGSServerStatePanel extends JDialog implements StateRefreshable {
 
   private JButton restartButton;
   private JButton connectButton;
+  private JToggleButton toggleProfilingButton;
 
   public RGSServerStatePanel() {
     setLayout(new BorderLayout());
@@ -68,9 +70,10 @@ public class RGSServerStatePanel extends JDialog implements StateRefreshable {
     memoryPanel.add(myMemoryLabel);
     panel.add(memoryPanel);
 
-    JPanel buttonsPanel = new JPanel(new GridLayout(1, 2));
+    JPanel buttonsPanel = new JPanel(/* new GridLayout(1, 2) */);
     buttonsPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
     buttonsPanel.add(new JLabel(""));
+
     connectButton = new JButton("Connect");
     connectButton.addActionListener(new ActionListener() {
       @Override
@@ -83,6 +86,7 @@ public class RGSServerStatePanel extends JDialog implements StateRefreshable {
       }
     });
     buttonsPanel.add(connectButton);
+
     restartButton = new JButton("Restart");
     restartButton.addActionListener(new ActionListener() {
       @Override
@@ -101,7 +105,7 @@ public class RGSServerStatePanel extends JDialog implements StateRefreshable {
             try { Thread.sleep(2000); } catch (InterruptedException e) { }
 
             try {
-              ApplicationRGSClient.getInstance().init();
+              ApplicationRGSClient.getInstance().initAndTryToRestart();
             } catch (RGSException e) {
               // ignore
             }
@@ -110,6 +114,21 @@ public class RGSServerStatePanel extends JDialog implements StateRefreshable {
       }
     });
     buttonsPanel.add(restartButton);
+
+    toggleProfilingButton = new JToggleButton(Icons.CPU_ICON);
+    toggleProfilingButton.setMaximumSize(new Dimension(40, 100));
+    toggleProfilingButton.addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent actionEvent) {
+        try {
+          ApplicationRGSClient.getInstance().toggleCPUProfiling(toggleProfilingButton.isSelected());
+        } catch (RGSException e) {
+          // ignore
+        }
+      }
+    });
+    buttonsPanel.add(toggleProfilingButton);
+
     panel.add(buttonsPanel);
 
     add(panel, BorderLayout.NORTH);
@@ -139,6 +158,15 @@ public class RGSServerStatePanel extends JDialog implements StateRefreshable {
     }
 
     connectButton.setEnabled(state instanceof RGSNotConnectedState);
+    toggleProfilingButton.setEnabled(state instanceof RGSConnectedState);
+
+    try {
+      toggleProfilingButton.setSelected(rgsClient.isProfilingInProgress());
+    } catch (RGSException e) {
+      LOG.error("Can't update the toggle CPU profiling button state", e);
+      toggleProfilingButton.setEnabled(false);
+    }
+
     try {
       restartButton.setEnabled(rgsClient.canBeRestarted());
     } catch (RGSException e) {
@@ -161,7 +189,6 @@ public class RGSServerStatePanel extends JDialog implements StateRefreshable {
     } else {
       myMemoryLabel.setText(UNKNOWN_MEMORY_CAPTION);
     }
-
   }
 
 }

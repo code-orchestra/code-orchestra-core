@@ -28,6 +28,10 @@ public abstract class AbstractArtifactPreparer implements IArtifactPreparer {
 
   @Override
   public final void prepare(BuildEvent buildEvent) throws RGSException {
+    if (!buildEvent.isSuccessful() && buildEvent.getProvider() == BuildProvider.LIVE_CODING_INCREMENTAL) {
+      return;
+    }
+
     ModuleReference rootModuleReference = buildEvent.getRootModuleReference();
     IModule module = MPSModuleRepository.getInstance().getModule(rootModuleReference);
     if (module == null) {
