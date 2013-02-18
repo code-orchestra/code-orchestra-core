@@ -319,7 +319,8 @@ public class RGSServerImpl implements IRemoteGenerationService, Serializable {
       if (on) {
         myControllerManager.startCPUProfiling();
       } else {
-        myControllerManager.stopCPUProfilingAndSaveSnapshot();
+        String path = myControllerManager.stopCPUProfilingAndSaveSnapshot();
+        System.out.println("Saved CPU snapshot to: " + path);
       }
     } catch (Exception e) {
       throw new RuntimeException("Can't turn CPU profiling " + (on ? "on" : "off"), e);

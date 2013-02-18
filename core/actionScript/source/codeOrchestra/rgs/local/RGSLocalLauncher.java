@@ -123,6 +123,10 @@ public class RGSLocalLauncher extends JavaLauncher {
       vmOptionStrings.add("-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5006");
     }
 
+    if (System.getProperty("rgs.local.profiling") != null) {
+      vmOptionStrings.add("-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5006");
+    }
+
     // RE-3949
     if (System.getProperty("dataIndexerMode") != null) {
       vmOptionStrings.add("-DdataIndexerMode=" + System.getProperty("dataIndexerMode"));
