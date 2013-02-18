@@ -124,7 +124,7 @@ public class RGSLocalLauncher extends JavaLauncher {
     }
 
     if (System.getProperty("rgs.local.profiling") != null) {
-      vmOptionStrings.add("-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5006");
+      vmOptionStrings.add("-agentpath:libyjpagent.jnilib");
     }
 
     // RE-3949

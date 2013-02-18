@@ -75,10 +75,10 @@ public class LiveCodingManager extends AbstractProjectComponent implements Proje
   private ReloadListener myReloadListener = new ReloadAdapter() {
     @Override
     public void unload() {
-      stopSession();
-
-      NotificationUtils.showRGSBalloon("Live Coding Session Terminated");
-      LOG.infoWithMarker("Live Coding Session Terminated", ASMessageMarker.MARKER);
+      if (stopSession()) {
+        NotificationUtils.showRGSBalloon("Live Coding Session Terminated");
+        LOG.infoWithMarker("Live Coding Session Terminated", ASMessageMarker.MARKER);
+      }
     }
   };
 
@@ -382,9 +382,9 @@ public class LiveCodingManager extends AbstractProjectComponent implements Proje
     fireSessionStart();
   }
 
-  public synchronized void stopSession() {
+  public synchronized boolean stopSession() {
     if (this.currentSession == null) {
-      return;
+      return false;
     }
 
     if (!RGSParametersCLI.isInServerMode() && RGSClientSettings.getInstance().isUseRemoteGeneration()) {
@@ -397,6 +397,8 @@ public class LiveCodingManager extends AbstractProjectComponent implements Proje
 
     fireSessionEnd();
     this.currentSession = null;
+
+    return true;
   }
 
   public Solution getOrCreateLiveCodingModule() {
