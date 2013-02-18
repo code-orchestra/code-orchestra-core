@@ -12,7 +12,7 @@ public final class ExceptionUtils {
     if (message == null) {
       return false;
     }
-    return message.contains("Broken pipe");
+    return message.contains("Broken pipe") || message.contains("Bad file descriptor");
   }
 
 }
