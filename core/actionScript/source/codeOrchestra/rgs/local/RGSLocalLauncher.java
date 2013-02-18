@@ -1,7 +1,8 @@
 package codeOrchestra.rgs.local;
 
-import com.intellij.openapi.util.SystemInfo;
 import codeOrchestra.utils.process.JavaLauncher;
+import com.intellij.openapi.util.SystemInfo;
+import jetbrains.mps.logging.Logger;
 import jetbrains.mps.util.PathManager;
 
 import java.io.BufferedReader;
@@ -19,19 +20,11 @@ public class RGSLocalLauncher extends JavaLauncher {
   private static final String CODEORCHESTRA_VMOPTIONS_FILE = "codeorchestra.vmoptions";
   private static final String MAIN_CLASS = "codeOrchestra.rgs.server.bootstrap.RGSBootstrap";
 
-  public static void main(String[] args) throws IOException {
-    ProcessBuilder processBuilder = new RGSLocalLauncher().createProcessBuilder();
-    for (String s : processBuilder.command()) {
-      System.out.print(s + " ");
-    }
-
-    processBuilder.start();
-  }
-
   public RGSLocalLauncher() {
     super(getLocalRGSClassPath());
 
     setVirtualMachineParameter(getVMOptionsString());
+    setWorkingDirectory(getBinDirectory());
     setProgramParameter(MAIN_CLASS);
   }
 
@@ -98,7 +91,7 @@ public class RGSLocalLauncher extends JavaLauncher {
 
   private static List<String> getVMOptions() throws IOException {
     List<String> vmOptionStrings = new ArrayList<String>();
-    File vmOptionsFile = new File(new File(getHomePath(), "bin"), CODEORCHESTRA_VMOPTIONS_FILE);
+    File vmOptionsFile = new File(getBinDirectory(), CODEORCHESTRA_VMOPTIONS_FILE);
     if (!vmOptionsFile.exists()) {
       return vmOptionStrings;
     }
@@ -133,6 +126,10 @@ public class RGSLocalLauncher extends JavaLauncher {
     }
 
     return vmOptionStrings;
+  }
+
+  private static File getBinDirectory() {
+    return new File(getHomePath(), "bin");
   }
 
   private static String getAbsolutePathInHome(String relativePathInHome) {

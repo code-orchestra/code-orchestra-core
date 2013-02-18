@@ -68,4 +68,5 @@ public interface RGSServiceClient {
 
   void toggleCPUProfiling(boolean on) throws RGSException;
 
+  boolean isProfilingEnabled() throws RGSException;
 }

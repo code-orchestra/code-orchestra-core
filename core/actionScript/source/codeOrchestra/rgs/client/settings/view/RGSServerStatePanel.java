@@ -158,13 +158,22 @@ public class RGSServerStatePanel extends JDialog implements StateRefreshable {
     }
 
     connectButton.setEnabled(state instanceof RGSNotConnectedState);
-    toggleProfilingButton.setEnabled(state instanceof RGSConnectedState);
 
+    boolean profilingEnabled;
     try {
-      toggleProfilingButton.setSelected(rgsClient.isProfilingInProgress());
+      profilingEnabled = rgsClient.isProfilingEnabled();
     } catch (RGSException e) {
-      LOG.error("Can't update the toggle CPU profiling button state", e);
-      toggleProfilingButton.setEnabled(false);
+      profilingEnabled = false;
+    }
+    toggleProfilingButton.setEnabled(state instanceof RGSConnectedState && profilingEnabled);
+
+    if (toggleProfilingButton.isEnabled()) {
+      try {
+        toggleProfilingButton.setSelected(rgsClient.isProfilingInProgress());
+      } catch (RGSException e) {
+        LOG.error("Can't update the toggle CPU profiling button state", e);
+        toggleProfilingButton.setEnabled(false);
+      }
     }
 
     try {

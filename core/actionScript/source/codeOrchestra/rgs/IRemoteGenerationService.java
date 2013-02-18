@@ -52,4 +52,6 @@ public interface IRemoteGenerationService extends Remote {
   boolean isProfilingInProgress() throws RemoteException;
 
   void toggleCPUProfiling(boolean on) throws RemoteException;
+
+  boolean isProfilingEnabled() throws RemoteException;
 }

@@ -329,6 +329,11 @@ public class RGSServerImpl implements IRemoteGenerationService, Serializable {
   }
 
   @Override
+  public boolean isProfilingEnabled() throws RemoteException {
+    return YourKitControllerManager.isJVMLaunchedWithAgent();
+  }
+
+  @Override
   public void restart() throws RemoteException {
     try {
       ApplicationRestarter.restart();

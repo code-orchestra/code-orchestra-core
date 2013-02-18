@@ -22,6 +22,8 @@ import codeOrchestra.rgs.state.RGSState;
 import codeOrchestra.rgs.state.RGSUnknownState;
 import codeOrchestra.utils.BuildUtil;
 import jetbrains.mps.InternalFlag;
+import jetbrains.mps.logging.Logger;
+import org.apache.commons.lang.StringUtils;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -31,11 +33,14 @@ import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
+import java.util.List;
 
 /**
  * @author Alexander Eliseyev
  */
 public abstract class AbstractRGSClient implements RGSServiceClient, ProjectInfoHolder {
+
+  private static final Logger LOG = Logger.getLogger("RGS");
 
   private static final int CONNECTION_TIMEOUT = 5000;
   private AbstractRGSClient.RGSPingThread rgsPingThread;
@@ -96,7 +101,11 @@ public abstract class AbstractRGSClient implements RGSServiceClient, ProjectInfo
   private boolean startLocalRGS() {
     RGSLocalLauncher rgsLocalLauncher = new RGSLocalLauncher();
     try {
-      Process rgsProcess = rgsLocalLauncher.createProcessBuilder().start();
+      ProcessBuilder processBuilder = rgsLocalLauncher.createProcessBuilder();
+
+      LOG.info("Trying to start local RGS: [" + StringUtils.join(processBuilder.command(), " ") + "]");
+
+      Process rgsProcess = processBuilder.start();
       LocalRGSProcessHolder.getInstance().setCurrentLocalRGSProcess(rgsProcess);
       return true;
     } catch (IOException e) {
@@ -398,6 +407,18 @@ public abstract class AbstractRGSClient implements RGSServiceClient, ProjectInfo
   public void toggleCPUProfiling(boolean on) throws RGSException {
     try {
       remoteGenerationService.toggleCPUProfiling(on);
+    } catch (RemoteException e) {
+      throw new RGSException(e);
+    }
+  }
+
+  @Override
+  public boolean isProfilingEnabled() throws RGSException {
+    if (remoteGenerationService == null) {
+      return false;
+    }
+    try {
+      return remoteGenerationService.isProfilingEnabled();
     } catch (RemoteException e) {
       throw new RGSException(e);
     }
