@@ -175,7 +175,7 @@ public class FCSHManager implements ProjectComponent {
   public void clear() throws FCSHException {
     if (livecodingMode) {
       // FCSH in livecoding mode clears itself after every compilation
-      clearTargets();
+//      clearTargets();
       return;
     }
 
