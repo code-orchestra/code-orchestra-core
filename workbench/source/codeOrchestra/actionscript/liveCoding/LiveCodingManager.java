@@ -383,6 +383,10 @@ public class LiveCodingManager extends AbstractProjectComponent implements Proje
   }
 
   public synchronized void stopSession() {
+    if (this.currentSession == null) {
+      return;
+    }
+
     if (!RGSParametersCLI.isInServerMode() && RGSClientSettings.getInstance().isUseRemoteGeneration()) {
       try {
         ApplicationRGSClient.getInstance().reportLiveCodingSessionStop();

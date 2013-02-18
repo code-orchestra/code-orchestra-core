@@ -184,6 +184,9 @@ public abstract class AbstractRGSClient implements RGSServiceClient, ProjectInfo
 
   @Override
   public void reportLiveCodingSessionStop() throws RGSException {
+    if (remoteGenerationService == null) {
+      return;
+    }
     try {
       remoteGenerationService.reportLiveCodingSessionEnd();
     } catch (RemoteException e) {

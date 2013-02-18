@@ -302,7 +302,7 @@ public class RGSServerImpl implements IRemoteGenerationService, Serializable {
     try {
       myControllerManager = YourKitControllerManager.getInstance();
     } catch (Exception e) {
-      throw new RuntimeException("Can't get instance of YourKitControllerManager");
+      return false;
     }
     return myControllerManager.isInProgress();
   }
@@ -313,7 +313,8 @@ public class RGSServerImpl implements IRemoteGenerationService, Serializable {
     try {
       myControllerManager = YourKitControllerManager.getInstance();
     } catch (Exception e) {
-      throw new RuntimeException("Can't get instance of YourKitControllerManager", e);
+      // ignore
+      return;
     }
     try {
       if (on) {
