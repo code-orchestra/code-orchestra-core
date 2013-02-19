@@ -74,11 +74,11 @@ public abstract class ServerSocketThread extends Thread {
 
     socketOpen = false;
 
-    if (serverSocket != null && !serverSocket.isClosed()) {
+    if (serverSocket != null) {
       try {
         serverSocket.close();
       } catch (IOException e) {
-        throw new RuntimeException("Error while attempting to close a server socket", e);
+        // throw new RuntimeException("Error while attempting to close a server socket", e);
       }
     }
   }
