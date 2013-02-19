@@ -1,6 +1,7 @@
 package codeOrchestra.actionscript.logging;
 
 import codeOrchestra.actionscript.logging.transport.LoggerServerSocketThread;
+import codeOrchestra.rgs.server.RGSParametersCLI;
 import com.intellij.openapi.components.AbstractProjectComponent;
 import com.intellij.openapi.components.ProjectComponent;
 import com.intellij.openapi.project.Project;
@@ -24,10 +25,14 @@ public class LoggerComponent extends AbstractProjectComponent implements Project
   }
 
   public void initComponent() {
-    serverSocketThread.openSocket();
+    if (!RGSParametersCLI.isInServerMode()) {
+      serverSocketThread.openSocket();
+    }
   }
 
   public void disposeComponent() {
-    serverSocketThread.closeSocket();
+    if (!RGSParametersCLI.isInServerMode()) {
+      serverSocketThread.closeSocket();
+    }
   }
 }
