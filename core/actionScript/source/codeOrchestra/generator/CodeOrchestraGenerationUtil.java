@@ -553,7 +553,9 @@ public final class CodeOrchestraGenerationUtil {
         }
       }
       long generationTook = System.currentTimeMillis() - generationStart;
-      codeOrchestraGenerationContext.setGenerationAndCompilationTime(generationTook);
+      if (codeOrchestraGenerationContext != null) {
+        codeOrchestraGenerationContext.setGenerationAndCompilationTime(generationTook);
+      }
 
       // Report the generated solution size
       if (generationOK && codeOrchestraGenerationContext != null) {
