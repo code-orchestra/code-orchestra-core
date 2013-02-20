@@ -121,7 +121,7 @@ public class SSHDClientImpl implements ISSHDClient {
         fetcher.fetch();
       }
     } catch (FileSystemException e) {
-      throw new RGSException("Can't reach the remote project dir to fetch the build artifacts from");
+      throw new RGSException("Can't reach the remote project dir to fetch the build artifacts from", e);
     }
   }
 

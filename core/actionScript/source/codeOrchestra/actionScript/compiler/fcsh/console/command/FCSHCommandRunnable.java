@@ -1,12 +1,14 @@
 package codeOrchestra.actionScript.compiler.fcsh.console.command;
 
-import com.intellij.execution.process.ProcessAdapter;
-import com.intellij.execution.process.ProcessEvent;
-import com.intellij.execution.process.ProcessListener;
-import com.intellij.openapi.util.Key;
 import codeOrchestra.actionScript.compiler.fcsh.FCSHManager;
 import codeOrchestra.actionScript.compiler.fcsh.console.FCSHProcessHandler;
 import codeOrchestra.actionscript.view.ASMessageMarker;
+import codeOrchestra.utils.ThreadUtils;
+import com.intellij.execution.process.ProcessAdapter;
+import com.intellij.execution.process.ProcessEvent;
+import com.intellij.execution.process.ProcessListener;
+import com.intellij.execution.process.ProcessOutputTypes;
+import com.intellij.openapi.util.Key;
 
 /**
  * @author Alexander Eliseyev
@@ -33,8 +35,8 @@ public class FCSHCommandRunnable implements Runnable  {
         final CommandOutput commandOutput = new CommandOutput();
         ProcessListener processListener = new ProcessAdapter() {
           public void onTextAvailable(ProcessEvent event, Key outputType) {
-            commandCallback.textAvailable(event.getText(), outputType);
             commandOutput.addOutput(outputType, event.getText());
+            commandCallback.textAvailable(event.getText(), outputType);
           }
         };
 
@@ -51,7 +53,7 @@ public class FCSHCommandRunnable implements Runnable  {
         int timeout = COMMAND_EXECUTE_TIMEOUT;
         while (true) {
           // Sleep a bit
-          try { Thread.sleep(TEXT_RECIEVE_SLEEP_TIMEOUT); } catch (InterruptedException e) {}
+          ThreadUtils.sleep(TEXT_RECIEVE_SLEEP_TIMEOUT);
           if (commandCallback.isDone()) {
             break;
           }
@@ -59,12 +61,15 @@ public class FCSHCommandRunnable implements Runnable  {
           timeout -= TEXT_RECIEVE_SLEEP_TIMEOUT;
           if (timeout <= 0) {
             FCSHManager.LOG.errorWithMarker("Command execute timed out: " + commandCallback.getCommand(), ASMessageMarker.MARKER);
-            FCSHManager.LOG.error("STDOUT: " + commandOutput.getNormalOutput());
-            FCSHManager.LOG.error("STDERR: " + commandOutput.getErrorOutput());
+            FCSHManager.LOG.error(ProcessOutputTypes.STDOUT + ": " + commandOutput.getNormalOutput());
+            FCSHManager.LOG.error(ProcessOutputTypes.STDERR + ": " + commandOutput.getErrorOutput());
             fcshManager.destroyProcess();
             return;
           }
         }
+
+        // In case we've missed some output
+        ThreadUtils.sleep(TEXT_RECIEVE_SLEEP_TIMEOUT);
 
         commandCallback.done(commandOutput);
         fcshProcessHandler.removeProcessListener(processListener);
