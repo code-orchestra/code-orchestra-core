@@ -4,6 +4,7 @@ import com.intellij.ide.ClassloaderUtil;
 import com.intellij.util.lang.UrlClassLoader;
 import codeOrchestra.rgs.server.RGSParametersCLI;
 import codeOrchestra.rgs.server.view.RGSConsole;
+import jetbrains.mps.util.CachesUtil;
 import jetbrains.mps.util.PathManager;
 import org.apache.commons.io.FileUtils;
 
@@ -61,7 +62,7 @@ public class RGSBootstrap {
     }
 
     // Validate properties
-    String homeProperty = System.getProperty(RGSParametersCLI.RGS_HOME_PATH);
+    String homeProperty = RGSParametersCLI.getHomePath();
     if (homeProperty == null) {
       reportErrorAndExit("RGS workspace dir property '" + RGSParametersCLI.RGS_HOME_PATH + "' is not set");
     }
@@ -103,9 +104,22 @@ public class RGSBootstrap {
 
     // Additional properties
     System.setProperty("mps.vfs.useIoFile", "true");
-    System.setProperty("idea.system.path", homeProperty);
+    System.setProperty("idea.system.path", new File(homeProperty, "system").getAbsolutePath());
+    System.setProperty("idea.config.path", new File(homeProperty, "config").getAbsolutePath());
 
     System.out.println();
+
+    // Check if we can write to caches dirs and use temporary dirs if we can't
+    if (CachesUtil.setupCaches()) {
+      CachesUtil.setTmpCacheFolder(RGSParametersCLI.RGS_HOME_PATH);
+
+      Runtime.getRuntime().addShutdownHook(new Thread() {
+        @Override
+        public void run() {
+          CachesUtil.cleanupCaches();
+        }
+      });
+    }
 
     // Load the worker class
     UrlClassLoader newClassLoader = ClassloaderUtil.initClassloader(new ArrayList<URL>());

@@ -494,6 +494,16 @@ public class FileUtil {
     }
   }
 
+  public static boolean canWrite(File f) {
+    while (!f.exists()) {
+    f = f.getParentFile();
+    if (f == null) {
+        return false;
+      }
+  }
+    return f.canWrite();
+  }
+
   static class PathResolutionException extends RuntimeException {
     PathResolutionException(String msg) {
       super(msg);
