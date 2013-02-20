@@ -529,7 +529,7 @@ public final class CodeOrchestraGenerationUtil {
         : new RGSGenerationHandler(project, remoteGenerationCallback);
 
       // RE-3852 - Copy assets to module source_gen/assets dir
-      if (codeOrchestraModuleGeneration && buildProvider != BuildProvider.LIVE_CODING_INCREMENTAL) {
+      if (codeOrchestraModuleGeneration) {
         File sourceGenAssetsDir = new File(rootModule.getGeneratorOutputPath(), AssetsManager.DEFAULT_ASSETS_DIR);
         File projectAssetsDir = project.getComponent(AssetsManager.class).createOrGetProjectAssetsDir();
         if (projectAssetsDir.exists() && projectAssetsDir.isDirectory()) {
