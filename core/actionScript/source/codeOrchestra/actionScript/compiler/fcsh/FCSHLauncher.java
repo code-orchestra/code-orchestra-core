@@ -17,6 +17,7 @@ public class FCSHLauncher extends JavaLauncher {
     programParameters.append(protect("-Dapplication.home=" + flexHome));
     programParameters.append(" -Duser.language=en");
     programParameters.append(" -Duser.country=US");
+    programParameters.append(" -Djava.awt.headless=true");
     programParameters.append(" -jar ");
     String fcshJarPath = livecodingMode ? FlexSDKSettings.getInstance().getDefaultFlexSDKPath() + "/liblc/fcsh.jar" : flexHome + "/lib/fcsh.jar";
     programParameters.append(protect(fcshJarPath));

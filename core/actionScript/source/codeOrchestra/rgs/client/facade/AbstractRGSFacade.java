@@ -1,8 +1,5 @@
 package codeOrchestra.rgs.client.facade;
 
-import com.intellij.openapi.application.ApplicationManager;
-import com.intellij.openapi.progress.ProgressIndicator;
-import com.intellij.openapi.project.Project;
 import codeOrchestra.actionscript.liveCoding.LiveCodingManager;
 import codeOrchestra.generator.listener.BuildProvider;
 import codeOrchestra.rgs.RGSException;
@@ -11,10 +8,13 @@ import codeOrchestra.rgs.client.ISyncCallback;
 import codeOrchestra.rgs.client.appimpl.ApplicationRGSClient;
 import codeOrchestra.rgs.client.sshd.SyncFileOperation;
 import codeOrchestra.rgs.state.model.GenerateInput;
-import codeOrchestra.rgs.state.model.RemoteModelReference;
 import codeOrchestra.utils.ProjectHolder;
+import com.intellij.openapi.application.ApplicationManager;
+import com.intellij.openapi.progress.ProgressIndicator;
+import com.intellij.openapi.project.Project;
 import jetbrains.mps.project.MPSProject;
 import jetbrains.mps.smodel.ModelAccess;
+import jetbrains.mps.smodel.SModel;
 import jetbrains.mps.smodel.SModelReference;
 import jetbrains.mps.smodel.SModelRepository;
 import jetbrains.mps.smodel.descriptor.EditableSModelDescriptor;
@@ -39,7 +39,16 @@ public abstract class AbstractRGSFacade implements IRGSTaskCaller {
       ApplicationManager.getApplication().saveAll();
     }
   };
-
+  public static final Runnable SAVE_LIVE_CODING_RUNNABLE = new Runnable() {
+    @Override
+    public void run() {
+      SModel liveCodingModel = LiveCodingManager.instance().getLiveCodingModel();
+      if (liveCodingModel != null) {
+        EditableSModelDescriptor liveModelDescriptor = (EditableSModelDescriptor) liveCodingModel.getModelDescriptor();
+        liveModelDescriptor.save();
+      }
+    }
+  };
 
   private Project project;
 
@@ -60,7 +69,6 @@ public abstract class AbstractRGSFacade implements IRGSTaskCaller {
     return new RGSTask(getGenerateInput(), "Reloading project after synchronization", false) {
       @Override
       protected void doTask(ProgressIndicator indicator) throws RGSException {
-        boolean needReloadProject = false;
         List<String> modulesToReload = new ArrayList<String>();
         List<SModelReference> modelsToReload = new ArrayList<SModelReference>();
 
@@ -71,11 +79,7 @@ public abstract class AbstractRGSFacade implements IRGSTaskCaller {
           }
 
           String remoteFilePath = operationWrapper.getRemoteFilePath();
-          if (remoteFilePath.endsWith(".mpr")) {
-            // Project paths were modified
-            needReloadProject = true;
-            break;
-          } else if (remoteFilePath.endsWith(".msd") || remoteFilePath.endsWith(".mpl")) {
+          if (remoteFilePath.endsWith(".msd") || remoteFilePath.endsWith(".mpl")) {
             // Module descriptor was modified
             modulesToReload.add(getModuleNameByFilename(new File(remoteFilePath).getName()));
           } else if (remoteFilePath.endsWith(".mps")) {
@@ -85,12 +89,12 @@ public abstract class AbstractRGSFacade implements IRGSTaskCaller {
               continue;
             }
 
-            IFile modelfile = FileSystem.getInstance().getFileByPath(localFilePath);
-            if (modelfile == null && !modelfile.exists()) {
+            IFile modelFile = FileSystem.getInstance().getFileByPath(localFilePath);
+            if (modelFile == null || !modelFile.exists()) {
               continue;
             }
 
-            EditableSModelDescriptor modelDescriptor = SModelRepository.getInstance().findModel(modelfile);
+            EditableSModelDescriptor modelDescriptor = SModelRepository.getInstance().findModel(modelFile);
             if (modelDescriptor != null) {
 
               if (operationWrapper.getOperation() == SyncFileOperation.MODIFY) {
@@ -160,7 +164,11 @@ public abstract class AbstractRGSFacade implements IRGSTaskCaller {
 
     syncedAlready = true;
 
-    saveAll();
+    if (getGenerateInput().getBuildProvider() == BuildProvider.LIVE_CODING_INCREMENTAL) {
+      saveLiveCodingModel();
+    } else {
+      saveAll();
+    }
 
     return new RGSTask(getGenerateInput(), "Synchronizing with RGS", true) {
       @Override
@@ -182,6 +190,10 @@ public abstract class AbstractRGSFacade implements IRGSTaskCaller {
         });
       }
     };
+  }
+
+  private void saveLiveCodingModel() {
+    ModelAccess.instance().runWriteInEDT(SAVE_LIVE_CODING_RUNNABLE);
   }
 
   private void saveAll() {

@@ -16,6 +16,7 @@
 
 package jetbrains.mps.workbench.save;
 
+import codeOrchestra.actionscript.liveCoding.LiveCodingManager;
 import com.intellij.AppTopics;
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.components.ApplicationComponent;
@@ -24,6 +25,7 @@ import com.intellij.util.messages.MessageBusConnection;
 import jetbrains.mps.MPSCore;
 import jetbrains.mps.smodel.ModelAccess;
 import jetbrains.mps.smodel.SModelRepository;
+import jetbrains.mps.util.annotation.CodeOrchestraPatch;
 import org.jetbrains.annotations.NotNull;
 
 public class ModelsSaver implements ApplicationComponent {
@@ -37,6 +39,7 @@ public class ModelsSaver implements ApplicationComponent {
     return "VCS Project Helper";
   }
 
+  @CodeOrchestraPatch
   public void initComponent() {
     myMessageBusConnection = ApplicationManager.getApplication().getMessageBus().connect();
     myMessageBusConnection.subscribe(AppTopics.FILE_DOCUMENT_SYNC, new FileDocumentManagerAdapter() {
@@ -46,7 +49,11 @@ public class ModelsSaver implements ApplicationComponent {
             if(MPSCore.getInstance().isTestMode()) {
               return;
             }
-            SModelRepository.getInstance().saveAll();
+
+            // CO-5262
+            if (LiveCodingManager.instance().getCurrentSession() == null) {
+              SModelRepository.getInstance().saveAll();
+            }
           }
         });
       }

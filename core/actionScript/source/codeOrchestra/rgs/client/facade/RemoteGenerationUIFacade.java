@@ -338,12 +338,12 @@ public final class RemoteGenerationUIFacade extends AbstractRGSFacade {
               continue;
             }
 
-            IFile modelfile = FileSystem.getInstance().getFileByPath(localFilePath);
-            if (modelfile == null || !modelfile.exists()) {
+            IFile modelFile = FileSystem.getInstance().getFileByPath(localFilePath);
+            if (modelFile == null || !modelFile.exists()) {
               continue;
             }
 
-            EditableSModelDescriptor modelDescriptor = SModelRepository.getInstance().findModel(modelfile);
+            EditableSModelDescriptor modelDescriptor = SModelRepository.getInstance().findModel(modelFile);
             if (modelDescriptor != null) {
               if (operationWrapper.getOperation() == SyncFileOperation.MODIFY) {
                 modelsToReload.add(modelDescriptor.getSModelReference());
