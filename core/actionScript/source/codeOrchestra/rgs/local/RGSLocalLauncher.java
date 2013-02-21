@@ -24,7 +24,7 @@ public class RGSLocalLauncher extends JavaLauncher {
     super(getLocalRGSClassPath());
 
     setVirtualMachineParameter(getVMOptionsString());
-    setWorkingDirectory(getBinDirectory());
+    //setWorkingDirectory(getBinDirectory());
     setProgramParameter(MAIN_CLASS);
   }
 
