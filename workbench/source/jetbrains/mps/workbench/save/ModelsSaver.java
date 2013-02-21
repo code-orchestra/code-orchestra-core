@@ -51,7 +51,8 @@ public class ModelsSaver implements ApplicationComponent {
             }
 
             // CO-5262
-            if (LiveCodingManager.instance().getCurrentSession() == null) {
+            LiveCodingManager liveCodingManager = LiveCodingManager.instance();
+            if (liveCodingManager == null || liveCodingManager.getCurrentSession() == null) {
               SModelRepository.getInstance().saveAll();
             }
           }
