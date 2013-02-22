@@ -15,6 +15,7 @@
  */
 package codeOrchestra.actionscript.liveCoding.run.view;
 
+import codeOrchestra.utils.ProjectHolder;
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.fileChooser.FileChooserDescriptor;
 import com.intellij.openapi.project.Project;
@@ -128,7 +129,7 @@ public class ASLiveCodingRunConfigurationComponent extends JPanel {
         boolean selectionSet = false;
 
         for (Solution solution : mpsProject.getProjectSolutions()) {
-          if (SolutionUtils.isActionScriptDependent(solution) && !SolutionUtils.isStubSolution(solution)) {
+          if (SolutionUtils.isActionScriptDependent(solution) && !SolutionUtils.isStubSolution(solution) && !SolutionUtils.isLiveCodingSolution(solution, ProjectHolder.getProject())) {
             String solutionName = solution.getModuleDescriptor().getNamespace();
             moduleChooser.addItem(solutionName);
 
