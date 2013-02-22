@@ -34,7 +34,7 @@ public class ASNewLibraryFromGitHubDialog extends BaseDialog {
   }
 
   public boolean stretchMainComponent() {
-    return false;
+    return true;
   }
 
   public String getSwcFilePath() {

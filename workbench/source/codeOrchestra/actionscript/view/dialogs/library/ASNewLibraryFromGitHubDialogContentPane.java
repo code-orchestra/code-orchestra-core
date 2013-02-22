@@ -34,6 +34,7 @@ import jetbrains.mps.vfs.IFile;
 import org.jdesktop.beansbinding.AutoBinding;
 
 import javax.swing.*;
+import java.awt.Container;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -101,7 +102,6 @@ public class ASNewLibraryFromGitHubDialogContentPane extends JPanel {
     component.add(this.createComponent5());
     component.add(this.createComponent6());
     this.myEvents.initialize();
-
   }
 
   public Boolean getErrorWithGit() {
@@ -208,6 +208,7 @@ public class ASNewLibraryFromGitHubDialogContentPane extends JPanel {
       }
     }
 
+    myDialog.pack();
   }
 
   private JLabel createComponent5() {

@@ -1,11 +1,13 @@
 package codeOrchestra.actionscript.socket;
 
 import codeOrchestra.actionscript.logging.settings.LoggingSettings;
+import codeOrchestra.utils.ExceptionUtils;
 import jetbrains.mps.logging.Logger;
 
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.net.SocketException;
 
 /**
  * @author Alexander Eliseyev
@@ -32,7 +34,14 @@ public abstract class ServerSocketThread extends Thread {
 
       while (!serverSocket.isClosed()) {
         // Wait to accept a new connection
-        Socket clientSocket = serverSocket.accept();
+        Socket clientSocket = null;
+        try {
+          clientSocket = serverSocket.accept();
+        } catch (SocketException e) {
+          if (ExceptionUtils.isSocketClosed(e)) {
+            return;
+          }
+        }
 
         // Close the previous socket if the multiple logging clients are disabled
         if (!allowMultipleConnections() && lastHandler != null) {
