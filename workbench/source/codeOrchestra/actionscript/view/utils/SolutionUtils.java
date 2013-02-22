@@ -344,7 +344,7 @@ public final class SolutionUtils {
   }
 
   public static boolean isValidModuleName(String moduleName) {
-    return StringUtils.isEmpty(moduleName) || VALID_IDENTIFIER_PATTERN.matcher(moduleName).matches();
+    return VALID_IDENTIFIER_PATTERN.matcher(moduleName).matches();
   }
 
   public static SNodePointer getMainClassPointer(Solution module) {
