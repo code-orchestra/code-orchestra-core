@@ -63,7 +63,7 @@ public class RGSBootstrap {
 
     // Validate properties
     String homeProperty = System.getProperty(RGSParametersCLI.RGS_HOME_PATH);
-//    String homeProperty = RGSParametersCLI.getHomePath();
+    // String homeProperty = RGSParametersCLI.getHomePath();
     if (homeProperty == null) {
       reportErrorAndExit("RGS workspace dir property '" + RGSParametersCLI.RGS_HOME_PATH + "' is not set");
     }
@@ -74,22 +74,29 @@ public class RGSBootstrap {
     File targetBuildNumberFile = new File(homeDir, BUILD_NUMBER_FILENAME);
 
     if (homeDir.exists()) {
-      // Check the build number of the home dir and clear it if it doesn't match the application build number
-      String editorBN = getBuildNumber(buildNumberFile);
-      String rgsBN = getBuildNumber(targetBuildNumberFile);
-
-      if (editorBN == null && rgsBN == null) {
-        System.out.println("No build.number can be determined");
-      } else {
-        // Have to do this w/o ObjectUtils.equals due to classpath issues
-        if ((editorBN != null && !editorBN.equals(rgsBN)) || !rgsBN.equals(editorBN)) {
-          try {
-            FileUtils.cleanDirectory(homeDir);
-          } catch (IOException e) {
-            e.printStackTrace(System.err);
-          }
-        }
+      // CO-5281
+      try {
+        FileUtils.cleanDirectory(homeDir);
+      } catch (IOException e) {
+        e.printStackTrace(System.err);
       }
+
+//      // Check the build number of the home dir and clear it if it doesn't match the application build number
+//      String editorBN = getBuildNumber(buildNumberFile);
+//      String rgsBN = getBuildNumber(targetBuildNumberFile);
+//
+//      if (editorBN == null && rgsBN == null) {
+//        System.out.println("No build.number can be determined");
+//      } else {
+//        // Have to do this w/o ObjectUtils.equals due to classpath issues
+//        if ((editorBN != null && !editorBN.equals(rgsBN)) || !rgsBN.equals(editorBN)) {
+//          try {
+//            FileUtils.cleanDirectory(homeDir);
+//          } catch (IOException e) {
+//            e.printStackTrace(System.err);
+//          }
+//        }
+//      }
     } else {
       // Create a home dir if it doesn't exist yet
       homeDir.mkdir();
