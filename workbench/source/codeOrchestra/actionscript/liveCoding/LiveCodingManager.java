@@ -377,7 +377,12 @@ public class LiveCodingManager extends AbstractProjectComponent implements Proje
         ApplicationRGSClient.getInstance().reportRGSError("Can't report live coding session start to RGS", e, "Live Coding on RGS");
       }
     }
+
     fireSessionStart();
+
+    if (lastLiveCodingConfiguration != null && lastLiveCodingConfiguration.isInAutoPauseMode()) {
+      pauseCurrentSession(true);
+    }
   }
 
   public synchronized boolean stopSession() {

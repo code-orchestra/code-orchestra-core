@@ -14,6 +14,8 @@ public abstract class AbstractLiveCodingRunConfiguration implements ILiveCodingR
   private LiveCodingMode mode = LiveCodingMode.ANNOTATED_IN_OPEN_TABS;
   private boolean gettersAndSettersLive = false;
 
+  private boolean autoPause;
+
   protected AbstractLiveCodingRunConfiguration(String moduleName) {
     this.moduleName = moduleName;
   }
@@ -58,4 +60,12 @@ public abstract class AbstractLiveCodingRunConfiguration implements ILiveCodingR
     this.gettersAndSettersLive = gettersAndSettersLive;
   }
 
+  @Override
+  public boolean isInAutoPauseMode() {
+    return this.autoPause;
+  }
+
+  public void setAutoPause(boolean autoPause) {
+    this.autoPause = autoPause;
+  }
 }
