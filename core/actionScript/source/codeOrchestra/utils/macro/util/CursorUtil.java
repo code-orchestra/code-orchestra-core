@@ -85,7 +85,13 @@ public final class CursorUtil {
       JTextComponent textComponent = (JTextComponent) focusOwner;
       FontMetrics fontMetrics = textComponent.getFontMetrics(textComponent.getFont());
 
-      Point textComponentLocationOnScreen = textComponent.getLocationOnScreen();
+      // RF-1298 - component may be not visible
+      Point textComponentLocationOnScreen;
+      try {
+        textComponentLocationOnScreen = textComponent.getLocationOnScreen();
+      } catch (IllegalComponentStateException e) {
+        return null;
+      }
 
       Point caretPixelPosition = getCaretPixelPosition(textComponent);
       Point caretPositionInTextComponent = caretPixelPosition == null ? TEXT_COMPONENT_OFFSET : caretPixelPosition;
