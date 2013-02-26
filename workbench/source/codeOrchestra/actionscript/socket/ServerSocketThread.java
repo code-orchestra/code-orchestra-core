@@ -1,6 +1,5 @@
 package codeOrchestra.actionscript.socket;
 
-import codeOrchestra.actionscript.logging.settings.LoggingSettings;
 import codeOrchestra.utils.ExceptionUtils;
 import jetbrains.mps.logging.Logger;
 
@@ -41,6 +40,8 @@ public abstract class ServerSocketThread extends Thread {
           if (ExceptionUtils.isSocketClosed(e)) {
             return;
           }
+          LOG.warning("Couldn't accept a socket", e);
+          continue;
         }
 
         // Close the previous socket if the multiple logging clients are disabled

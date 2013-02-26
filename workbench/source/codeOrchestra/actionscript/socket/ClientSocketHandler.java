@@ -23,7 +23,7 @@ public abstract class ClientSocketHandler implements Runnable, SocketWriter {
 
   private Object monitor = new Object();
 
-  public ClientSocketHandler (Socket clientSocket) {
+  public ClientSocketHandler(Socket clientSocket) {
     this.clientSocket = clientSocket;
 
     try {
