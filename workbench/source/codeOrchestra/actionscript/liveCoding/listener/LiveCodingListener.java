@@ -10,4 +10,5 @@ public interface LiveCodingListener {
   void onSessionEnd(LiveCodingSession session);
   void onSessionPause();
   void onSessionResume();
+  void onAutoPausedSessionResume();
 }

@@ -94,6 +94,8 @@ public class LiveCodingManager extends AbstractProjectComponent implements Proje
 
   private Object listenerMonitor = new Object();
 
+  private boolean paused;
+
   // client listeners
   private List<LiveCodingListener> liveCodingListeners = new ArrayList<LiveCodingListener>();
 
@@ -315,7 +317,15 @@ public class LiveCodingManager extends AbstractProjectComponent implements Proje
   }
 
   public void pauseCurrentSession(boolean pause) {
-    fireSessionPause(pause);
+    fireSessionPause(pause, false);
+  }
+
+  public void pauseCurrentSession(boolean pause, boolean autoPause) {
+    fireSessionPause(pause, autoPause);
+  }
+
+  public void togglePauseCurrentSession(boolean autoPause) {
+    fireSessionPause(!paused, autoPause);
   }
 
   public SModel getLiveCodingModel() {
@@ -380,7 +390,7 @@ public class LiveCodingManager extends AbstractProjectComponent implements Proje
 
     fireSessionStart();
 
-    if (lastLiveCodingConfiguration != null && lastLiveCodingConfiguration.isInAutoPauseMode()) {
+    if (lastLiveCodingConfiguration != null && lastLiveCodingConfiguration.startPaused()) {
       pauseCurrentSession(true);
     }
   }
@@ -436,15 +446,21 @@ public class LiveCodingManager extends AbstractProjectComponent implements Proje
     }
   }
 
-  private void fireSessionPause(boolean pause) {
+  private void fireSessionPause(boolean pause, boolean autoPause) {
     synchronized (listenerMonitor) {
       for (LiveCodingListener listener : liveCodingListeners) {
         if (pause) {
           listener.onSessionPause();
         } else {
-          listener.onSessionResume();
+          if (autoPause) {
+            listener.onAutoPausedSessionResume();
+          } else {
+            listener.onSessionResume();
+          }
         }
       }
+
+      this.paused = pause;
     }
   }
 

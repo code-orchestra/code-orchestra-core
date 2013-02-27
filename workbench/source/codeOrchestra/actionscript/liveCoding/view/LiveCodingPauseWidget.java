@@ -45,6 +45,11 @@ public class LiveCodingPauseWidget extends JButton implements CustomStatusBarWid
       setPaused(false);
     }
 
+    @Override
+    public void onAutoPausedSessionResume() {
+      setPaused(false);
+    }
+
     private void setPaused(final boolean paused) {
       SwingUtilities.invokeLater(new Runnable() {
         @Override

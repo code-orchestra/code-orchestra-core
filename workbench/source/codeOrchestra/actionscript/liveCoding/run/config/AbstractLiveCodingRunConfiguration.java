@@ -13,8 +13,7 @@ public abstract class AbstractLiveCodingRunConfiguration implements ILiveCodingR
   private int maxRecursionDepth = 100;
   private LiveCodingMode mode = LiveCodingMode.ANNOTATED_IN_OPEN_TABS;
   private boolean gettersAndSettersLive = false;
-
-  private boolean autoPause;
+  private boolean startPaused = false;
 
   protected AbstractLiveCodingRunConfiguration(String moduleName) {
     this.moduleName = moduleName;
@@ -61,11 +60,11 @@ public abstract class AbstractLiveCodingRunConfiguration implements ILiveCodingR
   }
 
   @Override
-  public boolean isInAutoPauseMode() {
-    return this.autoPause;
+  public boolean startPaused() {
+    return this.startPaused;
   }
 
-  public void setAutoPause(boolean autoPause) {
-    this.autoPause = autoPause;
+  public void setStartPaused(boolean startPaused) {
+    this.startPaused = startPaused;
   }
 }

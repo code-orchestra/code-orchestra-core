@@ -64,6 +64,7 @@ public class ASLiveCodingRunConfigurationComponent extends JPanel {
   private JCheckBox makeGettersSettersLiveCB;
   private JTextField maxLoopIterationsTF;
   private JTextField maxRecusionDepthTF;
+  private JCheckBox startPausedCB;
   private String swfFile;
   private MPSProject mpsProject;
 
@@ -200,6 +201,7 @@ public class ASLiveCodingRunConfigurationComponent extends JPanel {
         throw new IllegalStateException();
     }
     makeGettersSettersLiveCB.setSelected(runConfiguration.isGettersAndSettersLive());
+    startPausedCB.setSelected(runConfiguration.startPaused());
     maxLoopIterationsTF.setText(String.valueOf(runConfiguration.getMaxLoopIterations()));
     maxRecusionDepthTF.setText(String.valueOf(runConfiguration.getMaxRecursionDepth()));
   }
@@ -220,6 +222,7 @@ public class ASLiveCodingRunConfigurationComponent extends JPanel {
     // Live coding settings
     runConfiguration.setMode(myAllTheMethodsRadioButton.isSelected() ? LiveCodingMode.ALL_METHODS : LiveCodingMode.ANNOTATED_IN_OPEN_TABS);
     runConfiguration.setGettersAndSettersLive(makeGettersSettersLiveCB.isSelected());
+    runConfiguration.setStartPaused(startPausedCB.isSelected());
     runConfiguration.setMaxLoopIterations(Integer.valueOf(maxLoopIterationsTF.getText()));
     runConfiguration.setMaxRecursionDepth(Integer.valueOf(maxRecusionDepthTF.getText()));
   }
@@ -317,7 +320,7 @@ public class ASLiveCodingRunConfigurationComponent extends JPanel {
     flashPlayerChooser = new TextFieldWithBrowseButton();
     panel7.add(flashPlayerChooser, new GridConstraints(0, 1, 1, 1, GridConstraints.ANCHOR_EAST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, new Dimension(300, -1), new Dimension(300, -1), 0, false));
     final JPanel panel8 = new JPanel();
-    panel8.setLayout(new GridLayoutManager(4, 2, new Insets(0, 0, 0, 0), -1, -1));
+    panel8.setLayout(new GridLayoutManager(5, 2, new Insets(0, 0, 0, 0), -1, -1));
     contentPane.add(panel8, new GridConstraints(3, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
     panel8.setBorder(BorderFactory.createTitledBorder(BorderFactory.createEtchedBorder(), "Settings"));
     final JLabel label2 = new JLabel();
@@ -336,21 +339,27 @@ public class ASLiveCodingRunConfigurationComponent extends JPanel {
     panel9.add(myAnnotatedWithLiveCodingInRadioButton, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
     final JLabel label3 = new JLabel();
     label3.setText("Make Getters/Setters Live:");
-    panel8.add(label3, new GridConstraints(1, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 1, false));
+    panel8.add(label3, new GridConstraints(2, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 1, false));
     makeGettersSettersLiveCB = new JCheckBox();
     makeGettersSettersLiveCB.setText(" ");
-    panel8.add(makeGettersSettersLiveCB, new GridConstraints(1, 1, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+    panel8.add(makeGettersSettersLiveCB, new GridConstraints(2, 1, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
     final JLabel label4 = new JLabel();
     label4.setText("Max Loop Iterations:");
-    panel8.add(label4, new GridConstraints(2, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 1, false));
+    panel8.add(label4, new GridConstraints(3, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 1, false));
     final JLabel label5 = new JLabel();
     label5.setText("Max Recursion Depth:");
-    panel8.add(label5, new GridConstraints(3, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 1, false));
+    panel8.add(label5, new GridConstraints(4, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 1, false));
     maxLoopIterationsTF = new JTextField();
-    panel8.add(maxLoopIterationsTF, new GridConstraints(2, 1, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, new Dimension(65, -1), new Dimension(65, -1), new Dimension(65, -1), 0, false));
+    panel8.add(maxLoopIterationsTF, new GridConstraints(3, 1, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, new Dimension(65, -1), new Dimension(65, -1), new Dimension(65, -1), 0, false));
     maxRecusionDepthTF = new JTextField();
     maxRecusionDepthTF.setEditable(false);
-    panel8.add(maxRecusionDepthTF, new GridConstraints(3, 1, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, new Dimension(65, -1), new Dimension(65, -1), new Dimension(65, -1), 0, false));
+    panel8.add(maxRecusionDepthTF, new GridConstraints(4, 1, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, new Dimension(65, -1), new Dimension(65, -1), new Dimension(65, -1), 0, false));
+    final JLabel label6 = new JLabel();
+    label6.setText("Start Session Paused");
+    panel8.add(label6, new GridConstraints(1, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 1, false));
+    startPausedCB = new JCheckBox();
+    startPausedCB.setText("");
+    panel8.add(startPausedCB, new GridConstraints(1, 1, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
     ButtonGroup buttonGroup;
     buttonGroup = new ButtonGroup();
     buttonGroup.add(myModuleOutputFileRadioButton);

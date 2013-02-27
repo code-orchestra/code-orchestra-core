@@ -15,6 +15,6 @@ public interface ILiveCodingRunConfiguration extends CodeOrchestraRunConfigurati
   int getMaxRecursionDepth();
   LiveCodingMode getMode();
   boolean isGettersAndSettersLive();
-  boolean isInAutoPauseMode();
+  boolean startPaused();
 
 }
