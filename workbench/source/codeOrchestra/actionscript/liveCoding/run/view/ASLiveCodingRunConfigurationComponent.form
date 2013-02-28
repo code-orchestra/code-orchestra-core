@@ -159,7 +159,7 @@
           </grid>
         </children>
       </grid>
-      <grid id="dc5b3" layout-manager="GridLayoutManager" row-count="5" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+      <grid id="dc5b3" layout-manager="GridLayoutManager" row-count="4" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
           <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -185,23 +185,23 @@
             <children>
               <hspacer id="41a3b">
                 <constraints>
-                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                 </constraints>
               </hspacer>
-              <component id="75845" class="javax.swing.JRadioButton" binding="myAllTheMethodsRadioButton" default-binding="true">
+              <component id="bf38d" class="javax.swing.JRadioButton" binding="myAnnotatedWithLiveCodingInRadioButton" default-binding="true">
                 <constraints>
                   <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <text value="All the methods"/>
+                  <text value="Annotated with [Live]"/>
                 </properties>
               </component>
-              <component id="bf38d" class="javax.swing.JRadioButton" binding="myAnnotatedWithLiveCodingInRadioButton" default-binding="true">
+              <component id="75845" class="javax.swing.JRadioButton" binding="myAllTheMethodsRadioButton" default-binding="true">
                 <constraints>
                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <text value="Annotated with [Live]"/>
+                  <text value="All the methods"/>
                 </properties>
               </component>
             </children>
@@ -230,14 +230,6 @@
               <text value="Max Loop Iterations:"/>
             </properties>
           </component>
-          <component id="95b6f" class="javax.swing.JLabel">
-            <constraints>
-              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="1" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <text value="Max Recursion Depth:"/>
-            </properties>
-          </component>
           <component id="bda71" class="javax.swing.JTextField" binding="maxLoopIterationsTF">
             <constraints>
               <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
@@ -247,18 +239,6 @@
               </grid>
             </constraints>
             <properties/>
-          </component>
-          <component id="f29c6" class="javax.swing.JTextField" binding="maxRecusionDepthTF">
-            <constraints>
-              <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                <minimum-size width="65" height="-1"/>
-                <preferred-size width="65" height="-1"/>
-                <maximum-size width="65" height="-1"/>
-              </grid>
-            </constraints>
-            <properties>
-              <editable value="false"/>
-            </properties>
           </component>
           <component id="2bda4" class="javax.swing.JLabel">
             <constraints>

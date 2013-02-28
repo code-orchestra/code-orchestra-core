@@ -11,7 +11,7 @@ public abstract class AbstractLiveCodingRunConfiguration implements ILiveCodingR
 
   private int maxLoopIterations = 10000;
   private int maxRecursionDepth = 100;
-  private LiveCodingMode mode = LiveCodingMode.ANNOTATED_IN_OPEN_TABS;
+  private LiveCodingMode mode = LiveCodingMode.ALL_METHODS;
   private boolean gettersAndSettersLive = false;
   private boolean startPaused = false;
 
