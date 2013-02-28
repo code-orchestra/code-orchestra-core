@@ -65,12 +65,10 @@ public class ToggleKeyLoggingAction extends BaseAction implements KeyLoggerListe
       KeyLogger.getInstance().removeKeyLoggerListener(this);
 
       KeyLoggerReport keyLoggerReport = new KeyLoggerReport(startTime, recordedKeyStrokes, initialCaretPosition);
-      String outputPath = keyLoggerReport.write(project);
+      keyLoggerReport.write(project);
 
       WindowManager.getInstance().getFrame(ProjectHolder.getProject()).removePropertyChangeListener("title", TITLE_CHANGE_LISTENER);
       setFrameTitle(titleWas);
-
-      // WindowManager.getInstance().getIdeFrame(project).getStatusBar().setInfo("Key logging finished, output: " + outputPath); // RE-4140
     } else {
       // Turn on
       this.on = true;
@@ -87,7 +85,6 @@ public class ToggleKeyLoggingAction extends BaseAction implements KeyLoggerListe
           }
 
           KeyLogger.getInstance().toggle(true);
-
           KeyLogger.getInstance().addKeyLoggerListener(ToggleKeyLoggingAction.this);
 
           titleWas = WindowManager.getInstance().getFrame(ProjectHolder.getProject()).getTitle();

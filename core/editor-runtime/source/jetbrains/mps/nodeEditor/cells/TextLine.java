@@ -525,14 +525,14 @@ public class TextLine {
       x--;
     }
 
-    if (KeyLogger.getInstance().isEnabled()) {
+    if (KeyLogger.getInstance().mustHideCursor()) {
       g.setColor(Color.GREEN);
     } else {
       g.setColor(Color.BLACK);
     }
 
 
-    if (KeyLogger.getInstance().isEnabled()) {
+    if (KeyLogger.getInstance().mustHideCursor()) {
       g.drawRect(x, shiftY, 1, 1);
       g.drawRect(x, shiftY + myTextHeight - 1, 1, 1);
     } else {

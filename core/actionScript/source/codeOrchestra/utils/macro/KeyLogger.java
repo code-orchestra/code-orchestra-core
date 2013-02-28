@@ -187,6 +187,10 @@ public class KeyLogger implements KeyEventDispatcher {
     resetCurrentKeyStroke();
   }
 
+  public boolean mustHideCursor() {
+    return isEnabled() && !"false".equals(System.getProperty("keylogger.cursor.hide"));
+  }
+
   public boolean isEnabled() {
     return enabled;
   }
