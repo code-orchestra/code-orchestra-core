@@ -324,8 +324,8 @@ public class LiveCodingManager extends AbstractProjectComponent implements Proje
     fireSessionPause(pause, autoPause);
   }
 
-  public void togglePauseCurrentSession(boolean autoPause) {
-    fireSessionPause(!paused, autoPause);
+  public void toggleAutoPauseCurrentSession() {
+    fireSessionPause(false, true);
   }
 
   public SModel getLiveCodingModel() {
