@@ -19,6 +19,11 @@ public class LiveCodingSessionStartTraceCommand implements TraceCommand {
 
   @Override
   public void execute(LoggerMessage message, ClientSocketHandler clientSocketHandler) {
-    LiveCodingManager.instance().startSession(message.getMessage(), clientSocketHandler);
+    LiveCodingManager liveCodingManager = LiveCodingManager.instance();
+
+    // RF-1307 - we do this check in case no project is open, but a live-coding-compiled swf is run
+    if (liveCodingManager != null) {
+      liveCodingManager.startSession(message.getMessage(), clientSocketHandler);
+    }
   }
 }
