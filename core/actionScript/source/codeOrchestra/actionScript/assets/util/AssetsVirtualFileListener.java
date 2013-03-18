@@ -33,15 +33,15 @@ public class AssetsVirtualFileListener extends VirtualFileAdapter {
 
       // Check if we're dealing with an asset file here
       if (assetFilePath.startsWith(assetsDirPath)) {
-        ModelAccess.instance().runWriteAction(new Runnable() {
-          public void run() {
-            if (eventType != AssetEventType.CHANGED) {
+        if (eventType != AssetEventType.CHANGED) {
+          ModelAccess.instance().runWriteAction(new Runnable() {
+            public void run() {
               assetsManager.reloadProjectAssetsStubs();
             }
+          });
+        }
 
-            assetsManager.fireAssetFileEvent(eventType, assetFilePath);
-          }
-        });
+        assetsManager.fireAssetFileEvent(eventType, assetFilePath);
       }
     } catch (Throwable t) {
       LOG.warning("Error while updating assets dir", t);
