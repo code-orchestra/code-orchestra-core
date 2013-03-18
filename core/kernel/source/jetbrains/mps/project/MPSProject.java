@@ -15,6 +15,7 @@
  */
 package jetbrains.mps.project;
 
+import codeOrchestra.actionScript.assets.util.AssetsVirtualFileListener;
 import codeOrchestra.utils.ProjectHolder;
 import com.intellij.ide.impl.ProjectUtil;
 import com.intellij.openapi.components.PersistentStateComponent;
@@ -28,7 +29,6 @@ import com.intellij.openapi.util.Computable;
 import com.intellij.openapi.vfs.*;
 import codeOrchestra.actionScript.assets.AssetsManager;
 import codeOrchestra.actionScript.assets.AssetsSolution;
-import codeOrchestra.actionScript.assets.util.AssetsReloadFileListener;
 import codeOrchestra.actionScript.stubs.ASStubsReloadFileListener;
 import codeOrchestra.rgs.server.RGSParametersCLI;
 import jetbrains.mps.MPSCore;
@@ -75,7 +75,7 @@ public class MPSProject implements MPSModuleOwner, ProjectComponent, PersistentS
   private boolean hasToBeSaved;
 
   @CodeOrchestraPatch
-  private AssetsReloadFileListener assetsReloadFileListener;
+  private AssetsVirtualFileListener assetsReloadFileListener;
 
   @CodeOrchestraPatch
   private ASStubsReloadFileListener asStubsReloadFileListener;
@@ -461,7 +461,7 @@ public class MPSProject implements MPSModuleOwner, ProjectComponent, PersistentS
     AssetsManager assetsManager = myProject.getComponent(AssetsManager.class);
     this.assetsSolutionReference = assetsManager.getOrCreateProjectAssetsSolution(this).getModuleReference();
     if (this.assetsReloadFileListener == null) {
-      this.assetsReloadFileListener = new AssetsReloadFileListener(myProject);
+      this.assetsReloadFileListener = new AssetsVirtualFileListener(myProject);
       VirtualFileManager.getInstance().addVirtualFileListener(this.assetsReloadFileListener);
     }
 

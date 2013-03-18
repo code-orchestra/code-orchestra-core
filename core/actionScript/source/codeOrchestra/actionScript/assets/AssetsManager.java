@@ -1,5 +1,6 @@
 package codeOrchestra.actionScript.assets;
 
+import codeOrchestra.actionScript.assets.util.AssetEventType;
 import codeOrchestra.actionscript.view.utils.ViewUtils;
 import codeOrchestra.utils.ProjectHolder;
 import com.intellij.openapi.components.AbstractProjectComponent;
@@ -18,6 +19,7 @@ import jetbrains.mps.project.structure.modules.SolutionDescriptor;
 import jetbrains.mps.smodel.*;
 import jetbrains.mps.stubs.BaseStubModelDescriptor;
 import jetbrains.mps.stubs.StubReloadManager;
+import jetbrains.mps.util.FileUtil;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.File;
@@ -43,6 +45,8 @@ public final class AssetsManager extends AbstractProjectComponent implements Pro
 
   private AssetsSolution assetsSolution;
 
+  private List<AssetFileListener> fileListeners = new ArrayList<AssetFileListener>();
+
   public AssetsManager(Project project) {
     super(project);
   }
@@ -57,7 +61,24 @@ public final class AssetsManager extends AbstractProjectComponent implements Pro
     this.assetsSolution = null;
   }
 
-  public  void reloadProjectAssetsStubs() {
+  public void addAssetFileListener(AssetFileListener listener) {
+    fileListeners.add(listener);
+  }
+
+  public void removeAssetFileListener(AssetFileListener listener) {
+    fileListeners.remove(listener);
+  }
+
+  public void fireAssetFileEvent(AssetEventType eventType, String assetFilePath) {
+    String relativePath = FileUtil.getRelativePath(assetFilePath, createOrGetProjectAssetsDir().getPath(), File.separator);
+    AssetFileEvent assetFileEvent = new AssetFileEvent(assetFilePath, relativePath, eventType);
+
+    for (AssetFileListener assetFileListener : fileListeners) {
+      assetFileListener.onAssetFileEvent(assetFileEvent);
+    }
+  }
+
+  public void reloadProjectAssetsStubs() {
     // 1 - Mark the asset model as requiring a reload
     SModelReference sModelReference = createProjectAssetModelReference(myProject);
     if (sModelReference != null) {
