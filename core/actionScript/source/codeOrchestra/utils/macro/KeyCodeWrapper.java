@@ -2,6 +2,7 @@ package codeOrchestra.utils.macro;
 
 import codeOrchestra.utils.macro.util.CursorUtil;
 import codeOrchestra.utils.macro.util.KeyCodeUtil;
+import com.intellij.openapi.util.SystemInfo;
 
 import java.awt.Point;
 import java.awt.event.KeyEvent;
@@ -43,6 +44,10 @@ public class KeyCodeWrapper {
     this.controlDown = controlDown;
     this.shiftDown = shiftDown;
     this.metaDown = metaDown;
+  }
+
+  public boolean isGoByReferenceKeyStroke() {
+    return keyCode == 66 && ((SystemInfo.isMac && metaDown) || (SystemInfo.isWindows && controlDown));
   }
 
   public boolean hasCursorPosition() {

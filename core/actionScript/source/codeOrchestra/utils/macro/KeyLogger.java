@@ -149,7 +149,12 @@ public class KeyLogger implements KeyEventDispatcher {
     }
 
     if (KeyCodeUtil.isModifier(keyEvent)) {
-      return;
+      // CO-5314 - we don't receive the KEY_RELEASED event for the B char in CMD+B keystroke
+      if (keyCodesStack.size() == 1 && keyCodesStack.get(0).isGoByReferenceKeyStroke()) {
+        keyEvent = new KeyEvent(keyEvent.getComponent(), 0, System.currentTimeMillis(), KeyEvent.META_DOWN_MASK, KeyEvent.VK_B, 'B');
+      } else {
+        return;
+      }
     }
 
     KeyCodeWrapper keyCodeWrapper = getKeyCodeWrapper(keyEvent);
