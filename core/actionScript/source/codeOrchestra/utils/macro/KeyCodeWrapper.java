@@ -47,7 +47,7 @@ public class KeyCodeWrapper {
   }
 
   public boolean isGoByReferenceKeyStroke() {
-    return keyCode == 66 && ((SystemInfo.isMac && metaDown) || (SystemInfo.isWindows && controlDown));
+    return keyCode == KeyEvent.VK_B && ((SystemInfo.isMac && metaDown) || (SystemInfo.isWindows && controlDown));
   }
 
   public boolean hasCursorPosition() {
