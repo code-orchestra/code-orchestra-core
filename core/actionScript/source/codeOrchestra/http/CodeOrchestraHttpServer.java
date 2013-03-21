@@ -1,5 +1,6 @@
 package codeOrchestra.http;
 
+import codeOrchestra.rgs.server.RGSParametersCLI;
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.components.ApplicationComponent;
 import org.jetbrains.annotations.NotNull;
@@ -20,10 +21,13 @@ public class CodeOrchestraHttpServer implements ApplicationComponent {
 
   @Override
   public void initComponent() {
+    if (RGSParametersCLI.isInServerMode()) {
+      return;
+    }
+
     tjwsServer = new TJWSServer();
 
     aliases = new Acme.Serve.Serve.PathTreeDictionary();
-//    aliases.put("/*", new java.io.File("/Users/buildserver/TMP/"));
     tjwsServer.setMappingTable(aliases);
 
     java.util.Properties properties = new java.util.Properties();
@@ -51,6 +55,10 @@ public class CodeOrchestraHttpServer implements ApplicationComponent {
 
   @Override
   public void disposeComponent() {
+    if (RGSParametersCLI.isInServerMode()) {
+      return;
+    }
+
     tjwsServer.notifyStop();
     tjwsServer.destroyAllServlets();
   }
@@ -63,8 +71,8 @@ public class CodeOrchestraHttpServer implements ApplicationComponent {
 
   private class TJWSServer extends Acme.Serve.Serve {
     // Overriding method for public access
-    public void setMappingTable(PathTreeDictionary mappingtable) {
-      super.setMappingTable(mappingtable);
+    public void setMappingTable(PathTreeDictionary mappingTable) {
+      super.setMappingTable(mappingTable);
     }
 
     // add the method below when .war deployment is needed
