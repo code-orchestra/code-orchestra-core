@@ -76,7 +76,7 @@ public final class AssetsManager extends AbstractProjectComponent implements Pro
   }
 
   public void fireAssetFileEvent(AssetEventType eventType, String assetFilePath) {
-    String relativePath = FileUtil.getRelativePath(assetFilePath, createOrGetProjectAssetsDir().getPath(), File.separator);
+    String relativePath = "assets" + File.separator + FileUtil.getRelativePath(assetFilePath, createOrGetProjectAssetsDir().getPath(), File.separator);
     AssetFileEvent assetFileEvent = new AssetFileEvent(assetFilePath, relativePath, eventType);
 
     for (AssetFileListener assetFileListener : fileListeners) {
