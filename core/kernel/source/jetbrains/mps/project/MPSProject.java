@@ -16,6 +16,7 @@
 package jetbrains.mps.project;
 
 import codeOrchestra.actionScript.assets.util.AssetsVirtualFileListener;
+import codeOrchestra.http.CodeOrchestraHttpServer;
 import codeOrchestra.utils.ProjectHolder;
 import com.intellij.ide.impl.ProjectUtil;
 import com.intellij.openapi.components.PersistentStateComponent;
@@ -349,6 +350,9 @@ public class MPSProject implements MPSModuleOwner, ProjectComponent, PersistentS
     assert descriptorFile != null;
     projectDescriptor.addModule(descriptorFile.getPath());
     setProjectDescriptor(projectDescriptor, skipReload);
+
+    // CO-5319
+    CodeOrchestraHttpServer.getInstance().addModuleAlias(module.toString(), new File(descriptorFile.getParent().getPath()));
   }
 
   public void addProjectModule(@NotNull IModule module) {
@@ -448,6 +452,9 @@ public class MPSProject implements MPSModuleOwner, ProjectComponent, PersistentS
         ModuleDescriptor descriptor = ModulesMiner.getInstance().loadModuleDescriptor(descriptorFile);
         if (descriptor != null) {
           myModules.add(MPSModuleRepository.getInstance().registerModule(new ModuleHandle(descriptorFile, descriptor), this).getModuleReference());
+
+          // CO-5319
+          CodeOrchestraHttpServer.getInstance().addModuleAlias(descriptor.getNamespace(), new File(descriptorFile.getParent().getPath()));
         } else {
           error("Can't load module from " + descriptorFile.getPath() + " Unknown file type.");
         }

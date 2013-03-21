@@ -2,6 +2,7 @@ package codeOrchestra.actionScript.assets;
 
 import codeOrchestra.actionScript.assets.util.AssetEventType;
 import codeOrchestra.actionscript.view.utils.ViewUtils;
+import codeOrchestra.http.CodeOrchestraHttpServer;
 import codeOrchestra.utils.ProjectHolder;
 import com.intellij.openapi.components.AbstractProjectComponent;
 import com.intellij.openapi.components.ProjectComponent;
@@ -54,6 +55,11 @@ public final class AssetsManager extends AbstractProjectComponent implements Pro
   public boolean areModuleAssetsEnabled() {
     // The module assets are currently disabled
     return false;
+  }
+
+  @Override
+  public void initComponent() {
+    CodeOrchestraHttpServer.getInstance().addAlias(getProjectAssetsDirFile(), "/assets/*");
   }
 
   @Override
@@ -166,8 +172,7 @@ public final class AssetsManager extends AbstractProjectComponent implements Pro
   }
 
   public File createOrGetProjectAssetsDir() {
-    VirtualFile projectBaseDir = myProject.getBaseDir();
-    File assetsDir = new File(projectBaseDir.getPath(), DEFAULT_ASSETS_DIR);
+    File assetsDir = getProjectAssetsDirFile();
 
     if (!assetsDir.exists()) {
       boolean dirCreated = assetsDir.mkdir();
@@ -177,6 +182,11 @@ public final class AssetsManager extends AbstractProjectComponent implements Pro
     }
 
     return assetsDir;
+  }
+
+  private File getProjectAssetsDirFile() {
+    VirtualFile projectBaseDir = myProject.getBaseDir();
+    return new File(projectBaseDir.getPath(), DEFAULT_ASSETS_DIR);
   }
 
   public Solution getOrCreateProjectAssetsSolution(MPSModuleOwner moduleOwner) {
