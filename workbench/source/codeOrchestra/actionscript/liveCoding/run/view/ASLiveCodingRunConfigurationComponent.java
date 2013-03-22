@@ -64,6 +64,8 @@ public class ASLiveCodingRunConfigurationComponent extends JPanel {
   private JCheckBox makeGettersSettersLiveCB;
   private JTextField maxLoopIterationsTF;
   private JCheckBox startPausedCB;
+  private JTextField webAddressField;
+  private JRadioButton myWebAddressButton;
   private String swfFile;
   private MPSProject mpsProject;
 
@@ -91,18 +93,18 @@ public class ASLiveCodingRunConfigurationComponent extends JPanel {
       fileChooser.setEnabled(true);
     }
   };
-  private ActionListener mySystemDefaultApplicationRadioButtonListener = new ActionListener() {
+
+  private ActionListener myLauncherButtonsListener = new ActionListener() {
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
-      flashPlayerChooser.setEnabled(false);
+      updateLauncherFields();
     }
   };
-  private ActionListener myFlashPlayerRadioButtonListener = new ActionListener() {
-    @Override
-    public void actionPerformed(ActionEvent actionEvent) {
-      flashPlayerChooser.setEnabled(true);
-    }
-  };
+
+  private void updateLauncherFields() {
+    flashPlayerChooser.setEnabled(myFlashPlayerRadioButton.isSelected());
+    webAddressField.setEnabled(myWebAddressButton.isSelected());
+  }
 
   public void updateSwfFile(final String solutionName) {
     ModelAccess.instance().runReadAction(new Runnable() {
@@ -179,14 +181,18 @@ public class ASLiveCodingRunConfigurationComponent extends JPanel {
     LauncherType launcherType = runConfiguration.getLauncherType();
     mySystemDefaultApplicationRadioButton.setSelected(launcherType == LauncherType.DEFAULT);
     myFlashPlayerRadioButton.setSelected(launcherType == LauncherType.FLASH_PLAYER);
-    mySystemDefaultApplicationRadioButton.addActionListener(mySystemDefaultApplicationRadioButtonListener);
-    myFlashPlayerRadioButton.addActionListener(myFlashPlayerRadioButtonListener);
+    myWebAddressButton.setSelected(launcherType == LauncherType.WEB_ADDRESS);
+    mySystemDefaultApplicationRadioButton.addActionListener(myLauncherButtonsListener);
+    myFlashPlayerRadioButton.addActionListener(myLauncherButtonsListener);
+    myWebAddressButton.addActionListener(myLauncherButtonsListener);
     flashPlayerChooser.setEnabled(myFlashPlayerRadioButton.isSelected());
     flashPlayerChooser.setText(runConfiguration.getFlashPlayerPath());
     flashPlayerChooser.getTextField().setEditable(false);
     flashPlayerChooser.addBrowseFolderListener("Flash Player", "Select Flash Player path",
       ApplicationManager.getApplication().getComponent(Project.class),
       new FileChooserDescriptor(true, true, false, false, false, false));
+    webAddressField.setText(runConfiguration.getWebAddress());
+    updateLauncherFields();
 
     // Live coding settings
     switch (runConfiguration.getMode()) {
@@ -214,8 +220,15 @@ public class ASLiveCodingRunConfigurationComponent extends JPanel {
     runConfiguration.setSwfFile(swfFile);
     runConfiguration.setUseCustomFile(myHTMLWrapperOrSWFRadioButton.isSelected());
 
-    runConfiguration.setLauncherType(mySystemDefaultApplicationRadioButton.isSelected() ? LauncherType.DEFAULT : LauncherType.FLASH_PLAYER);
+    if (mySystemDefaultApplicationRadioButton.isSelected()) {
+      runConfiguration.setLauncherType(LauncherType.DEFAULT);
+    } else if (myFlashPlayerRadioButton.isSelected()) {
+      runConfiguration.setLauncherType(LauncherType.FLASH_PLAYER);
+    } else if (myWebAddressButton.isSelected()) {
+      runConfiguration.setLauncherType(LauncherType.WEB_ADDRESS);
+    }
     runConfiguration.setFlashPlayerPath(flashPlayerChooser.getText());
+    runConfiguration.setWebAddress(webAddressField.getText());
 
     // Live coding settings
     runConfiguration.setMode(myAllTheMethodsRadioButton.isSelected() ? LiveCodingMode.ALL_METHODS : LiveCodingMode.ANNOTATED_IN_OPEN_TABS);
@@ -297,7 +310,7 @@ public class ASLiveCodingRunConfigurationComponent extends JPanel {
     final Spacer spacer1 = new Spacer();
     contentPane.add(spacer1, new GridConstraints(4, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_VERTICAL, 1, GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
     final JPanel panel5 = new JPanel();
-    panel5.setLayout(new GridLayoutManager(2, 1, new Insets(0, 0, 0, 0), -1, -1));
+    panel5.setLayout(new GridLayoutManager(3, 1, new Insets(0, 0, 0, 0), -1, -1));
     contentPane.add(panel5, new GridConstraints(2, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
     panel5.setBorder(BorderFactory.createTitledBorder(BorderFactory.createEtchedBorder(), "Launcher"));
     final JPanel panel6 = new JPanel();
@@ -312,45 +325,53 @@ public class ASLiveCodingRunConfigurationComponent extends JPanel {
     panel7.setLayout(new GridLayoutManager(1, 2, new Insets(0, 0, 0, 0), -1, -1));
     panel5.add(panel7, new GridConstraints(1, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
     myFlashPlayerRadioButton = new JRadioButton();
-    myFlashPlayerRadioButton.setText("Flash Player");
+    myFlashPlayerRadioButton.setText("Flash Player:");
     panel7.add(myFlashPlayerRadioButton, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
     flashPlayerChooser = new TextFieldWithBrowseButton();
     panel7.add(flashPlayerChooser, new GridConstraints(0, 1, 1, 1, GridConstraints.ANCHOR_EAST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, new Dimension(300, -1), new Dimension(300, -1), 0, false));
     final JPanel panel8 = new JPanel();
-    panel8.setLayout(new GridLayoutManager(4, 2, new Insets(0, 0, 0, 0), -1, -1));
-    contentPane.add(panel8, new GridConstraints(3, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
-    panel8.setBorder(BorderFactory.createTitledBorder(BorderFactory.createEtchedBorder(), "Settings"));
+    panel8.setLayout(new GridLayoutManager(1, 2, new Insets(0, 0, 0, 0), -1, -1));
+    panel5.add(panel8, new GridConstraints(2, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+    myWebAddressButton = new JRadioButton();
+    myWebAddressButton.setText("Web browser at URL:");
+    panel8.add(myWebAddressButton, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+    webAddressField = new JTextField();
+    panel8.add(webAddressField, new GridConstraints(0, 1, 1, 1, GridConstraints.ANCHOR_EAST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_WANT_GROW, GridConstraints.SIZEPOLICY_WANT_GROW, null, new Dimension(300, -1), new Dimension(300, -1), 0, false));
+    final JPanel panel9 = new JPanel();
+    panel9.setLayout(new GridLayoutManager(4, 2, new Insets(0, 0, 0, 0), -1, -1));
+    contentPane.add(panel9, new GridConstraints(3, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
+    panel9.setBorder(BorderFactory.createTitledBorder(BorderFactory.createEtchedBorder(), "Settings"));
     final JLabel label2 = new JLabel();
     label2.setText("Live Methods:");
-    panel8.add(label2, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 1, false));
-    final JPanel panel9 = new JPanel();
-    panel9.setLayout(new GridLayoutManager(2, 2, new Insets(0, 0, 0, 0), -1, -1));
-    panel8.add(panel9, new GridConstraints(0, 1, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
+    panel9.add(label2, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 1, false));
+    final JPanel panel10 = new JPanel();
+    panel10.setLayout(new GridLayoutManager(2, 2, new Insets(0, 0, 0, 0), -1, -1));
+    panel9.add(panel10, new GridConstraints(0, 1, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
     final Spacer spacer3 = new Spacer();
-    panel9.add(spacer3, new GridConstraints(1, 1, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_WANT_GROW, 1, null, null, null, 0, false));
+    panel10.add(spacer3, new GridConstraints(1, 1, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_WANT_GROW, 1, null, null, null, 0, false));
     myAnnotatedWithLiveCodingInRadioButton = new JRadioButton();
     myAnnotatedWithLiveCodingInRadioButton.setText("Annotated with [Live]");
-    panel9.add(myAnnotatedWithLiveCodingInRadioButton, new GridConstraints(1, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+    panel10.add(myAnnotatedWithLiveCodingInRadioButton, new GridConstraints(1, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
     myAllTheMethodsRadioButton = new JRadioButton();
     myAllTheMethodsRadioButton.setText("All the methods");
-    panel9.add(myAllTheMethodsRadioButton, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+    panel10.add(myAllTheMethodsRadioButton, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
     final JLabel label3 = new JLabel();
     label3.setText("Make Getters/Setters Live:");
-    panel8.add(label3, new GridConstraints(2, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 1, false));
+    panel9.add(label3, new GridConstraints(2, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 1, false));
     makeGettersSettersLiveCB = new JCheckBox();
     makeGettersSettersLiveCB.setText(" ");
-    panel8.add(makeGettersSettersLiveCB, new GridConstraints(2, 1, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+    panel9.add(makeGettersSettersLiveCB, new GridConstraints(2, 1, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
     final JLabel label4 = new JLabel();
     label4.setText("Max Loop Iterations:");
-    panel8.add(label4, new GridConstraints(3, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 1, false));
+    panel9.add(label4, new GridConstraints(3, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 1, false));
     maxLoopIterationsTF = new JTextField();
-    panel8.add(maxLoopIterationsTF, new GridConstraints(3, 1, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, new Dimension(65, -1), new Dimension(65, -1), new Dimension(65, -1), 0, false));
+    panel9.add(maxLoopIterationsTF, new GridConstraints(3, 1, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, new Dimension(65, -1), new Dimension(65, -1), new Dimension(65, -1), 0, false));
     final JLabel label5 = new JLabel();
     label5.setText("Start Session Paused");
-    panel8.add(label5, new GridConstraints(1, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 1, false));
+    panel9.add(label5, new GridConstraints(1, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 1, false));
     startPausedCB = new JCheckBox();
     startPausedCB.setText("");
-    panel8.add(startPausedCB, new GridConstraints(1, 1, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+    panel9.add(startPausedCB, new GridConstraints(1, 1, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
     ButtonGroup buttonGroup;
     buttonGroup = new ButtonGroup();
     buttonGroup.add(myModuleOutputFileRadioButton);
@@ -358,6 +379,7 @@ public class ASLiveCodingRunConfigurationComponent extends JPanel {
     buttonGroup = new ButtonGroup();
     buttonGroup.add(mySystemDefaultApplicationRadioButton);
     buttonGroup.add(myFlashPlayerRadioButton);
+    buttonGroup.add(myWebAddressButton);
     buttonGroup = new ButtonGroup();
     buttonGroup.add(myAllTheMethodsRadioButton);
     buttonGroup.add(myAnnotatedWithLiveCodingInRadioButton);

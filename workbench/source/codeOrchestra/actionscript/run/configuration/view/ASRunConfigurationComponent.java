@@ -63,6 +63,8 @@ public class ASRunConfigurationComponent extends JPanel {
   private JRadioButton mySystemDefaultApplicationRadioButton;
   private JRadioButton myFlashPlayerRadioButton;
   private TextFieldWithBrowseButton flashPlayerChooser;
+  private JRadioButton myWebAddressButton;
+  private JTextField webAddressField;
   private String swfFile;
   private MPSProject mpsProject;
   private JTable flashVarsTable;
@@ -179,18 +181,18 @@ public class ASRunConfigurationComponent extends JPanel {
       fileChooser.setEnabled(true);
     }
   };
-  private ActionListener mySystemDefaultApplicationRadioButtonListener = new ActionListener() {
+
+  private ActionListener myLauncherButtonsListener = new ActionListener() {
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
-      flashPlayerChooser.setEnabled(false);
+      updateLauncherFields();
     }
   };
-  private ActionListener myFlashPlayerRadioButtonListener = new ActionListener() {
-    @Override
-    public void actionPerformed(ActionEvent actionEvent) {
-      flashPlayerChooser.setEnabled(true);
-    }
-  };
+
+  private void updateLauncherFields() {
+    flashPlayerChooser.setEnabled(myFlashPlayerRadioButton.isSelected());
+    webAddressField.setEnabled(myWebAddressButton.isSelected());
+  }
 
   public void updateSwfFile(final String solutionName) {
     ModelAccess.instance().runReadAction(new Runnable() {
@@ -272,14 +274,17 @@ public class ASRunConfigurationComponent extends JPanel {
     LauncherType launcherType = runConfiguration.getLauncherType();
     mySystemDefaultApplicationRadioButton.setSelected(launcherType == LauncherType.DEFAULT);
     myFlashPlayerRadioButton.setSelected(launcherType == LauncherType.FLASH_PLAYER);
-    mySystemDefaultApplicationRadioButton.addActionListener(mySystemDefaultApplicationRadioButtonListener);
-    myFlashPlayerRadioButton.addActionListener(myFlashPlayerRadioButtonListener);
-    flashPlayerChooser.setEnabled(myFlashPlayerRadioButton.isSelected());
+    myWebAddressButton.setSelected(launcherType == LauncherType.WEB_ADDRESS);
+    mySystemDefaultApplicationRadioButton.addActionListener(myLauncherButtonsListener);
+    myFlashPlayerRadioButton.addActionListener(myLauncherButtonsListener);
+    myWebAddressButton.addActionListener(myLauncherButtonsListener);
     flashPlayerChooser.setText(runConfiguration.getFlashPlayerPath());
     flashPlayerChooser.getTextField().setEditable(false);
     flashPlayerChooser.addBrowseFolderListener("Flash Player", "Select Flash Player path",
       ApplicationManager.getApplication().getComponent(Project.class),
       new FileChooserDescriptor(true, true, false, false, false, false));
+    webAddressField.setText(runConfiguration.getWebAddress());
+    updateLauncherFields();
 
     flashVars = new ArrayList<FlashVar>();
     for (FlashVar flashVar : runConfiguration.getFlashVars()) {
@@ -322,8 +327,15 @@ public class ASRunConfigurationComponent extends JPanel {
     runConfiguration.setSwfFile(swfFile);
     runConfiguration.setUseCustomFile(myHTMLWrapperOrSWFRadioButton.isSelected());
 
-    runConfiguration.setLauncherType(mySystemDefaultApplicationRadioButton.isSelected() ? LauncherType.DEFAULT : LauncherType.FLASH_PLAYER);
+    if (mySystemDefaultApplicationRadioButton.isSelected()) {
+      runConfiguration.setLauncherType(LauncherType.DEFAULT);
+    } else if (myFlashPlayerRadioButton.isSelected()) {
+      runConfiguration.setLauncherType(LauncherType.FLASH_PLAYER);
+    } else if (myWebAddressButton.isSelected()) {
+      runConfiguration.setLauncherType(LauncherType.WEB_ADDRESS);
+    }
     runConfiguration.setFlashPlayerPath(flashPlayerChooser.getText());
+    runConfiguration.setWebAddress(webAddressField.getText());
 
     runConfiguration.setMpsProject(mpsProject);
 
@@ -460,7 +472,7 @@ public class ASRunConfigurationComponent extends JPanel {
     flashVarsBorderPanel.setBorder(BorderFactory.createTitledBorder(BorderFactory.createEtchedBorder(), "Flash Variables"));
     flashVarsBorderPanel.add(flashVarsPanel, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
     final JPanel panel8 = new JPanel();
-    panel8.setLayout(new GridLayoutManager(2, 1, new Insets(0, 0, 0, 0), -1, -1));
+    panel8.setLayout(new GridLayoutManager(3, 1, new Insets(0, 0, 0, 0), -1, -1));
     contentPane.add(panel8, new GridConstraints(2, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
     panel8.setBorder(BorderFactory.createTitledBorder(BorderFactory.createEtchedBorder(), "Launcher"));
     final JPanel panel9 = new JPanel();
@@ -475,10 +487,18 @@ public class ASRunConfigurationComponent extends JPanel {
     panel10.setLayout(new GridLayoutManager(1, 2, new Insets(0, 0, 0, 0), -1, -1));
     panel8.add(panel10, new GridConstraints(1, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
     myFlashPlayerRadioButton = new JRadioButton();
-    myFlashPlayerRadioButton.setText("Flash Player");
+    myFlashPlayerRadioButton.setText("Flash Player:");
     panel10.add(myFlashPlayerRadioButton, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
     flashPlayerChooser = new TextFieldWithBrowseButton();
     panel10.add(flashPlayerChooser, new GridConstraints(0, 1, 1, 1, GridConstraints.ANCHOR_EAST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, new Dimension(300, -1), new Dimension(300, -1), 0, false));
+    final JPanel panel11 = new JPanel();
+    panel11.setLayout(new GridLayoutManager(1, 2, new Insets(0, 0, 0, 0), -1, -1));
+    panel8.add(panel11, new GridConstraints(2, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+    myWebAddressButton = new JRadioButton();
+    myWebAddressButton.setText("Web browser at URL:");
+    panel11.add(myWebAddressButton, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+    webAddressField = new JTextField();
+    panel11.add(webAddressField, new GridConstraints(0, 1, 1, 1, GridConstraints.ANCHOR_EAST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, new Dimension(300, -1), new Dimension(300, -1), new Dimension(300, -1), 0, false));
     ButtonGroup buttonGroup;
     buttonGroup = new ButtonGroup();
     buttonGroup.add(myModuleOutputFileRadioButton);
@@ -486,6 +506,7 @@ public class ASRunConfigurationComponent extends JPanel {
     buttonGroup = new ButtonGroup();
     buttonGroup.add(mySystemDefaultApplicationRadioButton);
     buttonGroup.add(myFlashPlayerRadioButton);
+    buttonGroup.add(myWebAddressButton);
   }
 
   /**

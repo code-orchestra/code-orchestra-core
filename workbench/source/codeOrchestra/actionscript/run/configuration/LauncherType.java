@@ -6,7 +6,8 @@ package codeOrchestra.actionscript.run.configuration;
 public enum LauncherType {
   
   DEFAULT,
-  FLASH_PLAYER;
+  FLASH_PLAYER,
+  WEB_ADDRESS;
   
   public static LauncherType byIndex(int index) {
     for (LauncherType launcherType : values()) {

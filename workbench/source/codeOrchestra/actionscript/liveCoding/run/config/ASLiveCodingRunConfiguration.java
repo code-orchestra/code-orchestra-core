@@ -14,6 +14,7 @@ public class ASLiveCodingRunConfiguration extends AbstractLiveCodingRunConfigura
   private boolean useCustomFile;
   private String swfFile;
   private String customFile;
+  private String webAddress;
   private int launcherType;
   private String flashPlayerPath;
 
@@ -34,6 +35,14 @@ public class ASLiveCodingRunConfiguration extends AbstractLiveCodingRunConfigura
 
   public void setLauncherType(LauncherType launcherType) {
     this.launcherType = launcherType.ordinal();
+  }
+
+  public String getWebAddress() {
+    return webAddress;
+  }
+
+  public void setWebAddress(String webAddress) {
+    this.webAddress = webAddress;
   }
 
   public String getFlashPlayerPath() {

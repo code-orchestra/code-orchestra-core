@@ -15,6 +15,7 @@ public class ASRunConfiguration implements CodeOrchestraRunConfiguration {
   private String moduleName;
   private String swfFile;
   private String customFile;
+  private String webAddress;
   private boolean make;
   private List<FlashVar> flashVars = new ArrayList<FlashVar>();  
   private int launcherType;
@@ -35,6 +36,14 @@ public class ASRunConfiguration implements CodeOrchestraRunConfiguration {
 
   public void setLauncherType(LauncherType launcherType) {
     this.launcherType = launcherType.ordinal();
+  }
+
+  public String getWebAddress() {
+    return webAddress;
+  }
+
+  public void setWebAddress(String webAddress) {
+    this.webAddress = webAddress;
   }
 
   public String getFlashPlayerPath() {
