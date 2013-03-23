@@ -3,6 +3,7 @@ package codeOrchestra.http;
 import codeOrchestra.rgs.server.RGSParametersCLI;
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.components.ApplicationComponent;
+import jetbrains.mps.util.PathManager;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.File;
@@ -11,6 +12,8 @@ import java.io.File;
  * @author Alexander Eliseyev
  */
 public class CodeOrchestraHttpServer implements ApplicationComponent {
+
+  public static final String CROSSDOMAIN_XML = "crossdomain.xml";
 
   public static CodeOrchestraHttpServer getInstance() {
     return ApplicationManager.getApplication().getComponent(CodeOrchestraHttpServer.class);
@@ -28,7 +31,7 @@ public class CodeOrchestraHttpServer implements ApplicationComponent {
     tjwsServer = new TJWSServer();
 
     aliases = new Acme.Serve.Serve.PathTreeDictionary();
-    tjwsServer.setMappingTable(aliases);
+    addAlias(new File(PathManager.getHomePath(), CROSSDOMAIN_XML), "/" + CROSSDOMAIN_XML);
 
     java.util.Properties properties = new java.util.Properties();
     properties.put("port", 8090); // TODO: make configurable
@@ -48,8 +51,8 @@ public class CodeOrchestraHttpServer implements ApplicationComponent {
     addAlias(new File(baseDir, "output_swf"), "/modules_output/" + moduleName + "/*");
   }
 
-  public void addAlias(File baseDir, String alias) {
-    aliases.put(alias, baseDir);
+  public void addAlias(File file, String alias) {
+    aliases.put(alias, file);
     tjwsServer.setMappingTable(aliases);
   }
 
