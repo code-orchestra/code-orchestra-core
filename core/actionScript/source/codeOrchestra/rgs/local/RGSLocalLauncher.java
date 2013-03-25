@@ -72,6 +72,10 @@ public class RGSLocalLauncher extends JavaLauncher {
     result.add(getAbsolutePathInHome("lib/commons-io-2.0.1.jar"));
     result.add(getAbsolutePathInHome("lib/commons-lang-2.4.jar"));
 
+    result.add(getAbsolutePathInHome("lib/jetty/jetty-6.1.26.jar"));
+    result.add(getAbsolutePathInHome("lib/jetty/jetty-util-6.1.26.jar"));
+    result.add(getAbsolutePathInHome("lib/jetty/servlet-api-2.5.jar"));
+
     return result;
   }
 
