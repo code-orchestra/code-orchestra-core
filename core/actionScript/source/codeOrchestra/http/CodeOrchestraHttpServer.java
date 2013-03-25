@@ -65,6 +65,10 @@ public class CodeOrchestraHttpServer implements ApplicationComponent {
   }
 
   private void addHandler(Handler handler, String alias) {
+    if (RGSParametersCLI.isInServerMode()) {
+      return;
+    }
+
     Handler existingHandler = handlersMap.get(alias);
     if (existingHandler != null) {
       activeHandlers.removeHandler(existingHandler);
