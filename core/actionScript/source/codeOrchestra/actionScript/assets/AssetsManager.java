@@ -59,7 +59,7 @@ public final class AssetsManager extends AbstractProjectComponent implements Pro
 
   @Override
   public void initComponent() {
-    CodeOrchestraHttpServer.getInstance().addAlias(getProjectAssetsDirFile(), "/assets/*");
+    CodeOrchestraHttpServer.getInstance().addAlias(getProjectAssetsDirFile(), "/assets");
   }
 
   @Override
