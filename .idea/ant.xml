@@ -1,74 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="AntConfiguration">
-    <defaultAnt bundledAnt="true" />
     <buildFile url="file://$PROJECT_DIR$/testbench/tests/jetbrains/mps/mps.tests.xml">
-      <additionalClassPath />
-      <antReference projectDefault="true" />
-      <customJdkName value="" />
-      <maximumHeapSize value="128" />
       <maximumStackSize value="32" />
-      <properties />
     </buildFile>
     <buildFile url="file://$PROJECT_DIR$/languages/util/buildlanguage/ant/tests/jetbrains/mps/build/ant/test.generate.task.xml">
-      <additionalClassPath />
-      <antReference projectDefault="true" />
-      <customJdkName value="" />
-      <maximumHeapSize value="128" />
       <maximumStackSize value="32" />
-      <properties />
     </buildFile>
-    <buildFile url="file://$PROJECT_DIR$/testbench/make_all_modules.xml">
-      <additionalClassPath />
-      <antReference projectDefault="true" />
-      <customJdkName value="" />
-      <maximumHeapSize value="128" />
-      <maximumStackSize value="2" />
-      <properties />
-    </buildFile>
-    <buildFile url="file://$PROJECT_DIR$/build/MPS-external.xml">
-      <additionalClassPath />
-      <antReference projectDefault="true" />
-      <customJdkName value="" />
-      <maximumHeapSize value="128" />
-      <maximumStackSize value="2" />
-      <properties />
-    </buildFile>
+    <buildFile url="file://$PROJECT_DIR$/testbench/make_all_modules.xml" />
+    <buildFile url="file://$PROJECT_DIR$/build/MPS-external.xml" />
     <buildFile url="file://$PROJECT_DIR$/build/MPS-external-dist.xml">
-      <additionalClassPath />
-      <antReference projectDefault="true" />
-      <customJdkName value="" />
-      <maximumHeapSize value="128" />
-      <maximumStackSize value="2" />
       <properties>
         <property name="version" value="11" />
         <property name="build.number" value="1222" />
       </properties>
     </buildFile>
-    <buildFile url="file://$PROJECT_DIR$/build/platform/update_platform.xml">
-      <additionalClassPath />
-      <antReference projectDefault="true" />
-      <customJdkName value="" />
-      <maximumHeapSize value="128" />
-      <maximumStackSize value="2" />
-      <properties />
-    </buildFile>
-    <buildFile url="file://$PROJECT_DIR$/testbench/cleanup.xml">
-      <additionalClassPath />
-      <antReference projectDefault="true" />
-      <customJdkName value="" />
-      <maximumHeapSize value="128" />
-      <maximumStackSize value="2" />
-      <properties />
-    </buildFile>
+    <buildFile url="file://$PROJECT_DIR$/build/platform/update_platform.xml" />
+    <buildFile url="file://$PROJECT_DIR$/testbench/cleanup.xml" />
     <buildFile url="file://$PROJECT_DIR$/build/test.xml">
       <additionalClassPath>
         <entry path="file://$USER_HOME$/mps/lib/junit-4.8.2.jar" />
       </additionalClassPath>
-      <antReference projectDefault="true" />
-      <customJdkName value="" />
-      <maximumHeapSize value="128" />
-      <maximumStackSize value="2" />
       <properties>
         <property name="deploy.dir" value="$PROJECT_DIR$/../MPS.artifacts" />
         <property name="build.number" value="20.7385" />
