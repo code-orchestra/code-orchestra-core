@@ -17,8 +17,10 @@ package codeOrchestra.actionscript.run.compiler.PlayerComboBox;
 
 import codeOrchestra.actionscript.modulemaker.view.FlexSDKPlayerVersionAnalyzer;
 import codeOrchestra.actionscript.modulemaker.view.FlexSDKSettings;
+import com.intellij.backport12.ui.EmptyIcon;
+import com.intellij.openapi.ui.ComboBoxWithWidePopup;
 import com.intellij.ui.ScreenUtil;
-import com.intellij.ui.SimpleTextAttributes;
+import com.intellij.backport12.ui.SimpleTextAttributes;
 import org.jetbrains.annotations.Nullable;
 
 import javax.swing.*;
@@ -31,7 +33,7 @@ import java.util.List;
  * @author olegchir
  */
 public class PlayerComboBox extends ComboBoxWithWidePopup {
-  private static final Icon EMPTY_ICON = EmptyIcon.create(1,16);
+  private static final Icon EMPTY_ICON = EmptyIcon.create(1, 16);
 
   public PlayerComboBox() {
     super(new PlayerComboBoxModel());

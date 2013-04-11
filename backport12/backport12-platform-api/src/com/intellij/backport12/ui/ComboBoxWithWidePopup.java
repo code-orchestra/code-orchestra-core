@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package codeOrchestra.actionscript.run.compiler.PlayerComboBox;
+package com.intellij.backport12.ui;
 
-import com.intellij.openapi.util.SystemInfo;
-import com.intellij.util.ui.UIUtil;
+import com.intellij.backport12.openapi.util.SystemInfo;
+import com.intellij.backport12.util.ui.UIUtil;
 
 import javax.swing.ComboBoxModel;
 import javax.swing.JComboBox;

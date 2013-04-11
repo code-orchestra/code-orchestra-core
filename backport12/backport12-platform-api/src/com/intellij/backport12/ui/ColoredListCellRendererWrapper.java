@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package codeOrchestra.actionscript.run.compiler.PlayerComboBox;
+package com.intellij.backport12.ui;
 /*
  * Copyright 2000-2012 JetBrains s.r.o.
  *
@@ -30,15 +30,12 @@ package codeOrchestra.actionscript.run.compiler.PlayerComboBox;
  * limitations under the License.
  */
 
-import com.intellij.ui.ColoredListCellRenderer;
-import com.intellij.ui.SimpleColoredText;
-import com.intellij.ui.SimpleTextAttributes;
 import org.jetbrains.annotations.NotNull;
 
 import javax.swing.JList;
 
 /**
- * Typed version of {@link com.intellij.ui.ColoredListCellRenderer}.
+ * Typed version of {@link com.intellij.backport12.ui.ColoredListCellRenderer}.
  */
 public abstract class ColoredListCellRendererWrapper<T> extends ColoredListCellRenderer {
   @Override

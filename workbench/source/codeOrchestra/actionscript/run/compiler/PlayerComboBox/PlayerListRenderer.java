@@ -16,11 +16,12 @@
 package codeOrchestra.actionscript.run.compiler.PlayerComboBox;
 
 import codeOrchestra.actionscript.modulemaker.view.FlexSDKPlayerVersionAnalyzer;
-import com.intellij.openapi.roots.ui.util.CompositeAppearance;
-import com.intellij.openapi.roots.ui.util.SimpleTextCellAppearance;
+import com.intellij.backport12.openapi.roots.ui.util.CompositeAppearance;
+import com.intellij.backport12.openapi.roots.ui.util.SimpleTextCellAppearance;
+import com.intellij.backport12.ui.ColoredListCellRendererWrapper;
 import com.intellij.openapi.util.SystemInfo;
 import com.intellij.openapi.util.text.StringUtil;
-import com.intellij.ui.SimpleTextAttributes;
+import com.intellij.backport12.ui.SimpleTextAttributes;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
