@@ -32,7 +32,7 @@ public class FlexSDKPlayerVersionAnalyzer {
       File[] versions = playerDir.listFiles();
 
       for (File versionFile : versions) {
-        String version = versionFile.getName();
+        String version = versionFile.getName()+".0";
         if (version != null) {
           availableVersions.add(version);
         }
@@ -40,5 +40,16 @@ public class FlexSDKPlayerVersionAnalyzer {
     }
 
     return availableVersions;
+  }
+
+  public static boolean playerVersionAvailable(String playerVersion, String flexSDKPath) {
+    List<String> versions = getAvailablePlayerVersions(flexSDKPath);
+    return versions.contains(playerVersion);
+  }
+
+  public static boolean playerVersionAvailable(String playerVersion) {
+    String flexSDKPath = FlexSDKSettings.getInstance().getFlexSDKPath();
+    List<String> versions = getAvailablePlayerVersions(flexSDKPath);
+    return versions.contains(playerVersion);
   }
 }
