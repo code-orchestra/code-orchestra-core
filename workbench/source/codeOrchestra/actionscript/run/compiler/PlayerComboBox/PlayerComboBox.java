@@ -13,18 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package codeOrchestra.backportUI;
+package codeOrchestra.actionscript.run.compiler.PlayerComboBox;
 
 import codeOrchestra.actionscript.modulemaker.view.FlexSDKPlayerVersionAnalyzer;
 import codeOrchestra.actionscript.modulemaker.view.FlexSDKSettings;
 import com.intellij.ui.ScreenUtil;
 import com.intellij.ui.SimpleTextAttributes;
-import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import javax.swing.DefaultComboBoxModel;
-import javax.swing.Icon;
-import javax.swing.JList;
+import javax.swing.*;
 import java.awt.Dimension;
 import java.awt.Rectangle;
 import java.util.Collections;
@@ -52,10 +49,6 @@ public class PlayerComboBox extends ComboBoxWithWidePopup {
               : new NonePlayerComboBoxItem(), index, selected, hasFocus);
           }
         }
-        setVisible(false);
-        setVisible(true);
-        revalidate();
-        repaint();
       }
     });
   }
@@ -73,7 +66,7 @@ public class PlayerComboBox extends ComboBoxWithWidePopup {
 
     List<String> players = FlexSDKPlayerVersionAnalyzer.getAvailablePlayerVersions(FlexSDKSettings.getInstance().getFlexSDKPath());
     PlayerComboBoxItem item = null;
-    if (player.contains(player)){
+    if (players.contains(player)){
       item = new PlayerComboBoxItem(player);
     } else {
       item = new InvalidPlayerComboBoxItem(player);
@@ -220,6 +213,10 @@ public class PlayerComboBox extends ComboBoxWithWidePopup {
     @Override
     public PlayerComboBoxItem getElementAt(int index) {
       return (PlayerComboBoxItem)super.getElementAt(index);
+    }
+
+    public void updateContents() {
+      fireContentsChanged(this, -1, -1);
     }
   }
 }

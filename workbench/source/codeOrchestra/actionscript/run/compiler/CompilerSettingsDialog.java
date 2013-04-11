@@ -1,6 +1,6 @@
 package codeOrchestra.actionscript.run.compiler;
 
-import codeOrchestra.backportUI.PlayerComboBox;
+import codeOrchestra.actionscript.run.compiler.PlayerComboBox.PlayerComboBox;
 import com.intellij.openapi.util.Computable;
 import com.intellij.uiDesigner.core.Spacer;
 import codeOrchestra.actionScript.optimization.OptimizeImportsHelper;
