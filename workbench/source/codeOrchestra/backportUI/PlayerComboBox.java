@@ -52,6 +52,10 @@ public class PlayerComboBox extends ComboBoxWithWidePopup {
               : new NonePlayerComboBoxItem(), index, selected, hasFocus);
           }
         }
+        setVisible(false);
+        setVisible(true);
+        revalidate();
+        repaint();
       }
     });
   }

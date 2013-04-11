@@ -16,7 +16,6 @@
 package codeOrchestra.backportUI;
 
 import codeOrchestra.actionscript.modulemaker.view.FlexSDKPlayerVersionAnalyzer;
-import com.intellij.openapi.roots.ui.util.CellAppearance;
 import com.intellij.openapi.roots.ui.util.CompositeAppearance;
 import com.intellij.openapi.roots.ui.util.SimpleTextCellAppearance;
 import com.intellij.openapi.util.SystemInfo;
@@ -27,8 +26,6 @@ import org.jetbrains.annotations.Nullable;
 
 import javax.swing.JList;
 import javax.swing.UIManager;
-import java.awt.Color;
-
 
 /**
  * @author Eugene Zhuravlev
@@ -37,7 +34,9 @@ import java.awt.Color;
 public class PlayerListRenderer extends ColoredListCellRendererWrapper {
   @Override
   public void doCustomize(JList list, Object value, int index, boolean selected, boolean hasFocus) {
-    if (value == null || value instanceof String) {
+    if (value == null) {
+      createAppearanceForInvalidPlayer("<No player>").customize(this);
+    } else if (value instanceof String) {
       createAppearanceForPlayer((String)value, selected).customize(this);
     }
     else {
@@ -49,36 +48,27 @@ public class PlayerListRenderer extends ColoredListCellRendererWrapper {
   }
 
   @NotNull
-  public CellAppearance createAppearanceForPlayer(@Nullable final String player, final boolean selected) {
+  public CompositeAppearance createAppearanceForPlayer(@Nullable final String player, final boolean selected) {
     String name = "Flex SDK Player";
     //String name = player;
     String version = player;
 
-    if (player == null) {
-      return createAppearanceForInvalidPlayer("<No player>");
-    }
-
     CompositeAppearance appearance = new CompositeAppearance();
-    //appearance.setIcon();
+    appearance.setIcon(null);
     SimpleTextAttributes attributes = getTextAttributes(FlexSDKPlayerVersionAnalyzer.playerVersionAvailable(player), selected);
     CompositeAppearance.DequeEnd ending = appearance.getEnding();
     ending.addText(name, attributes);
 
-
     if (!version.equals(name)) {
-      SimpleTextAttributes textAttributes = !selected ? SimpleTextAttributes.SYNTHETIC_ATTRIBUTES :
-        SystemInfo.isMac && selected ? new SimpleTextAttributes(SimpleTextAttributes.STYLE_PLAIN,
-          Color.WHITE): SimpleTextAttributes.GRAY_ATTRIBUTES;
+      SimpleTextAttributes textAttributes = SimpleTextAttributes.GRAY_ATTRIBUTES;
       ending.addComment(player, textAttributes);
     }
 
-    CompositeAppearance result = ending.getAppearance();
-
-    return result;
+    return ending.getAppearance();
   }
 
   @NotNull
-  public CellAppearance createAppearanceForInvalidPlayer(@NotNull final String text) {
+  public SimpleTextCellAppearance createAppearanceForInvalidPlayer(@NotNull final String text) {
     return SimpleTextCellAppearance.invalid(text, null);
   }
 
