@@ -16,8 +16,8 @@
 package codeOrchestra.backportUI;
 
 import codeOrchestra.actionscript.modulemaker.view.FlexSDKPlayerVersionAnalyzer;
+import com.intellij.openapi.roots.ui.util.CellAppearance;
 import com.intellij.openapi.roots.ui.util.CompositeAppearance;
-import com.intellij.openapi.roots.ui.util.ModifiableCellAppearance;
 import com.intellij.openapi.roots.ui.util.SimpleTextCellAppearance;
 import com.intellij.openapi.util.SystemInfo;
 import com.intellij.openapi.util.text.StringUtil;
@@ -49,7 +49,11 @@ public class PlayerListRenderer extends ColoredListCellRendererWrapper {
   }
 
   @NotNull
-  public ModifiableCellAppearance createAppearanceForPlayer(@Nullable final String player, final boolean selected) {
+  public CellAppearance createAppearanceForPlayer(@Nullable final String player, final boolean selected) {
+    String name = "Flex SDK Player";
+    //String name = player;
+    String version = player;
+
     if (player == null) {
       return createAppearanceForInvalidPlayer("<No player>");
     }
@@ -58,19 +62,23 @@ public class PlayerListRenderer extends ColoredListCellRendererWrapper {
     //appearance.setIcon();
     SimpleTextAttributes attributes = getTextAttributes(FlexSDKPlayerVersionAnalyzer.playerVersionAvailable(player), selected);
     CompositeAppearance.DequeEnd ending = appearance.getEnding();
+    ending.addText(name, attributes);
 
-    if (player != null && !player.equals(getName())) {
+
+    if (!version.equals(name)) {
       SimpleTextAttributes textAttributes = !selected ? SimpleTextAttributes.SYNTHETIC_ATTRIBUTES :
         SystemInfo.isMac && selected ? new SimpleTextAttributes(SimpleTextAttributes.STYLE_PLAIN,
           Color.WHITE): SimpleTextAttributes.GRAY_ATTRIBUTES;
       ending.addComment(player, textAttributes);
     }
 
-    return ending.getAppearance();
+    CompositeAppearance result = ending.getAppearance();
+
+    return result;
   }
 
   @NotNull
-  public ModifiableCellAppearance createAppearanceForInvalidPlayer(@NotNull final String text) {
+  public CellAppearance createAppearanceForInvalidPlayer(@NotNull final String text) {
     return SimpleTextCellAppearance.invalid(text, null);
   }
 

@@ -56,6 +56,28 @@ public class PlayerComboBox extends ComboBoxWithWidePopup {
     });
   }
 
+  public void selectPlayer(String player) {
+    if (null==player) {
+      return;
+    }
+
+    int idx = indexOf(player);
+    if (-1!=idx) {
+      setSelectedItem(getItemAt(idx));
+      return;
+    }
+
+    List<String> players = FlexSDKPlayerVersionAnalyzer.getAvailablePlayerVersions(FlexSDKSettings.getInstance().getFlexSDKPath());
+    PlayerComboBoxItem item = null;
+    if (player.contains(player)){
+      item = new PlayerComboBoxItem(player);
+    } else {
+      item = new InvalidPlayerComboBoxItem(player);
+    }
+
+    addItem(item);
+    setSelectedItem(item);
+  }
 
   @Override
   public Dimension getPreferredSize() {

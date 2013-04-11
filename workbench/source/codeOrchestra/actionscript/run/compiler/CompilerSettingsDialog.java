@@ -1,5 +1,6 @@
 package codeOrchestra.actionscript.run.compiler;
 
+import codeOrchestra.backportUI.PlayerComboBox;
 import com.intellij.openapi.util.Computable;
 import com.intellij.uiDesigner.core.Spacer;
 import codeOrchestra.actionScript.optimization.OptimizeImportsHelper;
@@ -43,9 +44,6 @@ public class CompilerSettingsDialog extends JDialog implements ISynchronizable {
   private JRadioButton myInheritProjectOutputPathRadioButton;
   private JRadioButton myUseModuleCompileOutputRadioButton;
   private JTextField moduleOutputPath;
-  private JTextField version1;
-  private JTextField version2;
-  private JTextField version3;
   private JCheckBox myIncludeResourceFilesInCheckBox;
   private JCheckBox myUseFrameworkAsRuntimeCheckBox;
   private JCheckBox myNonDefaultLocaleSettingsCheckBox;
@@ -65,6 +63,7 @@ public class CompilerSettingsDialog extends JDialog implements ISynchronizable {
   private JCheckBox myIncludeAllClassesCheckBox;
   private JPanel additionalFlexPropertiesPanel;
   private JButton myExcludedPackagesButton;
+  private PlayerComboBox myTargetPlayerVersionComboBox;
 
   private Map<JSOptimizationKind, JCheckBox> jsAdvancedOptimizationCheckboxes = new HashMap<JSOptimizationKind, JCheckBox>();
   private Map<JSOptimizationKind, JCheckBox> jsRegularOptimizationCheckboxes = new HashMap<JSOptimizationKind, JCheckBox>();
@@ -210,9 +209,6 @@ public class CompilerSettingsDialog extends JDialog implements ISynchronizable {
     customCompilerOptionComponents.add(myUseModuleCompileOutputRadioButton);
     customCompilerOptionComponents.add(outputFileName);
     customCompilerOptionComponents.add(moduleOutputPath);
-    customCompilerOptionComponents.add(version1);
-    customCompilerOptionComponents.add(version2);
-    customCompilerOptionComponents.add(version3);
     customCompilerOptionComponents.add(myIncludeResourceFilesInCheckBox);
     customCompilerOptionComponents.add(myUseFrameworkAsRuntimeCheckBox);
     customCompilerOptionComponents.add(myNonDefaultLocaleSettingsCheckBox);
@@ -314,19 +310,8 @@ public class CompilerSettingsDialog extends JDialog implements ISynchronizable {
     myInheritProjectOutputPathRadioButton.setSelected(compilerSettings.inheritProjectOutputPath);
     moduleOutputPath.setText(compilerSettings.outputPath);
 
-    // Version
-    if (compilerSettings.playerVersion != null) {
-      String[] subversion = compilerSettings.playerVersion.split("\\.");
-      if (subversion.length > 0) {
-        version1.setText(subversion[0]);
-      }
-      if (subversion.length > 1) {
-        version2.setText(subversion[1]);
-      }
-      if (subversion.length > 2) {
-        version3.setText(subversion[2]);
-      }
-    }
+    myTargetPlayerVersionComboBox.selectPlayer(compilerSettings.playerVersion);
+
     myUseFrameworkAsRuntimeCheckBox.setSelected(compilerSettings.useFrameworkAsRSL);
     myIncludeAllClassesCheckBox.setSelected(compilerSettings.includeAllRoots());
     myIncludeResourceFilesInCheckBox.setSelected(compilerSettings.includeResources);
@@ -419,12 +404,7 @@ public class CompilerSettingsDialog extends JDialog implements ISynchronizable {
     compilerSettings.inheritProjectOutputPath = myInheritProjectOutputPathRadioButton.isSelected();
     compilerSettings.outputPath = moduleOutputPath.getText();
 
-    String[] subversion = new String[]{"", "", ""};
-    // Version
-    subversion[0] = version1.getText();
-    subversion[1] = version2.getText();
-    subversion[2] = version3.getText();
-    compilerSettings.playerVersion = StringUtils.join(subversion, ".");
+    compilerSettings.playerVersion = myTargetPlayerVersionComboBox.getSelectedItem().getPlayer();
 
     compilerSettings.useFrameworkAsRSL = myUseFrameworkAsRuntimeCheckBox.isSelected();
     compilerSettings.includeResources = myIncludeResourceFilesInCheckBox.isSelected();
@@ -491,11 +471,6 @@ public class CompilerSettingsDialog extends JDialog implements ISynchronizable {
 
       if (!myUseCustomCompilerCofigurationCheckBox.isSelected() && myUseModuleCompileOutputRadioButton.isSelected() && StringUtils.isEmpty(moduleOutputPath.getText())) {
         parent.setErrorText("Module output path is not specified");
-        return false;
-      }
-
-      if (!myUseCustomCompilerCofigurationCheckBox.isSelected() && (StringUtils.isEmpty(version1.getText()) || StringUtils.isEmpty(version2.getText()) || StringUtils.isEmpty(version3.getText()))) {
-        parent.setErrorText("Player version is not specified");
         return false;
       }
     }
@@ -622,47 +597,13 @@ public class CompilerSettingsDialog extends JDialog implements ISynchronizable {
     final JPanel panel8 = new JPanel();
     panel8.setLayout(new GridBagLayout());
     panel7.add(panel8, new GridConstraints(0, 1, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_VERTICAL, 1, GridConstraints.SIZEPOLICY_FIXED, new Dimension(300, -1), null, new Dimension(300, -1), 0, false));
-    version1 = new JTextField();
-    version1.setColumns(5);
+    myTargetPlayerVersionComboBox = new PlayerComboBox();
     GridBagConstraints gbc;
     gbc = new GridBagConstraints();
     gbc.gridx = 0;
     gbc.gridy = 0;
-    gbc.weightx = 1.0;
-    gbc.weighty = 1.0;
-    panel8.add(version1, gbc);
-    version2 = new JTextField();
-    version2.setColumns(5);
-    gbc = new GridBagConstraints();
-    gbc.gridx = 2;
-    gbc.gridy = 0;
-    gbc.weightx = 1.0;
-    gbc.weighty = 1.0;
-    panel8.add(version2, gbc);
-    version3 = new JTextField();
-    version3.setColumns(5);
-    gbc = new GridBagConstraints();
-    gbc.gridx = 4;
-    gbc.gridy = 0;
-    gbc.weightx = 1.0;
-    gbc.weighty = 1.0;
-    panel8.add(version3, gbc);
-    final JLabel label6 = new JLabel();
-    label6.setText(".");
-    gbc = new GridBagConstraints();
-    gbc.gridx = 3;
-    gbc.gridy = 0;
-    gbc.weighty = 1.0;
     gbc.anchor = GridBagConstraints.WEST;
-    panel8.add(label6, gbc);
-    final JLabel label7 = new JLabel();
-    label7.setText(".");
-    gbc = new GridBagConstraints();
-    gbc.gridx = 1;
-    gbc.gridy = 0;
-    gbc.weighty = 1.0;
-    gbc.anchor = GridBagConstraints.WEST;
-    panel8.add(label7, gbc);
+    panel8.add(myTargetPlayerVersionComboBox, gbc);
     final JPanel panel9 = new JPanel();
     panel9.setLayout(new GridLayoutManager(1, 2, new Insets(0, 0, 0, 0), -1, -1));
     targetPlayerPanel.add(panel9, new GridConstraints(1, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, 1, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
@@ -675,9 +616,9 @@ public class CompilerSettingsDialog extends JDialog implements ISynchronizable {
     additionalCompilerPanel = new JPanel();
     additionalCompilerPanel.setLayout(new GridLayoutManager(1, 2, new Insets(0, 0, 0, 0), -1, -1));
     panel1.add(additionalCompilerPanel, new GridConstraints(6, 0, 1, 1, GridConstraints.ANCHOR_NORTH, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
-    final JLabel label8 = new JLabel();
-    label8.setText("Additional compiler options:");
-    additionalCompilerPanel.add(label8, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+    final JLabel label6 = new JLabel();
+    label6.setText("Additional compiler options:");
+    additionalCompilerPanel.add(label6, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
     compilerOptions = new JTextField();
     additionalCompilerPanel.add(compilerOptions, new GridConstraints(0, 1, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
     advancedJSCheckboxesPanel = new JPanel();
@@ -700,6 +641,7 @@ public class CompilerSettingsDialog extends JDialog implements ISynchronizable {
     additionalFlexPropertiesPanel.add(myExcludedPackagesButton, new GridConstraints(1, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
     final Spacer spacer2 = new Spacer();
     contentPane.add(spacer2, new GridConstraints(1, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_VERTICAL, 1, GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
+    label5.setLabelFor(myTargetPlayerVersionComboBox);
     ButtonGroup buttonGroup;
     buttonGroup = new ButtonGroup();
     buttonGroup.add(myInheritProjectOutputPathRadioButton);
