@@ -21,7 +21,8 @@
     </zip>
   </target>
   <target name="clean.after.deploy">
-    <delete dir="${deploy.dir}" />  </target>  
+    <delete dir="${deploy.dir}" />  
+  </target>  
   <target name="buildnumber">
     <buildnumber />
   </target>
@@ -226,6 +227,24 @@
     </copy>
     <copy todir="${deploy.dir}/MPS/lib/mps.jar.tmp">
       <fileset dir="${mps_home}/MPSPlugin/apiclasses" />
+    </copy>
+    <copy todir="${deploy.dir}/MPS/lib/mps.jar.tmp">
+      <fileset dir="${mps_home}/backport12/backport12-annotations/classes" />
+    </copy>
+    <copy todir="${deploy.dir}/MPS/lib/mps.jar.tmp">
+      <fileset dir="${mps_home}/backport12/backport12-core-api/classes" />
+    </copy>
+    <copy todir="${deploy.dir}/MPS/lib/mps.jar.tmp">
+      <fileset dir="${mps_home}/backport12/backport12-extensions/classes" />
+    </copy>
+    <copy todir="${deploy.dir}/MPS/lib/mps.jar.tmp">
+      <fileset dir="${mps_home}/backport12/backport12-platform-api/classes" />
+    </copy>
+    <copy todir="${deploy.dir}/MPS/lib/mps.jar.tmp">
+      <fileset dir="${mps_home}/backport12/backport12-util/classes" />
+    </copy>
+    <copy todir="${deploy.dir}/MPS/lib/mps.jar.tmp">
+      <fileset dir="${mps_home}/backport12/backport12-util-rt/classes" />
     </copy>
     <antcall target="MPS-languages.pack.jetbrains.mps.analyzers.runtime" />
     <antcall target="MPS-languages.pack.jetbrains.mps.dataFlow.runtime" />

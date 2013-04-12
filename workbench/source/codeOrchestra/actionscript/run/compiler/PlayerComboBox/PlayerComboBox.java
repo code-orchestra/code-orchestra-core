@@ -17,7 +17,7 @@ package codeOrchestra.actionscript.run.compiler.PlayerComboBox;
 
 import codeOrchestra.actionscript.modulemaker.view.FlexSDKPlayerVersionAnalyzer;
 import codeOrchestra.actionscript.modulemaker.view.FlexSDKSettings;
-import com.intellij.backport12.ui.EmptyIcon;
+import com.intellij.backport12.util.ui.EmptyIcon;
 import com.intellij.openapi.ui.ComboBoxWithWidePopup;
 import com.intellij.ui.ScreenUtil;
 import com.intellij.backport12.ui.SimpleTextAttributes;
