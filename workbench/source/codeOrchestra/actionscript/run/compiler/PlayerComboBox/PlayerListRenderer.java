@@ -50,8 +50,8 @@ public class PlayerListRenderer extends ColoredListCellRendererWrapper {
 
   @NotNull
   public CompositeAppearance createAppearanceForPlayer(@Nullable final String player, final boolean selected) {
-    String name = "Flex SDK Player";
-    //String name = player;
+    //String name = "Flex SDK Player";
+    String name = player;
     String version = player;
 
     CompositeAppearance appearance = new CompositeAppearance();
