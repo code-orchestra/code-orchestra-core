@@ -49,7 +49,7 @@ public final class SolutionUtils {
     "operators"
   };
 
-  private static Pattern VALID_IDENTIFIER_PATTERN = Pattern.compile("^[a-zA-Z[_][$]][a-zA-Z0-9[_][$]]*$");
+  private static Pattern VALID_IDENTIFIER_PATTERN = Pattern.compile("^[a-zA-Z[_][$]][[-]a-zA-Z0-9[_][$]]*$");
 
   public static Solution createNewSolution(final IFile solutionDescriptorFile, Project project) {
     return createNewSolution(solutionDescriptorFile, project, OutputType.FLEX_APPLICATION);
