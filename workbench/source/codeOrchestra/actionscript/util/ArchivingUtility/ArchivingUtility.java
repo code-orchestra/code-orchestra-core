@@ -39,6 +39,8 @@ import org.jetbrains.annotations.NotNull;
 import java.awt.Frame;
 import java.io.File;
 import java.io.IOException;
+import java.lang.management.ManagementFactory;
+import java.lang.management.RuntimeMXBean;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.regex.Matcher;
@@ -93,7 +95,7 @@ public class ArchivingUtility {
       ModelAccess.instance().runWriteActionWithProgressSynchronously(new Progressive() {
         public void run(@NotNull() ProgressIndicator p0) {
           List<IModule> localAllModules = mpsProject.getModules();
-          userLanguages.addAll(getUserLangs(mpsProject.getProjectLanguages()));
+          userLanguages.addAll(getUserLangs(mpsProject.getProjectLanguages(),mpsProject));
           if (userLanguages.size() < 1) {
             auContext.abort("No languages found", "Error", false);
             return;
@@ -164,7 +166,7 @@ public class ArchivingUtility {
 
     if (shouldShowModuleSelectionDialog) {
       HashSet<String> selectedModuleIds = new HashSet<String>();
-      AUSelectModuleDialog dialog = new AUSelectModuleDialog(frame, "Select Modules", "Export checked",  "Export selected", AUSelectItemDialog.SELECTION_TYPE_MULTIPLE_CHECKED,depModules, selectedModuleIds);
+      AUSelectModuleDialog dialog = new AUSelectModuleDialog(frame, "Select Modules", "Export checked", "Export selected", AUSelectItemDialog.SELECTION_TYPE_MULTIPLE_CHECKED, depModules, selectedModuleIds);
       dialog.checkAll();
       ScreenHelper.centerOnScreen(dialog, true);
       dialog.setVisible(true);
@@ -182,19 +184,36 @@ public class ArchivingUtility {
     return auContext;
   }
 
-  public static List<IModule> getUserLangs(List<Language> allModules) {
-    List<String> listedStdLangs = Languages.getListedStandardLanguages();
+  public static List<IModule> getUserLangs(List<Language> allModules, MPSProject mpsProject) {
+    List<String> blacklistedLangs = getBlacklistedLangs(mpsProject);
     List<IModule> userLanguages = new ArrayList<IModule>();
 
     for (IModule currModule : allModules) {
       if (currModule instanceof Language) {
-        if (!listedStdLangs.contains(currModule.getModuleFqName())) {
+        if (!blacklistedLangs.contains(currModule.getModuleFqName())) {
           userLanguages.add(currModule);
         }
       }
     }
 
     return userLanguages;
+  }
+
+  public static List<String> getBlacklistedLangs(MPSProject mpsProject) {
+//    RuntimeMXBean RuntimemxBean = ManagementFactory.getRuntimeMXBean();
+//    List<String> arguments = RuntimemxBean.getInputArguments();
+    String sysProperty = System.getProperty("export.import.internal.languages");
+    List<String> blacklistedLangs = new ArrayList<String>();
+    String projectName = null;
+    try {
+      projectName = mpsProject.getProject().getProjectFile().getName();
+    } catch (Exception e) {
+      projectName = null;
+    }
+    if ((null != sysProperty && "false".equals(sysProperty)) || (null!=projectName && !projectName.equals("ActionScript.mpr"))) {
+      blacklistedLangs.addAll(Languages.getListedStandardLanguages());
+    }
+    return blacklistedLangs;
   }
 
   public static void processDeps(IModule localModule, List<IModule> fullList, MPSModuleRepository mrepo, MPSProject mpsProject, List<IModule> blacklistModules, List<IModule> whitelistModules, List<String> reservedNames) {
@@ -246,7 +265,7 @@ public class ArchivingUtility {
 
   public static void searchModules(String targetType, IModule module, MPSProject mpsProject, MPSModuleRepository mrepo, List<IModule> allModules, List<IModule> blacklistModules, List<IModule> whitelistModules) {
     //Solution solution = MPSModuleRepository.getInstance().getSolution(module.getModuleDescriptor().getModuleReference());
-    List<String> listedStdLangs = Languages.getListedStandardLanguages();
+    List<String> blacklistedLangs = getBlacklistedLangs(mpsProject);
 
 //    //Add all loaded libraries to the blacklist (VIEW PANE!)
 //    ActionScriptViewPane ASViewPane = ActionScriptViewPane.getInstance(mpsProject.getProject());
@@ -260,13 +279,13 @@ public class ArchivingUtility {
 //    SModelReference[] ASProjectModelReferences = ASViewPane.getProjectModelReferences();
 //    for (SModelReference sModelReference : ASProjectModelReferences) {
 //      IModule sModule = SModelRepository.getInstance().getModelDescriptor(sModelReference).getModule();
-//      if (null!=sModule && !listedStdLangs.contains(sModule.getModuleFqName())) {
+//      if (null!=sModule && !blacklistedLangs.contains(sModule.getModuleFqName())) {
 //        whitelistModules.add(sModule);
 //      }
 //    }
 
     for (IModule currModule : allModules) {
-      if (null != currModule && !listedStdLangs.contains(currModule.getModuleFqName())) {
+      if (null != currModule && !blacklistedLangs.contains(currModule.getModuleFqName())) {
         whitelistModules.add(currModule);
       }
     }
