@@ -3,7 +3,9 @@ package codeOrchestra.actionscript.util.ArchivingUtility;
 import com.intellij.openapi.util.Pair;
 import jetbrains.mps.ide.properties.SolutionProperties;
 import jetbrains.mps.project.IModule;
+import jetbrains.mps.project.Solution;
 import jetbrains.mps.project.structure.model.ModelRoot;
+import jetbrains.mps.smodel.Language;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.tools.ant.Project;
 import org.apache.tools.ant.Target;
@@ -19,6 +21,12 @@ import java.util.zip.ZipFile;
  * author: Daniil
  */
 public class ZipUtilForModule {
+
+  public static final String ASSETS_DIR_NAME = "assets";
+  public static final String MODULES_DIR_NAME = "modules";
+  public static final String LANGS_DIR_NAME = "languages";
+  public static final String ZIP_TARGET_NAME = "ziptarget";
+
   public static boolean isValidName(String name) {
     if (name.equals(".svn") || name.equals(".git") || name.equals("source_gen") || name.equals("compile_errors.log")
       || name.equals("source_gen.caches") || name.equals("classes_gen") || name.equals(".gitignore") || name.contains(".zip") || name.equals("output_swf")) {
@@ -77,21 +85,25 @@ public class ZipUtilForModule {
   }
 
 
-  public static Pair<String, String> makeSplittedRealPath(ZipEntry zippedElement, String moduleDestDir, String assetsDestDir) {
+  public static Pair<String, String> makeSplittedRealPath(ZipEntry zippedElement, String moduleDestDir, String langsDestDir, String assetsDestDir) {
     String basePath = null;
     String relativePath = null;
     String elementName = zippedElement.getName();
     if (elementName.startsWith("assets/")) {
-      basePath = assetsDestDir.replace("/", File.separator);
+      basePath = assetsDestDir;
       relativePath = elementName.substring(7);
     } else if (elementName.startsWith("modules/")) {
       basePath = moduleDestDir;
-      relativePath = elementName.substring(8).replace("/", File.separator);
+      relativePath = elementName.substring(8);
+    } else if (elementName.startsWith("languages/")) {
+      basePath = langsDestDir;
+      relativePath = elementName.substring(10);
     }
+    basePath = basePath.replace("/", File.separator);
     return new Pair<String, String>(basePath, relativePath);
   }
 
-  public static void importModule(String sourceZIPPath, String moduleDestDir, String assetsDestDir, List<String> blacklistedAssetsNames) throws IOException {
+  public static void importModule(String sourceZIPPath, String moduleDestDir, String langsDestDir, String assetsDestDir, List<String> blacklistedAssetsNames) throws IOException {
     ZipFile zip = new ZipFile(sourceZIPPath);
     new File(moduleDestDir).mkdir();
 
@@ -100,7 +112,7 @@ public class ZipUtilForModule {
     while (zippedElements.hasMoreElements()) {
       ZipEntry currZippedElement = (ZipEntry) zippedElements.nextElement();
 
-      Pair<String, String> realPath = makeSplittedRealPath(currZippedElement, moduleDestDir, assetsDestDir);
+      Pair<String, String> realPath = makeSplittedRealPath(currZippedElement, moduleDestDir, langsDestDir, assetsDestDir);
       if (currZippedElement.isDirectory()) {
         String newDirectoryPath = realPath.getFirst() + File.separator + realPath.getSecond();
         File newDirectory = new File(newDirectoryPath);
@@ -113,7 +125,7 @@ public class ZipUtilForModule {
     }
 
     for (ZipEntry currZippedElement : zippedFiles) {
-      Pair<String, String> realPath = makeSplittedRealPath(currZippedElement, moduleDestDir, assetsDestDir);
+      Pair<String, String> realPath = makeSplittedRealPath(currZippedElement, moduleDestDir, langsDestDir, assetsDestDir);
 
       InputStream in = zip.getInputStream(currZippedElement);
       String newFilePath = realPath.getFirst() + File.separator + realPath.getSecond();
@@ -165,7 +177,16 @@ public class ZipUtilForModule {
       String normalizedPath = FilenameUtils.normalize(currModule.getBundleHome().getPath());
       File fileToZip = new File(normalizedPath);
       ZipFileSet fileSet = new ZipFileSet();
-      fileSet.setPrefix("modules" + "/" + currModule.getModuleFqName());
+
+      String modulePrefix = MODULES_DIR_NAME;
+      if (currModule instanceof Solution) {
+        modulePrefix = MODULES_DIR_NAME;
+      } else
+      if (currModule instanceof Language) {
+        modulePrefix = LANGS_DIR_NAME;
+      }
+
+      fileSet.setPrefix(modulePrefix + "/" + currModule.getModuleFqName());
       fileSet.appendExcludes(getAntExcludes());
       zip.addFileset(fileSet);
 
@@ -181,7 +202,7 @@ public class ZipUtilForModule {
         File fileToZip = new File(normalizedPath);
         List<String> assetsToExport = auContext.getAssetsToExport();
         ZipFileSet fileSet = new ZipFileSet();
-        fileSet.setPrefix("assets");
+        fileSet.setPrefix(ASSETS_DIR_NAME);
         fileSet.appendExcludes(getAntExcludes());
         if (fileToZip.isDirectory()) {
           fileSet.setDir(fileToZip);
@@ -202,9 +223,9 @@ public class ZipUtilForModule {
     }
 
     Target target = new Target();
-    target.setName("ziptarget");
+    target.setName(ZIP_TARGET_NAME);
     target.addTask(zip);
     project.addTarget(target);
-    project.executeTarget("ziptarget");
+    project.executeTarget(ZIP_TARGET_NAME);
   }
 }

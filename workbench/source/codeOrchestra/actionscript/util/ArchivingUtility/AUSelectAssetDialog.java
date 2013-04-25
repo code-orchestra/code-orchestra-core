@@ -25,8 +25,8 @@ import java.util.List;
 import java.util.Set;
 
 public class AUSelectAssetDialog extends AUSelectItemDialog<String> {
-  public AUSelectAssetDialog(Frame owner, String title, String runCheckedButtonCaption, List<String> items, Set<String> selectedItemIds) throws HeadlessException {
-    super(owner, title, runCheckedButtonCaption, items, selectedItemIds);
+  public AUSelectAssetDialog(Frame owner, String title, String runCheckedButtonCaption, String runSelectedButtonCaption, String selectionMode, List<String> items, Set<String> selectedItemIds) throws HeadlessException {
+    super(owner, title, runCheckedButtonCaption, runSelectedButtonCaption, selectionMode, items, selectedItemIds);
   }
 
   @Override

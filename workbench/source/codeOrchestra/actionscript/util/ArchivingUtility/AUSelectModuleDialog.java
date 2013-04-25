@@ -18,16 +18,18 @@ package codeOrchestra.actionscript.util.ArchivingUtility;
 
 import codeOrchestra.actionscript.util.ArchivingUtility.SelectItemDialog.AUSelectItemDialog;
 import jetbrains.mps.project.IModule;
-import java.awt.*;
-import java.util.ArrayList;
+
+import java.awt.Frame;
+import java.awt.HeadlessException;
+import java.util.List;
 import java.util.Set;
 
 /**
  * @author olegchir
  */
 public class AUSelectModuleDialog extends AUSelectItemDialog<IModule> {
-  public AUSelectModuleDialog(Frame owner, String title, String runCheckedButtonCaption, ArrayList<IModule> items, Set<String> selectedItemIds) throws HeadlessException {
-    super(owner, title, runCheckedButtonCaption, items, selectedItemIds);
+  public AUSelectModuleDialog(Frame owner, String title, String runCheckedButtonCaption, String runSelectedButtonCaption, String selectionMode, List<IModule> items, Set<String> selectedItemIds) throws HeadlessException {
+    super(owner, title, runCheckedButtonCaption, runSelectedButtonCaption, selectionMode, items, selectedItemIds);
   }
 
   @Override

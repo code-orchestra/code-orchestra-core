@@ -16,6 +16,7 @@
 package codeOrchestra.actionscript.util.ArchivingUtility;
 
 import com.intellij.openapi.actionSystem.AnActionEvent;
+import com.intellij.openapi.ui.Messages;
 import jetbrains.mps.project.IModule;
 import jetbrains.mps.project.MPSProject;
 import jetbrains.mps.smodel.IOperationContext;
@@ -35,12 +36,33 @@ public class ArchivingUtilityExportContext {
   private IModule module;
   private MPSProject mpsProject = null;
   private Frame frame;
-
   private List<IModule> modulesToExport = new ArrayList<IModule>();
   private IFile destinationVirtualDirectory = null;
   private File destinationFile = null;
   private List<String> assetsToExport = new ArrayList<String>();
   private IModule assetsModule = null;
+  private String targetType = null;
+  private boolean abortAll = false;
+  private String abortMessage = null;
+  private String abortMessageTitle = null;
+
+  public void abort(String abortMessage, String abortMessageTitle, boolean instant) {
+    this.abortMessage = abortMessage;
+    this.abortMessageTitle = abortMessageTitle;
+    this.abortAll = true;
+    if (instant) {
+      displayAbortMessage();
+    }
+  }
+
+  public boolean displayAbortMessage() {
+    if (isAbortAll()) {
+      Messages.showErrorDialog(getAbortMessage(),getAbortMessageTitle());
+      return true;
+    } else {
+      return false;
+    }
+  }
 
   public AnActionEvent getEvent() {
     return event;
@@ -120,5 +142,37 @@ public class ArchivingUtilityExportContext {
 
   public void setAssetsToExport(List<String> assetsToExport) {
     this.assetsToExport = assetsToExport;
+  }
+
+  public String getTargetType() {
+    return targetType;
+  }
+
+  public void setTargetType(String targetType) {
+    this.targetType = targetType;
+  }
+
+  public boolean isAbortAll() {
+    return abortAll;
+  }
+
+  public void setAbortAll(boolean abortAll) {
+    this.abortAll = abortAll;
+  }
+
+  public String getAbortMessage() {
+    return abortMessage;
+  }
+
+  public void setAbortMessage(String abortMessage) {
+    this.abortMessage = abortMessage;
+  }
+
+  public String getAbortMessageTitle() {
+    return abortMessageTitle;
+  }
+
+  public void setAbortMessageTitle(String abortMessageTitle) {
+    this.abortMessageTitle = abortMessageTitle;
   }
 }

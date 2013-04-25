@@ -9,10 +9,11 @@ import jetbrains.mps.smodel.Language;
 import jetbrains.mps.smodel.MPSModuleRepository;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.*;
 
 /**
  * @author Alexander Eliseyev
@@ -31,6 +32,8 @@ public final class Languages {
   public static final String FALCON = "codeOrchestra.actionScript.falcon";
 
   public static final String LIVE_CODING = "codeOrchestra.actionScript.liveCoding";
+
+  public static final String LISTED_STANDARD_LANGUAGES_FILE = "standardLanguages.txt";
 
   private static final Set<String> defaultLanguages = new HashSet<String>() {{
     add(ACTION_SCRIPT_INTERNAL);
@@ -52,6 +55,49 @@ public final class Languages {
 
   public static boolean isDefaultImportLanguage(@NotNull ModuleReference languageRef) {
     return isDefaultImportLanguage(languageRef, null);
+  }
+
+  public static List<String> getListedStandardLanguages() {
+    String userDir = System.getProperty("user.dir");
+    String path1 = userDir+File.separator+LISTED_STANDARD_LANGUAGES_FILE;
+    String path2 = new File(userDir).getParentFile().getPath()+File.separator+LISTED_STANDARD_LANGUAGES_FILE;
+    String filePath = null;
+    ArrayList<String> langsList = new ArrayList<String>();
+    ArrayList<String> emptyList = new ArrayList<String>();
+
+    File langFile = new File(path1);
+    filePath = path1;
+    if (!langFile.exists()) {
+      langFile = new File(path2);
+      filePath = path2;
+      if (!langFile.exists()) {
+        return emptyList;
+      }
+    }
+
+    try {
+      BufferedReader br = new BufferedReader(new FileReader(filePath));
+      try {
+        String line = br.readLine();
+        if (null!=line && !line.startsWith("//")) {
+          langsList.add(line);
+        }
+
+        while (line != null) {
+          line = br.readLine();
+          if (null!=line && !line.startsWith("//")) {
+            langsList.add(line);
+          }
+        }
+      } finally {
+        br.close();
+      }
+    } catch (IOException e) {
+      e.printStackTrace();
+      return emptyList;
+    }
+
+    return langsList;
   }
 
   public static boolean isDefaultImportLanguage(@NotNull ModuleReference languageRef, Solution contextModule) {
