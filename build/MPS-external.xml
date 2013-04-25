@@ -533,6 +533,7 @@
     <delete dir="${deploy.dir}/MPS/help-build.append.idea.version" />
     <copy file="${mps_home}/entryPoints.xml" tofile="${deploy.dir}/MPS/entryPoints.xml" />
     <copy file="${mps_home}/readme.txt" tofile="${deploy.dir}/MPS/readme.txt" />
+    <copy file="${mps_home}/standardLanguages.txt" tofile="${deploy.dir}/MPS/standardLanguages.txt" />
     <copy file="${mps_home}/releaseNotes.txt" tofile="${deploy.dir}/MPS/releaseNotes.txt" />
     <copy file="${mps_home}/about.txt" tofile="${deploy.dir}/MPS/about.txt" />
     <mkdir dir="${deploy.dir}/MPS" />
