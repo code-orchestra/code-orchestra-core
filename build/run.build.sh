@@ -18,4 +18,4 @@ fi
 mkdir $mps_home/help
 export ANT_OPTS=-Xmx1024m
 #ant -f MPS-external-dist.xml -Dmps_home=$mps_home -Dbuild.number=28 -Dversion=EAP -Dbuild.vcs.number=222 -Dteamcity.buildConfName=Local universal.single
-ant -f MPS-external.xml -Dmps_home=$mps_home -Dversion="2.0 RC1" -Dbuild.vcs.number=555 -Dteamcity.buildConfName=CodeOrchestra
+ant -f MPS-external.xml -Dmps_home=$mps_home -Dversion="2.0 Beta" -Dbuild.vcs.number=555 -Dteamcity.buildConfName=CodeOrchestra

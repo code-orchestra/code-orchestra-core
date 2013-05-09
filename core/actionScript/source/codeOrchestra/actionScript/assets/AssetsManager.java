@@ -7,6 +7,7 @@ import codeOrchestra.utils.ProjectHolder;
 import com.intellij.openapi.components.AbstractProjectComponent;
 import com.intellij.openapi.components.ProjectComponent;
 import com.intellij.openapi.project.Project;
+import com.intellij.openapi.startup.StartupManager;
 import com.intellij.openapi.util.Computable;
 import com.intellij.openapi.vfs.VirtualFile;
 import jetbrains.mps.ide.projectPane.IProjectPane;
@@ -59,7 +60,12 @@ public final class AssetsManager extends AbstractProjectComponent implements Pro
 
   @Override
   public void initComponent() {
-    CodeOrchestraHttpServer.getInstance().addAlias(getProjectAssetsDirFile(), "/assets");
+    StartupManager.getInstance(myProject).runWhenProjectIsInitialized(new Runnable() {
+      @Override
+      public void run() {
+        CodeOrchestraHttpServer.getInstance().addAlias(getProjectAssetsDirFile(), "/assets");
+      }
+    });
   }
 
   @Override
