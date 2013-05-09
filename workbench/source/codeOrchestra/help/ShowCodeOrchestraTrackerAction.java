@@ -12,7 +12,7 @@ public class ShowCodeOrchestraTrackerAction extends ShowSiteAction {
   }
 
   protected String getSiteURL() {
-    return "http://realaxy.myjetbrains.com/youtrack/issues/RF";
+    return "http://tracker.codeorchestra.com/youtrack/issues/CF";
   }
 
 }

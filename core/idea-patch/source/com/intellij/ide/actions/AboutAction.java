@@ -47,7 +47,7 @@ import java.util.*;
 import java.util.List;
 
 public class AboutAction extends AnAction implements DumbAware {
-  @NonNls private static final String COMPANY_URL = "http://www.codeOrchestra.com/";
+  @NonNls private static final String COMPANY_URL = "http://codeorchestra.com/";
 
   public void update(AnActionEvent e) {
     e.getPresentation().setVisible(!SystemInfo.isMacSystemMenu);
